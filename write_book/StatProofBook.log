@@ -1,0 +1,363 @@
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.1.30)  6 FEB 2020 12:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**StatProofBook.tex
+(./StatProofBook.tex
+LaTeX2e <2019-10-01> patch level 3
+(c:/texlive/2019/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/10/25 v1.4k Standard LaTeX document class
+(c:/texlive/2019/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(c:/texlive/2019/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2019/11/16 v2.17d AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks15
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2858.
+LaTeX Info: Redefining \] on input line 2859.
+)
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2019/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(c:/texlive/2019/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(c:/texlive/2019/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
+
+(c:/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count101
+)
+(c:/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+\csq@reset=\count102
+\csq@gtype=\count103
+\csq@glevel=\count104
+\csq@qlevel=\count105
+\csq@maxlvl=\count106
+\csq@tshold=\count107
+\csq@ltx@everypar=\toks20
+
+(c:/texlive/2019/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(c:/texlive/2019/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+))
+(c:/texlive/2019/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip47
+\enit@outerparindent=\dimen112
+\enit@toks=\toks21
+\enit@inbox=\box29
+\enit@count@id=\count108
+\enitdp@description=\count109
+)
+(c:/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(c:/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+)
+Package csquotes Info: Allocating character ".
+
+
+Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 40.
+
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... none found.
+(./StatProofBook.aux)
+\openout1 = `StatProofBook.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Info: Redefining \celsius on input line 40.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 40.
+
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 40.
+Package gensymb Info: Using \Omega for \ohm on input line 40.
+
+Package gensymb Warning: Not defining \micro.
+
+Package csquotes Info: Making character " active on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+]
+(./StatProofBook.toc [1
+
+] [2])
+\tf@toc=\write3
+\openout3 = `StatProofBook.toc'.
+
+ [3]
+Chapter I.
+[1
+
+]
+Overfull \hbox (35.75893pt too wide) in paragraph at lines 89--90
+\TU/lmr/m/n/12 retrieved on 2020-01-22; URL: $[][][][][] [] [] [] [][] [] [][][
+][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][][][][][][][][] [] 
+[][][][][][][][] []
+ []
+
+[2] [3]
+Overfull \hbox (9.11491pt too wide) in paragraph at lines 191--192
+\TU/lmr/m/n/12 2020-01-06; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
+ [] [][][] [] [][][][] [] [][][][][] [] [][] [] [][][][][][][] [] [][][][][] []
+ [][] [] [][] []
+ []
+
+[4] [5]
+Overfull \hbox (1.8589pt too wide) in paragraph at lines 264--265
+\TU/lmr/m/n/12 on 2019-11-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][
+][] [] [][][] [] [][][][] [] [][][][] [] [][][][][][][] [] [][][][][] [] [][][]
+[][] [] [][] []
+ []
+
+[6] [7]
+Overfull \hbox (13.19873pt too wide) detected at line 393
+\OT1/cmr/m/n/12 I(\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 ) = [] [] \OML/cmm/m/it/
+12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12
+ p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ 
+[] [] [] \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )
+ \OMS/cmsy/m/n/12 ^^@ [] [] [] \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it
+/12 y\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 :
+ []
+
+[8] [9] [10]
+Chapter II.
+[11
+
+] [12] [13] [14] [15] [16] [17] [18] [19] [20]
+Overfull \hbox (41.60437pt too wide) in paragraph at lines 1103--1104
+[][][] [] [][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][]$\TU/lmr/m/n/12 . 
+ []
+
+[21] [22]
+Overfull \hbox (22.98112pt too wide) detected at line 1209
+\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = [] =
+ \OMS/cmsy/m/n/12 ^^@[] ^^A [] [] \OT1/cmr/m/n/12 + [] \OMS/cmsy/m/n/12 ^^A \OT
+1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm
+/m/it/12 ^^V\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
+ []
+
+[23] [24]
+Overfull \hbox (41.60437pt too wide) in paragraph at lines 1329--1330
+[][][] [] [][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][]$\TU/lmr/m/n/12 . 
+ []
+
+[25] [26]
+Overfull \hbox (5.59494pt too wide) in paragraph at lines 1469--1470
+\TU/lmr/m/it/12 on probability and statistics\TU/lmr/m/n/12 ; URL: $[][][][][] 
+[] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][]
+[][][][][][][][][][][] []
+ []
+
+[27] [28]
+Overfull \hbox (36.14221pt too wide) in paragraph at lines 1551--1552
+\TU/lmr/m/it/12 tics\TU/lmr/m/n/12 , ch. 2.5.3, pp. 55-56, eq. 2.212; URL: $[][
+][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] []
+[][][][][][][][][][][][]$;
+ []
+
+[29]
+Overfull \hbox (160.73933pt too wide) detected at line 1633
+[]
+ []
+
+[30] [31] [32] [33]
+Overfull \hbox (12.29771pt too wide) detected at line 1775
+\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) = [](\
+OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 M; U; V\OT1/cmr/m/n/12 ) = 
+[] \OMS/cmsy/m/n/12 ^^A [] []
+ []
+
+[34]
+Overfull \hbox (11.51495pt too wide) detected at line 1836
+[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 M; U; V
+\OT1/cmr/m/n/12 ) = [] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
+ []
+
+
+Overfull \hbox (64.26395pt too wide) detected at line 1848
+[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 M; U; V
+\OT1/cmr/m/n/12 ) = [] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
+ []
+
+
+Overfull \hbox (61.82764pt too wide) detected at line 1854
+[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 M; U; V
+\OT1/cmr/m/n/12 ) = [] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
+ []
+
+[35] [36]
+Chapter III.
+[37
+
+] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51]
+[52] [53] [54] [55] [56] [57] [58] [59]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 3076.
+
+[60] [61] [62]
+Overfull \hbox (25.87094pt too wide) in paragraph at lines 3282--3283
+\TU/lmr/m/n/12 retrieved on 2020-01-24; URL: $[][][][][] [] [] [] [][] [] [][][
+][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][][][]
+[][][][][][][][] []
+ []
+
+[63] [64
+
+]
+Chapter IV.
+[65] [66] [67] [68] [69] [70]
+Overfull \hbox (12.05232pt too wide) in paragraph at lines 3588--3589
+[][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]$\TU/lmr/m/n/12 ;
+ []
+
+[71] [72] [73]
+Overfull \hbox (136.18297pt too wide) in paragraph at lines 3735--3736
+[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] [] [][][] [] [][][][][
+][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][]$\TU/lmr
+/m/n/12 ; DOI: 10.1016/j.neuroimage.2016.07.047. 
+ []
+
+[74] (./StatProofBook.aux) ) 
+Here is how much of TeX's memory you used:
+ 3266 strings out of 492472
+ 46255 string characters out of 6132674
+ 133886 words of memory out of 5000000
+ 7743 multiletter control sequences out of 15000+600000
+ 10980 words of font info for 55 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 30i,20n,31p,823b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on StatProofBook.pdf (78 pages).

@@ -1,0 +1,91 @@
+\contentsline {chapter}{\numberline {I}General Theorems}{1}%
+\contentsline {section}{\numberline {1}Probability theory}{2}%
+\contentsline {subsection}{\numberline {1.1}Probability distributions}{2}%
+\contentsline {subsubsection}{\numberline {1.1.1}\textit {Moment-generating function}}{2}%
+\contentsline {subsection}{\numberline {1.2}Bayesian inference}{2}%
+\contentsline {subsubsection}{\numberline {1.2.1}\textbf {Bayes' theorem}}{2}%
+\contentsline {subsubsection}{\numberline {1.2.2}\textbf {Bayes' rule}}{3}%
+\contentsline {section}{\numberline {2}Estimation theory}{5}%
+\contentsline {subsection}{\numberline {2.1}Point estimates}{5}%
+\contentsline {subsubsection}{\numberline {2.1.1}\textbf {Partition of the mean squared error into bias and variance}}{5}%
+\contentsline {section}{\numberline {3}Information theory}{7}%
+\contentsline {subsection}{\numberline {3.1}Discrete mutual information}{7}%
+\contentsline {subsubsection}{\numberline {3.1.1}\textbf {Relation to marginal and conditional entropy}}{7}%
+\contentsline {subsubsection}{\numberline {3.1.2}\textbf {Relation to marginal and joint entropy}}{8}%
+\contentsline {subsubsection}{\numberline {3.1.3}\textbf {Relation to joint and conditional entropy}}{9}%
+\contentsline {chapter}{\numberline {II}Probability Distributions}{11}%
+\contentsline {section}{\numberline {1}Univariate discrete distributions}{12}%
+\contentsline {subsection}{\numberline {1.1}Bernoulli distribution}{12}%
+\contentsline {subsubsection}{\numberline {1.1.1}\textbf {Mean}}{12}%
+\contentsline {subsection}{\numberline {1.2}Binomial distribution}{12}%
+\contentsline {subsubsection}{\numberline {1.2.1}\textbf {Mean}}{12}%
+\contentsline {section}{\numberline {2}Multivariate discrete distributions}{14}%
+\contentsline {subsection}{\numberline {2.1}Categorical distribution}{14}%
+\contentsline {subsubsection}{\numberline {2.1.1}\textbf {Mean}}{14}%
+\contentsline {subsection}{\numberline {2.2}Multinomial distribution}{14}%
+\contentsline {subsubsection}{\numberline {2.2.1}\textbf {Mean}}{14}%
+\contentsline {section}{\numberline {3}Univariate continuous distributions}{16}%
+\contentsline {subsection}{\numberline {3.1}Continuous uniform distribution}{16}%
+\contentsline {subsubsection}{\numberline {3.1.1}\textit {Definition}}{16}%
+\contentsline {subsubsection}{\numberline {3.1.2}\textbf {Probability density function}}{16}%
+\contentsline {subsubsection}{\numberline {3.1.3}\textbf {Cumulative distribution function}}{17}%
+\contentsline {subsubsection}{\numberline {3.1.4}\textbf {Quantile function}}{18}%
+\contentsline {subsection}{\numberline {3.2}Normal distribution}{19}%
+\contentsline {subsubsection}{\numberline {3.2.1}\textit {Definition}}{19}%
+\contentsline {subsubsection}{\numberline {3.2.2}\textbf {Probability density function}}{20}%
+\contentsline {subsubsection}{\numberline {3.2.3}\textbf {Mean}}{20}%
+\contentsline {subsubsection}{\numberline {3.2.4}\textbf {Median}}{22}%
+\contentsline {subsubsection}{\numberline {3.2.5}\textbf {Mode}}{22}%
+\contentsline {subsubsection}{\numberline {3.2.6}\textbf {Variance}}{24}%
+\contentsline {section}{\numberline {4}Multivariate continuous distributions}{26}%
+\contentsline {subsection}{\numberline {4.1}Multivariate normal distribution}{26}%
+\contentsline {subsubsection}{\numberline {4.1.1}\textit {Definition}}{26}%
+\contentsline {subsubsection}{\numberline {4.1.2}\textbf {Probability density function}}{26}%
+\contentsline {subsubsection}{\numberline {4.1.3}\textbf {Linear transformation theorem}}{27}%
+\contentsline {subsubsection}{\numberline {4.1.4}\textbf {Marginal distributions}}{28}%
+\contentsline {subsection}{\numberline {4.2}Normal-gamma distribution}{28}%
+\contentsline {subsubsection}{\numberline {4.2.1}\textit {Definition}}{28}%
+\contentsline {subsubsection}{\numberline {4.2.2}\textbf {Marginal distributions}}{29}%
+\contentsline {subsubsection}{\numberline {4.2.3}\textbf {Kullback-Leibler divergence}}{32}%
+\contentsline {section}{\numberline {5}Matrix-variate continuous distributions}{34}%
+\contentsline {subsection}{\numberline {5.1}Matrix-normal distribution}{34}%
+\contentsline {subsubsection}{\numberline {5.1.1}\textit {Definition}}{34}%
+\contentsline {subsubsection}{\numberline {5.1.2}\textbf {Equivalence to multivariate normal distribution}}{34}%
+\contentsline {chapter}{\numberline {III}Statistical Models}{37}%
+\contentsline {section}{\numberline {1}Normal data}{38}%
+\contentsline {subsection}{\numberline {1.1}Multiple linear regression}{38}%
+\contentsline {subsubsection}{\numberline {1.1.1}\textbf {Ordinary least squares (1)}}{38}%
+\contentsline {subsubsection}{\numberline {1.1.2}\textbf {Ordinary least squares (2)}}{38}%
+\contentsline {subsection}{\numberline {1.2}Bayesian linear regression}{39}%
+\contentsline {subsubsection}{\numberline {1.2.1}\textbf {Conjugate prior distribution}}{39}%
+\contentsline {subsubsection}{\numberline {1.2.2}\textbf {Posterior distribution}}{41}%
+\contentsline {subsubsection}{\numberline {1.2.3}\textbf {Log model evidence}}{44}%
+\contentsline {subsection}{\numberline {1.3}General linear model}{46}%
+\contentsline {subsubsection}{\numberline {1.3.1}\textbf {Maximum likelihood estimation}}{46}%
+\contentsline {section}{\numberline {2}Poisson data}{49}%
+\contentsline {subsection}{\numberline {2.1}Poisson-distributed data}{49}%
+\contentsline {subsubsection}{\numberline {2.1.1}\textbf {Maximum likelihood estimation}}{49}%
+\contentsline {subsection}{\numberline {2.2}Poisson distribution with exposure values}{51}%
+\contentsline {subsubsection}{\numberline {2.2.1}\textbf {Conjugate prior distribution}}{51}%
+\contentsline {subsubsection}{\numberline {2.2.2}\textbf {Posterior distribution}}{52}%
+\contentsline {subsubsection}{\numberline {2.2.3}\textbf {Log model evidence}}{54}%
+\contentsline {section}{\numberline {3}Probability data}{57}%
+\contentsline {subsection}{\numberline {3.1}Beta-distributed data}{57}%
+\contentsline {subsubsection}{\numberline {3.1.1}\textbf {Method of moments}}{57}%
+\contentsline {section}{\numberline {4}Categorical data}{60}%
+\contentsline {subsection}{\numberline {4.1}Binomial observations}{60}%
+\contentsline {subsubsection}{\numberline {4.1.1}\textbf {Conjugate prior distribution}}{60}%
+\contentsline {subsubsection}{\numberline {4.1.2}\textbf {Posterior distribution}}{61}%
+\contentsline {subsubsection}{\numberline {4.1.3}\textbf {Log model evidence}}{62}%
+\contentsline {chapter}{\numberline {IV}Model Selection}{65}%
+\contentsline {section}{\numberline {1}Goodness-of-fit measures}{66}%
+\contentsline {subsection}{\numberline {1.1}R-squared}{66}%
+\contentsline {subsubsection}{\numberline {1.1.1}\textbf {Derivation of R² and adjusted R²}}{66}%
+\contentsline {subsubsection}{\numberline {1.1.2}\textbf {Relationship to maximum log-likelihood}}{67}%
+\contentsline {section}{\numberline {2}Classical information criteria}{70}%
+\contentsline {subsection}{\numberline {2.1}Bayesian information criterion}{70}%
+\contentsline {subsubsection}{\numberline {2.1.1}\textbf {Derivation}}{70}%
+\contentsline {section}{\numberline {3}Bayesian model selection}{72}%
+\contentsline {subsection}{\numberline {3.1}Log model evidence}{72}%
+\contentsline {subsubsection}{\numberline {3.1.1}\textbf {Derivation}}{72}%
+\contentsline {subsubsection}{\numberline {3.1.2}\textbf {Partition into accuracy and complexity}}{73}%

@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt]{book}
+
+%%% Packages %%%
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+
+%%% Settings %%%
+\setlength{\parindent}{0pt}
+\raggedbottom
+\frenchspacing
+\urlstyle{same}
+\MakeOuterQuote{"}
+\setlist{nolistsep}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+%%% Format %%%
+\renewcommand\thechapter{\Roman{chapter}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\theequation{\arabic{equation}}
+\let\Chaptermark\chaptermark
+\def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
+\let\Sectionmark\sectionmark
+\def\sectionmark#1{\def\Sectionname{#1}\Sectionmark{#1}}
+
+%%% Title %%%
+\title{\Huge{The Book of Statistical Proofs}}
+\author{https://statproofbook.github.io/ \\ StatProofBook@gmail.com}
+\date{YYYY-MM-DD, HH:MM}
+
+
+\begin{document}
+
+
+%%% Title %%%
+\maketitle
+
+%%% Contents %%%
+\pagebreak
+\pagenumbering{roman}
+\tableofcontents
+
+%%% Text %%%
+\newpage
+\pagenumbering{arabic}
