@@ -120,19 +120,19 @@ def extract_body(file_txt):
 #-----------------------------------------------------------------------------#
 def replace_links(line, rep_dir):
     """
-    Replace links such as [text](/P/shortcut.html) or [text](/D/shortcut.html)
+    Replace links such as [text](/P/shortcut) or [text](/D/shortcut)
                        by (-> Proof I/1.2.3) or (Definition "shortcut").
     """
     while line.find('](/') > -1:
         # get bracket/parantheses indices
         i2 = line.find('](/')
         i3 = i2 + 1
-        i4 = line.find('.html') + 5
+        i4 = line.find(')', i2)
         i1 = line.rfind('[', 0, i2)
         # extract file information
-        file_html = line[i3+1:i4]
-        file_md   = re.sub('.html', '.md', file_html)
-        shortcut  = file_md[3:-3]
+        file     = line[i3+1:i4]
+        file_md  = file + '.md' # re.sub('.html', '.md', file_html)
+        shortcut = file_md[3:-3]
         if file_md.find('/P/') > -1: file_type = 'Proof'
         if file_md.find('/D/') > -1: file_type = 'Definition'
         # create new reference
@@ -236,8 +236,8 @@ for entry in toc_txt:
         
         num_ssse  = num_ssse + 1
         curr_ssse = entry[entry.find('[')+1:entry.find(']')]
-        file_html = entry[entry.find('(/')+1:entry.find('l)')+1]
-        file_md   = re.sub('.html', '.md', file_html)
+        file      = entry[entry.find('(', entry.find(']'))+1:entry.find(')', entry.find(']'))]
+        file_md   = file + '.md' # re.sub('.html', '.md', file_html)
         
         # Read proof or definition
         if file_md.find('/P/') > -1:
@@ -257,14 +257,14 @@ for entry in toc_txt:
         # Write title
         if is_proof:
             book.write(r'\subsubsection[\textbf{' + curr_ssse + '}]{' + curr_ssse + '} \label{sec:' + shortcut + '}\n\n')
-            book.write(r'\textbf{Proof:} ' + title + '\n\n')
+          # book.write(r'\textbf{Proof:} ' + title + '\n\n')
         else:
             book.write(r'\subsubsection[\textit{' + curr_ssse + '}]{' + curr_ssse + '} \label{sec:' + shortcut + '}\n\n')
-            book.write(r'\textbf{Definition:} ' + title + '\n\n')
+          # book.write(r'\textbf{Definition:} ' + title + '\n\n')
         
         # Write index
-        book.write('\\vspace{1em}\n')
-        book.write('\\textbf{Index:} The Book of Statistical Proofs' + ' $\\vartriangleright$ ' + chapter + ' $\\vartriangleright$ ' + section + ' $\\vartriangleright$ ' + topic + ' $\\vartriangleright$ ' + item + '\n\n')
+        # book.write('\\vspace{1em}\n')
+        # book.write('\\textbf{Index:} The Book of Statistical Proofs' + ' $\\vartriangleright$ ' + chapter + ' $\\vartriangleright$ ' + section + ' $\\vartriangleright$ ' + topic + ' $\\vartriangleright$ ' + item + '\n\n')
         
         # Write body
         in_equation = False
@@ -302,7 +302,7 @@ for entry in toc_txt:
         book.write('\\textbf{Sources:}\n')
         book.write('\\begin{itemize}\n')
         if not sources:
-            book.write('\\item own work')
+            book.write('\\item original work')
         else:
             for source in sources:
                 book.write('\\item ' + source['authors'] + ' (' + source['year'] + '): "' + source['title'] + '"')
