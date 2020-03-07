@@ -256,23 +256,21 @@ for entry in toc_txt:
         
         # Write title
         if is_proof:
-            book.write(r'\subsubsection[\textbf{' + curr_ssse + '}]{' + curr_ssse + '} \label{sec:' + shortcut + '}\n\n')
-          # book.write(r'\textbf{Proof:} ' + title + '\n\n')
+            book.write(r'\subsubsection[\textbf{' + curr_ssse + '}]{' + curr_ssse + '} \label{sec:' + shortcut + '}\n')
+            book.write(r'\setcounter{equation}{0}')
+            book.write('\n\n')
         else:
-            book.write(r'\subsubsection[\textit{' + curr_ssse + '}]{' + curr_ssse + '} \label{sec:' + shortcut + '}\n\n')
-          # book.write(r'\textbf{Definition:} ' + title + '\n\n')
-        
-        # Write index
-        # book.write('\\vspace{1em}\n')
-        # book.write('\\textbf{Index:} The Book of Statistical Proofs' + ' $\\vartriangleright$ ' + chapter + ' $\\vartriangleright$ ' + section + ' $\\vartriangleright$ ' + topic + ' $\\vartriangleright$ ' + item + '\n\n')
+            book.write(r'\subsubsection[\textit{' + curr_ssse + '}]{' + curr_ssse + '} \label{sec:' + shortcut + '}\n')
+            book.write(r'\setcounter{equation}{0}')
+            book.write('\n\n')
         
         # Write body
         in_equation = False
         for line in body_txt:
             
             # write bold text
-            line = re.sub('\*\*Definition:\*\*', '\\\\vspace{1em}\n\\\\textbf{Definition:}', line)
-            line = re.sub('\*\*Theorem:\*\*', '\\\\vspace{1em}\n\\\\textbf{Theorem:}', line)
+            line = re.sub('\*\*Definition:\*\*', '\\\\textbf{Definition:}', line)
+            line = re.sub('\*\*Theorem:\*\*', '\\\\textbf{Theorem:}', line)
             line = re.sub('\*\*Proof:\*\*', '\\\\vspace{1em}\n\\\\textbf{Proof:}', line)
             
             # use equation environment
@@ -297,7 +295,7 @@ for entry in toc_txt:
             book.write(line)
             
         # Write sources
-        book.write('\n\n')
+        book.write('\n\n\n')
         book.write('\\vspace{1em}\n')
         book.write('\\textbf{Sources:}\n')
         book.write('\\begin{itemize}\n')
@@ -311,13 +309,14 @@ for entry in toc_txt:
                 if 'url'   in source: book.write('; URL: \\url{' + source['url'] + '}')
                 if 'doi'   in source: book.write('; DOI: ' + source['doi'])
                 book.write('.\n')
-        book.write('\\end{itemize}\n')
+        book.write('\\end{itemize}')
         
         # Write metadata
-        book.write('\n\n')
+        book.write('\n\n\n')
         book.write('\\vspace{1em}\n')
         book.write('\\textbf{Metadata:} ID: ' + file_id + ' | shortcut: ' + shortcut + ' | author: ' + username + ' | date: ' + date.strftime('%Y-%m-%d, %H:%M') + '.\n')
-        book.write('\n\n')
+        book.write('\\vspace{1em}\n')
+        book.write('\n\n\n')
         
 # Close "The Book of Statistical Proofs"
 #-----------------------------------------------------------------------------#        

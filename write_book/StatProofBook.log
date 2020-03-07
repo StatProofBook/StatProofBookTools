@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.1.30)  4 MAR 2020 17:12
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.1.30)  7 MAR 2020 16:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -155,7 +155,7 @@ Package inputenc Warning: inputenc package ignored with utf8 based engines.
 Package csquotes Info: Allocating character ".
 
 
-Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 40.
+Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 41.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
@@ -172,39 +172,39 @@ LaTeX Warning: Label `eq:mi-mi-cont' multiply defined.
 )
 \openout1 = `StatProofBook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Info: Redefining \celsius on input line 40.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Info: Redefining \celsius on input line 41.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 41.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 40.
-Package gensymb Info: Using \Omega for \ohm on input line 40.
+LaTeX Info: Redefining \ohm on input line 41.
+Package gensymb Info: Using \Omega for \ohm on input line 41.
 
 Package gensymb Warning: Not defining \micro.
 
-Package csquotes Info: Making character " active on input line 40.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+Package csquotes Info: Making character " active on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
 
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -215,118 +215,45 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 (./StatProofBook.toc [1
 
-] [2] [3]
-Overfull \hbox (3.35625pt too wide) in paragraph at lines 164--164
- [][] []\TU/lmr/bx/n/12 Posterior model probabilities in terms of log model 
- []
-
-[4])
+] [2] [3])
 \tf@toc=\write3
 \openout3 = `StatProofBook.toc'.
 
- [5]
+ [4]
 Chapter I.
 [1
 
-] [2]
-Overfull \hbox (11.8229pt too wide) in paragraph at lines 146--147
-\TU/lmr/m/n/12 retrieved on 2020-02-17; URL: $[][][][][] [] [] [] [][] [] [][][
-][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][] [] [][][][][][][][]
-[][][][] []
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+[18] [19] [20]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 1340--1341
+\TU/lmr/m/n/12 01-13; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
+][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
+ [] [][] [] [][][][][][][][][][][] [] [][][] []
+ []
+
+[21]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 1409--1410
+\TU/lmr/m/n/12 01-13; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
+][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
+ [] [][] [] [][][][][][][][][][][] [] [][][] []
+ []
+
+[22]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 1475--1476
+\TU/lmr/m/n/12 01-13; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
+][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
+ [] [][] [] [][][][][][][][][][][] [] [][][] []
+ []
+
+[23] [24]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 1589--1590
+\TU/lmr/m/n/12 02-21; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
+][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
+ [] [][] [] [][][][][][][][][][][] [] [][][] []
  []
 
 
-Overfull \hbox (33.79492pt too wide) in paragraph at lines 172--173
-\TU/lmr/m/n/12 retrieved on 2020-02-17; URL: $[][][][][] [] [] [] [][] [] [][][
-][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][] [] [][][][][][][][] [] 
-[][][][][][][][][][]$. 
- []
-
-[3]
-Overfull \hbox (35.75893pt too wide) in paragraph at lines 200--201
-\TU/lmr/m/n/12 retrieved on 2020-01-22; URL: $[][][][][] [] [] [] [][] [] [][][
-][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][][][][][][][][] [] 
-[][][][][][][][] []
- []
-
-[4] [5] [6] [7] [8] [9] [10] [11]
-Overfull \hbox (9.11491pt too wide) in paragraph at lines 649--650
-\TU/lmr/m/n/12 2020-01-06; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
- [] [][][] [] [][][][] [] [][][][][] [] [][] [] [][][][][][][] [] [][][][][] []
- [][] [] [][] []
- []
-
-[12] [13] [14] [15]
-Overfull \hbox (1.8589pt too wide) in paragraph at lines 864--865
-\TU/lmr/m/n/12 on 2019-11-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][
-][] [] [][][] [] [][][][] [] [][][][] [] [][][][][][][] [] [][][][][] [] [][][]
-[][] [] [][] []
- []
-
-[16]
-Overfull \hbox (38.44695pt too wide) in paragraph at lines 947--948
-\TU/lmr/m/n/12 trieved on 2020-02-19; URL: $[][][][][] [] [] [] [][] [] [][][][
-][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][][][][][][][] [] [][]
-[][] [] [][][][][][][][][][]$. 
- []
-
-[17]
-Overfull \hbox (17.19818pt too wide) in paragraph at lines 975--976
-\TU/lmr/m/it/12 Technical Journal\TU/lmr/m/n/12 , vol. 27, iss. 3, pp. 379-423;
- URL: $[][][][][] [] [] [] [][][][][][][][][][] [] [][][][] [] [][][] [] [][][]
-[][][][][] []
- []
-
-[18]
-Overfull \hbox (68.51633pt too wide) in paragraph at lines 1028--1029
-[] [] [][][] [] [][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][] [] [][
-] [] [][][][][][][][][][][] [] [][][][][][] [] [][] [] [][][] [] [][][][][][][]
-[][][][][][][][][][][][][][][][][][]$\TU/lmr/m/n/12 . 
- []
-
-[19]
-Overfull \hbox (13.78908pt too wide) in paragraph at lines 1096--1097
-\TU/lmr/m/it/12 Theory\TU/lmr/m/n/12 , ch. 8.1, p. 243; URL: $[][][][][] [] [] 
-[] [][][] [] [][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][] [] [][] [
-] [][][][][][][][][][][] []
- []
-
-[20] [21] [22]
-Overfull \hbox (13.19873pt too wide) detected at line 1288
-\OT1/cmr/m/n/12 I(\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 ) = [] [] \OML/cmm/m/it/
-12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12
- p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ 
-[] [] [] \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )
- \OMS/cmsy/m/n/12 ^^@ [] [] [] \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it
-/12 y\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 :
- []
-
-[23] [24] [25]
-Overfull \hbox (3.96867pt too wide) in paragraph at lines 1450--1451
-[]\TU/lmr/m/n/12 Applying the law of conditional probability ($\OMS/cmsy/m/n/12
- !$ \TU/lmr/m/n/12 Proof “  prob-lcp” ), i.e. $\OML/cmm/m/it/12 p\OT1/cmr/m/n/1
-2 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (
-\OML/cmm/m/it/12 x\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) \OML/cm
-m/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )$\TU/lmr/m/n/12 
-,
- []
-
-[26]
-Overfull \hbox (44.47592pt too wide) detected at line 1519
-\OT1/cmr/m/n/12 I(\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 ) = [][] [][] \OML/cmm/m
-/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) [] \OML/cmm/m/i
-t/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) d\OML/cmm/m/it/12
- y \OT1/cmr/m/n/12 d\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ [][] [][] \OML/cmm/
-m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) [] \OML/cmm/m/
-it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) d\OML/cmm/m/it/12 y
- \OT1/cmr/m/n/12 d\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ [][] [][] \OML/cmm/m/
-it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it
-/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) d\OML/cmm/m/it/12 y \
-OT1/cmr/m/n/12 d\OML/cmm/m/it/12 x :
- []
-
-
-Overfull \hbox (79.80942pt too wide) detected at line 1525
+Overfull \hbox (20.62769pt too wide) detected at line 1628
 \OT1/cmr/m/n/12 I(\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 ) = [][] [][] \OML/cmm/m
 /it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) [] \OML/cmm/m/i
 t/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) d\OML/cmm/m/it/12
@@ -336,184 +263,173 @@ t/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) d\OML/cmm/m/it/12
 /m/it/12 y\OT1/cmr/m/n/12 ) d\OML/cmm/m/it/12 y :
  []
 
-[27] [28] [29] [30
+[25]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 1658--1659
+\TU/lmr/m/n/12 02-21; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
+][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
+ [] [][] [] [][][][][][][][][][][] [] [][][] []
+ []
+
+[26]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 1724--1725
+\TU/lmr/m/n/12 02-21; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
+][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
+ [] [][] [] [][][][][][][][][][][] [] [][][] []
+ []
+
+[27] [28
 
 ]
 Chapter II.
-[31] [32] [33] [34] [35] [36] [37] [38] [39] [40]
-Overfull \hbox (41.60437pt too wide) in paragraph at lines 2175--2176
-[][][] [] [][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][]$\TU/lmr/m/n/12 . 
+[29] [30] [31] [32] [33] [34] [35]
+Overfull \hbox (3.1704pt too wide) in paragraph at lines 2140--2141
+[]\TU/lmr/bx/n/12 Proof: \TU/lmr/m/n/12 The cumulative distribution function of
+ the continuous uniform distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Proof
+ II[]/3.1.3[])
  []
 
-[41] [42]
-Overfull \hbox (22.98112pt too wide) detected at line 2271
-\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = [] =
- \OMS/cmsy/m/n/12 ^^@[] ^^A [] [] \OT1/cmr/m/n/12 + [] \OMS/cmsy/m/n/12 ^^A \OT
-1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm
-/m/it/12 ^^V\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
+[36] [37] [38]
+Overfull \hbox (6.1957pt too wide) in paragraph at lines 2315--2316
+\TU/lmr/m/n/12 able?” ; in: \TU/lmr/m/it/12 StackExchange Mathematics\TU/lmr/m/
+n/12 ; URL: $[][][][][] [] [] [] [][][][] [] [][][][][][][][][][][][][] [] [][]
+[] [] [][][][][][][][][] [] [][][][][][] []
  []
 
-[43] [44]
-Overfull \hbox (41.60437pt too wide) in paragraph at lines 2386--2387
-[][][] [] [][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][]$\TU/lmr/m/n/12 . 
+[39] [40] [41]
+Overfull \hbox (6.1957pt too wide) in paragraph at lines 2535--2536
+\TU/lmr/m/n/12 able?” ; in: \TU/lmr/m/it/12 StackExchange Mathematics\TU/lmr/m/
+n/12 ; URL: $[][][][][] [] [] [] [][][][] [] [][][][][][][][][][][][][] [] [][]
+[] [] [][][][][][][][][] [] [][][][][][] []
  []
 
-
-Overfull \hbox (15.32262pt too wide) detected at line 2443
-[]
- []
-
-[45]
-Overfull \hbox (20.05856pt too wide) in paragraph at lines 2469--2470
-[]\TU/lmr/m/n/12 ProofWiki (2020): “   Moment Generating Function of Gaussian D
-istribution” ; in: \TU/lmr/m/it/12 ProofWiki\TU/lmr/m/n/12 ,
+[42] [43]
+Overfull \hbox (35.2732pt too wide) in paragraph at lines 2621--2622
+\TU/lmr/m/n/12 trieved on 2020-03-03; URL: $[][][][][] [] [] [] [][][][][][][][
+][] [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][] [] [][][][][]
+[][][] [] [][] [] [][][][][][][][] []
  []
 
 
-Overfull \hbox (30.6029pt too wide) in paragraph at lines 2469--2470
-\TU/lmr/m/n/12 retrieved on 2020-03-03; URL: $[][][][][] [] [] [] [][][][][][][
-][][] [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][] [] [][][][]
-[][][][] []
+Overfull \hbox (1.67145pt too wide) in paragraph at lines 2654--2655
+[]\TU/lmr/m/n/12 Koch, Karl-Rudolf (2007): “   Gamma Distribution” ; in: \TU/lm
+r/m/it/12 Introduction to Bayesian Statistics\TU/lmr/m/n/12 , Springer,
+ []
+
+
+Overfull \hbox (10.32068pt too wide) in paragraph at lines 2654--2655
+\TU/lmr/m/n/12 Berlin/Heidelberg, 2007, p. 47, eq. 2.172; URL: $[][][][][] [] [
+] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][]
+[][][][][][]$;
+ []
+
+[44] [45]
+Overfull \hbox (2.17838pt too wide) in paragraph at lines 2784--2785
+[]\TU/lmr/bx/n/12 Proof: \TU/lmr/m/n/12 This follows directly from the definiti
+on of the exponential distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Definit
+ion II[]/3.4.1[]). 
  []
 
 [46] [47]
-Overfull \hbox (5.13892pt too wide) in paragraph at lines 2556--2557
-\TU/lmr/m/n/12 trieved on 2020-02-08; URL: $[][][][][] [] [] [] [][] [] [][][][
-][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
-[][][][] []
+Overfull \hbox (16.20068pt too wide) in paragraph at lines 2980--2981
+\TU/lmr/m/n/12 Berlin/Heidelberg, 2007, p. 39, eq. 2.142a; URL: $[][][][][] [] 
+[] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][
+][][][][][][]$;
  []
 
-[48]
-Overfull \hbox (0.59612pt too wide) in paragraph at lines 2650--2651
-[]\TU/lmr/bx/n/12 Proof: \TU/lmr/m/n/12 The probability density function of the
- exponential distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Proof II[]/3.4.3
-[])
+[48] [49] [50] [51]
+Overfull \hbox (101.10136pt too wide) in paragraph at lines 3233--3234
+\TU/lmr/m/it/12 ity and statistics\TU/lmr/m/n/12 ; URL: $[][][][][] [] [] [] []
+[][] [] [][][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][
+][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][]$. 
  []
 
-[49] [50] [51] [52] [53] [54]
-Overfull \hbox (5.59494pt too wide) in paragraph at lines 3040--3041
-\TU/lmr/m/it/12 on probability and statistics\TU/lmr/m/n/12 ; URL: $[][][][][] 
-[] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][]
-[][][][][][][][][][][] []
+[52]
+Overfull \hbox (2.85666pt too wide) in paragraph at lines 3312--3313
+\TU/lmr/m/n/12 pp. 55-56, eq. 2.212; URL: $[][][][][] [] [] [] [][][] [] [][][]
+[][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][][][][][][][]$; DOI: 1
+0.1007/978-
  []
 
-[55] [56]
-Overfull \hbox (36.14221pt too wide) in paragraph at lines 3112--3113
-\TU/lmr/m/it/12 tics\TU/lmr/m/n/12 , ch. 2.5.3, pp. 55-56, eq. 2.212; URL: $[][
-][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] []
-[][][][][][][][][][][][]$;
+[53]
+Overfull \hbox (2.85666pt too wide) in paragraph at lines 3361--3362
+\TU/lmr/m/n/12 pp. 55-56, eq. 2.212; URL: $[][][][][] [] [] [] [][][] [] [][][]
+[][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][][][][][][][]$; DOI: 1
+0.1007/978-
  []
 
-
-Overfull \hbox (6.52423pt too wide) in paragraph at lines 3143--3144
-\TU/lmr/m/n/12 II[]/4.1.2[]) and the probability density function of the gamma 
-distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Proof II[]/3.3.2[]),
- []
-
-
-Overfull \hbox (36.14221pt too wide) in paragraph at lines 3158--3159
-\TU/lmr/m/it/12 tics\TU/lmr/m/n/12 , ch. 2.5.3, pp. 55-56, eq. 2.212; URL: $[][
-][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] []
-[][][][][][][][][][][][]$;
- []
-
-[57] [58] [59]
-Overfull \hbox (160.73933pt too wide) detected at line 3336
+[54] [55] [56]
+Overfull \hbox (101.5576pt too wide) detected at line 3544
 []
  []
 
-[60] [61] [62] [63]
-Overfull \hbox (11.51495pt too wide) detected at line 3452
+[57] [58] [59] [60]
+Overfull \hbox (5.08221pt too wide) detected at line 3682
 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 M; U; V
 \OT1/cmr/m/n/12 ) = [] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
  []
 
 
-Overfull \hbox (64.26395pt too wide) detected at line 3464
+Overfull \hbox (2.6459pt too wide) detected at line 3688
 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 M; U; V
 \OT1/cmr/m/n/12 ) = [] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
  []
 
-
-Overfull \hbox (61.82764pt too wide) detected at line 3470
-[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 M; U; V
-\OT1/cmr/m/n/12 ) = [] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
- []
-
-[64] [65] [66
-
-]
+[61] [62]
 Chapter III.
-[67] [68] [69] [70] [71]
-Overfull \hbox (365.1415pt too wide) in paragraph at lines 3768--3769
+[63
+
+] [64] [65] [66] [67]
+Overfull \hbox (294.19975pt too wide) in paragraph at lines 3998--3999
 []\TU/lmr/m/n/12 Combining the likelihood function [] with the prior distributi
 on [], the ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 sssssssssssssssssssssssssss
  []
 
-[72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86]
-[87] [88]
-Overfull \hbox (18.55096pt too wide) in paragraph at lines 4652--4653
-\TU/lmr/m/n/12 on 2020-03-03; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][
-][] [] [][][] [] [][][][] [] [][][][][][][][] [] [][][][][][][][][][] [] [][][]
-[][][][][] [] [][][][][]$. 
- []
-
-[89]
+[68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82]
+[83]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 4685.
+(amsmath)                 on input line 4942.
 
-[90] [91] [92]
-Overfull \hbox (25.87094pt too wide) in paragraph at lines 4881--4882
-\TU/lmr/m/n/12 retrieved on 2020-01-24; URL: $[][][][][] [] [] [] [][] [] [][][
-][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][][][]
-[][][][][][][][] []
- []
-
-[93] [94
+[84] [85] [86] [87] [88
 
 ]
 Chapter IV.
-[95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106]
-Overfull \hbox (12.05232pt too wide) in paragraph at lines 5503--5504
-[][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[]$\TU/lmr/m/n/12 ;
+[89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99]
+Overfull \hbox (87.91544pt too wide) in paragraph at lines 5797--5798
+\TU/lmr/m/it/12 Averaging\TU/lmr/m/n/12 , ch. 3.2, pp. 78-81; URL: $[][][][][] 
+[] [] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][] [] []
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
+
  []
 
-[107] [108] [109] [110]
-Overfull \hbox (136.18297pt too wide) in paragraph at lines 5704--5705
-[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] [] [][][] [] [][][][][
-][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][]$\TU/lmr
-/m/n/12 ; DOI: 10.1016/j.neuroimage.2016.07.047. 
+[100] [101] [102]
+Overfull \hbox (2.53778pt too wide) in paragraph at lines 6010--6011
+\TU/lmr/m/n/12 Bayesian model selection” ; in: \TU/lmr/m/it/12 NeuroImage\TU/lm
+r/m/n/12 , vol. 141, pp. 469–489; URL: $[][][][][] [] [] [] [][][] [] [][][][][
+][][][][][][][][] []
  []
 
-[111]
-Overfull \hbox (6.9283pt too wide) in paragraph at lines 5791--5792
-[]\TU/lmr/m/n/12 Logarithmizing transforms the family evidence $\OML/cmm/m/it/1
-2 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 f[]\OT
-1/cmr/m/n/12 )$ \TU/lmr/m/n/12 into the log family evidence $[]\OT1/cmr/m/n/12 
-(\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 )$\TU/lmr/m/n/12 : 
+
+Overfull \hbox (0.96648pt too wide) in paragraph at lines 6054--6055
+[]\TU/lmr/m/n/12 Resolving the logarithm and applying the definition of the log
+ model evidence ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Definition IV[]/3.1.1[]),
  []
 
-[112] [113] [114] [115] [116] (./StatProofBook.aux)
+[103] [104] [105] [106] [107] [108] (./StatProofBook.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3543 strings out of 492472
- 51431 string characters out of 6132674
- 140311 words of memory out of 5000000
- 8020 multiletter control sequences out of 15000+600000
- 10980 words of font info for 55 fonts, out of 8000000 for 9000
+ 3546 strings out of 492472
+ 51529 string characters out of 6132674
+ 135410 words of memory out of 5000000
+ 8021 multiletter control sequences out of 15000+600000
+ 10988 words of font info for 56 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  30i,21n,31p,823b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on StatProofBook.pdf (122 pages).
+Output written on StatProofBook.pdf (113 pages).

@@ -1,7 +1,7 @@
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,12pt,twoside]{book}
 
 %%% Packages %%%
-\usepackage{fullpage}
+\usepackage[cm,headings]{fullpage}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{gensymb}
@@ -12,6 +12,7 @@
 \usepackage[utf8]{inputenc}
 
 %%% Settings %%%
+\pagestyle{headings}
 \setlength{\parindent}{0pt}
 \raggedbottom
 \frenchspacing
@@ -35,7 +36,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{https://statproofbook.github.io/ \\ StatProofBook@gmail.com}
-\date{2020-03-04, 17:11}
+\date{2020-03-07, 16:20}
 
 \begin{document}
 
@@ -62,8 +63,8 @@
 \subsection{Probability distributions}
 
 \subsubsection[\textit{Probability mass function}]{Probability mass function} \label{sec:pmf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$. Then, $f_X(x): \mathbb{R} \to [0,1]$ is the probability mass function of $X$, if
 
 \begin{equation} \label{eq:pmf-pmf-def-s1}
@@ -76,6 +77,7 @@ for all $x \in \mathcal{X}$ and
 \sum_{x \in \mathcal{X}} f_X(x) = 1 \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -85,11 +87,13 @@ for all $x \in \mathcal{X}$ and
 
 \vspace{1em}
 \textbf{Metadata:} ID: D9 | shortcut: pmf | author: JoramSoch | date: 2020-02-13, 19:09.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Probability density function}]{Probability density function} \label{sec:pdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$. Then, $f_X(x): \mathbb{R} \to \mathbb{R}$ is the probability density function of $X$, if
 
 \begin{equation} \label{eq:pdf-pdf-def-s0}
@@ -108,6 +112,7 @@ for any $A \subset \mathcal{X}$ and
 \int_{\mathcal{X}} f_X(x) \, \mathrm{d}x = 1 \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -117,11 +122,13 @@ for any $A \subset \mathcal{X}$ and
 
 \vspace{1em}
 \textbf{Metadata:} ID: D10 | shortcut: pdf | author: JoramSoch | date: 2020-02-13, 19:26.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Cumulative distribution function}]{Cumulative distribution function} \label{sec:cdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:}
 
 1) Let $X$ be a discrete random variable ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and the probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $f_X(x)$. Then, the function $F_X(x): \mathbb{R} \to [0,1]$ with
@@ -140,6 +147,7 @@ F_X(x) = \int_{-\infty}^{x} f_X(z) \, \mathrm{d}x
 
 is the cumulative distribution function of $X$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -149,11 +157,13 @@ is the cumulative distribution function of $X$.
 
 \vspace{1em}
 \textbf{Metadata:} ID: D13 | shortcut: cdf | author: JoramSoch | date: 2020-02-17, 22:07.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Quantile function}]{Quantile function} \label{sec:qf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") with the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) (CDF) $F_X(x)$. Then, the function $Q_X(p): [0,1] \to \mathbb{R}$ which is the inverse CDF
 
 \begin{equation} \label{eq:qf-qf}
@@ -163,8 +173,9 @@ Q_X(p) = F_X^{-1}(x)
 is the quantile function (QF) of $X$. More precisly, the QF is the function that, for a given quantile $p \in [0,1]$, returns the smallest $x$ for which $F_X(x) = p$:
 
 \begin{equation} \label{eq:qf-qf-prec}
-Q_X(p) = \min \left\lbrace x \in \mathbb{R} \mid F_X(x) = p \right\rbrace \; .
+Q_X(p) = \min \left\lbrace x \in \mathbb{R} \, \vert \, F_X(x) = p \right\rbrace \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -175,11 +186,13 @@ Q_X(p) = \min \left\lbrace x \in \mathbb{R} \mid F_X(x) = p \right\rbrace \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D14 | shortcut: qf | author: JoramSoch | date: 2020-02-17, 22:18.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Moment-generating function}]{Moment-generating function} \label{sec:mgf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:}
 
 1) The moment-generating function of a random variable ($\rightarrow$ Definition "rvar") $X \in \mathbb{R}$ is
@@ -194,6 +207,7 @@ M_X(t) = \mathrm{E} \left[ e^{tX} \right], \quad t \in \mathbb{R} \; .
 M_X(t) = \mathrm{E} \left[ e^{t^\mathrm{T}X} \right], \quad t \in \mathbb{R}^n \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -203,13 +217,15 @@ M_X(t) = \mathrm{E} \left[ e^{t^\mathrm{T}X} \right], \quad t \in \mathbb{R}^n \
 
 \vspace{1em}
 \textbf{Metadata:} ID: D2 | shortcut: mgf | author: JoramSoch | date: 2020-01-22, 10:58.
+\vspace{1em}
+
 
 
 \subsection{Expected value}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:mean}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:}
 
 1) The expected value (or, mean) of a discrete random variable ($\rightarrow$ Definition "rvar") $X$ with domain $\mathcal{X}$ is
@@ -229,6 +245,7 @@ where $f_X(x)$ is the probability mass function ($\rightarrow$ Definition \ref{s
 
 where $f_X(x)$ is the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $X$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -238,11 +255,13 @@ where $f_X(x)$ is the probability density function ($\rightarrow$ Definition \re
 
 \vspace{1em}
 \textbf{Metadata:} ID: D11 | shortcut: mean | author: JoramSoch | date: 2020-02-13, 19:38.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Non-negativity}]{Non-negativity} \label{sec:mean-nonneg}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} If a random variable ($\rightarrow$ Definition "rvar") is strictly non-negative, its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is also non-negative, i.e.
 
 \begin{equation} \label{eq:mean-nonneg-mean-nonneg}
@@ -270,6 +289,7 @@ are non-negative, thus the entire sum must be non-negative.
 
 is strictly non-negative, thus the term on the right-hand side is a Lebesgue integral, so that the result on the left-hand side must be non-negative.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -279,11 +299,13 @@ is strictly non-negative, thus the term on the right-hand side is a Lebesgue int
 
 \vspace{1em}
 \textbf{Metadata:} ID: P52 | shortcut: mean-nonneg | author: JoramSoch | date: 2020-02-13, 20:14.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Linearity}]{Linearity} \label{sec:mean-lin}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} The expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is a linear operator, i.e.
 
 \begin{equation} \label{eq:mean-lin-mean-lin}
@@ -305,7 +327,7 @@ for random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ and a constan
 \mathrm{E}(X) = \sum_{x \in \mathcal{X}} x \cdot f_X(x)
 \end{equation}
 
-and the law of marginal probability ($\rightarrow$ Proof "lmp") states that
+and the law of marginal probability ($\rightarrow$ Definition "prob-marg") states that
 
 \begin{equation} \label{eq:mean-lin-lmp-disc}
 p(x) = \sum_{y \in \mathcal{Y}} p(x,y) \; .
@@ -340,7 +362,7 @@ as well as
 \mathrm{E}(X) = \int_{\mathcal{X}} x \cdot f_X(x) \, \mathrm{d}x
 \end{equation}
 
-and the law of marginal probability ($\rightarrow$ Proof "lmp") states that
+and the law of marginal probability ($\rightarrow$ Definition "prob-marg") states that
 
 \begin{equation} \label{eq:mean-lin-lmp-cont}
 p(x) = \int_{\mathcal{Y}} p(x,y) \, \mathrm{d}y \; .
@@ -371,6 +393,7 @@ as well as
 \vspace{1em}
 Collectively, this shows that both requirements for linearity are fulfilled for the expected value, for discrete as well as for continuous random variables.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -381,11 +404,13 @@ Collectively, this shows that both requirements for linearity are fulfilled for 
 
 \vspace{1em}
 \textbf{Metadata:} ID: P53 | shortcut: mean-lin | author: JoramSoch | date: 2020-02-13, 21:08.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Monotonicity}]{Monotonicity} \label{sec:mean-mono}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} The expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is monotonic, i.e.
 
 \begin{equation} \label{eq:mean-mono-mean-mono}
@@ -412,6 +437,7 @@ Together with \eqref{eq:mean-mono-mean-XYZ}, this yields
 \mathrm{E}(Y) - \mathrm{E}(X) \geq 0 \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -421,11 +447,13 @@ Together with \eqref{eq:mean-mono-mean-XYZ}, this yields
 
 \vspace{1em}
 \textbf{Metadata:} ID: P54 | shortcut: mean-mono | author: JoramSoch | date: 2020-02-17, 21:00.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{(Non-)Multiplicitavity}]{(Non-)Multiplicitavity} \label{sec:mean-mult}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:}
 
 1) If two random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ are independent ($\rightarrow$ Definition "ind"), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is multiplicative, i.e.
@@ -527,6 +555,7 @@ and thus,
 \mathrm{E}(X\,Y) \neq \mathrm{E}(X) \, \mathrm{E}(Y) \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -536,18 +565,21 @@ and thus,
 
 \vspace{1em}
 \textbf{Metadata:} ID: P55 | shortcut: mean-mult | author: JoramSoch | date: 2020-02-17, 21:51.
+\vspace{1em}
+
 
 
 \subsection{Variance}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:var}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} The variance of a random variable ($\rightarrow$ Definition "rvar") $X$ is defined as the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared deviation from its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}):
 
 \begin{equation} \label{eq:var-var}
 \mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -558,6 +590,8 @@ and thus,
 
 \vspace{1em}
 \textbf{Metadata:} ID: D12 | shortcut: var | author: JoramSoch | date: 2020-02-13, 19:55.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -566,8 +600,8 @@ and thus,
 \subsection{Bayesian inference}
 
 \subsubsection[\textbf{Bayes' theorem}]{Bayes' theorem} \label{sec:bayes-th}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $A$ and $B$ be two arbitrary statements about random variables ($\rightarrow$ Definition "rvar"), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Then, the conditional probability that $A$ is true, given that $B$ is true, is equal to
 
 \begin{equation} \label{eq:bayes-th-BT}
@@ -576,7 +610,7 @@ p(A|B) = \frac{p(B|A) \, p(A)}{p(B)} \; .
 
 
 \vspace{1em}
-\textbf{Proof:} The conditional probability ($\rightarrow$ Definition "cp") is defined as the ratio of joint probability ($\rightarrow$ Definition "jp"), i.e. the probability of both statements being true, and marginal probability ($\rightarrow$ Definition "mp"), i.e. the probability of only the second one being true:
+\textbf{Proof:} The conditional probability ($\rightarrow$ Definition "prob-cond") is defined as the ratio of joint probability ($\rightarrow$ Definition "prob-joint"), i.e. the probability of both statements being true, and marginal probability ($\rightarrow$ Definition "prob-marg"), i.e. the probability of only the second one being true:
 
 \begin{equation} \label{eq:bayes-th-LCP}
 p(A|B) = \frac{p(A,B)}{p(B)} \; .
@@ -600,6 +634,7 @@ from which Bayes' theorem can be directly derived:
 p(A|B) \overset{\eqref{eq:bayes-th-JP}}{=} \frac{p(B|A) \, p(A)}{p(B)} \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -609,11 +644,13 @@ p(A|B) \overset{\eqref{eq:bayes-th-JP}}{=} \frac{p(B|A) \, p(A)}{p(B)} \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: P4 | shortcut: bayes-th | author: JoramSoch | date: 2019-09-27, 16:24.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Bayes' rule}]{Bayes' rule} \label{sec:bayes-rule}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $A_1$, $A_2$ and $B$ be arbitrary statements about random variables ($\rightarrow$ Definition "rvar") where $A_1$ and $A_2$ are mutually exclusive. Then, Bayes' rule states that the posterior odds ($\rightarrow$ Definition "post-odd") are equal to the Bayes factor ($\rightarrow$ Definition "bf") times the prior odds ($\rightarrow$ Definition "prior-odd"), i.e.
 
 \begin{equation} \label{eq:bayes-rule-bayes-rule}
@@ -643,6 +680,7 @@ Dividing the two conditional probabilities by each other
 
 one obtains the posterior odds ratio as given by the theorem.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -652,18 +690,21 @@ one obtains the posterior odds ratio as given by the theorem.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P12 | shortcut: bayes-rule | author: JoramSoch | date: 2020-01-06, 20:55.
+\vspace{1em}
+
 
 
 \subsection{Probabilistic modeling}
 
 \subsubsection[\textit{Generative model}]{Generative model} \label{sec:gm}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. A statement about the distribution of $y$ given $\theta$ is called a generative model $m$:
 
 \begin{equation} \label{eq:gm-gm}
 m: \, y \sim \mathcal{D}(\theta) \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -673,16 +714,19 @@ m: \, y \sim \mathcal{D}(\theta) \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D27 | shortcut: gm | author: JoramSoch | date: 2020-03-03, 15:50.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Likelihood function}]{Likelihood function} \label{sec:lf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the distribution of $y$ given $\theta$ is called the likelihood function of $m$:
 
 \begin{equation} \label{eq:lf-gm}
 \mathcal{L}_m(\theta) = p(y|\theta,m) = \mathcal{D}(y; \theta) \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -692,11 +736,13 @@ m: \, y \sim \mathcal{D}(\theta) \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D28 | shortcut: lf | author: JoramSoch | date: 2020-03-03, 15:50.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Prior distribution}]{Prior distribution} \label{sec:prior}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. A distribution of $\theta$ unconditional on $y$ is called a prior distribution:
 
 \begin{equation} \label{eq:prior-prior}
@@ -709,6 +755,7 @@ The parameters $\lambda$ of this distribution are called the prior hyperparamete
 p(\theta|m) = \mathcal{D}(\theta; \lambda) \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -717,16 +764,19 @@ p(\theta|m) = \mathcal{D}(\theta; \lambda) \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D29 | shortcut: prior | author: JoramSoch | date: 2020-03-03, 16:09.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Full probability model}]{Full probability model} \label{sec:fpm}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. The combination of a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) for $y$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$ is called a full probability model $m$:
 
 \begin{equation} \label{eq:fpm-fpm}
 m: \, y \sim \mathcal{D}(\theta), \, \theta \sim \mathcal{D}(\lambda) \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -736,16 +786,19 @@ m: \, y \sim \mathcal{D}(\theta), \, \theta \sim \mathcal{D}(\lambda) \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D30 | shortcut: fpm | author: JoramSoch | date: 2020-03-03, 16:16.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Joint likelihood}]{Joint likelihood} \label{sec:jl}
+\setcounter{equation}{0}
 
-\vspace{1em}
-\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the joint probability ($\rightarrow$ Definition "jp") density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ and $\theta$ is called the joint likelihood:
+\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the joint probability ($\rightarrow$ Definition "prob-joint") density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ and $\theta$ is called the joint likelihood:
 
 \begin{equation} \label{eq:jl-jl}
 p(y,\theta|m) = p(y|\theta,m) \, p(\theta|m) \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -755,11 +808,13 @@ p(y,\theta|m) = p(y|\theta,m) \, p(\theta|m) \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D31 | shortcut: jl | author: JoramSoch | date: 2020-03-03, 16:36.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Posterior distribution}]{Posterior distribution} \label{sec:post}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. The distribution of $\theta$ conditional on $y$ is called the posterior distribution:
 
 \begin{equation} \label{eq:post-post}
@@ -772,6 +827,7 @@ The parameters $\phi$ of this distribution are called the posterior hyperparamet
 p(\theta|y,m) = \mathcal{D}(\theta; \phi) \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -780,16 +836,19 @@ p(\theta|y,m) = \mathcal{D}(\theta; \phi) \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D32 | shortcut: post | author: JoramSoch | date: 2020-03-03, 16:43.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Marginal likelihood}]{Marginal likelihood} \label{sec:ml}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the marginal probability ($\rightarrow$ Definition "mp") density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ across the parameter space $\Theta$ is called the marginal likelihood:
 
 \begin{equation} \label{eq:ml-ml}
 p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -799,6 +858,8 @@ p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D33 | shortcut: ml | author: JoramSoch | date: 2020-03-03, 16:49.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -807,8 +868,8 @@ p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \subsection{Point estimates}
 
 \subsubsection[\textbf{Partition of the mean squared error into bias and variance}]{Partition of the mean squared error into bias and variance} \label{sec:mse-bnv}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} The mean squared error ($\rightarrow$ Definition "mse") can be partitioned into variance and squared bias
 
 \begin{equation} \label{eq:mse-bnv-MSE}
@@ -829,7 +890,7 @@ and the bias ($\rightarrow$ Definition "bias") is given by
 
 
 \vspace{1em}
-\textbf{Proof:} The mean squared error (MSE) is defined as ($\rightarrow$ Definition "mse") the expected value ($\rightarrow$ Definition "ev") of the squared deviation of the estimated value $\hat{\theta}$ from the true value $\theta$ of a parameter, over all values $\hat{\theta}$:
+\textbf{Proof:} The mean squared error (MSE) is defined as ($\rightarrow$ Definition "mse") the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared deviation of the estimated value $\hat{\theta}$ from the true value $\theta$ of a parameter, over all values $\hat{\theta}$:
 
 \begin{equation} \label{eq:mse-bnv-MSE-def}
 \mathrm{MSE}(\hat{\theta}) = \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \; .
@@ -858,6 +919,7 @@ Because $\mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta$ is constant as a func
 
 This proofs the partition given by \eqref{eq:mse-bnv-MSE}.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -867,13 +929,15 @@ This proofs the partition given by \eqref{eq:mse-bnv-MSE}.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P5 | shortcut: mse-bnv | author: JoramSoch | date: 2019-11-27, 14:26.
+\vspace{1em}
+
 
 
 \subsection{Interval estimates}
 
 \subsubsection[\textbf{Construction of confidence intervals using Wilks' theorem}]{Construction of confidence intervals using Wilks' theorem} \label{sec:ci-wilks}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) for measured data $y$ with model parameters $\theta$, consisting of a parameter of interest $\phi$ and nuisance parameters $\lambda$:
 
 \begin{equation} \label{eq:ci-wilks-mod-par}
@@ -889,7 +953,7 @@ Further, let $\hat{\theta}$ be an estimate of $\theta$, obtained using maximum-l
 Then, an asymptotic confidence interval ($\rightarrow$ Definition "ci") for $\theta$ is given by
 
 \begin{equation} \label{eq:ci-wilks-ci-wilks}
-\mathrm{CI}_{1-\alpha}(\hat{\phi}) = \left\lbrace \phi \mid \log p(y|\phi,\hat{\lambda}) \geq \log p(y|\hat{\phi},\hat{\lambda}) - \frac{1}{2} \chi^2_{1,1-\alpha} \right\rbrace
+\mathrm{CI}_{1-\alpha}(\hat{\phi}) = \left\lbrace \phi \, \vert \, \log p(y|\phi,\hat{\lambda}) \geq \log p(y|\hat{\phi},\hat{\lambda}) - \frac{1}{2} \chi^2_{1,1-\alpha} \right\rbrace
 \end{equation}
 
 where $1-\alpha$ is the confidence level and $\chi^2_{1,1-\alpha}$ is the $(1-\alpha)$-quantile of the chi-squared distribution ($\rightarrow$ Definition "chi2") with 1 degree of freedom ($\rightarrow$ Definition "dof").
@@ -940,6 +1004,7 @@ Applying \eqref{eq:ci-wilks-llr} and rearranging, we can evaluate
 
 which is equivalent to the confidence interval given by \eqref{eq:ci-wilks-ci-wilks}.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -951,6 +1016,8 @@ which is equivalent to the confidence interval given by \eqref{eq:ci-wilks-ci-wi
 
 \vspace{1em}
 \textbf{Metadata:} ID: P56 | shortcut: ci-wilks | author: JoramSoch | date: 2020-02-19, 17:15.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -959,8 +1026,8 @@ which is equivalent to the confidence interval given by \eqref{eq:ci-wilks-ci-wi
 \subsection{Shannon entropy}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:ent}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition "rvar") with possible outcomes $x_i, \; i = 1,\ldots,k$ and the (observed or assumed) probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x) = f_X(x)$. Then, the entropy (also referred to as "Shannon entropy") of $X$ is defined as
 
 \begin{equation} \label{eq:ent-ent}
@@ -968,6 +1035,7 @@ which is equivalent to the confidence interval given by \eqref{eq:ci-wilks-ci-wi
 \end{equation}
 
 where $b$ is the base of the logarithm specifying in which unit the entropy is determined.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -978,11 +1046,13 @@ where $b$ is the base of the logarithm specifying in which unit the entropy is d
 
 \vspace{1em}
 \textbf{Metadata:} ID: D15 | shortcut: ent | author: JoramSoch | date: 2020-02-19, 17:36.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Non-negativity}]{Non-negativity} \label{sec:ent-nonneg}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} The entropy of a discrete random variable ($\rightarrow$ Definition "rvar") is a non-negative number:
 
 \begin{equation} \label{eq:ent-nonneg-ent-nonneg}
@@ -1022,6 +1092,7 @@ By convention, $0 \cdot \log_b(0)$ is taken to be $0$ when calculating entropy, 
 
 Taking this together, each addend in \eqref{eq:ent-nonneg-ent-dev} is positive or zero and thus, the entire sum must also be non-negative.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1031,11 +1102,13 @@ Taking this together, each addend in \eqref{eq:ent-nonneg-ent-dev} is positive o
 
 \vspace{1em}
 \textbf{Metadata:} ID: P57 | shortcut: ent-nonneg | author: JoramSoch | date: 2020-02-19, 19:10.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Conditional entropy}]{Conditional entropy} \label{sec:ent-cond}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x)$ and $p(y)$. Then, the conditional entropy of $Y$ given $X$ or, entropy of $Y$ conditioned on $X$, is defined as
 
 \begin{equation} \label{eq:ent-cond-ent-cond}
@@ -1043,6 +1116,7 @@ Taking this together, each addend in \eqref{eq:ent-nonneg-ent-dev} is positive o
 \end{equation}
 
 where $\mathrm{H}(Y \vert X=x)$ is the (marginal) entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of $Y$, evaluated at $x$.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1053,18 +1127,21 @@ where $\mathrm{H}(Y \vert X=x)$ is the (marginal) entropy ($\rightarrow$ Definit
 
 \vspace{1em}
 \textbf{Metadata:} ID: D17 | shortcut: ent-cond | author: JoramSoch | date: 2020-02-19, 18:08.
+\vspace{1em}
+
 
 
 \subsubsection[\textit{Joint entropy}]{Joint entropy} \label{sec:ent-joint}
+\setcounter{equation}{0}
 
-\vspace{1em}
-\textbf{Definition:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and joint probability ($\rightarrow$ Definition "jp") mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x,y)$. Then, the joint entropy of $X$ and $Y$ is defined as
+\textbf{Definition:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and joint probability ($\rightarrow$ Definition "prob-joint") mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x,y)$. Then, the joint entropy of $X$ and $Y$ is defined as
 
 \begin{equation} \label{eq:ent-joint-ent-joint}
 \mathrm{H}(X,Y) = - \sum_{x \in \mathcal{X}} \sum_{x \in \mathcal{Y}} p(x,y) \cdot \log_b p(x,y)
 \end{equation}
 
 where $b$ is the base of the logarithm specifying in which unit the entropy is determined.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1075,13 +1152,15 @@ where $b$ is the base of the logarithm specifying in which unit the entropy is d
 
 \vspace{1em}
 \textbf{Metadata:} ID: D18 | shortcut: ent-joint | author: JoramSoch | date: 2020-02-19, 18:18.
+\vspace{1em}
+
 
 
 \subsection{Differential entropy}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:dent}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and the (estimated or assumed) probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x) = f_X(x)$. Then, the differential entropy (also referred to as "continuous entropy") of $X$ is defined as
 
 \begin{equation} \label{eq:dent-dent}
@@ -1089,6 +1168,7 @@ where $b$ is the base of the logarithm specifying in which unit the entropy is d
 \end{equation}
 
 where $b$ is the base of the logarithm specifying in which unit the entropy is determined.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1099,11 +1179,13 @@ where $b$ is the base of the logarithm specifying in which unit the entropy is d
 
 \vspace{1em}
 \textbf{Metadata:} ID: D16 | shortcut: dent | author: JoramSoch | date: 2020-02-19, 17:53.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Negativity}]{Negativity} \label{sec:dent-neg}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Unlike its discrete analogue ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:ent-nonneg}), the differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) can become negative.
 
 
@@ -1134,6 +1216,7 @@ Thus, the differential entropy ($\rightarrow$ Definition \ref{sec:General Theore
 
 which is negative for any base $b > 1$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1143,13 +1226,15 @@ which is negative for any base $b > 1$.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P68 | shortcut: dent-neg | author: JoramSoch | date: 2020-03-02, 20:32.
+\vspace{1em}
+
 
 
 \subsection{Discrete mutual information}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:mi}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:}
 
 1) The mutual information of two discrete random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ is defined as
@@ -1158,7 +1243,7 @@ which is negative for any base $b > 1$.
 \mathrm{I}(X,Y) = - \sum_{x \in \mathcal{X}} \sum_{x \in \mathcal{Y}} p(x,y) \cdot \log \frac{p(x,y)}{p(x) \cdot p(y)}
 \end{equation}
 
-where $p(x)$ and $p(y)$ are the probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition "jp") mass function of $X$ and $Y$.
+where $p(x)$ and $p(y)$ are the probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition "prob-joint") mass function of $X$ and $Y$.
 
 2) The mutual information of two continuous random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ is defined as
 
@@ -1166,7 +1251,8 @@ where $p(x)$ and $p(y)$ are the probability mass functions ($\rightarrow$ Defini
 \mathrm{I}(X,Y) = - \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \cdot \log \frac{p(x,y)}{p(x) \cdot p(y)} \, \mathrm{d}y \, \mathrm{d}x
 \end{equation}
 
-where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition "jp") density function of $X$ and $Y$.
+where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition "prob-joint") density function of $X$ and $Y$.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1177,12 +1263,14 @@ where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Def
 
 \vspace{1em}
 \textbf{Metadata:} ID: D19 | shortcut: mi | author: JoramSoch | date: 2020-02-19, 18:35.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Relation to marginal and conditional entropy}]{Relation to marginal and conditional entropy} \label{sec:dmi-mce}
+\setcounter{equation}{0}
 
-\vspace{1em}
-\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition "jp") $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
+\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition "prob-joint") $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:dmi-mce-dmi-mce}
 \begin{split}
@@ -1191,7 +1279,7 @@ where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Def
 \end{split}
 \end{equation}
 
-where $\mathrm{H}(X)$ and $\mathrm{H}(Y)$ are the marginal entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of $X$ and $Y$ and $\mathrm{H}(X \mid Y)$ and $\mathrm{H}(Y \mid X)$ are the conditional entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cond}).
+where $\mathrm{H}(X)$ and $\mathrm{H}(Y)$ are the marginal entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of $X$ and $Y$ and $\mathrm{H}(X \vert Y)$ and $\mathrm{H}(Y \vert X)$ are the conditional entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cond}).
 
 
 \vspace{1em}
@@ -1207,7 +1295,7 @@ Separating the logarithm, we have:
 \mathrm{I}(X,Y) = \sum_x \sum_y p(x,y) \log \frac{p(x,y)}{p(y)} - \sum_x \sum_y p(x,y) \log p(x) \; .
 \end{equation}
 
-Applying the law of conditional probability ($\rightarrow$ Proof "lcp"), i.e. $p(x,y) = p(x \mid y) \, p(y)$, we get:
+Applying the law of conditional probability ($\rightarrow$ Definition "prob-cond"), i.e. $p(x,y) = p(x \vert y) \, p(y)$, we get:
 
 \begin{equation} \label{eq:dmi-mce-MI-s2}
 \mathrm{I}(X,Y) = \sum_x \sum_y p(x|y) \, p(y) \log p(x|y) - \sum_x \sum_y p(x,y) \log p(x) \; .
@@ -1219,7 +1307,7 @@ Regrouping the variables, we have:
 \mathrm{I}(X,Y) = \sum_y p(y) \sum_x p(x|y) \log p(x|y) - \sum_x \left( \sum_y p(x,y) \right) \log p(x) \; .
 \end{equation}
 
-Applying the law of marginal probability ($\rightarrow$ Proof "lmp"), i.e. $p(x) = \sum_y p(x,y)$, we get:
+Applying the law of marginal probability ($\rightarrow$ Definition "prob-marg"), i.e. $p(x) = \sum_y p(x,y)$, we get:
 
 \begin{equation} \label{eq:dmi-mce-MI-s4}
 \mathrm{I}(X,Y) = \sum_y p(y) \sum_x p(x|y) \log p(x|y) - \sum_x p(x) \log p(x) \; .
@@ -1245,6 +1333,7 @@ we can finally show:
 
 The conditioning of $X$ on $Y$ in this proof is without loss of generality. Thus, the proof for the expression using the reverse conditional entropy of $Y$ given $X$ is obtained by simply switching $x$ and $y$ in the derivation.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1254,12 +1343,14 @@ The conditioning of $X$ on $Y$ in this proof is without loss of generality. Thus
 
 \vspace{1em}
 \textbf{Metadata:} ID: P19 | shortcut: dmi-mce | author: JoramSoch | date: 2020-01-13, 18:20.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Relation to marginal and joint entropy}]{Relation to marginal and joint entropy} \label{sec:dmi-mje}
+\setcounter{equation}{0}
 
-\vspace{1em}
-\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition "jp") $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
+\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition "prob-joint") $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:dmi-mje-dmi-mje}
 \mathrm{I}(X,Y) = \mathrm{H}(X) + \mathrm{H}(Y) - \mathrm{H}(X,Y)
@@ -1287,7 +1378,7 @@ Regrouping the variables, this reads:
 \mathrm{I}(X,Y) = \sum_x \sum_y p(x,y) \log p(x,y) - \sum_x \left( \sum_y p(x,y) \right) \log p(x) - \sum_y \left( \sum_x p(x,y) \right) \log p(y) \; .
 \end{equation}
 
-Applying the law of marginal probability ($\rightarrow$ Proof "lmp"), i.e. $p(x) = \sum_y p(x,y)$, we get:
+Applying the law of marginal probability ($\rightarrow$ Definition "prob-marg"), i.e. $p(x) = \sum_y p(x,y)$, we get:
 
 \begin{equation} \label{eq:dmi-mje-MI-s3}
 \mathrm{I}(X,Y) = \sum_x \sum_y p(x,y) \log p(x,y) - \sum_x p(x) \log p(x) - \sum_y p(y) \log p(y) \; .
@@ -1311,6 +1402,7 @@ we can finally show:
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1320,18 +1412,20 @@ we can finally show:
 
 \vspace{1em}
 \textbf{Metadata:} ID: P20 | shortcut: dmi-mje | author: JoramSoch | date: 2020-01-13, 21:53.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Relation to joint and conditional entropy}]{Relation to joint and conditional entropy} \label{sec:dmi-jce}
+\setcounter{equation}{0}
 
-\vspace{1em}
-\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition "jp") $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
+\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition "prob-joint") $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:dmi-jce-dmi-jce}
 \mathrm{I}(X,Y) = \mathrm{H}(X,Y) - \mathrm{H}(X|Y) - \mathrm{H}(Y|X)
 \end{equation}
 
-where $\mathrm{H}(X,Y)$ is the joint entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-joint}) of $X$ and $Y$ and $\mathrm{H}(X \mid Y)$ and $\mathrm{H}(Y \mid X)$ are the conditional entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cond}).
+where $\mathrm{H}(X,Y)$ is the joint entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-joint}) of $X$ and $Y$ and $\mathrm{H}(X \vert Y)$ and $\mathrm{H}(Y \vert X)$ are the conditional entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cond}).
 
 
 \vspace{1em}
@@ -1374,6 +1468,7 @@ Plugging in \eqref{eq:dmi-jce-dmi-mce1}, \eqref{eq:dmi-jce-dmi-mce2} and \eqref{
 
 which proves the identity given above.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1383,13 +1478,15 @@ which proves the identity given above.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P21 | shortcut: dmi-jce | author: JoramSoch | date: 2020-01-13, 22:17.
+\vspace{1em}
+
 
 
 \subsection{Continuous mutual information}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:mi}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:}
 
 1) The mutual information of two discrete random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ is defined as
@@ -1398,7 +1495,7 @@ which proves the identity given above.
 \mathrm{I}(X,Y) = - \sum_{x \in \mathcal{X}} \sum_{x \in \mathcal{Y}} p(x,y) \cdot \log \frac{p(x,y)}{p(x) \cdot p(y)}
 \end{equation}
 
-where $p(x)$ and $p(y)$ are the probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition "jp") mass function of $X$ and $Y$.
+where $p(x)$ and $p(y)$ are the probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition "prob-joint") mass function of $X$ and $Y$.
 
 2) The mutual information of two continuous random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ is defined as
 
@@ -1406,7 +1503,8 @@ where $p(x)$ and $p(y)$ are the probability mass functions ($\rightarrow$ Defini
 \mathrm{I}(X,Y) = - \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \cdot \log \frac{p(x,y)}{p(x) \cdot p(y)} \, \mathrm{d}y \, \mathrm{d}x
 \end{equation}
 
-where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition "jp") density function of $X$ and $Y$.
+where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition "prob-joint") density function of $X$ and $Y$.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1417,11 +1515,13 @@ where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Def
 
 \vspace{1em}
 \textbf{Metadata:} ID: D19 | shortcut: mi | author: JoramSoch | date: 2020-02-19, 18:35.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Relation to marginal and conditional differential entropy}]{Relation to marginal and conditional differential entropy} \label{sec:cmi-mcde}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition "prob-joint") $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:cmi-mcde-cmi-mcde}
@@ -1447,7 +1547,7 @@ Separating the logarithm, we have:
 \mathrm{I}(X,Y) = \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \log \frac{p(x,y)}{p(y)} \, \mathrm{d}y \, \mathrm{d}x - \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \log p(x) \, \mathrm{d}x \, \mathrm{d}y \; .
 \end{equation}
 
-Applying the law of conditional probability ($\rightarrow$ Proof "prob-lcp"), i.e. $p(x,y) = p(x \vert y) \, p(y)$, we get:
+Applying the law of conditional probability ($\rightarrow$ Definition "prob-cond"), i.e. $p(x,y) = p(x \vert y) \, p(y)$, we get:
 
 \begin{equation} \label{eq:cmi-mcde-MI-s2}
 \mathrm{I}(X,Y) = \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x|y) \, p(y) \log p(x|y) \, \mathrm{d}y \, \mathrm{d}x - \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \log p(x) \, \mathrm{d}y \, \mathrm{d}x \; .
@@ -1459,7 +1559,7 @@ Regrouping the variables, we have:
 \mathrm{I}(X,Y) = \int_{\mathcal{Y}} p(y) \int_{\mathcal{X}} p(x|y) \log p(x|y) \, \mathrm{d}x \, \mathrm{d}y - \int_{\mathcal{X}} \left( \int_{\mathcal{Y}} p(x,y) \, \mathrm{d}y \right) \log p(x)\, \mathrm{d}x \; .
 \end{equation}
 
-Applying the law of marginal probability ($\rightarrow$ Proof "prob-lmp"), i.e. $p(x) = \int_{\mathcal{Y}} p(x,y) \, \mathrm{d}y$, we get:
+Applying the law of marginal probability ($\rightarrow$ Definition "prob-marg"), i.e. $p(x) = \int_{\mathcal{Y}} p(x,y) \, \mathrm{d}y$, we get:
 
 \begin{equation} \label{eq:cmi-mcde-MI-s4}
 \mathrm{I}(X,Y) = \int_{\mathcal{Y}} p(y) \int_{\mathcal{X}} p(x|y) \log p(x|y) \, \mathrm{d}x \, \mathrm{d}y - \int_{\mathcal{X}} p(x) \log p(x) \, \mathrm{d}x \; .
@@ -1482,6 +1582,7 @@ we can finally show:
 
 The conditioning of $X$ on $Y$ in this proof is without loss of generality. Thus, the proof for the expression using the reverse conditional differential entropy of $Y$ given $X$ is obtained by simply switching $x$ and $y$ in the derivation.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1491,11 +1592,13 @@ The conditioning of $X$ on $Y$ in this proof is without loss of generality. Thus
 
 \vspace{1em}
 \textbf{Metadata:} ID: P58 | shortcut: cmi-mcde | author: JoramSoch | date: 2020-02-21, 16:53.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Relation to marginal and joint differential entropy}]{Relation to marginal and joint differential entropy} \label{sec:cmi-mjde}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition "prob-joint") $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:cmi-mjde-cmi-mjde}
@@ -1524,7 +1627,7 @@ Regrouping the variables, this reads:
 \mathrm{I}(X,Y) = \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \log p(x,y) \, \mathrm{d}y \, \mathrm{d}x - \int_{\mathcal{X}} \left( \int_{\mathcal{Y}} p(x,y) \, \mathrm{d}y \right) \log p(x) \, \mathrm{d}x - \int_{\mathcal{Y}} \left( \int_{\mathcal{X}} p(x,y) \, \mathrm{d}x \right) \log p(y) \, \mathrm{d}y \; .
 \end{equation}
 
-Applying the law of marginal probability ($\rightarrow$ Proof "prob-lmp"), i.e. $p(x) = \int_{\mathcal{Y}} p(x,y)$, we get:
+Applying the law of marginal probability ($\rightarrow$ Definition "prob-marg"), i.e. $p(x) = \int_{\mathcal{Y}} p(x,y)$, we get:
 
 \begin{equation} \label{eq:cmi-mjde-MI-s3}
 \mathrm{I}(X,Y) = \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \log p(x,y) \, \mathrm{d}y \, \mathrm{d}x - \int_{\mathcal{X}} p(x) \log p(x) \, \mathrm{d}x - \int_{\mathcal{Y}} p(y) \log p(y) \, \mathrm{d}y \; .
@@ -1548,6 +1651,7 @@ we can finally show:
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1557,11 +1661,13 @@ we can finally show:
 
 \vspace{1em}
 \textbf{Metadata:} ID: P59 | shortcut: cmi-mjde | author: JoramSoch | date: 2020-02-21, 17:13.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Relation to joint and conditional differential entropy}]{Relation to joint and conditional differential entropy} \label{sec:cmi-jcde}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition "prob-joint") $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:cmi-jcde-dmi-jce}
@@ -1611,6 +1717,7 @@ Plugging in \eqref{eq:cmi-jcde-cmi-mcde1}, \eqref{eq:cmi-jcde-cmi-mcde2} and \eq
 
 which proves the identity given above.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1620,6 +1727,8 @@ which proves the identity given above.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P60 | shortcut: cmi-jcde | author: JoramSoch | date: 2020-01-21, 17:23.
+\vspace{1em}
+
 
 
 
@@ -1633,15 +1742,15 @@ which proves the identity given above.
 \subsection{Bernoulli distribution}
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:bern-mean}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a Bernoulli distribution ($\rightarrow$ Definition "bern"):
 
 \begin{equation} \label{eq:bern-mean-bern}
 X \sim \mathrm{Bern}(p) \; .
 \end{equation}
 
-Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
+Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
 
 \begin{equation} \label{eq:bern-mean-bern-mean}
 \mathrm{E}(X) = p \; .
@@ -1649,7 +1758,7 @@ Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
 
 
 \vspace{1em}
-\textbf{Proof:} The expected value ($\rightarrow$ Definition "ev") is the probability-weighted average of all possible values:
+\textbf{Proof:} The expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is the probability-weighted average of all possible values:
 
 \begin{equation} \label{eq:bern-mean-mean}
 \mathrm{E}(X) = \sum_{x \in \mathcal{X}} x \cdot \mathrm{Pr}(X = x) \; .
@@ -1665,6 +1774,7 @@ Since there are only two possible outcomes for a Bernoulli random variable ($\ri
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1674,20 +1784,22 @@ Since there are only two possible outcomes for a Bernoulli random variable ($\ri
 
 \vspace{1em}
 \textbf{Metadata:} ID: P22 | shortcut: bern-mean | author: JoramSoch | date: 2020-01-16, 10:58.
+\vspace{1em}
+
 
 
 \subsection{Binomial distribution}
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:bin-mean}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a binomial distribution ($\rightarrow$ Definition "bin"):
 
 \begin{equation} \label{eq:bin-mean-bin}
 X \sim \mathrm{Bin}(n,p) \; .
 \end{equation}
 
-Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
+Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
 
 \begin{equation} \label{eq:bin-mean-bin-mean}
 \mathrm{E}(X) = n p \; .
@@ -1701,7 +1813,7 @@ Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
 \mathrm{E}(X) = \mathrm{E}(X_1 + \ldots + X_n)
 \end{equation}
 
-and because the expected value is a linear operator ($\rightarrow$ Proof "ev-lin"), this is equal to
+and because the expected value is a linear operator ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), this is equal to
 
 \begin{equation} \label{eq:bin-mean-bin-mean-s2}
 \begin{split}
@@ -1716,6 +1828,7 @@ With the expected value of the Bernoulli distribution ($\rightarrow$ Proof \ref{
 \mathrm{E}(X) = \sum_{i=1}^{n} p = n p \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1725,6 +1838,8 @@ With the expected value of the Bernoulli distribution ($\rightarrow$ Proof \ref{
 
 \vspace{1em}
 \textbf{Metadata:} ID: P23 | shortcut: bin-mean | author: JoramSoch | date: 2020-01-16, 11:06.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -1733,15 +1848,15 @@ With the expected value of the Bernoulli distribution ($\rightarrow$ Proof \ref{
 \subsection{Categorical distribution}
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:cat-mean}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a categorical distribution ($\rightarrow$ Definition "cat"):
 
 \begin{equation} \label{eq:cat-mean-cat}
 X \sim \mathrm{Cat}(\left[p_1, \ldots, p_k \right]) \; .
 \end{equation}
 
-Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
+Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
 
 \begin{equation} \label{eq:cat-mean-cat-mean}
 \mathrm{E}(X) = \left[p_1, \ldots, p_k \right] \; .
@@ -1749,7 +1864,7 @@ Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
 
 
 \vspace{1em}
-\textbf{Proof:} If we conceive the outcome of a categorical distribution ($\rightarrow$ Definition "cat-pmf") to be a $1 \times k$ vector, then the elementary row vectors $e_1 = \left[1, 0, \ldots, 0 \right]$, ..., $e_k = \left[0, \ldots, 0, 1 \right]$ are all the possible outcomes and they occur with probabilities $\mathrm{Pr}(X = e_1) = p_1$, ..., $\mathrm{Pr}(X = e_k) = p_k$. Consequently, the expected value ($\rightarrow$ Definition "ev") is
+\textbf{Proof:} If we conceive the outcome of a categorical distribution ($\rightarrow$ Definition "cat-pmf") to be a $1 \times k$ vector, then the elementary row vectors $e_1 = \left[1, 0, \ldots, 0 \right]$, ..., $e_k = \left[0, \ldots, 0, 1 \right]$ are all the possible outcomes and they occur with probabilities $\mathrm{Pr}(X = e_1) = p_1$, ..., $\mathrm{Pr}(X = e_k) = p_k$. Consequently, the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is
 
 \begin{equation} \label{eq:cat-mean-cat-mean-qed}
 \begin{split}
@@ -1760,6 +1875,7 @@ Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1768,20 +1884,22 @@ Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
 
 \vspace{1em}
 \textbf{Metadata:} ID: P24 | shortcut: cat-mean | author: JoramSoch | date: 2020-01-16, 11:17.
+\vspace{1em}
+
 
 
 \subsection{Multinomial distribution}
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:mult-mean}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a multinomial distribution ($\rightarrow$ Definition "mult"):
 
 \begin{equation} \label{eq:mult-mean-mult}
 X \sim \mathrm{Mult}(n,\left[p_1, \ldots, p_k \right]) \; .
 \end{equation}
 
-Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
+Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
 
 \begin{equation} \label{eq:mult-mean-bin-mean}
 \mathrm{E}(X) = \left[n p_1, \ldots, n p_k \right] \; .
@@ -1795,7 +1913,7 @@ Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
 \mathrm{E}(X) = \mathrm{E}(X_1 + \ldots + X_n)
 \end{equation}
 
-and because the expected value is a linear operator ($\rightarrow$ Proof "ev-lin"), this is equal to
+and because the expected value is a linear operator ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), this is equal to
 
 \begin{equation} \label{eq:mult-mean-mult-mean-s2}
 \begin{split}
@@ -1810,6 +1928,7 @@ With the expected value of the categorical distribution ($\rightarrow$ Proof \re
 \mathrm{E}(X) = \sum_{i=1}^{n} \left[p_1, \ldots, p_k \right] = n \cdot \left[p_1, \ldots, p_k \right] = \left[n p_1, \ldots, n p_k \right] \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1818,6 +1937,8 @@ With the expected value of the categorical distribution ($\rightarrow$ Proof \re
 
 \vspace{1em}
 \textbf{Metadata:} ID: P25 | shortcut: mult-mean | author: JoramSoch | date: 2020-01-16, 11:26.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -1826,8 +1947,8 @@ With the expected value of the categorical distribution ($\rightarrow$ Proof \re
 \subsection{Continuous uniform distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:cuni}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to be uniformly distributed with minimum $a$ and maximum $b$
 
 \begin{equation} \label{eq:cuni-cuni}
@@ -1835,6 +1956,7 @@ X \sim \mathcal{U}(a, b) \; ,
 \end{equation}
 
 if and only if each value between and including $a$ and $b$ occurs with the same probability.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1845,11 +1967,13 @@ if and only if each value between and including $a$ and $b$ occurs with the same
 
 \vspace{1em}
 \textbf{Metadata:} ID: D3 | shortcut: cuni | author: JoramSoch | date: 2020-01-27, 14:05.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:cuni-pdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
 
 \begin{equation} \label{eq:cuni-pdf-cuni}
@@ -1900,6 +2024,7 @@ c(a,b) &= b-a \; .
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1908,11 +2033,13 @@ c(a,b) &= b-a \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: P37 | shortcut: cuni-pdf | author: JoramSoch | date: 2020-01-31, 15:41.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:cuni-cdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
 
 \begin{equation} \label{eq:cuni-cdf-cuni}
@@ -1980,6 +2107,7 @@ F_X(x) &= \int_{-\infty}^{b} \mathcal{U}(z; a, b) \, \mathrm{d}z + \int_{b}^{x} 
 
 This completes the proof.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -1988,11 +2116,13 @@ This completes the proof.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P38 | shortcut: cuni-cdf | author: JoramSoch | date: 2020-01-02, 18:05.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:cuni-qf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
 
 \begin{equation} \label{eq:cuni-qf-cuni}
@@ -2035,6 +2165,7 @@ x &= bp + a(1-p) = Q_X(p) \; .
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2043,13 +2174,15 @@ x &= bp + a(1-p) = Q_X(p) \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: P39 | shortcut: cuni-qf | author: JoramSoch | date: 2020-01-02, 18:27.
+\vspace{1em}
+
 
 
 \subsection{Normal distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:norm}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to be normally distributed with mean $\mu$ and variance $\sigma^2$ (or, standard deviation $\sigma$)
 
 \begin{equation} \label{eq:norm-norm}
@@ -2064,6 +2197,7 @@ if and only if its probability density function ($\rightarrow$ Definition \ref{s
 
 where $\mu \in \mathbb{R}$ and $\sigma^2 > 0$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2073,11 +2207,13 @@ where $\mu \in \mathbb{R}$ and $\sigma^2 > 0$.
 
 \vspace{1em}
 \textbf{Metadata:} ID: D4 | shortcut: norm | author: JoramSoch | date: 2020-01-27, 14:15.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:norm-pdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-pdf-norm}
@@ -2094,6 +2230,7 @@ f_X(x) = \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \fr
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}).
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2102,18 +2239,20 @@ f_X(x) = \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \fr
 
 \vspace{1em}
 \textbf{Metadata:} ID: P33 | shortcut: norm-pdf | author: JoramSoch | date: 2020-01-27, 15:15.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:norm-mean}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-mean-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
 \end{equation}
 
-Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
+Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
 
 \begin{equation} \label{eq:norm-mean-norm-mean}
 \mathrm{E}(X) = \mu \; .
@@ -2121,7 +2260,7 @@ Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
 
 
 \vspace{1em}
-\textbf{Proof:} The expected value ($\rightarrow$ Definition "ev") is the probability-weighted average over all possible values:
+\textbf{Proof:} The expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is the probability-weighted average over all possible values:
 
 \begin{equation} \label{eq:norm-mean-mean}
 \mathrm{E}(X) = \int_{\mathbb{R}} x \cdot f_X(x) \, \mathrm{d}x \; .
@@ -2169,6 +2308,7 @@ where $\mathrm{erf}(x)$ is the error function. Using this, the integrals can be 
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2178,11 +2318,13 @@ where $\mathrm{erf}(x)$ is the error function. Using this, the integrals can be 
 
 \vspace{1em}
 \textbf{Metadata:} ID: P15 | shortcut: norm-mean | author: JoramSoch | date: 2020-01-09, 15:04.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Median}]{Median} \label{sec:norm-med}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-med-norm}
@@ -2221,6 +2363,7 @@ where $\mathrm{erf}^{-1}(x)$ is the inverse error function. Setting $p = 1/2$, w
 \mathrm{median}(X) = \sqrt{2}\sigma \cdot \mathrm{erf}^{-1}(0) + \mu = \mu \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2229,11 +2372,13 @@ where $\mathrm{erf}^{-1}(x)$ is the inverse error function. Setting $p = 1/2$, w
 
 \vspace{1em}
 \textbf{Metadata:} ID: P16 | shortcut: norm-med | author: JoramSoch | date: 2020-01-09, 15:33.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Mode}]{Mode} \label{sec:norm-mode}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-mode-norm}
@@ -2295,6 +2440,7 @@ we confirm that it is in fact a maximum which shows that
 \mathrm{mode}(X) = \mu \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2303,11 +2449,13 @@ we confirm that it is in fact a maximum which shows that
 
 \vspace{1em}
 \textbf{Metadata:} ID: P17 | shortcut: norm-mode | author: JoramSoch | date: 2020-01-09, 15:58.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Variance}]{Variance} \label{sec:norm-var}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-var-norm}
@@ -2322,7 +2470,7 @@ Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec
 
 
 \vspace{1em}
-\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is the probability-weighted average of the squared deviation from the mean ($\rightarrow$ Definition "ev"):
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is the probability-weighted average of the squared deviation from the mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}):
 
 \begin{equation} \label{eq:norm-var-var}
 \mathrm{Var}(X) = \int_{\mathbb{R}} (x - \mathrm{E}(X))^2 \cdot f_\mathrm{X}(x) \, \mathrm{d}x \; .
@@ -2380,6 +2528,7 @@ we can finally show that
 \mathrm{Var}(X) = \frac{2 \sigma^2}{\sqrt{\pi}} \cdot \Gamma\!\left(\frac{3}{2}\right) = \frac{2 \sigma^2}{\sqrt{\pi}} \cdot \frac{\sqrt{\pi}}{2} = \sigma^2 \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2389,11 +2538,13 @@ we can finally show that
 
 \vspace{1em}
 \textbf{Metadata:} ID: P18 | shortcut: norm-var | author: JoramSoch | date: 2020-01-09, 22:47.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Moment-generating function}]{Moment-generating function} \label{sec:norm-mgf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-mgf-norm}
@@ -2463,6 +2614,7 @@ this finally becomes
 M_X(t) = \exp\left[ \mu t + \frac{1}{2} \sigma^2 t^2 \right] \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2472,11 +2624,14 @@ M_X(t) = \exp\left[ \mu t + \frac{1}{2} \sigma^2 t^2 \right] \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: P71 | shortcut: norm-mgf | author: JoramSoch | date: 2020-03-03, 11:29.
+\vspace{1em}
+
 
 
 \subsection{Gamma distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:gam}
+\setcounter{equation}{0}
 
 **Definition**: Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to follow a gamma distribution with shape $a$ and rate $b$
 
@@ -2492,6 +2647,7 @@ if and only if its probability density function ($\rightarrow$ Definition \ref{s
 
 where $a > 0$ and $b > 0$, and the density is zero, if $x \leq 0$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2501,11 +2657,13 @@ where $a > 0$ and $b > 0$, and the density is zero, if $x \leq 0$.
 
 \vspace{1em}
 \textbf{Metadata:} ID: D7 | shortcut: gam | author: JoramSoch | date: 2020-02-08, 23:29.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:gam-pdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a positive random variable ($\rightarrow$ Definition "rvar") following a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}):
 
 \begin{equation} \label{eq:gam-pdf-gam}
@@ -2522,6 +2680,7 @@ f_X(x) = \frac{b^a}{\Gamma(a)} x^{a-1} \exp[-b x] \; .
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}).
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2530,11 +2689,14 @@ f_X(x) = \frac{b^a}{\Gamma(a)} x^{a-1} \exp[-b x] \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: P45 | shortcut: gam-pdf | author: JoramSoch | date: 2020-02-08, 23:41.
+\vspace{1em}
+
 
 
 \subsection{Exponential distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:exp}
+\setcounter{equation}{0}
 
 **Definition**: Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to be exponentially distributed with rate (or, inverse scale) $\lambda$
 
@@ -2550,6 +2712,7 @@ if and only if its probability density function ($\rightarrow$ Definition \ref{s
 
 where $\lambda > 0$, and the density is zero, if $x < 0$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2559,11 +2722,13 @@ where $\lambda > 0$, and the density is zero, if $x < 0$.
 
 \vspace{1em}
 \textbf{Metadata:} ID: D8 | shortcut: exp | author: JoramSoch | date: 2020-02-08, 23:48.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Special case of gamma distribution}]{Special case of gamma distribution} \label{sec:exp-gam}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} The exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}) is a special case of the gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}) with shape $a = 1$ and rate $b = \lambda$.
 
 
@@ -2586,6 +2751,7 @@ Setting $a = 1$ and $b = \lambda$, we obtain
 
 which is equivalent to the probability density function of the exponential distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:exp-pdf}).
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2594,11 +2760,13 @@ which is equivalent to the probability density function of the exponential distr
 
 \vspace{1em}
 \textbf{Metadata:} ID: P69 | shortcut: exp-gam | author: JoramSoch | date: 2020-03-02, 20:49.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:exp-pdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a non-negative random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-pdf-exp}
@@ -2615,6 +2783,7 @@ f_X(x) = \lambda \exp[-\lambda x] \; .
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}).
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2623,11 +2792,13 @@ f_X(x) = \lambda \exp[-\lambda x] \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: P46 | shortcut: exp-pdf | author: JoramSoch | date: 2020-02-08, 23:53.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:exp-cdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-cdf-exp}
@@ -2682,6 +2853,7 @@ F_X(x) &= \int_{-\infty}^{0} \mathrm{Exp}(z; \lambda) \, \mathrm{d}z + \int_{0}^
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2690,11 +2862,13 @@ F_X(x) &= \int_{-\infty}^{0} \mathrm{Exp}(z; \lambda) \, \mathrm{d}z + \int_{0}^
 
 \vspace{1em}
 \textbf{Metadata:} ID: P48 | shortcut: exp-cdf | author: JoramSoch | date: 2020-02-11, 14:48.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:exp-qf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-qf-exp}
@@ -2737,6 +2911,7 @@ x &= -\frac{\ln(1-p)}{\lambda} \; .
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2745,18 +2920,20 @@ x &= -\frac{\ln(1-p)}{\lambda} \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: P50 | shortcut: exp-qf | author: JoramSoch | date: 2020-02-12, 15:48.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:exp-mean}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-mean-exp}
 X \sim \mathrm{Exp}(\lambda) \; .
 \end{equation}
 
-Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
+Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
 
 \begin{equation} \label{eq:exp-mean-exp-mean}
 \mathrm{E}(X) = \frac{1}{\lambda} \; .
@@ -2764,7 +2941,7 @@ Then, the mean or expected value ($\rightarrow$ Definition "ev") of $X$ is
 
 
 \vspace{1em}
-\textbf{Proof:} The expected value ($\rightarrow$ Definition "ev") is the probability-weighted average over all possible values:
+\textbf{Proof:} The expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is the probability-weighted average over all possible values:
 
 \begin{equation} \label{eq:exp-mean-mean}
 \mathrm{E}(X) = \int_{\mathbb{R}} x \cdot f_\mathrm{X}(x) \, \mathrm{d}x \; .
@@ -2796,6 +2973,7 @@ the expected value becomes
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2805,11 +2983,13 @@ the expected value becomes
 
 \vspace{1em}
 \textbf{Metadata:} ID: P47 | shortcut: exp-mean | author: JoramSoch | date: 2020-02-10, 21:57.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Median}]{Median} \label{sec:exp-med}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-med-exp}
@@ -2848,6 +3028,7 @@ and setting $p = 1/2$, we obtain:
 \mathrm{median}(X) = -\frac{\ln(1-\frac{1}{2})}{\lambda} = \frac{\ln 2}{\lambda} \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2856,11 +3037,13 @@ and setting $p = 1/2$, we obtain:
 
 \vspace{1em}
 \textbf{Metadata:} ID: P49 | shortcut: exp-med | author: JoramSoch | date: 2020-02-11, 15:03.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Mode}]{Mode} \label{sec:exp-mode}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-mode-exp}
@@ -2910,6 +3093,7 @@ it follows that
 \mathrm{mode}(X) = 0 \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2918,6 +3102,8 @@ it follows that
 
 \vspace{1em}
 \textbf{Metadata:} ID: P51 | shortcut: exp-mode | author: JoramSoch | date: 2020-02-12, 15:53.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -2926,8 +3112,8 @@ it follows that
 \subsection{Multivariate normal distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:mvn}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $X$ be an $n \times 1$ random vector ($\rightarrow$ Definition "rvec"). Then, $X$ is said to be multivariate normally distributed with mean $\mu$ and covariance $\Sigma$
 
 \begin{equation} \label{eq:mvn-mvn}
@@ -2942,6 +3128,7 @@ if and only if its probability density function ($\rightarrow$ Definition \ref{s
 
 where $\mu$ is an $n \times 1$ real vector and $\Sigma$ is an $n \times n$ positive definite matrix.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2951,11 +3138,13 @@ where $\mu$ is an $n \times 1$ real vector and $\Sigma$ is an $n \times n$ posit
 
 \vspace{1em}
 \textbf{Metadata:} ID: D1 | shortcut: mvn | author: JoramSoch | date: 2020-01-22, 05:20.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:mvn-pdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}):
 
 \begin{equation} \label{eq:mvn-pdf-mvn}
@@ -2972,6 +3161,7 @@ f_X(x) = \frac{1}{\sqrt{(2 \pi)^n |\Sigma|}} \cdot \exp \left[ -\frac{1}{2} (x-\
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}).
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -2980,11 +3170,13 @@ f_X(x) = \frac{1}{\sqrt{(2 \pi)^n |\Sigma|}} \cdot \exp \left[ -\frac{1}{2} (x-\
 
 \vspace{1em}
 \textbf{Metadata:} ID: P34 | shortcut: mvn-pdf | author: JoramSoch | date: 2020-01-27, 15:23.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Linear transformation theorem}]{Linear transformation theorem} \label{sec:mvn-ltt}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $x$ follow a multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}):
 
 \begin{equation} \label{eq:mvn-ltt-mvn}
@@ -3034,6 +3226,7 @@ M_y(t) &= \exp \left[ t^\mathrm{T} b \right] \cdot M_x(At) \\
 
 Because moment-generating function and probability density function of a random variable are equivalent, this demonstrates that $y$ is following a multivariate normal distribution with mean $A \mu + b$ and covariance $A \Sigma A^\mathrm{T}$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3043,11 +3236,13 @@ Because moment-generating function and probability density function of a random 
 
 \vspace{1em}
 \textbf{Metadata:} ID: P1 | shortcut: mvn-ltt | author: JoramSoch | date: 2019-08-27, 12:14.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Marginal distributions}]{Marginal distributions} \label{sec:mvn-marg}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $x$ follow a multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}):
 
 \begin{equation} \label{eq:mvn-marg-mvn}
@@ -3078,6 +3273,7 @@ x_s \sim \mathcal{N}(S \mu, S \Sigma S^\mathrm{T}) \; .
 
 Finally, we see that $S \mu = \mu_s$ and $S \Sigma S^\mathrm{T} = \Sigma_s$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3086,11 +3282,14 @@ Finally, we see that $S \mu = \mu_s$ and $S \Sigma S^\mathrm{T} = \Sigma_s$.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P35 | shortcut: mvn-marg | author: JoramSoch | date: 2020-01-29, 15:12.
+\vspace{1em}
+
 
 
 \subsection{Normal-gamma distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:ng}
+\setcounter{equation}{0}
 
 **Definition**: Let $X$ be an $n \times 1$ random vector ($\rightarrow$ Definition "rvec") and let $Y$ be a positive random variable ($\rightarrow$ Definition "rvar"). Then, $X$ and $Y$ are said to follow a normal-gamma distribution
 
@@ -3098,13 +3297,14 @@ Finally, we see that $S \mu = \mu_s$ and $S \Sigma S^\mathrm{T} = \Sigma_s$.
 X,Y \sim \mathrm{NG}(\mu, \Lambda, a, b) \; ,
 \end{equation}
 
-if and only if their joint probability ($\rightarrow$ Definition "jp") density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) is given by
+if and only if their joint probability ($\rightarrow$ Definition "prob-joint") density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) is given by
 
 \begin{equation} \label{eq:ng-ng-pdf}
 f_{X,Y}(x,y) = \mathcal{N}(x; \mu, (y \Lambda)^{-1}) \cdot \mathrm{Gam}(y; a, b)
 \end{equation}
 
 where $\mathcal{N}(x; \mu, \Sigma)$ is the probability density function of the multivariate normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}) with mean $\mu$ and covariance $\Sigma$ and $\mathrm{Gam}(x; a, b)$ is the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}) with shape $a$ and rate $b$. The $n \times n$ matrix $\Lambda$ is referred to as the precision matrix of the normal-gamma distribution.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3115,18 +3315,20 @@ where $\mathcal{N}(x; \mu, \Sigma)$ is the probability density function of the m
 
 \vspace{1em}
 \textbf{Metadata:} ID: D5 | shortcut: ng | author: JoramSoch | date: 2020-01-27, 14:28.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:ng-pdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $x$ and $y$ follow a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}):
 
 \begin{equation} \label{eq:ng-pdf-ng}
 x,y \sim \mathrm{NG}(\mu, \Lambda, a, b) \; .
 \end{equation}
 
-Then, the joint probability ($\rightarrow$ Definition "jp") density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $x$ and $y$ is
+Then, the joint probability ($\rightarrow$ Definition "prob-joint") density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $x$ and $y$ is
 
 \begin{equation} \label{eq:ng-pdf-ng-pdf}
 p(x,y) = \sqrt{\frac{|\Lambda|}{(2 \pi)^n}} \frac{b^a}{\Gamma(a)} \cdot y^{a+\frac{n}{2}-1} \exp \left[ -\frac{y}{2} \left( (x-\mu)^\mathrm{T} \Lambda (x-\mu) + 2b \right) \right] \; .
@@ -3152,6 +3354,7 @@ Using the relation $\lvert y A \rvert = y^n \lvert A \rvert$ for an $n \times n$
 p(x,y) = \sqrt{\frac{|\Lambda|}{(2 \pi)^n}} \frac{b^a}{\Gamma(a)} \cdot y^{a+\frac{n}{2}-1} \exp \left[ -\frac{y}{2} \left( (x-\mu)^\mathrm{T} \Lambda (x-\mu) + 2b \right) \right] \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3161,11 +3364,13 @@ p(x,y) = \sqrt{\frac{|\Lambda|}{(2 \pi)^n}} \frac{b^a}{\Gamma(a)} \cdot y^{a+\fr
 
 \vspace{1em}
 \textbf{Metadata:} ID: P44 | shortcut: ng-pdf | author: JoramSoch | date: 2020-02-07, 20:44.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:ng-kl}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $x \in \mathbb{R}^k$ be a random vector ($\rightarrow$ Definition "rvec") and $y > 0$ be a random variable ($\rightarrow$ Definition "rvar"). Assume two normal-gamma distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}) $P$ and $Q$ specifying the joint distribution of $x$ and $y$ as
 
 \begin{equation} \label{eq:ng-kl-NGs}
@@ -3219,7 +3424,7 @@ which, applied to the normal-gamma distribution ($\rightarrow$ Definition \ref{s
 \mathrm{KL}[P\,||\,Q] = \int_{0}^{\infty} \int_{\mathbb{R}^k} p(x,y) \, \ln \frac{p(x,y)}{q(x,y)} \, \mathrm{d}x \, \mathrm{d}y \; .
 \end{equation}
 
-Using the law of conditional probability ($\rightarrow$ Proof "lcp"), this can be evaluated as follows:
+Using the law of conditional probability ($\rightarrow$ Definition "prob-cond"), this can be evaluated as follows:
 
 \begin{equation} \label{eq:ng-kl-NG-KL1}
 \begin{split}
@@ -3253,6 +3458,7 @@ and using the relation ($\rightarrow$ Proof "gam-mean") $y \sim \mathrm{Gam}(a,b
 
 By plugging \eqref{eq:ng-kl-exp-mvn-KL-s2} and \eqref{eq:ng-kl-gam-KL} into \eqref{eq:ng-kl-NG-KL1}, one arrives at the KL divergence given by \eqref{eq:ng-kl-NG-KL}.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3262,11 +3468,13 @@ By plugging \eqref{eq:ng-kl-exp-mvn-KL-s2} and \eqref{eq:ng-kl-gam-KL} into \eqr
 
 \vspace{1em}
 \textbf{Metadata:} ID: P6 | shortcut: ng-kl | author: JoramSoch | date: 2019-12-06, 09:35.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Marginal distributions}]{Marginal distributions} \label{sec:ng-marg}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $x$ and $y$ follow a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}):
 
 \begin{equation} \label{eq:ng-marg-ng}
@@ -3298,7 +3506,7 @@ p(y) &= \mathrm{Gam}(y; a, b) \; .
 \end{equation}
 
 \vspace{1em}
-Using the law of marginal probability ($\rightarrow$ Proof "lmp"), the marginal distribution of $y$ can be derived as
+Using the law of marginal probability ($\rightarrow$ Definition "prob-marg"), the marginal distribution of $y$ can be derived as
 
 \begin{equation} \label{eq:ng-marg-ng-marg-y-qed}
 \begin{split}
@@ -3312,7 +3520,7 @@ p(y) &= \int p(x,y) \, \mathrm{d}x \\
 which is the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}) with shape parameter $a$ and rate parameter $b$.
 
 \vspace{1em}
-Using the law of marginal probability ($\rightarrow$ Proof "lmp"), the marginal distribution of $x$ can be derived as
+Using the law of marginal probability ($\rightarrow$ Definition "prob-marg"), the marginal distribution of $x$ can be derived as
 
 \begin{equation} \label{eq:ng-marg-ng-marg-x-qed}
 \begin{split}
@@ -3337,6 +3545,7 @@ p(x) &= \int p(x,y) \, \mathrm{d}y \\
 
 which is the probability density function of a multivariate t-distribution ($\rightarrow$ Proof "mvt-pdf") with mean vector $\mu$, shape matrix $\left( \frac{a}{b}\Lambda \right)^{-1}$ and $2a$ degrees of freedom.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3345,6 +3554,8 @@ which is the probability density function of a multivariate t-distribution ($\ri
 
 \vspace{1em}
 \textbf{Metadata:} ID: P36 | shortcut: ng-marg | author: JoramSoch | date: 2020-01-29, 21:42.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -3353,6 +3564,7 @@ which is the probability density function of a multivariate t-distribution ($\ri
 \subsection{Matrix-normal distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:matn}
+\setcounter{equation}{0}
 
 **Definition**: Let $X$ be an $n \times p$ random matrix ($\rightarrow$ Definition "rmat"). Then, $X$ is said to be matrix-normally distributed with mean $M$, covariance across rows $U$ and covariance across columns $V$
 
@@ -3368,6 +3580,7 @@ if and only if its probability density function ($\rightarrow$ Definition \ref{s
 
 where $\mu$ is an $n \times p$ real matrix, $U$ is an $n \times n$ positive definite matrix and $V$ is a $p \times p$ positive definite matrix.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3377,11 +3590,13 @@ where $\mu$ is an $n \times p$ real matrix, $U$ is an $n \times n$ positive defi
 
 \vspace{1em}
 \textbf{Metadata:} ID: D6 | shortcut: matn | author: JoramSoch | date: 2020-01-27, 14:37.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:matn-pdf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $X$ be a random matrix ($\rightarrow$ Definition "rmat") following a matrix-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}):
 
 \begin{equation} \label{eq:matn-pdf-matn}
@@ -3398,6 +3613,7 @@ f_X(x) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the matrix-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}).
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3406,11 +3622,13 @@ f_X(x) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \
 
 \vspace{1em}
 \textbf{Metadata:} ID: P70 | shortcut: matn-pdf | author: JoramSoch | date: 2020-02-03, 21:03.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Equivalence to multivariate normal distribution}]{Equivalence to multivariate normal distribution} \label{sec:matn-mvn}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} The matrix $X$ is matrix-normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn})
 
 \begin{equation} \label{eq:matn-mvn-matn}
@@ -3477,6 +3695,7 @@ This is the probability density function of the multivariate normal distribution
 
 By showing that the probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) are identical, it is proven that the associated probability distributions ($\rightarrow$ Definition "pd") are equivalent.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3486,6 +3705,8 @@ By showing that the probability density functions ($\rightarrow$ Definition \ref
 
 \vspace{1em}
 \textbf{Metadata:} ID: P26 | shortcut: matn-mvn | author: JoramSoch | date: 2020-01-20, 21:09.
+\vspace{1em}
+
 
 
 
@@ -3499,8 +3720,8 @@ By showing that the probability density functions ($\rightarrow$ Definition \ref
 \subsection{Multiple linear regression}
 
 \subsubsection[\textbf{Ordinary least squares (1)}]{Ordinary least squares (1)} \label{sec:mlr-ols}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition "mlr") with independent observations
 
 \begin{equation} \label{eq:mlr-ols-MLR}
@@ -3533,6 +3754,7 @@ X^\mathrm{T} X\hat{\beta} &= X^\mathrm{T} y \\
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3542,11 +3764,13 @@ X^\mathrm{T} X\hat{\beta} &= X^\mathrm{T} y \\
 
 \vspace{1em}
 \textbf{Metadata:} ID: P2 | shortcut: mlr-ols | author: JoramSoch | date: 2019-09-27, 07:18.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Ordinary least squares (2)}]{Ordinary least squares (2)} \label{sec:mlr-ols2}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition "mlr") with independent observations
 
 \begin{equation} \label{eq:mlr-ols2-MLR}
@@ -3595,6 +3819,7 @@ X^\mathrm{T} X \hat{\beta} &= X^\mathrm{T} y \\
 
 Since the quadratic form $y^\mathrm{T} y$ in \eqref{eq:mlr-ols2-RSS-dev} is positive, $\hat{\beta}$ minimizes $\mathrm{RSS}(\beta)$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3604,13 +3829,15 @@ Since the quadratic form $y^\mathrm{T} y$ in \eqref{eq:mlr-ols2-RSS-dev} is posi
 
 \vspace{1em}
 \textbf{Metadata:} ID: P40 | shortcut: mlr-ols2 | author: JoramSoch | date: 2020-02-03, 18:43.
+\vspace{1em}
+
 
 
 \subsection{Bayesian linear regression}
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:blr-prior}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let
 
 \begin{equation} \label{eq:blr-prior-GLM}
@@ -3693,6 +3920,7 @@ p(\beta,\tau) \propto \tau^{a_0+p/2-1} \cdot \exp[-\tau b_0] \cdot \exp\left[ -\
 
 and is therefore conjugate relative to the likelihood.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3702,11 +3930,13 @@ and is therefore conjugate relative to the likelihood.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P9 | shortcut: blr-prior | author: JoramSoch | date: 2020-01-03, 15:26.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:blr-post}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let
 
 \begin{equation} \label{eq:blr-post-GLM}
@@ -3840,7 +4070,8 @@ From the remaining term, we can isolate the posterior distribution over $\tau$:
 p(\tau|y) = \mathrm{Gam}(\tau; a_n, b_n) \; .
 \end{equation}
 
-Together, \eqref{eq:blr-post-GLM-NG-post-beta} and \eqref{eq:blr-post-GLM-NG-post-tau} constitute the joint posterior distribution ($\rightarrow$ Definition "jp") of $\beta$ and $\tau$.
+Together, \eqref{eq:blr-post-GLM-NG-post-beta} and \eqref{eq:blr-post-GLM-NG-post-tau} constitute the joint ($\rightarrow$ Definition "prob-joint") posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of $\beta$ and $\tau$.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3851,11 +4082,13 @@ Together, \eqref{eq:blr-post-GLM-NG-post-beta} and \eqref{eq:blr-post-GLM-NG-pos
 
 \vspace{1em}
 \textbf{Metadata:} ID: P10 | shortcut: blr-post | author: JoramSoch | date: 2020-01-03, 17:53.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:blr-lme}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let
 
 \begin{equation} \label{eq:blr-lme-GLM}
@@ -3890,13 +4123,13 @@ b_n &= b_0 + \frac{1}{2} (y^\mathrm{T} P y + \mu_0^\mathrm{T} \Lambda_0 \mu_0 - 
 
 
 \vspace{1em}
-\textbf{Proof:} According to the law of marginal probability ($\rightarrow$ Proof "lmp"), the model evidence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) for this model is:
+\textbf{Proof:} According to the law of marginal probability ($\rightarrow$ Definition "prob-marg"), the model evidence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) for this model is:
 
 \begin{equation} \label{eq:blr-lme-GLM-NG-ME-s1}
 p(y|m) = \iint p(y|\beta,\tau) \, p(\beta,\tau) \, \mathrm{d}\beta \, \mathrm{d}\tau \; .
 \end{equation}
 
-According to the law of conditional probability ($\rightarrow$ Proof "lcp"), the integrand is equivalent to the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}):
+According to the law of conditional probability ($\rightarrow$ Definition "prob-cond"), the integrand is equivalent to the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}):
 
 \begin{equation} \label{eq:blr-lme-GLM-NG-ME-s2}
 p(y|m) = \iint p(y,\beta,\tau) \, \mathrm{d}\beta \, \mathrm{d}\tau \; .
@@ -3965,6 +4198,7 @@ Thus, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -3974,13 +4208,15 @@ Thus, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}
 
 \vspace{1em}
 \textbf{Metadata:} ID: P11 | shortcut: blr-lme | author: JoramSoch | date: 2020-01-03, 22:05.
+\vspace{1em}
+
 
 
 \subsection{General linear model}
 
 \subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:glm-mle}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Given a general linear model ($\rightarrow$ Definition "glm") with matrix-normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) errors
 
 \begin{equation} \label{eq:glm-mle-GLM}
@@ -4077,6 +4313,7 @@ I_v &= \frac{1}{n} \, (Y - X\hat{B})^\mathrm{T} V^{-1} (Y - X\hat{B}) \, \hat{\S
 \vspace{1em}
 Together, \eqref{eq:glm-mle-B-MLE} and \eqref{eq:glm-mle-S-MLE} constitute the MLE for the GLM.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4085,6 +4322,8 @@ Together, \eqref{eq:glm-mle-B-MLE} and \eqref{eq:glm-mle-S-MLE} constitute the M
 
 \vspace{1em}
 \textbf{Metadata:} ID: P7 | shortcut: glm-mle | author: JoramSoch | date: 2019-12-06, 10:40.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -4093,8 +4332,8 @@ Together, \eqref{eq:glm-mle-B-MLE} and \eqref{eq:glm-mle-S-MLE} constitute the M
 \subsection{Poisson-distributed data}
 
 \subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:poiss-mle}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a set of observed counts independent and identically distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with rate $\lambda$:
 
 \begin{equation} \label{eq:poiss-mle-Poiss}
@@ -4107,7 +4346,7 @@ Then, the maximum likelihood estimate ($\rightarrow$ Definition "mle") for the r
 \hat{\lambda} = \bar{y}
 \end{equation}
 
-where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "ev-sample")
+where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "mean-sample")
 
 \begin{equation} \label{eq:poiss-mle-y-mean}
 \bar{y} = \frac{1}{n} \sum_{i=1}^n y_i \; .
@@ -4173,7 +4412,8 @@ Plugging this value into the second deriative, we confirm:
 \end{split}
 \end{equation}
 
-This demonstrates that the estimate $\hat{\lambda} = \bar{y}$ maximizes the likelihood $p(y \mid \lambda)$.
+This demonstrates that the estimate $\hat{\lambda} = \bar{y}$ maximizes the likelihood $p(y \vert \lambda)$.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4183,13 +4423,15 @@ This demonstrates that the estimate $\hat{\lambda} = \bar{y}$ maximizes the like
 
 \vspace{1em}
 \textbf{Metadata:} ID: P27 | shortcut: poiss-mle | author: JoramSoch | date: 2020-01-20, 21:53.
+\vspace{1em}
+
 
 
 \subsection{Poisson distribution with exposure values}
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:poissexp-prior}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a series of observed counts which are independently distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with common rate $\lambda$ and concurrent exposures $\left\lbrace x_1, \ldots, x_n \right\rbrace$:
 
 \begin{equation} \label{eq:poissexp-prior-Poiss-exp}
@@ -4226,7 +4468,7 @@ p(y|\lambda) &= \prod_{i=1}^n \frac{ {x_i}^{y_i}}{y_i !} \cdot \prod_{i=1}^n \la
 \end{split}
 \end{equation}
 
-where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Proof "ev-sample") of $y$ and $x$ respectively:
+where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Proof "mean-sample") of $y$ and $x$ respectively:
 
 \begin{equation} \label{eq:poissexp-prior-xy-mean}
 \begin{split}
@@ -4261,6 +4503,7 @@ p(\lambda) \propto \lambda^{a_0-1} \cdot \exp[-b_0 \lambda]
 
 and is therefore conjugate relative to the likelihood.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4270,11 +4513,13 @@ and is therefore conjugate relative to the likelihood.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P41 | shortcut: poissexp-prior | author: JoramSoch | date: 2020-02-04, 14:11.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:poissexp-post}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a series of observed counts which are independently distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with common rate $\lambda$ and concurrent exposures $\left\lbrace x_1, \ldots, x_n \right\rbrace$:
 
 \begin{equation} \label{eq:poissexp-post-Poiss-exp}
@@ -4336,7 +4581,7 @@ p(y,\lambda) &= \prod_{i=1}^n \frac{ {x_i}^{y_i}}{y_i !} \prod_{i=1}^n \lambda^{
 \end{split}
 \end{equation}
 
-where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Proof "ev-sample") of $y$ and $x$ respectively:
+where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Proof "mean-sample") of $y$ and $x$ respectively:
 
 \begin{equation} \label{eq:poissexp-post-xy-mean}
 \begin{split}
@@ -4363,6 +4608,7 @@ which, when normalized to one, results in the probability density function of th
 p(\lambda|y) = \frac{ {b_n}^{a_n}}{\Gamma(a_0)} \lambda^{a_n-1} \exp\left[-b_n \lambda\right] = \mathrm{Gam}(\lambda; a_n, b_n) \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4372,11 +4618,13 @@ p(\lambda|y) = \frac{ {b_n}^{a_n}}{\Gamma(a_0)} \lambda^{a_n-1} \exp\left[-b_n \
 
 \vspace{1em}
 \textbf{Metadata:} ID: P42 | shortcut: poissexp-post | author: JoramSoch | date: 2020-02-04, 14:42.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:poissexp-lme}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a series of observed counts which are independently distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with common rate $\lambda$ and concurrent exposures $\left\lbrace x_1, \ldots, x_n \right\rbrace$:
 
 \begin{equation} \label{eq:poissexp-lme-Poiss-exp}
@@ -4441,7 +4689,7 @@ p(y,\lambda) &= \prod_{i=1}^n \frac{ {x_i}^{y_i}}{y_i !} \prod_{i=1}^n \lambda^{
 \end{split}
 \end{equation}
 
-where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Proof "ev-sample") of $y$ and $x$ respectively:
+where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Proof "mean-sample") of $y$ and $x$ respectively:
 
 \begin{equation} \label{eq:poissexp-lme-xy-mean}
 \begin{split}
@@ -4481,6 +4729,7 @@ such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Select
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4489,6 +4738,8 @@ such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Select
 
 \vspace{1em}
 \textbf{Metadata:} ID: P43 | shortcut: poissexp-lme | author: JoramSoch | date: 2020-02-04, 15:12.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -4497,8 +4748,8 @@ such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Select
 \subsection{Beta-distributed data}
 
 \subsubsection[\textbf{Method of moments}]{Method of moments} \label{sec:beta-mom}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a set of observed counts independent and identically distributed ($\rightarrow$ Definition "iid") according to a beta distribution ($\rightarrow$ Definition "beta") with shapes $\alpha$ and $\beta$:
 
 \begin{equation} \label{eq:beta-mom-Beta}
@@ -4514,7 +4765,7 @@ Then, the method-of-moments estimates ($\rightarrow$ Definition "mom") for the s
 \end{split}
 \end{equation}
 
-where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "ev-sample") and $\bar{v}$ is the unbiased sample variance ($\rightarrow$ Proof "var-unbias"):
+where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "mean-sample") and $\bar{v}$ is the unbiased sample variance ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:resvar-unb}):
 
 \begin{equation} \label{eq:beta-mom-y-mean-var}
 \begin{split}
@@ -4590,6 +4841,7 @@ Plugging this into equation \eqref{eq:beta-mom-beta-as-alpha}, one obtains for $
 
 Together, \eqref{eq:beta-mom-Beta-MoM-alpha} and \eqref{eq:beta-mom-Beta-MoM-beta} constitute the method-of-moment estimates of $\alpha$ and $\beta$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4599,13 +4851,15 @@ Together, \eqref{eq:beta-mom-Beta-MoM-alpha} and \eqref{eq:beta-mom-Beta-MoM-bet
 
 \vspace{1em}
 \textbf{Metadata:} ID: P28 | shortcut: beta-mom | author: JoramSoch | date: 2020-01-22, 02:53.
+\vspace{1em}
+
 
 
 \subsection{Logistic regression}
 
 \subsubsection[\textbf{Log-odds and probability}]{Log-odds and probability} \label{sec:logreg-lonp}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Assume a logistic regression model ($\rightarrow$ Definition "logreg")
 
 \begin{equation} \label{eq:logreg-lonp-logreg}
@@ -4646,6 +4900,7 @@ p_i &= \frac{1}{1 + b^{-(x_i \beta + \varepsilon_i)}}
 
 which proves the identity given by \eqref{eq:logreg-lonp-prob}.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4655,6 +4910,8 @@ which proves the identity given by \eqref{eq:logreg-lonp-prob}.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P72 | shortcut: logreg-lonp | author: JoramSoch | date: 2020-03-03, 12:01.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -4663,8 +4920,8 @@ which proves the identity given by \eqref{eq:logreg-lonp-prob}.
 \subsection{Binomial observations}
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:bin-prior}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $y$ be the number of successes resulting from $n$ independent trials with unknown success probability $p$, such that $y$ follows a binomial distribution ($\rightarrow$ Definition "bin"):
 
 \begin{equation} \label{eq:bin-prior-Bin}
@@ -4711,6 +4968,7 @@ exhibits the same proportionality
 
 and is therefore conjugate relative to the likelihood.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4720,11 +4978,13 @@ and is therefore conjugate relative to the likelihood.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P29 | shortcut: bin-prior | author: JoramSoch | date: 2020-01-23, 23:38.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:bin-post}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $y$ be the number of successes resulting from $n$ independent trials with unknown success probability $p$, such that $y$ follows a binomial distribution ($\rightarrow$ Definition "bin"):
 
 \begin{equation} \label{eq:bin-post-Bin}
@@ -4788,6 +5048,7 @@ which, when normalized to one, results in the probability density function of th
 \mathrm{p}(p|y) = \frac{1}{B(\alpha_n,\beta_n)} \, p^{\alpha_n-1} \, (1-p)^{\beta_n-1} = \mathrm{Bet}(p; \alpha_n, \beta_n) \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4797,11 +5058,13 @@ which, when normalized to one, results in the probability density function of th
 
 \vspace{1em}
 \textbf{Metadata:} ID: P30 | shortcut: bin-post | author: JoramSoch | date: 2020-01-24, 00:20.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:bin-lme}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $y$ be the number of successes resulting from $n$ independent trials with unknown success probability $p$, such that $y$ follows a binomial distribution ($\rightarrow$ Definition "bin"):
 
 \begin{equation} \label{eq:bin-lme-Bin}
@@ -4875,6 +5138,7 @@ such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Select
 \log \mathrm{p}(y|m) = \log {n \choose y} + \log B(\alpha_n,\beta_n) - \log B(\alpha_0,\beta_0) \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4884,6 +5148,8 @@ such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Select
 
 \vspace{1em}
 \textbf{Metadata:} ID: P31 | shortcut: bin-lme | author: JoramSoch | date: 2020-01-24, 00:44.
+\vspace{1em}
+
 
 
 
@@ -4897,8 +5163,8 @@ such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Select
 \subsection{Residual variance}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:resvar}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition "mlr")
 
 \begin{equation} \label{eq:resvar-mlr}
@@ -4909,6 +5175,7 @@ with measured data $y$, known design matrix $X$ and covariance structure $V$ as 
 
 Then, an estimate of the noise variance $\sigma^2$ is called the "residual variance" $\hat{\sigma}^2$, e.g. obtained via maximum likelihood estimation ($\rightarrow$ Definition "mle").
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -4917,11 +5184,13 @@ Then, an estimate of the noise variance $\sigma^2$ is called the "residual varia
 
 \vspace{1em}
 \textbf{Metadata:} ID: D20 | shortcut: resvar | author: JoramSoch | date: 2020-02-25, 11:21.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Maximum likelihood estimator is biased}]{Maximum likelihood estimator is biased} \label{sec:resvar-bias}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a set of independent normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) observations with unknown mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu$ and variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) $\sigma^2$:
 
 \begin{equation} \label{eq:resvar-bias-ug}
@@ -5044,6 +5313,7 @@ Plugging \eqref{eq:resvar-bias-E-Var-xi}, \eqref{eq:resvar-bias-E-mean-mle} and 
 which proves the bias ($\rightarrow$ Definition "est-unb") given by \eqref{eq:resvar-bias-resvar-bias}.
 
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5053,11 +5323,13 @@ which proves the bias ($\rightarrow$ Definition "est-unb") given by \eqref{eq:re
 
 \vspace{1em}
 \textbf{Metadata:} ID: P61 | shortcut: resvar-bias | author: JoramSoch | date: 2020-02-24, 23:44.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Construction of unbiased estimator}]{Construction of unbiased estimator} \label{sec:resvar-unb}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a set of independent normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) observations with unknown mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu$ and variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) $\sigma^2$:
 
 \begin{equation} \label{eq:resvar-unb-ug}
@@ -5104,6 +5376,7 @@ such that an unbiased estimator ($\rightarrow$ Definition "est-unb") can be cons
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5113,13 +5386,15 @@ such that an unbiased estimator ($\rightarrow$ Definition "est-unb") can be cons
 
 \vspace{1em}
 \textbf{Metadata:} ID: P62 | shortcut: resvar-unb | author: JoramSoch | date: 2020-02-25, 15:38.
+\vspace{1em}
+
 
 
 \subsection{R-squared}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:rsq}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition "mlr") with independent ($\rightarrow$ Definition "ind") observations
 
 \begin{equation} \label{eq:rsq-mlr}
@@ -5130,6 +5405,7 @@ with measured data $y$, known design matrix $X$ as well as unknown regression co
 
 Then, the proportion of the variance of the dependent variable $y$ ("total variance ($\rightarrow$ Definition "tss")") that can be predicted from the independent variables $X$ ("explained variance ($\rightarrow$ Definition "ess")") is called "coefficient of determination", "R-squared" or $R^2$.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5139,11 +5415,13 @@ Then, the proportion of the variance of the dependent variable $y$ ("total varia
 
 \vspace{1em}
 \textbf{Metadata:} ID: D21 | shortcut: rsq | author: JoramSoch | date: 2020-02-25, 11:41.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Derivation of R² and adjusted R²}]{Derivation of R² and adjusted R²} \label{sec:rsq-der}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition "mlr")
 
 \begin{equation} \label{eq:rsq-der-rsq-mlr}
@@ -5218,6 +5496,7 @@ where $\mathrm{df}_r = n-p$ and $\mathrm{df}_t = n-1$ are the residual and total
 \vspace{1em}
 This gives the adjusted $R^2$ which adjusts $R^2$ for the number of explanatory variables.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5227,11 +5506,13 @@ This gives the adjusted $R^2$ which adjusts $R^2$ for the number of explanatory 
 
 \vspace{1em}
 \textbf{Metadata:} ID: P8 | shortcut: rsq-der | author: JoramSoch | date: 2019-12-06, 11:19.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Relationship to maximum log-likelihood}]{Relationship to maximum log-likelihood} \label{sec:rsq-mll}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition "mlr") with independent observations
 
 \begin{equation} \label{eq:rsq-mll-MLR}
@@ -5307,9 +5588,9 @@ Exponentiating both sides of the equation, we have:
 
 \begin{equation} \label{eq:rsq-mll-MLR-DMLL-RTSS}
 \begin{split}
-\mathrm{exp}[\Delta\mathrm{MLL}] &= \mathrm{exp} \left[ - \frac{n}{2} \log(\mathrm{RSS}) + \frac{n}{2} \log(\mathrm{TSS}) \right] \\
-&= \left( \mathrm{exp} \left[ \log(\mathrm{RSS}) - \log(\mathrm{TSS}) \right] \right)^{-n/2} \\
-&= \left( \frac{\mathrm{exp}[\log(\mathrm{RSS})]}{\mathrm{exp}[\log(\mathrm{TSS})]} \right)^{-n/2} \\
+\exp[\Delta\mathrm{MLL}] &= \exp\left[ - \frac{n}{2} \log(\mathrm{RSS}) + \frac{n}{2} \log(\mathrm{TSS}) \right] \\
+&= \left( \exp\left[ \log(\mathrm{RSS}) - \log(\mathrm{TSS}) \right] \right)^{-n/2} \\
+&= \left( \frac{\exp[\log(\mathrm{RSS})]}{\exp[\log(\mathrm{TSS})]} \right)^{-n/2} \\
 &= \left( \frac{\mathrm{RSS}}{\mathrm{TSS}} \right)^{-n/2} \; .
 \end{split}
 \end{equation}
@@ -5318,12 +5599,13 @@ Taking both sides to the power of $-2/n$ and subtracting from 1, we have
 
 \begin{equation} \label{eq:rsq-mll-MLR-DMLL-R2}
 \begin{split}
-\left( \mathrm{exp}[\Delta\mathrm{MLL}] \right)^{-2/n} &= \frac{\mathrm{RSS}}{\mathrm{TSS}} \\
-1 - \left( \mathrm{exp}[\Delta\mathrm{MLL}] \right)^{-2/n} &= 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}} = R^2
+\left( \exp[\Delta\mathrm{MLL}] \right)^{-2/n} &= \frac{\mathrm{RSS}}{\mathrm{TSS}} \\
+1 - \left( \exp[\Delta\mathrm{MLL}] \right)^{-2/n} &= 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}} = R^2
 \end{split}
 \end{equation}
 
 which proves the identity given above.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5333,13 +5615,15 @@ which proves the identity given above.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P14 | shortcut: rsq-mll | author: JoramSoch | date: 2020-01-08, 04:46.
+\vspace{1em}
+
 
 
 \subsection{Signal-to-noise ratio}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:snr}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition "mlr") with independent ($\rightarrow$ Definition "ind") observations
 
 \begin{equation} \label{eq:snr-mlr}
@@ -5354,6 +5638,7 @@ Given estimated regression coefficients ($\rightarrow$ Definition "mlr-beta") $\
 \mathrm{SNR} = \frac{\mathrm{Var}(X\hat{\beta})}{\hat{\sigma}^2} \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5363,6 +5648,8 @@ Given estimated regression coefficients ($\rightarrow$ Definition "mlr-beta") $\
 
 \vspace{1em}
 \textbf{Metadata:} ID: D22 | shortcut: snr | author: JoramSoch | date: 2020-02-25, 12:01.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -5371,8 +5658,8 @@ Given estimated regression coefficients ($\rightarrow$ Definition "mlr-beta") $\
 \subsection{Akaike information criterion}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:aic}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and maximum likelihood estimates ($\rightarrow$ Definition "mle")
 
 \begin{equation} \label{eq:aic-MLE}
@@ -5387,6 +5674,7 @@ Then, the Akaike information criterion (AIC) of this model is defined as
 
 where $p$ is the number of free parameters estimated via \eqref{eq:aic-MLE}.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5396,13 +5684,15 @@ where $p$ is the number of free parameters estimated via \eqref{eq:aic-MLE}.
 
 \vspace{1em}
 \textbf{Metadata:} ID: D23 | shortcut: aic | author: JoramSoch | date: 2020-02-25, 12:31.
+\vspace{1em}
+
 
 
 \subsection{Bayesian information criterion}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:bic}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and maximum likelihood estimates ($\rightarrow$ Definition "mle")
 
 \begin{equation} \label{eq:bic-MLE}
@@ -5417,6 +5707,7 @@ Then, the Bayesian information criterion (BIC) of this model is defined as
 
 where $n$ is the number of data points and $p$ is the number of free parameters estimated via \eqref{eq:bic-MLE}.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5426,17 +5717,19 @@ where $n$ is the number of data points and $p$ is the number of free parameters 
 
 \vspace{1em}
 \textbf{Metadata:} ID: D24 | shortcut: bic | author: JoramSoch | date: 2020-02-25, 12:21.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Derivation}]{Derivation} \label{sec:bic-der}
+\setcounter{equation}{0}
 
-\vspace{1em}
-\textbf{Theorem:} Let $p(y \mid \theta, m)$ be the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) of a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m \in \mathcal{M}$ with model parameters $\theta \in \Theta$ describing measured data $y \in \mathbb{R}^n$. Let $p(\theta \mid m)$ be a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on the model parameters. Assume that likelihood function and prior density are twice differentiable.
+\textbf{Theorem:} Let $p(y \vert \theta, m)$ be the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) of a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m \in \mathcal{M}$ with model parameters $\theta \in \Theta$ describing measured data $y \in \mathbb{R}^n$. Let $p(\theta \vert m)$ be a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on the model parameters. Assume that likelihood function and prior density are twice differentiable.
 
-Then, as the number of data points goes to infinity, an approximation to the log-marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) $\log p(y \mid m)$, up to constant terms not depending on the model, is given by the Bayesian information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bic}) (BIC) as
+Then, as the number of data points goes to infinity, an approximation to the log-marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) $\log p(y \vert m)$, up to constant terms not depending on the model, is given by the Bayesian information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bic}) (BIC) as
 
 \begin{equation} \label{eq:bic-der-BIC}
--2 \log p(y \mid m) \approx \mathrm{BIC}(m) = -2 \log p(y \mid \hat{\theta}, m) + p \log n
+-2 \log p(y|m) \approx \mathrm{BIC}(m) = -2 \log p(y|\hat{\theta}, m) + p \log n
 \end{equation}
 
 where $\hat{\theta}$ is the maximum likelihood estimator ($\rightarrow$ Definition "mle") (MLE) of $\theta$, $n$ is the number of data points and $p$ is the number of model parameters.
@@ -5463,14 +5756,14 @@ Then, the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorem
 \begin{equation} \label{eq:bic-der-ML}
 \begin{split}
 p(y|m) &= \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \\
-&= \int_{\Theta} \mathrm{exp}\left[n \, h(\theta)\right] \, g(\theta) \, \mathrm{d}\theta \; .
+&= \int_{\Theta} \exp\left[n \, h(\theta)\right] \, g(\theta) \, \mathrm{d}\theta \; .
 \end{split}
 \end{equation}
 
 This is an integral suitable for Laplace approximation which states that
 
 \begin{equation} \label{eq:bic-der-LA}
-\int_{\Theta} \mathrm{exp}\left[n \, h(\theta)\right] \, g(\theta) \, \mathrm{d}\theta = \left( \sqrt{\frac{2 \pi}{n}} \right)^p \mathrm{exp}\left[n \, h(\theta_0)\right] \left( g(\theta_0) \left| J(\theta_0) \right|^{-1/2} + O(1/n) \right)
+\int_{\Theta} \exp\left[n \, h(\theta)\right] \, g(\theta) \, \mathrm{d}\theta = \left( \sqrt{\frac{2 \pi}{n}} \right)^p \exp\left[n \, h(\theta_0)\right] \left( g(\theta_0) \left| J(\theta_0) \right|^{-1/2} + O(1/n) \right)
 \end{equation}
 
 where $\theta_0$ is the value that maximizes $h(\theta)$ and $J(\theta_0)$ is the Hessian matrix evaluated at $\theta_0$. In our case, we have $h(\theta) = 1/n \, \mathrm{LL}(\theta)$ such that $\theta_0$ is the maximum likelihood estimator $\hat{\theta}$:
@@ -5491,11 +5784,12 @@ Logarithmizing and multiplying with $-2$, we have:
 -2 \log p(y|m) \approx -2 \, \mathrm{LL}(\hat{\theta}) + p \log n - p \log(2 \pi) - 2 \log p(\hat{\theta}|m) + \log \left| J(\hat{\theta}) \right| \; .
 \end{equation}
 
-As $n \to \infty$, the last three terms are $O_p(1)$ and can therefore be ignored when comparing between models $\mathcal{M} = \left\lbrace m_1, \ldots, m_M \right\rbrace$ and using $p(y \mid m_j)$ to compute posterior model probabilies ($\rightarrow$ Definition "led-pmp") $p(m_j \mid y)$. With that, the BIC is given as
+As $n \to \infty$, the last three terms are $O_p(1)$ and can therefore be ignored when comparing between models $\mathcal{M} = \left\lbrace m_1, \ldots, m_M \right\rbrace$ and using $p(y \vert m_j)$ to compute posterior model probabilies ($\rightarrow$ Definition "led-pmp") $p(m_j \vert y)$. With that, the BIC is given as
 
 \begin{equation} \label{eq:bic-der-BIC-qed}
 \mathrm{BIC}(m) = -2 \log p(y|\hat{\theta}, m) + p \log n \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5506,13 +5800,15 @@ As $n \to \infty$, the last three terms are $O_p(1)$ and can therefore be ignore
 
 \vspace{1em}
 \textbf{Metadata:} ID: P32 | shortcut: bic-der | author: JoramSoch | date: 2020-01-26, 23:36.
+\vspace{1em}
+
 
 
 \subsection{Deviance information criterion}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:dic}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert m)$. Together, likelihood function and prior distribution imply a posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) $p(\theta \vert y, m)$.
 
 Define the posterior expected log-likelihood ($\rightarrow$ Definition "llf") (PLL)
@@ -5541,6 +5837,7 @@ where the "effective number of parameters" $p_D$ is given by
 p_D = -2 \, \mathrm{PLL}(m) +2 \, \mathrm{LLP}(m) \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5551,6 +5848,8 @@ p_D = -2 \, \mathrm{PLL}(m) +2 \, \mathrm{LLP}(m) \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D25 | shortcut: dic | author: JoramSoch | date: 2020-02-25, 12:46.
+\vspace{1em}
+
 
 
 \pagebreak
@@ -5559,13 +5858,14 @@ p_D = -2 \, \mathrm{PLL}(m) +2 \, \mathrm{LLP}(m) \; .
 \subsection{Log model evidence}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:lme}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert m)$. Then, the log model evidence (LME) of this model is defined as the logarithm of the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}):
 
 \begin{equation} \label{eq:lme-LME}
 \mathrm{LME}(m) = \log p(y|m) \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5576,12 +5876,14 @@ p_D = -2 \, \mathrm{PLL}(m) +2 \, \mathrm{LLP}(m) \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D26 | shortcut: lme | author: JoramSoch | date: 2020-02-25, 12:56.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Derivation}]{Derivation} \label{sec:lme-der}
+\setcounter{equation}{0}
 
-\vspace{1em}
-\textbf{Theorem:} Let $p(y \mid \theta,m)$ be a likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) of a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ for making inferences on model parameters $\theta$ given measured data $y$. Moreover, let $p(\theta \mid m)$ be a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on model parameters $\theta$. Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) (LME), also called marginal log-likelihood,
+\textbf{Theorem:} Let $p(y \vert \theta,m)$ be a likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) of a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ for making inferences on model parameters $\theta$ given measured data $y$. Moreover, let $p(\theta \vert m)$ be a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on model parameters $\theta$. Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) (LME), also called marginal log-likelihood,
 
 \begin{equation} \label{eq:lme-der-LME-term}
 \mathrm{LME}(m) = \log p(y|m) \; ,
@@ -5605,7 +5907,7 @@ can be expressed
 \vspace{1em}
 \textbf{Proof:}
 
-1) The first expression is a simple consequence of the law of marginal probability ($\rightarrow$ Proof "lmp") for continuous variables according to which
+1) The first expression is a simple consequence of the law of marginal probability ($\rightarrow$ Definition "prob-marg") for continuous variables according to which
 
 \begin{equation} \label{eq:lme-der-ME}
 p(y|m) = \int p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta
@@ -5623,7 +5925,7 @@ which, when logarithmized, gives
 p(\theta|y,m) = \frac{p(y|\theta,m) \, p(\theta|m)}{p(y|m)} \; .
 \end{equation}
 
-Rearranging for $p(y \mid m)$ and logarithmizing, we have:
+Rearranging for $p(y \vert m)$ and logarithmizing, we have:
 
 \begin{equation} \label{eq:lme-der-LME-bayes-qed}
 \begin{split}
@@ -5631,6 +5933,7 @@ Rearranging for $p(y \mid m)$ and logarithmizing, we have:
 &= \log p(y|\theta,m) + \log p(\theta|m) - \log p(\theta|y,m) \; .
 \end{split}
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5640,11 +5943,13 @@ Rearranging for $p(y \mid m)$ and logarithmizing, we have:
 
 \vspace{1em}
 \textbf{Metadata:} ID: P13 | shortcut: lme-der | author: JoramSoch | date: 2020-01-06, 21:27.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Partition into accuracy and complexity}]{Partition into accuracy and complexity} \label{sec:lme-anc}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} The log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) can be partitioned into accuracy and complexity
 
 \begin{equation} \label{eq:lme-anc-LME}
@@ -5697,6 +6002,7 @@ By definition, the left-hand side is the log model evidence and the terms on the
 
 which proofs the partition given by \eqref{eq:lme-anc-LME}.
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5707,13 +6013,15 @@ which proofs the partition given by \eqref{eq:lme-anc-LME}.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P3 | shortcut: lme-anc | author: JoramSoch | date: 2019-09-27, 16:13.
+\vspace{1em}
+
 
 
 \subsection{Log-evidence derivatives}
 
 \subsubsection[\textbf{Log Bayes factor in terms of log model evidences}]{Log Bayes factor in terms of log model evidences} \label{sec:lbf-lme}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $m_1$ and $m_2$ be two statistical models with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1)$ and $\mathrm{LME}(m_2)$. Then, the log Bayes factor ($\rightarrow$ Definition "lbf") in favor of model $m_1$ and against model $m_2$ is the difference of the log model evidences:
 
 \begin{equation} \label{eq:lbf-lme-LBF-LME}
@@ -5752,6 +6060,7 @@ Resolving the logarithm and applying the definition of the log model evidence ($
 \end{split}
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5761,22 +6070,24 @@ Resolving the logarithm and applying the definition of the log model evidence ($
 
 \vspace{1em}
 \textbf{Metadata:} ID: P64 | shortcut: lbf-lme | author: JoramSoch | date: 2020-02-27, 20:51.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Log family evidences in terms of log model evidences}]{Log family evidences in terms of log model evidences} \label{sec:lfe-lme}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $m_1, \ldots, m_M$ be $M$ statistical models with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1), \ldots, \mathrm{LME}(m_M)$ and belonging to $F$ mutually exclusive model families $f_1, \ldots, f_F$. Then, the log family evidences ($\rightarrow$ Definition "lfe") are given by:
 
 \begin{equation} \label{eq:lfe-lme-LFE-LME}
-\mathrm{LFE}(f_j) = \log \sum_{m_i \in f_j} \left[ \mathrm{exp}[\mathrm{LME}(m_i)] \cdot p(m_i|f_j) \right], \quad j = 1, \ldots, F,
+\mathrm{LFE}(f_j) = \log \sum_{m_i \in f_j} \left[ \exp[\mathrm{LME}(m_i)] \cdot p(m_i|f_j) \right], \quad j = 1, \ldots, F,
 \end{equation}
 
 where $p(m_i \vert f_j)$ are within-family prior model probabilities.
 
 
 \vspace{1em}
-\textbf{Proof:} Let us consider the (unlogarithmized) family evidence $p(y \vert f_j)$. According to the law of marginal probability ($\rightarrow$ Proof "prob-lmp"), this conditional probability is given by
+\textbf{Proof:} Let us consider the (unlogarithmized) family evidence $p(y \vert f_j)$. According to the law of marginal probability ($\rightarrow$ Definition "prob-marg"), this conditional probability is given by
 
 \begin{equation} \label{eq:lfe-lme-FE-ME-s1}
 p(y|f_j) = \sum_{m_i \in f_j} \left[ p(y|m_i,f_j) \cdot p(m_i|f_j) \right] \; .
@@ -5809,8 +6120,9 @@ can be exponentiated to then read
 and applying \eqref{eq:lfe-lme-ME} to \eqref{eq:lfe-lme-LFE-LME-s1}, we finally have:
 
 \begin{equation} \label{eq:lfe-lme-LFE-LME-s2}
-\mathrm{LFE}(f_j) = \log \sum_{m_i \in f_j} \left[ \mathrm{exp}[\mathrm{LME}(m_i)] \cdot p(m_i|f_j) \right] \; .
+\mathrm{LFE}(f_j) = \log \sum_{m_i \in f_j} \left[ \exp[\mathrm{LME}(m_i)] \cdot p(m_i|f_j) \right] \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5821,11 +6133,13 @@ and applying \eqref{eq:lfe-lme-ME} to \eqref{eq:lfe-lme-LFE-LME-s1}, we finally 
 
 \vspace{1em}
 \textbf{Metadata:} ID: P65 | shortcut: lfe-lme | author: JoramSoch | date: 2020-02-27, 21:16.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Posterior model probability in terms of log Bayes factor}]{Posterior model probability in terms of log Bayes factor} \label{sec:pmp-lbf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $m_1$ and $m_2$ be two statistical models log Bayes factor ($\rightarrow$ Definition "lbf") $\mathrm{LBF}_{1,2}$ in favor of model $m_1$ and against model $m_2$. Then, if both models are equally likely apriori, the posterior model probability ($\rightarrow$ Definition "pmp") of $m_1$ is
 
 \begin{equation} \label{eq:pmp-lbf-PMP-LBF}
@@ -5870,6 +6184,7 @@ Because the log Bayes factor is the logarithm of the Bayes factor ($\rightarrow$
 p(m_1|y) = \frac{\exp(\mathrm{LBF}_{1,2})}{\exp(\mathrm{LBF}_{1,2}) + 1} \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5879,11 +6194,13 @@ p(m_1|y) = \frac{\exp(\mathrm{LBF}_{1,2})}{\exp(\mathrm{LBF}_{1,2}) + 1} \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: P73 | shortcut: pmp-lbf | author: JoramSoch | date: 2020-03-03, 12:27.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Posterior model probabilities in terms of Bayes factors}]{Posterior model probabilities in terms of Bayes factors} \label{sec:pmp-bf}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $m_0, m_1, \ldots, m_M$ be $M+1$ statistical models with model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $p(y \vert m_0), p(y \vert m_1), \ldots, p(y \vert m_M)$. Then, the posterior model probabilities ($\rightarrow$ Definition "pmp") of the models $m_1, \ldots, m_M$ are given by:
 
 \begin{equation} \label{eq:pmp-bf-PMP-BF}
@@ -5927,6 +6244,7 @@ such that
 p(m_i|y)= \frac{\mathrm{BF}_{i,0} \cdot \alpha_i}{\sum_{j=1}^{M} \mathrm{BF}_{j,0} \cdot \alpha_j} \; .
 \end{equation}
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
@@ -5936,15 +6254,17 @@ p(m_i|y)= \frac{\mathrm{BF}_{i,0} \cdot \alpha_i}{\sum_{j=1}^{M} \mathrm{BF}_{j,
 
 \vspace{1em}
 \textbf{Metadata:} ID: P74 | shortcut: pmp-bf | author: JoramSoch | date: 2020-03-03, 13:13.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Posterior model probabilities in terms of log model evidences}]{Posterior model probabilities in terms of log model evidences} \label{sec:pmp-lme}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $m_1, \ldots, m_M$ be $M$ statistical models with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1), \ldots, \mathrm{LME}(m_M)$. Then, the posterior model probabilities ($\rightarrow$ Definition "pmp") are given by:
 
 \begin{equation} \label{eq:pmp-lme-PMP-LME}
-p(m_i|y) = \frac{\mathrm{exp}[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \mathrm{exp}[\mathrm{LME}(m_j)] \, p(m_j)}, \quad i = 1,\ldots,M \; ,
+p(m_i|y) = \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{LME}(m_j)] \, p(m_j)}, \quad i = 1,\ldots,M \; ,
 \end{equation}
 
 where $p(m_i)$ are prior model probabilities.
@@ -5957,7 +6277,7 @@ where $p(m_i)$ are prior model probabilities.
 p(m_i|y) = \frac{p(y|m_i) \, p(m_i)}{p(y)} \; .
 \end{equation}
 
-Using the law of marginal probability ($\rightarrow$ Proof "prob-lmp"), the denominator can be written as
+Using the law of marginal probability ($\rightarrow$ Definition "prob-marg"), the denominator can be written as
 
 \begin{equation} \label{eq:pmp-lme-PMP-s2}
 p(m_i|y) = \frac{p(y|m_i) \, p(m_i)}{\sum_{j=1}^{M} p(y|m_j) \, p(m_j)} \; .
@@ -5978,8 +6298,9 @@ can be exponentiated to then read
 and applying \eqref{eq:pmp-lme-ME} to \eqref{eq:pmp-lme-PMP-s2}, we finally have:
 
 \begin{equation} \label{eq:pmp-lme-PMP-s3}
-p(m_i|y) = \frac{\mathrm{exp}[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \mathrm{exp}[\mathrm{LME}(m_j)] \, p(m_j)} \; .
+p(m_i|y) = \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{LME}(m_j)] \, p(m_j)} \; .
 \end{equation}
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5990,22 +6311,24 @@ p(m_i|y) = \frac{\mathrm{exp}[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \math
 
 \vspace{1em}
 \textbf{Metadata:} ID: P66 | shortcut: pmp-lme | author: JoramSoch | date: 2020-02-27, 21:33.
+\vspace{1em}
+
 
 
 \subsubsection[\textbf{Bayesian model averaging in terms of log model evidences}]{Bayesian model averaging in terms of log model evidences} \label{sec:bma-lme}
+\setcounter{equation}{0}
 
-\vspace{1em}
 \textbf{Theorem:} Let $m_1, \ldots, m_M$ be $M$ statistical models describing the same measured data $y$ with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1), \ldots, \mathrm{LME}(m_M)$ and shared model parameters $\theta$. Then, Bayesian model averaging (BMA) determines the following posterior distribution over $\theta$:
 
 \begin{equation} \label{eq:bma-lme-BMA-LME}
-p(\theta|y) = \sum_{i=1}^{M} p(\theta|m_i,y) \cdot \frac{\mathrm{exp}[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \mathrm{exp}[\mathrm{LME}(m_j)] \, p(m_j)} \; ,
+p(\theta|y) = \sum_{i=1}^{M} p(\theta|m_i,y) \cdot \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{LME}(m_j)] \, p(m_j)} \; ,
 \end{equation}
 
 where $p(\theta \vert m_i,y)$ is the posterior distributions over $\theta$ obtained using $m_i$.
 
 
 \vspace{1em}
-\textbf{Proof:} According to the law of marginal probability ($\rightarrow$ Proof "prob-lmp"), the probability of the shared parameters $\theta$ conditional on the measured data $y$ can be obtained by marginalizing over the discrete variable model $m$:
+\textbf{Proof:} According to the law of marginal probability ($\rightarrow$ Definition "prob-marg"), the probability of the shared parameters $\theta$ conditional on the measured data $y$ can be obtained by marginalizing over the discrete variable model $m$:
 
 \begin{equation} \label{eq:bma-lme-BMA-PMP}
 p(\theta|y) = \sum_{i=1}^{M} p(\theta|m_i,y) \cdot p(m_i|y) \; ,
@@ -6014,10 +6337,11 @@ p(\theta|y) = \sum_{i=1}^{M} p(\theta|m_i,y) \cdot p(m_i|y) \; ,
 where $p(m_i \vert y)$ is the posterior probability ($\rightarrow$ Definition "pmp") of the $i$-th model. One can express posterior model probabilities in terms of log model evidences ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:pmp-lme}) as
 
 \begin{equation} \label{eq:bma-lme-PMP-LME}
-p(m_i|y) = \frac{\mathrm{exp}[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \mathrm{exp}[\mathrm{LME}(m_j)] \, p(m_j)}
+p(m_i|y) = \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{LME}(m_j)] \, p(m_j)}
 \end{equation}
 
 and by plugging \eqref{eq:bma-lme-PMP-LME} into \eqref{eq:bma-lme-BMA-PMP}, one arrives at \eqref{eq:bma-lme-BMA-LME}.
+
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6028,6 +6352,8 @@ and by plugging \eqref{eq:bma-lme-PMP-LME} into \eqref{eq:bma-lme-BMA-PMP}, one 
 
 \vspace{1em}
 \textbf{Metadata:} ID: P67 | shortcut: bma-lme | author: JoramSoch | date: 2020-02-27, 21:58.
+\vspace{1em}
+
 
 
 \end{document}

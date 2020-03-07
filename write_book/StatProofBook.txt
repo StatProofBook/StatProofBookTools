@@ -1,7 +1,7 @@
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,12pt,twoside]{book}
 
 %%% Packages %%%
-\usepackage{fullpage}
+\usepackage[cm,headings]{fullpage}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{gensymb}
@@ -12,6 +12,7 @@
 \usepackage[utf8]{inputenc}
 
 %%% Settings %%%
+\pagestyle{headings}
 \setlength{\parindent}{0pt}
 \raggedbottom
 \frenchspacing
