@@ -2,6 +2,7 @@
 
 %%% Packages %%%
 \usepackage[cm,headings]{fullpage}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{gensymb}
@@ -9,7 +10,6 @@
 \usepackage{csquotes}
 \usepackage{enumitem}
 \usepackage{setspace}
-\usepackage[utf8]{inputenc}
 
 %%% Settings %%%
 \pagestyle{headings}

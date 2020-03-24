@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2020-02-06 12:01:00
+ Last edit: 2020-03-24 07:19:00
 """
 
 
@@ -204,6 +204,7 @@ for entry in toc_txt:
         num_sect  = 0
         num_chap  = num_chap + 1
         curr_chap = entry[entry.find('<h3>')+4:entry.find('</h3>')]
+        curr_chap = curr_chap[curr_chap.find(': ')+2:]
         book.write('\n\n% Chapter ' + str(num_chap) + ' %\n')
         book.write('\chapter{' + curr_chap + '} \label{sec:' + curr_chap + '} \\newpage\n\n')
     
@@ -266,6 +267,7 @@ for entry in toc_txt:
         
         # Write body
         in_equation = False
+        in_itemize  = False
         for line in body_txt:
             
             # write bold text
@@ -290,6 +292,16 @@ for entry in toc_txt:
             
             # eliminate linebreaks
             line = re.sub('<br>', '\\\\vspace{1em}', line)
+            
+            # configure itemize
+            if not in_itemize and line.find('* ') == 0:
+                book.write('\\begin{itemize}\n\n')
+                in_itemize = True
+            if in_itemize and len(line) > 1 and line.find('* ') != 0:
+                book.write('\\end{itemize}\n\n')
+                in_itemize = False
+            if in_itemize and line.find('* ') == 0:
+                line = re.sub('\* ', '\\\\item ', line)
             
             # write code line
             book.write(line)

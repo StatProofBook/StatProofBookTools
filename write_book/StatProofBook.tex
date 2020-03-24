@@ -2,6 +2,7 @@
 
 %%% Packages %%%
 \usepackage[cm,headings]{fullpage}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{gensymb}
@@ -9,7 +10,6 @@
 \usepackage{csquotes}
 \usepackage{enumitem}
 \usepackage{setspace}
-\usepackage[utf8]{inputenc}
 
 %%% Settings %%%
 \pagestyle{headings}
@@ -36,7 +36,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{https://statproofbook.github.io/ \\ StatProofBook@gmail.com}
-\date{2020-03-07, 16:20}
+\date{2020-03-24, 07:25}
 
 \begin{document}
 
@@ -139,6 +139,7 @@ F_X(x) = \sum_{\overset{z \in \mathcal{X}}{z \leq x}} f_X(z)
 
 is the cumulative distribution function of $X$.
 
+\vspace{1em}
 2) Let $X$ be a scalar continuous random variable ($\rightarrow$ Definition "rvar") with the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $f_X(x)$. Then, the function $F_X(x): \mathbb{R} \to [0,1]$ with
 
 \begin{equation} \label{eq:cdf-cdf-cont}
@@ -503,7 +504,7 @@ And applying it to the expected value for continuous random variables ($\rightar
 \end{equation}
 
 \vspace{1em}
-2) Let $X$ and $Y$ be Bernoulli random variables ($\rightarrow$ Definition "bern") with the following joint probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf})
+2) Let $X$ and $Y$ be Bernoulli random variables ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) with the following joint probability ($\rightarrow$ Definition "prob-joint") mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf})
 
 \begin{equation} \label{eq:mean-mult-joint}
 \begin{split}
@@ -1112,7 +1113,7 @@ Taking this together, each addend in \eqref{eq:ent-nonneg-ent-dev} is positive o
 \textbf{Definition:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x)$ and $p(y)$. Then, the conditional entropy of $Y$ given $X$ or, entropy of $Y$ conditioned on $X$, is defined as
 
 \begin{equation} \label{eq:ent-cond-ent-cond}
-\mathrm{H}(X) = \sum_{x \in \mathcal{X}} p(x) \cdot \mathrm{H}(Y|X=x)
+\mathrm{H}(Y|X) = \sum_{x \in \mathcal{X}} p(x) \cdot \mathrm{H}(Y|X=x)
 \end{equation}
 
 where $\mathrm{H}(Y \vert X=x)$ is the (marginal) entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of $Y$, evaluated at $x$.
@@ -1137,7 +1138,7 @@ where $\mathrm{H}(Y \vert X=x)$ is the (marginal) entropy ($\rightarrow$ Definit
 \textbf{Definition:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and joint probability ($\rightarrow$ Definition "prob-joint") mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x,y)$. Then, the joint entropy of $X$ and $Y$ is defined as
 
 \begin{equation} \label{eq:ent-joint-ent-joint}
-\mathrm{H}(X,Y) = - \sum_{x \in \mathcal{X}} \sum_{x \in \mathcal{Y}} p(x,y) \cdot \log_b p(x,y)
+\mathrm{H}(X,Y) = - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \cdot \log_b p(x,y)
 \end{equation}
 
 where $b$ is the base of the logarithm specifying in which unit the entropy is determined.
@@ -1226,6 +1227,54 @@ which is negative for any base $b > 1$.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P68 | shortcut: dent-neg | author: JoramSoch | date: 2020-03-02, 20:32.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Conditional differential entropy}]{Conditional differential entropy} \label{sec:dent-cond}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x)$ and $p(y)$. Then, the conditional differential entropy of $Y$ given $X$ or, differential entropy of $Y$ conditioned on $X$, is defined as
+
+\begin{equation} \label{eq:dent-cond-dent-cond}
+\mathrm{h}(Y|X) = \int_{x \in \mathcal{X}} p(x) \cdot \mathrm{h}(Y|X=x)
+\end{equation}
+
+where $\mathrm{h}(Y \vert X=x)$ is the (marginal) differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) of $Y$, evaluated at $x$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D34 | shortcut: dent-cond | author: JoramSoch | date: 2020-03-21, 12:27.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Joint differential entropy}]{Joint differential entropy} \label{sec:dent-joint}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and joint probability ($\rightarrow$ Definition "prob-joint") density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x,y)$. Then, the joint differential entropy of $X$ and $Y$ is defined as
+
+\begin{equation} \label{eq:dent-joint-dent-joint}
+\mathrm{h}(X,Y) = - \int_{x \in \mathcal{X}} \int_{y \in \mathcal{Y}} p(x,y) \cdot \log_b p(x,y) \, \mathrm{d}y \, \mathrm{d}x
+\end{equation}
+
+where $b$ is the base of the logarithm specifying in which unit the differential entropy is determined.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D35 | shortcut: dent-joint | author: JoramSoch | date: 2020-03-21, 12:37.
 \vspace{1em}
 
 
@@ -1531,7 +1580,7 @@ where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Def
 \end{split}
 \end{equation}
 
-where $\mathrm{h}(X)$ and $\mathrm{h}(Y)$ are the marginal differential entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) of $X$ and $Y$ and $\mathrm{h}(X \vert Y)$ and $\mathrm{h}(Y \vert X)$ are the conditional differential entropies ($\rightarrow$ Definition "dent-cond").
+where $\mathrm{h}(X)$ and $\mathrm{h}(Y)$ are the marginal differential entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) of $X$ and $Y$ and $\mathrm{h}(X \vert Y)$ and $\mathrm{h}(Y \vert X)$ are the conditional differential entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent-cond}).
 
 
 \vspace{1em}
@@ -1565,12 +1614,12 @@ Applying the law of marginal probability ($\rightarrow$ Definition "prob-marg"),
 \mathrm{I}(X,Y) = \int_{\mathcal{Y}} p(y) \int_{\mathcal{X}} p(x|y) \log p(x|y) \, \mathrm{d}x \, \mathrm{d}y - \int_{\mathcal{X}} p(x) \log p(x) \, \mathrm{d}x \; .
 \end{equation}
 
-Now considering the definitions of marginal ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) and conditional ($\rightarrow$ Definition "dent-cond") differential entropy
+Now considering the definitions of marginal ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) and conditional ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent-cond}) differential entropy
 
 \begin{equation} \label{eq:cmi-mcde-MDE-CDE}
 \begin{split}
 \mathrm{h}(X) &= - \int_{\mathcal{X}} p(x) \log p(x) \, \mathrm{d}x \\
-\mathrm{h}(X|Y) = \sum_{\mathcal{Y}} p(y) \, \mathrm{h}(X|Y=y) \, \mathrm{d}y \; ,
+\mathrm{h}(X|Y) &= \int_{\mathcal{Y}} p(y) \, \mathrm{h}(X|Y=y) \, \mathrm{d}y \; ,
 \end{split}
 \end{equation}
 
@@ -1605,7 +1654,7 @@ The conditioning of $X$ on $Y$ in this proof is without loss of generality. Thus
 \mathrm{I}(X,Y) = \mathrm{h}(X) + \mathrm{h}(Y) - \mathrm{h}(X,Y)
 \end{equation}
 
-where $\mathrm{h}(X)$ and $\mathrm{h}(Y)$ are the marginal differential entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) of $X$ and $Y$ and $\mathrm{h}(X,Y)$ is the joint differential entropy ($\rightarrow$ Definition "dent-joint").
+where $\mathrm{h}(X)$ and $\mathrm{h}(Y)$ are the marginal differential entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) of $X$ and $Y$ and $\mathrm{h}(X,Y)$ is the joint differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent-joint}).
 
 
 \vspace{1em}
@@ -1633,7 +1682,7 @@ Applying the law of marginal probability ($\rightarrow$ Definition "prob-marg"),
 \mathrm{I}(X,Y) = \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \log p(x,y) \, \mathrm{d}y \, \mathrm{d}x - \int_{\mathcal{X}} p(x) \log p(x) \, \mathrm{d}x - \int_{\mathcal{Y}} p(y) \log p(y) \, \mathrm{d}y \; .
 \end{equation}
 
-Now considering the definitions of marginal ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) and joint ($\rightarrow$ Definition "dent-joint") differential entropy
+Now considering the definitions of marginal ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) and joint ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent-joint}) differential entropy
 
 \begin{equation} \label{eq:cmi-mjde-MDE-JDE}
 \begin{split}
@@ -1674,7 +1723,7 @@ we can finally show:
 \mathrm{I}(X,Y) = \mathrm{h}(X,Y) - \mathrm{h}(X|Y) - \mathrm{h}(Y|X)
 \end{equation}
 
-where $\mathrm{h}(X,Y)$ is the joint differential entropy ($\rightarrow$ Definition "dent-joint") of $X$ and $Y$ and $\mathrm{h}(X \vert Y)$ and $\mathrm{h}(Y \vert X)$ are the conditional differential entropies ($\rightarrow$ Definition "dent-cond").
+where $\mathrm{h}(X,Y)$ is the joint differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent-joint}) of $X$ and $Y$ and $\mathrm{h}(X \vert Y)$ and $\mathrm{h}(Y \vert X)$ are the conditional differential entropies ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent-cond}).
 
 
 \vspace{1em}
@@ -1741,10 +1790,35 @@ which proves the identity given above.
 
 \subsection{Bernoulli distribution}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:bern}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to follow a Bernoulli distribution with success probability $p$
+
+\begin{equation} \label{eq:bern-bern}
+X \sim \mathrm{Bern}(p) \; ,
+\end{equation}
+
+if $X = 1$ with probability ($\rightarrow$ Definition "prob") $p$ and $X = 0$ with probability ($\rightarrow$ Definition "prob") $q = 1-p$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Bernoulli distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-22; URL: \url{https://en.wikipedia.org/wiki/Bernoulli_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D44 | shortcut: bern | author: JoramSoch | date: 2020-03-22, 17:40.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:bern-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a Bernoulli distribution ($\rightarrow$ Definition "bern"):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a Bernoulli distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}):
 
 \begin{equation} \label{eq:bern-mean-bern}
 X \sim \mathrm{Bern}(p) \; .
@@ -1790,10 +1864,35 @@ Since there are only two possible outcomes for a Bernoulli random variable ($\ri
 
 \subsection{Binomial distribution}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:bin}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to follow a binomial distribution with number of trials $n$ and success probability $p$
+
+\begin{equation} \label{eq:bin-bin}
+X \sim \mathrm{Bin}(n, p) \; ,
+\end{equation}
+
+if $X$ is the number of successes observed in $n$ independent ($\rightarrow$ Definition "ind") trials, where each trial has two possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) (success/failure) and the probability of success and failure are identical across trials ($p$/$q = 1-p$).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Binomial distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-22; URL: \url{https://en.wikipedia.org/wiki/Binomial_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D45 | shortcut: bin | author: JoramSoch | date: 2020-03-22, 17:52.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:bin-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a binomial distribution ($\rightarrow$ Definition "bin"):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
 
 \begin{equation} \label{eq:bin-mean-bin}
 X \sim \mathrm{Bin}(n,p) \; .
@@ -1807,7 +1906,7 @@ Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theo
 
 
 \vspace{1em}
-\textbf{Proof:} By definition, a binomial random variable ($\rightarrow$ Definition "bin") is the sum of $n$ independent and identical Bernoulli trials ($\rightarrow$ Definition "bern") with success probability $p$. Therefore, the expected value is
+\textbf{Proof:} By definition, a binomial random variable ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}) is the sum of $n$ independent and identical Bernoulli trials ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) with success probability $p$. Therefore, the expected value is
 
 \begin{equation} \label{eq:bin-mean-bin-mean-s1}
 \mathrm{E}(X) = \mathrm{E}(X_1 + \ldots + X_n)
@@ -1847,10 +1946,35 @@ With the expected value of the Bernoulli distribution ($\rightarrow$ Proof \ref{
 
 \subsection{Categorical distribution}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:cat}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec"). Then, $X$ is said to follow a categorical distribution with success probability $p_1, \ldots, p_k$
+
+\begin{equation} \label{eq:cat-cat}
+X \sim \mathrm{Cat}(\left[p_1, \ldots, p_k \right]) \; ,
+\end{equation}
+
+if $X = e_i$ with probability ($\rightarrow$ Definition "prob") $p_i$ for all $i = 1, \ldots, k$, where $e_i$ is the $i$-th elementary row vector, i.e. a $1 \times k$ vector of zeros with a one in $i$-th position.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Categorical distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-22; URL: \url{https://en.wikipedia.org/wiki/Categorical_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D46 | shortcut: cat | author: JoramSoch | date: 2020-03-22, 18:09.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:cat-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a categorical distribution ($\rightarrow$ Definition "cat"):
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a categorical distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}):
 
 \begin{equation} \label{eq:cat-mean-cat}
 X \sim \mathrm{Cat}(\left[p_1, \ldots, p_k \right]) \; .
@@ -1890,10 +2014,35 @@ Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theo
 
 \subsection{Multinomial distribution}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:mult}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec"). Then, $X$ is said to follow a multinomial distribution with number of trials $n$ and category probabilities $p_1, \ldots, p_k$
+
+\begin{equation} \label{eq:mult-mult}
+X \sim \mathrm{Mult}(n, \left[p_1, \ldots, p_k \right]) \; ,
+\end{equation}
+
+if $X$ are the numbers of observations belonging to $k$ distinct categories in $n$ independent ($\rightarrow$ Definition "ind") trials, where each trial has $k$ possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}) and the category probabilities are identical across trials.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Binomial distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-22; URL: \url{https://en.wikipedia.org/wiki/Multinomial_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D47 | shortcut: mult | author: JoramSoch | date: 2020-03-22, 17:52.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:mult-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a multinomial distribution ($\rightarrow$ Definition "mult"):
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a multinomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}):
 
 \begin{equation} \label{eq:mult-mean-mult}
 X \sim \mathrm{Mult}(n,\left[p_1, \ldots, p_k \right]) \; .
@@ -1907,7 +2056,7 @@ Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theo
 
 
 \vspace{1em}
-\textbf{Proof:} By definition, a multinomial random variable ($\rightarrow$ Definition "mult") is the sum of $n$ independent and identical categorical trials ($\rightarrow$ Definition "cat") with category probabilities $p_1, \ldots, p_k$. Therefore, the expected value is
+\textbf{Proof:} By definition, a multinomial random variable ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}) is the sum of $n$ independent and identical categorical trials ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}) with category probabilities $p_1, \ldots, p_k$. Therefore, the expected value is
 
 \begin{equation} \label{eq:mult-mean-mult-mean-s1}
 \mathrm{E}(X) = \mathrm{E}(X_1 + \ldots + X_n)
@@ -2178,6 +2327,169 @@ x &= bp + a(1-p) = Q_X(p) \; .
 
 
 
+\subsubsection[\textbf{Mean}]{Mean} \label{sec:cuni-mean}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+
+\begin{equation} \label{eq:cuni-mean-cuni}
+X \sim \mathcal{U}(a, b) \; .
+\end{equation}
+
+Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
+
+\begin{equation} \label{eq:cuni-mean-cuni-mean}
+\mathrm{E}(X) = \frac{1}{2} (a+b) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is the probability-weighted average over all possible values:
+
+\begin{equation} \label{eq:cuni-mean-mean}
+\mathrm{E}(X) = \int_{\mathbb{R}} x \cdot f_X(x) \, \mathrm{d}x \; .
+\end{equation}
+
+With the probability density function of the continuous uniform distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:cuni-pdf}), this becomes:
+
+\begin{equation} \label{eq:cuni-mean-cuni-mean-qed}
+\begin{split}
+\mathrm{E}(X) &= \int_a^b x \cdot \frac{1}{b-a} \, \mathrm{d}x \\
+&= \left[ \frac{1}{2} \, \frac{x^2}{b-a} \right]_a^b \\
+&= \frac{1}{2} \, \frac{b^2 - a^2}{b-a} \\
+&= \frac{1}{2} \, \frac{(b+a)(b-a)}{b-a} \\
+&= \frac{1}{2} (a+b) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P82 | shortcut: cuni-mean | author: JoramSoch | date: 2020-03-16, 16:12.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Median}]{Median} \label{sec:cuni-med}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+
+\begin{equation} \label{eq:cuni-med-cuni}
+X \sim \mathcal{U}(a, b) \; .
+\end{equation}
+
+Then, the median ($\rightarrow$ Definition "med") of $X$ is
+
+\begin{equation} \label{eq:cuni-med-cuni-med}
+\mathrm{median}(X) = \frac{1}{2} (a+b) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The median ($\rightarrow$ Definition "med") is the value at which the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) is $1/2$:
+
+\begin{equation} \label{eq:cuni-med-median}
+F_X(\mathrm{median}(X)) = \frac{1}{2} \; .
+\end{equation}
+
+The cumulative distribution function of the continuous uniform distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:cuni-cdf}) is
+
+\begin{equation} \label{eq:cuni-med-cuni-cdf}
+F_X(x) = \left\{
+\begin{array}{rl}
+0 \; , & \text{if} \; x < a \\
+\frac{x-a}{b-a} \; , & \text{if} \; a \leq x \leq b \\
+1 \; , & \text{if} \; x > b \; .
+\end{array}
+\right.
+\end{equation}
+
+Thus, the inverse CDF ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:cuni-qf}) is
+
+\begin{equation} \label{eq:cuni-med-cuni-cdf-inv}
+x = bp + a(1-p) \; .
+\end{equation}
+
+Setting $p = 1/2$, we obtain:
+
+\begin{equation} \label{eq:cuni-med-cuni-med-qed}
+\mathrm{median}(X) = b \cdot \frac{1}{2} + a \cdot \left( 1-\frac{1}{2} \right) = \frac{1}{2} (a+b) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P83 | shortcut: cuni-med | author: JoramSoch | date: 2020-03-16, 16:19.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Mode}]{Mode} \label{sec:cuni-med}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+
+\begin{equation} \label{eq:cuni-med-cuni}
+X \sim \mathcal{U}(a, b) \; .
+\end{equation}
+
+Then, the mode ($\rightarrow$ Definition "mode") of $X$ is
+
+\begin{equation} \label{eq:cuni-med-cuni-mode}
+\mathrm{mode}(X) \in [a,b] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:}  The mode ($\rightarrow$ Definition "mode") is the value which maximizes the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}):
+
+\begin{equation} \label{eq:cuni-med-mode}
+\mathrm{mode}(X) = \operatorname*{arg\,max}_x f_X(x) \; .
+\end{equation}
+
+The probability density function of the continuous uniform distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:cuni-pdf}) is:
+
+\begin{equation} \label{eq:cuni-med-cuni-pdf}
+f_X(x) = \left\{
+\begin{array}{rl}
+\frac{1}{b-a} \; , & \text{if} \; a \leq x \leq b \\
+0 \; , & \text{otherwise} \; .
+\end{array}
+\right.
+\end{equation}
+
+Since the PDF attains its only non-zero value whenever $a \leq x \leq b$,
+
+\begin{equation} \label{eq:cuni-med-cuni-pdf-max}
+\operatorname*{max}_x f_X(x) = \frac{1}{b-a} \; ,
+\end{equation}
+
+any value in the interval $[a,b]$ may be considered the mode of $X$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P84 | shortcut: cuni-med | author: JoramSoch | date: 2020-03-16, 16:29.
+\vspace{1em}
+
+
+
 \subsection{Normal distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:norm}
@@ -2239,6 +2551,240 @@ f_X(x) = \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \fr
 
 \vspace{1em}
 \textbf{Metadata:} ID: P33 | shortcut: norm-pdf | author: JoramSoch | date: 2020-01-27, 15:15.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:norm-cdf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+
+\begin{equation} \label{eq:norm-cdf-norm}
+X \sim \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Then, the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of $X$ is
+
+\begin{equation} \label{eq:norm-cdf-norm-cdf}
+F_X(x) = \frac{1}{2} \left[ 1 + \mathrm{erf}\left( \frac{x-\mu}{\sqrt{2} \sigma} \right) \right]
+\end{equation}
+
+where $\mathrm{erf}(x)$ is the error function defined as
+
+\begin{equation} \label{eq:norm-cdf-erf}
+\mathrm{erf}(x) = \frac{2}{\sqrt{\pi}} \int_{0}^{x} \exp(-t^2) \, \mathrm{d}t \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The probability density function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf}) is:
+
+\begin{equation} \label{eq:norm-cdf-norm-pdf}
+f_X(x) = \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2 \right] \; .
+\end{equation}
+
+Thus, the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) is:
+
+\begin{equation} \label{eq:norm-cdf-norm-cdf-s1}
+\begin{split}
+F_X(x) &= \int_{-\infty}^{x} \mathcal{N}(z; \mu, \sigma^2) \, \mathrm{d}z \\
+&= \int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \frac{z-\mu}{\sigma} \right)^2 \right] \, \mathrm{d}z \\
+&= \frac{1}{\sqrt{2 \pi} \sigma} \int_{-\infty}^{x} \exp \left[ -\left( \frac{z-\mu}{\sqrt{2} \sigma} \right)^2 \right] \, \mathrm{d}z \; .
+\end{split}
+\end{equation}
+
+Substituting $t = (z-\mu)/(\sqrt{2} \sigma)$, i.e. $z = \sqrt{2} \sigma t + \mu$, this becomes:
+
+\begin{equation} \label{eq:norm-cdf-norm-cdf-s2}
+\begin{split}
+F_X(x) &= \frac{1}{\sqrt{2 \pi} \sigma} \int_{(-\infty-\mu)/(\sqrt{2} \sigma)}^{(x-\mu)/(\sqrt{2} \sigma)} \exp(-t^2) \, \mathrm{d}\left( \sqrt{2} \sigma t + \mu \right) \\
+&= \frac{\sqrt{2} \sigma}{\sqrt{2 \pi} \sigma} \int_{-\infty}^{\frac{x-\mu}{\sqrt{2} \sigma}} \exp(-t^2) \, \mathrm{d}t \\
+&= \frac{1}{\sqrt{\pi}} \int_{-\infty}^{\frac{x-\mu}{\sqrt{2} \sigma}} \exp(-t^2) \, \mathrm{d}t \\
+&= \frac{1}{\sqrt{\pi}} \int_{-\infty}^{0} \exp(-t^2) \, \mathrm{d}t + \frac{1}{\sqrt{\pi}} \int_{0}^{\frac{x-\mu}{\sqrt{2} \sigma}} \exp(-t^2) \, \mathrm{d}t \\
+&= \frac{1}{\sqrt{\pi}} \int_{0}^{\infty} \exp(-t^2) \, \mathrm{d}t + \frac{1}{\sqrt{\pi}} \int_{0}^{\frac{x-\mu}{\sqrt{2} \sigma}} \exp(-t^2) \, \mathrm{d}t \; .
+\end{split}
+\end{equation}
+
+Applying \eqref{eq:norm-cdf-erf} to \eqref{eq:norm-cdf-norm-cdf-s2}, we have:
+
+\begin{equation} \label{eq:norm-cdf-norm-cdf-s3}
+\begin{split}
+F_X(x) &= \frac{1}{2} \lim_{x \to \infty} \mathrm{erf}(x) + \frac{1}{2} \, \mathrm{erf}\left( \frac{x-\mu}{\sqrt{2} \sigma} \right) \\
+&= \frac{1}{2} + \frac{1}{2} \, \mathrm{erf}\left( \frac{x-\mu}{\sqrt{2} \sigma} \right) \\
+&= \frac{1}{2} \left[ 1 + \mathrm{erf}\left( \frac{x-\mu}{\sqrt{2} \sigma} \right) \right] \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-20; URL: \url{https://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function}.
+\item Wikipedia (2020): "Error function"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-20; URL: \url{https://en.wikipedia.org/wiki/Error_function}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P85 | shortcut: norm-cdf | author: JoramSoch | date: 2020-03-20, 01:33.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Cumulative distribution function without error function}]{Cumulative distribution function without error function} \label{sec:norm-cdfwerf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+
+\begin{equation} \label{eq:norm-cdfwerf-norm}
+X \sim \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Then, the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of $X$ can be expressed as
+
+\begin{equation} \label{eq:norm-cdfwerf-norm-cdf}
+f_X(x) = \Phi_{\mu,\sigma}(x) = \varphi\left( \frac{x-\mu}{\sigma} \right) \cdot \sum_{i=1}^{\infty} \frac{\left( \frac{x-\mu}{\sigma} \right)^{2i-1}}{(2i-1)!!} + \frac{1}{2}
+\end{equation}
+
+where $\varphi(x)$ is the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the standard normal distribution ($\rightarrow$ Definition "snorm") and $n!!$ is a double factorial.
+
+
+\vspace{1em}
+\textbf{Proof:}
+
+1) First, consider the standard normal distribution ($\rightarrow$ Definition "snorm") $\mathcal{N}(0, 1)$ which has the probability density function ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf})
+
+\begin{equation} \label{eq:norm-cdfwerf-snorm-pdf}
+\varphi(x) = \frac{1}{\sqrt{2 \pi}} \cdot e^{-\frac{1}{2} x^2} \; .
+\end{equation}
+
+Let $T(x)$ be the indefinite integral of this function. It can be obtained using infinitely repeated integration by parts as follows:
+
+\begin{equation} \label{eq:norm-cdfwerf-snorm-pdf-ii-s1}
+\begin{split}
+T(x) &= \int \varphi(x) \, \mathrm{d}x \\
+&= \int \frac{1}{\sqrt{2 \pi}} \cdot e^{-\frac{1}{2} x^2} \, \mathrm{d}x \\
+&= \frac{1}{\sqrt{2 \pi}} \int 1 \cdot e^{-\frac{1}{2} x^2} \, \mathrm{d}x \\
+&= \frac{1}{\sqrt{2 \pi}} \cdot \left[ x \cdot e^{-\frac{1}{2} x^2} + \int x^2 \cdot e^{-\frac{1}{2} x^2} \, \mathrm{d}x \right] \\
+&= \frac{1}{\sqrt{2 \pi}} \cdot \left[ x \cdot e^{-\frac{1}{2} x^2} + \left[ \frac{1}{3} x^3 \cdot e^{-\frac{1}{2} x^2} + \int \frac{1}{3} x^4 \cdot e^{-\frac{1}{2} x^2} \, \mathrm{d}x \right] \right] \\
+&= \frac{1}{\sqrt{2 \pi}} \cdot \left[ x \cdot e^{-\frac{1}{2} x^2} + \left[ \frac{1}{3} x^3 \cdot e^{-\frac{1}{2} x^2} + \left[ \frac{1}{15} x^5 \cdot e^{-\frac{1}{2} x^2} + \int \frac{1}{15} x^6 \cdot e^{-\frac{1}{2} x^2} \, \mathrm{d}x \right] \right] \right] \\
+&= \ldots \\
+&= \frac{1}{\sqrt{2 \pi}} \cdot \left[ \sum_{i=1}^{n} \left( \frac{x^{2i-1}}{(2i-1)!!} \cdot e^{-\frac{1}{2} x^2} \right) + \int \left( \frac{x^{2n}}{(2n-1)!!} \cdot e^{-\frac{1}{2} x^2} \right) \, \mathrm{d}x \right] \\
+&= \frac{1}{\sqrt{2 \pi}} \cdot \left[ \sum_{i=1}^{\infty} \left( \frac{x^{2i-1}}{(2i-1)!!} \cdot e^{-\frac{1}{2} x^2} \right) + \lim_{n \to \infty} \int \left( \frac{x^{2n}}{(2n-1)!!} \cdot e^{-\frac{1}{2} x^2} \right) \, \mathrm{d}x \right] \; .
+\end{split}
+\end{equation}
+
+Since $(2n-1)!!$ grows faster than $x^{2n}$, it holds that
+
+\begin{equation} \label{eq:norm-cdfwerf-int-const}
+\frac{1}{\sqrt{2 \pi}} \cdot \lim_{n \to \infty} \int \left( \frac{x^{2n}}{(2n-1)!!} \cdot e^{-\frac{1}{2} x^2} \right) \, \mathrm{d}x = \int 0 \, \mathrm{d}x = c
+\end{equation}
+
+for constant $c$, such that the indefinite integral becomes
+
+\begin{equation} \label{eq:norm-cdfwerf-snorm-pdf-ii-s2}
+\begin{split}
+T(x) &= \frac{1}{\sqrt{2 \pi}} \cdot \sum_{i=1}^{\infty} \left( \frac{x^{2i-1}}{(2i-1)!!} \cdot e^{-\frac{1}{2} x^2} \right) + c \\
+&= \frac{1}{\sqrt{2 \pi}} \cdot e^{-\frac{1}{2} x^2} \cdot \sum_{i=1}^{\infty} \frac{x^{2i-1}}{(2i-1)!!} + c \\
+&\overset{\eqref{eq:norm-cdfwerf-snorm-pdf}}{=} \varphi(x) \cdot \sum_{i=1}^{\infty} \frac{x^{2i-1}}{(2i-1)!!} + c \; .
+\end{split}
+\end{equation}
+
+2) Next, let $\Phi(x)$ be the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard normal distribution ($\rightarrow$ Definition "snorm"):
+
+\begin{equation} \label{eq:norm-cdfwerf-snorm-cdf}
+\Phi(x) = \int_{-\infty}^x \varphi(x) \, \mathrm{d}x \; .
+\end{equation}
+
+It can be obtained by matching $T(0)$ to $\Phi(0)$ which is $1/2$, because the standard normal distribution is symmetric around zero:
+
+\begin{equation} \label{eq:norm-cdfwerf-snorm-cdf-c}
+\begin{split}
+T(0) = \varphi(0) \cdot \sum_{i=1}^{\infty} \frac{0^{2i-1}}{(2i-1)!!} + c &= \frac{1}{2} = \Phi(0) \\
+\Leftrightarrow c &= \frac{1}{2} \\
+\Rightarrow \Phi(x) = \varphi(x) \cdot \sum_{i=1}^{\infty} \frac{x^{2i-1}}{(2i-1)!!} + \frac{1}{2} \! &\; .
+\end{split}
+\end{equation}
+
+3) Finally, the cumulative distribution functions of the standard normal distribution and the general normal distribution are related to each other ($\rightarrow$ Proof "norm-snorm") as
+
+\begin{equation} \label{eq:norm-cdfwerf-norm-snorm-cdf}
+\Phi_{\mu,\sigma}(x) = \Phi\left( \frac{x-\mu}{\sigma} \right) \; .
+\end{equation}
+
+Combining \eqref{eq:norm-cdfwerf-norm-snorm-cdf} with \eqref{eq:norm-cdfwerf-snorm-cdf-c}, we have:
+
+\begin{equation} \label{eq:norm-cdfwerf-norm-cdf-qed}
+\Phi_{\mu,\sigma}(x) = \varphi\left( \frac{x-\mu}{\sigma} \right) \cdot \sum_{i=1}^{\infty} \frac{\left( \frac{x-\mu}{\sigma} \right)^{2i-1}}{(2i-1)!!} + \frac{1}{2} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Soch J (2015): "Solution for the Indefinite Integral of the Standard Normal Probability Density Function"; in: \textit{arXiv stat.OT}, arXiv:1512.04858; URL: \url{https://arxiv.org/abs/1512.04858}.
+\item Wikipedia (2020): "Normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-20; URL: \url{https://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P86 | shortcut: norm-cdfwerf | author: JoramSoch | date: 2020-03-20, 04:26.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:norm-qf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+
+\begin{equation} \label{eq:norm-qf-norm}
+X \sim \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Then, the quantile function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:qf}) of $X$ is
+
+\begin{equation} \label{eq:norm-qf-norm-qf}
+Q_X(p) = \sqrt{2}\sigma \cdot \mathrm{erf}^{-1}(2p-1) + \mu
+\end{equation}
+
+where $\mathrm{erf}^{-1}(x)$ is the inverse error function.
+
+
+\vspace{1em}
+\textbf{Proof:} The cumulative distribution function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-cdf}) is:
+
+\begin{equation} \label{eq:norm-qf-norm-cdf}
+F_X(x) = \frac{1}{2} \left[ 1 + \mathrm{erf}\left( \frac{x-\mu}{\sqrt{2} \sigma} \right) \right] \; .
+\end{equation}
+
+Thus, the quantile function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:qf}) is:
+
+\begin{equation} \label{eq:norm-qf-norm-qf-s1}
+Q_X(p) = F_X^{-1}(x) \; .
+\end{equation}
+
+This can be derived by rearranging equation \eqref{eq:norm-qf-norm-cdf}:
+
+\begin{equation} \label{eq:norm-qf-norm-qf-s2}
+\begin{split}
+p &= \frac{1}{2} \left[ 1 + \mathrm{erf}\left( \frac{x-\mu}{\sqrt{2} \sigma} \right) \right] \\
+2 p - 1 &= \mathrm{erf}\left( \frac{x-\mu}{\sqrt{2} \sigma} \right) \\
+\mathrm{erf}^{-1}(2p-1) &= \frac{x-\mu}{\sqrt{2} \sigma} \\
+x &= \sqrt{2}\sigma \cdot \mathrm{erf}^{-1}(2p-1) + \mu \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-20; URL: \url{https://en.wikipedia.org/wiki/Normal_distribution#Quantile_function}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P87 | shortcut: norm-qf | author: JoramSoch | date: 2020-03-20, 04:47.
 \vspace{1em}
 
 
@@ -2345,7 +2891,7 @@ Then, the median ($\rightarrow$ Definition "med") of $X$ is
 F_X(\mathrm{median}(X)) = \frac{1}{2} \; .
 \end{equation}
 
-The cumulative distribution function of the normal distribution ($\rightarrow$ Proof "norm-cdf") is
+The cumulative distribution function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-cdf}) is
 
 \begin{equation} \label{eq:norm-med-norm-cdf}
 F_X(x) = \frac{1}{2} \left[ 1 + \mathrm{erf} \left( \frac{x-\mu}{\sqrt{2}\sigma} \right) \right]
@@ -3249,7 +3795,7 @@ Because moment-generating function and probability density function of a random 
 x \sim \mathcal{N}(\mu, \Sigma) \; .
 \end{equation}
 
-Then, the marginal distribution ($\rightarrow$ Definition "md") of any subset vector $x_s$ is also a multivariate normal distribution
+Then, the marginal distribution ($\rightarrow$ Definition "dist-marg") of any subset vector $x_s$ is also a multivariate normal distribution
 
 \begin{equation} \label{eq:mvn-marg-mvn-marg}
 x_s \sim \mathcal{N}(\mu_s, \Sigma_s)
@@ -3282,6 +3828,205 @@ Finally, we see that $S \mu = \mu_s$ and $S \Sigma S^\mathrm{T} = \Sigma_s$.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P35 | shortcut: mvn-marg | author: JoramSoch | date: 2020-01-29, 15:12.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Conditional distributions}]{Conditional distributions} \label{sec:mvn-cond}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $x$ follow a multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn})
+
+\begin{equation} \label{eq:mvn-cond-mvn}
+x \sim \mathcal{N}(\mu, \Sigma) \; .
+\end{equation}
+
+Then, the conditional distribution ($\rightarrow$ Definition "dist-cond") of any subset vector $x_1$, given the complement vector $x_2$, is also a multivariate normal distribution
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond}
+x_1|x_2 \sim \mathcal{N}(\mu_{1|2}, \Sigma_{1|2})
+\end{equation}
+
+where the conditional mean and covariance are
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-hyp}
+\begin{split}
+\mu_{1|2} &= \mu_1 + \Sigma_{12} \Sigma_{22}^{-1} (x_2 - \mu_2) \\
+\Sigma_{1|2} &= \Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21} \; .
+\end{split}
+\end{equation}
+
+with block-wise mean and covariance defined as
+
+\begin{equation} \label{eq:mvn-cond-mvn-joint-hyp}
+\begin{split}
+\mu &= \begin{bmatrix} \mu_1 \\ \mu_2 \end{bmatrix} \\
+\Sigma &= \begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{bmatrix} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Without loss of generality, we assume that, in parallel to \eqref{eq:mvn-cond-mvn-joint-hyp},
+
+\begin{equation} \label{eq:mvn-cond-x}
+x = \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+\end{equation}
+
+where $x_1$ is an $n_1 \times 1$ vector, $x_2$ is an $n_2 \times 1$ vector and $x$ is an $n_1 + n_2 = n \times 1$ vector.
+
+\vspace{1em}
+By construction, the joint distribution ($\rightarrow$ Definition "dist-joint") of $x_1$ and $x_2$ is:
+
+\begin{equation} \label{eq:mvn-cond-mvn-joint}
+x_1,x_2 \sim \mathcal{N}(\mu, \Sigma) \; .
+\end{equation}
+
+Moreover, the marginal distribution ($\rightarrow$ Definition "dist-marg") of $x_2$ follows from ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-marg}) \eqref{eq:mvn-cond-mvn} and \eqref{eq:mvn-cond-mvn-joint-hyp} as
+
+\begin{equation} \label{eq:mvn-cond-mvn-marg}
+x_2 \sim \mathcal{N}(\mu_2, \Sigma_{22}) \; .
+\end{equation}
+
+According to the law of conditional probability ($\rightarrow$ Definition "prob-cond"), it holds that
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s1}
+p(x_1|x_2) = \frac{p(x_1,x_2)}{p(x_2)}
+\end{equation}
+
+Applying \eqref{eq:mvn-cond-mvn-joint} and \eqref{eq:mvn-cond-mvn-marg} to \eqref{eq:mvn-cond-mvn-cond-s1}, we have:
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s2}
+p(x_1|x_2) = \frac{\mathcal{N}(x; \mu, \Sigma)}{\mathcal{N}(x_2; \mu_2, \Sigma_{22})} \; .
+\end{equation}
+
+Using the probability density function of the multivariate normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}), this becomes:
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s3}
+\begin{split}
+p(x_1|x_2) &= \frac{1/\sqrt{(2 \pi)^n |\Sigma|} \cdot \exp \left[ -\frac{1}{2} (x-\mu)^\mathrm{T} \Sigma^{-1} (x-\mu) \right]}{1/\sqrt{(2 \pi)^{n_2} |\Sigma_{22}|} \cdot \exp \left[ -\frac{1}{2} (x_2-\mu_2)^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right]} \\
+&= \frac{1}{\sqrt{(2 \pi)^{n-n_2}}} \cdot \sqrt{\frac{|\Sigma_{22}|}{|\Sigma|}} \cdot \exp \left[ -\frac{1}{2} (x-\mu)^\mathrm{T} \Sigma^{-1} (x-\mu) + \frac{1}{2} (x_2-\mu_2)^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right] \; .
+\end{split}
+\end{equation}
+
+Writing the inverse of $\Sigma$ as
+
+\begin{equation} \label{eq:mvn-cond-Sigma-inv-def}
+\Sigma^{-1} = \begin{bmatrix} \Sigma^{11} & \Sigma^{12} \\ \Sigma^{21} & \Sigma^{22} \end{bmatrix}
+\end{equation}
+
+and applying \eqref{eq:mvn-cond-mvn-joint-hyp} to \eqref{eq:mvn-cond-mvn-cond-s3}, we get:
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s4}
+\begin{split}
+p(x_1|x_2) = &\frac{1}{\sqrt{(2 \pi)^{n-n_2}}} \cdot \sqrt{\frac{|\Sigma_{22}|}{|\Sigma|}} \cdot \\
+&\exp \left[ -\frac{1}{2} \left( \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} - \begin{bmatrix} \mu_1 \\ \mu_2 \end{bmatrix} \right)^\mathrm{T} \begin{bmatrix} \Sigma^{11} & \Sigma^{12} \\ \Sigma^{21} & \Sigma^{22} \end{bmatrix} \left( \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} - \begin{bmatrix} \mu_1 \\ \mu_2 \end{bmatrix} \right) \right. \\
+&\hphantom{\exp \left[\right.} \left. + \frac{1}{2} \, (x_2-\mu_2)^\mathrm{T} \, \Sigma_{22}^{-1} \, (x_2-\mu_2) \right] \; .
+\end{split}
+\end{equation}
+
+Multiplying out within the exponent of \eqref{eq:mvn-cond-mvn-cond-s4}, we have
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s5}
+\begin{split}
+p(x_1|x_2) = &\frac{1}{\sqrt{(2 \pi)^{n-n_2}}} \cdot \sqrt{\frac{|\Sigma_{22}|}{|\Sigma|}} \cdot \\
+&\exp \left[ -\frac{1}{2} \left( (x_1-\mu_1)^\mathrm{T} \Sigma^{11} (x_1-\mu_1) + 2 (x_1-\mu_1)^\mathrm{T} \Sigma^{12} (x_2-\mu_2) + (x_2-\mu_2)^\mathrm{T} \Sigma^{22} (x_2-\mu_2) \right) \right. \\
+&\hphantom{\exp \left[\right.} \left. + \frac{1}{2} (x_2-\mu_2)^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right]
+\end{split}
+\end{equation}
+
+where we have used the fact that ${\Sigma^{21}}^\mathrm{T} = \Sigma^{12}$, because $\Sigma^{-1}$ is a symmetric matrix.
+
+\vspace{1em}
+The inverse of a block matrix is
+
+\begin{equation} \label{eq:mvn-cond-Block-inv}
+\begin{bmatrix} A & B \\ C & D \end{bmatrix}^{-1} = \begin{bmatrix} (A-BD^{-1}C)^{-1} & -(A-BD^{-1}C)^{-1}BD^{-1} \\ -D^{-1}C(A-BD^{-1}C)^{-1} & D^{-1}+D^{-1}C(A-BD^{-1}C)^{-1}BD^{-1} \end{bmatrix} \; ,
+\end{equation}
+
+thus the inverse of $\Sigma$ in \eqref{eq:mvn-cond-Sigma-inv-def} is
+
+\begin{equation} \label{eq:mvn-cond-Sigma-inv}
+\begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{bmatrix}^{-1} = \begin{bmatrix} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} & -(\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} \Sigma_{12} \Sigma_{22}^{-1} \\ -\Sigma_{22}^{-1} \Sigma_{21} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} & \Sigma_{22}^{-1} + \Sigma_{22}^{-1} \Sigma_{21} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} \Sigma_{12} \Sigma_{22}^{-1} \end{bmatrix} \; .
+\end{equation}
+
+Plugging this into \eqref{eq:mvn-cond-mvn-cond-s5}, we have:
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s6}
+\begin{split}
+p(x_1|x_2) = &\frac{1}{\sqrt{(2 \pi)^{n-n_2}}} \cdot \sqrt{\frac{|\Sigma_{22}|}{|\Sigma|}} \cdot \\
+&\exp \left[ -\frac{1}{2} \left( (x_1-\mu_1)^\mathrm{T} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} (x_1-\mu_1) \right. \right. - \\
+&\hphantom{\exp \left[ -\frac{1}{2} \left( \right. \right.} 2 (x_1-\mu_1)^\mathrm{T} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} \Sigma_{12} \Sigma_{22}^{-1} (x_2-\mu_2) + \\
+&\hphantom{\exp \left[ -\frac{1}{2} \left( \right. \right.} \left. (x_2-\mu_2)^\mathrm{T} \left[ \Sigma_{22}^{-1} + \Sigma_{22}^{-1} \Sigma_{21} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} \Sigma_{12} \Sigma_{22}^{-1} \right] (x_2-\mu_2) \right) \\
+&\hphantom{\exp \left[\right.} \left. + \frac{1}{2} \left( (x_2-\mu_2)^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right) \right] \; .
+\end{split}
+\end{equation}
+
+Eliminating some terms, we have:
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s7}
+\begin{split}
+p(x_1|x_2) = &\frac{1}{\sqrt{(2 \pi)^{n-n_2}}} \cdot \sqrt{\frac{|\Sigma_{22}|}{|\Sigma|}} \cdot \\
+&\exp \left[ -\frac{1}{2} \left( (x_1-\mu_1)^\mathrm{T} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} (x_1-\mu_1) \right. \right. - \\
+&\hphantom{\exp \left[ -\frac{1}{2} \left( \right. \right.} 2 (x_1-\mu_1)^\mathrm{T} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} \Sigma_{12} \Sigma_{22}^{-1} (x_2-\mu_2) + \\
+&\hphantom{\exp \left[ -\frac{1}{2} \left( \right. \right.} \left. \left. (x_2-\mu_2)^\mathrm{T} \Sigma_{22}^{-1} \Sigma_{21} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} \Sigma_{12} \Sigma_{22}^{-1} (x_2-\mu_2) \right) \right] \; .
+\end{split}
+\end{equation}
+
+Rearranging the terms, we have
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s8}
+\begin{split}
+p(x_1|x_2) = &\frac{1}{\sqrt{(2 \pi)^{n-n_2}}} \cdot \sqrt{\frac{|\Sigma_{22}|}{|\Sigma|}} \cdot \exp \left[ -\frac{1}{2} \cdot \right. \\
+&\! \left. \left[ (x_1-\mu_1) - \Sigma_{12}^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right]^\mathrm{T} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} \left[ (x_1-\mu_1) - \Sigma_{12}^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right] \right] \\
+= &\frac{1}{\sqrt{(2 \pi)^{n-n_2}}} \cdot \sqrt{\frac{|\Sigma_{22}|}{|\Sigma|}} \cdot \exp \left[ -\frac{1}{2} \cdot \right. \\
+&\! \left. \left[ x_1 - \left( \mu_1 + \Sigma_{12}^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right) \right]^\mathrm{T} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} \left[ x_1 - \left( \mu_1 + \Sigma_{12}^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right) \right] \right]
+\end{split}
+\end{equation}
+
+where we have used the fact that $\Sigma_{21}^\mathrm{T} = \Sigma_{12}$, because $\Sigma$ is a covariance matrix.
+
+\vspace{1em}
+The determinant of a block matrix is
+
+\begin{equation} \label{eq:mvn-cond-Block-det}
+\begin{vmatrix} A & B \\ C & D \end{vmatrix} = |D| \cdot | A - B D^{-1} C | \; ,
+\end{equation}
+
+such that we have for $\Sigma$ that
+
+\begin{equation} \label{eq:mvn-cond-Sigma-det}
+\begin{vmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{vmatrix} = |\Sigma_{22}| \cdot | \Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21} | \; .
+\end{equation}
+
+With this and $n - n_2 = n_1$, we finally arrive at
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s9}
+\begin{split}
+p(x_1|x_2) = &\frac{1}{\sqrt{(2 \pi)^{n_1} | \Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21} |}} \cdot \exp \left[ -\frac{1}{2} \cdot \right. \\
+&\! \left. \left[ x_1 - \left( \mu_1 + \Sigma_{12}^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right) \right]^\mathrm{T} (\Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21})^{-1} \left[ x_1 - \left( \mu_1 + \Sigma_{12}^\mathrm{T} \Sigma_{22}^{-1} (x_2-\mu_2) \right) \right] \right]
+\end{split}
+\end{equation}
+
+which is the probability density function of a multivariate normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf})
+
+\begin{equation} \label{eq:mvn-cond-mvn-cond-s10}
+p(x_1|x_2) = \mathcal{N}(x_1; \mu_{1|2}, \Sigma_{1|2})
+\end{equation}
+
+with the mean $\mu_{1 \vert 2}$ and variance $\Sigma_{1 \vert 2}$ given by \eqref{eq:mvn-cond-mvn-cond-hyp}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wang, Ruye (2006): "Marginal and conditional distributions of multivariate normal distribution"; in: \textit{Computer Image Processing and Analysis}; URL: \url{http://fourier.eng.hmc.edu/e161/lectures/gaussianprocess/node7.html}.
+\item Wikipedia (2020): "Multivariate normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-20; URL: \url{https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Conditional_distributions}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P88 | shortcut: mvn-cond | author: JoramSoch | date: 2020-03-20, 08:44.
 \vspace{1em}
 
 
@@ -3481,13 +4226,13 @@ By plugging \eqref{eq:ng-kl-exp-mvn-KL-s2} and \eqref{eq:ng-kl-gam-KL} into \eqr
 x,y \sim \mathrm{NG}(\mu, \Lambda, a, b) \; .
 \end{equation}
 
-Then, the marginal distribution ($\rightarrow$ Definition "md") of $y$ is a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam})
+Then, the marginal distribution ($\rightarrow$ Definition "dist-marg") of $y$ is a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam})
 
 \begin{equation} \label{eq:ng-marg-ng-marg-y}
 y \sim \mathrm{Gam}(a, b)
 \end{equation}
 
-and the marginal distribution ($\rightarrow$ Definition "md") of $x$ is a multivariate t-distribution ($\rightarrow$ Definition "mvt")
+and the marginal distribution ($\rightarrow$ Definition "dist-marg") of $x$ is a multivariate t-distribution ($\rightarrow$ Definition "mvt")
 
 \begin{equation} \label{eq:ng-marg-ng-marg-x}
 x \sim \mathrm{t}\left( \mu, \left(\frac{a}{b} \Lambda \right)^{-1}, 2a \right) \; .
@@ -3709,6 +4454,45 @@ By showing that the probability density functions ($\rightarrow$ Definition \ref
 
 
 
+\subsection{Wishart distribution}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:wish}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be an $n \times p$ matrix following a matrix-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) with mean zero, independence across rows and covariance across columns $V$:
+
+\begin{equation} \label{eq:wish-matn}
+X \sim \mathcal{MN}(0, I_n, V) \; .
+\end{equation}
+
+Define the scatter matrix $S$ as the product of the transpose of $X$ with itself:
+
+\begin{equation} \label{eq:wish-scat-mat}
+S = X^T X = \sum_{i=1}^n x_i^\mathrm{T} x_i \; .
+\end{equation}
+
+Then, the matrix $S$ is said to follow a Wishart distribution with scale matrix $V$ and degrees of freedom $n$
+
+\begin{equation} \label{eq:wish-wish}
+S \sim \mathcal{W}(V, n)
+\end{equation}
+
+where $n > p - 1$ and $V$ is a positive definite symmetric covariance matrix.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Wishart distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-22; URL: \url{https://en.wikipedia.org/wiki/Wishart_distribution#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D43 | shortcut: wish | author: JoramSoch | date: 2020-03-22, 17:15.
+\vspace{1em}
+
+
+
 
 
 % Chapter 3 %
@@ -3719,16 +4503,91 @@ By showing that the probability density functions ($\rightarrow$ Definition \ref
 
 \subsection{Multiple linear regression}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:mlr}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $y$ be an $n \times 1$ vector and let $X$ be an $n \times p$ matrix.
+
+Then, a statement asserting a linear combination of $X$ into $y$
+
+\begin{equation} \label{eq:mlr-mlr-model}
+y = X\beta + \varepsilon \; ,
+\end{equation}
+
+together with a statement asserting a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}) for $\varepsilon$
+
+\begin{equation} \label{eq:mlr-mlr-noise}
+\varepsilon \sim \mathcal{N}(0, \sigma^2 V)
+\end{equation}
+
+is called a univariate linear regression model or simply, "multiple linear regression".
+
+\begin{itemize}
+
+\item $y$ is called "measured data", "dependent variable" or "measurements";
+
+\item $X$ is called "design matrix", "set of independent variables" or "predictors";
+
+\item $V$ is called "covariance matrix" or "covariance structure";
+
+\item $\beta$ are called "regression coefficients" or "weights";
+
+\item $\varepsilon$ is called "noise", "errors" or "error terms";
+
+\item $\sigma^2$ is called "noise variance" or "error variance";
+
+\item $n$ is the number of observations;
+
+\item $p$ is the number of predictors.
+
+\end{itemize}
+
+Alternatively, the linear combination may also be written as
+
+\begin{equation} \label{eq:mlr-mlr-model-sum}
+y = \sum_{i=1}^{p} \beta_i x_i + \varepsilon
+\end{equation}
+
+or, when the model includes an intercept term, as
+
+\begin{equation} \label{eq:mlr-mlr-model-sum-base}
+y = \beta_0 + \sum_{i=1}^{p} \beta_i x_i + \varepsilon
+\end{equation}
+
+which is equivalent to adding a constant regressor $x_0 = 1_n$ to the design matrix $X$.
+
+When the covariance structure $V$ is equal to the $n \times n$ identity matrix, this is called multiple linear regression with independent and identically distributed (i.i.d.) observations:
+
+\begin{equation} \label{eq:mlr-mlr-noise-iid}
+V = I_n \quad \Rightarrow \quad \varepsilon \sim \mathcal{N}(0, \sigma^2 I_n) \quad \Rightarrow \quad \varepsilon_i \overset{\text{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2) \; .
+\end{equation}
+
+Otherwise, it is called multiple linear regression with correlated observations.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Linear regression"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-21; URL: \url{https://en.wikipedia.org/wiki/Linear_regression#Simple_and_multiple_linear_regression}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D36 | shortcut: mlr | author: JoramSoch | date: 2020-03-21, 20:09.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Ordinary least squares (1)}]{Ordinary least squares (1)} \label{sec:mlr-ols}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition "mlr") with independent observations
+\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
 
 \begin{equation} \label{eq:mlr-ols-MLR}
 y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2) \; ,
 \end{equation}
 
-the parameters minimizing the residual sum of squares ($\rightarrow$ Definition "rss") are given by
+the parameters minimizing the residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) are given by
 
 \begin{equation} \label{eq:mlr-ols-OLS}
 \hat{\beta} = (X^\mathrm{T} X)^{-1} X^\mathrm{T} y \; .
@@ -3758,7 +4617,7 @@ X^\mathrm{T} X\hat{\beta} &= X^\mathrm{T} y \\
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Stephan, Klaas Enno (2010): "The General Linear Model (GLM)"; in: \textit{Methods and models for fMRI data analysis in neuroeconomics}; URL: \url{http://www.socialbehavior.uzh.ch/teaching/methodsspring10.html}.
+\item Stephan, Klaas Enno (2010): "The General Linear Model (GLM)"; in: \textit{Methods and models for fMRI data analysis in neuroeconomics}, Lecture 3, Slides 10/11; URL: \url{http://www.socialbehavior.uzh.ch/teaching/methodsspring10.html}.
 \end{itemize}
 
 
@@ -3771,13 +4630,13 @@ X^\mathrm{T} X\hat{\beta} &= X^\mathrm{T} y \\
 \subsubsection[\textbf{Ordinary least squares (2)}]{Ordinary least squares (2)} \label{sec:mlr-ols2}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition "mlr") with independent observations
+\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
 
 \begin{equation} \label{eq:mlr-ols2-MLR}
 y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2) \; ,
 \end{equation}
 
-the parameters minimizing the residual sum of squares ($\rightarrow$ Definition "rss") are given by
+the parameters minimizing the residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) are given by
 
 \begin{equation} \label{eq:mlr-ols2-OLS}
 \hat{\beta} = (X^\mathrm{T} X)^{-1} X^\mathrm{T} y \; .
@@ -3785,7 +4644,7 @@ the parameters minimizing the residual sum of squares ($\rightarrow$ Definition 
 
 
 \vspace{1em}
-\textbf{Proof:} The residual sum of squares ($\rightarrow$ Definition "rss") is defined as
+\textbf{Proof:} The residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) is defined as
 
 \begin{equation} \label{eq:mlr-ols2-RSS}
 \mathrm{RSS}(\beta) = \sum_{i=1}^n \varepsilon_i = \varepsilon^\mathrm{T} \varepsilon = (y-X\beta)^\mathrm{T} (y-X\beta)
@@ -3833,6 +4692,452 @@ Since the quadratic form $y^\mathrm{T} y$ in \eqref{eq:mlr-ols2-RSS-dev} is posi
 
 
 
+\subsubsection[\textit{Total sum of squares}]{Total sum of squares} \label{sec:tss}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a multiple linear regression with independent observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) using measured data $y$ and design matrix $X$:
+
+\begin{equation} \label{eq:tss-mlr}
+y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2) \; .
+\end{equation}
+
+Then, the total sum of squares (TSS) is defined as the sum of squared deviations of the measured signal from the average signal:
+
+\begin{equation} \label{eq:tss-tss}
+\mathrm{TSS} = \sum_{i=1}^n (y_i - \bar{y})^2 \quad \text{where} \quad \bar{y} = \frac{1}{n} \sum_{i=1}^n y_i \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Total sum of squares"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-21; URL: \url{https://en.wikipedia.org/wiki/Total_sum_of_squares}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D37 | shortcut: tss | author: JoramSoch | date: 2020-03-21, 21:44.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Explained sum of squares}]{Explained sum of squares} \label{sec:ess}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a multiple linear regression with independent observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) using measured data $y$ and design matrix $X$:
+
+\begin{equation} \label{eq:ess-mlr}
+y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2) \; .
+\end{equation}
+
+Then, the explained sum of squares (ESS) is defined as the sum of squared deviations of the fitted signal from the average signal:
+
+\begin{equation} \label{eq:ess-ess}
+\mathrm{ESS} = \sum_{i=1}^n (\hat{y}_i - \bar{y})^2 \quad \text{where} \quad \hat{y} = X \hat{\beta} \quad \text{and} \quad \bar{y} = \frac{1}{n} \sum_{i=1}^n y_i
+\end{equation}
+
+with estimated regression coefficients $\hat{\beta}$, e.g. obtained via ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Explained sum of squares"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-21; URL: \url{https://en.wikipedia.org/wiki/Explained_sum_of_squares}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D38 | shortcut: ess | author: JoramSoch | date: 2020-03-21, 21:57.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Residual sum of squares}]{Residual sum of squares} \label{sec:rss}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a multiple linear regression with independent observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) using measured data $y$ and design matrix $X$:
+
+\begin{equation} \label{eq:rss-mlr}
+y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2) \; .
+\end{equation}
+
+Then, the residual sum of squares (RSS) is defined as the sum of squared deviations of the measured signal from the fitted signal:
+
+\begin{equation} \label{eq:rss-rss}
+\mathrm{RSS} = \sum_{i=1}^n (y_i - \hat{y}_i)^2 \quad \text{where} \quad \hat{y} = X \hat{\beta}
+\end{equation}
+
+with estimated regression coefficients $\hat{\beta}$, e.g. obtained via ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Residual sum of squares"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-21; URL: \url{https://en.wikipedia.org/wiki/Residual_sum_of_squares}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D39 | shortcut: rss | author: JoramSoch | date: 2020-03-21, 22:03.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Total, explained and residual sum of squares}]{Total, explained and residual sum of squares} \label{sec:mlr-pss}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Assume a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
+
+\begin{equation} \label{eq:mlr-pss-mlr}
+y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2) \; ,
+\end{equation}
+
+and let $X$ contain a constant regressor $1_n$ modelling the intercept term. Then, it holds that
+
+\begin{equation} \label{eq:mlr-pss-pss}
+\mathrm{TSS} = \mathrm{ESS} + \mathrm{RSS}
+\end{equation}
+
+where $\mathrm{TSS}$ is the total sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:tss}), $\mathrm{ESS}$ is the explained sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ess}) and $\mathrm{RSS}$ is the residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}).
+
+
+\vspace{1em}
+\textbf{Proof:} The total sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:tss}) is given by
+
+\begin{equation} \label{eq:mlr-pss-TSS}
+\mathrm{TSS} = \sum_{i=1}^{n} (y_i - \bar{y})^2
+\end{equation}
+
+where $\bar{y}$ is the mean across all $y_i$. The $\mathrm{TSS}$ can be rewritten as
+
+\begin{equation} \label{eq:mlr-pss-TSS-s1}
+\begin{split}
+\mathrm{TSS} &= \sum_{i=1}^{n} (y_i - \bar{y} + \hat{y}_i - \hat{y}_i)^2 \\
+&= \sum_{i=1}^{n} \left( (\hat{y}_i - \bar{y}) + (y_i - \hat{y}_i) \right)^2 \\
+&= \sum_{i=1}^{n} \left( (\hat{y}_i - \bar{y}) + \hat{\varepsilon}_i \right)^2 \\
+&= \sum_{i=1}^{n} \left( (\hat{y}_i - \bar{y})^2 + 2 \, \hat{\varepsilon}_i (\hat{y}_i - \bar{y}) + \hat{\varepsilon}_i^2 \right) \\
+&= \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + \sum_{i=1}^{n} \hat{\varepsilon}_i^2 + 2 \sum_{i=1}^{n} \hat{\varepsilon}_i (\hat{y}_i - \bar{y}) \\
+&= \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + \sum_{i=1}^{n} \hat{\varepsilon}_i^2 + 2 \sum_{i=1}^{n} \hat{\varepsilon}_i (x_i \hat{\beta} - \bar{y}) \\
+&= \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + \sum_{i=1}^{n} \hat{\varepsilon}_i^2 + 2 \sum_{i=1}^{n} \hat{\varepsilon}_i \left( \sum_{j=1}^{p} x_{ij} \hat{\beta}_j \right) - 2 \sum_{i=1}^{n} \hat{\varepsilon}_i \, \bar{y} \\
+&= \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + \sum_{i=1}^{n} \hat{\varepsilon}_i^2 + 2 \sum_{j=1}^{p} \hat{\beta}_j \sum_{i=1}^{n} \hat{\varepsilon}_i x_{ij} - 2 \bar{y} \sum_{i=1}^{n} \hat{\varepsilon}_i \\
+\end{split}
+\end{equation}
+
+The fact that the design matrix includes a constant regressor ensures that
+
+\begin{equation} \label{eq:mlr-pss-e-est-sum}
+\sum_{i=1}^{n} \hat{\varepsilon}_i = \hat{\varepsilon}^\mathrm{T} 1_n = 0
+\end{equation}
+
+and because the residuals are orthogonal to the design matrix ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}), we have
+
+\begin{equation} \label{eq:mlr-pss-X-e-orth}
+\sum_{i=1}^{n} \hat{\varepsilon}_i x_{ij} = \hat{\varepsilon}^\mathrm{T} x_j = 0 \; .
+\end{equation}
+
+Applying \eqref{eq:mlr-pss-e-est-sum} and \eqref{eq:mlr-pss-X-e-orth} to \eqref{eq:mlr-pss-TSS-s1}, this becomes
+
+\begin{equation} \label{eq:mlr-pss-TSS-s2}
+\mathrm{TSS} = \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + \sum_{i=1}^{n} \hat{\varepsilon}_i^2
+\end{equation}
+
+and, with the definitions of explained ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ess}) and residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}), it is
+
+\begin{equation} \label{eq:mlr-pss-TSS-s3}
+\mathrm{TSS} = \mathrm{ESS} + \mathrm{RSS} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Partition of sums of squares"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-09; URL: \url{https://en.wikipedia.org/wiki/Partition_of_sums_of_squares#Partitioning_the_sum_of_squares_in_linear_regression}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P76 | shortcut: mlr-pss | author: JoramSoch | date: 2019-09-27, 07:18.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Estimation, projection and residual-forming matrix}]{Estimation, projection and residual-forming matrix} \label{sec:mlr-mat}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Assume a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
+
+\begin{equation} \label{eq:mlr-mat-mlr}
+y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2)
+\end{equation}
+
+and consider estimation using ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}). Then, the estimated parameters, fitted signal and residuals are given by
+
+\begin{equation} \label{eq:mlr-mat-mlr-est}
+\begin{split}
+\hat{\beta} &= E y \\
+\hat{y} &= P y \\
+\hat{\varepsilon} &= R y
+\end{split}
+\end{equation}
+
+where 
+
+\begin{equation} \label{eq:mlr-mat-mlr-mat}
+\begin{split}
+E &= (X^\mathrm{T} X)^{-1} X^\mathrm{T} \\
+P &= X (X^\mathrm{T} X)^{-1} X^\mathrm{T} \\
+R &= I_n - X (X^\mathrm{T} X)^{-1} X^\mathrm{T}
+\end{split}
+\end{equation}
+
+are the estimation matrix, projection matrix and residual-forming matrix and $n$ is the number of observations.
+
+
+\vspace{1em}
+\textbf{Proof:}
+
+1) Ordinary least squares parameter estimates of $\beta$ are defined as minimizing the residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss})
+
+\begin{equation} \label{eq:mlr-mat-ols}
+\hat{\beta} = \operatorname*{arg\,min}_{\beta} \left[ (y-X\beta)^\mathrm{T} (y-X\beta) \right]
+\end{equation}
+
+and the solution to this ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}) is given by
+
+\begin{equation} \label{eq:mlr-mat-b-est-qed}
+\begin{split}
+\hat{\beta} &= (X^\mathrm{T} X)^{-1} X^\mathrm{T} y \\
+&\overset{\eqref{eq:mlr-mat-mlr-mat}}{=} E y \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+2) The fitted signal is given by multiplying the design matrix with the estimated regression coefficients
+
+\begin{equation} \label{eq:mlr-mat-y-est}
+\hat{y} = X\hat{\beta}
+\end{equation}
+
+and using \eqref{eq:mlr-mat-b-est-qed}, this becomes
+
+\begin{equation} \label{eq:mlr-mat-y-est-qed}
+\begin{split}
+\hat{y} &= X (X^\mathrm{T} X)^{-1} X^\mathrm{T} y \\
+&\overset{\eqref{eq:mlr-mat-mlr-mat}}{=} P y \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+3) The residuals of the model are calculated by subtracting the fitted signal from the measured signal
+
+\begin{equation} \label{eq:mlr-mat-e-est}
+\hat{\varepsilon} = y - \hat{y}
+\end{equation}
+
+and using \eqref{eq:mlr-mat-y-est-qed}, this becomes
+
+\begin{equation} \label{eq:mlr-mat-e-est-qed}
+\begin{split}
+\hat{\varepsilon} &= y - X (X^\mathrm{T} X)^{-1} X^\mathrm{T} y \\
+&= (I_n - X (X^\mathrm{T} X)^{-1} X^\mathrm{T}) y \\
+&\overset{\eqref{eq:mlr-mat-mlr-mat}}{=} R y \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Stephan, Klaas Enno (2010): "The General Linear Model (GLM)"; in: \textit{Methods and models for fMRI data analysis in neuroeconomics}, Lecture 3, Slide 10; URL: \url{http://www.socialbehavior.uzh.ch/teaching/methodsspring10.html}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P75 | shortcut: mlr-mat | author: JoramSoch | date: 2020-03-09, 21:18.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Weighted least squares}]{Weighted least squares} \label{sec:mlr-wls}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with correlated observations
+
+\begin{equation} \label{eq:mlr-wls-MLR}
+y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; ,
+\end{equation}
+
+the parameters minimizing the weighted residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) are given by
+
+\begin{equation} \label{eq:mlr-wls-WLS}
+\hat{\beta} = (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} y \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Let there be an $n \times n$ square matrix $W$, such that
+
+\begin{equation} \label{eq:mlr-wls-W-def}
+W V W^\mathrm{T} = I_n \; .
+\end{equation}
+
+Since $V$ is a covariance matrix and thus symmetric, $W$ is also symmetric and can be expressed the matrix square root of the inverse of $V$:
+
+\begin{equation} \label{eq:mlr-wls-W-V}
+W W = V^{-1} \quad \Leftrightarrow \quad W = V^{-1/2} \; .
+\end{equation}
+
+Left-multiplying the linear regression equation \eqref{eq:mlr-wls-MLR} with $W$, the linear transformation theorem ($\rightarrow$ Definition "mvn-ltt") implies that
+
+\begin{equation} \label{eq:mlr-wls-MLR-W}
+Wy = WX\beta + W\varepsilon, \; W\varepsilon \sim \mathcal{N}(0, \sigma^2 W V W^T) \; .
+\end{equation}
+
+Applying \eqref{eq:mlr-wls-W-def}, we see that \eqref{eq:mlr-wls-MLR-W} is actually a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
+
+\begin{equation} \label{eq:mlr-wls-MLR-W-dev}
+\tilde{y} = \tilde{X}\beta + \tilde{\varepsilon}, \; \tilde{\varepsilon} \sim \mathcal{N}(0, \sigma^2 I_n)
+\end{equation}
+
+where $\tilde{y} = Wy$, $\tilde{X} = WX$ and $\tilde{\varepsilon} = W\varepsilon$, such that we can apply the ordinary least squares solution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}) giving
+
+\begin{equation} \label{eq:mlr-wls-beta-est}
+\begin{split}
+\hat{\beta} &= (\tilde{X}^\mathrm{T} \tilde{X})^{-1} \tilde{X}^\mathrm{T} \tilde{y} \\
+&= \left( (WX)^\mathrm{T} WX \right)^{-1} (WX)^\mathrm{T} Wy \\
+&= \left( X^\mathrm{T} W^\mathrm{T} W X \right)^{-1} X^\mathrm{T} W^\mathrm{T} W y \\
+&= \left( X^\mathrm{T} W W X \right)^{-1} X^\mathrm{T} W W y \\
+&\overset{\eqref{eq:mlr-wls-W-V}}{=} \left( X^\mathrm{T} V^{-1} X \right)^{-1} X^\mathrm{T} V^{-1} y \; .
+\end{split}
+\end{equation}
+
+which corresponds to the weighted least squares solution \eqref{eq:mlr-wls-WLS}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Stephan, Klaas Enno (2010): "The General Linear Model (GLM)"; in: \textit{Methods and models for fMRI data analysis in neuroeconomics}, Lecture 3, Slides 20/23; URL: \url{http://www.socialbehavior.uzh.ch/teaching/methodsspring10.html}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P77 | shortcut: mlr-wls | author: JoramSoch | date: 2020-03-11, 11:22.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:mlr-mle}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with correlated observations
+
+\begin{equation} \label{eq:mlr-mle-MLR}
+y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; ,
+\end{equation}
+
+the maximum likelihood estimates ($\rightarrow$ Definition "mle") of $\beta$ and $\sigma^2$ are given  by
+
+\begin{equation} \label{eq:mlr-mle-MLE-MLE}
+\begin{split}
+\hat{\beta} &= (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} y \\
+\hat{\sigma}^2 &= \frac{1}{n} (y-X\hat{\beta})^\mathrm{T} (y-X\hat{\beta}) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} With the probability density function of the multivariate normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}), the linear regression equation \eqref{eq:mlr-mle-MLR} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:mlr-mle-MLR-LF}
+\begin{split}
+p(y|\beta,\sigma^2) &= \mathcal{N}(y; X\beta, \sigma^2 V) \\
+&= \sqrt{\frac{1}{(2\pi)^n |\sigma^2 V|}} \cdot \exp\left[ -\frac{1}{2} (y - X\beta)^\mathrm{T} (\sigma^2 V)^{-1} (y - X\beta) \right]
+\end{split}
+\end{equation}
+
+and, using $\lvert \sigma^2 V \rvert = (\sigma^2)^n \lvert V \rvert$, the log-likelihood function ($\rightarrow$ Definition "llf")
+
+\begin{equation} \label{eq:mlr-mle-MLR-LL1}
+\begin{split}
+\mathrm{LL}(\beta,\sigma^2) = &\log p(y|\beta,\sigma^2) \\
+= &- \frac{n}{2} \log(2\pi) - \frac{n}{2} \log (\sigma^2) - \frac{1}{2} \log |V| \\
+&- \frac{1}{2 \sigma^2} (y - X\beta)^\mathrm{T} V^{-1} (y - X\beta) \; .
+\end{split}
+\end{equation}
+
+Substituting the precision matrix $P = V^{-1}$ into \eqref{eq:mlr-mle-MLR-LL1} to ease notation, we have:
+
+\begin{equation} \label{eq:mlr-mle-MLR-LL2}
+\begin{split}
+\mathrm{LL}(\beta,\sigma^2) = &- \frac{n}{2} \log(2\pi) - \frac{n}{2} \log(\sigma^2) - \frac{1}{2} \log(|V|) \\
+&- \frac{1}{2 \sigma^2} \left( y^\mathrm{T} P y - 2 \beta^\mathrm{T} X^\mathrm{T} P y + \beta^\mathrm{T} X^\mathrm{T} P X \beta \right) \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+The derivative of the log-likelihood function \eqref{eq:mlr-mle-MLR-LL2} with respect to $\beta$ is
+
+\begin{equation} \label{eq:mlr-mle-dLL-dbeta}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\beta,\sigma^2)}{\mathrm{d}\beta} &= \frac{\mathrm{d}}{\mathrm{d}\beta} \left( - \frac{1}{2 \sigma^2} \left( y^\mathrm{T} P y - 2 \beta^\mathrm{T} X^\mathrm{T} P y + \beta^\mathrm{T} X^\mathrm{T} P X \beta \right) \right) \\
+&= \frac{1}{2 \sigma^2} \, \frac{\mathrm{d}}{\mathrm{d}\beta} \left( 2 \beta^\mathrm{T} X^\mathrm{T} P y - \beta^\mathrm{T} X^\mathrm{T} P X \beta \right) \\
+&= \frac{1}{2 \sigma^2} \left( 2 X^\mathrm{T} P y - 2 X^\mathrm{T} P X \beta \right) \\
+&= \frac{1}{\sigma^2} \left( X^\mathrm{T} P y - X^\mathrm{T} P X \beta \right)
+\end{split}
+\end{equation}
+
+and setting this derivative to zero gives the MLE for $\beta$:
+
+\begin{equation} \label{eq:mlr-mle-beta-MLE}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\beta},\sigma^2)}{\mathrm{d}\beta} &= 0 \\
+0 &= \frac{1}{\sigma^2} \left( X^\mathrm{T} P y - X^\mathrm{T} P X \hat{\beta} \right) \\
+0 &= X^\mathrm{T} P y - X^\mathrm{T} P X \hat{\beta} \\
+X^\mathrm{T} P X \hat{\beta} &= X^\mathrm{T} P y \\
+\hat{\beta} &= \left( X^\mathrm{T} P X \right)^{-1} X^\mathrm{T} P y
+\end{split}
+\end{equation}
+
+\vspace{1em}
+The derivative of the log-likelihood function \eqref{eq:mlr-mle-MLR-LL1} at $\hat{\beta}$ with respect to $\sigma^2$ is
+
+\begin{equation} \label{eq:mlr-mle-dLL-ds2}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\beta},\sigma^2)}{\mathrm{d}\sigma^2} &= \frac{\mathrm{d}}{\mathrm{d}\sigma^2} \left( - \frac{n}{2} \log (\sigma^2) - \frac{1}{2 \sigma^2} (y - X\hat{\beta})^\mathrm{T} V^{-1} (y - X\hat{\beta}) \right) \\
+&= - \frac{n}{2} \, \frac{1}{\sigma^2} + \frac{1}{2 (\sigma^2)^2} (y - X\hat{\beta})^\mathrm{T} V^{-1} (y - X\hat{\beta}) \\
+&= - \frac{n}{2 \sigma^2} + \frac{1}{2 (\sigma^2)^2} (y - X\hat{\beta})^\mathrm{T} V^{-1} (y - X\hat{\beta})
+\end{split}
+\end{equation}
+
+and setting this derivative to zero gives the MLE for $\sigma^2$:
+
+\begin{equation} \label{eq:mlr-mle-s2-MLE}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\beta},\hat{\sigma}^2)}{\mathrm{d}\sigma^2} &= 0 \\
+0 &= - \frac{n}{2 \hat{\sigma}^2} + \frac{1}{2 (\hat{\sigma}^2)^2} (y - X\hat{\beta})^\mathrm{T} V^{-1} (y - X\hat{\beta}) \\
+\frac{n}{2 \hat{\sigma}^2} &= \frac{1}{2 (\hat{\sigma}^2)^2} (y - X\hat{\beta})^\mathrm{T} V^{-1} (y - X\hat{\beta}) \\
+\frac{2 (\hat{\sigma}^2)^2}{n} \cdot \frac{n}{2 \hat{\sigma}^2} &= \frac{2 (\hat{\sigma}^2)^2}{n} \cdot \frac{1}{2 (\hat{\sigma}^2)^2} (y - X\hat{\beta})^\mathrm{T} V^{-1} (y - X\hat{\beta}) \\
+\hat{\sigma}^2 &= \frac{1}{n} (y - X\hat{\beta})^\mathrm{T} V^{-1} (y - X\hat{\beta})
+\end{split}
+\end{equation}
+
+\vspace{1em}
+Together, \eqref{eq:mlr-mle-beta-MLE} and \eqref{eq:mlr-mle-s2-MLE} constitute the MLE for multiple linear regression.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P78 | shortcut: mlr-mle | author: JoramSoch | date: 2020-03-11, 12:27.
+\vspace{1em}
+
+
+
 \subsection{Bayesian linear regression}
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:blr-prior}
@@ -3844,7 +5149,7 @@ Since the quadratic form $y^\mathrm{T} y$ in \eqref{eq:mlr-ols2-RSS-dev} is posi
 y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
 \end{equation}
 
-be a linear regression model ($\rightarrow$ Definition "mlr") with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.
+be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.
 
 Then, the conjugate prior ($\rightarrow$ Definition "prior-conj") for this model is a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng})
 
@@ -3943,7 +5248,7 @@ and is therefore conjugate relative to the likelihood.
 y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
 \end{equation}
 
-be a linear regression model ($\rightarrow$ Definition "mlr") with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.  Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
+be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.  Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
 
 \begin{equation} \label{eq:blr-post-GLM-NG-prior}
 p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
@@ -3955,7 +5260,7 @@ Then, the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theo
 p(\beta,\tau|y) = \mathcal{N}(\beta; \mu_n, (\tau \Lambda_n)^{-1}) \cdot \mathrm{Gam}(\tau; a_n, b_n)
 \end{equation}
 
-and the posterior hyperparameters ($\rightarrow$ Definition "post-hyp") are given by
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
 
 \begin{equation} \label{eq:blr-post-GLM-NG-post-par}
 \begin{split}
@@ -4034,7 +5339,7 @@ p(y,\beta,\tau) = \; & \sqrt{\frac{\tau^{n+p}}{(2 \pi)^{n+p}} |P| |\Lambda_0|} \
 \end{split}
 \end{equation}
 
-with the posterior hyperparameters ($\rightarrow$ Definition "post-hyp")
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
 
 \begin{equation} \label{eq:blr-post-GLM-NG-post-beta-par}
 \begin{split}
@@ -4049,7 +5354,7 @@ Ergo, the joint likelihood is proportional to
 p(y,\beta,\tau) \propto \tau^{p/2} \cdot \exp\left[ -\frac{\tau}{2} (\beta-\mu_n)^\mathrm{T} \Lambda_n (\beta-\mu_n) \right] \cdot \tau^{a_n-1} \cdot \exp\left[ -b_n \tau \right]
 \end{equation}
 
-with the posterior hyperparameters ($\rightarrow$ Definition "post-hyp")
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
 
 \begin{equation} \label{eq:blr-post-GLM-NG-post-tau-par}
 \begin{split}
@@ -4095,7 +5400,7 @@ Together, \eqref{eq:blr-post-GLM-NG-post-beta} and \eqref{eq:blr-post-GLM-NG-pos
 m: \; y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
 \end{equation}
 
-be a linear regression model ($\rightarrow$ Definition "mlr") with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.  Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
+be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.  Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
 
 \begin{equation} \label{eq:blr-lme-GLM-NG-prior}
 p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
@@ -4110,7 +5415,7 @@ Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}
 \end{split}
 \end{equation}
 
-where the posterior hyperparameters ($\rightarrow$ Definition "post-hyp") are given by
+where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
 
 \begin{equation} \label{eq:blr-lme-GLM-NG-post-par}
 \begin{split}
@@ -4214,10 +5519,67 @@ Thus, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}
 
 \subsection{General linear model}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:glm}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $Y$ be an $n \times v$ matrix and let $X$ be an $n \times p$ matrix. Then, a statement asserting a linear mapping from $X$ to $Y$ with parameters $B$ and matrix-normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) errors $E$
+
+\begin{equation} \label{eq:glm-glm}
+Y = X B + E, \; E \sim \mathcal{MN}(0, V, \Sigma)
+\end{equation}
+
+is called a multivariate linear regression model or simply, "general linear model".
+
+\begin{itemize}
+
+\item $Y$ is called "data matrix", "set of dependent variables" or "measurements";
+
+\item $X$ is called "design matrix", "set of independent variables" or "predictors";
+
+\item $B$ are called "regression coefficients" or "weights";
+
+\item $E$ is called "noise matrix" or "error terms";
+
+\item $V$ is called "covariance across rows";
+
+\item $\Sigma$ is called "covariance across columns";
+
+\item $n$ is the number of observations;
+
+\item $v$ is the number of measurements;
+
+\item $p$ is the number of predictors.
+
+\end{itemize}
+
+When rows of $Y$ correspond to units of time, e.g. subsequent measurements, $V$ is called "temporal covariance". When columns of $Y$ correspond to units of space, e.g. measurement channels, $\Sigma$ is called "spatial covariance".
+
+When the covariance matrix $V$ is a scalar multiple of the $n \times n$ identity matrix, this is called a general linear model with independent and identically distributed (i.i.d.) observations:
+
+\begin{equation} \label{eq:glm-glm-iid}
+V = \lambda I_n \quad \Rightarrow \quad E \sim \mathcal{MN}(0, \lambda I_n, \Sigma) \quad \Rightarrow \quad \varepsilon_i \overset{\text{i.i.d.}}{\sim} \mathcal{N}(0, \lambda \Sigma) \; .
+\end{equation}
+
+Otherwise, it is called a general linear model with correlated observations.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "General linear model"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-21; URL: \url{https://en.wikipedia.org/wiki/General_linear_model}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D40 | shortcut: glm | author: JoramSoch | date: 2020-03-21, 22:24.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:glm-mle}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Given a general linear model ($\rightarrow$ Definition "glm") with matrix-normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) errors
+\textbf{Theorem:} Given a general linear model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:glm}) with matrix-normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) errors
 
 \begin{equation} \label{eq:glm-mle-GLM}
 Y = X B + E, \; E \sim \mathcal{MN}(0, V, \Sigma) \; ,
@@ -4331,10 +5693,33 @@ Together, \eqref{eq:glm-mle-B-MLE} and \eqref{eq:glm-mle-S-MLE} constitute the M
 
 \subsection{Poisson-distributed data}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:poiss-data}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Poisson-distributed data are defined as a set of observed counts $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$, independent and identically distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with rate $\lambda$:
+
+\begin{equation} \label{eq:poiss-data-Poiss}
+y_i \sim \mathrm{Poiss}(\lambda), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Poisson distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-22; URL: \url{https://en.wikipedia.org/wiki/Poisson_distribution#Parameter_estimation}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D41 | shortcut: poiss-data | author: JoramSoch | date: 2020-03-22, 22:50.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:poiss-mle}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a set of observed counts independent and identically distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with rate $\lambda$:
+\textbf{Theorem:} Let there be a Poisson-distributed data ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:poiss-data}) set $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$:
 
 \begin{equation} \label{eq:poiss-mle-Poiss}
 y_i \sim \mathrm{Poiss}(\lambda), \quad i = 1, \ldots, n \; .
@@ -4429,10 +5814,33 @@ This demonstrates that the estimate $\hat{\lambda} = \bar{y}$ maximizes the like
 
 \subsection{Poisson distribution with exposure values}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:poissexp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} A Poisson distribution with exposure values is defined as a set of observed counts $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$, independently distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with common rate $\lambda$ and a set of concurrent exposures $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$:
+
+\begin{equation} \label{eq:poissexp-Poiss-exp}
+y_i \sim \mathrm{Poiss}(\lambda x_i), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Gelman A, Carlin JB, Stern HS, Dunson DB, Vehtari A, Rubin DB (2014): "Other standard single-parameter models"; in: \textit{Bayesian Data Analysis}, 3rd edition, ch. 2.6, p. 45, eq. 2.14; URL: \url{http://www.stat.columbia.edu/~gelman/book/}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D42 | shortcut: poissexp | author: JoramSoch | date: 2020-03-22, 22:57.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:poissexp-prior}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a series of observed counts which are independently distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with common rate $\lambda$ and concurrent exposures $\left\lbrace x_1, \ldots, x_n \right\rbrace$:
+\textbf{Theorem:} Consider data $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ following a Poisson distribution with exposure values ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:poissexp}):
 
 \begin{equation} \label{eq:poissexp-prior-Poiss-exp}
 y_i \sim \mathrm{Poiss}(\lambda x_i), \quad i = 1, \ldots, n \; .
@@ -4520,7 +5928,7 @@ and is therefore conjugate relative to the likelihood.
 \subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:poissexp-post}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a series of observed counts which are independently distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with common rate $\lambda$ and concurrent exposures $\left\lbrace x_1, \ldots, x_n \right\rbrace$:
+\textbf{Theorem:} Consider data $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ following a Poisson distribution with exposure values ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:poissexp}):
 
 \begin{equation} \label{eq:poissexp-post-Poiss-exp}
 y_i \sim \mathrm{Poiss}(\lambda x_i), \quad i = 1, \ldots, n \; .
@@ -4538,7 +5946,7 @@ Then, the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theo
 p(\lambda|y) = \mathrm{Gam}(\lambda; a_n, b_n)
 \end{equation}
 
-and the posterior hyperparameters ($\rightarrow$ Definition "post-hyp") are given by
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
 
 \begin{equation} \label{eq:poissexp-post-Poiss-exp-post-par}
 \begin{split}
@@ -4625,7 +6033,7 @@ p(\lambda|y) = \frac{ {b_n}^{a_n}}{\Gamma(a_0)} \lambda^{a_n-1} \exp\left[-b_n \
 \subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:poissexp-lme}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a series of observed counts which are independently distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with common rate $\lambda$ and concurrent exposures $\left\lbrace x_1, \ldots, x_n \right\rbrace$:
+\textbf{Theorem:} Consider data $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ following a Poisson distribution with exposure values ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:poissexp}):
 
 \begin{equation} \label{eq:poissexp-lme-Poiss-exp}
 y_i \sim \mathrm{Poiss}(\lambda x_i), \quad i = 1, \ldots, n \; .
@@ -4646,7 +6054,7 @@ Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}
 \end{split}
 \end{equation}
 
-where the posterior hyperparameters ($\rightarrow$ Definition "post-hyp") are given by
+where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
 
 \begin{equation} \label{eq:poissexp-lme-Poiss-exp-post-par}
 \begin{split}
@@ -4871,14 +6279,14 @@ where $x_i$ are the predictors corresponding to the $i$-th observation $y_i$ and
 Then, the probability that $y_i = 1$ is given by
 
 \begin{equation} \label{eq:logreg-lonp-prob}
-Pr(y_i = 1) = \frac{1}{1 + b^{-(x_i \beta + \varepsilon_i)}}
+\mathrm{Pr}(y_i = 1) = \frac{1}{1 + b^{-(x_i \beta + \varepsilon_i)}}
 \end{equation}
 
 where $b$ is the base used to form the log-odds $l_i$.
 
 
 \vspace{1em}
-\textbf{Proof:} Let us denote $Pr(y_i = 1)$ as $p_i$. Then, the log-odds are
+\textbf{Proof:} Let us denote $\mathrm{Pr}(y_i = 1)$ as $p_i$. Then, the log-odds are
 
 \begin{equation} \label{eq:logreg-lonp-lodds}
 l_i = \log_b \frac{p_i}{1-p_i}
@@ -4922,7 +6330,7 @@ which proves the identity given by \eqref{eq:logreg-lonp-prob}.
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:bin-prior}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $y$ be the number of successes resulting from $n$ independent trials with unknown success probability $p$, such that $y$ follows a binomial distribution ($\rightarrow$ Definition "bin"):
+\textbf{Theorem:} Let $y$ be the number of successes resulting from $n$ independent trials with unknown success probability $p$, such that $y$ follows a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
 
 \begin{equation} \label{eq:bin-prior-Bin}
 y \sim \mathrm{Bin}(n,p) \; .
@@ -4985,7 +6393,7 @@ and is therefore conjugate relative to the likelihood.
 \subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:bin-post}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $y$ be the number of successes resulting from $n$ independent trials with unknown success probability $p$, such that $y$ follows a binomial distribution ($\rightarrow$ Definition "bin"):
+\textbf{Theorem:} Let $y$ be the number of successes resulting from $n$ independent trials with unknown success probability $p$, such that $y$ follows a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
 
 \begin{equation} \label{eq:bin-post-Bin}
 y \sim \mathrm{Bin}(n,p) \; .
@@ -5003,7 +6411,7 @@ Then, the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theo
 \mathrm{p}(p|y) = \mathrm{Bet}(p; \alpha_n, \beta_n) \; .
 \end{equation}
 
-and the posterior hyperparameters ($\rightarrow$ Definition "post-hyp") are given by
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
 
 \begin{equation} \label{eq:bin-post-Bin-post-par}
 \begin{split}
@@ -5065,7 +6473,7 @@ which, when normalized to one, results in the probability density function of th
 \subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:bin-lme}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $y$ be the number of successes resulting from $n$ independent trials with unknown success probability $p$, such that $y$ follows a binomial distribution ($\rightarrow$ Definition "bin"):
+\textbf{Theorem:} Let $y$ be the number of successes resulting from $n$ independent trials with unknown success probability $p$, such that $y$ follows a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
 
 \begin{equation} \label{eq:bin-lme-Bin}
 y \sim \mathrm{Bin}(n,p) \; .
@@ -5080,10 +6488,13 @@ Moreover, assume a beta prior distribution ($\rightarrow$ Proof \ref{sec:Statist
 Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) for this model is
 
 \begin{equation} \label{eq:bin-lme-Bin-LME}
-\log \mathrm{p}(y|m) = \log {n \choose y} + \log B(\alpha_n,\beta_n) - \log B(\alpha_0,\beta_0)
+\begin{split}
+\log \mathrm{p}(y|m) = \log \Gamma(n+1) &- \log \Gamma(k+1) - \log \Gamma(n-k+1) \\
+&+ \log B(\alpha_n,\beta_n) - \log B(\alpha_0,\beta_0) \; .
+\end{split}
 \end{equation}
 
-where the posterior hyperparameters ($\rightarrow$ Definition "post-hyp") are given by
+where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
 
 \begin{equation} \label{eq:bin-lme-Bin-post-par}
 \begin{split}
@@ -5112,7 +6523,7 @@ Combining the likelihood function \eqref{eq:bin-lme-Bin-LF} with the prior distr
 
 Note that the model evidence is the marginal density of the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}):
 
-\begin{equation} \label{eq:bin-lme-Bin-ME}
+\begin{equation} \label{eq:bin-lme-Bin-ME-s1}
 \mathrm{p}(y) = \int \mathrm{p}(y,p) \, \mathrm{d}p \; .
 \end{equation}
 
@@ -5124,7 +6535,7 @@ Setting $\alpha_n = \alpha_0 + y$ and $\beta_n = \beta_0 + (n-y)$, the joint lik
 
 Using the probability density function of the beta distribution ($\rightarrow$ Proof "beta-pdf"), $p$ can now be integrated out easily
 
-\begin{equation} \label{eq:bin-lme-Bin-ME-qed}
+\begin{equation} \label{eq:bin-lme-Bin-ME-s2}
 \begin{split}
 \mathrm{p}(y) &= \int {n \choose y} \, \frac{1}{B(\alpha_0,\beta_0)} \, \frac{B(\alpha_n,\beta_n)}{1} \, \frac{1}{B(\alpha_n,\beta_n)} \, p^{\alpha_n-1} \, (1-p)^{\beta_n-1} \, \mathrm{d}p \\
 &= {n \choose y} \, \frac{B(\alpha_n,\beta_n)}{B(\alpha_0,\beta_0)} \int \mathrm{Bet}(p; \alpha_n, \beta_n) \, \mathrm{d}p \\
@@ -5132,10 +6543,31 @@ Using the probability density function of the beta distribution ($\rightarrow$ P
 \end{split}
 \end{equation}
 
-such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) is shown to be
+such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) (LME) is shown to be
 
-\begin{equation} \label{eq:bin-lme-Bin-LME-qed}
+\begin{equation} \label{eq:bin-lme-Bin-LME-s1}
 \log \mathrm{p}(y|m) = \log {n \choose y} + \log B(\alpha_n,\beta_n) - \log B(\alpha_0,\beta_0) \; .
+\end{equation}
+
+With the definition of the binomial coefficient
+
+\begin{equation} \label{eq:bin-lme-bin-coeff}
+{n \choose k} = \frac{n!}{k! \, (n-k)!}
+\end{equation}
+
+and the definition of the gamma function
+
+\begin{equation} \label{eq:bin-lme-gam-fct}
+\Gamma(n) = (n-1)! \; ,
+\end{equation}
+
+the LME finally becomes
+
+\begin{equation} \label{eq:bin-lme-Bin-LME-s2}
+\begin{split}
+\log \mathrm{p}(y|m) = \log \Gamma(n+1) &- \log \Gamma(k+1) - \log \Gamma(n-k+1) \\
+&+ \log B(\alpha_n,\beta_n) - \log B(\alpha_0,\beta_0) \; .
+\end{split}
 \end{equation}
 
 
@@ -5148,6 +6580,263 @@ such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Select
 
 \vspace{1em}
 \textbf{Metadata:} ID: P31 | shortcut: bin-lme | author: JoramSoch | date: 2020-01-24, 00:44.
+\vspace{1em}
+
+
+
+\subsection{Multinomial observations}
+
+\subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:mult-prior}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $y = [y_1, \ldots, y_k]$ be the number of observations in $k$ categories resulting from $n$ independent trials with unknown category probabilities $p = [p_1, \ldots, p_k]$, such that $y$ follows a multinomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}):
+
+\begin{equation} \label{eq:mult-prior-Mult}
+y \sim \mathrm{Mult}(n,p) \; .
+\end{equation}
+
+Then, the conjugate prior ($\rightarrow$ Definition "prior-conj") for the model parameter $p$ is a Dirichlet distribution ($\rightarrow$ Definition "dir"):
+
+\begin{equation} \label{eq:mult-prior-Dir}
+\mathrm{p}(p) = \mathrm{Dir}(p; \alpha_0) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} With the probability mass function of the multinomial distribution ($\rightarrow$ Proof "mult-pmf"), the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) implied by \eqref{eq:mult-prior-Mult} is given by
+
+\begin{equation} \label{eq:mult-prior-Mult-LF}
+\mathrm{p}(y|p) = {n \choose {y_1, \ldots, y_k}} \prod_{j=1}^{k} {p_j}^{y_j} \; .
+\end{equation}
+
+In other words, the likelihood function is proportional to a product of powers of the entries of the vector $p$:
+
+\begin{equation} \label{eq:mult-prior-Mult-LF-prop}
+\mathrm{p}(y|p) \propto \prod_{j=1}^{k} {p_j}^{y_j} \; .
+\end{equation}
+
+The same is true for a Dirichlet distribution over $p$
+
+\begin{equation} \label{eq:mult-prior-Mult-prior-s1}
+\mathrm{p}(p) = \mathrm{Dir}(p; \alpha_0)
+\end{equation}
+
+the probability density function of which ($\rightarrow$ Proof "dir-pdf")
+
+\begin{equation} \label{eq:mult-prior-Mult-prior-s2}
+\mathrm{p}(p) = \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right)}{\prod_{j=1}^k \Gamma(\alpha_{0j})} \prod_{j=1}^{k} {p_j}^{\alpha_{0j}-1}
+\end{equation}
+
+exhibits the same proportionality
+
+\begin{equation} \label{eq:mult-prior-Mult-prior-s3}
+\mathrm{p}(p) \propto \prod_{j=1}^{k} {p_j}^{\alpha_{0j}-1}
+\end{equation}
+
+and is therefore conjugate relative to the likelihood.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Dirichlet distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-11; URL: \url{https://en.wikipedia.org/wiki/Dirichlet_distribution#Conjugate_to_categorical/multinomial}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P79 | shortcut: mult-prior | author: JoramSoch | date: 2020-11-03, 14:15.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:mult-post}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $y = [y_1, \ldots, y_k]$ be the number of observations in $k$ categories resulting from $n$ independent trials with unknown category probabilities $p = [p_1, \ldots, p_k]$, such that $y$ follows a multinomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}):
+
+\begin{equation} \label{eq:mult-post-Mult}
+y \sim \mathrm{Mult}(n,p) \; .
+\end{equation}
+
+Moreover, assume a Dirichlet prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mult-prior}) over the model parameter $p$:
+
+\begin{equation} \label{eq:mult-post-Mult-prior}
+\mathrm{p}(p) = \mathrm{Dir}(p; \alpha_0) \; .
+\end{equation}
+
+Then, the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) is also a Dirichlet distribution ($\rightarrow$ Definition "dir")
+
+\begin{equation} \label{eq:mult-post-Mult-post}
+\mathrm{p}(p|y) = \mathrm{Dir}(p; \alpha_n) \; .
+\end{equation}
+
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:mult-post-Mult-post-par}
+\alpha_{nj} = \alpha_{0j} + y_j, \; j = 1,\ldots,k \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} With the probability mass function of the multinomial distribution ($\rightarrow$ Proof "mult-pmf"), the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) implied by \eqref{eq:mult-post-Mult} is given by
+
+\begin{equation} \label{eq:mult-post-Mult-LF}
+\mathrm{p}(y|p) = {n \choose {y_1, \ldots, y_k}} \prod_{j=1}^{k} {p_j}^{y_j} \; .
+\end{equation}
+
+Combining the likelihood function \eqref{eq:mult-post-Mult-LF} with the prior distribution \eqref{eq:mult-post-Mult-prior}, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) of the model is given by
+
+\begin{equation} \label{eq:mult-post-Mult-JL}
+\begin{split}
+\mathrm{p}(y,p) &= \mathrm{p}(y|p) \, \mathrm{p}(p) \\
+&= {n \choose {y_1, \ldots, y_k}} \prod_{j=1}^{k} {p_j}^{y_j} \cdot \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right)}{\prod_{j=1}^k \Gamma(\alpha_{0j})} \prod_{j=1}^{k} {p_j}^{\alpha_{0j}-1} \\
+&= \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right)}{\prod_{j=1}^k \Gamma(\alpha_{0j})} {n \choose {y_1, \ldots, y_k}} \prod_{j=1}^{k} {p_j}^{\alpha_{0j}+y_j-1} \; .
+\end{split}
+\end{equation}
+
+Note that the posterior distribution is proportional to the joint likelihood ($\rightarrow$ Proof "post-jl"):
+
+\begin{equation} \label{eq:mult-post-Mult-post-s1}
+\mathrm{p}(p|y) \propto \mathrm{p}(y,p) \; .
+\end{equation}
+
+Setting $\alpha_{nj} = \alpha_{0j} + y_j$, the posterior distribution is therefore proportional to
+
+\begin{equation} \label{eq:mult-post-Mult-post-s2}
+\mathrm{p}(p|y) \propto \prod_{j=1}^{k} {p_j}^{\alpha_{nj}-1}
+\end{equation}
+
+which, when normalized to one, results in the probability density function of the Dirichlet distribution ($\rightarrow$ Proof "dir-pdf"):
+
+\begin{equation} \label{eq:mult-post-Mult-post-qed}
+\mathrm{p}(p|y) = \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right)}{\prod_{j=1}^k \Gamma(\alpha_{nj})} \prod_{j=1}^{k} {p_j}^{\alpha_{nj}-1} = \mathrm{Dir}(p; \alpha_n) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Dirichlet distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-11; URL: \url{https://en.wikipedia.org/wiki/Dirichlet_distribution#Conjugate_to_categorical/multinomial}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P80 | shortcut: mult-post | author: JoramSoch | date: 2020-03-11, 14:40.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:mult-lme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $y = [y_1, \ldots, y_k]$ be the number of observations in $k$ categories resulting from $n$ independent trials with unknown category probabilities $p = [p_1, \ldots, p_k]$, such that $y$ follows a multinomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}):
+
+\begin{equation} \label{eq:mult-lme-Mult}
+y \sim \mathrm{Mult}(n,p) \; .
+\end{equation}
+
+Moreover, assume a Dirichlet prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mult-prior}) over the model parameter $p$:
+
+\begin{equation} \label{eq:mult-lme-Mult-prior}
+\mathrm{p}(p) = \mathrm{Dir}(p; \alpha_0) \; .
+\end{equation}
+
+Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) for this model is
+
+\begin{equation} \label{eq:mult-lme-Mult-LME}
+\begin{split}
+\log \mathrm{p}(y|m) &= \log \Gamma(n+1) - \sum_{j=1}^{k} \log \Gamma(k_j+1) \\
+&+ \log \Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right) - \log \Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right) \\
+&+ \sum_{j=1}^k \log \Gamma(\alpha_{nj}) - \sum_{j=1}^k \log \Gamma(\alpha_{0j}) \; .
+\end{split}
+\end{equation}
+
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:mult-lme-Mult-post-par}
+\alpha_{nj} = \alpha_{0j} + y_j, \; j = 1,\ldots,k \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} With the probability mass function of the multinomial distribution ($\rightarrow$ Proof "mult-pmf"), the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) implied by \eqref{eq:mult-lme-Mult} is given by
+
+\begin{equation} \label{eq:mult-lme-Mult-LF}
+\mathrm{p}(y|p) = {n \choose {y_1, \ldots, y_k}} \prod_{j=1}^{k} {p_j}^{y_j} \; .
+\end{equation}
+
+Combining the likelihood function \eqref{eq:mult-lme-Mult-LF} with the prior distribution \eqref{eq:mult-lme-Mult-prior}, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) of the model is given by
+
+\begin{equation} \label{eq:mult-lme-Mult-JL}
+\begin{split}
+\mathrm{p}(y,p) &= \mathrm{p}(y|p) \, \mathrm{p}(p) \\
+&= {n \choose {y_1, \ldots, y_k}} \prod_{j=1}^{k} {p_j}^{y_j} \cdot \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right)}{\prod_{j=1}^k \Gamma(\alpha_{0j})} \prod_{j=1}^{k} {p_j}^{\alpha_{0j}-1} \\
+&= {n \choose {y_1, \ldots, y_k}} \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right)}{\prod_{j=1}^k \Gamma(\alpha_{0j})} \prod_{j=1}^{k} {p_j}^{\alpha_{0j}+y_j-1} \; .
+\end{split}
+\end{equation}
+
+Note that the model evidence is the marginal density of the joint likelihood:
+
+\begin{equation} \label{eq:mult-lme-Mult-ME-s1}
+\mathrm{p}(y) = \int \mathrm{p}(y,p) \, \mathrm{d}p \; .
+\end{equation}
+
+Setting $\alpha_{nj} = \alpha_{0j} + y_j$, the joint likelihood can also be written as
+
+\begin{equation} \label{eq:mult-lme-Mult-JL-s2}
+\mathrm{p}(y,p) = {n \choose {y_1, \ldots, y_k}} \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right)}{\prod_{j=1}^k \Gamma(\alpha_{0j})} \, \frac{\prod_{j=1}^k \Gamma(\alpha_{nj})} {\Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right)} \, \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right)}{\prod_{j=1}^k \Gamma(\alpha_{nj})} \prod_{j=1}^{k} {p_j}^{\alpha_{nj}-1} \; .
+\end{equation}
+
+Using the probability density function of the Dirichlet distribution ($\rightarrow$ Proof "dir-pdf"), $p$ can now be integrated out easily
+
+\begin{equation} \label{eq:mult-lme-Mult-ME-s2}
+\begin{split}
+\mathrm{p}(y) &= \int {n \choose {y_1, \ldots, y_k}} \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right)}{\prod_{j=1}^k \Gamma(\alpha_{0j})} \, \frac{\prod_{j=1}^k \Gamma(\alpha_{nj})}{\Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right)} \, \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right)}{\prod_{j=1}^k \Gamma(\alpha_{nj})} \prod_{j=1}^{k} {p_j}^{\alpha_{nj}-1} \, \mathrm{d}p \\
+&= {n \choose {y_1, \ldots, y_k}} \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right)}{\prod_{j=1}^k \Gamma(\alpha_{0j})} \, \frac{\prod_{j=1}^k \Gamma(\alpha_{nj})}{\Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right)} \int \mathrm{Dir}(p; \alpha_n) \, \mathrm{d}p \\
+&= {n \choose {y_1, \ldots, y_k}} \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right)}{\Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right)} \, \frac{\prod_{j=1}^k \Gamma(\alpha_{nj})}{\prod_{j=1}^k \Gamma(\alpha_{0j})} \; ,
+\end{split}
+\end{equation}
+
+such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) (LME) is shown to be
+
+\begin{equation} \label{eq:mult-lme-Mult-LME-s1}
+\begin{split}
+\log \mathrm{p}(y|m) = \log {n \choose {y_1, \ldots, y_k}} &+ \log \Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right) - \log \Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right) \\
+&+ \sum_{j=1}^k \log \Gamma(\alpha_{nj}) - \sum_{j=1}^k \log \Gamma(\alpha_{0j}) \; .
+\end{split}
+\end{equation}
+
+With the definition of the multinomial coefficient
+
+\begin{equation} \label{eq:mult-lme-mult-coeff}
+{n \choose {k_1, \ldots, k_m}} = \frac{n!}{k_1! \cdot \ldots \cdot k_m!}
+\end{equation}
+
+and the definition of the gamma function
+
+\begin{equation} \label{eq:mult-lme-gam-fct}
+\Gamma(n) = (n-1)! \; ,
+\end{equation}
+
+the LME finally becomes
+
+\begin{equation} \label{eq:mult-lme-Mult-LME-s2}
+\begin{split}
+\log \mathrm{p}(y|m) &= \log \Gamma(n+1) - \sum_{j=1}^{k} \log \Gamma(k_j+1) \\
+&+ \log \Gamma \left( \sum_{j=1}^{k} \alpha_{0j} \right) - \log \Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right) \\
+&+ \sum_{j=1}^k \log \Gamma(\alpha_{nj}) - \sum_{j=1}^k \log \Gamma(\alpha_{0j}) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P81 | shortcut: mult-lme | author: JoramSoch | date: 2020-03-11, 15:17.
 \vspace{1em}
 
 
@@ -5165,7 +6854,7 @@ such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Select
 \subsubsection[\textit{Definition}]{Definition} \label{sec:resvar}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition "mlr")
+\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr})
 
 \begin{equation} \label{eq:resvar-mlr}
 y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
@@ -5227,7 +6916,7 @@ more precisely:
 \vspace{1em}
 \textbf{Proof:}
 
-1) This is equivalent to the maximum likelihood estimator for the univariate Gaussian with unknown variance ($\rightarrow$ Proof "ug-mle") and a special case of the maximum likelihood estimator for multiple linear regression ($\rightarrow$ Proof "mlr-mle") in which $y = x$, $X = 1_n$ and $\hat{\beta} = \bar{x}$:
+1) This is equivalent to the maximum likelihood estimator for the univariate Gaussian with unknown variance ($\rightarrow$ Proof "ug-mle") and a special case of the maximum likelihood estimator for multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle}) in which $y = x$, $X = 1_n$ and $\hat{\beta} = \bar{x}$:
 
 \begin{equation} \label{eq:resvar-bias-resvar-mle-qed}
 \begin{split}
@@ -5395,7 +7084,7 @@ such that an unbiased estimator ($\rightarrow$ Definition "est-unb") can be cons
 \subsubsection[\textit{Definition}]{Definition} \label{sec:rsq}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition "mlr") with independent ($\rightarrow$ Definition "ind") observations
+\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent ($\rightarrow$ Definition "ind") observations
 
 \begin{equation} \label{eq:rsq-mlr}
 y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2)
@@ -5403,7 +7092,7 @@ y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \math
 
 with measured data $y$, known design matrix $X$ as well as unknown regression coefficients $\beta$ and noise variance $\sigma^2$.
 
-Then, the proportion of the variance of the dependent variable $y$ ("total variance ($\rightarrow$ Definition "tss")") that can be predicted from the independent variables $X$ ("explained variance ($\rightarrow$ Definition "ess")") is called "coefficient of determination", "R-squared" or $R^2$.
+Then, the proportion of the variance of the dependent variable $y$ ("total variance ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:tss})") that can be predicted from the independent variables $X$ ("explained variance ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ess})") is called "coefficient of determination", "R-squared" or $R^2$.
 
 
 \vspace{1em}
@@ -5422,7 +7111,7 @@ Then, the proportion of the variance of the dependent variable $y$ ("total varia
 \subsubsection[\textbf{Derivation of R² and adjusted R²}]{Derivation of R² and adjusted R²} \label{sec:rsq-der}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition "mlr")
+\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr})
 
 \begin{equation} \label{eq:rsq-der-rsq-mlr}
 y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2)
@@ -5442,7 +7131,7 @@ R^2 = 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}}
 R^2_{\mathrm{adj}} = 1 - \frac{\mathrm{RSS}/(n-p)}{\mathrm{TSS}/(n-1)}
 \end{equation}
 
-where the residual ($\rightarrow$ Definition "rss") and total sum of squares ($\rightarrow$ Definition "tss") are
+where the residual ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) and total sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:tss}) are
 
 \begin{equation} \label{eq:rsq-der-SS}
 \begin{split}
@@ -5458,7 +7147,7 @@ where $X$ is the $n \times p$ design matrix and $\hat{\beta}$ are the ordinary l
 \textbf{Proof:} The coefficient of determination $R^2$ is defined as ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:rsq}) the proportion of the variance explained by the independent variables, relative to the total variance in the data.
 
 \vspace{1em}
-1) If we define the explained sum of squares ($\rightarrow$ Definition "ess") as
+1) If we define the explained sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ess}) as
 
 \begin{equation} \label{eq:rsq-der-ESS}
 \mathrm{ESS} = \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 \; ,
@@ -5476,7 +7165,7 @@ which is equal to
 R^2 = \frac{\mathrm{TSS}-\mathrm{RSS}}{\mathrm{TSS}} = 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}} \; ,
 \end{equation}
 
-because ($\rightarrow$ Proof "mlr-pss") $\mathrm{TSS} = \mathrm{ESS} + \mathrm{RSS}$.
+because ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-pss}) $\mathrm{TSS} = \mathrm{ESS} + \mathrm{RSS}$.
 
 \vspace{1em}
 2) Using \eqref{eq:rsq-der-SS}, the coefficient of determination can be also written as:
@@ -5513,7 +7202,7 @@ This gives the adjusted $R^2$ which adjusts $R^2$ for the number of explanatory 
 \subsubsection[\textbf{Relationship to maximum log-likelihood}]{Relationship to maximum log-likelihood} \label{sec:rsq-mll}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition "mlr") with independent observations
+\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
 
 \begin{equation} \label{eq:rsq-mll-MLR}
 y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2) \; ,
@@ -5529,13 +7218,13 @@ where $n$ is the number of observations and $\Delta\mathrm{MLL}$ is the differen
 
 
 \vspace{1em}
-\textbf{Proof:} First, we express the maximum log-likelihood ($\rightarrow$ Definition "mll") (MLL) of a linear regression model in terms of its residual sum of squares ($\rightarrow$ Definition "rss") (RSS). The model in \eqref{eq:rsq-mll-MLR} implies the following log-likelihood function ($\rightarrow$ Definition "llf")
+\textbf{Proof:} First, we express the maximum log-likelihood ($\rightarrow$ Definition "mll") (MLL) of a linear regression model in terms of its residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) (RSS). The model in \eqref{eq:rsq-mll-MLR} implies the following log-likelihood function ($\rightarrow$ Definition "llf")
 
 \begin{equation} \label{eq:rsq-mll-MLR-LL}
 \mathrm{LL}(\beta,\sigma^2) = \log p(y|\beta,\sigma^2) = - \frac{n}{2} \log(2\pi\sigma^2) - \frac{1}{2\sigma^2} (y - X\beta)^\mathrm{T} (y - X\beta) \; ,
 \end{equation}
 
-such that maximum likelihood estimates are ($\rightarrow$ Proof "mlr-mle")
+such that maximum likelihood estimates are ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle})
 
 \begin{equation} \label{eq:rsq-mll-MLR-MLE-beta}
 \hat{\beta} = (X^\mathrm{T} X)^{-1} X^\mathrm{T} y
@@ -5545,7 +7234,7 @@ such that maximum likelihood estimates are ($\rightarrow$ Proof "mlr-mle")
 \hat{\sigma}^2 = \frac{1}{n} (y - X\hat{\beta})^\mathrm{T} (y - X\hat{\beta})
 \end{equation}
 
-and the residual sum of squares ($\rightarrow$ Definition "rss") is
+and the residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) is
 
 \begin{equation} \label{eq:rsq-mll-RSS}
 \mathrm{RSS} = \sum_{i=1}^n \hat{\varepsilon}_i = \hat{\varepsilon}^\mathrm{T} \hat{\varepsilon} = (y - X\hat{\beta})^\mathrm{T} (y - X\hat{\beta}) = n \cdot \hat{\sigma}^2 \; .
@@ -5572,7 +7261,7 @@ m_1: \; X_1 &= X
 \end{split}
 \end{equation}
 
-For $m_1$, the residual sum of squares is given by \eqref{eq:rsq-mll-RSS}; and for $m_0$, the residual sum of squares is equal to the total sum of squares ($\rightarrow$ Definition "tss"):
+For $m_1$, the residual sum of squares is given by \eqref{eq:rsq-mll-RSS}; and for $m_0$, the residual sum of squares is equal to the total sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:tss}):
 
 \begin{equation} \label{eq:rsq-mll-TSS}
 \mathrm{TSS} = \sum_{i=1}^n (y_i - \bar{y})^2 \; .
@@ -5624,7 +7313,7 @@ which proves the identity given above.
 \subsubsection[\textit{Definition}]{Definition} \label{sec:snr}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition "mlr") with independent ($\rightarrow$ Definition "ind") observations
+\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent ($\rightarrow$ Definition "ind") observations
 
 \begin{equation} \label{eq:snr-mlr}
 y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2)
