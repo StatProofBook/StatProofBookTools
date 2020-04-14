@@ -1,0 +1,410 @@
+-> Pages which are referenced but non-existing (2020-04-14, 07:25):
+   - Definition "beta" ("/D/beta.md"), referenced as
+     - "beta distribution", referenced in
+       - "/P/beta-mom.md"
+       - "/P/bin-post.md"
+       - "/P/bin-prior.md"
+   - Definition "bf" ("/D/bf.md"), referenced as
+     - "Bayes factor", referenced in
+       - "/P/bayes-rule.md"
+       - "/P/lbf-lme.md"
+       - "/P/pmp-bf.md"
+       - "/P/pmp-lbf.md"
+   - Definition "bias" ("/D/bias.md"), referenced as
+     - "bias", referenced in
+       - "/P/mse-bnv.md"
+   - Definition "cat-pmf" ("/D/cat-pmf.md"), referenced as
+     - "outcome of a categorical distribution", referenced in
+       - "/P/cat-mean.md"
+   - Definition "chi2" ("/D/chi2.md"), referenced as
+     - "chi-squared distribution", referenced in
+       - "/P/ci-wilks.md"
+   - Definition "ci" ("/D/ci.md"), referenced as
+     - "confidence interval", referenced in
+       - "/P/ci-wilks.md"
+   - Definition "cp" ("/D/cp.md"), referenced as
+     - "conditional probabilities", referenced in
+       - "/P/bayes-rule.md"
+   - Definition "dir" ("/D/dir.md"), referenced as
+     - "Dirichlet distribution", referenced in
+       - "/P/mult-post.md"
+       - "/P/mult-prior.md"
+   - Definition "dist-cond" ("/D/dist-cond.md"), referenced as
+     - "conditional distribution", referenced in
+       - "/P/mvn-cond.md"
+   - Definition "dist-joint" ("/D/dist-joint.md"), referenced as
+     - "joint distribution", referenced in
+       - "/P/mvn-cond.md"
+   - Definition "dist-marg" ("/D/dist-marg.md"), referenced as
+     - "marginal distribution", referenced in
+       - "/P/mvn-cond.md"
+       - "/P/mvn-marg.md"
+       - "/P/ng-marg.md"
+   - Definition "dof" ("/D/dof.md"), referenced as
+     - "degree of freedom", referenced in
+       - "/P/ci-wilks.md"
+     - "degrees of freedom", referenced in
+       - "/P/rsq-der.md"
+   - Definition "est-unb" ("/D/est-unb.md"), referenced as
+     - "bias", referenced in
+       - "/P/resvar-bias.md"
+     - "biased estimator", referenced in
+       - "/P/resvar-bias.md"
+       - "/P/resvar-unb.md"
+     - "unbiased estimator", referenced in
+       - "/P/resvar-unb.md"
+   - Definition "est" ("/D/est.md"), referenced as
+     - "parameter estimates", referenced in
+       - "/P/snr-rsq.md"
+   - Definition "exp-cdf" ("/D/exp-cdf.md"), referenced as
+     - "cumulative distribution function of the exponential distribution", referenced in
+       - "/P/exp-med.md"
+   - Definition "iid" ("/D/iid.md"), referenced as
+     - "independent and identically distributed", referenced in
+       - "/P/beta-mom.md"
+   - Definition "ind" ("/D/ind.md"), referenced as
+     - "dependent", referenced in
+       - "/P/mean-mult.md"
+     - "independent", referenced in
+       - "/D/bin.md"
+       - "/D/mult.md"
+       - "/D/rsq.md"
+       - "/D/snr.md"
+       - "/P/mean-mult.md"
+       - "/P/poiss-mle.md"
+       - "/P/poissexp-lme.md"
+       - "/P/poissexp-post.md"
+       - "/P/poissexp-prior.md"
+       - "/P/snr-rsq.md"
+   - Definition "kl" ("/D/kl.md"), referenced as
+     - "KL divergence for a continuous random variable", referenced in
+       - "/P/ng-kl.md"
+     - "Kullback-Leibler divergence", referenced in
+       - "/P/lme-anc.md"
+       - "/P/ng-kl.md"
+   - Definition "lbf" ("/D/lbf.md"), referenced as
+     - "log Bayes factor", referenced in
+       - "/P/lbf-lme.md"
+       - "/P/pmp-lbf.md"
+   - Definition "led-pmp" ("/D/led-pmp.md"), referenced as
+     - "posterior model probabilies", referenced in
+       - "/P/bic-der.md"
+   - Definition "lfe" ("/D/lfe.md"), referenced as
+     - "log family evidences", referenced in
+       - "/P/lfe-lme.md"
+   - Definition "llf" ("/D/llf.md"), referenced as
+     - "log-likelihood", referenced in
+       - "/D/dic.md"
+     - "log-likelihood function", referenced in
+       - "/P/bic-der.md"
+       - "/P/glm-mle.md"
+       - "/P/mlr-mle.md"
+       - "/P/poiss-mle.md"
+       - "/P/rsq-mll.md"
+   - Definition "llr" ("/D/llr.md"), referenced as
+     - "log-likelihood ratio", referenced in
+       - "/P/ci-wilks.md"
+   - Definition "logreg" ("/D/logreg.md"), referenced as
+     - "logistic regression model", referenced in
+       - "/P/logreg-lonp.md"
+   - Definition "lr" ("/D/lr.md"), referenced as
+     - "likelihood ratio", referenced in
+       - "/P/ci-wilks.md"
+   - Definition "med" ("/D/med.md"), referenced as
+     - "median", referenced in
+       - "/P/cuni-med.md"
+       - "/P/exp-med.md"
+       - "/P/norm-med.md"
+   - Definition "mle" ("/D/mle.md"), referenced as
+     - "maximum likelihood estimate", referenced in
+       - "/P/poiss-mle.md"
+     - "maximum likelihood estimates", referenced in
+       - "/D/aic.md"
+       - "/D/bic.md"
+       - "/P/glm-mle.md"
+       - "/P/mlr-mle.md"
+       - "/P/rsq-mll.md"
+     - "maximum likelihood estimation", referenced in
+       - "/D/resvar.md"
+     - "maximum likelihood estimator", referenced in
+       - "/P/bic-der.md"
+       - "/P/resvar-bias.md"
+       - "/P/resvar-unb.md"
+     - "maximum-likelihood-estimation", referenced in
+       - "/P/ci-wilks.md"
+   - Definition "mll" ("/D/mll.md"), referenced as
+     - "maximum log-likelihood", referenced in
+       - "/P/rsq-mll.md"
+   - Definition "mlr-beta" ("/D/mlr-beta.md"), referenced as
+     - "regression coefficients", referenced in
+       - "/D/snr.md"
+   - Definition "mlr-ols" ("/D/mlr-ols.md"), referenced as
+     - "ordinary least squares", referenced in
+       - "/P/rsq-der.md"
+   - Definition "mode" ("/D/mode.md"), referenced as
+     - "mode", referenced in
+       - "/P/cuni-mode.md"
+       - "/P/exp-mode.md"
+       - "/P/norm-mode.md"
+   - Definition "mom" ("/D/mom.md"), referenced as
+     - "matching the moments", referenced in
+       - "/P/beta-mom.md"
+     - "method-of-moments estimates", referenced in
+       - "/P/beta-mom.md"
+   - Definition "mp" ("/D/mp.md"), referenced as
+     - "marginal probability", referenced in
+       - "/D/ml.md"
+   - Definition "mse" ("/D/mse.md"), referenced as
+     - "is defined as", referenced in
+       - "/P/mse-bnv.md"
+     - "mean squared error", referenced in
+       - "/P/mse-bnv.md"
+   - Definition "mvn-ltt" ("/D/mvn-ltt.md"), referenced as
+     - "linear transformation theorem", referenced in
+       - "/P/mlr-wls.md"
+   - Definition "mvt" ("/D/mvt.md"), referenced as
+     - "multivariate t-distribution", referenced in
+       - "/P/ng-marg.md"
+   - Definition "pd" ("/D/pd.md"), referenced as
+     - "probability distributions", referenced in
+       - "/P/blr-prior.md"
+       - "/P/matn-mvn.md"
+   - Definition "pmp" ("/D/pmp.md"), referenced as
+     - "posterior model probabilities", referenced in
+       - "/P/pmp-bf.md"
+       - "/P/pmp-lme.md"
+     - "posterior model probability", referenced in
+       - "/P/pmp-lbf.md"
+       - "/P/pmp-lme.md"
+     - "posterior probability", referenced in
+       - "/P/bma-lme.md"
+       - "/P/pmp-lbf.md"
+   - Definition "poiss" ("/D/poiss.md"), referenced as
+     - "Poisson distribution", referenced in
+       - "/D/poiss-data.md"
+       - "/D/poissexp.md"
+   - Definition "post-odd" ("/D/post-odd.md"), referenced as
+     - "posterior odds", referenced in
+       - "/P/bayes-rule.md"
+   - Definition "prior-conj" ("/D/prior-conj.md"), referenced as
+     - "conjugate prior", referenced in
+       - "/P/bin-prior.md"
+       - "/P/blr-prior.md"
+       - "/P/mult-prior.md"
+       - "/P/poissexp-prior.md"
+   - Definition "prior-odd" ("/D/prior-odd.md"), referenced as
+     - "prior odds", referenced in
+       - "/P/bayes-rule.md"
+   - Definition "prob-cond" ("/D/prob-cond.md"), referenced as
+     - "conditional probability", referenced in
+       - "/P/bayes-th.md"
+     - "law of conditional probability", referenced in
+       - "/P/blr-lme.md"
+       - "/P/cmi-mcde.md"
+       - "/P/dmi-mce.md"
+       - "/P/mvn-cond.md"
+       - "/P/ng-kl.md"
+   - Definition "prob-joint" ("/D/prob-joint.md"), referenced as
+     - "joint", referenced in
+       - "/P/blr-post.md"
+     - "joint probability", referenced in
+       - "/D/dent-joint.md"
+       - "/D/ent-joint.md"
+       - "/D/jl.md"
+       - "/D/mi.md"
+       - "/D/ng.md"
+       - "/P/bayes-th.md"
+       - "/P/cmi-jcde.md"
+       - "/P/cmi-mcde.md"
+       - "/P/cmi-mjde.md"
+       - "/P/dmi-jce.md"
+       - "/P/dmi-mce.md"
+       - "/P/dmi-mje.md"
+       - "/P/mean-mult.md"
+       - "/P/ng-pdf.md"
+   - Definition "prob-marg" ("/D/prob-marg.md"), referenced as
+     - "law of marginal probability", referenced in
+       - "/P/blr-lme.md"
+       - "/P/bma-lme.md"
+       - "/P/cmi-mcde.md"
+       - "/P/cmi-mjde.md"
+       - "/P/dmi-mce.md"
+       - "/P/dmi-mje.md"
+       - "/P/lfe-lme.md"
+       - "/P/lme-der.md"
+       - "/P/mean-lin.md"
+       - "/P/ng-marg.md"
+       - "/P/pmp-lme.md"
+     - "marginal probability", referenced in
+       - "/P/bayes-th.md"
+   - Definition "prob" ("/D/prob.md"), referenced as
+     - "probability", referenced in
+       - "/D/bern.md"
+       - "/D/cat.md"
+   - Definition "rexp" ("/D/rexp.md"), referenced as
+     - "random experiments", referenced in
+       - "/P/ci-wilks.md"
+   - Definition "rmat" ("/D/rmat.md"), referenced as
+     - "random matrix", referenced in
+       - "/D/matn.md"
+       - "/P/matn-pdf.md"
+   - Definition "rvar" ("/D/rvar.md"), referenced as
+     - "random variable", referenced in
+       - "/D/bern.md"
+       - "/D/bin.md"
+       - "/D/cdf.md"
+       - "/D/cuni.md"
+       - "/D/dent.md"
+       - "/D/ent.md"
+       - "/D/exp.md"
+       - "/D/gam.md"
+       - "/D/mean.md"
+       - "/D/mgf.md"
+       - "/D/ng.md"
+       - "/D/norm.md"
+       - "/D/pdf.md"
+       - "/D/pmf.md"
+       - "/D/qf.md"
+       - "/D/var.md"
+       - "/P/bern-mean.md"
+       - "/P/bin-mean.md"
+       - "/P/cuni-cdf.md"
+       - "/P/cuni-mean.md"
+       - "/P/cuni-med.md"
+       - "/P/cuni-mode.md"
+       - "/P/cuni-pdf.md"
+       - "/P/cuni-qf.md"
+       - "/P/dent-neg.md"
+       - "/P/ent-nonneg.md"
+       - "/P/exp-cdf.md"
+       - "/P/exp-mean.md"
+       - "/P/exp-med.md"
+       - "/P/exp-mode.md"
+       - "/P/exp-pdf.md"
+       - "/P/exp-qf.md"
+       - "/P/gam-pdf.md"
+       - "/P/mean-nonneg.md"
+       - "/P/ng-kl.md"
+       - "/P/norm-cdf.md"
+       - "/P/norm-cdfwerf.md"
+       - "/P/norm-mean.md"
+       - "/P/norm-med.md"
+       - "/P/norm-mgf.md"
+       - "/P/norm-mode.md"
+       - "/P/norm-pdf.md"
+       - "/P/norm-qf.md"
+       - "/P/norm-var.md"
+     - "random variables", referenced in
+       - "/D/dent-cond.md"
+       - "/D/dent-joint.md"
+       - "/D/ent-cond.md"
+       - "/D/ent-joint.md"
+       - "/D/mi.md"
+       - "/P/bayes-rule.md"
+       - "/P/bayes-th.md"
+       - "/P/cmi-jcde.md"
+       - "/P/cmi-mcde.md"
+       - "/P/cmi-mjde.md"
+       - "/P/dmi-jce.md"
+       - "/P/dmi-mce.md"
+       - "/P/dmi-mje.md"
+       - "/P/mean-lin.md"
+       - "/P/mean-mult.md"
+   - Definition "rvec" ("/D/rvec.md"), referenced as
+     - "random vector", referenced in
+       - "/D/cat.md"
+       - "/D/mgf.md"
+       - "/D/mult.md"
+       - "/D/mvn.md"
+       - "/D/ng.md"
+       - "/P/cat-mean.md"
+       - "/P/mult-mean.md"
+       - "/P/mvn-pdf.md"
+       - "/P/ng-kl.md"
+   - Definition "snorm" ("/D/snorm.md"), referenced as
+     - "standard normal distribution", referenced in
+       - "/P/norm-cdfwerf.md"
+   - Proof "bern-pmf" ("/P/bern-pmf.md"), referenced as
+     - "two possible outcomes for a Bernoulli random variable", referenced in
+       - "/P/bern-mean.md"
+   - Proof "beta-mean" ("/P/beta-mean.md"), referenced as
+     - "Mean", referenced in
+       - "/P/beta-mom.md"
+   - Proof "beta-pdf" ("/P/beta-pdf.md"), referenced as
+     - "probability density function of the beta distribution", referenced in
+       - "/P/bin-lme.md"
+       - "/P/bin-post.md"
+     - "probability density function of which", referenced in
+       - "/P/bin-prior.md"
+   - Proof "beta-var" ("/P/beta-var.md"), referenced as
+     - "variance", referenced in
+       - "/P/beta-mom.md"
+   - Proof "bin-pmf" ("/P/bin-pmf.md"), referenced as
+     - "probability mass function of the binomial distribution", referenced in
+       - "/P/bin-lme.md"
+       - "/P/bin-post.md"
+       - "/P/bin-prior.md"
+   - Proof "dir-pdf" ("/P/dir-pdf.md"), referenced as
+     - "probability density function of the Dirichlet distribution", referenced in
+       - "/P/mult-lme.md"
+       - "/P/mult-post.md"
+     - "probability density function of which", referenced in
+       - "/P/mult-prior.md"
+   - Proof "gam-kl" ("/P/gam-kl.md"), referenced as
+     - "Kullback-Leibler divergence of the univariate gamma distribution", referenced in
+       - "/P/ng-kl.md"
+   - Proof "gam-mean" ("/P/gam-mean.md"), referenced as
+     - "the relation", referenced in
+       - "/P/ng-kl.md"
+   - Proof "mean-sample" ("/P/mean-sample.md"), referenced as
+     - "means", referenced in
+       - "/P/poissexp-lme.md"
+       - "/P/poissexp-post.md"
+       - "/P/poissexp-prior.md"
+     - "sample mean", referenced in
+       - "/P/beta-mom.md"
+       - "/P/poiss-mle.md"
+   - Proof "mult-pmf" ("/P/mult-pmf.md"), referenced as
+     - "probability mass function of the multinomial distribution", referenced in
+       - "/P/mult-lme.md"
+       - "/P/mult-post.md"
+       - "/P/mult-prior.md"
+   - Proof "mvn-kl" ("/P/mvn-kl.md"), referenced as
+     - "Kullback-Leibler divergence of the multivariate normal distribution", referenced in
+       - "/P/ng-kl.md"
+   - Proof "mvn-mgf" ("/P/mvn-mgf.md"), referenced as
+     - "moment-generating function of the multivariate normal distribution", referenced in
+       - "/P/mvn-ltt.md"
+   - Proof "mvt-pdf" ("/P/mvt-pdf.md"), referenced as
+     - "probability density function of a multivariate t-distribution", referenced in
+       - "/P/ng-marg.md"
+   - Proof "norm-gi" ("/P/norm-gi.md"), referenced as
+     - "Gaussian integral", referenced in
+       - "/P/norm-mgf.md"
+   - Proof "norm-snorm" ("/P/norm-snorm.md"), referenced as
+     - "are related to each other", referenced in
+       - "/P/norm-cdfwerf.md"
+   - Proof "poiss-pdf" ("/P/poiss-pdf.md"), referenced as
+     - "probability mass function of the Poisson distribution", referenced in
+       - "/P/poiss-mle.md"
+   - Proof "poiss-pmf" ("/P/poiss-pmf.md"), referenced as
+     - "probability mass function of the Poisson distribution", referenced in
+       - "/P/poissexp-lme.md"
+       - "/P/poissexp-post.md"
+       - "/P/poissexp-prior.md"
+   - Proof "post-jl" ("/P/post-jl.md"), referenced as
+     - "posterior distribution is proportional to the joint likelihood", referenced in
+       - "/P/bin-post.md"
+       - "/P/mult-post.md"
+       - "/P/poissexp-post.md"
+     - "posterior is proportional", referenced in
+       - "/P/blr-post.md"
+   - Proof "ug-mle" ("/P/ug-mle.md"), referenced as
+     - "maximum likelihood estimator for the univariate Gaussian with unknown variance", referenced in
+       - "/P/resvar-bias.md"
+   - Proof "ug-unb" ("/P/ug-unb.md"), referenced as
+     - "expectation of", referenced in
+       - "/P/resvar-bias.md"
+   - Proof "var-mean" ("/P/var-mean.md"), referenced as
+     - "partition of variance into expected values", referenced in
+       - "/P/resvar-bias.md"
