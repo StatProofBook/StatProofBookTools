@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2020-03-24 07:19:00
+ Last edit: 2020-04-14 07:41:00
 """
 
 
@@ -173,6 +173,7 @@ hdr_obj.close()
 
 # Open "The Book of Statistical Proofs"
 #-----------------------------------------------------------------------------#
+print('\n-> LaTeX source code producing the StatProofBook PDF:')
 book = open('write_book/StatProofBook.tex', 'w')
 for line in hdr_txt:
     if line.find('\date{') == 0:
@@ -334,3 +335,4 @@ for entry in toc_txt:
 #-----------------------------------------------------------------------------#        
 book.write('\end{document}')
 book.close()
+print('   - written into "' + book.name + '"')
