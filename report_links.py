@@ -9,41 +9,19 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-14 06:27:00
- Last edit: 2020-04-14 07:32:00
+ Last edit: 2020-04-14 16:39:00
 """
 
 
 # Import modules
 #-----------------------------------------------------------------------------#
 import os
-import re
-import numpy as np
+import BookTools as spbt
 from datetime import datetime
-
-# Extract file body
-#-----------------------------------------------------------------------------#
-def extract_body(file_txt):
-    """
-    Return body text of proof or definition
-    """
-    num_dash   = 0
-    start_line = 0
-    end_line   = len(file_txt)
-    for i in range(0,end_line):
-        if file_txt[i].find('---') == 0:
-            num_dash = num_dash + 1
-        if file_txt[i].find('**') == 0 and num_dash == 2 and start_line == 0:
-            start_line = i
-    body_txt = file_txt[start_line:end_line]
-    return body_txt
 
 # Set repository directory
 #-----------------------------------------------------------------------------#
-ini_obj = open('init_tools.txt')
-ini_txt = ini_obj.readlines()
-ini_obj.close()
-rep_dir = ini_txt[0][0:-1]
-www_dir = ini_txt[1][0:]
+rep_dir = spbt.get_rep_dir('offline')
 
 # Prepare page references
 #-----------------------------------------------------------------------------#
@@ -65,7 +43,7 @@ for file in files:
         
         # Search proof body
         #---------------------------------------------------------------------#
-        body_txt = extract_body(file_txt)
+        body_txt = spbt.extract_body(file_txt)
         for line in body_txt:
             while line.find('](/') > -1:
                 # get bracket/parantheses indices
@@ -98,7 +76,7 @@ for file in files:
         
         # Search proof body
         #---------------------------------------------------------------------#
-        body_txt = extract_body(file_txt)
+        body_txt = spbt.extract_body(file_txt)
         for line in body_txt:
             while line.find('](/') > -1:
                 # get bracket/parantheses indices
