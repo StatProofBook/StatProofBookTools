@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2020-04-14 16:47:00
+ Last edit: 2020-05-18 20:27:00
 """
 
 
@@ -175,6 +175,11 @@ for entry in toc_txt:
             # write code line
             book.write(line)
             
+        # End itemize
+        if in_itemize:
+            book.write('\n\n\\end{itemize}')
+            in_itemize = False
+        
         # Write sources
         book.write('\n\n\n')
         book.write('\\vspace{1em}\n')

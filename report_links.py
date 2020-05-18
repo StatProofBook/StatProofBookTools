@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-14 06:27:00
- Last edit: 2020-04-14 16:39:00
+ Last edit: 2020-05-18 19:57:00
 """
 
 
@@ -18,6 +18,7 @@ First edit: 2020-04-14 06:27:00
 import os
 import BookTools as spbt
 from datetime import datetime
+from shutil import copyfile
 
 # Set repository directory
 #-----------------------------------------------------------------------------#
@@ -135,8 +136,9 @@ for i in range(0,len(unique_filenames)):                # filenames
 
 # Open protocol file
 #-----------------------------------------------------------------------------#
+today_day = datetime.now().strftime('%Y_%m_%d')
 today_now = datetime.now().strftime('%Y-%m-%d, %H:%M')
-protocol  = open('report_links/Dead_Links.txt', 'w')
+protocol  = open('report_links/Dead_Links_' + today_day + '.txt', 'w')
 
 # Display non-existing pages
 #-----------------------------------------------------------------------------#
@@ -160,3 +162,4 @@ for i in range(0,len(unique_filenames)):
 #-----------------------------------------------------------------------------#        
 protocol.close()
 print('   - written into "' + protocol.name + '"')
+copyfile('report_links/Dead_Links_' + today_day + '.txt', 'report_links/Dead_Links.txt')
