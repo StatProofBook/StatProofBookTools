@@ -36,7 +36,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{https://statproofbook.github.io/ \\ StatProofBook@gmail.com}
-\date{2020-05-18, 20:30}
+\date{2020-06-06, 08:48}
 
 \begin{document}
 
@@ -59,6 +59,75 @@
 
 \pagebreak
 \section{Probability theory}
+
+\subsection{Random variables}
+
+\subsubsection[\textit{Random variable}]{Random variable} \label{sec:rvar}
+\setcounter{equation}{0}
+
+\textbf{Definition:} A random variable may be understood
+
+\begin{itemize}
+
+\item informally, as a real number $X \in \mathbb{R}$ whose value is the outcome of a random experiment ($\rightarrow$ Definition "rexp");
+
+\item formally, as a measurable function ($\rightarrow$ Definition "meas-fct") $X$ defined on a probability space ($\rightarrow$ Definition "prob-spc") $(\Omega, \mathcal{F}, P)$ that maps from a sample space $\Omega$ to the real numbers $\mathbb{R}$ using an event space $\mathcal{F}$ and a probability function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $P$;
+
+\item more broadly, as any random quantity $X$ such as a random scalar ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) or a random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}).
+
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Random variable"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-27; URL: \url{https://en.wikipedia.org/wiki/Random_variable#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D65 | shortcut: rvar | author: JoramSoch | date: 2020-05-27, 22:36.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Random vector}]{Random vector} \label{sec:rvec}
+\setcounter{equation}{0}
+
+\textbf{Definition:} A random vector, also called "multivariate random variable", is an $n$-dimensional column vector $X \in \mathbb{R}^{n \times 1}$ whose entries are random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Multivariate random variable"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-27; URL: \url{https://en.wikipedia.org/wiki/Multivariate_random_variable}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D66 | shortcut: rvec | author: JoramSoch | date: 2020-05-27, 22:44.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Random matrix}]{Random matrix} \label{sec:rmat}
+\setcounter{equation}{0}
+
+\textbf{Definition:} A random matrix, also called "matrix-valued random variable", is an $n \times p$ matrix $X \in \mathbb{R}^{n \times p}$ whose entries are random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Equivalently, a random matrix is an $n \times p$ matrix whose columns are $n$-dimensional random vectors ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Random matrix"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-27; URL: \url{https://en.wikipedia.org/wiki/Random_matrix}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D67 | shortcut: rmat | author: JoramSoch | date: 2020-05-27, 22:48.
+\vspace{1em}
+
+
 
 \subsection{Probability}
 
@@ -92,7 +161,7 @@
 \subsubsection[\textit{Joint probability}]{Joint probability} \label{sec:prob-joint}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $A$ and $B$ be two arbitrary statements about random variables ($\rightarrow$ Definition "rvar"), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Then, $p(A,B)$ is called the joint probability of $A$ and $B$ and is defined as the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) that $A$ and $B$ are both true.
+\textbf{Definition:} Let $A$ and $B$ be two arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Then, $p(A,B)$ is called the joint probability of $A$ and $B$ and is defined as the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) that $A$ and $B$ are both true.
 
 
 \vspace{1em}
@@ -111,15 +180,15 @@
 \subsubsection[\textit{Marginal probability}]{Marginal probability} \label{sec:prob-marg}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $A$ and $X$ be two arbitrary statements about random variables ($\rightarrow$ Definition "rvar"), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Furthermore, assume a joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) distribution $p(A,X)$. Then, $p(A)$ is called the marginal probability of $A$ and,
+\textbf{Definition:} Let $A$ and $X$ be two arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Furthermore, assume a joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) distribution $p(A,X)$. Then, $p(A)$ is called the marginal probability of $A$ and,
 
-1) if $X$ is a discrete random variable ($\rightarrow$ Definition "rvar") with domain $\mathcal{X}$, is given by
+1) if $X$ is a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with domain $\mathcal{X}$, is given by
 
 \begin{equation} \label{eq:prob-marg-prob-marg-disc}
 p(A) = \sum_{x \in \mathcal{X}} p(A,x) \; ;
 \end{equation}
 
-2) if $X$ is a continuous random variable ($\rightarrow$ Definition "rvar") with domain $\mathcal{X}$, is given by
+2) if $X$ is a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with domain $\mathcal{X}$, is given by
 
 \begin{equation} \label{eq:prob-marg-prob-marg-cont}
 p(A) = \int_{\mathcal{X}} p(A,x) \, \mathrm{d}x \; .
@@ -142,7 +211,7 @@ p(A) = \int_{\mathcal{X}} p(A,x) \, \mathrm{d}x \; .
 \subsubsection[\textit{Conditional probability}]{Conditional probability} \label{sec:prob-cond}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $A$ and $B$ be two arbitrary statements about random variables ($\rightarrow$ Definition "rvar"), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Furthermore, assume a joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) distribution $p(A,B)$. Then, $p(A \vert B)$ is called the conditional probability that $A$ is true, given that $B$ is true, and is given by
+\textbf{Definition:} Let $A$ and $B$ be two arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Furthermore, assume a joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) distribution $p(A,B)$. Then, $p(A \vert B)$ is called the conditional probability that $A$ is true, given that $B$ is true, and is given by
 
 \begin{equation} \label{eq:prob-cond-prob-cond}
 p(A|B) = \frac{p(A,B)}{p(B)}
@@ -164,12 +233,55 @@ where $p(B)$ is the marginal probability ($\rightarrow$ Definition \ref{sec:Gene
 
 
 
+\subsubsection[\textit{Statistical independence}]{Statistical independence} \label{sec:ind}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Generally speaking, random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) are statistically independent, if their joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) can be expressed in terms of their marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}).
+
+\vspace{1em}
+1) A set of discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X_1, \ldots, X_n$ with possible values $\mathcal{X}_1, \ldots, \mathcal{X}_n$ is called statistically independent, if
+
+\begin{equation} \label{eq:ind-disc-ind}
+p(X_1 = x_1, \ldots, X_n = x_n) = \prod_{i=1}^{n} p(X_i = x_i) \quad \text{for all} \; x_i \in \mathcal{X}_i, \; i = 1, \ldots, n
+\end{equation}
+
+where $p(x_1, \ldots, x_n)$ are the joint probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) of $X_1, \ldots, X_n$ and $p(x_i)$ are the marginal probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}) of $X_i$.
+
+\vspace{1em}
+2) A set of continuous random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X_1, \ldots, X_n$ defined on the domains $\mathcal{X}_1, \ldots, \mathcal{X}_n$ is called statistically independent, if
+
+\begin{equation} \label{eq:ind-cont-ind-F}
+F_{X_1,\ldots,X_n}(x_1,\ldots,x_n) = \prod_{i=1}^{n} F_{X_i}(x_i) \quad \text{for all} \; x_i \in \mathcal{X}_i, \; i = 1, \ldots, n
+\end{equation}
+
+or equivalently, if the probability densities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) exist,
+
+\begin{equation} \label{eq:ind-cont-ind-f}
+f_{X_1,\ldots,X_n}(x_1,\ldots,x_n) = \prod_{i=1}^{n} f_{X_i}(x_i) \quad \text{for all} \; x_i \in \mathcal{X}_i, \; i = 1, \ldots, n
+\end{equation}
+
+where $F$ are the joint ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-joint}) or marginal ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-marg}) cumulative distribution functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) and $f$ are the respective probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Independence (probability theory)"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-06; URL: \url{https://en.wikipedia.org/wiki/Independence_(probability_theory)#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D75 | shortcut: ind | author: JoramSoch | date: 2020-06-06, 07:16.
+\vspace{1em}
+
+
+
 \subsection{Probability distributions}
 
 \subsubsection[\textit{Probability distribution}]{Probability distribution} \label{sec:dist}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ be a random variable ($\rightarrow$ Definition "rvar") with the set of possible outcomes $\mathcal{X}$. Then, a probability distribution of $X$ is a mathematical function that gives the probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of occurrence of all possible outcomes $x \in \mathcal{X}$ of this random variable.
+**Definition**: Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with the set of possible outcomes $\mathcal{X}$. Then, a probability distribution of $X$ is a mathematical function that gives the probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of occurrence of all possible outcomes $x \in \mathcal{X}$ of this random variable.
 
 
 \vspace{1em}
@@ -188,15 +300,15 @@ where $p(B)$ is the marginal probability ($\rightarrow$ Definition \ref{sec:Gene
 \subsubsection[\textit{Joint distribution}]{Joint distribution} \label{sec:dist-joint}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ and $Y$ be random variables ($\rightarrow$ Definition "rvar") with sets of possible outcomes $\mathcal{X}$ and $\mathcal{Y}$. Then, a joint distribution of $X$ and $Y$ is a probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) that specifies the probability of the event that $X = x$ and $Y = y$ for each possible combination of $x \in \mathcal{X}$ and $y \in \mathcal{Y}$.
+**Definition**: Let $X$ and $Y$ be random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with sets of possible outcomes $\mathcal{X}$ and $\mathcal{Y}$. Then, a joint distribution of $X$ and $Y$ is a probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) that specifies the probability of the event that $X = x$ and $Y = y$ for each possible combination of $x \in \mathcal{X}$ and $y \in \mathcal{Y}$.
 
 \begin{itemize}
 
-\item The joint distribution of two scalar random variables ($\rightarrow$ Definition "rvar") is called a bivariate distribution.
+\item The joint distribution of two scalar random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) is called a bivariate distribution.
 
-\item The joint distribution of a random vector ($\rightarrow$ Definition "rvec") is called a multivariate distribution.
+\item The joint distribution of a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) is called a multivariate distribution.
 
-\item The joint distribution of a random matrix ($\rightarrow$ Definition "rmat") is called a matrix-variate distribution.
+\item The joint distribution of a random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}) is called a matrix-variate distribution.
 
 \end{itemize}
 
@@ -217,7 +329,7 @@ where $p(B)$ is the marginal probability ($\rightarrow$ Definition \ref{sec:Gene
 \subsubsection[\textit{Marginal distribution}]{Marginal distribution} \label{sec:dist-marg}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ and $Y$ be random variables ($\rightarrow$ Definition "rvar") with sets of possible outcomes $\mathcal{X}$ and $\mathcal{Y}$. Then, the marginal distribution of $X$ is a probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) that specifies the probability of the event that $X = x$ irrespective of the value of $Y$ for each possible value $x \in \mathcal{X}$. The marginal distribution can be obtained from the joint distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-joint}) of $X$ and $Y$ using the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}).
+**Definition**: Let $X$ and $Y$ be random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with sets of possible outcomes $\mathcal{X}$ and $\mathcal{Y}$. Then, the marginal distribution of $X$ is a probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) that specifies the probability of the event that $X = x$ irrespective of the value of $Y$ for each possible value $x \in \mathcal{X}$. The marginal distribution can be obtained from the joint distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-joint}) of $X$ and $Y$ using the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}).
 
 
 \vspace{1em}
@@ -236,7 +348,7 @@ where $p(B)$ is the marginal probability ($\rightarrow$ Definition \ref{sec:Gene
 \subsubsection[\textit{Conditional distribution}]{Conditional distribution} \label{sec:dist-cond}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ and $Y$ be random variables ($\rightarrow$ Definition "rvar") with sets of possible outcomes $\mathcal{X}$ and $\mathcal{Y}$. Then, the conditional distribution of $X$ given that $Y$ is a probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) that specifies the probability of the event that $X = x$ given that $Y = y$ for each possible combination of $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. The conditional distribution of $X$ can be obtained from the joint distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-joint}) of $X$ and $Y$ and the marginal distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-marg}) of $Y$ using the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}).
+**Definition**: Let $X$ and $Y$ be random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with sets of possible outcomes $\mathcal{X}$ and $\mathcal{Y}$. Then, the conditional distribution of $X$ given that $Y$ is a probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) that specifies the probability of the event that $X = x$ given that $Y = y$ for each possible combination of $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. The conditional distribution of $X$ can be obtained from the joint distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-joint}) of $X$ and $Y$ and the marginal distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-marg}) of $Y$ using the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}).
 
 
 \vspace{1em}
@@ -257,7 +369,7 @@ where $p(B)$ is the marginal probability ($\rightarrow$ Definition \ref{sec:Gene
 \subsubsection[\textit{Probability mass function}]{Probability mass function} \label{sec:pmf}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$. Then, $f_X(x): \mathbb{R} \to [0,1]$ is the probability mass function of $X$, if
+\textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$. Then, $f_X(x): \mathbb{R} \to [0,1]$ is the probability mass function of $X$, if
 
 \begin{equation} \label{eq:pmf-pmf-def-s1}
 \mathrm{Pr}(X = x) = f_X(x)
@@ -286,7 +398,7 @@ for all $x \in \mathcal{X}$ and
 \subsubsection[\textit{Probability density function}]{Probability density function} \label{sec:pdf}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$. Then, $f_X(x): \mathbb{R} \to \mathbb{R}$ is the probability density function of $X$, if
+\textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$. Then, $f_X(x): \mathbb{R} \to \mathbb{R}$ is the probability density function of $X$, if
 
 \begin{equation} \label{eq:pdf-pdf-def-s0}
 f_X(x) \geq 0
@@ -323,7 +435,7 @@ for any $A \subset \mathcal{X}$ and
 
 \textbf{Definition:}
 
-1) Let $X$ be a discrete random variable ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and the probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $f_X(x)$. Then, the function $F_X(x): \mathbb{R} \to [0,1]$ with
+1) Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and the probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $f_X(x)$. Then, the function $F_X(x): \mathbb{R} \to [0,1]$ with
 
 \begin{equation} \label{eq:cdf-cdf-disc}
 F_X(x) = \sum_{\overset{z \in \mathcal{X}}{z \leq x}} f_X(z)
@@ -332,10 +444,10 @@ F_X(x) = \sum_{\overset{z \in \mathcal{X}}{z \leq x}} f_X(z)
 is the cumulative distribution function of $X$.
 
 \vspace{1em}
-2) Let $X$ be a scalar continuous random variable ($\rightarrow$ Definition "rvar") with the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $f_X(x)$. Then, the function $F_X(x): \mathbb{R} \to [0,1]$ with
+2) Let $X$ be a scalar continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $f_X(x)$. Then, the function $F_X(x): \mathbb{R} \to [0,1]$ with
 
 \begin{equation} \label{eq:cdf-cdf-cont}
-F_X(x) = \int_{-\infty}^{x} f_X(z) \, \mathrm{d}x
+F_X(x) = \int_{-\infty}^{x} f_X(z) \, \mathrm{d}z
 \end{equation}
 
 is the cumulative distribution function of $X$.
@@ -357,7 +469,7 @@ is the cumulative distribution function of $X$.
 \subsubsection[\textit{Quantile function}]{Quantile function} \label{sec:qf}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") with the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) (CDF) $F_X(x)$. Then, the function $Q_X(p): [0,1] \to \mathbb{R}$ which is the inverse CDF
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) (CDF) $F_X(x)$. Then, the function $Q_X(p): [0,1] \to \mathbb{R}$ which is the inverse CDF
 
 \begin{equation} \label{eq:qf-qf}
 Q_X(p) = F_X^{-1}(x)
@@ -388,13 +500,13 @@ Q_X(p) = \min \left\lbrace x \in \mathbb{R} \, \vert \, F_X(x) = p \right\rbrace
 
 \textbf{Definition:}
 
-1) The moment-generating function of a random variable ($\rightarrow$ Definition "rvar") $X \in \mathbb{R}$ is
+1) The moment-generating function of a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X \in \mathbb{R}$ is
 
 \begin{equation} \label{eq:mgf-mgf-var}
 M_X(t) = \mathrm{E} \left[ e^{tX} \right], \quad t \in \mathbb{R} \; .
 \end{equation}
 
-2) The moment-generating function of a random vector ($\rightarrow$ Definition "rvec") $X \in \mathbb{R}^n$ is
+2) The moment-generating function of a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) $X \in \mathbb{R}^n$ is
 
 \begin{equation} \label{eq:mgf-mgf-vec}
 M_X(t) = \mathrm{E} \left[ e^{t^\mathrm{T}X} \right], \quad t \in \mathbb{R}^n \; .
@@ -414,6 +526,72 @@ M_X(t) = \mathrm{E} \left[ e^{t^\mathrm{T}X} \right], \quad t \in \mathbb{R}^n \
 
 
 
+\subsubsection[\textit{Cumulant-generating function}]{Cumulant-generating function} \label{sec:cgf}
+\setcounter{equation}{0}
+
+\textbf{Definition:}
+
+1) The cumulant-generating function of a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X \in \mathbb{R}$ is
+
+\begin{equation} \label{eq:cgf-cgf-var}
+K_X(t) = \log \mathrm{E} \left[ e^{tX} \right], \quad t \in \mathbb{R} \; .
+\end{equation}
+
+2) The cumulant-generating function of a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) $X \in \mathbb{R}^n$ is
+
+\begin{equation} \label{eq:cgf-cgf-vec}
+K_X(t) = \log \mathrm{E} \left[ e^{t^\mathrm{T}X} \right], \quad t \in \mathbb{R}^n \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Cumulant"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-31; URL: \url{https://en.wikipedia.org/wiki/Cumulant#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D68 | shortcut: cgf | author: JoramSoch | date: 2020-05-31, 23:46.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Probability-generating function}]{Probability-generating function} \label{sec:pgf}
+\setcounter{equation}{0}
+
+\textbf{Definition:}
+
+1) If $X$ is a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) taking values in the non-negative integers $\left\lbrace 0, 1, \ldots \right\rbrace$, then the probability-generating function of $X$ is defined as
+
+\begin{equation} \label{eq:pgf-pgf-var}
+G_X(z) = \mathrm{E} \left[ z^X \right] = \sum_{x=0}^{\infty} p(x) \, z^x
+\end{equation}
+
+where $z \in \mathbb{C}$ and $p(x)$ is the probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$.
+
+2) If $X$ is a discrete random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) taking values in the $n$-dimensional integer lattice $x \in \left\lbrace 0, 1, \ldots \right\rbrace^n$, then the probability-generating function of $X$ is defined as
+
+\begin{equation} \label{eq:pgf-cgf-vec}
+G_X(z) = \mathrm{E} \left[ {z_1}^{X_1} \cdot \ldots \cdot {z_n}^{X_n} \right] = \sum_{x_1=0}^{\infty} \cdots \sum_{x_n=0}^{\infty} p(x_1,\ldots,x_n) \, {z_1}^{x_1} \cdot \ldots \cdot {z_n}^{x_n}
+\end{equation}
+
+where $z \in \mathbb{C}^n$ and $p(x)$ is the probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Probability-generating function"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-31; URL: \url{https://en.wikipedia.org/wiki/Probability-generating_function#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D69 | shortcut: pgf | author: JoramSoch | date: 2020-05-31, 23:59.
+\vspace{1em}
+
+
+
 \subsection{Expected value}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:mean}
@@ -421,7 +599,7 @@ M_X(t) = \mathrm{E} \left[ e^{t^\mathrm{T}X} \right], \quad t \in \mathbb{R}^n \
 
 \textbf{Definition:}
 
-1) The expected value (or, mean) of a discrete random variable ($\rightarrow$ Definition "rvar") $X$ with domain $\mathcal{X}$ is
+1) The expected value (or, mean) of a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ with domain $\mathcal{X}$ is
 
 \begin{equation} \label{eq:mean-mean-disc}
 \mathrm{E}(X) = \sum_{x \in \mathcal{X}} x \cdot f_X(x)
@@ -430,7 +608,7 @@ M_X(t) = \mathrm{E} \left[ e^{t^\mathrm{T}X} \right], \quad t \in \mathbb{R}^n \
 where $f_X(x)$ is the probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$.
 
 \vspace{1em}
-2) The expected value (or, mean) of a continuous random variable ($\rightarrow$ Definition "rvar") $X$ with domain $\mathcal{X}$ is
+2) The expected value (or, mean) of a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ with domain $\mathcal{X}$ is
 
 \begin{equation} \label{eq:mean-mean-cont}
 \mathrm{E}(X) = \int_{\mathcal{X}} x \cdot f_X(x) \, \mathrm{d}x
@@ -452,10 +630,76 @@ where $f_X(x)$ is the probability density function ($\rightarrow$ Definition \re
 
 
 
+\subsubsection[\textbf{Non-negative random variable}]{Non-negative random variable} \label{sec:mean-nnrvar}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a non-negative random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
+
+\begin{equation} \label{eq:mean-nnrvar-mean-cdf}
+\mathrm{E}(X) = \int_{0}^{\infty} (1 - F_X(x)) \, \mathrm{d}x
+\end{equation}
+
+where $F_X(x)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of $X$.
+
+
+\vspace{1em}
+\textbf{Proof:} Because the cumulative distribution function gives the probability of a random variable being smaller than a given value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}),
+
+\begin{equation} \label{eq:mean-nnrvar-cdf-Pr-leq}
+F_X(x) = \mathrm{Pr}(X \leq x) \; ,
+\end{equation}
+
+we have
+
+\begin{equation} \label{eq:mean-nnrvar-cdf-Pr-geq}
+1 - F_X(x) = \mathrm{Pr}(X > x) \; ,
+\end{equation}
+
+such that
+
+\begin{equation} \label{eq:mean-nnrvar-mean-cdf-s1}
+\int_{0}^{\infty} (1 - F_X(x)) \, \mathrm{d}x = \int_{0}^{\infty} \mathrm{Pr}(X > x) \, \mathrm{d}x
+\end{equation}
+
+which, using the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $X$, can be rewritten as
+
+\begin{equation} \label{eq:mean-nnrvar-mean-cdf-s2}
+\begin{split}
+\int_{0}^{\infty} (1 - F_X(x)) \, \mathrm{d}x &= \int_{0}^{\infty} \int_{x}^{\infty} f_X(z) \, \mathrm{d}z \, \mathrm{d}x \\
+&= \int_{0}^{\infty} \int_{0}^{z} f_X(z) \, \mathrm{d}x \, \mathrm{d}z \\
+&= \int_{0}^{\infty} f_X(z) \int_{0}^{z} 1 \, \mathrm{d}x \, \mathrm{d}z \\
+&= \int_{0}^{\infty} [x]_{0}^{z} \cdot f_X(z) \, \mathrm{d}z \\
+&= \int_{0}^{\infty} z \cdot f_X(z) \, \mathrm{d}z \\
+\end{split}
+\end{equation}
+
+and by applying the definition of the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}), we see that
+
+\begin{equation} \label{eq:mean-nnrvar-mean-cdf-s3}
+\int_{0}^{\infty} (1 - F_X(x)) \, \mathrm{d}x = \int_{0}^{\infty} z \cdot f_X(z) \, \mathrm{d}z = \mathrm{E}(X)
+\end{equation}
+
+which proves the identity given above.
+
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Kemp, Graham (2014): "Expected value of a non-negative random variable"; in: \textit{StackExchange Mathematics}, retrieved on 2020-05-18; URL: \url{https://math.stackexchange.com/questions/958472/expected-value-of-a-non-negative-random-variable}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P103 | shortcut: mean-nnrvar | author: JoramSoch | date: 2020-05-18, 23:54.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Non-negativity}]{Non-negativity} \label{sec:mean-nonneg}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} If a random variable ($\rightarrow$ Definition "rvar") is strictly non-negative, its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is also non-negative, i.e.
+\textbf{Theorem:} If a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) is strictly non-negative, its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is also non-negative, i.e.
 
 \begin{equation} \label{eq:mean-nonneg-mean-nonneg}
 \mathrm{E}(X) \geq 0, \quad \text{if} \quad X \geq 0 \; .
@@ -508,7 +752,7 @@ is strictly non-negative, thus the term on the right-hand side is a Lebesgue int
 \end{split}
 \end{equation}
 
-for random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ and a constant $a$.
+for random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ and a constant $a$.
 
 
 \vspace{1em}
@@ -649,13 +893,13 @@ Together with \eqref{eq:mean-mono-mean-XYZ}, this yields
 
 \textbf{Theorem:}
 
-1) If two random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ are independent ($\rightarrow$ Definition "ind"), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is multiplicative, i.e.
+1) If two random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is multiplicative, i.e.
 
 \begin{equation} \label{eq:mean-mult-mean-mult}
 \mathrm{E}(X\,Y) = \mathrm{E}(X) \, \mathrm{E}(Y) \; .
 \end{equation}
 
-2) If two random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ are dependent ($\rightarrow$ Definition "ind"), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is not necessarily multiplicative, i.e. there exist $X$ and $Y$ such that
+2) If two random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ are dependent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is not necessarily multiplicative, i.e. there exist $X$ and $Y$ such that
 
 \begin{equation} \label{eq:mean-mult-mean-nonmult}
 \mathrm{E}(X\,Y) \neq \mathrm{E}(X) \, \mathrm{E}(Y) \; .
@@ -665,7 +909,7 @@ Together with \eqref{eq:mean-mono-mean-XYZ}, this yields
 \vspace{1em}
 \textbf{Proof:}
 
-1) If $X$ and $Y$ are independent ($\rightarrow$ Definition "ind"), it holds that
+1) If $X$ and $Y$ are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), it holds that
 
 \begin{equation} \label{eq:mean-mult-ind}
 p(x,y) = p(x) \, p(y) \quad \text{for all} \quad x \in \mathcal{X}, y \in \mathcal{Y} \; .
@@ -767,7 +1011,7 @@ and thus,
 \subsubsection[\textit{Definition}]{Definition} \label{sec:var}
 \setcounter{equation}{0}
 
-\textbf{Definition:} The variance of a random variable ($\rightarrow$ Definition "rvar") $X$ is defined as the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared deviation from its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}):
+\textbf{Definition:} The variance of a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ is defined as the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared deviation from its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}):
 
 \begin{equation} \label{eq:var-var}
 \mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
@@ -783,6 +1027,578 @@ and thus,
 
 \vspace{1em}
 \textbf{Metadata:} ID: D12 | shortcut: var | author: JoramSoch | date: 2020-02-13, 19:55.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Partition into expected values}]{Partition into expected values} \label{sec:var-mean}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is equal to the mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the square of $X$ minus the square of the mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$:
+
+\begin{equation} \label{eq:var-mean-var-mean}
+\mathrm{Var}(X) = \mathrm{E}(X^2) - \mathrm{E}(X)^2 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is defined as
+
+\begin{equation} \label{eq:var-mean-var}
+\mathrm{Var}(X) = \mathrm{E}\left[ \left( X - \mathrm{E}[X] \right)^2 \right]
+\end{equation}
+
+which, due to the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), can be rewritten as
+
+\begin{equation} \label{eq:var-mean-var-mean-qed}
+\begin{split}
+\mathrm{Var}(X) &= \mathrm{E}\left[ \left( X - \mathrm{E}[X] \right)^2 \right] \\
+&= \mathrm{E}\left[ X^2 - 2 \, X \, \mathrm{E}(X) + \mathrm{E}(X)^2 \right] \\
+&= \mathrm{E}(X^2) - 2 \, \mathrm{E}(X) \, \mathrm{E}(X) + \mathrm{E}(X)^2 \\
+&= \mathrm{E}(X^2) - \mathrm{E}(X)^2 \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-19; URL: \url{https://en.wikipedia.org/wiki/Variance#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P104 | shortcut: var-mean | author: JoramSoch | date: 2020-05-19, 00:17.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Non-negativity}]{Non-negativity} \label{sec:var-nonneg}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is always non-negative, i.e.
+
+\begin{equation} \label{eq:var-nonneg-var-nonneg}
+\mathrm{Var}(X) \geq 0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) is defined as
+
+\begin{equation} \label{eq:var-nonneg-var}
+\mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
+\end{equation}
+
+\vspace{1em}
+1) If $X$ is a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), then, because squares and probabilities are stricly non-negative, all the addends in
+
+\begin{equation} \label{eq:var-nonneg-var-disc}
+\mathrm{Var}(X) = \sum_{x \in \mathcal{X}} (x-\mathrm{E}(X))^2 \cdot f_X(x)
+\end{equation}
+
+are also non-negative, thus the entire sum must be non-negative.
+
+\vspace{1em}
+2) If $X$ is a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), then, because squares and probability densities are strictly non-negative, the integrand in
+
+\begin{equation} \label{eq:var-nonneg-VAR-cont}
+\mathrm{Var}(X) = \int_{\mathcal{X}} (x-\mathrm{E}(X))^2 \cdot f_X(x) \, \mathrm{d}x
+\end{equation}
+
+is always non-negative, thus the term on the right-hand side is a Lebesgue integral, so that the result on the left-hand side must be non-negative.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-06; URL: \url{https://en.wikipedia.org/wiki/Variance#Basic_properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P123 | shortcut: var-nonneg | author: JoramSoch | date: 2020-02-13, 20:14.
+\vspace{1em}
+
+
+
+\subsection{Covariance}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:cov}
+\setcounter{equation}{0}
+
+\textbf{Definition:} The covariance of two random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ is defined as the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the product of their deviations from their individual expected values ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}):
+
+\begin{equation} \label{eq:cov-cov}
+\mathrm{Cov}(X,Y) = \mathrm{E}\left[ (X-\mathrm{E}[X]) (Y-\mathrm{E}[Y]) \right] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Covariance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-06; URL: \url{https://en.wikipedia.org/wiki/Covariance#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D70 | shortcut: cov | author: JoramSoch | date: 2020-06-02, 20:20.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Partition into expected values}]{Partition into expected values} \label{sec:cov-mean}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ and $Y$ be random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ is equal to the mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the product of $X$ and $Y$ minus the product of the means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ and $Y$:
+
+\begin{equation} \label{eq:cov-mean-cov-mean}
+\mathrm{Cov}(X,Y) = \mathrm{E}(X Y) - \mathrm{E}(X) \mathrm{E}(Y) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ is defined as
+
+\begin{equation} \label{eq:cov-mean-cov}
+\mathrm{Cov}(X,Y) = \mathrm{E}\left[ (X-\mathrm{E}[X]) (Y-\mathrm{E}[Y]) \right] \; .
+\end{equation}
+
+which, due to the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), can be rewritten as
+
+\begin{equation} \label{eq:cov-mean-cov-mean-qed}
+\begin{split}
+\mathrm{Cov}(X,Y) &= \mathrm{E}\left[ (X-\mathrm{E}[X]) (Y-\mathrm{E}[Y]) \right] \\
+&= \mathrm{E}\left[ X Y - X \, \mathrm{E}(Y) - \mathrm{E}(X) \, Y + \mathrm{E}(X) \mathrm{E}(Y) \right] \\
+&= \mathrm{E}(X Y) - \mathrm{E}(X) \mathrm{E}(Y) - \mathrm{E}(X) \mathrm{E}(Y) + \mathrm{E}(X) \mathrm{E}(Y) \\
+&= \mathrm{E}(X Y) - \mathrm{E}(X) \mathrm{E}(Y) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Covariance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-02; URL: \url{https://en.wikipedia.org/wiki/Covariance#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P118 | shortcut: cov-mean | author: JoramSoch | date: 2020-06-02, 20:50.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Relationship to correlation}]{Relationship to correlation} \label{sec:cov-corr}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ and $Y$ be random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ is equal to the product of their correlation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corr}) and the standard deviations ($\rightarrow$ Definition "std") of $X$ and $Y$:
+
+\begin{equation} \label{eq:cov-corr-cov-corr}
+\mathrm{Cov}(X,Y) = \sigma_X \, \mathrm{Corr}(X,Y) \, \sigma_Y \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The correlation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corr}) of $X$ and $Y$ is defined as
+
+\begin{equation} \label{eq:cov-corr-corr}
+\mathrm{Corr}(X,Y) = \frac{\mathrm{Cov}(X,Y)}{\sigma_X \sigma_Y} \; .
+\end{equation}
+
+which can be rearranged for the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) to give
+
+\begin{equation} \label{eq:cov-corr-cov-corr-qed}
+\mathrm{Cov}(X,Y) = \sigma_X \, \mathrm{Corr}(X,Y) \, \sigma_Y
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P119 | shortcut: cov-corr | author: JoramSoch | date: 2020-06-02, 21:00.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Covariance matrix}]{Covariance matrix} \label{sec:covmat}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X = [X_1, \ldots, X_n]^\mathrm{T}$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, the covariance matrix of $X$ is defined as the $n \times n$ matrix in which the entry $(i,j)$ is the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X_i$ and $X_j$:
+
+\begin{equation} \label{eq:covmat-covmat}
+\Sigma_{XX} =
+\begin{bmatrix}
+\mathrm{Cov}(X_1,X_1) & \ldots & \mathrm{Cov}(X_1,X_n) \\
+\vdots & \ddots & \vdots \\
+\mathrm{Cov}(X_n,X_1) & \ldots & \mathrm{Cov}(X_n,X_n)
+\end{bmatrix} =
+\begin{bmatrix}
+\mathrm{E}\left[ (X_1-\mathrm{E}[X_1]) (X_1-\mathrm{E}[X_1]) \right] & \ldots & \mathrm{E}\left[ (X_1-\mathrm{E}[X_1]) (X_n-\mathrm{E}[X_n]) \right] \\
+\vdots & \ddots & \vdots \\
+\mathrm{E}\left[ (X_n-\mathrm{E}[X_n]) (X_1-\mathrm{E}[X_1]) \right] & \ldots & \mathrm{E}\left[ (X_n-\mathrm{E}[X_n]) (X_n-\mathrm{E}[X_n]) \right]
+\end{bmatrix} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Covariance matrix"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-06; URL: \url{https://en.wikipedia.org/wiki/Covariance_matrix#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D72 | shortcut: covmat | author: JoramSoch | date: 2020-06-06, 04:24.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Covariance matrix and expected values}]{Covariance matrix and expected values} \label{sec:covmat-mean}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, the covariance matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) of $X$ is equal to the mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the outer product of $X$ with itself minus the outer product of the mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ with itself:
+
+\begin{equation} \label{eq:covmat-mean-covmat-mean}
+\Sigma_{XX} = \mathrm{E}(X X^\mathrm{T}) - \mathrm{E}(X) \mathrm{E}(X)^\mathrm{T} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The covariance matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) of $X$ is defined as
+
+\begin{equation} \label{eq:covmat-mean-covmat1}
+\Sigma_{XX} =
+\begin{bmatrix}
+\mathrm{E}\left[ (X_1-\mathrm{E}[X_1]) (X_1-\mathrm{E}[X_1]) \right] & \ldots & \mathrm{E}\left[ (X_1-\mathrm{E}[X_1]) (X_n-\mathrm{E}[X_n]) \right] \\
+\vdots & \ddots & \vdots \\
+\mathrm{E}\left[ (X_n-\mathrm{E}[X_n]) (X_1-\mathrm{E}[X_1]) \right] & \ldots & \mathrm{E}\left[ (X_n-\mathrm{E}[X_n]) (X_n-\mathrm{E}[X_n]) \right]
+\end{bmatrix}
+\end{equation}
+
+which can also be expressed using matrix multiplication as
+
+\begin{equation} \label{eq:covmat-mean-covmat2}
+\Sigma_{XX} = \mathrm{E}\left[ (X-\mathrm{E}[X]) (X-\mathrm{E}[X])^\mathrm{T} \right]
+\end{equation}
+
+Due to the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), this can be rewritten as
+
+\begin{equation} \label{eq:covmat-mean-covmat-mean-qed}
+\begin{split}
+\Sigma_{XX} &= \mathrm{E}\left[ (X-\mathrm{E}[X]) (X-\mathrm{E}[X])^\mathrm{T} \right] \\
+&= \mathrm{E}\left[ X X^\mathrm{T} - X \, \mathrm{E}(X)^\mathrm{T} - \mathrm{E}(X) \, X^\mathrm{T} + \mathrm{E}(X) \mathrm{E}(X)^\mathrm{T} \right] \\
+&= \mathrm{E}(X X^\mathrm{T}) - \mathrm{E}(X) \mathrm{E}(X)^\mathrm{T} - \mathrm{E}(X) \mathrm{E}(X)^\mathrm{T} + \mathrm{E}(X) \mathrm{E}(X)^\mathrm{T} \\
+&= \mathrm{E}(X X^\mathrm{T}) - \mathrm{E}(X) \mathrm{E}(X)^\mathrm{T} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Taboga, Marco (2010): "Covariance matrix"; in: \textit{Lectures on probability and statistics}, retrieved on 2020-06-06; URL: \url{https://www.statlect.com/fundamentals-of-probability/covariance-matrix}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P120 | shortcut: covmat-mean | author: JoramSoch | date: 2020-06-06, 05:31.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Covariance matrix and correlation matrix}]{Covariance matrix and correlation matrix} \label{sec:covmat-corrmat}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, the covariance matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) of $X$ can be expressed in terms of its correlation matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corrmat}) as follows
+
+\begin{equation} \label{eq:covmat-corrmat-covmat-corrmat}
+\Sigma_{XX} = \mathrm{D}_X \cdot \mathrm{C}_{XX} \cdot \mathrm{D}_X \; ,
+\end{equation}
+
+where $\mathrm{D}_X$ is a diagonal matrix with the standard deviations ($\rightarrow$ Definition "std") of $X_1, \ldots, X_n$ as entries on the diagonal:
+
+\begin{equation} \label{eq:covmat-corrmat-diagmat}
+\mathrm{D}_X = \mathrm{diag}(\sigma_{X_1},\ldots,\sigma_{X_n}) =
+\begin{bmatrix}
+\sigma_{X_1} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \sigma_{X_n}
+\end{bmatrix} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Reiterating \eqref{eq:covmat-corrmat-covmat-corrmat} and applying \eqref{eq:covmat-corrmat-diagmat}, we have:
+
+\begin{equation} \label{eq:covmat-corrmat-covmat-corrmat-s1}
+\Sigma_{XX} =
+\begin{bmatrix}
+\sigma_{X_1} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \sigma_{X_n}
+\end{bmatrix} \cdot
+\mathrm{C}_{XX} \cdot
+\begin{bmatrix}
+\sigma_{X_1} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \sigma_{X_n}
+\end{bmatrix} \; .
+\end{equation}
+
+Together with the definition of the correlation matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corrmat}), this gives
+
+\begin{equation} \label{eq:covmat-corrmat-covmat-corrmat-s2}
+\begin{split}
+\Sigma_{XX} &=
+\begin{bmatrix}
+\sigma_{X_1} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \sigma_{X_n}
+\end{bmatrix} \cdot
+\begin{bmatrix}
+\frac{\mathrm{E}\left[(X_1-\mathrm{E}[X_1]) (X_1-\mathrm{E}[X_1])\right]}{\sigma_{X_1} \, \sigma_{X_1}} & \ldots & \frac{\mathrm{E}\left[(X_1-\mathrm{E}[X_1]) (X_n-\mathrm{E}[X_n])\right]}{\sigma_{X_1} \, \sigma_{X_n}} \\
+\vdots & \ddots & \vdots \\
+\frac{\mathrm{E}\left[(X_n-\mathrm{E}[X_n]) (X_1-\mathrm{E}[X_1])\right]}{\sigma_{X_n} \, \sigma_{X_1}} & \ldots & \frac{\mathrm{E}\left[(X_n-\mathrm{E}[X_n]) (X_n-\mathrm{E}[X_n])\right]}{\sigma_{X_n} \, \sigma_{X_n}}
+\end{bmatrix} \cdot
+\begin{bmatrix}
+\sigma_{X_1} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \sigma_{X_n}
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
+\frac{\sigma_{X_1} \cdot \mathrm{E}\left[(X_1-\mathrm{E}[X_1]) (X_1-\mathrm{E}[X_1])\right]}{\sigma_{X_1} \, \sigma_{X_1}} & \ldots & \frac{\sigma_{X_1} \cdot \mathrm{E}\left[(X_1-\mathrm{E}[X_1]) (X_n-\mathrm{E}[X_n])\right]}{\sigma_{X_1} \, \sigma_{X_n}} \\
+\vdots & \ddots & \vdots \\
+\frac{\sigma_{X_n} \cdot \mathrm{E}\left[(X_n-\mathrm{E}[X_n]) (X_1-\mathrm{E}[X_1])\right]}{\sigma_{X_n} \, \sigma_{X_1}} & \ldots & \frac{\sigma_{X_n} \cdot \mathrm{E}\left[(X_n-\mathrm{E}[X_n]) (X_n-\mathrm{E}[X_n])\right]}{\sigma_{X_n} \, \sigma_{X_n}}
+\end{bmatrix} \cdot
+\begin{bmatrix}
+\sigma_{X_1} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \sigma_{X_n}
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
+\frac{\sigma_{X_1} \cdot \mathrm{E}\left[(X_1-\mathrm{E}[X_1]) (X_1-\mathrm{E}[X_1])\right] \cdot \sigma_{X_1}}{\sigma_{X_1} \, \sigma_{X_1}} & \ldots & \frac{\sigma_{X_1} \cdot \mathrm{E}\left[(X_1-\mathrm{E}[X_1]) (X_n-\mathrm{E}[X_n])\right] \cdot \sigma_{X_n}}{\sigma_{X_1} \, \sigma_{X_n}} \\
+\vdots & \ddots & \vdots \\
+\frac{\sigma_{X_n} \cdot \mathrm{E}\left[(X_n-\mathrm{E}[X_n]) (X_1-\mathrm{E}[X_1])\right] \cdot \sigma_{X_1}}{\sigma_{X_n} \, \sigma_{X_1}} & \ldots & \frac{\sigma_{X_n} \cdot \mathrm{E}\left[(X_n-\mathrm{E}[X_n]) (X_n-\mathrm{E}[X_n])\right] \cdot \sigma_{X_n}}{\sigma_{X_n} \, \sigma_{X_n}}
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
+\mathrm{E}\left[ (X_1-\mathrm{E}[X_1]) (X_1-\mathrm{E}[X_1]) \right] & \ldots & \mathrm{E}\left[ (X_1-\mathrm{E}[X_1]) (X_n-\mathrm{E}[X_n]) \right] \\
+\vdots & \ddots & \vdots \\
+\mathrm{E}\left[ (X_n-\mathrm{E}[X_n]) (X_1-\mathrm{E}[X_1]) \right] & \ldots & \mathrm{E}\left[ (X_n-\mathrm{E}[X_n]) (X_n-\mathrm{E}[X_n]) \right]
+\end{bmatrix}
+\end{split}
+\end{equation}
+
+which is nothing else than the definition of the covariance matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Penny, William (2006): "The correlation matrix"; in: \textit{Mathematics for Brain Imaging}, ch. 1.4.5, p. 28, eq. 1.60; URL: \url{https://ueapsylabs.co.uk/sites/wpenny/mbi/mbi_course.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P121 | shortcut: covmat-corrmat | author: JoramSoch | date: 2020-06-06, 06:02.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Precision matrix}]{Precision matrix} \label{sec:precmat}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X = [X_1, \ldots, X_n]^\mathrm{T}$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, the precision matrix of $X$ is defined as the inverse of the covariance matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) of $X$:
+
+\begin{equation} \label{eq:precmat-corrmat}
+\Lambda_{XX} = \Sigma_{XX}^{-1} =
+\begin{bmatrix}
+\mathrm{Cov}(X_1,X_1) & \ldots & \mathrm{Cov}(X_1,X_n) \\
+\vdots & \ddots & \vdots \\
+\mathrm{Cov}(X_n,X_1) & \ldots & \mathrm{Cov}(X_n,X_n)
+\end{bmatrix}^{-1} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Precision (statistics)"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-06; URL: \url{https://en.wikipedia.org/wiki/Precision_(statistics)}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D74 | shortcut: precmat | author: JoramSoch | date: 2020-06-06, 05:08.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Precision matrix and correlation matrix}]{Precision matrix and correlation matrix} \label{sec:covmat-corrmat}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, the precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) of $X$ can be expressed in terms of its correlation matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corrmat}) as follows
+
+\begin{equation} \label{eq:covmat-corrmat-precmat-corrmat}
+\Lambda_{XX} = \mathrm{D}_X^{-1} \cdot \mathrm{C}_{XX}^{-1} \cdot \mathrm{D}_X^{-1} \; ,
+\end{equation}
+
+where $\mathrm{D}_X^{-1}$ is a diagonal matrix with the inverse standard deviations ($\rightarrow$ Definition "std") of $X_1, \ldots, X_n$ as entries on the diagonal:
+
+\begin{equation} \label{eq:covmat-corrmat-invdiagmat}
+\mathrm{D}_X^{-1} = \mathrm{diag}(1/\sigma_{X_1},\ldots,1/\sigma_{X_n}) =
+\begin{bmatrix}
+\frac{1}{\sigma_{X_1}} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \frac{1}{\sigma_{X_n}}
+\end{bmatrix} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) is defined as the inverse of the covariance matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat})
+
+\begin{equation} \label{eq:covmat-corrmat-precmat-covmat}
+\Lambda_{XX} = \Sigma_{XX}^{-1}
+\end{equation}
+
+and the relation between covariance matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) and correlation matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corrmat}) is given by
+
+\begin{equation} \label{eq:covmat-corrmat-covmat-corrmat}
+\Sigma_{XX} = \mathrm{D}_X \cdot \mathrm{C}_{XX} \cdot \mathrm{D}_X
+\end{equation}
+
+where
+
+\begin{equation} \label{eq:covmat-corrmat-diagmat}
+\mathrm{D}_X = \mathrm{diag}(\sigma_{X_1},\ldots,\sigma_{X_n}) =
+\begin{bmatrix}
+\sigma_{X_1} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \sigma_{X_n}
+\end{bmatrix} \; .
+\end{equation}
+
+Using the matrix product property
+
+\begin{equation} \label{eq:covmat-corrmat-matprod-inv}
+\left(A \cdot B \cdot C\right)^{-1} = C^{-1} \cdot B^{-1} \cdot A^{-1}
+\end{equation}
+
+and the diagonal matrix property
+
+\begin{equation} \label{eq:covmat-corrmat-diagmat-inv}
+\mathrm{diag}(a_1,\ldots,a_n)^{-1} =
+\begin{bmatrix}
+a_1 & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & a_n
+\end{bmatrix}^{-1} =
+\begin{bmatrix}
+\frac{1}{a_1} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \frac{1}{a_n}
+\end{bmatrix} =
+\mathrm{diag}(1/a_1,\ldots,1/a_n) \; ,
+\end{equation}
+
+we obtain
+
+\begin{equation} \label{eq:covmat-corrmat-precmat-corrmat-qed}
+\begin{split}
+\Lambda_{XX} &\overset{\eqref{eq:covmat-corrmat-precmat-covmat}}{=} \Sigma_{XX}^{-1} \\
+&\overset{\eqref{eq:covmat-corrmat-covmat-corrmat}}{=} \left( \mathrm{D}_X \cdot \mathrm{C}_{XX} \cdot \mathrm{D}_X \right)^{-1} \\
+&\overset{\eqref{eq:covmat-corrmat-matprod-inv}}{=} \mathrm{D}_X^{-1} \cdot \mathrm{C}_{XX}^{-1} \cdot \mathrm{D}_X^{-1} \\
+&\overset{\eqref{eq:covmat-corrmat-diagmat-inv}}{=}
+\begin{bmatrix}
+\frac{1}{\sigma_{X_1}} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \frac{1}{\sigma_{X_n}}
+\end{bmatrix} \cdot
+\mathrm{C}_{XX}^{-1} \cdot
+\begin{bmatrix}
+\frac{1}{\sigma_{X_1}} & \ldots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \ldots & \frac{1}{\sigma_{X_n}}
+\end{bmatrix}
+\end{split}
+\end{equation}
+
+which conforms to equation \eqref{eq:covmat-corrmat-precmat-corrmat}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P122 | shortcut: covmat-corrmat | author: JoramSoch | date: 2020-06-06, 06:28.
+\vspace{1em}
+
+
+
+\subsection{Correlation}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:corr}
+\setcounter{equation}{0}
+
+\textbf{Definition:} The correlation of two random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$, also called Pearson product-moment correlation coefficient (PPMCC), is defined as the ratio of the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ relative to the product of their standard deviations ($\rightarrow$ Definition "std"):
+
+\begin{equation} \label{eq:corr-corr}
+\mathrm{Corr}(X,Y) = \frac{\sigma_{XY}}{\sigma_X \sigma_Y} = \frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathrm{Var}(X)} \sqrt{\mathrm{Var}(Y)}} = \frac{\mathrm{E}\left[ (X-\mathrm{E}[X]) (Y-\mathrm{E}[Y]) \right]}{\sqrt{\mathrm{E}\left[ (X-\mathrm{E}[X])^2 \right]} \sqrt{\mathrm{E}\left[ (Y-\mathrm{E}[Y])^2 \right]}} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Correlation and dependence"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-06; URL: \url{https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson's_product-moment_coefficient}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D71 | shortcut: corr | author: JoramSoch | date: 2020-06-02, 20:34.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Correlation matrix}]{Correlation matrix} \label{sec:corrmat}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X = [X_1, \ldots, X_n]^\mathrm{T}$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, the correlation matrix of $X$ is defined as the $n \times n$ matrix in which the entry $(i,j)$ is the correlation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corr}) of $X_i$ and $X_j$:
+
+\begin{equation} \label{eq:corrmat-corrmat}
+\mathrm{C}_{XX} =
+\begin{bmatrix}
+\mathrm{Corr}(X_1,X_1) & \ldots & \mathrm{Corr}(X_1,X_n) \\
+\vdots & \ddots & \vdots \\
+\mathrm{Corr}(X_n,X_1) & \ldots & \mathrm{Corr}(X_n,X_n)
+\end{bmatrix} =
+\begin{bmatrix}
+\frac{\mathrm{E}\left[(X_1-\mathrm{E}[X_1]) (X_1-\mathrm{E}[X_1])\right]}{\sigma_{X_1} \, \sigma_{X_1}} & \ldots & \frac{\mathrm{E}\left[(X_1-\mathrm{E}[X_1]) (X_n-\mathrm{E}[X_n])\right]}{\sigma_{X_1} \, \sigma_{X_n}} \\
+\vdots & \ddots & \vdots \\
+\frac{\mathrm{E}\left[(X_n-\mathrm{E}[X_n]) (X_1-\mathrm{E}[X_1])\right]}{\sigma_{X_n} \, \sigma_{X_1}} & \ldots & \frac{\mathrm{E}\left[(X_n-\mathrm{E}[X_n]) (X_n-\mathrm{E}[X_n])\right]}{\sigma_{X_n} \, \sigma_{X_n}}
+\end{bmatrix} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Correlation and dependence"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-06; URL: \url{https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_matrices}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D73 | shortcut: corrmat | author: JoramSoch | date: 2020-06-06, 04:56.
 \vspace{1em}
 
 
@@ -814,7 +1630,7 @@ and thus,
 
 
 
-\subsubsection[\textit{Log-Likelihood function}]{Log-Likelihood function} \label{sec:llf}
+\subsubsection[\textit{Log-likelihood function}]{Log-likelihood function} \label{sec:llf}
 \setcounter{equation}{0}
 
 \textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the logarithm of the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the distribution of $y$ given $\theta$ is called the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) of $m$:
@@ -1184,7 +2000,7 @@ p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
 \subsubsection[\textbf{Bayes' theorem}]{Bayes' theorem} \label{sec:bayes-th}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $A$ and $B$ be two arbitrary statements about random variables ($\rightarrow$ Definition "rvar"), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Then, the conditional probability that $A$ is true, given that $B$ is true, is equal to
+\textbf{Theorem:} Let $A$ and $B$ be two arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Then, the conditional probability that $A$ is true, given that $B$ is true, is equal to
 
 \begin{equation} \label{eq:bayes-th-BT}
 p(A|B) = \frac{p(B|A) \, p(A)}{p(B)} \; .
@@ -1233,7 +2049,7 @@ p(A|B) \overset{\eqref{eq:bayes-th-JP}}{=} \frac{p(B|A) \, p(A)}{p(B)} \; .
 \subsubsection[\textbf{Bayes' rule}]{Bayes' rule} \label{sec:bayes-rule}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $A_1$, $A_2$ and $B$ be arbitrary statements about random variables ($\rightarrow$ Definition "rvar") where $A_1$ and $A_2$ are mutually exclusive. Then, Bayes' rule states that the posterior odds ($\rightarrow$ Definition "post-odd") are equal to the Bayes factor ($\rightarrow$ Definition "bf") times the prior odds ($\rightarrow$ Definition "prior-odd"), i.e.
+\textbf{Theorem:} Let $A_1$, $A_2$ and $B$ be arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) where $A_1$ and $A_2$ are mutually exclusive. Then, Bayes' rule states that the posterior odds ($\rightarrow$ Definition "post-odd") are equal to the Bayes factor ($\rightarrow$ Definition "bf") times the prior odds ($\rightarrow$ Definition "prior-odd"), i.e.
 
 \begin{equation} \label{eq:bayes-rule-bayes-rule}
 \frac{p(A_1|B)}{p(A_2|B)} = \frac{p(B|A_1)}{p(B|A_2)} \cdot \frac{p(A_1)}{p(A_2)} \; .
@@ -1442,7 +2258,7 @@ which is equivalent to the confidence interval given by \eqref{eq:ci-wilks-ci-wi
 \subsubsection[\textit{Definition}]{Definition} \label{sec:ent}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition "rvar") with possible outcomes $x_i, \; i = 1,\ldots,k$ and the (observed or assumed) probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x) = f_X(x)$. Then, the entropy (also referred to as "Shannon entropy") of $X$ is defined as
+\textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $x_i, \; i = 1,\ldots,k$ and the (observed or assumed) probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x) = f_X(x)$. Then, the entropy (also referred to as "Shannon entropy") of $X$ is defined as
 
 \begin{equation} \label{eq:ent-ent}
 \mathrm{H}(X) = - \sum_{i=1}^{k} p(x_i) \cdot \log_b p(x_i)
@@ -1467,7 +2283,7 @@ where $b$ is the base of the logarithm specifying in which unit the entropy is d
 \subsubsection[\textbf{Non-negativity}]{Non-negativity} \label{sec:ent-nonneg}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} The entropy of a discrete random variable ($\rightarrow$ Definition "rvar") is a non-negative number:
+\textbf{Theorem:} The entropy of a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) is a non-negative number:
 
 \begin{equation} \label{eq:ent-nonneg-ent-nonneg}
 \mathrm{H}(X) \geq 0 \; .
@@ -1523,7 +2339,7 @@ Taking this together, each addend in \eqref{eq:ent-nonneg-ent-dev} is positive o
 \subsubsection[\textit{Conditional entropy}]{Conditional entropy} \label{sec:ent-cond}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x)$ and $p(y)$. Then, the conditional entropy of $Y$ given $X$ or, entropy of $Y$ conditioned on $X$, is defined as
+\textbf{Definition:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x)$ and $p(y)$. Then, the conditional entropy of $Y$ given $X$ or, entropy of $Y$ conditioned on $X$, is defined as
 
 \begin{equation} \label{eq:ent-cond-ent-cond}
 \mathrm{H}(Y|X) = \sum_{x \in \mathcal{X}} p(x) \cdot \mathrm{H}(Y|X=x)
@@ -1548,7 +2364,7 @@ where $\mathrm{H}(Y \vert X=x)$ is the (marginal) entropy ($\rightarrow$ Definit
 \subsubsection[\textit{Joint entropy}]{Joint entropy} \label{sec:ent-joint}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x,y)$. Then, the joint entropy of $X$ and $Y$ is defined as
+\textbf{Definition:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x,y)$. Then, the joint entropy of $X$ and $Y$ is defined as
 
 \begin{equation} \label{eq:ent-joint-ent-joint}
 \mathrm{H}(X,Y) = - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \cdot \log_b p(x,y)
@@ -1575,7 +2391,7 @@ where $b$ is the base of the logarithm specifying in which unit the entropy is d
 \subsubsection[\textit{Definition}]{Definition} \label{sec:dent}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and the (estimated or assumed) probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x) = f_X(x)$. Then, the differential entropy (also referred to as "continuous entropy") of $X$ is defined as
+\textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and the (estimated or assumed) probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x) = f_X(x)$. Then, the differential entropy (also referred to as "continuous entropy") of $X$ is defined as
 
 \begin{equation} \label{eq:dent-dent}
 \mathrm{h}(X) = - \int_{\mathcal{X}} p(x) \log_b p(x) \, \mathrm{d}x
@@ -1604,7 +2420,7 @@ where $b$ is the base of the logarithm specifying in which unit the entropy is d
 
 
 \vspace{1em}
-\textbf{Proof:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}) with minimum $0$ and maximum $1/2$:
+\textbf{Proof:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}) with minimum $0$ and maximum $1/2$:
 
 \begin{equation} \label{eq:dent-neg-X}
 X \sim \mathcal{U}(0, 1/2) \; .
@@ -1647,7 +2463,7 @@ which is negative for any base $b > 1$.
 \subsubsection[\textit{Conditional differential entropy}]{Conditional differential entropy} \label{sec:dent-cond}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x)$ and $p(y)$. Then, the conditional differential entropy of $Y$ given $X$ or, differential entropy of $Y$ conditioned on $X$, is defined as
+\textbf{Definition:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x)$ and $p(y)$. Then, the conditional differential entropy of $Y$ given $X$ or, differential entropy of $Y$ conditioned on $X$, is defined as
 
 \begin{equation} \label{eq:dent-cond-dent-cond}
 \mathrm{h}(Y|X) = \int_{x \in \mathcal{X}} p(x) \cdot \mathrm{h}(Y|X=x)
@@ -1671,7 +2487,7 @@ where $\mathrm{h}(Y \vert X=x)$ is the (marginal) differential entropy ($\righta
 \subsubsection[\textit{Joint differential entropy}]{Joint differential entropy} \label{sec:dent-joint}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x,y)$. Then, the joint differential entropy of $X$ and $Y$ is defined as
+\textbf{Definition:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and $\mathcal{Y}$ and joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x,y)$. Then, the joint differential entropy of $X$ and $Y$ is defined as
 
 \begin{equation} \label{eq:dent-joint-dent-joint}
 \mathrm{h}(X,Y) = - \int_{x \in \mathcal{X}} \int_{y \in \mathcal{Y}} p(x,y) \cdot \log_b p(x,y) \, \mathrm{d}y \, \mathrm{d}x
@@ -1699,7 +2515,7 @@ where $b$ is the base of the logarithm specifying in which unit the differential
 
 \textbf{Definition:}
 
-1) The mutual information of two discrete random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ is defined as
+1) The mutual information of two discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ is defined as
 
 \begin{equation} \label{eq:mi-mi-disc}
 \mathrm{I}(X,Y) = - \sum_{x \in \mathcal{X}} \sum_{x \in \mathcal{Y}} p(x,y) \cdot \log \frac{p(x,y)}{p(x) \cdot p(y)}
@@ -1707,7 +2523,7 @@ where $b$ is the base of the logarithm specifying in which unit the differential
 
 where $p(x)$ and $p(y)$ are the probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) mass function of $X$ and $Y$.
 
-2) The mutual information of two continuous random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ is defined as
+2) The mutual information of two continuous random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ is defined as
 
 \begin{equation} \label{eq:mi-mi-cont}
 \mathrm{I}(X,Y) = - \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \cdot \log \frac{p(x,y)}{p(x) \cdot p(y)} \, \mathrm{d}y \, \mathrm{d}x
@@ -1732,7 +2548,7 @@ where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Def
 \subsubsection[\textbf{Relation to marginal and conditional entropy}]{Relation to marginal and conditional entropy} \label{sec:dmi-mce}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
+\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:dmi-mce-dmi-mce}
 \begin{split}
@@ -1812,7 +2628,7 @@ The conditioning of $X$ on $Y$ in this proof is without loss of generality. Thus
 \subsubsection[\textbf{Relation to marginal and joint entropy}]{Relation to marginal and joint entropy} \label{sec:dmi-mje}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
+\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:dmi-mje-dmi-mje}
 \mathrm{I}(X,Y) = \mathrm{H}(X) + \mathrm{H}(Y) - \mathrm{H}(X,Y)
@@ -1881,7 +2697,7 @@ we can finally show:
 \subsubsection[\textbf{Relation to joint and conditional entropy}]{Relation to joint and conditional entropy} \label{sec:dmi-jce}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
+\textbf{Theorem:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:dmi-jce-dmi-jce}
 \mathrm{I}(X,Y) = \mathrm{H}(X,Y) - \mathrm{H}(X|Y) - \mathrm{H}(Y|X)
@@ -1951,7 +2767,7 @@ which proves the identity given above.
 
 \textbf{Definition:}
 
-1) The mutual information of two discrete random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ is defined as
+1) The mutual information of two discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ is defined as
 
 \begin{equation} \label{eq:mi-mi-disc}
 \mathrm{I}(X,Y) = - \sum_{x \in \mathcal{X}} \sum_{x \in \mathcal{Y}} p(x,y) \cdot \log \frac{p(x,y)}{p(x) \cdot p(y)}
@@ -1959,7 +2775,7 @@ which proves the identity given above.
 
 where $p(x)$ and $p(y)$ are the probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ and $Y$ and $p(x,y)$ is the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) mass function of $X$ and $Y$.
 
-2) The mutual information of two continuous random variables ($\rightarrow$ Definition "rvar") $X$ and $Y$ is defined as
+2) The mutual information of two continuous random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ is defined as
 
 \begin{equation} \label{eq:mi-mi-cont}
 \mathrm{I}(X,Y) = - \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \cdot \log \frac{p(x,y)}{p(x) \cdot p(y)} \, \mathrm{d}y \, \mathrm{d}x
@@ -1984,7 +2800,7 @@ where $p(x)$ and $p(y)$ are the probability density functions ($\rightarrow$ Def
 \subsubsection[\textbf{Relation to marginal and conditional differential entropy}]{Relation to marginal and conditional differential entropy} \label{sec:cmi-mcde}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
+\textbf{Theorem:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:cmi-mcde-cmi-mcde}
 \begin{split}
@@ -2061,7 +2877,7 @@ The conditioning of $X$ on $Y$ in this proof is without loss of generality. Thus
 \subsubsection[\textbf{Relation to marginal and joint differential entropy}]{Relation to marginal and joint differential entropy} \label{sec:cmi-mjde}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
+\textbf{Theorem:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:cmi-mjde-cmi-mjde}
 \mathrm{I}(X,Y) = \mathrm{h}(X) + \mathrm{h}(Y) - \mathrm{h}(X,Y)
@@ -2130,7 +2946,7 @@ we can finally show:
 \subsubsection[\textbf{Relation to joint and conditional differential entropy}]{Relation to joint and conditional differential entropy} \label{sec:cmi-jcde}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition "rvar") with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
+\textbf{Theorem:} Let $X$ and $Y$ be continuous random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) $p(x,y)$ for $x \in \mathcal{X}$ and $y \in \mathcal{Y}$. Then, the mutual information ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ can be expressed as
 
 \begin{equation} \label{eq:cmi-jcde-dmi-jce}
 \mathrm{I}(X,Y) = \mathrm{h}(X,Y) - \mathrm{h}(X|Y) - \mathrm{h}(Y|X)
@@ -2198,7 +3014,7 @@ which proves the identity given above.
 \subsubsection[\textit{Definition}]{Definition} \label{sec:kl}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") with possible outcomes $\mathcal{X}$ and let $P$ and $Q$ be two probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) on $X$.
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and let $P$ and $Q$ be two probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) on $X$.
 
 1) The Kullback-Leibler divergence of $P$ from $Q$ for a discrete random variable $X$ is defined as
 
@@ -2230,6 +3046,293 @@ where $p(x)$ and $q(x)$ are the probability density functions ($\rightarrow$ Def
 
 
 
+\subsubsection[\textbf{Non-negativity}]{Non-negativity} \label{sec:kl-nonneg}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is always non-negative
+
+\begin{equation} \label{eq:kl-nonneg-KL-nonneg}
+\mathrm{KL}[P||Q] \geq 0
+\end{equation}
+
+with $\mathrm{KL}[P \vert \vert Q] = 0$, if and only if $P = Q$.
+
+
+\vspace{1em}
+\textbf{Proof:} The discrete Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is defined as
+
+\begin{equation} \label{eq:kl-nonneg-KL}
+\mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)} \, \mathrm{d}x
+\end{equation}
+
+which can be reformulated into
+
+\begin{equation} \label{eq:kl-nonneg-KL-dev}
+\mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log p(x) - \sum_{x \in \mathcal{X}} p(x) \cdot \log q(x) \, \mathrm{d}x \; .
+\end{equation}
+
+Gibbs' inequality ($\rightarrow$ Proof "gibbs-ineq") states that the entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of a probability distribution is always less than or equal to the cross-entropy ($\rightarrow$ Definition "ent-cross") with another probability distribution – with equality only if the distributions are identical –,
+
+\begin{equation} \label{eq:kl-nonneg-Gibbs-ineq}
+- \sum_{i=1}^n p(x_i) \, \log p(x_i) \leq - \sum_{i=1}^n p(x_i) \, \log q(x_i)
+\end{equation}
+
+which can be reformulated into
+
+\begin{equation} \label{eq:kl-nonneg-Gibbs-ineq-dev}
+\sum_{i=1}^n p(x_i) \, \log p(x_i) - \sum_{i=1}^n p(x_i) \, \log q(x_i) \geq 0 \; .
+\end{equation}
+
+Applying \eqref{eq:kl-nonneg-Gibbs-ineq-dev} to \eqref{eq:kl-nonneg-KL-dev}, this proves equation \eqref{eq:kl-nonneg-KL-nonneg}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Kullback-Leibler divergence"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-31; URL: \url{https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P117 | shortcut: kl-nonneg | author: JoramSoch | date: 2020-05-31, 23:43.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Additivity for independent distributions}]{Additivity for independent distributions} \label{sec:kl-add}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is additive for independent distributions, i.e.
+
+\begin{equation} \label{eq:kl-add-KL-add}
+\mathrm{KL}[P||Q] = \mathrm{KL}[P_1||Q_1] + \mathrm{KL}[P_2||Q_2]
+\end{equation}
+
+where $P_1$ and $P_2$ are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) with the joint distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-joint}) $P$, such that $p(x,y) = p_1(x) \, p_2(y)$, and equivalently for $Q_1$, $Q_2$ and $Q$.
+
+
+\vspace{1em}
+\textbf{Proof:} The continuous Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is defined as
+
+\begin{equation} \label{eq:kl-add-KL}
+\mathrm{KL}[P||Q] = \int_{\mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)} \, \mathrm{d}x
+\end{equation}
+
+which, applied to the joint distributions $P$ and $Q$, yields
+
+\begin{equation} \label{eq:kl-add-KL-s1}
+\mathrm{KL}[P||Q] = \int_{\mathcal{X}} \int_{\mathcal{Y}} p(x,y) \cdot \log \frac{p(x,y)}{q(x,y)} \, \mathrm{d}y \, \mathrm{d}x \; .
+\end{equation}
+
+Applying $p(x,y) = p_1(x) \, p_2(y)$ and $q(x,y) = q_1(x) \, q_2(y)$, we have
+
+\begin{equation} \label{eq:kl-add-KL-s2}
+\mathrm{KL}[P||Q] = \int_{\mathcal{X}} \int_{\mathcal{Y}} p_1(x) \, p_2(y) \cdot \log \frac{p_1(x) \, p_2(y)}{q_1(x) \, q_2(y)} \, \mathrm{d}y \, \mathrm{d}x \; .
+\end{equation}
+
+Now we can separate the logarithm and evaluate the integrals:
+
+\begin{equation} \label{eq:kl-add-KL-qed}
+\begin{split}
+\mathrm{KL}[P||Q] &= \int_{\mathcal{X}} \int_{\mathcal{Y}} p_1(x) \, p_2(y) \cdot \left( \log \frac{p_1(x)}{q_1(x)} + \log \frac{p_2(y)}{q_2(y)} \right) \, \mathrm{d}y \, \mathrm{d}x \\
+&= \int_{\mathcal{X}} \int_{\mathcal{Y}} p_1(x) \, p_2(y) \cdot \log \frac{p_1(x)}{q_1(x)} \, \mathrm{d}y \, \mathrm{d}x + \int_{\mathcal{X}} \int_{\mathcal{Y}} p_1(x) \, p_2(y) \cdot \log \frac{p_2(y)}{q_2(y)} \, \mathrm{d}y \, \mathrm{d}x \\
+&= \int_{\mathcal{X}} p_1(x) \cdot \log \frac{p_1(x)}{q_1(x)} \int_{\mathcal{Y}} p_2(y) \, \mathrm{d}y \, \mathrm{d}x + \int_{\mathcal{Y}} p_2(y) \cdot \log \frac{p_2(y)}{q_2(y)} \int_{\mathcal{X}} p_1(x) \, \mathrm{d}x \, \mathrm{d}y \\
+&= \int_{\mathcal{X}} p_1(x) \cdot \log \frac{p_1(x)}{q_1(x)} \, \mathrm{d}x + \int_{\mathcal{Y}} p_2(y) \cdot \log \frac{p_2(y)}{q_2(y)} \, \mathrm{d}y \\
+&\overset{\eqref{eq:kl-add-KL}}{=} \mathrm{KL}[P_1||Q_1] + \mathrm{KL}[P_2||Q_2] \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Kullback-Leibler divergence"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-31; URL: \url{https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P116 | shortcut: kl-add | author: JoramSoch | date: 2020-05-31, 23:26.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Invariance under parameter transformation}]{Invariance under parameter transformation} \label{sec:kl-inv}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is invariant under parameter transformation, i.e.
+
+\begin{equation} \label{eq:kl-inv-KL-inv}
+\mathrm{KL}[p(x)||q(x)] = \mathrm{KL}[p(y)||q(y)]
+\end{equation}
+
+where $y(x) = mx + n$ is an affine transformation of $x$ and $p(x)$ and $q(x)$ are the probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) $P$ and $Q$ on the continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$.
+
+
+\vspace{1em}
+\textbf{Proof:} The continuous Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) (KL divergence) is defined as
+
+\begin{equation} \label{eq:kl-inv-KL}
+\mathrm{KL}[p(x)||q(x)] = \int_{a}^{b} p(x) \cdot \log \frac{p(x)}{q(x)} \, \mathrm{d}x
+\end{equation}
+
+where $a = \mathrm{min}(\mathcal{X})$ and $b = \mathrm{max}(\mathcal{X})$ are the lower and upper bound of the possible outcomes $\mathcal{X}$ of $X$.
+
+Due to the identity of the differentials
+
+\begin{equation} \label{eq:kl-inv-diff}
+\begin{split}
+p(x) \, \mathrm{d}x &= p(y) \, \mathrm{d}y \\
+q(x) \, \mathrm{d}x &= q(y) \, \mathrm{d}y
+\end{split}
+\end{equation}
+
+which can be rearranged into
+
+\begin{equation} \label{eq:kl-inv-diff-dev}
+\begin{split}
+p(x) &= p(y) \, \frac{\mathrm{d}y}{\mathrm{d}x} \\
+q(x) &= q(y) \, \frac{\mathrm{d}y}{\mathrm{d}x} \; ,
+\end{split}
+\end{equation}
+
+the KL divergence can be evaluated as follows:
+
+\begin{equation} \label{eq:kl-inv-MDE-DCE}
+\begin{split}
+\mathrm{KL}[p(x)||q(x)] &= \int_{a}^{b} p(x) \cdot \log \frac{p(x)}{q(x)} \, \mathrm{d}x \\
+&= \int_{y(a)}^{y(b)} p(y) \, \frac{\mathrm{d}y}{\mathrm{d}x} \cdot \log \left( \frac{p(y) \, \frac{\mathrm{d}y}{\mathrm{d}x}}{q(y) \, \frac{\mathrm{d}y}{\mathrm{d}x}} \right) \, \mathrm{d}x \\
+&= \int_{y(a)}^{y(b)} p(y) \cdot \log \frac{p(y)}{q(y)} \, \mathrm{d}y \\
+&= \mathrm{KL}[p(y)||q(y)] \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Kullback-Leibler divergence"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-27; URL: \url{https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Properties}.
+\item shimao (2018): "KL divergence invariant to affine transformation?"; in: \textit{StackExchange CrossValidated}, retrieved on 2020-05-28; URL: \url{https://stats.stackexchange.com/questions/341922/kl-divergence-invariant-to-affine-transformation}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P115 | shortcut: kl-inv | author: JoramSoch | date: 2020-05-28, 00:18.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Relation to discrete entropy}]{Relation to discrete entropy} \label{sec:kl-ent}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and let $P$ and $Q$ be two probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) on $X$. Then, the Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) of $P$ from $Q$ can be expressed as
+
+\begin{equation} \label{eq:kl-ent-kl-ent}
+\mathrm{KL}[P||Q] = \mathrm{H}(P,Q) - \mathrm{H}(P)
+\end{equation}
+
+where $\mathrm{H}(P,Q)$ is the cross-entropy ($\rightarrow$ Definition "ent-cross") of $P$ and $Q$ and $\mathrm{H}(P)$ is the marginal entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of $P$.
+
+
+\vspace{1em}
+\textbf{Proof:} The discrete Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is defined as
+
+\begin{equation} \label{eq:kl-ent-KL}
+\mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)}
+\end{equation}
+
+where $p(x)$ and $q(x)$ are the probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $P$ and $Q$.
+
+Separating the logarithm, we have:
+
+\begin{equation} \label{eq:kl-ent-KL-dev}
+\mathrm{KL}[P||Q] = - \sum_{x \in \mathcal{X}} p(x) \, \log q(x) + \sum_{x \in \mathcal{X}} p(x) \, \log p(x) \; .
+\end{equation}
+
+Now considering the definitions of marginal entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) and cross-entropy ($\rightarrow$ Definition "ent-cross")
+
+\begin{equation} \label{eq:kl-ent-ME-CE}
+\begin{split}
+\mathrm{H}(P) &= - \sum_{x \in \mathcal{X}} p(x) \, \log p(x) \\
+\mathrm{H}(P,Q) &= - \sum_{x \in \mathcal{X}} p(x) \, \log q(x) \; ,
+\end{split}
+\end{equation}
+
+we can finally show:
+
+\begin{equation} \label{eq:kl-ent-KL-qed}
+\mathrm{KL}[P||Q] = \mathrm{H}(P,Q) - \mathrm{H}(P) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Kullback-Leibler divergence"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-27; URL: \url{https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Motivation}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P113 | shortcut: kl-ent | author: JoramSoch | date: 2020-05-27, 23:20.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Relation to differential entropy}]{Relation to differential entropy} \label{sec:kl-dent}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and let $P$ and $Q$ be two probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) on $X$. Then, the Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) of $P$ from $Q$ can be expressed as
+
+\begin{equation} \label{eq:kl-dent-kl-dent}
+\mathrm{KL}[P||Q] = \mathrm{h}(P,Q) - \mathrm{h}(P)
+\end{equation}
+
+where $\mathrm{h}(P,Q)$ is the differential cross-entropy ($\rightarrow$ Definition "dent-cross") of $P$ and $Q$ and $\mathrm{h}(P)$ is the marginal differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) of $P$.
+
+
+\vspace{1em}
+\textbf{Proof:} The continuous Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is defined as
+
+\begin{equation} \label{eq:kl-dent-KL}
+\mathrm{KL}[P||Q] = \int_{\mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)} \, \mathrm{d}x
+\end{equation}
+
+where $p(x)$ and $q(x)$ are the probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $P$ and $Q$.
+
+Separating the logarithm, we have:
+
+\begin{equation} \label{eq:kl-dent-KL-dev}
+\mathrm{KL}[P||Q] = - \int_{\mathcal{X}} p(x) \, \log q(x) \, \mathrm{d}x + \int_{\mathcal{X}} p(x) \, \log p(x) \, \mathrm{d}x \; .
+\end{equation}
+
+Now considering the definitions of marginal differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) and differential cross-entropy ($\rightarrow$ Definition "dent-cross")
+
+\begin{equation} \label{eq:kl-dent-MDE-DCE}
+\begin{split}
+\mathrm{h}(P) &= - \int_{\mathcal{X}} p(x) \, \log p(x) \, \mathrm{d}x \\
+\mathrm{h}(P,Q) &= - \int_{\mathcal{X}} p(x) \, \log q(x) \, \mathrm{d}x \; ,
+\end{split}
+\end{equation}
+
+we can finally show:
+
+\begin{equation} \label{eq:kl-dent-KL-qed}
+\mathrm{KL}[P||Q] = \mathrm{h}(P,Q) - \mathrm{h}(P) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Kullback-Leibler divergence"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-27; URL: \url{https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Motivation}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P114 | shortcut: kl-dent | author: JoramSoch | date: 2020-05-27, 23:32.
+\vspace{1em}
+
+
+
 
 
 % Chapter 2 %
@@ -2243,7 +3346,7 @@ where $p(x)$ and $q(x)$ are the probability density functions ($\rightarrow$ Def
 \subsubsection[\textit{Definition}]{Definition} \label{sec:bern}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to follow a Bernoulli distribution with success probability $p$
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to follow a Bernoulli distribution with success probability $p$
 
 \begin{equation} \label{eq:bern-bern}
 X \sim \mathrm{Bern}(p) \; ,
@@ -2268,7 +3371,7 @@ if $X = 1$ with probability ($\rightarrow$ Definition \ref{sec:General Theorems}
 \subsubsection[\textbf{Probability mass function}]{Probability mass function} \label{sec:bern-pmf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a Bernoulli distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a Bernoulli distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}):
 
 \begin{equation} \label{eq:bern-pmf-Bern}
 X \sim \mathrm{Bern}(p) \; .
@@ -2305,7 +3408,7 @@ p \; , & \text{if} \; x = 1 \\
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:bern-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a Bernoulli distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a Bernoulli distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}):
 
 \begin{equation} \label{eq:bern-mean-bern}
 X \sim \mathrm{Bern}(p) \; .
@@ -2354,13 +3457,13 @@ Since there are only two possible outcomes for a Bernoulli random variable ($\ri
 \subsubsection[\textit{Definition}]{Definition} \label{sec:bin}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to follow a binomial distribution with number of trials $n$ and success probability $p$
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to follow a binomial distribution with number of trials $n$ and success probability $p$
 
 \begin{equation} \label{eq:bin-bin}
 X \sim \mathrm{Bin}(n, p) \; ,
 \end{equation}
 
-if $X$ is the number of successes observed in $n$ independent ($\rightarrow$ Definition "ind") trials, where each trial has two possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) (success/failure) and the probability of success and failure are identical across trials ($p$/$q = 1-p$).
+if $X$ is the number of successes observed in $n$ independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) trials, where each trial has two possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) (success/failure) and the probability of success and failure are identical across trials ($p$/$q = 1-p$).
 
 
 \vspace{1em}
@@ -2379,7 +3482,7 @@ if $X$ is the number of successes observed in $n$ independent ($\rightarrow$ Def
 \subsubsection[\textbf{Probability mass function}]{Probability mass function} \label{sec:bin-pmf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
 
 \begin{equation} \label{eq:bin-pmf-bin}
 X \sim \mathrm{Bin}(n,p) \; .
@@ -2393,7 +3496,7 @@ f_X(x) = {n \choose x} \, p^x \, (1-p)^{n-x} \; .
 
 
 \vspace{1em}
-\textbf{Proof:} A binomial variable is defined as ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}) the number of successes observed in $n$ independent ($\rightarrow$ Definition "ind") trials, where each trial has two possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) (success/failure) and the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of success and failure are identical across trials ($p$/$q = 1-p$).
+\textbf{Proof:} A binomial variable is defined as ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}) the number of successes observed in $n$ independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) trials, where each trial has two possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) (success/failure) and the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of success and failure are identical across trials ($p$/$q = 1-p$).
 
 If one has obtained $x$ successes in $n$ trials, one has also obtained $(n-x)$ failures. The probability of a particular series of $x$ successes and $(n-x)$ failures, when order does matter, is
 
@@ -2431,7 +3534,7 @@ which is equivalent to the expression above.
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:bin-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
 
 \begin{equation} \label{eq:bin-mean-bin}
 X \sim \mathrm{Bin}(n,p) \; .
@@ -2482,10 +3585,41 @@ With the expected value of the Bernoulli distribution ($\rightarrow$ Proof \ref{
 
 \subsection{Poisson distribution}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:poiss}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to follow a Poisson distribution with rate $\lambda$
+
+\begin{equation} \label{eq:poiss-poiss}
+X \sim \mathrm{Poiss}(\lambda) \; ,
+\end{equation}
+
+if and only if its probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) is given by
+
+\begin{equation} \label{eq:poiss-poiss-pmf}
+\mathrm{Poiss}(x; \lambda) = \frac{\lambda^x \, e^{-\lambda}}{x!}
+\end{equation}
+
+where $x \in \mathbb{N}_0$ and $\lambda > 0$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Poisson distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-25; URL: \url{https://en.wikipedia.org/wiki/Poisson_distribution#Definitions}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D62 | shortcut: poiss | author: JoramSoch | date: 2020-05-25, 23:34.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Probability mass function}]{Probability mass function} \label{sec:poiss-pmf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a Poisson distribution ($\rightarrow$ Definition "poiss"):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a Poisson distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:poiss}):
 
 \begin{equation} \label{eq:poiss-pmf-Poiss}
 X \sim \mathrm{Poiss}(\lambda) \; .
@@ -2499,7 +3633,7 @@ f_X(x) = \frac{\lambda^x \, e^{-\lambda}}{x!}, \; x \in \mathbb{N}_0 \; .
 
 
 \vspace{1em}
-\textbf{Proof:} This follows directly from the definition of the Poisson distribution ($\rightarrow$ Definition "poiss").
+\textbf{Proof:} This follows directly from the definition of the Poisson distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:poiss}).
 
 
 \vspace{1em}
@@ -2522,7 +3656,7 @@ f_X(x) = \frac{\lambda^x \, e^{-\lambda}}{x!}, \; x \in \mathbb{N}_0 \; .
 \subsubsection[\textit{Definition}]{Definition} \label{sec:cat}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec"). Then, $X$ is said to follow a categorical distribution with success probability $p_1, \ldots, p_k$
+\textbf{Definition:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, $X$ is said to follow a categorical distribution with success probability $p_1, \ldots, p_k$
 
 \begin{equation} \label{eq:cat-cat}
 X \sim \mathrm{Cat}(\left[p_1, \ldots, p_k \right]) \; ,
@@ -2547,7 +3681,7 @@ if $X = e_i$ with probability ($\rightarrow$ Definition \ref{sec:General Theorem
 \subsubsection[\textbf{Probability mass function}]{Probability mass function} \label{sec:cat-pmf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a categorical distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}):
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) following a categorical distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}):
 
 \begin{equation} \label{eq:cat-pmf-cat}
 X \sim \mathrm{Cat}(\left[p_1, \ldots, p_k \right]) \; .
@@ -2587,7 +3721,7 @@ where $e_1, \ldots, e_k$ are the $1 \times k$ elementary row vectors.
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:cat-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a categorical distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}):
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) following a categorical distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}):
 
 \begin{equation} \label{eq:cat-mean-cat}
 X \sim \mathrm{Cat}(\left[p_1, \ldots, p_k \right]) \; .
@@ -2630,13 +3764,13 @@ Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theo
 \subsubsection[\textit{Definition}]{Definition} \label{sec:mult}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec"). Then, $X$ is said to follow a multinomial distribution with number of trials $n$ and category probabilities $p_1, \ldots, p_k$
+\textbf{Definition:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, $X$ is said to follow a multinomial distribution with number of trials $n$ and category probabilities $p_1, \ldots, p_k$
 
 \begin{equation} \label{eq:mult-mult}
 X \sim \mathrm{Mult}(n, \left[p_1, \ldots, p_k \right]) \; ,
 \end{equation}
 
-if $X$ are the numbers of observations belonging to $k$ distinct categories in $n$ independent ($\rightarrow$ Definition "ind") trials, where each trial has $k$ possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}) and the category probabilities are identical across trials.
+if $X$ are the numbers of observations belonging to $k$ distinct categories in $n$ independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) trials, where each trial has $k$ possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}) and the category probabilities are identical across trials.
 
 
 \vspace{1em}
@@ -2655,7 +3789,7 @@ if $X$ are the numbers of observations belonging to $k$ distinct categories in $
 \subsubsection[\textbf{Probability mass function}]{Probability mass function} \label{sec:mult-pmf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a multinomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}):
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) following a multinomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}):
 
 \begin{equation} \label{eq:mult-pmf-mult}
 X \sim \mathrm{Mult}(n, \left[p_1, \ldots, p_k \right]) \; .
@@ -2669,7 +3803,7 @@ f_X(x) = {n \choose {x_1, \ldots, x_k}} \, \prod_{i=1}^k {p_i}^{x_i} \; .
 
 
 \vspace{1em}
-\textbf{Proof:} A multinomial variable is defined as ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}) a vector of the numbers of observations belonging to $k$ distinct categories in $n$ independent ($\rightarrow$ Definition "ind") trials, where each trial has $k$ possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}) and the category probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) are identical across trials.
+\textbf{Proof:} A multinomial variable is defined as ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}) a vector of the numbers of observations belonging to $k$ distinct categories in $n$ independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) trials, where each trial has $k$ possible outcomes ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cat}) and the category probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) are identical across trials.
 
 The probability of a particular series of $x_1$ observations for category $1$, $x_2$ observations for category $2$ etc., when order does matter, is
 
@@ -2707,7 +3841,7 @@ which is equivalent to the expression above.
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:mult-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a multinomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}):
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) following a multinomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mult}):
 
 \begin{equation} \label{eq:mult-mean-mult}
 X \sim \mathrm{Mult}(n,\left[p_1, \ldots, p_k \right]) \; .
@@ -2763,7 +3897,7 @@ With the expected value of the categorical distribution ($\rightarrow$ Proof \re
 \subsubsection[\textit{Definition}]{Definition} \label{sec:cuni}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to be uniformly distributed with minimum $a$ and maximum $b$
+\textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to be uniformly distributed with minimum $a$ and maximum $b$
 
 \begin{equation} \label{eq:cuni-cuni}
 X \sim \mathcal{U}(a, b) \; ,
@@ -2788,7 +3922,7 @@ if and only if each value between and including $a$ and $b$ occurs with the same
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:cuni-pdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
 
 \begin{equation} \label{eq:cuni-pdf-cuni}
 X \sim \mathcal{U}(a, b) \; .
@@ -2854,7 +3988,7 @@ c(a,b) &= b-a \; .
 \subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:cuni-cdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
 
 \begin{equation} \label{eq:cuni-cdf-cuni}
 X \sim \mathcal{U}(a, b) \; .
@@ -2937,7 +4071,7 @@ This completes the proof.
 \subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:cuni-qf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
 
 \begin{equation} \label{eq:cuni-qf-cuni}
 X \sim \mathcal{U}(a, b) \; .
@@ -2995,7 +4129,7 @@ x &= bp + a(1-p) = Q_X(p) \; .
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:cuni-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
 
 \begin{equation} \label{eq:cuni-mean-cuni}
 X \sim \mathcal{U}(a, b) \; .
@@ -3043,7 +4177,7 @@ With the probability density function of the continuous uniform distribution ($\
 \subsubsection[\textbf{Median}]{Median} \label{sec:cuni-med}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
 
 \begin{equation} \label{eq:cuni-med-cuni}
 X \sim \mathcal{U}(a, b) \; .
@@ -3103,7 +4237,7 @@ Setting $p = 1/2$, we obtain:
 \subsubsection[\textbf{Mode}]{Mode} \label{sec:cuni-med}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
 
 \begin{equation} \label{eq:cuni-med-cuni}
 X \sim \mathcal{U}(a, b) \; .
@@ -3160,7 +4294,7 @@ any value in the interval $[a,b]$ may be considered the mode of $X$.
 \subsubsection[\textit{Definition}]{Definition} \label{sec:norm}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to be normally distributed with mean $\mu$ and variance $\sigma^2$ (or, standard deviation $\sigma$)
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to be normally distributed with mean $\mu$ and variance $\sigma^2$ (or, standard deviation $\sigma$)
 
 \begin{equation} \label{eq:norm-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; ,
@@ -3188,10 +4322,87 @@ where $\mu \in \mathbb{R}$ and $\sigma^2 > 0$.
 
 
 
+\subsubsection[\textit{Standard normal distribution}]{Standard normal distribution} \label{sec:snorm}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to be standard normally distributed, if $X$ follows a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) with mean $\mu = 0$ and variance $\sigma^2 = 1$:
+
+\begin{equation} \label{eq:snorm-snorm}
+X \sim \mathcal{N}(0, 1) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-05-26; URL: \url{https://en.wikipedia.org/wiki/Normal_distribution#Standard_normal_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D63 | shortcut: snorm | author: JoramSoch | date: 2020-05-26, 23:32.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Relation to standard normal distribution}]{Relation to standard normal distribution} \label{sec:norm-snorm}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) with mean $\mu$ and variance $\sigma^2$:
+
+\begin{equation} \label{eq:norm-snorm-X-norm}
+X \sim \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Then, the quantity $Z = (X-\mu)/\sigma$ will have a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}) with mean $0$ and variance $1$:
+
+\begin{equation} \label{eq:norm-snorm-Z-snorm}
+Z = \frac{X-\mu}{\sigma} \sim \mathcal{N}(0, 1) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Rearranging to get $X$ in terms of $Z$, we have
+
+\begin{equation} \label{eq:norm-snorm-X-Z}
+X = \sigma Z + \mu \; .
+\end{equation}
+
+The cumulative distribution function of the normally distributed ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-cdf}) $X$ is
+
+\begin{equation} \label{eq:norm-snorm-norm-cdf}
+F_X(t) = \int_{-\infty}^{t} \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2 \right] \, \mathrm{d}x \; .
+\end{equation}
+
+Substituting \eqref{eq:norm-snorm-X-Z} into \eqref{eq:norm-snorm-norm-cdf}, we obtain
+
+\begin{equation} \label{eq:norm-snorm-snorm-cdf}
+\begin{split}
+F_Z(t) &= \int_{-\infty}^{t} \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \frac{(\sigma z + \mu)-\mu}{\sigma} \right)^2 \right] \, \mathrm{d}(\sigma z + \mu) \\
+&= \int_{-\infty}^{t} \frac{\sigma}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} z^2 \right] \, \mathrm{d}z \\
+&= \int_{-\infty}^{t} \frac{1}{\sqrt{2 \pi}} \cdot \exp \left[ -\frac{1}{2} z^2 \right] \, \mathrm{d}z
+\end{split}
+\end{equation}
+
+which is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P111 | shortcut: norm-snorm | author: JoramSoch | date: 2020-05-26, 23:01.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:norm-pdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-pdf-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3223,7 +4434,7 @@ f_X(x) = \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \fr
 \subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:norm-cdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-cdf-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3299,7 +4510,7 @@ F_X(x) &= \frac{1}{2} \lim_{x \to \infty} \mathrm{erf}(x) + \frac{1}{2} \, \math
 \subsubsection[\textbf{Cumulative distribution function without error function}]{Cumulative distribution function without error function} \label{sec:norm-cdfwerf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-cdfwerf-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3311,13 +4522,13 @@ Then, the cumulative distribution function ($\rightarrow$ Definition \ref{sec:Ge
 f_X(x) = \Phi_{\mu,\sigma}(x) = \varphi\left( \frac{x-\mu}{\sigma} \right) \cdot \sum_{i=1}^{\infty} \frac{\left( \frac{x-\mu}{\sigma} \right)^{2i-1}}{(2i-1)!!} + \frac{1}{2}
 \end{equation}
 
-where $\varphi(x)$ is the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the standard normal distribution ($\rightarrow$ Definition "snorm") and $n!!$ is a double factorial.
+where $\varphi(x)$ is the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}) and $n!!$ is a double factorial.
 
 
 \vspace{1em}
 \textbf{Proof:}
 
-1) First, consider the standard normal distribution ($\rightarrow$ Definition "snorm") $\mathcal{N}(0, 1)$ which has the probability density function ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf})
+1) First, consider the standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}) $\mathcal{N}(0, 1)$ which has the probability density function ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf})
 
 \begin{equation} \label{eq:norm-cdfwerf-snorm-pdf}
 \varphi(x) = \frac{1}{\sqrt{2 \pi}} \cdot e^{-\frac{1}{2} x^2} \; .
@@ -3355,7 +4566,7 @@ T(x) &= \frac{1}{\sqrt{2 \pi}} \cdot \sum_{i=1}^{\infty} \left( \frac{x^{2i-1}}{
 \end{split}
 \end{equation}
 
-2) Next, let $\Phi(x)$ be the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard normal distribution ($\rightarrow$ Definition "snorm"):
+2) Next, let $\Phi(x)$ be the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}):
 
 \begin{equation} \label{eq:norm-cdfwerf-snorm-cdf}
 \Phi(x) = \int_{-\infty}^x \varphi(x) \, \mathrm{d}x \; .
@@ -3371,7 +4582,7 @@ T(0) = \varphi(0) \cdot \sum_{i=1}^{\infty} \frac{0^{2i-1}}{(2i-1)!!} + c &= \fr
 \end{split}
 \end{equation}
 
-3) Finally, the cumulative distribution functions of the standard normal distribution and the general normal distribution are related to each other ($\rightarrow$ Proof "norm-snorm") as
+3) Finally, the cumulative distribution functions of the standard normal distribution and the general normal distribution are related to each other ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-snorm}) as
 
 \begin{equation} \label{eq:norm-cdfwerf-norm-snorm-cdf}
 \Phi_{\mu,\sigma}(x) = \Phi\left( \frac{x-\mu}{\sigma} \right) \; .
@@ -3401,7 +4612,7 @@ Combining \eqref{eq:norm-cdfwerf-norm-snorm-cdf} with \eqref{eq:norm-cdfwerf-sno
 \subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:norm-qf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-qf-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3457,7 +4668,7 @@ x &= \sqrt{2}\sigma \cdot \mathrm{erf}^{-1}(2p-1) + \mu \; .
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:norm-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-mean-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3520,10 +4731,11 @@ where $\mathrm{erf}(x)$ is the error function. Using this, the integrals can be 
 \end{equation}
 
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Papadopoulos, Alecos (2013): "How to derive the mean and variance of Gaussian random variable?"; in: \textit{StackExchange Mathematics}; URL: \url{https://math.stackexchange.com/questions/518281/how-to-derive-the-mean-and-variance-of-a-gaussian-random-variable}.
+\item Papadopoulos, Alecos (2013): "How to derive the mean and variance of Gaussian random variable?"; in: \textit{StackExchange Mathematics}, retrieved on 2020-01-09; URL: \url{https://math.stackexchange.com/questions/518281/how-to-derive-the-mean-and-variance-of-a-gaussian-random-variable}.
 \end{itemize}
 
 
@@ -3536,7 +4748,7 @@ where $\mathrm{erf}(x)$ is the error function. Using this, the integrals can be 
 \subsubsection[\textbf{Median}]{Median} \label{sec:norm-med}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-med-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3590,7 +4802,7 @@ where $\mathrm{erf}^{-1}(x)$ is the inverse error function. Setting $p = 1/2$, w
 \subsubsection[\textbf{Mode}]{Mode} \label{sec:norm-mode}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-mode-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3667,7 +4879,7 @@ we confirm that it is in fact a maximum which shows that
 \subsubsection[\textbf{Variance}]{Variance} \label{sec:norm-var}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-var-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3675,7 +4887,7 @@ X \sim \mathcal{N}(\mu, \sigma^2) \; .
 
 Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is
 
-\begin{equation} \label{eq:norm-var-norm-mode}
+\begin{equation} \label{eq:norm-var-norm-var}
 \mathrm{Var}(X) = \sigma^2 \; .
 \end{equation}
 
@@ -3740,10 +4952,11 @@ we can finally show that
 \end{equation}
 
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Papadopoulos, Alecos (2013): "How to derive the mean and variance of Gaussian random variable?"; in: \textit{StackExchange Mathematics}; URL: \url{https://math.stackexchange.com/questions/518281/how-to-derive-the-mean-and-variance-of-a-gaussian-random-variable}.
+\item Papadopoulos, Alecos (2013): "How to derive the mean and variance of Gaussian random variable?"; in: \textit{StackExchange Mathematics}, retrieved on 2020-01-09; URL: \url{https://math.stackexchange.com/questions/518281/how-to-derive-the-mean-and-variance-of-a-gaussian-random-variable}.
 \end{itemize}
 
 
@@ -3756,7 +4969,7 @@ we can finally show that
 \subsubsection[\textbf{Differential entropy}]{Differential entropy} \label{sec:norm-dent}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-dent-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3812,7 +5025,7 @@ With the probability density function of the normal distribution ($\rightarrow$ 
 \subsubsection[\textbf{Moment-generating function}]{Moment-generating function} \label{sec:norm-mgf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
 
 \begin{equation} \label{eq:norm-mgf-norm}
 X \sim \mathcal{N}(\mu, \sigma^2) \; .
@@ -3900,7 +5113,7 @@ M_X(t) = \exp\left[ \mu t + \frac{1}{2} \sigma^2 t^2 \right] \; .
 \subsubsection[\textit{Definition}]{Definition} \label{sec:gam}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to follow a gamma distribution with shape $a$ and rate $b$
+**Definition**: Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to follow a gamma distribution with shape $a$ and rate $b$
 
 \begin{equation} \label{eq:gam-gam}
 X \sim \mathrm{Gam}(a, b) \; ,
@@ -3928,10 +5141,87 @@ where $a > 0$ and $b > 0$, and the density is zero, if $x \leq 0$.
 
 
 
+\subsubsection[\textit{Standard gamma distribution}]{Standard gamma distribution} \label{sec:sgam}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to have a standard gamma distribution, if $X$ follows a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}) with shape $a > 0$ and rate $b = 1$:
+
+\begin{equation} \label{eq:sgam-sgam}
+X \sim \mathrm{Gam}(a, 1) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item JoramSoch (2017): "Gamma-distributed random numbers"; in: \textit{MACS – a new SPM toolbox for model assessment, comparison and selection}, retrieved on 2020-05-26; URL: \url{https://github.com/JoramSoch/MACS/blob/master/MD_gamrnd.m}; DOI: 10.5281/zenodo.845404.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D64 | shortcut: sgam | author: JoramSoch | date: 2020-05-26, 23:36.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Relation to standard gamma distribution}]{Relation to standard gamma distribution} \label{sec:gam-sgam}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}) with shape $a$ and rate $b$:
+
+\begin{equation} \label{eq:gam-sgam-X-gam}
+X \sim \mathrm{Gam}(a,b) \; .
+\end{equation}
+
+Then, the quantity $Z = b X$ will have a standard gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:sgam}) with shape $a$ and rate $1$:
+
+\begin{equation} \label{eq:gam-sgam-Z-snorm}
+Z = b X \sim \mathrm{Gam}(a,1) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Rearranging to get $X$ in terms of $Z$, we have
+
+\begin{equation} \label{eq:gam-sgam-X-Z}
+X = \frac{1}{b} Z \; .
+\end{equation}
+
+The cumulative distribution function of the gamma-distributed ($\rightarrow$ Proof "gam-cdf") $X$ is
+
+\begin{equation} \label{eq:gam-sgam-gam-cdf}
+F_X(t) = \int_{-\infty}^{t} \frac{b^a}{\Gamma(a)} x^{a-1} \exp[-b x] \, \mathrm{d}x \; .
+\end{equation}
+
+Substituting \eqref{eq:gam-sgam-X-Z} into \eqref{eq:gam-sgam-gam-cdf}, we obtain
+
+\begin{equation} \label{eq:gam-sgam-sgam-cdf}
+\begin{split}
+F_Z(t) &= \int_{-\infty}^{t} \frac{b^a}{\Gamma(a)} \left(\frac{1}{b} z\right)^{a-1} \exp\left[-b \left(\frac{1}{b} z\right)\right] \, \mathrm{d}\left(\frac{1}{b} z\right) \\
+&= \int_{-\infty}^{t} \frac{b^a}{b} \left(\frac{1}{b}\right)^{a-1} \cdot \frac{1}{\Gamma(a)} z^{a-1} \exp[-z] \, \mathrm{d}z \\
+&= \int_{-\infty}^{t} \frac{1}{\Gamma(a)} z^{a-1} \exp[-z] \, \mathrm{d}z
+\end{split}
+\end{equation}
+
+which is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:sgam}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P112 | shortcut: gam-sgam | author: JoramSoch | date: 2020-05-26, 23:14.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:gam-pdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a positive random variable ($\rightarrow$ Definition "rvar") following a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}):
+\textbf{Theorem:} Let $X$ be a positive random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}):
 
 \begin{equation} \label{eq:gam-pdf-gam}
 X \sim \mathrm{Gam}(a, b) \; .
@@ -3960,10 +5250,268 @@ f_X(x) = \frac{b^a}{\Gamma(a)} x^{a-1} \exp[-b x] \; .
 
 
 
+\subsubsection[\textbf{Mean}]{Mean} \label{sec:gam-mean}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}):
+
+\begin{equation} \label{eq:gam-mean-gam}
+X \sim \mathrm{Gam}(a, b) \; .
+\end{equation}
+
+Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
+
+\begin{equation} \label{eq:gam-mean-gam-mean}
+\mathrm{E}(X) = \frac{a}{b} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is the probability-weighted average over all possible values:
+
+\begin{equation} \label{eq:gam-mean-mean}
+\mathrm{E}(X) = \int_{\mathbb{R}} x \cdot f_X(x) \, \mathrm{d}x \; .
+\end{equation}
+
+With the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}), this reads:
+
+\begin{equation} \label{eq:gam-mean-gam-mean-s1}
+\begin{split}
+\mathrm{E}(X) &= \int_{0}^{\infty} x \cdot \frac{b^a}{\Gamma(a)} x^{a-1} \exp[-b x] \, \mathrm{d}x \\
+&= \int_{0}^{\infty} \frac{b^a}{\Gamma(a)} x^{(a+1)-1} \exp[-b x] \, \mathrm{d}x \\
+&= \int_{0}^{\infty} \frac{1}{b} \cdot \frac{b^{a+1}}{\Gamma(a)} x^{(a+1)-1} \exp[-b x] \, \mathrm{d}x \; .
+\end{split}
+\end{equation}
+
+Employing the relation $\Gamma(x+1) = \Gamma(x) \cdot x$, we have
+
+\begin{equation} \label{eq:gam-mean-gam-mean-s2}
+\mathrm{E}(X) = \int_{0}^{\infty} \frac{a}{b} \cdot \frac{b^{a+1}}{\Gamma(a+1)} x^{(a+1)-1} \exp[-b x] \, \mathrm{d}x
+\end{equation}
+
+and again using the density of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}), we get
+
+\begin{equation} \label{eq:gam-mean-gam-mean-s3}
+\begin{split}
+\mathrm{E}(X) &= \frac{a}{b} \int_{0}^{\infty} \mathrm{Gam}(x; a+1, b) \, \mathrm{d}x \\
+&= \frac{a}{b} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Turlapaty, Anish (2013): "Gamma random variable: mean \& variance"; in: \textit{YouTube}, retrieved on 2020-05-19; URL: \url{https://www.youtube.com/watch?v=Sy4wP-Y2dmA}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P108 | shortcut: gam-mean | author: JoramSoch | date: 2020-05-19, 06:54.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Variance}]{Variance} \label{sec:gam-var}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}):
+
+\begin{equation} \label{eq:gam-var-gam}
+X \sim \mathrm{Gam}(a, b) \; .
+\end{equation}
+
+Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is
+
+\begin{equation} \label{eq:gam-var-gam-var}
+\mathrm{Var}(X) = \frac{a}{b^2} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) can be expressed in terms of expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-mean}) as
+
+\begin{equation} \label{eq:gam-var-var-mean}
+\mathrm{Var}(X) = \mathrm{E}(X^2) - \mathrm{E}(X)^2 \; .
+\end{equation}
+
+The expected value of a gamma random variable ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-mean}) is
+
+\begin{equation} \label{eq:gam-var-gam-mean}
+\mathrm{E}(X) = \frac{a}{b} \; .
+\end{equation}
+
+With the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}), the expected value of a squared gamma random variable is
+
+\begin{equation} \label{eq:gam-var-gam-sqr-mean-s1}
+\begin{split}
+\mathrm{E}(X^2) &= \int_{0}^{\infty} x^2 \cdot \frac{b^a}{\Gamma(a)} x^{a-1} \exp[-b x] \, \mathrm{d}x \\
+&= \int_{0}^{\infty} \frac{b^a}{\Gamma(a)} x^{(a+2)-1} \exp[-b x] \, \mathrm{d}x \\
+&= \int_{0}^{\infty} \frac{1}{b^2} \cdot \frac{b^{a+2}}{\Gamma(a)} x^{(a+2)-1} \exp[-b x] \, \mathrm{d}x \; .
+\end{split}
+\end{equation}
+
+Twice-applying the relation $\Gamma(x+1) = \Gamma(x) \cdot x$, we have
+
+\begin{equation} \label{eq:gam-var-gam-sqr-mean-s2}
+\mathrm{E}(X^2) = \int_{0}^{\infty} \frac{a \, (a+1)}{b^2} \cdot \frac{b^{a+2}}{\Gamma(a+2)} x^{(a+2)-1} \exp[-b x] \, \mathrm{d}x
+\end{equation}
+
+and again using the density of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}), we get
+
+\begin{equation} \label{eq:gam-var-gam-sqr-mean-s3}
+\begin{split}
+\mathrm{E}(X^2) &= \frac{a \, (a+1)}{b^2} \int_{0}^{\infty} \mathrm{Gam}(x; a+2, b) \, \mathrm{d}x \\
+&= \frac{a^2+a}{b^2} \; .
+\end{split}
+\end{equation}
+
+Plugging \eqref{eq:gam-var-gam-sqr-mean-s3} and \eqref{eq:gam-var-gam-mean} into \eqref{eq:gam-var-var-mean}, the variance of a gamma random variable finally becomes
+
+\begin{equation} \label{eq:gam-var-gam-var-qed}
+\begin{split}
+\mathrm{Var}(X) &= \frac{a^2+a}{b^2} - \left( \frac{a}{b} \right)^2 \\
+&= \frac{a}{b^2} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Turlapaty, Anish (2013): "Gamma random variable: mean \& variance"; in: \textit{YouTube}, retrieved on 2020-05-19; URL: \url{https://www.youtube.com/watch?v=Sy4wP-Y2dmA}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P109 | shortcut: gam-var | author: JoramSoch | date: 2020-05-19, 07:20.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Logarithmic expectation}]{Logarithmic expectation} \label{sec:gam-logmean}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}):
+
+\begin{equation} \label{eq:gam-logmean-gam}
+X \sim \mathrm{Gam}(a, b) \; .
+\end{equation}
+
+Then, the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the natural logarithm of $X$ is
+
+\begin{equation} \label{eq:gam-logmean-gam-logmean}
+\mathrm{E}(\ln X) = \psi(a) - \ln(b) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Let $Y = \ln(X)$, such that $\mathrm{E}(Y) = \mathrm{E}(\ln X)$ and consider the special case that $b = 1$. In this case, the [probability density function of the gamma distribution] is
+
+\begin{equation} \label{eq:gam-logmean-X-pdf-s1}
+f_X(x) = \frac{1}{\Gamma(a)} \, x^{a-1} \, \mathrm{exp} [-x] \; .
+\end{equation}
+
+Multiplying this function with $\mathrm{d}x$, we obtain
+
+\begin{equation} \label{eq:gam-logmean-X-pdf-s2}
+f_X(x) \, \mathrm{d}x = \frac{1}{\Gamma(a)} \, x^a \, \mathrm{exp} [-x] \, \frac{\mathrm{d}x}{x} \; .
+\end{equation}
+
+Substituting $y = \ln x$, i.e. $x = e^y$, such that $\mathrm{d}x/\mathrm{d}y = x$, i.e. $\mathrm{d}x/x = \mathrm{d}y$, we get
+
+\begin{equation} \label{eq:gam-logmean-Y-pdf-s1}
+\begin{split}
+f_Y(y) \, \mathrm{d}y &= \frac{1}{\Gamma(a)} \, \left( e^y \right)^a \, \mathrm{exp} [-e^y] \, \mathrm{d}y \\
+&= \frac{1}{\Gamma(a)} \, \mathrm{exp}\left[ ay - e^y \right] \, \mathrm{d}y \; .
+\end{split}
+\end{equation}
+
+Because $f_Y(y)$ integrates to one, we have
+
+\begin{equation} \label{eq:gam-logmean-Y-pdf-s2}
+\begin{split}
+1 &= \int_{\mathbb{R}} f_Y(y) \, \mathrm{d}y \\
+1 &= \int_{\mathbb{R}} \frac{1}{\Gamma(a)} \, \mathrm{exp}\left[ ay - e^y \right] \, \mathrm{d}y \\
+\Gamma(a) &= \int_{\mathbb{R}} \mathrm{exp}\left[ ay - e^y \right] \, \mathrm{d}y \; .
+\end{split}
+\end{equation}
+
+Note that the integrand in \eqref{eq:gam-logmean-Y-pdf-s2} is differentiable with respect to $a$:
+
+\begin{equation} \label{eq:gam-logmean-dfy-da}
+\begin{split}
+\frac{\mathrm{d}}{\mathrm{d}a} \mathrm{exp}\left[ ay - e^y \right] \, \mathrm{d}y &= y \, \mathrm{exp}\left[ ay - e^y \right] \, \mathrm{d}y \\
+&\overset{\eqref{eq:gam-logmean-Y-pdf-s1}}{=} \Gamma(a) \, y \, f_Y(y) \, \mathrm{d}y \; .
+\end{split}
+\end{equation}
+
+Now we can calculate the expected value of $Y = \ln(X)$:
+
+\begin{equation} \label{eq:gam-logmean-E-Y-s1}
+\begin{split}
+\mathrm{E}(Y) &= \int_{\mathbb{R}} y \, f_Y(y) \, \mathrm{d}y \\
+&\overset{\eqref{eq:gam-logmean-dfy-da}}{=} \frac{1}{\Gamma(a)} \int_{\mathbb{R}} \frac{\mathrm{d}}{\mathrm{d}a} \mathrm{exp}\left[ ay - e^y \right] \, \mathrm{d}y \\
+&= \frac{1}{\Gamma(a)} \frac{\mathrm{d}}{\mathrm{d}a} \int_{\mathbb{R}} \mathrm{exp}\left[ ay - e^y \right] \, \mathrm{d}y \\
+&\overset{\eqref{eq:gam-logmean-Y-pdf-s2}}{=} \frac{1}{\Gamma(a)} \frac{\mathrm{d}}{\mathrm{d}a} \Gamma(a) \\
+&= \frac{\Gamma'(a)}{\Gamma(a)} \; .
+\end{split}
+\end{equation}
+
+Using the derivative of a logarithmized function
+
+\begin{equation} \label{eq:gam-logmean-log-der}
+\frac{\mathrm{d}}{\mathrm{d}x} \ln f(x) = \frac{f'(x)}{f(x)}
+\end{equation}
+
+and the definition of the digamma function
+
+\begin{equation} \label{eq:gam-logmean-psi}
+\psi(x) = \frac{\mathrm{d}}{\mathrm{d}x} \ln \Gamma(x) \; ,
+\end{equation}
+
+we have
+
+\begin{equation} \label{eq:gam-logmean-E-Y-s2}
+\mathrm{E}(Y) = \psi(a) \; .
+\end{equation}
+
+Finally, noting that $1/b$ acts as a scaling parameter ($\rightarrow$ Definition "gam-sgam") on a gamma-distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}) random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}),
+
+\begin{equation} \label{eq:gam-logmean-gam-sgam}
+X \sim \mathrm{Gam}(a,1) \quad \Rightarrow \quad \frac{1}{b} X \sim \mathrm{Gam}(a,b) \; ,
+\end{equation}
+
+and that a scaling parameter acts additively on the logarithmic expectation of a random variable,
+
+\begin{equation} \label{eq:gam-logmean-logmean}
+\mathrm{E}\left[\ln(cX)\right] = \mathrm{E}\left[\ln(X) + \ln(c)\right] = \mathrm{E}\left[\ln(X)\right] + \ln(c) \; ,
+\end{equation}
+
+it follows that
+
+\begin{equation} \label{eq:gam-logmean-E-Y-s3}
+X \sim \mathrm{Gam}(a,b) \quad \Rightarrow \quad \mathrm{E}(\ln X) = \psi(a) - \ln(b) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item whuber (2018): "What is the expected value of the logarithm of Gamma distribution?"; in: \textit{StackExchange CrossValidated}, retrieved on 2020-05-25; URL: \url{https://stats.stackexchange.com/questions/370880/what-is-the-expected-value-of-the-logarithm-of-gamma-distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P110 | shortcut: gam-logmean | author: JoramSoch | date: 2020-05-25, 21:28.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:gam-kl}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $x$ be a random variable ($\rightarrow$ Definition "rvar"). Assume two gamma distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}) $P$ and $Q$ specifying the probability distribution of $x$ as
+\textbf{Theorem:} Let $x$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Assume two gamma distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}) $P$ and $Q$ specifying the probability distribution of $x$ as
 
 \begin{equation} \label{eq:gam-kl-gams}
 \begin{split}
@@ -4005,7 +5553,7 @@ Using the probability density function of the gamma distribution ($\rightarrow$ 
 \end{split}
 \end{equation}
 
-Using the mean of the gamma distribution ($\rightarrow$ Proof "gam-mean") and the expected value of a logarithmized gamma variate ($\rightarrow$ Proof "gam-logmean")
+Using the mean of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-mean}) and the expected value of a logarithmized gamma variate ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-logmean})
 
 \begin{equation} \label{eq:gam-kl-gam-means}
 \begin{split}
@@ -4048,7 +5596,7 @@ Finally, combining the logarithms, we get:
 \subsubsection[\textit{Definition}]{Definition} \label{sec:exp}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to be exponentially distributed with rate (or, inverse scale) $\lambda$
+**Definition**: Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to be exponentially distributed with rate (or, inverse scale) $\lambda$
 
 \begin{equation} \label{eq:exp-exp}
 X \sim \mathrm{Exp}(\lambda) \; ,
@@ -4117,7 +5665,7 @@ which is equivalent to the probability density function of the exponential distr
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:exp-pdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a non-negative random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
+\textbf{Theorem:} Let $X$ be a non-negative random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-pdf-exp}
 X \sim \mathrm{Exp}(\lambda) \; .
@@ -4149,7 +5697,7 @@ f_X(x) = \lambda \exp[-\lambda x] \; .
 \subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:exp-cdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-cdf-exp}
 X \sim \mathrm{Exp}(\lambda) \; .
@@ -4219,7 +5767,7 @@ F_X(x) &= \int_{-\infty}^{0} \mathrm{Exp}(z; \lambda) \, \mathrm{d}z + \int_{0}^
 \subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:exp-qf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-qf-exp}
 X \sim \mathrm{Exp}(\lambda) \; .
@@ -4277,7 +5825,7 @@ x &= -\frac{\ln(1-p)}{\lambda} \; .
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:exp-mean}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-mean-exp}
 X \sim \mathrm{Exp}(\lambda) \; .
@@ -4340,7 +5888,7 @@ the expected value becomes
 \subsubsection[\textbf{Median}]{Median} \label{sec:exp-med}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-med-exp}
 X \sim \mathrm{Exp}(\lambda) \; .
@@ -4394,7 +5942,7 @@ and setting $p = 1/2$, we obtain:
 \subsubsection[\textbf{Mode}]{Mode} \label{sec:exp-mode}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following an exponential distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:exp}):
 
 \begin{equation} \label{eq:exp-mode-exp}
 X \sim \mathrm{Exp}(\lambda) \; .
@@ -4461,7 +6009,7 @@ it follows that
 \subsubsection[\textit{Definition}]{Definition} \label{sec:beta}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ be a random variable ($\rightarrow$ Definition "rvar"). Then, $X$ is said to follow a beta distribution with shape parameters $\alpha$ and $\beta$
+**Definition**: Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to follow a beta distribution with shape parameters $\alpha$ and $\beta$
 
 \begin{equation} \label{eq:beta-beta}
 X \sim \mathrm{Bet}(\alpha, \beta) \; ,
@@ -4492,7 +6040,7 @@ where $\alpha > 0$ and $\beta > 0$, and the density is zero, if $x \notin [0,1]$
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:beta-pdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition "rvar") following a beta distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:beta}):
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a beta distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:beta}):
 
 \begin{equation} \label{eq:beta-pdf-beta}
 X \sim \mathrm{Bet}(\alpha, \beta) \; .
@@ -4529,7 +6077,7 @@ f_X(x) = \frac{1}{\mathrm{B}(\alpha, \beta)} \, x^{\alpha-1} \, (1-x)^{\beta-1} 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:mvn}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be an $n \times 1$ random vector ($\rightarrow$ Definition "rvec"). Then, $X$ is said to be multivariate normally distributed with mean $\mu$ and covariance $\Sigma$
+\textbf{Definition:} Let $X$ be an $n \times 1$ random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, $X$ is said to be multivariate normally distributed with mean $\mu$ and covariance $\Sigma$
 
 \begin{equation} \label{eq:mvn-mvn}
 X \sim \mathcal{N}(\mu, \Sigma) \; ,
@@ -4560,7 +6108,7 @@ where $\mu$ is an $n \times 1$ real vector and $\Sigma$ is an $n \times n$ posit
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:mvn-pdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}):
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) following a multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}):
 
 \begin{equation} \label{eq:mvn-pdf-mvn}
 X \sim \mathcal{N}(\mu, \Sigma) \; .
@@ -4648,10 +6196,11 @@ such that the differential entropy is
 \end{equation}
 
 
+
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Kiuhnm (2018): "Entropy of the multivariate Gaussian"; in: \textit{StackExchange Mathematics}; URL: \url{https://math.stackexchange.com/questions/2029707/entropy-of-the-multivariate-gaussian}.
+\item Kiuhnm (2018): "Entropy of the multivariate Gaussian"; in: \textit{StackExchange Mathematics}, retrieved on 2020-05-14; URL: \url{https://math.stackexchange.com/questions/2029707/entropy-of-the-multivariate-gaussian}.
 \end{itemize}
 
 
@@ -4664,7 +6213,7 @@ such that the differential entropy is
 \subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:mvn-kl}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $x$ be an $n \times 1$ random vector ($\rightarrow$ Definition "rvec"). Assume two multivariate normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}) $P$ and $Q$ specifying the probability distribution of $x$ as
+\textbf{Theorem:} Let $x$ be an $n \times 1$ random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Assume two multivariate normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}) $P$ and $Q$ specifying the probability distribution of $x$ as
 
 \begin{equation} \label{eq:mvn-kl-mvns}
 \begin{split}
@@ -4767,7 +6316,7 @@ Finally, rearranging the terms, we get:
 
 
 
-\subsubsection[\textbf{Linear transformation theorem}]{Linear transformation theorem} \label{sec:mvn-ltt}
+\subsubsection[\textbf{Linear transformation}]{Linear transformation} \label{sec:mvn-ltt}
 \setcounter{equation}{0}
 
 \textbf{Theorem:} Let $x$ follow a multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}):
@@ -5083,7 +6632,7 @@ with the mean $\mu_{1 \vert 2}$ and variance $\Sigma_{1 \vert 2}$ given by \eqre
 \subsubsection[\textit{Definition}]{Definition} \label{sec:ng}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ be an $n \times 1$ random vector ($\rightarrow$ Definition "rvec") and let $Y$ be a positive random variable ($\rightarrow$ Definition "rvar"). Then, $X$ and $Y$ are said to follow a normal-gamma distribution
+**Definition**: Let $X$ be an $n \times 1$ random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) and let $Y$ be a positive random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ and $Y$ are said to follow a normal-gamma distribution
 
 \begin{equation} \label{eq:ng-ng}
 X,Y \sim \mathrm{NG}(\mu, \Lambda, a, b) \; ,
@@ -5095,7 +6644,7 @@ if and only if their joint probability ($\rightarrow$ Definition \ref{sec:Genera
 f_{X,Y}(x,y) = \mathcal{N}(x; \mu, (y \Lambda)^{-1}) \cdot \mathrm{Gam}(y; a, b)
 \end{equation}
 
-where $\mathcal{N}(x; \mu, \Sigma)$ is the probability density function of the multivariate normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}) with mean $\mu$ and covariance $\Sigma$ and $\mathrm{Gam}(x; a, b)$ is the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}) with shape $a$ and rate $b$. The $n \times n$ matrix $\Lambda$ is referred to as the precision matrix of the normal-gamma distribution.
+where $\mathcal{N}(x; \mu, \Sigma)$ is the probability density function of the multivariate normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}) with mean $\mu$ and covariance $\Sigma$ and $\mathrm{Gam}(x; a, b)$ is the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}) with shape $a$ and rate $b$. The $n \times n$ matrix $\Lambda$ is referred to as the precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) of the normal-gamma distribution.
 
 
 \vspace{1em}
@@ -5163,7 +6712,7 @@ p(x,y) = \sqrt{\frac{|\Lambda|}{(2 \pi)^n}} \frac{b^a}{\Gamma(a)} \cdot y^{a+\fr
 \subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:ng-kl}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $x \in \mathbb{R}^k$ be a random vector ($\rightarrow$ Definition "rvec") and $y > 0$ be a random variable ($\rightarrow$ Definition "rvar"). Assume two normal-gamma distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}) $P$ and $Q$ specifying the joint distribution of $x$ and $y$ as
+\textbf{Theorem:} Let $x \in \mathbb{R}^k$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) and $y > 0$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Assume two normal-gamma distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}) $P$ and $Q$ specifying the joint distribution of $x$ and $y$ as
 
 \begin{equation} \label{eq:ng-kl-NGs}
 \begin{split}
@@ -5240,7 +6789,7 @@ From equations \eqref{eq:ng-kl-NG-pdf} and \eqref{eq:ng-kl-mvn-KL}, the first te
 \end{split}
 \end{equation}
 
-and using the relation ($\rightarrow$ Proof "gam-mean") $y \sim \mathrm{Gam}(a,b) \Rightarrow \left\langle y \right\rangle = a/b$, we have
+and using the relation ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-mean}) $y \sim \mathrm{Gam}(a,b) \Rightarrow \left\langle y \right\rangle = a/b$, we have
 
 \begin{equation} \label{eq:ng-kl-exp-mvn-KL-s2}
 \begin{split}
@@ -5355,7 +6904,7 @@ which is the probability density function of a multivariate t-distribution ($\ri
 \subsubsection[\textit{Definition}]{Definition} \label{sec:dir}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ be a random vector ($\rightarrow$ Definition "rvec"). Then, $X$ is said to follow a Dirichlet distribution with concentration parameters $\alpha = \left[ \alpha_1, \ldots, \alpha_k \right]$
+**Definition**: Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, $X$ is said to follow a Dirichlet distribution with concentration parameters $\alpha = \left[ \alpha_1, \ldots, \alpha_k \right]$
 
 \begin{equation} \label{eq:dir-Dir}
 X \sim \mathrm{Dir}(\alpha) \; ,
@@ -5386,7 +6935,7 @@ where $\alpha_i > 0$ for all $i = 1, \ldots, k$, and the density is zero, if $x_
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:dir-pdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition "rvec") following a Dirichlet distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:dir}):
+\textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) following a Dirichlet distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:dir}):
 
 \begin{equation} \label{eq:dir-pdf-Dir}
 X \sim \mathrm{Dir}(\alpha) \; .
@@ -5423,7 +6972,7 @@ f_X(x) = \frac{\Gamma\left( \sum_{i=1}^k \alpha_i \right)}{\prod_{i=1}^k \Gamma(
 \subsubsection[\textit{Definition}]{Definition} \label{sec:matn}
 \setcounter{equation}{0}
 
-**Definition**: Let $X$ be an $n \times p$ random matrix ($\rightarrow$ Definition "rmat"). Then, $X$ is said to be matrix-normally distributed with mean $M$, covariance across rows $U$ and covariance across columns $V$
+**Definition**: Let $X$ be an $n \times p$ random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}). Then, $X$ is said to be matrix-normally distributed with mean $M$, covariance across rows $U$ and covariance across columns $V$
 
 \begin{equation} \label{eq:matn-matn}
 X \sim \mathcal{MN}(M, U, V) \; ,
@@ -5454,7 +7003,7 @@ where $\mu$ is an $n \times p$ real matrix, $U$ is an $n \times n$ positive defi
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:matn-pdf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random matrix ($\rightarrow$ Definition "rmat") following a matrix-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}):
+\textbf{Theorem:} Let $X$ be a random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}) following a matrix-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}):
 
 \begin{equation} \label{eq:matn-pdf-matn}
 X \sim \mathcal{MN}(M, U, V) \; .
@@ -5715,7 +7264,7 @@ X^\mathrm{T} \hat{\varepsilon} = 0 \; ,
 
 because if it wasn't, there would be another solution $\tilde{\beta}$ giving another vector $\tilde{\varepsilon}$ with a smaller residual sum of squares. From \eqref{eq:mlr-ols-X-e-orth}, the OLS formula can be directly derived:
 
-\begin{equation} \label{eq:mlr-ols-OLS-proof}
+\begin{equation} \label{eq:mlr-ols-OLS-qed}
 \begin{split}
 X^\mathrm{T} \hat{\varepsilon} &= 0 \\
 X^\mathrm{T} \left( y - X\hat{\beta} \right) &= 0 \\
@@ -6093,7 +7642,7 @@ the parameters minimizing the weighted residual sum of squares ($\rightarrow$ De
 W V W^\mathrm{T} = I_n \; .
 \end{equation}
 
-Since $V$ is a covariance matrix and thus symmetric, $W$ is also symmetric and can be expressed the matrix square root of the inverse of $V$:
+Since $V$ is a covariance matrix and thus symmetric, $W$ is also symmetric and can be expressed as the matrix square root of the inverse of $V$:
 
 \begin{equation} \label{eq:mlr-wls-W-V}
 W W = V^{-1} \quad \Leftrightarrow \quad W = V^{-1/2} \; .
@@ -6113,13 +7662,13 @@ Applying \eqref{eq:mlr-wls-W-def}, we see that \eqref{eq:mlr-wls-MLR-W} is actua
 
 where $\tilde{y} = Wy$, $\tilde{X} = WX$ and $\tilde{\varepsilon} = W\varepsilon$, such that we can apply the ordinary least squares solution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}) giving
 
-\begin{equation} \label{eq:mlr-wls-beta-est}
+\begin{equation} \label{eq:mlr-wls-WLS-qed}
 \begin{split}
 \hat{\beta} &= (\tilde{X}^\mathrm{T} \tilde{X})^{-1} \tilde{X}^\mathrm{T} \tilde{y} \\
 &= \left( (WX)^\mathrm{T} WX \right)^{-1} (WX)^\mathrm{T} Wy \\
 &= \left( X^\mathrm{T} W^\mathrm{T} W X \right)^{-1} X^\mathrm{T} W^\mathrm{T} W y \\
 &= \left( X^\mathrm{T} W W X \right)^{-1} X^\mathrm{T} W W y \\
-&\overset{\eqref{eq:mlr-wls-W-V}}{=} \left( X^\mathrm{T} V^{-1} X \right)^{-1} X^\mathrm{T} V^{-1} y \; .
+&\overset{\eqref{eq:mlr-wls-W-V}}{=} \left( X^\mathrm{T} V^{-1} X \right)^{-1} X^\mathrm{T} V^{-1} y
 \end{split}
 \end{equation}
 
@@ -6688,6 +8237,134 @@ Otherwise, it is called a general linear model with correlated observations.
 
 
 
+\subsubsection[\textbf{Ordinary least squares}]{Ordinary least squares} \label{sec:glm-ols}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a general linear model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:glm}) with independent observations
+
+\begin{equation} \label{eq:glm-ols-GLM}
+Y = X B + E, \; E \sim \mathcal{MN}(0, \sigma^2 I_n, \Sigma) \; ,
+\end{equation}
+
+the ordinary least squares ($\rightarrow$ Definition "ols") parameters estimates are given by
+
+\begin{equation} \label{eq:glm-ols-OLS}
+\hat{B} = (X^\mathrm{T} X)^{-1} X^\mathrm{T} Y \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Let $\hat{B}$ be the ordinary least squares ($\rightarrow$ Definition "ols") (OLS) solution and let $\hat{E} = Y - X\hat{B}$ be the resulting matrix of residuals. According to the exogeneity assumption of OLS, the errors have conditional mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) zero
+
+\begin{equation} \label{eq:glm-ols-OLS-exo}
+\mathrm{E}(E|X) = 0 \; ,
+\end{equation}
+
+a direct consequence of which is that the regressors are uncorrelated with the errors
+
+\begin{equation} \label{eq:glm-ols-OLS-uncorr}
+\mathrm{E}(X^\mathrm{T} E) = 0 \; ,
+\end{equation}
+
+which, in the finite sample, means that the residual matrix must be orthogonal to the design matrix:
+
+\begin{equation} \label{eq:glm-ols-X-E-orth}
+X^\mathrm{T} \hat{E} = 0 \; .
+\end{equation}
+
+From \eqref{eq:glm-ols-X-E-orth}, the OLS formula can be directly derived:
+
+\begin{equation} \label{eq:glm-ols-OLS-qed}
+\begin{split}
+X^\mathrm{T} \hat{E} &= 0 \\
+X^\mathrm{T} \left( Y - X\hat{B} \right) &= 0 \\
+X^\mathrm{T} Y - X^\mathrm{T} X\hat{B} &= 0 \\
+X^\mathrm{T} X\hat{B} &= X^\mathrm{T} Y \\
+\hat{B} &= (X^\mathrm{T} X)^{-1} X^\mathrm{T} Y \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P106 | shortcut: glm-ols | author: JoramSoch | date: 2020-05-19, 06:02.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Weighted least squares}]{Weighted least squares} \label{sec:glm-wls}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a general linear model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:glm}) with correlated observations
+
+\begin{equation} \label{eq:glm-wls-GLM}
+Y = X B + E, \; E \sim \mathcal{MN}(0, V, \Sigma) \; ,
+\end{equation}
+
+the weighted least sqaures ($\rightarrow$ Definition "wls") parameter estimates are given by
+
+\begin{equation} \label{eq:glm-wls-WLS}
+\hat{B} = (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} Y \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Let there be an $n \times n$ square matrix $W$, such that
+
+\begin{equation} \label{eq:glm-wls-W-def}
+W V W^\mathrm{T} = I_n \; .
+\end{equation}
+
+Since $V$ is a covariance matrix and thus symmetric, $W$ is also symmetric and can be expressed as the matrix square root of the inverse of $V$:
+
+\begin{equation} \label{eq:glm-wls-W-V}
+W W = V^{-1} \quad \Leftrightarrow \quad W = V^{-1/2} \; .
+\end{equation}
+
+Left-multiplying the linear regression equation \eqref{eq:glm-wls-GLM} with $W$, the linear transformation theorem ($\rightarrow$ Definition "matn-ltt") implies that
+
+\begin{equation} \label{eq:glm-wls-GLM-W}
+WY = WXB + WE, \; WE \sim \mathcal{MN}(0, W V W^\mathrm{T}, \Sigma) \; .
+\end{equation}
+
+Applying \eqref{eq:glm-wls-W-def}, we see that \eqref{eq:glm-wls-GLM-W} is actually a general linear model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:glm}) with independent observations
+
+\begin{equation} \label{eq:glm-wls-GLM-W-dev}
+\tilde{Y} = \tilde{X}B + \tilde{E}, \; \tilde{E} \sim \mathcal{N}(0, I_n, \Sigma)
+\end{equation}
+
+where $\tilde{Y} = WY$, $\tilde{X} = WX$ and $\tilde{E} = WE$, such that we can apply the ordinary least squares solution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:glm-ols}) giving
+
+\begin{equation} \label{eq:glm-wls-WLS-qed}
+\begin{split}
+\hat{B} &= (\tilde{X}^\mathrm{T} \tilde{X})^{-1} \tilde{X}^\mathrm{T} \tilde{Y} \\
+&= \left( (WX)^\mathrm{T} WX \right)^{-1} (WX)^\mathrm{T} WY \\
+&= \left( X^\mathrm{T} W^\mathrm{T} W X \right)^{-1} X^\mathrm{T} W^\mathrm{T} W Y \\
+&= \left( X^\mathrm{T} W W X \right)^{-1} X^\mathrm{T} W W Y \\
+&\overset{\eqref{eq:glm-wls-W-V}}{=} \left( X^\mathrm{T} V^{-1} X \right)^{-1} X^\mathrm{T} V^{-1} Y
+\end{split}
+\end{equation}
+
+which corresponds to the weighted least squares solution \eqref{eq:glm-wls-WLS}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P107 | shortcut: glm-wls | author: JoramSoch | date: 2020-05-19, 06:27.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:glm-mle}
 \setcounter{equation}{0}
 
@@ -6808,7 +8485,7 @@ Together, \eqref{eq:glm-mle-B-MLE} and \eqref{eq:glm-mle-S-MLE} constitute the M
 \subsubsection[\textit{Definition}]{Definition} \label{sec:poiss-data}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Poisson-distributed data are defined as a set of observed counts $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$, independent and identically distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with rate $\lambda$:
+\textbf{Definition:} Poisson-distributed data are defined as a set of observed counts $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$, independent and identically distributed according to a Poisson distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:poiss}) with rate $\lambda$:
 
 \begin{equation} \label{eq:poiss-data-Poiss}
 y_i \sim \mathrm{Poiss}(\lambda), \quad i = 1, \ldots, n \; .
@@ -6857,7 +8534,7 @@ where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "mean-sample")
 p(y_i|\lambda) = \mathrm{Poiss}(y_i; \lambda) = \frac{\lambda^{y_i} \cdot \exp(-\lambda)}{y_i !}
 \end{equation}
 
-and because observations are independent ($\rightarrow$ Definition "ind"), the likelihood function for all observations is the product of the individual ones:
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
 
 \begin{equation} \label{eq:poiss-mle-Poiss-LF}
 p(y|\lambda) = \prod_{i=1}^n p(y_i|\lambda) = \prod_{i=1}^n \frac{\lambda^{y_i} \cdot \exp(-\lambda)}{y_i !} \; .
@@ -6929,7 +8606,7 @@ This demonstrates that the estimate $\hat{\lambda} = \bar{y}$ maximizes the like
 \subsubsection[\textit{Definition}]{Definition} \label{sec:poissexp}
 \setcounter{equation}{0}
 
-\textbf{Definition:} A Poisson distribution with exposure values is defined as a set of observed counts $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$, independently distributed according to a Poisson distribution ($\rightarrow$ Definition "poiss") with common rate $\lambda$ and a set of concurrent exposures $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$:
+\textbf{Definition:} A Poisson distribution with exposure values is defined as a set of observed counts $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$, independently distributed according to a Poisson distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:poiss}) with common rate $\lambda$ and a set of concurrent exposures $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$:
 
 \begin{equation} \label{eq:poissexp-Poiss-exp}
 y_i \sim \mathrm{Poiss}(\lambda x_i), \quad i = 1, \ldots, n \; .
@@ -6972,7 +8649,7 @@ p(\lambda) = \mathrm{Gam}(\lambda; a_0, b_0) \; .
 p(y_i|\lambda) = \mathrm{Poiss}(y_i; \lambda x_i) = \frac{(\lambda x_i)^{y_i} \cdot \exp\left[-\lambda x_i\right]}{y_i !}
 \end{equation}
 
-and because observations are independent ($\rightarrow$ Definition "ind"), the likelihood function for all observations is the product of the individual ones:
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
 
 \begin{equation} \label{eq:poissexp-prior-Poiss-exp-LF-s2}
 p(y|\lambda) = \prod_{i=1}^n p(y_i|\lambda) = \prod_{i=1}^n \frac{(\lambda x_i)^{y_i} \cdot \exp\left[-\lambda x_i\right]}{y_i !} \; .
@@ -7075,7 +8752,7 @@ a_n &= a_0 + n \bar{x} \; .
 p(y_i|\lambda) = \mathrm{Poiss}(y_i; \lambda x_i) = \frac{(\lambda x_i)^{y_i} \cdot \exp\left[-\lambda x_i\right]}{y_i !}
 \end{equation}
 
-and because observations are independent ($\rightarrow$ Definition "ind"), the likelihood function for all observations is the product of the individual ones:
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
 
 \begin{equation} \label{eq:poissexp-post-Poiss-exp-LF-s2}
 p(y|\lambda) = \prod_{i=1}^n p(y_i|\lambda) = \prod_{i=1}^n \frac{(\lambda x_i)^{y_i} \cdot \exp\left[-\lambda x_i\right]}{y_i !} \; .
@@ -7183,7 +8860,7 @@ a_n &= a_0 + n \bar{x} \; .
 p(y_i|\lambda) = \mathrm{Poiss}(y_i; \lambda x_i) = \frac{(\lambda x_i)^{y_i} \cdot \exp\left[-\lambda x_i\right]}{y_i !}
 \end{equation}
 
-and because observations are independent ($\rightarrow$ Definition "ind"), the likelihood function for all observations is the product of the individual ones:
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
 
 \begin{equation} \label{eq:poissexp-lme-Poiss-exp-LF-s2}
 p(y|\lambda) = \prod_{i=1}^n p(y_i|\lambda) = \prod_{i=1}^n \frac{(\lambda x_i)^{y_i} \cdot \exp\left[-\lambda x_i\right]}{y_i !} \; .
@@ -7376,6 +9053,59 @@ Together, \eqref{eq:beta-mom-Beta-MoM-alpha} and \eqref{eq:beta-mom-Beta-MoM-bet
 
 
 \subsection{Logistic regression}
+
+\subsubsection[\textbf{Probability and log-odds}]{Probability and log-odds} \label{sec:logreg-pnlo}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Assume a logistic regression model ($\rightarrow$ Definition "logreg")
+
+\begin{equation} \label{eq:logreg-pnlo-logreg}
+l_i = x_i \beta + \varepsilon_i, \; i = 1,\ldots,n
+\end{equation}
+
+where $x_i$ are the predictors corresponding to the $i$-th observation $y_i$ and $l_i$ are the log-odds that $y_i = 1$.
+
+Then, the log-odds in favor of $y_i = 1$ against $y_i = 0$ can also be expressed as
+
+\begin{equation} \label{eq:logreg-pnlo-lodds}
+l_i = \log_b \frac{p(x_i|y_i=1) \, p(y_i=1)}{p(x_i|y_i=0) \, p(y_i=0)}
+\end{equation}
+
+where $p(x_i \vert y_i)$ is a likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) consistent with \eqref{eq:logreg-pnlo-logreg}, $p(y_i)$ are prior probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) for $y_i = 1$ and $y_i = 0$ and where $b$ is the base used to form the log-odds $l_i$.
+
+
+\vspace{1em}
+\textbf{Proof:} Using Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}) and the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), the posterior probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) for $y_i = 1$ and $y_i = 0$ are given by
+
+\begin{equation} \label{eq:logreg-pnlo-prob}
+\begin{split}
+p(y_i=1|x_i) &= \frac{p(x_i|y_i=1) \, p(y_i=1)}{p(x_i|y_i=1) \, p(y_i=1) + p(x_i|y_i=0) \, p(y_i=0)} \\
+p(y_i=0|x_i) &= \frac{p(x_i|y_i=0) \, p(y_i=0)}{p(x_i|y_i=1) \, p(y_i=1) + p(x_i|y_i=0) \, p(y_i=0)} \; .
+\end{split}
+\end{equation}
+
+Calculating the log-odds from the posterior probabilties, we have
+
+\begin{equation} \label{eq:logreg-pnlo-lodds-qed}
+\begin{split}
+l_i &= \log_b \frac{p(y_i=1|x_i)}{p(y_i=0|x_i)} \\
+&= \log_b \frac{p(x_i|y_i=1) \, p(y_i=1)}{p(x_i|y_i=0) \, p(y_i=0)} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop, Christopher M. (2006): "Linear Models for Classification"; in: \textit{Pattern Recognition for Machine Learning}, ch. 4, p. 197, eq. 4.58; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P105 | shortcut: logreg-pnlo | author: JoramSoch | date: 2020-05-19, 05:08.
+\vspace{1em}
+
+
 
 \subsubsection[\textbf{Log-odds and probability}]{Log-odds and probability} \label{sec:logreg-lonp}
 \setcounter{equation}{0}
@@ -8053,7 +9783,7 @@ more precisely:
 \end{split}
 \end{equation}
 
-Due to the partition of variance into expected values ($\rightarrow$ Proof "var-mean")
+Due to the partition of variance into expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-mean})
 
 \begin{equation} \label{eq:resvar-bias-var-mean}
 \mathrm{Var}(X) = \mathbb{E}(X^2) - \mathbb{E}(X)^2 \; ,
@@ -8196,7 +9926,7 @@ such that an unbiased estimator ($\rightarrow$ Definition "est-unb") can be cons
 \subsubsection[\textit{Definition}]{Definition} \label{sec:rsq}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent ($\rightarrow$ Definition "ind") observations
+\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) observations
 
 \begin{equation} \label{eq:rsq-mlr}
 y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2)
@@ -8425,7 +10155,7 @@ which proves the identity given above.
 \subsubsection[\textit{Definition}]{Definition} \label{sec:snr}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent ($\rightarrow$ Definition "ind") observations
+\textbf{Definition:} Let there be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) observations
 
 \begin{equation} \label{eq:snr-mlr}
 y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2)
