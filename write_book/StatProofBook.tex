@@ -36,7 +36,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{https://statproofbook.github.io/ \\ StatProofBook@gmail.com}
-\date{2020-06-06, 08:48}
+\date{2020-07-28, 07:39}
 
 \begin{document}
 
@@ -1006,6 +1006,182 @@ and thus,
 
 
 
+\subsubsection[\textbf{Expectation of a quadratic form}]{Expectation of a quadratic form} \label{sec:mean-qf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be an $n \times 1$ random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) with mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu$ and covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) $\Sigma$ and let $A$ be a symmetric $n \times n$ matrix. Then, the expectation of the quadratic form $X^\mathrm{T} A X$ is
+
+\begin{equation} \label{eq:mean-qf-mean-qf}
+\mathrm{E}\left[ X^\mathrm{T} A X \right] = \mu^\mathrm{T} A \mu + \mathrm{tr}(A \Sigma) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Note that $X^\mathrm{T} A X$ is a $1 \times 1$ matrix. We can therefore write
+
+\begin{equation} \label{eq:mean-qf-mean-qf-s1}
+\mathrm{E}\left[ X^\mathrm{T} A X \right] =  \mathrm{E}\left[ \mathrm{tr} \left( X^\mathrm{T} A X \right) \right] \; .
+\end{equation}
+
+Using the trace property $\mathrm{tr}(ABC) = \mathrm{tr}(BCA)$, this becomes
+
+\begin{equation} \label{eq:mean-qf-mean-qf-s2}
+\mathrm{E}\left[ X^\mathrm{T} A X \right] =  \mathrm{E}\left[ \mathrm{tr} \left( A X X^\mathrm{T} \right) \right] \; .
+\end{equation}
+
+Because mean and trace are linear operators ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), we have
+
+\begin{equation} \label{eq:mean-qf-mean-qf-s3}
+\mathrm{E}\left[ X^\mathrm{T} A X \right] =  \mathrm{tr} \left( A \; \mathrm{E}\left[ X X^\mathrm{T} \right] \right) \; .
+\end{equation}
+
+Note that the covariance matrix can be partitioned into expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:covmat-mean})
+
+\begin{equation} \label{eq:mean-qf-covmat-mean}
+\mathrm{Cov}(X,X) = \mathrm{E}(X X^\mathrm{T}) - \mathrm{E}(X) \mathrm{E}(X)^\mathrm{T} \; ,
+\end{equation}
+
+such that the expected value of the quadratic form becomes
+
+\begin{equation} \label{eq:mean-qf-mean-qf-s4}
+\mathrm{E}\left[ X^\mathrm{T} A X \right] =  \mathrm{tr} \left( A \left[ \mathrm{Cov}(X,X) + \mathrm{E}(X) \mathrm{E}(X)^\mathrm{T} \right] \right) \; .
+\end{equation}
+
+Finally, applying mean and covariance of $X$, we have
+
+\begin{equation} \label{eq:mean-qf-mean-qf-s5}
+\begin{split}
+\mathrm{E}\left[ X^\mathrm{T} A X \right] &= \mathrm{tr} \left( A \left[ \Sigma + \mu \mu^\mathrm{T} \right] \right) \\
+&= \mathrm{tr} \left( A \Sigma + A \mu \mu^\mathrm{T} \right) \\
+&= \mathrm{tr}(A \Sigma) + \mathrm{tr}(A \mu \mu^\mathrm{T}) \\
+&= \mathrm{tr}(A \Sigma) + \mathrm{tr}(\mu^\mathrm{T} A \mu) \\
+&= \mu^\mathrm{T} A \mu + \mathrm{tr}(A \Sigma) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Kendrick, David (1981): "Expectation of a quadratic form"; in: \textit{Stochastic Control for Economic Models}, pp. 170-171.
+\item Wikipedia (2020): "Multivariate random variable"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-13; URL: \url{https://en.wikipedia.org/wiki/Multivariate_random_variable#Expectation_of_a_quadratic_form}.
+\item Halvorsen, Kjetil B. (2012): "Expected value and variance of trace function"; in: \textit{StackExchange CrossValidated}, retrieved on 2020-07-13; URL: \url{https://stats.stackexchange.com/questions/34477/expected-value-and-variance-of-trace-function}.
+\item Sarwate, Dilip (2013): "Expected Value of Quadratic Form"; in: \textit{StackExchange CrossValidated}, retrieved on 2020-07-13; URL: \url{https://stats.stackexchange.com/questions/48066/expected-value-of-quadratic-form}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P131 | shortcut: mean-qf | author: JoramSoch | date: 2020-07-13, 21:59.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Law of the unconscious statistician}]{Law of the unconscious statistician} \label{sec:mean-lotus}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) and let $Y = g(X)$ be a function of this random variable.
+
+1) If $X$ is a discrete random variable with possible outcomes $\mathcal{X}$ and probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $f_X(x)$, the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $g(X)$ is
+
+\begin{equation} \label{eq:mean-lotus-mean-lotus-disc}
+\mathrm{E}[g(X)] = \sum_{x \in \mathcal{X}} g(x) f_X(x) \; .
+\end{equation}
+
+2) If $X$ is a continuous random variable with possible outcomes $\mathcal{X}$ and probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $f_X(x)$, the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $g(X)$ is
+
+\begin{equation} \label{eq:mean-lotus-mean-lotus-cont}
+\mathrm{E}[g(X)] = \int_{\mathcal{X}} g(x) f_X(x) \, \mathrm{d}x \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Suppose that $g$ is differentiable and that its inverse $g^{-1}$ is monotonic.
+
+1) The expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $Y = g(X)$ is defined as
+
+\begin{equation} \label{eq:mean-lotus-mean-lotus-disc-s1}
+\mathrm{E}[Y] = \sum_{y \in \mathcal{Y}} y \, f_Y(y) \; .
+\end{equation}
+
+Writing the probability mass function $f_Y(y)$ in terms of $y = g(x)$, we have:
+
+\begin{equation} \label{eq:mean-lotus-mean-lotus-disc-s2}
+\mathrm{E}[g(X)] = \sum_{y \in \mathcal{Y}} y \, \mathrm{Pr}(g(x) = y) \; .
+\end{equation}
+
+Replacing the probability that $g(x) = y$ in terms of $f_X(x)$, this becomes:
+
+\begin{equation} \label{eq:mean-lotus-mean-lotus-disc-s3}
+\mathrm{E}[g(X)] = \sum_{y \in \mathcal{Y}} y \sum_{x: \; g(x) = y} f_X(x) \; .
+\end{equation}
+
+Observe that $y = g(x)$ can be moved into the inner sum. Finally, noting that "for all $y$, then for all $x$, such that $g(x) = y$" is equivalent to "for all $x$" if $g^{-1}$ is a monotonic function, we can conclude that
+
+\begin{equation} \label{eq:mean-lotus-mean-lotus-disc-s4}
+\mathrm{E}[g(X)] = \sum_{x \in \mathcal{X}} g(x) f_X(x) \; .
+\end{equation}
+
+\vspace{1em}
+2) Let $y = g(x)$. The derivative of an inverse function is
+
+\begin{equation} \label{eq:mean-lotus-der-inv}
+\frac{\mathrm{d}}{\mathrm{d}y} (g^{-1}(y)) = \frac{1}{g'(g^{-1}(y))}
+\end{equation}
+
+Because $x = g^{-1}(y)$, this can be rearranged into
+
+\begin{equation} \label{eq:mean-lotus-dx-dy}
+\mathrm{d}x = \frac{1}{g'(g^{-1}(y))} \, \mathrm{d}y
+\end{equation}
+
+and subsitituing \eqref{eq:mean-lotus-dx-dy} into \eqref{eq:mean-lotus-mean-lotus-cont}, we get
+
+\begin{equation} \label{eq:mean-lotus-mean-lotus-cont-s1}
+\int_{\mathcal{X}} g(x) f_X(x) \, \mathrm{d}x = \int_{\mathcal{Y}} y \, f_X(g^{-1}(y)) \, \frac{1}{g'(g^{-1}(y))} \, \mathrm{d}y \; .
+\end{equation}
+
+Considering the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of $Y$, one can deduce:
+
+\begin{equation} \label{eq:mean-lotus-Y-cdf}
+\begin{split}
+F_Y(y) &= \mathrm{Pr}(Y \leq y) \\
+&= \mathrm{Pr}(g(X) \leq y) \\
+&= \mathrm{Pr}(X \leq g^{-1}(y)) \\
+&= F_X(g^{-1}(y)) \; .
+\end{split}
+\end{equation}
+
+Differentiating to get the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $Y$, the result is:
+
+\begin{equation} \label{eq:mean-lotus-Y-pdf}
+\begin{split}
+f_Y(y) &= \frac{\mathrm{d}}{\mathrm{d}y} F_Y(y) \\
+&\overset{\eqref{eq:mean-lotus-Y-cdf}}{=} \frac{\mathrm{d}}{\mathrm{d}y} F_X(g^{-1}(y)) \\
+&= f_X(g^{-1}(y)) \, \frac{\mathrm{d}}{\mathrm{d}y} (g^{-1}(y)) \\
+&\overset{\eqref{eq:mean-lotus-der-inv}}{=} f_X(g^{-1}(y)) \, \frac{1}{g'(g^{-1}(y))} \; .
+\end{split}
+\end{equation}
+
+Finally, substituing \eqref{eq:mean-lotus-Y-pdf} into \eqref{eq:mean-lotus-mean-lotus-cont-s1}, we have:
+
+\begin{equation} \label{eq:mean-lotus-mean-lotus-cont-s2}
+\int_{\mathcal{X}} g(x) f_X(x) \, \mathrm{d}x = \int_{\mathcal{Y}} y \, f_Y(y) \, \mathrm{d}y = \mathrm{E}[Y] = \mathrm{E}[g(X)] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Law of the unconscious statistician"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-22; URL: \url{https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician#Proof}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P138 | shortcut: mean-lotus | author: JoramSoch | date: 2020-07-22, 08:30.
+\vspace{1em}
+
+
+
 \subsection{Variance}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:var}
@@ -1102,7 +1278,7 @@ are also non-negative, thus the entire sum must be non-negative.
 \vspace{1em}
 2) If $X$ is a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), then, because squares and probability densities are strictly non-negative, the integrand in
 
-\begin{equation} \label{eq:var-nonneg-VAR-cont}
+\begin{equation} \label{eq:var-nonneg-var-cont}
 \mathrm{Var}(X) = \int_{\mathcal{X}} (x-\mathrm{E}(X))^2 \cdot f_X(x) \, \mathrm{d}x
 \end{equation}
 
@@ -1117,7 +1293,322 @@ is always non-negative, thus the term on the right-hand side is a Lebesgue integ
 
 
 \vspace{1em}
-\textbf{Metadata:} ID: P123 | shortcut: var-nonneg | author: JoramSoch | date: 2020-02-13, 20:14.
+\textbf{Metadata:} ID: P123 | shortcut: var-nonneg | author: JoramSoch | date: 2020-06-06, 07:29.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Variance of a constant}]{Variance of a constant} \label{sec:var-const}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of a constant ($\rightarrow$ Definition "const") is zero:
+
+\begin{equation} \label{eq:var-const-var-const}
+a = \text{const.} \quad \Rightarrow \quad \mathrm{Var}(a) = 0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} A constant ($\rightarrow$ Definition "const") is a quantity that always has the same value. Thus, if understood as a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of a constant is equal to itself:
+
+\begin{equation} \label{eq:var-const-mean-const}
+\mathrm{E}(a) = a \; .
+\end{equation}
+
+Plugged into the formula of the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}), we have
+
+\begin{equation} \label{eq:var-const-var-const-s1}
+\begin{split}
+\mathrm{Var}(a) &= \mathrm{E}\left[ (a-\mathrm{E}(a))^2 \right] \\
+&= \mathrm{E}\left[ (a-a)^2 \right] \\
+&= \mathrm{E}(0) \; .
+\end{split}
+\end{equation}
+
+Applied to the formula of the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}), this gives
+
+\begin{equation} \label{eq:var-const-var-const-s2}
+\mathrm{E}(0) = \sum_{x=0} x \cdot f_X(x) = 0 \cdot 1 = 0 \; .
+\end{equation}
+
+Together, \eqref{eq:var-const-var-const-s1} and \eqref{eq:var-const-var-const-s2} imply \eqref{eq:var-const-var-const}.
+
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-27; URL: \url{https://en.wikipedia.org/wiki/Variance#Basic_properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P124 | shortcut: var-const | author: JoramSoch | date: 2020-06-27, 06:44.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Variance equals zero}]{Variance equals zero} \label{sec:var-zero}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} If the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is zero, then $X$ is a constant ($\rightarrow$ Definition "const"):
+
+\begin{equation} \label{eq:var-zero-var-zero}
+\mathrm{Var}(X) = 0 \quad \Rightarrow \quad X = \text{const.}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is defined as
+
+\begin{equation} \label{eq:var-zero-var}
+\mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
+\end{equation}
+
+Because $(X-\mathrm{E}(X))^2$ is strictly non-negative ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-nonneg}), the only way for the variance to become zero is, if the squared deviation is always zero:
+
+\begin{equation} \label{eq:var-zero-sqr-dev-zero}
+(X-\mathrm{E}(X))^2 = 0 \; .
+\end{equation}
+
+Thus, in turn, requires that $X$ is equal to its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean})
+
+\begin{equation} \label{eq:var-zero-X-eq-E-X}
+X = \mathrm{E}(X)
+\end{equation}
+
+which can only be the case, if $X$ always has the same value ($\rightarrow$ Definition "const"):
+
+\begin{equation} \label{eq:var-zero-X-const}
+X = \text{const.}
+\end{equation}
+
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-27; URL: \url{https://en.wikipedia.org/wiki/Variance#Basic_properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P125 | shortcut: var-zero | author: JoramSoch | date: 2020-06-27, 07:05.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Invariance under addition}]{Invariance under addition} \label{sec:var-inv}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is invariant under addition of a constant ($\rightarrow$ Definition "const"):
+
+\begin{equation} \label{eq:var-inv-var-inv}
+\mathrm{Var}(X+a) = \mathrm{Var}(X)
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is defined in terms of the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) as
+
+\begin{equation} \label{eq:var-inv-var}
+\mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
+\end{equation}
+
+Using this and the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), we can derive \eqref{eq:var-inv-var-inv} as follows:
+
+\begin{equation} \label{eq:var-inv-var-inv-qed}
+\begin{split}
+\mathrm{Var}(X+a) &\overset{\eqref{eq:var-inv-var}}{=} \mathrm{E}\left[ ((X+a)-\mathrm{E}(X+a))^2 \right] \\
+&= \mathrm{E}\left[ (X + a - \mathrm{E}(X) - a)^2 \right] \\
+&= \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \\
+&\overset{\eqref{eq:var-inv-var}}{=} \mathrm{Var}(X) \; . \\
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-07; URL: \url{https://en.wikipedia.org/wiki/Variance#Basic_properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P126 | shortcut: var-inv | author: JoramSoch | date: 2020-07-07, 05:23.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Scaling upon multiplication}]{Scaling upon multiplication} \label{sec:var-scal}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) scales upon multiplication with a constant ($\rightarrow$ Definition "const"):
+
+\begin{equation} \label{eq:var-scal-var-scal}
+\mathrm{Var}(aX) = a^2 \, \mathrm{Var}(X)
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is defined in terms of the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) as
+
+\begin{equation} \label{eq:var-scal-var}
+\mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
+\end{equation}
+
+Using this and the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), we can derive \eqref{eq:var-scal-var-scal} as follows:
+
+\begin{equation} \label{eq:var-scal-var-scal-qed}
+\begin{split}
+\mathrm{Var}(aX) &\overset{\eqref{eq:var-scal-var}}{=} \mathrm{E}\left[ ((aX)-\mathrm{E}(aX))^2 \right] \\
+&= \mathrm{E}\left[ (aX - a\mathrm{E}(X))^2 \right] \\
+&= \mathrm{E}\left[ (a [X - \mathrm{E}(X)])^2 \right] \\
+&= \mathrm{E}\left[ a^2 (X - \mathrm{E}(X))^2 \right] \\
+&= a^2 \, \mathrm{E}\left[ (X - \mathrm{E}(X))^2 \right] \\
+&\overset{\eqref{eq:var-scal-var}}{=} a^2 \, \mathrm{Var}(X) \; . \\
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-07; URL: \url{https://en.wikipedia.org/wiki/Variance#Basic_properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P127 | shortcut: var-scal | author: JoramSoch | date: 2020-07-07, 05:38.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Variance of a sum}]{Variance of a sum} \label{sec:var-sum}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of the sum of two random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) equals the sum of the variances of those random variables, plus two times their covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}):
+
+\begin{equation} \label{eq:var-sum-var-sum}
+\mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y) + 2 \, \mathrm{Cov}(X,Y) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is defined in terms of the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) as
+
+\begin{equation} \label{eq:var-sum-var}
+\mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
+\end{equation}
+
+Using this and the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), we can derive \eqref{eq:var-sum-var-sum} as follows:
+
+\begin{equation} \label{eq:var-sum-var-sum-qed}
+\begin{split}
+\mathrm{Var}(X+Y) &\overset{\eqref{eq:var-sum-var}}{=} \mathrm{E}\left[ ((X+Y)-\mathrm{E}(X+Y))^2 \right] \\
+&= \mathrm{E}\left[ ([X-\mathrm{E}(X)] + [Y-\mathrm{E}(Y)])^2 \right] \\
+&= \mathrm{E}\left[ (X-\mathrm{E}(X))^2 + (Y-\mathrm{E}(Y))^2 + 2 \, (X-\mathrm{E}(X)) (Y-\mathrm{E}(Y)) \right] \\
+&= \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] + \mathrm{E}\left[ (Y-\mathrm{E}(Y))^2 \right] + \mathrm{E}\left[ 2 \, (X-\mathrm{E}(X)) (Y-\mathrm{E}(Y)) \right] \\
+&\overset{\eqref{eq:var-sum-var}}{=} \mathrm{Var}(X) + \mathrm{Var}(Y) + 2 \, \mathrm{Cov}(X,Y) \; . \\
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-07; URL: \url{https://en.wikipedia.org/wiki/Variance#Basic_properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P128 | shortcut: var-sum | author: JoramSoch | date: 2020-07-07, 06:10.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Variance of linear combination}]{Variance of linear combination} \label{sec:var-lincomb}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of the linear combination of two random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) is a function of the variances as well as the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of those random variables:
+
+\begin{equation} \label{eq:var-lincomb-var-lincomb}
+\mathrm{Var}(aX+bY) = a^2 \, \mathrm{Var}(X) + b^2 \, \mathrm{Var}(Y) + 2ab \, \mathrm{Cov}(X,Y) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is defined in terms of the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) as
+
+\begin{equation} \label{eq:var-lincomb-var}
+\mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
+\end{equation}
+
+Using this and the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), we can derive \eqref{eq:var-lincomb-var-lincomb} as follows:
+
+\begin{equation} \label{eq:var-lincomb-var-lincomb-qed}
+\begin{split}
+\mathrm{Var}(aX+bY) &\overset{\eqref{eq:var-lincomb-var}}{=} \mathrm{E}\left[ ((aX+bY)-\mathrm{E}(aX+bY))^2 \right] \\
+&= \mathrm{E}\left[ (a [X-\mathrm{E}(X)] + b [Y-\mathrm{E}(Y)])^2 \right] \\
+&= \mathrm{E}\left[ a^2 \, (X-\mathrm{E}(X))^2 + b^2 \, (Y-\mathrm{E}(Y))^2 + 2ab \, (X-\mathrm{E}(X)) (Y-\mathrm{E}(Y)) \right] \\
+&= \mathrm{E}\left[ a^2 \, (X-\mathrm{E}(X))^2 \right] + \mathrm{E}\left[ b^2 \, (Y-\mathrm{E}(Y))^2 \right] + \mathrm{E}\left[ 2ab \, (X-\mathrm{E}(X)) (Y-\mathrm{E}(Y)) \right] \\
+&\overset{\eqref{eq:var-lincomb-var}}{=} a^2 \, \mathrm{Var}(X) + b^2 \, \mathrm{Var}(Y) + 2ab \, \mathrm{Cov}(X,Y) \; . \\
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-07; URL: \url{https://en.wikipedia.org/wiki/Variance#Basic_properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P129 | shortcut: var-lincomb | author: JoramSoch | date: 2020-07-07, 06:21.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Additivity under independence}]{Additivity under independence} \label{sec:var-add}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is additive for independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}):
+
+\begin{equation} \label{eq:var-add-var-add}
+p(X,Y) = p(X) \, p(Y) \quad \Rightarrow \quad \mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance of the sum of two random variables ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-sum}) is given by
+
+\begin{equation} \label{eq:var-add-var-sum}
+\mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y) + 2 \, \mathrm{Cov}(X,Y) \; .
+\end{equation}
+
+The covariance of independent random variables ($\rightarrow$ Proof "cov-ind") is zero:
+
+\begin{equation} \label{eq:var-add-cov-ind}
+p(X,Y) = p(X) \, p(Y) \quad \Rightarrow \quad \mathrm{Cov}(X,Y) = 0 \; .
+\end{equation}
+
+Combining \eqref{eq:var-add-var-sum} and \eqref{eq:var-add-cov-ind}, we have:
+
+\begin{equation} \label{eq:var-add-var-add-qed}
+\mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-07; URL: \url{https://en.wikipedia.org/wiki/Variance#Basic_properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P130 | shortcut: var-add | author: JoramSoch | date: 2020-07-07, 06:52.
 \vspace{1em}
 
 
@@ -1440,18 +1931,18 @@ which is nothing else than the definition of the covariance matrix ($\rightarrow
 
 
 
-\subsubsection[\textbf{Precision matrix and correlation matrix}]{Precision matrix and correlation matrix} \label{sec:covmat-corrmat}
+\subsubsection[\textbf{Precision matrix and correlation matrix}]{Precision matrix and correlation matrix} \label{sec:precmat-corrmat}
 \setcounter{equation}{0}
 
 \textbf{Theorem:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, the precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) of $X$ can be expressed in terms of its correlation matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corrmat}) as follows
 
-\begin{equation} \label{eq:covmat-corrmat-precmat-corrmat}
+\begin{equation} \label{eq:precmat-corrmat-precmat-corrmat}
 \Lambda_{XX} = \mathrm{D}_X^{-1} \cdot \mathrm{C}_{XX}^{-1} \cdot \mathrm{D}_X^{-1} \; ,
 \end{equation}
 
 where $\mathrm{D}_X^{-1}$ is a diagonal matrix with the inverse standard deviations ($\rightarrow$ Definition "std") of $X_1, \ldots, X_n$ as entries on the diagonal:
 
-\begin{equation} \label{eq:covmat-corrmat-invdiagmat}
+\begin{equation} \label{eq:precmat-corrmat-invdiagmat}
 \mathrm{D}_X^{-1} = \mathrm{diag}(1/\sigma_{X_1},\ldots,1/\sigma_{X_n}) =
 \begin{bmatrix}
 \frac{1}{\sigma_{X_1}} & \ldots & 0 \\
@@ -1464,19 +1955,19 @@ where $\mathrm{D}_X^{-1}$ is a diagonal matrix with the inverse standard deviati
 \vspace{1em}
 \textbf{Proof:} The precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) is defined as the inverse of the covariance matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat})
 
-\begin{equation} \label{eq:covmat-corrmat-precmat-covmat}
+\begin{equation} \label{eq:precmat-corrmat-precmat-covmat}
 \Lambda_{XX} = \Sigma_{XX}^{-1}
 \end{equation}
 
-and the relation between covariance matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) and correlation matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corrmat}) is given by
+and the relation between covariance matrix and correlation matrix ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:covmat-corrmat}) is given by
 
-\begin{equation} \label{eq:covmat-corrmat-covmat-corrmat}
+\begin{equation} \label{eq:precmat-corrmat-covmat-corrmat}
 \Sigma_{XX} = \mathrm{D}_X \cdot \mathrm{C}_{XX} \cdot \mathrm{D}_X
 \end{equation}
 
 where
 
-\begin{equation} \label{eq:covmat-corrmat-diagmat}
+\begin{equation} \label{eq:precmat-corrmat-diagmat}
 \mathrm{D}_X = \mathrm{diag}(\sigma_{X_1},\ldots,\sigma_{X_n}) =
 \begin{bmatrix}
 \sigma_{X_1} & \ldots & 0 \\
@@ -1487,13 +1978,13 @@ where
 
 Using the matrix product property
 
-\begin{equation} \label{eq:covmat-corrmat-matprod-inv}
+\begin{equation} \label{eq:precmat-corrmat-matprod-inv}
 \left(A \cdot B \cdot C\right)^{-1} = C^{-1} \cdot B^{-1} \cdot A^{-1}
 \end{equation}
 
 and the diagonal matrix property
 
-\begin{equation} \label{eq:covmat-corrmat-diagmat-inv}
+\begin{equation} \label{eq:precmat-corrmat-diagmat-inv}
 \mathrm{diag}(a_1,\ldots,a_n)^{-1} =
 \begin{bmatrix}
 a_1 & \ldots & 0 \\
@@ -1510,12 +2001,12 @@ a_1 & \ldots & 0 \\
 
 we obtain
 
-\begin{equation} \label{eq:covmat-corrmat-precmat-corrmat-qed}
+\begin{equation} \label{eq:precmat-corrmat-precmat-corrmat-qed}
 \begin{split}
-\Lambda_{XX} &\overset{\eqref{eq:covmat-corrmat-precmat-covmat}}{=} \Sigma_{XX}^{-1} \\
-&\overset{\eqref{eq:covmat-corrmat-covmat-corrmat}}{=} \left( \mathrm{D}_X \cdot \mathrm{C}_{XX} \cdot \mathrm{D}_X \right)^{-1} \\
-&\overset{\eqref{eq:covmat-corrmat-matprod-inv}}{=} \mathrm{D}_X^{-1} \cdot \mathrm{C}_{XX}^{-1} \cdot \mathrm{D}_X^{-1} \\
-&\overset{\eqref{eq:covmat-corrmat-diagmat-inv}}{=}
+\Lambda_{XX} &\overset{\eqref{eq:precmat-corrmat-precmat-covmat}}{=} \Sigma_{XX}^{-1} \\
+&\overset{\eqref{eq:precmat-corrmat-covmat-corrmat}}{=} \left( \mathrm{D}_X \cdot \mathrm{C}_{XX} \cdot \mathrm{D}_X \right)^{-1} \\
+&\overset{\eqref{eq:precmat-corrmat-matprod-inv}}{=} \mathrm{D}_X^{-1} \cdot \mathrm{C}_{XX}^{-1} \cdot \mathrm{D}_X^{-1} \\
+&\overset{\eqref{eq:precmat-corrmat-diagmat-inv}}{=}
 \begin{bmatrix}
 \frac{1}{\sigma_{X_1}} & \ldots & 0 \\
 \vdots & \ddots & \vdots \\
@@ -1530,7 +2021,7 @@ we obtain
 \end{split}
 \end{equation}
 
-which conforms to equation \eqref{eq:covmat-corrmat-precmat-corrmat}.
+which conforms to equation \eqref{eq:precmat-corrmat-precmat-corrmat}.
 
 
 \vspace{1em}
@@ -1540,7 +2031,7 @@ which conforms to equation \eqref{eq:covmat-corrmat-precmat-corrmat}.
 
 
 \vspace{1em}
-\textbf{Metadata:} ID: P122 | shortcut: covmat-corrmat | author: JoramSoch | date: 2020-06-06, 06:28.
+\textbf{Metadata:} ID: P122 | shortcut: precmat-corrmat | author: JoramSoch | date: 2020-06-06, 06:28.
 \vspace{1em}
 
 
@@ -1604,653 +2095,6 @@ which conforms to equation \eqref{eq:covmat-corrmat-precmat-corrmat}.
 
 
 \pagebreak
-\section{Frequentist statistics}
-
-\subsection{Likelihood theory}
-
-\subsubsection[\textit{Likelihood function}]{Likelihood function} \label{sec:lf}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the distribution of $y$ given $\theta$ is called the likelihood function of $m$:
-
-\begin{equation} \label{eq:lf-lf}
-\mathcal{L}_m(\theta) = p(y|\theta,m) = \mathcal{D}(y; \theta) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D28 | shortcut: lf | author: JoramSoch | date: 2020-03-03, 15:50.
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Log-likelihood function}]{Log-likelihood function} \label{sec:llf}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the logarithm of the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the distribution of $y$ given $\theta$ is called the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) of $m$:
-
-\begin{equation} \label{eq:llf-llf}
-\mathrm{LL}_m(\theta) = \log p(y|\theta,m) = \log \mathcal{D}(y; \theta) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D59 | shortcut: llf | author: JoramSoch | date: 2020-05-17, 22:52.
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:mle}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the parameter values maximizing the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) or log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) are called maximum likelihood estimates of $\theta$:
-
-\begin{equation} \label{eq:mle-mle}
-\hat{\theta} = \operatorname*{arg\,max}_\theta \mathcal{L}_m(\theta) = \operatorname*{arg\,max}_\theta \mathrm{LL}_m(\theta) \; .
-\end{equation}
-
-The process of calculating $\hat{\theta}$ is called "maximum likelihood estimation" and the functional form leading from $y$ to $\hat{\theta}$ given $m$ is called "maximum likelihood estimator". Maximum likelihood estimation, estimator and estimates may all be abbreviated as "MLE".
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D60 | shortcut: mle | author: JoramSoch | date: 2020-05-15, 23:05.
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Maximum log-likelihood}]{Maximum log-likelihood} \label{sec:mll}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the maximum log-likelihood (MLL) of $m$ is the maximal value of the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) of this model:
-
-\begin{equation} \label{eq:mll-mll}
-\mathrm{MLL}(m) = \operatorname*{max}_\theta \mathrm{LL}_m(\theta) \; .
-\end{equation}
-
-The maximum log-likelihood can be obtained by plugging the maximum likelihood estimates ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}) into the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}).
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D61 | shortcut: mll | author: JoramSoch | date: 2020-05-15, 23:13.
-\vspace{1em}
-
-
-
-\pagebreak
-\section{Bayesian statistics}
-
-\subsection{Probabilistic modeling}
-
-\subsubsection[\textit{Generative model}]{Generative model} \label{sec:gm}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. A statement about the distribution of $y$ given $\theta$ is called a generative model $m$:
-
-\begin{equation} \label{eq:gm-gm}
-m: \, y \sim \mathcal{D}(\theta) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D27 | shortcut: gm | author: JoramSoch | date: 2020-03-03, 15:50.
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Likelihood function}]{Likelihood function} \label{sec:lf}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the distribution of $y$ given $\theta$ is called the likelihood function of $m$:
-
-\begin{equation} \label{eq:lf-lf}
-\mathcal{L}_m(\theta) = p(y|\theta,m) = \mathcal{D}(y; \theta) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D28 | shortcut: lf | author: JoramSoch | date: 2020-03-03, 15:50.
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Prior distribution}]{Prior distribution} \label{sec:prior}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. A distribution of $\theta$ unconditional on $y$ is called a prior distribution:
-
-\begin{equation} \label{eq:prior-prior}
-\theta \sim \mathcal{D}(\lambda) \; .
-\end{equation}
-
-The parameters $\lambda$ of this distribution are called the prior hyperparameters and the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) is called the prior density:
-
-\begin{equation} \label{eq:prior-prior-pdf}
-p(\theta|m) = \mathcal{D}(\theta; \lambda) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D29 | shortcut: prior | author: JoramSoch | date: 2020-03-03, 16:09.
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Full probability model}]{Full probability model} \label{sec:fpm}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. The combination of a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) for $y$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$ is called a full probability model $m$:
-
-\begin{equation} \label{eq:fpm-fpm}
-m: \, y \sim \mathcal{D}(\theta), \, \theta \sim \mathcal{D}(\lambda) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D30 | shortcut: fpm | author: JoramSoch | date: 2020-03-03, 16:16.
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Joint likelihood}]{Joint likelihood} \label{sec:jl}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ and $\theta$ is called the joint likelihood:
-
-\begin{equation} \label{eq:jl-jl}
-p(y,\theta|m) = p(y|\theta,m) \, p(\theta|m) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D31 | shortcut: jl | author: JoramSoch | date: 2020-03-03, 16:36.
-\vspace{1em}
-
-
-
-\subsubsection[\textbf{Joint likelihood is product of likelihood and prior}]{Joint likelihood is product of likelihood and prior} \label{sec:jl-lfnprior}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) is equal to the product of likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) and prior density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
-
-\begin{equation} \label{eq:jl-lfnprior-jl}
-p(y,\theta|m) = p(y|\theta,m) \, p(\theta|m) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Proof:} The joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) is defined as the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of data $y$ and parameters $\theta$:
-
-\begin{equation} \label{eq:jl-lfnprior-jl-def}
-p(y,\theta|m) \; .
-\end{equation}
-
-Applying the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}), we have:
-
-\begin{equation} \label{eq:jl-lfnprior-jl-qed}
-\begin{split}
-p(y|\theta,m) &= \frac{p(y,\theta|m)}{p(\theta|m)} \\
-&\Leftrightarrow \\
-p(y,\theta|m) &= p(y|\theta,m) \, p(\theta|m) \; .
-\end{split}
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: P89 | shortcut: jl-lfnprior | author: JoramSoch | date: 2020-05-05, 04:21.
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Posterior distribution}]{Posterior distribution} \label{sec:post}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. The distribution of $\theta$ conditional on $y$ is called the posterior distribution:
-
-\begin{equation} \label{eq:post-post}
-\theta|y \sim \mathcal{D}(\phi) \; .
-\end{equation}
-
-The parameters $\phi$ of this distribution are called the posterior hyperparameters and the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) is called the posterior density:
-
-\begin{equation} \label{eq:post-prior-pdf}
-p(\theta|y,m) = \mathcal{D}(\theta; \phi) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D32 | shortcut: post | author: JoramSoch | date: 2020-03-03, 16:43.
-\vspace{1em}
-
-
-
-\subsubsection[\textbf{Posterior density is proportional to joint likelihood}]{Posterior density is proportional to joint likelihood} \label{sec:post-jl}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) $m$ describing measured data $y$ using model parameters $\theta$, the posterior density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) over the model parameters is proportional to the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}):
-
-\begin{equation} \label{eq:post-jl-post}
-p(\theta|y,m) \propto p(y,\theta|m) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Proof:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) can be expressed using Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}):
-
-\begin{equation} \label{eq:post-jl-post-s1}
-p(\theta|y,m) = \frac{p(y|\theta,m) \, p(\theta|m)}{p(y|m)} \; .
-\end{equation}
-
-Applying the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) to the numerator, we have:
-
-\begin{equation} \label{eq:post-jl-post-s2}
-p(\theta|y,m) = \frac{p(y,\theta|m)}{p(y|m)} \; .
-\end{equation}
-
-Because the denominator does not depend on $\theta$, it is constant in $\theta$ and thus acts a proportionality factor between the posterior distribution and the joint likelihood:
-
-\begin{equation} \label{eq:post-jl-post-qed}
-p(\theta|y,m) \propto p(y,\theta|m) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: P90 | shortcut: post-jl | author: JoramSoch | date: 2020-05-05, 04:46.
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Marginal likelihood}]{Marginal likelihood} \label{sec:ml}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}) density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ across the parameter space $\Theta$ is called the marginal likelihood:
-
-\begin{equation} \label{eq:ml-ml}
-p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: D33 | shortcut: ml | author: JoramSoch | date: 2020-03-03, 16:49.
-\vspace{1em}
-
-
-
-\subsubsection[\textbf{Marginal likelihood is integral of joint likelihood}]{Marginal likelihood is integral of joint likelihood} \label{sec:ml-jl}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) $m$ describing measured data $y$ using model parameters $\theta$, the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) is the integral of the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) across the parameter space $\Theta$:
-
-\begin{equation} \label{eq:ml-jl-ml}
-p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Proof:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) is defined as the marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}) of the data $y$, given only the model $m$:
-
-\begin{equation} \label{eq:ml-jl-ml-def}
-p(y|m) \; .
-\end{equation}
-
-Using the law of marginal probabililty ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), this can be obtained by integrating over the product of likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) and prior density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
-
-\begin{equation} \label{eq:ml-jl-ml-int}
-p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
-\end{equation}
-
-Applying the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) to the integrand, we have:
-
-\begin{equation} \label{eq:ml-jl-ml-qed}
-p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item original work\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: P91 | shortcut: ml-jl | author: JoramSoch | date: 2020-05-05, 04:59.
-\vspace{1em}
-
-
-
-\subsection{Bayesian inference}
-
-\subsubsection[\textbf{Bayes' theorem}]{Bayes' theorem} \label{sec:bayes-th}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} Let $A$ and $B$ be two arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Then, the conditional probability that $A$ is true, given that $B$ is true, is equal to
-
-\begin{equation} \label{eq:bayes-th-BT}
-p(A|B) = \frac{p(B|A) \, p(A)}{p(B)} \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Proof:} The conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) is defined as the ratio of joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}), i.e. the probability of both statements being true, and marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), i.e. the probability of only the second one being true:
-
-\begin{equation} \label{eq:bayes-th-LCP}
-p(A|B) = \frac{p(A,B)}{p(B)} \; .
-\end{equation}
-
-It can also be written down for the reverse situation, i.e. to calculate the probability that $B$ is true, given that $A$ is true:
-
-\begin{equation} \label{eq:bayes-th-LCP-rev}
-p(B|A) = \frac{p(A,B)}{p(A)} \; .
-\end{equation}
-
-Both equations can be rearranged for the joint probability
-
-\begin{equation} \label{eq:bayes-th-JP}
-p(A|B) \, p(B) \overset{\eqref{eq:bayes-th-LCP}}{=} p(A,B) \overset{\eqref{eq:bayes-th-LCP-rev}}{=} p(B|A) \, p(A)
-\end{equation}
-
-from which Bayes' theorem can be directly derived:
-
-\begin{equation} \label{eq:bayes-th-BT-proof}
-p(A|B) \overset{\eqref{eq:bayes-th-JP}}{=} \frac{p(B|A) \, p(A)}{p(B)} \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item Koch, Karl-Rudolf (2007): "Rules of Probability"; in: \textit{Introduction to Bayesian Statistics}, Springer, Berlin/Heidelberg, 2007, pp. 6/13, eqs. 2.12/2.38; URL: \url{https://www.springer.com/de/book/9783540727231}; DOI: 10.1007/978-3-540-72726-2.
-\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: P4 | shortcut: bayes-th | author: JoramSoch | date: 2019-09-27, 16:24.
-\vspace{1em}
-
-
-
-\subsubsection[\textbf{Bayes' rule}]{Bayes' rule} \label{sec:bayes-rule}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} Let $A_1$, $A_2$ and $B$ be arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) where $A_1$ and $A_2$ are mutually exclusive. Then, Bayes' rule states that the posterior odds ($\rightarrow$ Definition "post-odd") are equal to the Bayes factor ($\rightarrow$ Definition "bf") times the prior odds ($\rightarrow$ Definition "prior-odd"), i.e.
-
-\begin{equation} \label{eq:bayes-rule-bayes-rule}
-\frac{p(A_1|B)}{p(A_2|B)} = \frac{p(B|A_1)}{p(B|A_2)} \cdot \frac{p(A_1)}{p(A_2)} \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Proof:} Using Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), the conditional probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) on the left are given by
-
-\begin{equation} \label{eq:bayes-rule-bayes-th-A1}
-p(A_1|B) = \frac{p(B|A_1) \cdot p(A_1)}{p(B)}
-\end{equation}
-
-\begin{equation} \label{eq:bayes-rule-bayes-th-A2}
-p(A_2|B) = \frac{p(B|A_2) \cdot p(A_2)}{p(B)} \; .
-\end{equation}
-
-Dividing the two conditional probabilities by each other
-
-\begin{equation} \label{eq:bayes-rule-bayes-rule-qed}
-\begin{split}
-\frac{p(A_1|B)}{p(A_2|B)} &= \frac{p(B|A_1) \cdot p(A_1) / p(B)}{p(B|A_2) \cdot p(A_2) / p(B)} \\
-&= \frac{p(B|A_1)}{p(B|A_2)} \cdot \frac{p(A_1)}{p(A_2)} \; ,
-\end{split}
-\end{equation}
-
-one obtains the posterior odds ratio as given by the theorem.
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item Wikipedia (2019): "Bayes' theorem"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-01-06; URL: \url{https://en.wikipedia.org/wiki/Bayes%27_theorem#Bayes%E2%80%99_rule}.
-\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: P12 | shortcut: bayes-rule | author: JoramSoch | date: 2020-01-06, 20:55.
-\vspace{1em}
-
-
-
-\pagebreak
-\section{Estimation theory}
-
-\subsection{Point estimates}
-
-\subsubsection[\textbf{Partition of the mean squared error into bias and variance}]{Partition of the mean squared error into bias and variance} \label{sec:mse-bnv}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} The mean squared error ($\rightarrow$ Definition "mse") can be partitioned into variance and squared bias
-
-\begin{equation} \label{eq:mse-bnv-MSE}
-\mathrm{MSE}(\hat{\theta}) = \mathrm{Var}(\hat{\theta}) - \mathrm{Bias}(\hat{\theta},\theta)^2
-\end{equation}
-
-where the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is given by
-
-\begin{equation} \label{eq:mse-bnv-Var}
-\mathrm{Var}(\hat{\theta}) = \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right]
-\end{equation}
-
-and the bias ($\rightarrow$ Definition "bias") is given by
-
-\begin{equation} \label{eq:mse-bnv-Bias}
-\mathrm{Bias}(\hat{\theta},\theta) = \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Proof:} The mean squared error (MSE) is defined as ($\rightarrow$ Definition "mse") the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared deviation of the estimated value $\hat{\theta}$ from the true value $\theta$ of a parameter, over all values $\hat{\theta}$:
-
-\begin{equation} \label{eq:mse-bnv-MSE-def}
-\mathrm{MSE}(\hat{\theta}) = \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \; .
-\end{equation}
-
-This formula can be evaluated in the following way:
-
-\begin{equation} \label{eq:mse-bnv-MSE-ref1}
-\begin{split}
-\mathrm{MSE}(\hat{\theta}) &= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) + \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 + 2 \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right) \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + \mathbb{E}_{\hat{\theta}}\left[ 2 \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right) \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \right] + \mathbb{E}_{\hat{\theta}}\left[ \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \; . \\
-\end{split}
-\end{equation}
-
-Because $\mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta$ is constant as a function of $\hat{\theta}$, we have:
-
-\begin{equation} \label{eq:mse-bnv-MSE-ref2}
-\begin{split}
-\mathrm{MSE}(\hat{\theta}) &= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + 2  \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \mathbb{E}_{\hat{\theta}}\left[ \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right] + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + 2  \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right) + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \; . \\
-\end{split}
-\end{equation}
-
-This proofs the partition given by \eqref{eq:mse-bnv-MSE}.
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item Wikipedia (2019): "Mean squared error"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2019-11-27; URL: \url{https://en.wikipedia.org/wiki/Mean_squared_error#Proof_of_variance_and_bias_relationship}.
-\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: P5 | shortcut: mse-bnv | author: JoramSoch | date: 2019-11-27, 14:26.
-\vspace{1em}
-
-
-
-\subsection{Interval estimates}
-
-\subsubsection[\textbf{Construction of confidence intervals using Wilks' theorem}]{Construction of confidence intervals using Wilks' theorem} \label{sec:ci-wilks}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) for measured data $y$ with model parameters $\theta$, consisting of a parameter of interest $\phi$ and nuisance parameters $\lambda$:
-
-\begin{equation} \label{eq:ci-wilks-mod-par}
-m: p(y|\theta) = \mathcal{D}(y; \theta), \quad \theta = \left\lbrace \phi, \lambda \right\rbrace \; .
-\end{equation}
-
-Further, let $\hat{\theta}$ be an estimate of $\theta$, obtained using maximum-likelihood-estimation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}):
-
-\begin{equation} \label{eq:ci-wilks-theta-mle}
-\hat{\theta} = \operatorname*{arg\,max}_{\theta} \log p(y|\theta), \quad \hat{\theta} = \left\lbrace \hat{\phi}, \hat{\lambda} \right\rbrace \; .
-\end{equation}
-
-Then, an asymptotic confidence interval ($\rightarrow$ Definition "ci") for $\theta$ is given by
-
-\begin{equation} \label{eq:ci-wilks-ci-wilks}
-\mathrm{CI}_{1-\alpha}(\hat{\phi}) = \left\lbrace \phi \, \vert \, \log p(y|\phi,\hat{\lambda}) \geq \log p(y|\hat{\phi},\hat{\lambda}) - \frac{1}{2} \chi^2_{1,1-\alpha} \right\rbrace
-\end{equation}
-
-where $1-\alpha$ is the confidence level and $\chi^2_{1,1-\alpha}$ is the $(1-\alpha)$-quantile of the chi-squared distribution ($\rightarrow$ Definition "chi2") with 1 degree of freedom ($\rightarrow$ Definition "dof").
-
-
-\vspace{1em}
-\textbf{Proof:} The confidence interval ($\rightarrow$ Definition "ci") is defined as the interval that, under infinitely repeated random experiments ($\rightarrow$ Definition "rexp"), contains the true parameter value with a certain probability.
-
-Let us define the likelihood ratio ($\rightarrow$ Definition "lr")
-
-\begin{equation} \label{eq:ci-wilks-lr}
-\Lambda(\phi) = \frac{p(y|\phi,\hat{\lambda})}{p(y|\hat{\phi},\hat{\lambda})}
-\end{equation}
-
-and compute the log-likelihood ratio ($\rightarrow$ Definition "llr")
-
-\begin{equation} \label{eq:ci-wilks-llr}
-\log \Lambda(\phi) = \log p(y|\phi,\hat{\lambda}) - \log p(y|\hat{\phi},\hat{\lambda}) \; .
-\end{equation}
-
-[Wilks' theorem](llr-wilks) states that, when comparing two statistical models with parameter spaces $\Theta_1$ and $\Theta_0 \subset \Theta_1$, as the sample size approaches infinity, the quantity calculated as $-2$ times the log-ratio of maximum likelihoods follows a chi-squared distribution ($\rightarrow$ Definition "chi2"), if the null hypothesis is true:
-
-\begin{equation} \label{eq:ci-wilks-wilks}
-H_0: \theta \in \Theta_0 \quad \Rightarrow \quad -2 \log \frac{\operatorname*{max}_{\theta \in \Theta_0} p(y|\theta)}{\operatorname*{max}_{\theta \in \Theta_1} p(y|\theta)} \sim \chi^2_{\Delta k}
-\end{equation}
-
-where $\Delta k$ is the difference in dimensionality between $\Theta_0$ and $\Theta_1$. Applied to our example in \eqref{eq:ci-wilks-llr}, we note that $\Theta_1 = \left\lbrace \phi, \hat{\phi} \right\rbrace$ and $\Theta_0 = \left\lbrace \phi \right\rbrace$, such that $\Delta k = 1$ and Wilks' theorem implies:
-
-\begin{equation} \label{eq:ci-wilks-llr-wilks}
--2 \log \Lambda(\phi) \sim  \chi^2_1 \; .
-\end{equation}
-
-Using the quantile function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:qf}) $\chi^2_{k,p}$ of the chi-squared distribution ($\rightarrow$ Definition "chi2"), an $(1-\alpha)$-confidence interval is therefore given by all values $\phi$ that satisfy
-
-\begin{equation} \label{eq:ci-wilks-llr-chi2}
--2 \log \Lambda(\phi) \leq \chi^2_{1,1-\alpha} \; .
-\end{equation}
-
-Applying \eqref{eq:ci-wilks-llr} and rearranging, we can evaluate
-
-\begin{equation} \label{eq:ci-wilks-llr-chi2-dev}
-\begin{split}
--2 \left[ \log p(y|\phi,\hat{\lambda}) - \log p(y|\hat{\phi},\hat{\lambda}) \right] &\leq \chi^2_{1,1-\alpha} \\
-\log p(y|\phi,\hat{\lambda}) - \log p(y|\hat{\phi},\hat{\lambda}) &\geq -\frac{1}{2} \chi^2_{1,1-\alpha} \\
-\log p(y|\phi,\hat{\lambda}) &\geq \log p(y|\hat{\phi},\hat{\lambda}) - \frac{1}{2} \chi^2_{1,1-\alpha}
-\end{split}
-\end{equation}
-
-which is equivalent to the confidence interval given by \eqref{eq:ci-wilks-ci-wilks}.
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item Wikipedia (2020): "Confidence interval"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-19; URL: \url{https://en.wikipedia.org/wiki/Confidence_interval#Methods_of_derivation}.
-\item Wikipedia (2020): "Likelihood-ratio test"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-19; URL: \url{https://en.wikipedia.org/wiki/Likelihood-ratio_test#Definition}.
-\item Wikipedia (2020): "Wilks' theorem"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-19; URL: \url{https://en.wikipedia.org/wiki/Wilks%27_theorem}.
-\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: P56 | shortcut: ci-wilks | author: JoramSoch | date: 2020-02-19, 17:15.
-\vspace{1em}
-
-
-
-\pagebreak
 \section{Information theory}
 
 \subsection{Shannon entropy}
@@ -2258,10 +2102,10 @@ which is equivalent to the confidence interval given by \eqref{eq:ci-wilks-ci-wi
 \subsubsection[\textit{Definition}]{Definition} \label{sec:ent}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $x_i, \; i = 1,\ldots,k$ and the (observed or assumed) probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x) = f_X(x)$. Then, the entropy (also referred to as "Shannon entropy") of $X$ is defined as
+\textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and the (observed or assumed) probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x) = f_X(x)$. Then, the entropy (also referred to as "Shannon entropy") of $X$ is defined as
 
 \begin{equation} \label{eq:ent-ent}
-\mathrm{H}(X) = - \sum_{i=1}^{k} p(x_i) \cdot \log_b p(x_i)
+\mathrm{H}(X) = - \sum_{x \in \mathcal{X}} p(x) \cdot \log_b p(x)
 \end{equation}
 
 where $b$ is the base of the logarithm specifying in which unit the entropy is determined.
@@ -2386,6 +2230,31 @@ where $b$ is the base of the logarithm specifying in which unit the entropy is d
 
 
 
+\subsubsection[\textit{Cross-entropy}]{Cross-entropy} \label{sec:ent-cross}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and let $P$ and $Q$ be two probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) on $X$ with the probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x)$ and $q(x)$. Then, the cross-entropy of $Q$ relative to $P$ is defined as
+
+\begin{equation} \label{eq:ent-cross-ent-cross}
+\mathrm{H}(P,Q) = - \sum_{x \in \mathcal{X}} p(x) \cdot \log_b q(x)
+\end{equation}
+
+where $b$ is the base of the logarithm specifying in which unit the cross-entropy is determined.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Cross entropy"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-28; URL: \url{https://en.wikipedia.org/wiki/Cross_entropy#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D85 | shortcut: ent-cross | author: JoramSoch | date: 2020-07-28, 02:51.
+\vspace{1em}
+
+
+
 \subsection{Differential entropy}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:dent}
@@ -2504,6 +2373,31 @@ where $b$ is the base of the logarithm specifying in which unit the differential
 
 \vspace{1em}
 \textbf{Metadata:} ID: D35 | shortcut: dent-joint | author: JoramSoch | date: 2020-03-21, 12:37.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Differential cross-entropy}]{Differential cross-entropy} \label{sec:dent-cross}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and let $P$ and $Q$ be two probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) on $X$ with the probability density functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(x)$ and $q(x)$. Then, the differential cross-entropy of $Q$ relative to $P$ is defined as
+
+\begin{equation} \label{eq:dent-cross-dent-cross}
+\mathrm{h}(P,Q) = - \int_{\mathcal{X}} p(x) \log_b q(x) \, \mathrm{d}x
+\end{equation}
+
+where $b$ is the base of the logarithm specifying in which unit the differential cross-entropy is determined.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Cross entropy"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-28; URL: \url{https://en.wikipedia.org/wiki/Cross_entropy#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D86 | shortcut: dent-cross | author: JoramSoch | date: 2020-07-28, 03:03.
 \vspace{1em}
 
 
@@ -3071,7 +2965,7 @@ which can be reformulated into
 \mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log p(x) - \sum_{x \in \mathcal{X}} p(x) \cdot \log q(x) \, \mathrm{d}x \; .
 \end{equation}
 
-Gibbs' inequality ($\rightarrow$ Proof "gibbs-ineq") states that the entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of a probability distribution is always less than or equal to the cross-entropy ($\rightarrow$ Definition "ent-cross") with another probability distribution – with equality only if the distributions are identical –,
+Gibbs' inequality ($\rightarrow$ Proof "gibbs-ineq") states that the entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of a probability distribution is always less than or equal to the cross-entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cross}) with another probability distribution – with equality only if the distributions are identical –,
 
 \begin{equation} \label{eq:kl-nonneg-Gibbs-ineq}
 - \sum_{i=1}^n p(x_i) \, \log p(x_i) \leq - \sum_{i=1}^n p(x_i) \, \log q(x_i)
@@ -3230,7 +3124,7 @@ the KL divergence can be evaluated as follows:
 \mathrm{KL}[P||Q] = \mathrm{H}(P,Q) - \mathrm{H}(P)
 \end{equation}
 
-where $\mathrm{H}(P,Q)$ is the cross-entropy ($\rightarrow$ Definition "ent-cross") of $P$ and $Q$ and $\mathrm{H}(P)$ is the marginal entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of $P$.
+where $\mathrm{H}(P,Q)$ is the cross-entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cross}) of $P$ and $Q$ and $\mathrm{H}(P)$ is the marginal entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of $P$.
 
 
 \vspace{1em}
@@ -3248,7 +3142,7 @@ Separating the logarithm, we have:
 \mathrm{KL}[P||Q] = - \sum_{x \in \mathcal{X}} p(x) \, \log q(x) + \sum_{x \in \mathcal{X}} p(x) \, \log p(x) \; .
 \end{equation}
 
-Now considering the definitions of marginal entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) and cross-entropy ($\rightarrow$ Definition "ent-cross")
+Now considering the definitions of marginal entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) and cross-entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cross})
 
 \begin{equation} \label{eq:kl-ent-ME-CE}
 \begin{split}
@@ -3286,7 +3180,7 @@ we can finally show:
 \mathrm{KL}[P||Q] = \mathrm{h}(P,Q) - \mathrm{h}(P)
 \end{equation}
 
-where $\mathrm{h}(P,Q)$ is the differential cross-entropy ($\rightarrow$ Definition "dent-cross") of $P$ and $Q$ and $\mathrm{h}(P)$ is the marginal differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) of $P$.
+where $\mathrm{h}(P,Q)$ is the differential cross-entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent-cross}) of $P$ and $Q$ and $\mathrm{h}(P)$ is the marginal differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) of $P$.
 
 
 \vspace{1em}
@@ -3304,7 +3198,7 @@ Separating the logarithm, we have:
 \mathrm{KL}[P||Q] = - \int_{\mathcal{X}} p(x) \, \log q(x) \, \mathrm{d}x + \int_{\mathcal{X}} p(x) \, \log p(x) \, \mathrm{d}x \; .
 \end{equation}
 
-Now considering the definitions of marginal differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) and differential cross-entropy ($\rightarrow$ Definition "dent-cross")
+Now considering the definitions of marginal differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent}) and differential cross-entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dent-cross})
 
 \begin{equation} \label{eq:kl-dent-MDE-DCE}
 \begin{split}
@@ -3333,6 +3227,653 @@ we can finally show:
 
 
 
+\pagebreak
+\section{Estimation theory}
+
+\subsection{Point estimates}
+
+\subsubsection[\textbf{Partition of the mean squared error into bias and variance}]{Partition of the mean squared error into bias and variance} \label{sec:mse-bnv}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The mean squared error ($\rightarrow$ Definition "mse") can be partitioned into variance and squared bias
+
+\begin{equation} \label{eq:mse-bnv-MSE}
+\mathrm{MSE}(\hat{\theta}) = \mathrm{Var}(\hat{\theta}) - \mathrm{Bias}(\hat{\theta},\theta)^2
+\end{equation}
+
+where the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is given by
+
+\begin{equation} \label{eq:mse-bnv-Var}
+\mathrm{Var}(\hat{\theta}) = \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right]
+\end{equation}
+
+and the bias ($\rightarrow$ Definition "bias") is given by
+
+\begin{equation} \label{eq:mse-bnv-Bias}
+\mathrm{Bias}(\hat{\theta},\theta) = \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The mean squared error (MSE) is defined as ($\rightarrow$ Definition "mse") the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared deviation of the estimated value $\hat{\theta}$ from the true value $\theta$ of a parameter, over all values $\hat{\theta}$:
+
+\begin{equation} \label{eq:mse-bnv-MSE-def}
+\mathrm{MSE}(\hat{\theta}) = \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \; .
+\end{equation}
+
+This formula can be evaluated in the following way:
+
+\begin{equation} \label{eq:mse-bnv-MSE-ref1}
+\begin{split}
+\mathrm{MSE}(\hat{\theta}) &= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \\
+&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) + \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \\
+&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 + 2 \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right) \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \\
+&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + \mathbb{E}_{\hat{\theta}}\left[ 2 \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right) \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \right] + \mathbb{E}_{\hat{\theta}}\left[ \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \; . \\
+\end{split}
+\end{equation}
+
+Because $\mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta$ is constant as a function of $\hat{\theta}$, we have:
+
+\begin{equation} \label{eq:mse-bnv-MSE-ref2}
+\begin{split}
+\mathrm{MSE}(\hat{\theta}) &= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + 2  \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \mathbb{E}_{\hat{\theta}}\left[ \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right] + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \\
+&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + 2  \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right) + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \\
+&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \; . \\
+\end{split}
+\end{equation}
+
+This proofs the partition given by \eqref{eq:mse-bnv-MSE}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2019): "Mean squared error"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2019-11-27; URL: \url{https://en.wikipedia.org/wiki/Mean_squared_error#Proof_of_variance_and_bias_relationship}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P5 | shortcut: mse-bnv | author: JoramSoch | date: 2019-11-27, 14:26.
+\vspace{1em}
+
+
+
+\subsection{Interval estimates}
+
+\subsubsection[\textbf{Construction of confidence intervals using Wilks' theorem}]{Construction of confidence intervals using Wilks' theorem} \label{sec:ci-wilks}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) for measured data $y$ with model parameters $\theta$, consisting of a parameter of interest $\phi$ and nuisance parameters $\lambda$:
+
+\begin{equation} \label{eq:ci-wilks-mod-par}
+m: p(y|\theta) = \mathcal{D}(y; \theta), \quad \theta = \left\lbrace \phi, \lambda \right\rbrace \; .
+\end{equation}
+
+Further, let $\hat{\theta}$ be an estimate of $\theta$, obtained using maximum-likelihood-estimation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}):
+
+\begin{equation} \label{eq:ci-wilks-theta-mle}
+\hat{\theta} = \operatorname*{arg\,max}_{\theta} \log p(y|\theta), \quad \hat{\theta} = \left\lbrace \hat{\phi}, \hat{\lambda} \right\rbrace \; .
+\end{equation}
+
+Then, an asymptotic confidence interval ($\rightarrow$ Definition "ci") for $\theta$ is given by
+
+\begin{equation} \label{eq:ci-wilks-ci-wilks}
+\mathrm{CI}_{1-\alpha}(\hat{\phi}) = \left\lbrace \phi \, \vert \, \log p(y|\phi,\hat{\lambda}) \geq \log p(y|\hat{\phi},\hat{\lambda}) - \frac{1}{2} \chi^2_{1,1-\alpha} \right\rbrace
+\end{equation}
+
+where $1-\alpha$ is the confidence level and $\chi^2_{1,1-\alpha}$ is the $(1-\alpha)$-quantile of the chi-squared distribution ($\rightarrow$ Definition "chi2") with 1 degree of freedom ($\rightarrow$ Definition "dof").
+
+
+\vspace{1em}
+\textbf{Proof:} The confidence interval ($\rightarrow$ Definition "ci") is defined as the interval that, under infinitely repeated random experiments ($\rightarrow$ Definition "rexp"), contains the true parameter value with a certain probability.
+
+Let us define the likelihood ratio ($\rightarrow$ Definition "lr")
+
+\begin{equation} \label{eq:ci-wilks-lr}
+\Lambda(\phi) = \frac{p(y|\phi,\hat{\lambda})}{p(y|\hat{\phi},\hat{\lambda})}
+\end{equation}
+
+and compute the log-likelihood ratio ($\rightarrow$ Definition "llr")
+
+\begin{equation} \label{eq:ci-wilks-llr}
+\log \Lambda(\phi) = \log p(y|\phi,\hat{\lambda}) - \log p(y|\hat{\phi},\hat{\lambda}) \; .
+\end{equation}
+
+[Wilks' theorem](llr-wilks) states that, when comparing two statistical models with parameter spaces $\Theta_1$ and $\Theta_0 \subset \Theta_1$, as the sample size approaches infinity, the quantity calculated as $-2$ times the log-ratio of maximum likelihoods follows a chi-squared distribution ($\rightarrow$ Definition "chi2"), if the null hypothesis is true:
+
+\begin{equation} \label{eq:ci-wilks-wilks}
+H_0: \theta \in \Theta_0 \quad \Rightarrow \quad -2 \log \frac{\operatorname*{max}_{\theta \in \Theta_0} p(y|\theta)}{\operatorname*{max}_{\theta \in \Theta_1} p(y|\theta)} \sim \chi^2_{\Delta k}
+\end{equation}
+
+where $\Delta k$ is the difference in dimensionality between $\Theta_0$ and $\Theta_1$. Applied to our example in \eqref{eq:ci-wilks-llr}, we note that $\Theta_1 = \left\lbrace \phi, \hat{\phi} \right\rbrace$ and $\Theta_0 = \left\lbrace \phi \right\rbrace$, such that $\Delta k = 1$ and Wilks' theorem implies:
+
+\begin{equation} \label{eq:ci-wilks-llr-wilks}
+-2 \log \Lambda(\phi) \sim  \chi^2_1 \; .
+\end{equation}
+
+Using the quantile function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:qf}) $\chi^2_{k,p}$ of the chi-squared distribution ($\rightarrow$ Definition "chi2"), an $(1-\alpha)$-confidence interval is therefore given by all values $\phi$ that satisfy
+
+\begin{equation} \label{eq:ci-wilks-llr-chi2}
+-2 \log \Lambda(\phi) \leq \chi^2_{1,1-\alpha} \; .
+\end{equation}
+
+Applying \eqref{eq:ci-wilks-llr} and rearranging, we can evaluate
+
+\begin{equation} \label{eq:ci-wilks-llr-chi2-dev}
+\begin{split}
+-2 \left[ \log p(y|\phi,\hat{\lambda}) - \log p(y|\hat{\phi},\hat{\lambda}) \right] &\leq \chi^2_{1,1-\alpha} \\
+\log p(y|\phi,\hat{\lambda}) - \log p(y|\hat{\phi},\hat{\lambda}) &\geq -\frac{1}{2} \chi^2_{1,1-\alpha} \\
+\log p(y|\phi,\hat{\lambda}) &\geq \log p(y|\hat{\phi},\hat{\lambda}) - \frac{1}{2} \chi^2_{1,1-\alpha}
+\end{split}
+\end{equation}
+
+which is equivalent to the confidence interval given by \eqref{eq:ci-wilks-ci-wilks}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Confidence interval"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-19; URL: \url{https://en.wikipedia.org/wiki/Confidence_interval#Methods_of_derivation}.
+\item Wikipedia (2020): "Likelihood-ratio test"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-19; URL: \url{https://en.wikipedia.org/wiki/Likelihood-ratio_test#Definition}.
+\item Wikipedia (2020): "Wilks' theorem"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-19; URL: \url{https://en.wikipedia.org/wiki/Wilks%27_theorem}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P56 | shortcut: ci-wilks | author: JoramSoch | date: 2020-02-19, 17:15.
+\vspace{1em}
+
+
+
+\pagebreak
+\section{Frequentist statistics}
+
+\subsection{Likelihood theory}
+
+\subsubsection[\textit{Likelihood function}]{Likelihood function} \label{sec:lf}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the distribution of $y$ given $\theta$ is called the likelihood function of $m$:
+
+\begin{equation} \label{eq:lf-lf}
+\mathcal{L}_m(\theta) = p(y|\theta,m) = \mathcal{D}(y; \theta) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D28 | shortcut: lf | author: JoramSoch | date: 2020-03-03, 15:50.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Log-likelihood function}]{Log-likelihood function} \label{sec:llf}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the logarithm of the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the distribution of $y$ given $\theta$ is called the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) of $m$:
+
+\begin{equation} \label{eq:llf-llf}
+\mathrm{LL}_m(\theta) = \log p(y|\theta,m) = \log \mathcal{D}(y; \theta) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D59 | shortcut: llf | author: JoramSoch | date: 2020-05-17, 22:52.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:mle}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the parameter values maximizing the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) or log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) are called maximum likelihood estimates of $\theta$:
+
+\begin{equation} \label{eq:mle-mle}
+\hat{\theta} = \operatorname*{arg\,max}_\theta \mathcal{L}_m(\theta) = \operatorname*{arg\,max}_\theta \mathrm{LL}_m(\theta) \; .
+\end{equation}
+
+The process of calculating $\hat{\theta}$ is called "maximum likelihood estimation" and the functional form leading from $y$ to $\hat{\theta}$ given $m$ is called "maximum likelihood estimator". Maximum likelihood estimation, estimator and estimates may all be abbreviated as "MLE".
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D60 | shortcut: mle | author: JoramSoch | date: 2020-05-15, 23:05.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Maximum log-likelihood}]{Maximum log-likelihood} \label{sec:mll}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the maximum log-likelihood (MLL) of $m$ is the maximal value of the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) of this model:
+
+\begin{equation} \label{eq:mll-mll}
+\mathrm{MLL}(m) = \operatorname*{max}_\theta \mathrm{LL}_m(\theta) \; .
+\end{equation}
+
+The maximum log-likelihood can be obtained by plugging the maximum likelihood estimates ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}) into the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D61 | shortcut: mll | author: JoramSoch | date: 2020-05-15, 23:13.
+\vspace{1em}
+
+
+
+\pagebreak
+\section{Bayesian statistics}
+
+\subsection{Probabilistic modeling}
+
+\subsubsection[\textit{Generative model}]{Generative model} \label{sec:gm}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. A statement about the distribution of $y$ given $\theta$ is called a generative model $m$:
+
+\begin{equation} \label{eq:gm-gm}
+m: \, y \sim \mathcal{D}(\theta) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D27 | shortcut: gm | author: JoramSoch | date: 2020-03-03, 15:50.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Likelihood function}]{Likelihood function} \label{sec:lf}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the distribution of $y$ given $\theta$ is called the likelihood function of $m$:
+
+\begin{equation} \label{eq:lf-lf}
+\mathcal{L}_m(\theta) = p(y|\theta,m) = \mathcal{D}(y; \theta) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D28 | shortcut: lf | author: JoramSoch | date: 2020-03-03, 15:50.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Prior distribution}]{Prior distribution} \label{sec:prior}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. A distribution of $\theta$ unconditional on $y$ is called a prior distribution:
+
+\begin{equation} \label{eq:prior-prior}
+\theta \sim \mathcal{D}(\lambda) \; .
+\end{equation}
+
+The parameters $\lambda$ of this distribution are called the prior hyperparameters and the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) is called the prior density:
+
+\begin{equation} \label{eq:prior-prior-pdf}
+p(\theta|m) = \mathcal{D}(\theta; \lambda) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D29 | shortcut: prior | author: JoramSoch | date: 2020-03-03, 16:09.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Full probability model}]{Full probability model} \label{sec:fpm}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. The combination of a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) for $y$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$ is called a full probability model $m$:
+
+\begin{equation} \label{eq:fpm-fpm}
+m: \, y \sim \mathcal{D}(\theta), \, \theta \sim \mathcal{D}(\lambda) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D30 | shortcut: fpm | author: JoramSoch | date: 2020-03-03, 16:16.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Joint likelihood}]{Joint likelihood} \label{sec:jl}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ and $\theta$ is called the joint likelihood:
+
+\begin{equation} \label{eq:jl-jl}
+p(y,\theta|m) = p(y|\theta,m) \, p(\theta|m) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D31 | shortcut: jl | author: JoramSoch | date: 2020-03-03, 16:36.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Joint likelihood is product of likelihood and prior}]{Joint likelihood is product of likelihood and prior} \label{sec:jl-lfnprior}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) is equal to the product of likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) and prior density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
+
+\begin{equation} \label{eq:jl-lfnprior-jl}
+p(y,\theta|m) = p(y|\theta,m) \, p(\theta|m) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) is defined as the joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of data $y$ and parameters $\theta$:
+
+\begin{equation} \label{eq:jl-lfnprior-jl-def}
+p(y,\theta|m) \; .
+\end{equation}
+
+Applying the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}), we have:
+
+\begin{equation} \label{eq:jl-lfnprior-jl-qed}
+\begin{split}
+p(y|\theta,m) &= \frac{p(y,\theta|m)}{p(\theta|m)} \\
+&\Leftrightarrow \\
+p(y,\theta|m) &= p(y|\theta,m) \, p(\theta|m) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P89 | shortcut: jl-lfnprior | author: JoramSoch | date: 2020-05-05, 04:21.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Posterior distribution}]{Posterior distribution} \label{sec:post}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. The distribution of $\theta$ conditional on $y$ is called the posterior distribution:
+
+\begin{equation} \label{eq:post-post}
+\theta|y \sim \mathcal{D}(\phi) \; .
+\end{equation}
+
+The parameters $\phi$ of this distribution are called the posterior hyperparameters and the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) is called the posterior density:
+
+\begin{equation} \label{eq:post-prior-pdf}
+p(\theta|y,m) = \mathcal{D}(\theta; \phi) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D32 | shortcut: post | author: JoramSoch | date: 2020-03-03, 16:43.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Posterior density is proportional to joint likelihood}]{Posterior density is proportional to joint likelihood} \label{sec:post-jl}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) $m$ describing measured data $y$ using model parameters $\theta$, the posterior density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) over the model parameters is proportional to the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}):
+
+\begin{equation} \label{eq:post-jl-post}
+p(\theta|y,m) \propto p(y,\theta|m) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) can be expressed using Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}):
+
+\begin{equation} \label{eq:post-jl-post-s1}
+p(\theta|y,m) = \frac{p(y|\theta,m) \, p(\theta|m)}{p(y|m)} \; .
+\end{equation}
+
+Applying the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) to the numerator, we have:
+
+\begin{equation} \label{eq:post-jl-post-s2}
+p(\theta|y,m) = \frac{p(y,\theta|m)}{p(y|m)} \; .
+\end{equation}
+
+Because the denominator does not depend on $\theta$, it is constant in $\theta$ and thus acts a proportionality factor between the posterior distribution and the joint likelihood:
+
+\begin{equation} \label{eq:post-jl-post-qed}
+p(\theta|y,m) \propto p(y,\theta|m) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P90 | shortcut: post-jl | author: JoramSoch | date: 2020-05-05, 04:46.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Marginal likelihood}]{Marginal likelihood} \label{sec:ml}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}) density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ across the parameter space $\Theta$ is called the marginal likelihood:
+
+\begin{equation} \label{eq:ml-ml}
+p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D33 | shortcut: ml | author: JoramSoch | date: 2020-03-03, 16:49.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Marginal likelihood is integral of joint likelihood}]{Marginal likelihood is integral of joint likelihood} \label{sec:ml-jl}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) $m$ describing measured data $y$ using model parameters $\theta$, the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) is the integral of the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) across the parameter space $\Theta$:
+
+\begin{equation} \label{eq:ml-jl-ml}
+p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) is defined as the marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}) of the data $y$, given only the model $m$:
+
+\begin{equation} \label{eq:ml-jl-ml-def}
+p(y|m) \; .
+\end{equation}
+
+Using the law of marginal probabililty ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), this can be obtained by integrating over the product of likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) and prior density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
+
+\begin{equation} \label{eq:ml-jl-ml-int}
+p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
+\end{equation}
+
+Applying the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) to the integrand, we have:
+
+\begin{equation} \label{eq:ml-jl-ml-qed}
+p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P91 | shortcut: ml-jl | author: JoramSoch | date: 2020-05-05, 04:59.
+\vspace{1em}
+
+
+
+\subsection{Bayesian inference}
+
+\subsubsection[\textbf{Bayes' theorem}]{Bayes' theorem} \label{sec:bayes-th}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $A$ and $B$ be two arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), such as statements about the presence or absence of an event or about the value of a scalar, vector or matrix. Then, the conditional probability that $A$ is true, given that $B$ is true, is equal to
+
+\begin{equation} \label{eq:bayes-th-BT}
+p(A|B) = \frac{p(B|A) \, p(A)}{p(B)} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) is defined as the ratio of joint probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}), i.e. the probability of both statements being true, and marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), i.e. the probability of only the second one being true:
+
+\begin{equation} \label{eq:bayes-th-LCP}
+p(A|B) = \frac{p(A,B)}{p(B)} \; .
+\end{equation}
+
+It can also be written down for the reverse situation, i.e. to calculate the probability that $B$ is true, given that $A$ is true:
+
+\begin{equation} \label{eq:bayes-th-LCP-rev}
+p(B|A) = \frac{p(A,B)}{p(A)} \; .
+\end{equation}
+
+Both equations can be rearranged for the joint probability
+
+\begin{equation} \label{eq:bayes-th-JP}
+p(A|B) \, p(B) \overset{\eqref{eq:bayes-th-LCP}}{=} p(A,B) \overset{\eqref{eq:bayes-th-LCP-rev}}{=} p(B|A) \, p(A)
+\end{equation}
+
+from which Bayes' theorem can be directly derived:
+
+\begin{equation} \label{eq:bayes-th-BT-proof}
+p(A|B) \overset{\eqref{eq:bayes-th-JP}}{=} \frac{p(B|A) \, p(A)}{p(B)} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Koch, Karl-Rudolf (2007): "Rules of Probability"; in: \textit{Introduction to Bayesian Statistics}, Springer, Berlin/Heidelberg, 2007, pp. 6/13, eqs. 2.12/2.38; URL: \url{https://www.springer.com/de/book/9783540727231}; DOI: 10.1007/978-3-540-72726-2.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P4 | shortcut: bayes-th | author: JoramSoch | date: 2019-09-27, 16:24.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Bayes' rule}]{Bayes' rule} \label{sec:bayes-rule}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $A_1$, $A_2$ and $B$ be arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) where $A_1$ and $A_2$ are mutually exclusive. Then, Bayes' rule states that the posterior odds ($\rightarrow$ Definition "post-odd") are equal to the Bayes factor ($\rightarrow$ Definition "bf") times the prior odds ($\rightarrow$ Definition "prior-odd"), i.e.
+
+\begin{equation} \label{eq:bayes-rule-bayes-rule}
+\frac{p(A_1|B)}{p(A_2|B)} = \frac{p(B|A_1)}{p(B|A_2)} \cdot \frac{p(A_1)}{p(A_2)} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Using Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), the conditional probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) on the left are given by
+
+\begin{equation} \label{eq:bayes-rule-bayes-th-A1}
+p(A_1|B) = \frac{p(B|A_1) \cdot p(A_1)}{p(B)}
+\end{equation}
+
+\begin{equation} \label{eq:bayes-rule-bayes-th-A2}
+p(A_2|B) = \frac{p(B|A_2) \cdot p(A_2)}{p(B)} \; .
+\end{equation}
+
+Dividing the two conditional probabilities by each other
+
+\begin{equation} \label{eq:bayes-rule-bayes-rule-qed}
+\begin{split}
+\frac{p(A_1|B)}{p(A_2|B)} &= \frac{p(B|A_1) \cdot p(A_1) / p(B)}{p(B|A_2) \cdot p(A_2) / p(B)} \\
+&= \frac{p(B|A_1)}{p(B|A_2)} \cdot \frac{p(A_1)}{p(A_2)} \; ,
+\end{split}
+\end{equation}
+
+one obtains the posterior odds ratio as given by the theorem.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2019): "Bayes' theorem"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-01-06; URL: \url{https://en.wikipedia.org/wiki/Bayes%27_theorem#Bayes%E2%80%99_rule}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P12 | shortcut: bayes-rule | author: JoramSoch | date: 2020-01-06, 20:55.
+\vspace{1em}
+
+
+
 
 
 % Chapter 2 %
@@ -3340,6 +3881,226 @@ we can finally show:
 
 \pagebreak
 \section{Univariate discrete distributions}
+
+\subsection{Discrete uniform distribution}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:duni}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to be uniformly distributed with minimum $a$ and maximum $b$
+
+\begin{equation} \label{eq:duni-duni}
+X \sim \mathcal{U}(a, b) \; ,
+\end{equation}
+
+if and only if each integer between and including $a$ and $b$ occurs with the same probability.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Discrete uniform distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-28; URL: \url{https://en.wikipedia.org/wiki/Discrete_uniform_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D88 | shortcut: duni | author: JoramSoch | date: 2020-07-28, 04:05.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Probability mass function}]{Probability mass function} \label{sec:duni-pmf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a discrete uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:duni}):
+
+\begin{equation} \label{eq:duni-pmf-duni}
+X \sim \mathcal{U}(a, b) \; .
+\end{equation}
+
+Then, the probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) of $X$ is
+
+\begin{equation} \label{eq:duni-pmf-duni-pmf}
+f_X(x) = \frac{1}{b-a+1} \quad \text{where} \quad x \in \left\lbrace a, a+1, \ldots, b-1, b \right\rbrace \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} A discrete uniform variable is defined as ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:duni}) having the same probability for each integer between and including $a$ and $b$. The number of integers between and including $a$ and $b$ is
+
+\begin{equation} \label{eq:duni-pmf-n}
+n = b - a + 1
+\end{equation}
+
+and because the sum across all probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) is
+
+\begin{equation} \label{eq:duni-pmf-1}
+\sum_{x=a}^{b} f_X(x) = 1 \; ,
+\end{equation}
+
+we have
+
+\begin{equation} \label{eq:duni-pmf-duni-pmf-qed}
+f_X(x) = \frac{1}{n} = \frac{1}{b-a+1} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P140 | shortcut: duni-pmf | author: JoramSoch | date: 2020-07-28, 04:57.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:duni-cdf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a discrete uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:duni}):
+
+\begin{equation} \label{eq:duni-cdf-duni}
+X \sim \mathcal{U}(a, b) \; .
+\end{equation}
+
+Then, the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of $X$ is
+
+\begin{equation} \label{eq:duni-cdf-duni-cdf}
+F_X(x) = \left\{
+\begin{array}{rl}
+0 \; , & \text{if} \; x < a \\
+\frac{\left\lfloor{x}\right\rfloor - a + 1}{b - a + 1} \; , & \text{if} \; a \leq x \leq b \\
+1 \; , & \text{if} \; x > b \; .
+\end{array}
+\right.
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The probability mass function of the discrete uniform distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:duni-pmf}) is
+
+\begin{equation} \label{eq:duni-cdf-duni-pmf}
+\mathcal{U}(x; a, b) = \frac{1}{b-a+1} \quad \text{where} \quad x \in \left\lbrace a, a+1, \ldots, b-1, b \right\rbrace \; .
+\end{equation}
+
+Thus, the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) is:
+
+\begin{equation} \label{eq:duni-cdf-duni-cdf-s1}
+F_X(x) = \int_{-\infty}^{x} \mathcal{U}(z; a, b) \, \mathrm{d}z
+\end{equation}
+
+From \eqref{eq:duni-cdf-duni-pmf}, it follows that the cumulative probability increases step-wise by $1/n$ at each integer between and including $a$ and $b$ where
+
+\begin{equation} \label{eq:duni-cdf-n}
+n = b - a + 1
+\end{equation}
+
+is the number of integers between and including $a$ and $b$. This can be expressed by noting that
+
+\begin{equation} \label{eq:duni-cdf-duni-cdf-s2b}
+F_X(x) \overset{\eqref{eq:duni-cdf-duni-pmf}}{=} \frac{\left\lfloor{x}\right\rfloor - a + 1}{n}, \; \text{if} \; a \leq x \leq b \; .
+\end{equation}
+
+Also, because $\mathrm{Pr}(X < a) = 0$, we have
+
+\begin{equation} \label{eq:duni-cdf-duni-cdf-s2a}
+F_X(x) \overset{\eqref{eq:duni-cdf-duni-cdf-s1}}{=} \int_{-\infty}^{x} 0 \, \mathrm{d}z = 0, \; \text{if} \; x < a
+\end{equation}
+
+and because $\mathrm{Pr}(X > b) = 0$, we have
+
+\begin{equation} \label{eq:duni-cdf-duni-cdf-s2c}
+\begin{split}
+F_X(x) &\overset{\eqref{eq:duni-cdf-duni-cdf-s1}}{=} \int_{-\infty}^{x} \mathcal{U}(z; a, b) \, \mathrm{d}z \\
+&= \int_{-\infty}^{b} \mathcal{U}(z; a, b) \, \mathrm{d}z + \int_{b}^{x} \mathcal{U}(z; a, b) \, \mathrm{d}z \\
+&= F_X(b) + \int_{b}^{x} 0 \, \mathrm{d}z \overset{\eqref{eq:duni-cdf-duni-cdf-s2b}}{=} 1 + 0 \\
+&= 1, \; \text{if} \; x > b \; .
+\end{split}
+\end{equation}
+
+This completes the proof.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P141 | shortcut: duni-cdf | author: JoramSoch | date: 2020-07-28, 05:34.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:duni-qf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a discrete uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:duni}):
+
+\begin{equation} \label{eq:duni-qf-duni}
+X \sim \mathcal{U}(a, b) \; .
+\end{equation}
+
+Then, the quantile function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:qf}) of $X$ is
+
+\begin{equation} \label{eq:duni-qf-duni-qf}
+Q_X(p) = a (1-p) + (b+1) p - 1 \quad \text{where} \quad p \in \left\lbrace \frac{1}{n}, \frac{2}{n}, \ldots, \frac{b-a}{n}, 1 \right\rbrace
+\end{equation}
+
+with $n = b - a + 1$.
+
+
+\vspace{1em}
+\textbf{Proof:} The cumulative distribution function of the discrete uniform distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:duni-cdf}) is:
+
+\begin{equation} \label{eq:duni-qf-duni-cdf}
+F_X(x) = \left\{
+\begin{array}{rl}
+0 \; , & \text{if} \; x < a \\
+\frac{\left\lfloor{x}\right\rfloor - a + 1}{b - a + 1} \; , & \text{if} \; a \leq x \leq b \\
+1 \; , & \text{if} \; x > b \; .
+\end{array}
+\right.
+\end{equation}
+
+Because the CDF only returns ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:duni-cdf}) multiples of $1/n$ with $n = b - a + 1$, the quantile function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:qf}) is only defined for such values. Since the cumulative probability increases step-wise ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:duni-cdf}) by $1/n$ at each integer between and including $a$ and $b$, the minimum $x$ at which
+
+\begin{equation} \label{eq:duni-qf-duni-cdf-p}
+F_X(x) = \frac{c}{n} \quad \text{where} \quad c \in \left\lbrace 1, \ldots, n \right\rbrace
+\end{equation}
+
+is given by
+
+\begin{equation} \label{eq:duni-qf-duni-qf-p}
+Q_X\left( \frac{c}{n} \right) = a + \frac{c}{n} \cdot n - 1 \; .
+\end{equation}
+
+Substituting $p = c/n$ and $n = b - a + 1$, we can finally show:
+
+\begin{equation} \label{eq:duni-qf-duni-qf-qed}
+\begin{split}
+Q_X(p) &= a + p \cdot (b-a+1) - 1 \\
+&= a + pb - pa + p - 1 \\
+&= a (1-p) + (b+1) p - 1 \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P142 | shortcut: duni-qf | author: JoramSoch | date: 2020-07-28, 06:17.
+\vspace{1em}
+
+
 
 \subsection{Bernoulli distribution}
 
@@ -4011,7 +4772,7 @@ F_X(x) = \left\{
 \textbf{Proof:} The probability density function of the continuous uniform distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:cuni-pdf}) is:
 
 \begin{equation} \label{eq:cuni-cdf-cuni-pdf}
-\mathcal{U}(z; a, b) = \left\{
+\mathcal{U}(x; a, b) = \left\{
 \begin{array}{rl}
 \frac{1}{b-a} \; , & \text{if} \; a \leq x \leq b \\
 0 \; , & \text{otherwise} \; .
@@ -7522,6 +8283,74 @@ and, with the definitions of explained ($\rightarrow$ Definition \ref{sec:Statis
 
 
 
+\subsubsection[\textit{Estimation matrix}]{Estimation matrix} \label{sec:emat}
+\setcounter{equation}{0}
+
+\textbf{Definition:} In multiple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}), the estimation matrix is the matrix $E$ that results in ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}) or weighted least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-wls}) parameter estimates when right-multiplied with the measured data:
+
+\begin{equation} \label{eq:emat-em}
+Ey = \hat{\beta} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D81 | shortcut: emat | author: JoramSoch | date: 2020-07-22, 05:17.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Projection matrix}]{Projection matrix} \label{sec:pmat}
+\setcounter{equation}{0}
+
+\textbf{Definition:} In multiple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}), the projection matrix is the matrix $P$ that results in the fitted signal explained by estimated parameters ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:emat}) when right-multiplied with the measured data:
+
+\begin{equation} \label{eq:pmat-pm}
+Py = \hat{y} = X \hat{\beta} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Projection matrix"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-22; URL: \url{https://en.wikipedia.org/wiki/Projection_matrix#Overview}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D82 | shortcut: pmat | author: JoramSoch | date: 2020-07-22, 05:25.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Residual-forming matrix}]{Residual-forming matrix} \label{sec:rfmat}
+\setcounter{equation}{0}
+
+\textbf{Definition:} In multiple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}), the residual-forming matrix is the matrix $R$ that results in the vector of residuals left over by estimated parameters ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:emat}) when right-multiplied with the measured data:
+
+\begin{equation} \label{eq:rfmat-pm}
+Ry = \hat{\varepsilon} = y - \hat{y} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Projection matrix"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-22; URL: \url{https://en.wikipedia.org/wiki/Projection_matrix#Properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D83 | shortcut: rfmat | author: JoramSoch | date: 2020-07-22, 05:35.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Estimation, projection and residual-forming matrix}]{Estimation, projection and residual-forming matrix} \label{sec:mlr-mat}
 \setcounter{equation}{0}
 
@@ -7551,7 +8380,7 @@ R &= I_n - X (X^\mathrm{T} X)^{-1} X^\mathrm{T}
 \end{split}
 \end{equation}
 
-are the estimation matrix, projection matrix and residual-forming matrix and $n$ is the number of observations.
+are the estimation matrix ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:emat}), projection matrix ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:pmat}) and residual-forming matrix ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rfmat}) and $n$ is the number of observations.
 
 
 \vspace{1em}
@@ -7619,7 +8448,72 @@ and using \eqref{eq:mlr-mat-y-est-qed}, this becomes
 
 
 
-\subsubsection[\textbf{Weighted least squares}]{Weighted least squares} \label{sec:mlr-wls}
+\subsubsection[\textbf{Idempotence of projection and residual-forming matrix}]{Idempotence of projection and residual-forming matrix} \label{sec:mlr-idem}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The projection matrix ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:pmat}) and the residual-forming matrix ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rfmat}) are idempotent:
+
+\begin{equation} \label{eq:mlr-idem-P^2-R^2}
+\begin{split}
+P^2 &= P \\
+R^2 &= R \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:}
+
+1) The projection matrix for ordinary least squares is given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mat})
+
+\begin{equation} \label{eq:mlr-idem-P}
+P = X (X^\mathrm{T} X)^{-1} X^\mathrm{T} \; ,
+\end{equation}
+
+such that
+
+\begin{equation} \label{eq:mlr-idem-P^2}
+\begin{split}
+P^2 &= X (X^\mathrm{T} X)^{-1} X^\mathrm{T} X (X^\mathrm{T} X)^{-1} X^\mathrm{T} \\
+&= X (X^\mathrm{T} X)^{-1} X^\mathrm{T} \\
+&\overset{\eqref{eq:mlr-idem-P}}{=} P \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+2) The residual-forming matrix for ordinary least squares is given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mat})
+
+\begin{equation} \label{eq:mlr-idem-R}
+R = I_n - X (X^\mathrm{T} X)^{-1} X^\mathrm{T} = I_n - P \; ,
+\end{equation}
+
+such that
+
+\begin{equation} \label{eq:mlr-idem-R^2}
+\begin{split}
+R^2 &= (I_n - P) (I_n - P) \\
+&= I_n - P - P + P^2 \\
+&\overset{\eqref{eq:mlr-idem-P^2}}{=} I_n - 2 P + P \\
+&= I_n - P \\
+&\overset{\eqref{eq:mlr-idem-R}}{=} R \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Projection matrix"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-07-22; URL: \url{https://en.wikipedia.org/wiki/Projection_matrix#Properties}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P135 | shortcut: mlr-idem | author: JoramSoch | date: 2020-07-22, 06:28.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Weighted least squares (1)}]{Weighted least squares (1)} \label{sec:mlr-wls}
 \setcounter{equation}{0}
 
 \textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with correlated observations
@@ -7645,7 +8539,7 @@ W V W^\mathrm{T} = I_n \; .
 Since $V$ is a covariance matrix and thus symmetric, $W$ is also symmetric and can be expressed as the matrix square root of the inverse of $V$:
 
 \begin{equation} \label{eq:mlr-wls-W-V}
-W W = V^{-1} \quad \Leftrightarrow \quad W = V^{-1/2} \; .
+W V W = I_n \quad \Leftrightarrow \quad V = W^{-1} W^{-1} \quad \Leftrightarrow \quad V^{-1} = W W \quad \Leftrightarrow \quad W = V^{-1/2} \; .
 \end{equation}
 
 Left-multiplying the linear regression equation \eqref{eq:mlr-wls-MLR} with $W$, the linear transformation theorem ($\rightarrow$ Definition "mvn-ltt") implies that
@@ -7684,6 +8578,95 @@ which corresponds to the weighted least squares solution \eqref{eq:mlr-wls-WLS}.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P77 | shortcut: mlr-wls | author: JoramSoch | date: 2020-03-11, 11:22.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Weighted least squares (2)}]{Weighted least squares (2)} \label{sec:mlr-wls2}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with correlated observations
+
+\begin{equation} \label{eq:mlr-wls2-MLR}
+y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; ,
+\end{equation}
+
+the parameters minimizing the weighted residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) are given by
+
+\begin{equation} \label{eq:mlr-wls2-WLS}
+\hat{\beta} = (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} y \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Let there be an $n \times n$ square matrix $W$, such that
+
+\begin{equation} \label{eq:mlr-wls2-W-def}
+W V W^\mathrm{T} = I_n \; .
+\end{equation}
+
+Since $V$ is a covariance matrix and thus symmetric, $W$ is also symmetric and can be expressed the matrix square root of the inverse of $V$:
+
+\begin{equation} \label{eq:mlr-wls2-W-V}
+W V W = I_n \quad \Leftrightarrow \quad V = W^{-1} W^{-1} \quad \Leftrightarrow \quad V^{-1} = W W \quad \Leftrightarrow \quad W = V^{-1/2} \; .
+\end{equation}
+
+Left-multiplying the linear regression equation \eqref{eq:mlr-wls2-MLR} with $W$, the linear transformation theorem ($\rightarrow$ Definition "mvn-ltt") implies that
+
+\begin{equation} \label{eq:mlr-wls2-MLR-W}
+Wy = WX\beta + W\varepsilon, \; W\varepsilon \sim \mathcal{N}(0, \sigma^2 W V W^T) \; .
+\end{equation}
+
+Applying \eqref{eq:mlr-wls2-W-def}, we see that \eqref{eq:mlr-wls2-MLR-W} is actually a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
+
+\begin{equation} \label{eq:mlr-wls2-MLR-W-dev}
+Wy = WX\beta + W\varepsilon, \; W\varepsilon \sim \mathcal{N}(0, \sigma^2 I_n) \; .
+\end{equation}
+
+With this, we can express the weighted residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) as
+
+\begin{equation} \label{eq:mlr-wls2-wRSS}
+\mathrm{wRSS}(\beta) = \sum_{i=1}^n (W \varepsilon)_i = (W \varepsilon)^\mathrm{T} (W \varepsilon) = (Wy-WX\beta)^\mathrm{T} (Wy-WX\beta)
+\end{equation}
+
+which can be developed into
+
+\begin{equation} \label{eq:mlr-wls2-wRSS-dev}
+\begin{split}
+\mathrm{wRSS}(\beta) &= y^\mathrm{T} W^\mathrm{T} W y - y^\mathrm{T} W^\mathrm{T} W X \beta - \beta^\mathrm{T} X^\mathrm{T} W^\mathrm{T} W y + \beta^\mathrm{T} X^\mathrm{T} W^\mathrm{T} W X \beta \\
+&= y^\mathrm{T} W W y - 2 \beta^\mathrm{T} X^\mathrm{T} W W y + \beta^\mathrm{T} X^\mathrm{T} W W X \beta \\
+&\overset{\eqref{eq:mlr-wls2-W-V}}{=} y^\mathrm{T} V^{-1} y - 2 \beta^\mathrm{T} X^\mathrm{T} V^{-1} y + \beta^\mathrm{T} X^\mathrm{T} V^{-1} X \beta \; .
+\end{split}
+\end{equation}
+
+The derivative of $\mathrm{wRSS}(\beta)$ with respect to $\beta$ is
+
+\begin{equation} \label{eq:mlr-wls2-wRSS-der}
+\frac{\mathrm{d}\mathrm{wRSS}(\beta)}{\mathrm{d}\beta} = - 2 X^\mathrm{T} V^{-1} y + 2 X^\mathrm{T} V^{-1} X \beta
+\end{equation}
+
+and setting this deriative to zero, we obtain:
+
+\begin{equation} \label{eq:mlr-wls2-WLS-qed}
+\begin{split}
+\frac{\mathrm{d}\mathrm{wRSS}(\hat{\beta})}{\mathrm{d}\beta} &= 0 \\
+0 &= - 2 X^\mathrm{T} V^{-1} y + 2 X^\mathrm{T} V^{-1} X \hat{\beta} \\
+X^\mathrm{T} V^{-1} X \hat{\beta} &= X^\mathrm{T} V^{-1} y \\
+\hat{\beta} &= (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} y \; .
+\end{split}
+\end{equation}
+
+Since the quadratic form $y^\mathrm{T} V^{-1} y$ in \eqref{eq:mlr-wls2-wRSS-dev} is positive, $\hat{\beta}$ minimizes $\mathrm{wRSS}(\beta)$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P136 | shortcut: mlr-wls2 | author: JoramSoch | date: 2020-07-22, 06:48.
 \vspace{1em}
 
 
@@ -7909,7 +8892,7 @@ and is therefore conjugate relative to the likelihood.
 y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
 \end{equation}
 
-be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.  Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
+be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.  Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
 
 \begin{equation} \label{eq:blr-post-GLM-NG-prior}
 p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
@@ -7958,10 +8941,10 @@ which, for mathematical convenience, can also be parametrized as
 p(y|\beta,\tau) = \mathcal{N}(y; X \beta, (\tau P)^{-1}) = \sqrt{\frac{|\tau P|}{(2 \pi)^n}} \, \exp\left[ -\frac{\tau}{2} (y-X\beta)^\mathrm{T} P (y-X\beta) \right]
 \end{equation}
 
-using the noise precision $\tau = 1/\sigma^2$ and the $n \times n$ precision matrix $P = V^{-1}$.
+using the noise precision $\tau = 1/\sigma^2$ and the $n \times n$ precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) $P = V^{-1}$.
 
 \vspace{1em}
-Combining the likelihood function \eqref{eq:blr-post-GLM-LF-Bayes} with the prior distribution \eqref{eq:blr-post-GLM-NG-prior}, the sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss of the model is given by
+Combining the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) \eqref{eq:blr-post-GLM-LF-Bayes} with the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) \eqref{eq:blr-post-GLM-NG-prior}, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) of the model is given by
 
 \begin{equation} \label{eq:blr-post-GLM-NG-JL-s1}
 \begin{split}
@@ -8174,6 +9157,209 @@ Thus, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}
 
 \vspace{1em}
 \textbf{Metadata:} ID: P11 | shortcut: blr-lme | author: JoramSoch | date: 2020-01-03, 22:05.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Posterior probability of alternative hypothesis}]{Posterior probability of alternative hypothesis} \label{sec:blr-pp}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let there be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}) errors:
+
+\begin{equation} \label{eq:blr-pp-GLM}
+y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
+\end{equation}
+
+and assume a normal-gamma ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}) prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
+
+\begin{equation} \label{eq:blr-pp-GLM-NG-prior}
+p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
+\end{equation}
+
+Then, the posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of the alternative hypothesis ($\rightarrow$ Definition "h1")
+
+\begin{equation} \label{eq:blr-pp-GLM-H1}
+\mathrm{H}_1: \, c^\mathrm{T} \beta > 0
+\end{equation}
+
+is given by
+
+\begin{equation} \label{eq:blr-pp-GLM-NG-PP}
+\mathrm{Pr}\left( \mathrm{H}_1 | y \right) = 1 - \mathrm{T}\left( -\frac{c^\mathrm{T} \mu}{\sqrt{c^\mathrm{T} \Sigma c}}; \nu \right)
+\end{equation}
+
+where $c$ is a $p \times 1$ contrast vector ($\rightarrow$ Definition "con"), $\mathrm{T}(x; \nu)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the t-distribution ($\rightarrow$ Definition "t") with $\nu$ degrees of freedom ($\rightarrow$ Definition "dof") and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
+
+
+\vspace{1em}
+\textbf{Proof:} The posterior distribution for Bayesian linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-post}) is given by a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}) over $\beta$ and $\tau = 1/\sigma^2$
+
+\begin{equation} \label{eq:blr-pp-GLM-NG-post}
+p(\beta,\tau|y) = \mathcal{N}(\beta; \mu_n, (\tau \Lambda_n)^{-1}) \cdot \mathrm{Gam}(\tau; a_n, b_n)
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:blr-pp-GLM-NG-post-par}
+\begin{split}
+\mu_n &= \Lambda_n^{-1} (X^\mathrm{T} P y + \Lambda_0 \mu_0) \\
+\Lambda_n &= X^\mathrm{T} P X + \Lambda_0 \\
+a_n &= a_0 + \frac{n}{2} \\
+b_n &= b_0 + \frac{1}{2} (y^\mathrm{T} P y + \mu_0^\mathrm{T} \Lambda_0 \mu_0 - \mu_n^\mathrm{T} \Lambda_n \mu_n) \; .
+\end{split}
+\end{equation}
+
+The marginal distribution of a normal-gamma distribution is a multivariate t-distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:ng-marg}), such that the marginal ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-marg}) posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) distribution of $\beta$ is
+
+\begin{equation} \label{eq:blr-pp-GLM-NG-post-beta}
+p(\beta|y) = \mathrm{t}(\beta; \mu, \Sigma, \nu)
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:blr-pp-GLM-NG-post-par-beta}
+\begin{split}
+\mu &= \mu_n \\
+\Sigma &= \left( \frac{a_n}{b_n} \Lambda_n \right)^{-1} \\
+\nu &= 2 \, a_n \; .
+\end{split}
+\end{equation}
+
+Define the quantity $\gamma = c^\mathrm{T} \beta$. According to the linear transformation theorem for the multivariate t-distribution ($\rightarrow$ Proof "mvt-ltt"), $\gamma$ also follows a multivariate t-distribution ($\rightarrow$ Definition "mvt"):
+
+\begin{equation} \label{eq:blr-pp-GLM-NG-post-gamma}
+p(\gamma|y) = \mathrm{t}(\gamma; c^\mathrm{T} \mu, c^\mathrm{T} \Sigma \, c, \nu) \; .
+\end{equation}
+
+Because $c^\mathrm{T}$ is a $1 \times p$ vector, $\gamma$ is a scalar and actually has a non-central scaled t-distribution ($\rightarrow$ Definition "ncst"). Therefore, the posterior probability of $H_1$ can be calculated using a one-dimensional integral:
+
+\begin{equation} \label{eq:blr-pp-GLM-NG-post-prob-H0-s1}
+\begin{split}
+\mathrm{Pr}\left( \mathrm{H}_1 | y \right) &= p(\gamma > 0|y) \\
+&= \int_{0}^{+\infty} p(\gamma|y) \, \mathrm{d}\gamma \\
+&= 1 - \int_{-\infty}^{0} p(\gamma|y) \, \mathrm{d}\gamma \\
+&= 1 - \mathrm{T}_\mathrm{ncst}(0; c^\mathrm{T} \mu, c^\mathrm{T} \Sigma \, c, \nu) \; .
+\end{split}
+\end{equation}
+
+Using the relation between non-central scaled t-distribution and standard t-distribution ($\rightarrow$ Proof "ncst-t"), we can finally write:
+
+\begin{equation} \label{eq:blr-pp-GLM-NG-post-prob-H0-s2}
+\begin{split}
+\mathrm{Pr}\left( \mathrm{H}_1 | y \right) &= 1 - \mathrm{T}\left( \frac{(0 - c^\mathrm{T} \mu)}{\sqrt{c^\mathrm{T} \Sigma c}}; \nu \right) \\
+&= 1 - \mathrm{T}\left( -\frac{c^\mathrm{T} \mu}{\sqrt{c^\mathrm{T} \Sigma c}}; \nu \right) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Koch, Karl-Rudolf (2007): "Multivariate t-distribution"; in: \textit{Introduction to Bayesian Statistics}, Springer, Berlin/Heidelberg, 2007, eqs. 2.235, 2.236, 2.213, 2.210, 2.188; URL: \url{https://www.springer.com/de/book/9783540727231}; DOI: 10.1007/978-3-540-72726-2.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P133 | shortcut: blr-pp | author: JoramSoch | date: 2020-07-17, 17:03.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Posterior credibility region excluding null hypothesis}]{Posterior credibility region excluding null hypothesis} \label{sec:blr-pcr}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let there be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}) errors:
+
+\begin{equation} \label{eq:blr-pcr-GLM}
+y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
+\end{equation}
+
+and assume a normal-gamma ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}) prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
+
+\begin{equation} \label{eq:blr-pcr-GLM-NG-prior}
+p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
+\end{equation}
+
+Then, the largest posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) credibility region ($\rightarrow$ Definition "cr") that does not contain the omnibus null hypothesis ($\rightarrow$ Definition "h0")
+
+\begin{equation} \label{eq:blr-pcr-GLM-H0}
+\mathrm{H}_0: \, C^\mathrm{T} \beta = 0
+\end{equation}
+
+is given by the credibility level ($\rightarrow$ Definition "cr")
+
+\begin{equation} \label{eq:blr-pcr-GLM-NG-PCR}
+(1-\alpha) = \mathrm{F}\left( \left[ \mu^\mathrm{T} C (C^\mathrm{T} \Sigma \, C)^{-1} C^\mathrm{T} \mu \right]/q; q, \nu \right)
+\end{equation}
+
+where $C$ is a $p \times q$ contrast matrix ($\rightarrow$ Definition "con"), $\mathrm{F}(x; v, w)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the F-distribution ($\rightarrow$ Definition "f") with $v$ numerator degrees of freedom ($\rightarrow$ Definition "dof") $w$ denominator degrees of freedom ($\rightarrow$ Definition "dof") and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
+
+
+\vspace{1em}
+\textbf{Proof:} The posterior distribution for Bayesian linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-post}) is given by a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}) over $\beta$ and $\tau = 1/\sigma^2$
+
+\begin{equation} \label{eq:blr-pcr-GLM-NG-post}
+p(\beta,\tau|y) = \mathcal{N}(\beta; \mu_n, (\tau \Lambda_n)^{-1}) \cdot \mathrm{Gam}(\tau; a_n, b_n)
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:blr-pcr-GLM-NG-post-par}
+\begin{split}
+\mu_n &= \Lambda_n^{-1} (X^\mathrm{T} P y + \Lambda_0 \mu_0) \\
+\Lambda_n &= X^\mathrm{T} P X + \Lambda_0 \\
+a_n &= a_0 + \frac{n}{2} \\
+b_n &= b_0 + \frac{1}{2} (y^\mathrm{T} P y + \mu_0^\mathrm{T} \Lambda_0 \mu_0 - \mu_n^\mathrm{T} \Lambda_n \mu_n) \; .
+\end{split}
+\end{equation}
+
+The marginal distribution of a normal-gamma distribution is a multivariate t-distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:ng-marg}), such that the marginal ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-marg}) posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) distribution of $\beta$ is
+
+\begin{equation} \label{eq:blr-pcr-GLM-NG-post-beta}
+p(\beta|y) = \mathrm{t}(\beta; \mu, \Sigma, \nu)
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:blr-pcr-GLM-NG-post-par-beta}
+\begin{split}
+\mu &= \mu_n \\
+\Sigma &= \left( \frac{a_n}{b_n} \Lambda_n \right)^{-1} \\
+\nu &= 2 \, a_n \; .
+\end{split}
+\end{equation}
+
+Define the quantity $\gamma = C^\mathrm{T} \beta$. According to the linear transformation theorem for the multivariate t-distribution ($\rightarrow$ Proof "mvt-ltt"), $\gamma$ also follows a multivariate t-distribution ($\rightarrow$ Definition "mvt"):
+
+\begin{equation} \label{eq:blr-pcr-GLM-NG-post-gamma}
+p(\gamma|y) = \mathrm{t}(\gamma; C^\mathrm{T} \mu, C^\mathrm{T} \Sigma \, C, \nu) \; .
+\end{equation}
+
+Because $C^\mathrm{T}$ is a $q \times p$ matrix, $\gamma$ is a $q \times 1$ vector. The quadratic form of a multivariate t-distributed random variable has an F-distribution ($\rightarrow$ Proof "mvt-f"), such that we can write:
+
+\begin{equation} \label{eq:blr-pcr-GLM-NG-post-qf}
+\mathrm{QF}(\gamma) = (\gamma - C^\mathrm{T} \mu)^\mathrm{T} (C^\mathrm{T} \Sigma \, C)^{-1} (\gamma - C^\mathrm{T} \mu) /q \, \sim \mathrm{F}(q,\nu) \; .
+\end{equation}
+
+Therefore, the largest posterior credibility region for $\gamma$ which does not contain $\gamma = 0_q$ (i.e. only touches this origin point) can be obtained by plugging $\mathrm{QF}(0)$ into the cumulative distribution function of the F-distribution:
+
+\begin{equation} \label{eq:blr-pcr-GLM-NG-post-cred-reg-not-H0}
+\begin{split}
+(1-\alpha) &= \mathrm{F}\left( \mathrm{QF}(0); q, \nu \right) \\
+&= \mathrm{F}\left( \left[ \mu^\mathrm{T} C (C^\mathrm{T} \Sigma \, C)^{-1} C^\mathrm{T} \mu \right]/q; q, \nu \right) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Koch, Karl-Rudolf (2007): "Multivariate t-distribution"; in: \textit{Introduction to Bayesian Statistics}, Springer, Berlin/Heidelberg, 2007, eqs. 2.235, 2.236, 2.213, 2.210, 2.211, 2.183; URL: \url{https://www.springer.com/de/book/9783540727231}; DOI: 10.1007/978-3-540-72726-2.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P134 | shortcut: blr-pcr | author: JoramSoch | date: 2020-07-17, 17:41.
 \vspace{1em}
 
 
@@ -8944,6 +10130,28 @@ such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Select
 
 \subsection{Beta-distributed data}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:beta-data}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Beta-distributed data are defined as a set of proportions $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ with $y_i \in [0,1], \; i = 1,\ldots,n$, independent and identically distributed according to a Beta distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:beta}) with shapes $\alpha$ and $\beta$:
+
+\begin{equation} \label{eq:beta-data-beta-data}
+y_i \sim \mathrm{Bet}(\alpha,\beta), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D77 | shortcut: beta-data | author: JoramSoch | date: 2020-06-28, 21:16.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Method of moments}]{Method of moments} \label{sec:beta-mom}
 \setcounter{equation}{0}
 
@@ -9054,10 +10262,63 @@ Together, \eqref{eq:beta-mom-Beta-MoM-alpha} and \eqref{eq:beta-mom-Beta-MoM-bet
 
 \subsection{Logistic regression}
 
+\subsubsection[\textit{Definition}]{Definition} \label{sec:logreg}
+\setcounter{equation}{0}
+
+\textbf{Definition:} A logistic regression model is given by a set of binary observations $y_i \in \left\lbrace 0, 1 \right\rbrace, i = 1,\ldots,n$, a set of predictors $x_j \in \mathbb{R}^n, j = 1,\ldots,p$, a base $b$ and the assumption that the log-odds are a linear combination of the predictors:
+
+\begin{equation} \label{eq:logreg-logreg}
+l_i = x_i \beta + \varepsilon_i, \; i = 1,\ldots,n
+\end{equation}
+
+where $l_i$ are the log-odds that $y_i = 1$
+
+\begin{equation} \label{eq:logreg-logodds}
+l_i = \log_b \frac{\mathrm{Pr}(y_i = 1)}{\mathrm{Pr}(y_i = 0)}
+\end{equation}
+
+and $x_i$ is the $i$-th row of the $n \times p$ matrix
+
+\begin{equation} \label{eq:logreg-X}
+X = \left[ x_1, \ldots, x_p \right] \; .
+\end{equation}
+
+Within this model,
+
+\begin{itemize}
+
+\item $y$ are called "categorical observations" or "dependent variable";
+
+\item $X$ is called "design matrix" or "set of independent variables";
+
+\item $\beta$ are called "regression coefficients" or "weights";
+
+\item $\varepsilon_i$ is called "noise" or "error term";
+
+\item $n$ is the number of observations;
+
+\item $p$ is the number of predictors.
+
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Logistic regression"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-28; URL: \url{https://en.wikipedia.org/wiki/Logistic_regression#Logistic_model}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D76 | shortcut: logreg | author: JoramSoch | date: 2020-06-28, 20:51.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Probability and log-odds}]{Probability and log-odds} \label{sec:logreg-pnlo}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Assume a logistic regression model ($\rightarrow$ Definition "logreg")
+\textbf{Theorem:} Assume a logistic regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:logreg})
 
 \begin{equation} \label{eq:logreg-pnlo-logreg}
 l_i = x_i \beta + \varepsilon_i, \; i = 1,\ldots,n
@@ -9110,7 +10371,7 @@ l_i &= \log_b \frac{p(y_i=1|x_i)}{p(y_i=0|x_i)} \\
 \subsubsection[\textbf{Log-odds and probability}]{Log-odds and probability} \label{sec:logreg-lonp}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Assume a logistic regression model ($\rightarrow$ Definition "logreg")
+\textbf{Theorem:} Assume a logistic regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:logreg})
 
 \begin{equation} \label{eq:logreg-lonp-logreg}
 l_i = x_i \beta + \varepsilon_i, \; i = 1,\ldots,n
@@ -9168,6 +10429,24 @@ which proves the identity given by \eqref{eq:logreg-lonp-prob}.
 \section{Categorical data}
 
 \subsection{Binomial observations}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:bin-data}
+\setcounter{equation}{0}
+
+\textbf{Definition:} An ordered pair $(n,y)$ with $n \in \mathbb{N}$ and $y \in \mathbb{N}_0$, where $y$ is the number of successes in $n$ trials, consititutes a set of binomial observations.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D78 | shortcut: bin-data | author: JoramSoch | date: 2020-07-07, 07:04.
+\vspace{1em}
+
+
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:bin-prior}
 \setcounter{equation}{0}
@@ -9427,6 +10706,24 @@ the LME finally becomes
 
 
 \subsection{Multinomial observations}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:mult-data}
+\setcounter{equation}{0}
+
+\textbf{Definition:} An ordered pair $(n,y)$ with $n \in \mathbb{N}$ and $y = \left[ y_1, \ldots, y_k \right] \in \mathbb{N}_0^{1 \times k}$, where $y_i$ is the number of observations for the $i$-th out of $k$ categories obtained in $n$ trials, $i = 1, \ldots, k$, consititutes a set of multinomial observations.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D79 | shortcut: mult-data | author: JoramSoch | date: 2020-07-07, 07:12.
+\vspace{1em}
+
+
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:mult-prior}
 \setcounter{equation}{0}
@@ -10548,73 +11845,134 @@ which proofs the partition given by \eqref{eq:lme-anc-LME}.
 
 
 
-\subsection{Log-evidence derivatives}
+\subsection{Log family evidence}
 
-\subsubsection[\textbf{Log Bayes factor in terms of log model evidences}]{Log Bayes factor in terms of log model evidences} \label{sec:lbf-lme}
+\subsubsection[\textit{Definition}]{Definition} \label{sec:lfe}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $m_1$ and $m_2$ be two statistical models with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1)$ and $\mathrm{LME}(m_2)$. Then, the log Bayes factor ($\rightarrow$ Definition "lbf") in favor of model $m_1$ and against model $m_2$ is the difference of the log model evidences:
+\textbf{Definition:} Let $f$ be a family of $M$ generative models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m_1, \ldots, m_M$, such that the following statement holds true:
 
-\begin{equation} \label{eq:lbf-lme-LBF-LME}
-\mathrm{LBF}_{1,2} = \mathrm{LME}(m_1) - \mathrm{LME}(m_2) \; .
+\begin{equation} \label{eq:lfe-fam}
+f \Leftrightarrow m_1 \vee \ldots \vee m_M \; .
 \end{equation}
 
+Then, the family evidence of $f$ is the weighted average of the model evidences ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) of $m_1, \ldots, m_M$ where the weights are the within-family prior model probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior})
 
-\vspace{1em}
-\textbf{Proof:} The log Bayes factor ($\rightarrow$ Definition "lbf") (LBF) is defined as the logarithm of the Bayes factor ($\rightarrow$ Definition "bf") (BF) which is defined as the posterior odds ratio when both models are equally likely apriori:
-
-\begin{equation} \label{eq:lbf-lme-LBF-s1}
-\begin{split}
-\mathrm{LBF}_{1,2} &= \log \mathrm{BF}_{1,2} \\
-&= \log \frac{p(m_1|y)}{p(m_2|y)} \; .
-\end{split}
+\begin{equation} \label{eq:lfe-fe}
+p(y|f) = \sum_{i=1}^M p(y|m_i) \, p(m_i|f) \; .
 \end{equation}
 
-Plugging in the posterior odds ratio according to Bayes' rule ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-rule}), we have
+The log family evidence is given by the logarithm of the family evidence:
 
-\begin{equation} \label{eq:lbf-lme-LBF-s2}
-\mathrm{LBF}_{1,2} = \log \left[ \frac{p(y|m_1)}{p(y|m_2)} \cdot \frac{p(m_1)}{p(m_2)} \right] \; .
-\end{equation}
-
-When both models are equally likely apriori, the prior odds ratio is one, such that
-
-\begin{equation} \label{eq:lbf-lme-LBF-s3}
-\mathrm{LBF}_{1,2} = \log \frac{p(y|m_1)}{p(y|m_2)} \; .
-\end{equation}
-
-Resolving the logarithm and applying the definition of the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}), we finally have:
-
-\begin{equation} \label{eq:lbf-lme-LBF-s4}
-\begin{split}
-\mathrm{LBF}_{1,2} &= \log p(y|m_1) - \log p(y|m_2) \\
-&= \mathrm{LME}(m_1) - \mathrm{LME}(m_2) \; .
-\end{split}
+\begin{equation} \label{eq:lfe-lfe}
+\mathrm{LFE}(f) = \log p(y|f) = \log \sum_{i=1}^M p(y|m_i) \, p(m_i|f) \; .
 \end{equation}
 
 
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Soch J, Allefeld C (2018): "MACS – a new SPM toolbox for model assessment, comparison and selection"; in: \textit{Journal of Neuroscience Methods}, vol. 306, pp. 19-31, eq. 18; URL: \url{https://www.sciencedirect.com/science/article/pii/S0165027018301468}; DOI: 10.1016/j.jneumeth.2018.05.017.
+\item Soch J, Allefeld C (2018): "MACS – a new SPM toolbox for model assessment, comparison and selection"; in: \textit{Journal of Neuroscience Methods}, vol. 306, pp. 19-31, eq. 16; URL: \url{https://www.sciencedirect.com/science/article/pii/S0165027018301468}; DOI: 10.1016/j.jneumeth.2018.05.017.
 \end{itemize}
 
 
 \vspace{1em}
-\textbf{Metadata:} ID: P64 | shortcut: lbf-lme | author: JoramSoch | date: 2020-02-27, 20:51.
+\textbf{Metadata:} ID: D80 | shortcut: lfe | author: JoramSoch | date: 2020-07-13, 22:31.
 \vspace{1em}
 
 
 
-\subsubsection[\textbf{Log family evidences in terms of log model evidences}]{Log family evidences in terms of log model evidences} \label{sec:lfe-lme}
+\subsubsection[\textbf{Derivation}]{Derivation} \label{sec:lfe-der}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $m_1, \ldots, m_M$ be $M$ statistical models with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1), \ldots, \mathrm{LME}(m_M)$ and belonging to $F$ mutually exclusive model families $f_1, \ldots, f_F$. Then, the log family evidences ($\rightarrow$ Definition "lfe") are given by:
+\textbf{Theorem:} Let $f$ be a family of $M$ generative models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m_1, \ldots, m_M$ with model evidences ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) $p(y \vert m_1), \ldots, p(y \vert m_M)$. Then, the log family evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lfe})
+
+\begin{equation} \label{eq:lfe-der-LFE-term}
+\mathrm{LFE}(f) = \log p(y|f)
+\end{equation}
+
+can be expressed as
+
+\begin{equation} \label{eq:lfe-der-LFE-marg}
+\mathrm{LFE}(f) = \log \sum_{i=1}^M p(y|m_i) \, p(m_i|f)
+\end{equation}
+
+where $p(m_i \vert f)$ are the within-family ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lfe}) prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}).
+
+
+\vspace{1em}
+\textbf{Proof:} We will assume "prior addivivity"
+
+\begin{equation} \label{eq:lfe-der-fam-prior}
+p(f) = \sum_{i=1}^M p(m_i)
+\end{equation}
+
+and "posterior additivity" for family probabilities:
+
+\begin{equation} \label{eq:lfe-der-fam-post}
+p(f|y) = \sum_{i=1}^M p(m_i|y)
+\end{equation}
+
+Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}) for the family evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lfe}) gives
+
+\begin{equation} \label{eq:lfe-der-fe-bayes-th}
+p(y|f) = \frac{p(f|y) \, p(y)}{p(f)} \; .
+\end{equation}
+
+Applying \eqref{eq:lfe-der-fam-prior} and \eqref{eq:lfe-der-fam-post}, we have
+
+\begin{equation} \label{eq:lfe-der-fe-me}
+p(y|f) = \frac{\sum_{i=1}^M p(m_i|y) \, p(y)}{\sum_{i=1}^M p(m_i)} \; .
+\end{equation}
+
+Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}) for the model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lfe}) gives
+
+\begin{equation} \label{eq:lfe-der-me-bayes-th}
+p(y|m_i) = \frac{p(m_i|y) \, p(y)}{p(m_i)}
+\end{equation}
+
+which can be rearranged into
+
+\begin{equation} \label{eq:lfe-der-me-bayes-th-dev}
+p(m_i|y) \, p(y) = p(y|m_i) \, p(m_i) \; .
+\end{equation}
+
+Plugging \eqref{eq:lfe-der-me-bayes-th-dev} into \eqref{eq:lfe-der-fe-me}, we have
+
+\begin{equation} \label{eq:lfe-der-fe-marg-qed}
+\begin{split}
+p(y|f) &= \frac{\sum_{i=1}^M p(y|m_i) \, p(m_i)}{\sum_{i=1}^M p(m_i)} \\
+&= \sum_{i=1}^M p(y|m_i) \cdot \frac{p(m_i)}{\sum_{i=1}^M p(m_i)} \\
+&= \sum_{i=1}^M p(y|m_i) \cdot \frac{p(m_i,f)}{p(f)} \\
+&= \sum_{i=1}^M p(y|m_i) \cdot p(m_i|f) \; .
+\end{split}
+\end{equation}
+
+Equation \eqref{eq:lfe-der-LFE-marg} follows by logarithmizing both sides of \eqref{eq:lfe-der-fe-marg-qed}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P132 | shortcut: lfe-der | author: JoramSoch | date: 2020-07-13, 22:58.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Calculation from log model evidences}]{Calculation from log model evidences} \label{sec:lfe-lme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $m_1, \ldots, m_M$ be $M$ statistical models with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1), \ldots, \mathrm{LME}(m_M)$ and belonging to $F$ mutually exclusive model families $f_1, \ldots, f_F$. Then, the log family evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lfe}) are given by:
 
 \begin{equation} \label{eq:lfe-lme-LFE-LME}
 \mathrm{LFE}(f_j) = \log \sum_{m_i \in f_j} \left[ \exp[\mathrm{LME}(m_i)] \cdot p(m_i|f_j) \right], \quad j = 1, \ldots, F,
 \end{equation}
 
-where $p(m_i \vert f_j)$ are within-family prior model probabilities.
+where $p(m_i \vert f_j)$ are within-family ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lfe}) prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}).
 
 
 \vspace{1em}
@@ -10668,81 +12026,222 @@ and applying \eqref{eq:lfe-lme-ME} to \eqref{eq:lfe-lme-LFE-LME-s1}, we finally 
 
 
 
-\subsubsection[\textbf{Posterior model probability in terms of log Bayes factor}]{Posterior model probability in terms of log Bayes factor} \label{sec:pmp-lbf}
+\subsection{Log Bayes factor}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:lbf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $m_1$ and $m_2$ be two statistical models log Bayes factor ($\rightarrow$ Definition "lbf") $\mathrm{LBF}_{1,2}$ in favor of model $m_1$ and against model $m_2$. Then, if both models are equally likely apriori, the posterior model probability ($\rightarrow$ Definition "pmp") of $m_1$ is
+\textbf{Definition:} Let there be two generative models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m_1$ and $m_2$ which are mutually exclusive, but not necessarily collectively exhaustive:
 
-\begin{equation} \label{eq:pmp-lbf-PMP-LBF}
-p(m_1|y) = \frac{\exp(\mathrm{LBF}_{1,2})}{\exp(\mathrm{LBF}_{1,2}) + 1} \; .
+\begin{equation} \label{eq:lbf-m12}
+\neg (m_1 \land m_2)
 \end{equation}
 
+Then, the Bayes factor in favor of $m_1$ and against $m_2$ is the ratio of the model evidences ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) of $m_1$ and $m_2$:
 
-\vspace{1em}
-\textbf{Proof:} From Bayes' rule ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-rule}), the posterior odds ratio is
-
-\begin{equation} \label{eq:pmp-lbf-post-odds-s1}
-\frac{p(m_1|y)}{p(m_2|y)} = \frac{p(y|m_1)}{p(y|m_2)} \cdot \frac{p(m_1)}{p(m_2)} \; .
+\begin{equation} \label{eq:lbf-bf}
+\mathrm{BF}_{12} = \frac{p(y|m_1)}{p(y|m_2)} \; .
 \end{equation}
 
-When both models are equally likely apriori, the prior odds ratio is one, such that
+The log Bayes factor is given by the logarithm of the Bayes factor:
 
-\begin{equation} \label{eq:pmp-lbf-post-odds-s2}
-\frac{p(m_1|y)}{p(m_2|y)} = \frac{p(y|m_1)}{p(y|m_2)} \; .
-\end{equation}
-
-Now the right-hand side corresponds to the Bayes factor ($\rightarrow$ Definition "bf"), therefore
-
-\begin{equation} \label{eq:pmp-lbf-post-odds-s4}
-\frac{p(m_1|y)}{1-p(m_1|y)} = \mathrm{BF}_{1,2} \; .
-\end{equation}
-
-Because the two models are collectively exhaustive, we have
-
-\begin{equation} \label{eq:pmp-lbf-post-odds-s3}
-\frac{p(m_1|y)}{1-p(m_1|y)} = \mathrm{BF}_{1,2} \; .
-\end{equation}
-
-Now rearranging for the posterior probability ($\rightarrow$ Definition "pmp"), this gives
-
-\begin{equation} \label{eq:pmp-lbf-post-s1}
-p(m_1|y) = \frac{\mathrm{BF}_{1,2}}{\mathrm{BF}_{1,2} + 1} \; .
-\end{equation}
-
-Because the log Bayes factor is the logarithm of the Bayes factor ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:lbf-lme}), we finally have
-
-\begin{equation} \label{eq:pmp-lbf-post-s2}
-p(m_1|y) = \frac{\exp(\mathrm{LBF}_{1,2})}{\exp(\mathrm{LBF}_{1,2}) + 1} \; .
+\begin{equation} \label{eq:lbf-lbf}
+\mathrm{LBF}_{12} = \log \mathrm{BF}_{12} = \log \frac{p(y|m_1)}{p(y|m_2)} \; .
 \end{equation}
 
 
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Soch J, Allefeld C (2018): "MACS – a new SPM toolbox for model assessment, comparison and selection"; in: \textit{Journal of Neuroscience Methods}, vol. 306, pp. 19-31, eq. 21; URL: \url{https://www.sciencedirect.com/science/article/pii/S0165027018301468}; DOI: 10.1016/j.jneumeth.2018.05.017.
+\item Soch J, Allefeld C (2018): "MACS – a new SPM toolbox for model assessment, comparison and selection"; in: \textit{Journal of Neuroscience Methods}, vol. 306, pp. 19-31, eq. 18; URL: \url{https://www.sciencedirect.com/science/article/pii/S0165027018301468}; DOI: 10.1016/j.jneumeth.2018.05.017.
 \end{itemize}
 
 
 \vspace{1em}
-\textbf{Metadata:} ID: P73 | shortcut: pmp-lbf | author: JoramSoch | date: 2020-03-03, 12:27.
+\textbf{Metadata:} ID: D84 | shortcut: lbf | author: JoramSoch | date: 2020-07-22, 07:02.
 \vspace{1em}
 
 
 
-\subsubsection[\textbf{Posterior model probabilities in terms of Bayes factors}]{Posterior model probabilities in terms of Bayes factors} \label{sec:pmp-bf}
+\subsubsection[\textbf{Derivation}]{Derivation} \label{sec:lbf-der}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $m_0, m_1, \ldots, m_M$ be $M+1$ statistical models with model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $p(y \vert m_0), p(y \vert m_1), \ldots, p(y \vert m_M)$. Then, the posterior model probabilities ($\rightarrow$ Definition "pmp") of the models $m_1, \ldots, m_M$ are given by:
+\textbf{Theorem:} Let there be two generative models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m_1$ and $m_2$ with model evidences ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) $p(y \vert m_1)$ and $p(y \vert m_2)$. Then, the log Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf})
+
+\begin{equation} \label{eq:lbf-der-LBF-term}
+\mathrm{LBF}_{12} = \log \mathrm{BF}_{12}
+\end{equation}
+
+can be expressed as
+
+\begin{equation} \label{eq:lbf-der-LBF-ratio}
+\mathrm{LBF}_{12} = \log \frac{p(y|m_1)}{p(y|m_2)} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) is defined as the posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) odds ratio ($\rightarrow$ Definition "odds") when both models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) are equally likely apriori ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
+
+\begin{equation} \label{eq:lbf-der-BF-s1}
+\mathrm{BF}_{12} = \frac{p(m_1|y)}{p(m_2|y)}
+\end{equation}
+
+Plugging in the posterior odds ratio according to Bayes' rule ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-rule}), we have
+
+\begin{equation} \label{eq:lbf-der-BF-s2}
+\mathrm{BF}_{12} = \frac{p(y|m_1)}{p(y|m_2)} \cdot \frac{p(m_1)}{p(m_2)} \; .
+\end{equation}
+
+When both models are equally likely apriori, the prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) odds ratio ($\rightarrow$ Definition "odds") is one, such that
+
+\begin{equation} \label{eq:lbf-der-BF-s3}
+\mathrm{BF}_{12} = \frac{p(y|m_1)}{p(y|m_2)} \; .
+\end{equation}
+
+Equation \eqref{eq:lbf-der-LBF-ratio} follows by logarithmizing both sides of \eqref{eq:lbf-der-BF-s3}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P137 | shortcut: lbf-der | author: JoramSoch | date: 2020-07-22, 07:27.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Calculation from log model evidences}]{Calculation from log model evidences} \label{sec:lbf-lme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $m_1$ and $m_2$ be two statistical models with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1)$ and $\mathrm{LME}(m_2)$. Then, the log Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) in favor of model $m_1$ and against model $m_2$ is the difference of the log model evidences:
+
+\begin{equation} \label{eq:lbf-lme-LBF-LME}
+\mathrm{LBF}_{12} = \mathrm{LME}(m_1) - \mathrm{LME}(m_2) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) is defined as the ratio of the model evidences ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) of $m_1$ and $m_2$
+
+\begin{equation} \label{eq:lbf-lme-BF}
+\mathrm{BF}_{12} = \frac{p(y|m_1)}{p(y|m_2)}
+\end{equation}
+
+and the log Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) is defined as the logarithm of the Bayes factor
+
+\begin{equation} \label{eq:lbf-lme-LBF}
+\mathrm{LBF}_{12} = \log \mathrm{BF}_{12} = \log \frac{p(y|m_1)}{p(y|m_2)} \; .
+\end{equation}
+
+With the definition of the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme})
+
+\begin{equation} \label{eq:lbf-lme-LME}
+\mathrm{LME}(m) = \log p(y|m)
+\end{equation}
+
+the log Bayes factor can be expressed as:
+
+Resolving the logarithm and applying the definition of the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}), we finally have:
+
+\begin{equation} \label{eq:lbf-lme-LBF-LME-qed}
+\begin{split}
+\mathrm{LBF}_{12} &= \log p(y|m_1) - \log p(y|m_2) \\
+&= \mathrm{LME}(m_1) - \mathrm{LME}(m_2) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Soch J, Allefeld C (2018): "MACS – a new SPM toolbox for model assessment, comparison and selection"; in: \textit{Journal of Neuroscience Methods}, vol. 306, pp. 19-31, eq. 18; URL: \url{https://www.sciencedirect.com/science/article/pii/S0165027018301468}; DOI: 10.1016/j.jneumeth.2018.05.017.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P64 | shortcut: lbf-lme | author: JoramSoch | date: 2020-02-27, 20:51.
+\vspace{1em}
+
+
+
+\subsection{Posterior model probability}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:pmp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $m_1, \ldots, m_M$ be $M$ statistical models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) with model evidences ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) $p(y \vert m_1), \ldots, p(y \vert m_M)$ and prior probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior})  $p(m_1), \ldots, p(m_M)$. Then, the conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) of model $m_i$, given the data $y$, is called the posterior probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of model $m_i$:
+
+\begin{equation} \label{eq:pmp-PMP}
+\mathrm{PP}(m_i) = p(m_i|y) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Soch J, Allefeld C (2018): "MACS – a new SPM toolbox for model assessment, comparison and selection"; in: \textit{Journal of Neuroscience Methods}, vol. 306, pp. 19-31, eq. 23; URL: \url{https://www.sciencedirect.com/science/article/pii/S0165027018301468}; DOI: 10.1016/j.jneumeth.2018.05.017.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D87 | shortcut: pmp | author: JoramSoch | date: 2020-07-28, 03:30.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Derivation}]{Derivation} \label{sec:pmp-der}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let there be a set of generative models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m_1, \ldots, m_M$ with model evidences ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) $p(y \vert m_1), \ldots, p(y \vert m_M)$ and prior probabilities ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior})  $p(m_1), \ldots, p(m_M)$. Then, the posterior probability ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) of model $m_i$ is given by
+
+\begin{equation} \label{eq:pmp-der-PMP}
+p(m_i|y) = \frac{p(y|m_i) \, p(m_i)}{\sum_{j=1}^{M} p(y|m_j) \, p(m_j)}, \; i = 1, \ldots, M \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} From Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), the posterior model probability ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) of $m_i$ can be derived as
+
+\begin{equation} \label{eq:pmp-der-PMP-s1}
+p(m_i|y) = \frac{p(y|m_i) \, p(m_i)}{p(y)} \; .
+\end{equation}
+
+Using the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), the denominator $p(y)$ can be rewritten, such that
+
+\begin{equation} \label{eq:pmp-der-PMP-s2}
+p(m_i|y) = \frac{p(y|m_i) \, p(m_i)}{\sum_{j=1}^{M} p(y|m_j) \, p(m_j)} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P139 | shortcut: pmp-der | author: JoramSoch | date: 2020-07-28, 03:58.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Calculation from Bayes factors}]{Calculation from Bayes factors} \label{sec:pmp-bf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $m_0, m_1, \ldots, m_M$ be $M+1$ statistical models with model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $p(y \vert m_0), p(y \vert m_1), \ldots, p(y \vert m_M)$. Then, the posterior model probabilities ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) of the models $m_1, \ldots, m_M$ are given by:
 
 \begin{equation} \label{eq:pmp-bf-PMP-BF}
 p(m_i|y) = \frac{\mathrm{BF}_{i,0} \cdot \alpha_i}{\sum_{j=1}^{M} \mathrm{BF}_{j,0} \cdot \alpha_j}, \quad i = 1,\ldots,M \; ,
 \end{equation}
 
-where $\mathrm{BF}_{i,0}$ is the Bayes factor ($\rightarrow$ Definition "bf") comparing model $m_i$ with $m_0$ and $\alpha_i$ is the prior odds ratio of model $m_i$ against $m_0$.
+where $\mathrm{BF}_{i,0}$ is the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) comparing model $m_i$ with $m_0$ and $\alpha_i$ is the prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) odds ratio ($\rightarrow$ Definition "odds") of model $m_i$ against $m_0$.
 
 
 \vspace{1em}
-\textbf{Proof:} Define the Bayes factor
+\textbf{Proof:} Define the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) for $m_i$
 
 \begin{equation} \label{eq:pmp-bf-BF-i0}
 \mathrm{BF}_{i,0} = \frac{p(y|m_i)}{p(y|m_0)}
@@ -10754,7 +12253,7 @@ and prior odds ratio of $m_i$ against $m_0$
 \alpha_i = \frac{p(m_i)}{p(m_0)} \; .
 \end{equation}
 
-From Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), the posterior probability of $m_i$ follows as
+The posterior model probability ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:pmp-der}) of $m_i$ is given by
 
 \begin{equation} \label{eq:pmp-bf-PMP-s1}
 p(m_i|y) = \frac{p(y|m_i) \cdot p(m_i)}{\sum_{j=1}^{M} p(y|m_j) \cdot p(m_j)} \; .
@@ -10789,28 +12288,83 @@ p(m_i|y)= \frac{\mathrm{BF}_{i,0} \cdot \alpha_i}{\sum_{j=1}^{M} \mathrm{BF}_{j,
 
 
 
-\subsubsection[\textbf{Posterior model probabilities in terms of log model evidences}]{Posterior model probabilities in terms of log model evidences} \label{sec:pmp-lme}
+\subsubsection[\textbf{Calculation from log Bayes factor}]{Calculation from log Bayes factor} \label{sec:pmp-lbf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $m_1, \ldots, m_M$ be $M$ statistical models with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1), \ldots, \mathrm{LME}(m_M)$. Then, the posterior model probabilities ($\rightarrow$ Definition "pmp") are given by:
+\textbf{Theorem:} Let $m_1$ and $m_2$ be two statistical models with the log Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) $\mathrm{LBF}_{12}$ in favor of model $m_1$ and against model $m_2$. Then, if both models are equally likely apriori ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}), the posterior model probability ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) of $m_1$ is
+
+\begin{equation} \label{eq:pmp-lbf-PMP-LBF}
+p(m_1|y) = \frac{\exp(\mathrm{LBF}_{12})}{\exp(\mathrm{LBF}_{12}) + 1} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} From Bayes' rule ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-rule}), the posterior odds ratio ($\rightarrow$ Definition "odds") is
+
+\begin{equation} \label{eq:pmp-lbf-post-odds-s1}
+\frac{p(m_1|y)}{p(m_2|y)} = \frac{p(y|m_1)}{p(y|m_2)} \cdot \frac{p(m_1)}{p(m_2)} \; .
+\end{equation}
+
+When both models are equally likely apriori ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}), the prior odds ratio ($\rightarrow$ Definition "odds") is one, such that
+
+\begin{equation} \label{eq:pmp-lbf-post-odds-s2}
+\frac{p(m_1|y)}{p(m_2|y)} = \frac{p(y|m_1)}{p(y|m_2)} \; .
+\end{equation}
+
+Now the right-hand side corresponds to the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}), therefore
+
+\begin{equation} \label{eq:pmp-lbf-post-odds-s4}
+\frac{p(m_1|y)}{p(m_2|y)} = \mathrm{BF}_{12} \; .
+\end{equation}
+
+Because the two posterior model probabilities ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) add up to 1, we have
+
+\begin{equation} \label{eq:pmp-lbf-post-odds-s3}
+\frac{p(m_1|y)}{1-p(m_1|y)} = \mathrm{BF}_{12} \; .
+\end{equation}
+
+Now rearranging for the posterior probability ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}), this gives
+
+\begin{equation} \label{eq:pmp-lbf-post-s1}
+p(m_1|y) = \frac{\mathrm{BF}_{12}}{\mathrm{BF}_{12} + 1} \; .
+\end{equation}
+
+Because the log Bayes factor is the logarithm of the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}), we finally have
+
+\begin{equation} \label{eq:pmp-lbf-post-s2}
+p(m_1|y) = \frac{\exp(\mathrm{LBF}_{12})}{\exp(\mathrm{LBF}_{12}) + 1} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Soch J, Allefeld C (2018): "MACS – a new SPM toolbox for model assessment, comparison and selection"; in: \textit{Journal of Neuroscience Methods}, vol. 306, pp. 19-31, eq. 21; URL: \url{https://www.sciencedirect.com/science/article/pii/S0165027018301468}; DOI: 10.1016/j.jneumeth.2018.05.017.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P73 | shortcut: pmp-lbf | author: JoramSoch | date: 2020-03-03, 12:27.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Calculation from log model evidences}]{Calculation from log model evidences} \label{sec:pmp-lme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $m_1, \ldots, m_M$ be $M$ statistical models with log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $\mathrm{LME}(m_1), \ldots, \mathrm{LME}(m_M)$. Then, the posterior model probabilities ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) are given by:
 
 \begin{equation} \label{eq:pmp-lme-PMP-LME}
 p(m_i|y) = \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{LME}(m_j)] \, p(m_j)}, \quad i = 1,\ldots,M \; ,
 \end{equation}
 
-where $p(m_i)$ are prior model probabilities.
+where $p(m_i)$ are prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) model probabilities.
 
 
 \vspace{1em}
-\textbf{Proof:} From Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), the posterior model probability ($\rightarrow$ Definition "pmp") of model $m_i$ can be derived as
+\textbf{Proof:} The posterior model probability ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:pmp-der}) can be derived as
 
 \begin{equation} \label{eq:pmp-lme-PMP-s1}
-p(m_i|y) = \frac{p(y|m_i) \, p(m_i)}{p(y)} \; .
-\end{equation}
-
-Using the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), the denominator can be written as
-
-\begin{equation} \label{eq:pmp-lme-PMP-s2}
 p(m_i|y) = \frac{p(y|m_i) \, p(m_i)}{\sum_{j=1}^{M} p(y|m_j) \, p(m_j)} \; .
 \end{equation}
 
@@ -10826,9 +12380,9 @@ can be exponentiated to then read
 \exp\left[ \mathrm{LME}(m) \right] = p(y|m)
 \end{equation}
 
-and applying \eqref{eq:pmp-lme-ME} to \eqref{eq:pmp-lme-PMP-s2}, we finally have:
+and applying \eqref{eq:pmp-lme-ME} to \eqref{eq:pmp-lme-PMP-s1}, we finally have:
 
-\begin{equation} \label{eq:pmp-lme-PMP-s3}
+\begin{equation} \label{eq:pmp-lme-PMP-s2}
 p(m_i|y) = \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{LME}(m_j)] \, p(m_j)} \; .
 \end{equation}
 
@@ -10845,6 +12399,8 @@ p(m_i|y) = \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{
 \vspace{1em}
 
 
+
+\subsection{Log-evidence derivatives}
 
 \subsubsection[\textbf{Bayesian model averaging in terms of log model evidences}]{Bayesian model averaging in terms of log model evidences} \label{sec:bma-lme}
 \setcounter{equation}{0}
@@ -10865,7 +12421,7 @@ where $p(\theta \vert m_i,y)$ is the posterior distributions over $\theta$ obtai
 p(\theta|y) = \sum_{i=1}^{M} p(\theta|m_i,y) \cdot p(m_i|y) \; ,
 \end{equation}
 
-where $p(m_i \vert y)$ is the posterior probability ($\rightarrow$ Definition "pmp") of the $i$-th model. One can express posterior model probabilities in terms of log model evidences ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:pmp-lme}) as
+where $p(m_i \vert y)$ is the posterior probability ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) of the $i$-th model. One can express posterior model probabilities in terms of log model evidences ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:pmp-lme}) as
 
 \begin{equation} \label{eq:bma-lme-PMP-LME}
 p(m_i|y) = \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{LME}(m_j)] \, p(m_j)}

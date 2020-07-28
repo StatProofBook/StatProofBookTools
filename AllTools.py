@@ -23,6 +23,6 @@ runfile('write_book.py', wdir=cwd)
 #-----------------------------------------------------------------------------#
 runfile('report_links.py', wdir=cwd)
 
-# Visualize content in the StatProofBook
+# Display content in the StatProofBook
 #-----------------------------------------------------------------------------#
-runfile('visualize_content.py', wdir=cwd)
+runfile('display_content.py', wdir=cwd)

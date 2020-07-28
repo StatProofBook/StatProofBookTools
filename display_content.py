@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 """
-Visualize content in the StatProofBook
+Display content in the StatProofBook
 _
 This script loads all content from the proof and definition directories and
-visualizes proof and definition numbers over time
+visualizes proof and definition numbers over time.
 
 Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-15 18:15:00
- Last edit: 2020-04-15 19:53:00
+ Last edit: 2020-07-28 07:36:00
 """
 
 
@@ -111,8 +111,8 @@ plt.pie([len(D_ids)-1, len(P_ids)-1], labels=['Definitions', 'Proofs'], colors=[
          startangle=90, shadow=False, textprops=dict(fontsize=24))
 plt.axis('equal')
 plt.title('StatProofBook Content', fontsize=32)
+plt.savefig('display_content/Content.png')
 plt.show()
-plt.savefig('visualize_content/Content.png')
 
 # Line plot
 #-----------------------------------------------------------------------------#
@@ -125,5 +125,5 @@ plt.xlabel('days since inception of the StatProofBook (August 26, 2019)', fontsi
 plt.ylabel('number of proofs and definitions available', fontsize=16)
 plt.title('Development over Time', fontsize=32)
 plt.legend((h1[0], h2[0]), ('Definitions', 'Proofs'), loc='upper left')
+plt.savefig('display_content/Development.png')
 plt.show()
-plt.savefig('visualize_content/Development.png')
