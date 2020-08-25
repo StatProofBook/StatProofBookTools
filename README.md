@@ -14,5 +14,6 @@ To configure everything, proceed as follows:
 In more details, the tools allow you to:
 * `write_book.py`: write all StatProofBook content into a [LaTeX source file](https://github.com/StatProofBook/StatProofBookTools/blob/master/write_book/StatProofBook.tex) that results in a [PDF of the book](https://github.com/StatProofBook/StatProofBookTools/blob/master/write_book/StatProofBook.pdf);
 * `report_links.py`: create a [list of dead links](https://github.com/StatProofBook/StatProofBookTools/blob/master/report_links/Dead_Links.txt), i.e. a list of pages which are referenced but non-existing;
+* `find_conflicts.py`: create a list of conflicts, i.e. mismatches between table of contents and proofs/definitions;
 * `replace_string.py`: replace an arbitrary string with another predefined string in all proofs and definitions;
 * `display_content.py`: display some stats regarding [content](https://github.com/StatProofBook/StatProofBookTools/blob/master/display_content/Content.png), [development](https://github.com/StatProofBook/StatProofBookTools/blob/master/display_content/Development.png), [proofs](https://github.com/StatProofBook/StatProofBookTools/blob/master/display_content/Topic_Proofs.png) and [definitions](https://github.com/StatProofBook/StatProofBookTools/blob/master/display_content/Topic_Definitions.png).

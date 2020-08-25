@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-14 16:35:00
- Last edit: 2020-04-14 16:35:00
+ Last edit: 2020-08-25 17:23:00
 """
 
 
@@ -34,6 +34,58 @@ def get_rep_dir(rep_type):
         return www_dir
     else:
         return rep_dir
+
+# Get items from ToC
+#-----------------------------------------------------------------------------#
+def get_all_items(toc_txt):
+    """
+    Extract relative proof and definition filenames from Table of Contents
+    """
+    # Set chapter and section names
+    #-------------------------------------------------------------------------#
+    num_chap  = 0;  nums = []
+    num_sect  = 0;
+    num_ssec  = 0;
+    num_ssse  = 0;
+    curr_chap = ''; tocs = []
+    curr_sect = '';
+    curr_ssec = '';
+    curr_ssse = ''; files = []
+    # Parse "Table of Contents"
+    #-------------------------------------------------------------------------#
+    for entry in toc_txt:
+        # If there is a new chapter
+        #---------------------------------------------------------------------#
+        if entry.count('.') == 0 and entry.find('<h3>') > -1:
+            num_sect  = 0
+            num_chap  = num_chap + 1
+            curr_chap = entry[entry.find('<h3>')+4:entry.find('</h3>')]
+            curr_chap = curr_chap[curr_chap.find(': ')+2:]
+        # If there is a new section
+        #---------------------------------------------------------------------#
+        if entry.count('.') == 1 and entry.find(str(num_sect+1) + '. ') > -1:
+            num_ssec  = 0
+            num_sect  = num_sect + 1        
+            curr_sect = entry[entry.find('. ')+2:entry.find('\n')]
+        # If there is a new subsection
+        #---------------------------------------------------------------------#
+        if entry.count('.') == 2 and entry.find(str(num_sect) + '.' + str(num_ssec+1) + '. ') > -1:  
+            num_ssse  = 0
+            num_ssec  = num_ssec + 1
+            curr_ssec = entry[entry.find('. ')+2:entry.find('<br>')]
+            if curr_ssec[-1] == ' ': curr_ssec = curr_ssec[0:-1]
+        # If there is a new subsubsection
+        #---------------------------------------------------------------------#
+        if entry.count('.') >= 3 and entry.find(str(num_sect) + '.' + str(num_ssec) + '.' + str(num_ssse+1) + '. ') > -1:
+            num_ssse  = num_ssse + 1
+            curr_ssse = entry[entry.find('[')+1:entry.find(']')]
+            file      = entry[entry.find('(', entry.find(']'))+1:entry.find(')', entry.find(']'))]
+            file_md   = file + '.md'
+            # store file information
+            nums.append([num_chap,  num_sect,  num_ssec,  num_ssse])
+            tocs.append([curr_chap, curr_sect, curr_ssec, curr_ssse])
+            files.append(file_md)
+    return nums, tocs, files
 
 # Get meta data
 #-----------------------------------------------------------------------------#
