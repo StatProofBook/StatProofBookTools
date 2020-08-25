@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-08-25 15:55:00
- Last edit: 2020-08-25 16:18:00
+ Last edit: 2020-08-25 21:08:00
 """
 
 
@@ -100,9 +100,9 @@ for entry in toc_txt:
         
         # Compare ToC information
         if chapter != curr_chap or section != curr_sect or topic != curr_ssec or item != curr_ssse:
-            print('   - Warning: Definition "' + shortcut + '" (' + chapters[num_chap-1] + '/' + str(num_sect) + '.' + str(num_ssec) + '.' + str(num_ssse) + '. ' + title + '):')
+            print('   - Warning: ' + item_type + ' "' + shortcut + '" (' + chapters[num_chap-1] + '/' + str(num_sect) + '.' + str(num_ssec) + '.' + str(num_ssse) + '. ' + title + '):')
             print('     - categoized in file as "' + chapter + '" >> "' + section + '" >> "' + topic + '" >> "' + item + '".')
-            print('     - referenced in  ToC as "' + curr_chap + '" >> "' + curr_sect + '" >> "' + curr_ssec + '" >> "' + curr_ssse + '".')
+            print('     - referenced in ToC  as "' + curr_chap + '" >> "' + curr_sect + '" >> "' + curr_ssec + '" >> "' + curr_ssse + '".')
             conf_found = True
  
 # Finalize treatment
