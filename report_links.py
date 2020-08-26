@@ -148,15 +148,15 @@ for i in range(0,len(unique_filenames)):
     filename = unique_filenames[i]
     shortcut = filename[3:-3]
     if filename.find('/P/') > -1:
-        protocol.write('   - Proof "' + shortcut + '" ("' + filename + '"), referenced as\n')
+        protocol.write('   - Proof "' + shortcut + '" ("' + filename[0:-3] + '"), referenced as\n')
     if filename.find('/D/') > -1:
-        protocol.write('   - Definition "' + shortcut + '" ("' + filename + '"), referenced as\n')
+        protocol.write('   - Definition "' + shortcut + '" ("' + filename[0:-3] + '"), referenced as\n')
     for j in range(0,len(unique_linktexts[i])):
         linktext = unique_linktexts[i][j]
         protocol.write('     - "' + linktext + '", referenced in\n')
         for k in range(0,len(unique_srcefiles[i][j])):
             srcefile = unique_srcefiles[i][j][k]
-            protocol.write('       - "' + srcefile + '"\n')
+            protocol.write('       - "' + srcefile[0:-3] + '"\n')
 
 # Close protocol file
 #-----------------------------------------------------------------------------#        

@@ -23,6 +23,10 @@ runfile('write_book.py', wdir=cwd)
 #-----------------------------------------------------------------------------#
 runfile('report_links.py', wdir=cwd)
 
+# Find ToC conflicts in the StatProofBook
+#-----------------------------------------------------------------------------#
+runfile('find_conflicts.py', wdir=cwd)
+
 # Display content in the StatProofBook
 #-----------------------------------------------------------------------------#
 runfile('display_content.py', wdir=cwd)
