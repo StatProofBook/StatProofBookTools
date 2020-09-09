@@ -36,7 +36,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{https://statproofbook.github.io/ \\ StatProofBook@gmail.com}
-\date{2020-08-26, 15:54}
+\date{2020-09-09, 08:49}
 
 \begin{document}
 
@@ -125,6 +125,35 @@
 
 \vspace{1em}
 \textbf{Metadata:} ID: D67 | shortcut: rmat | author: JoramSoch | date: 2020-05-27, 22:48.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Constant}]{Constant} \label{sec:const}
+\setcounter{equation}{0}
+
+\textbf{Definition:} A constant is a quantity which does not change and thus always has the same value. From a statistical perspective, a constant is a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) which is equal to its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean})
+
+\begin{equation} \label{eq:const-EX}
+X = \mathrm{E}(X)
+\end{equation}
+
+or equivalently, whose variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is zero
+
+\begin{equation} \label{eq:const-VarX}
+\mathrm{Var}(X) = 0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item ProofWiki (2020): "Definition: Constant"; in: \textit{ProofWiki}, retrieved on 2020-09-09; URL: \url{https://proofwiki.org/wiki/Definition:Constant#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D96 | shortcut: const | author: JoramSoch | date: 2020-09-09, 01:30.
 \vspace{1em}
 
 
@@ -439,7 +468,11 @@ for any $A \subset \mathcal{X}$ and
 \subsubsection[\textit{Cumulative distribution function}]{Cumulative distribution function} \label{sec:cdf}
 \setcounter{equation}{0}
 
-\textbf{Definition:}
+\textbf{Definition:} The cumulative distribution function (CDF) of a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ at a given value $x$ is defined as the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) that $X$ is smaller than $x$:
+
+\begin{equation} \label{eq:cdf-cdf}
+F_X(x) = \mathrm{Pr}(X \leq x) \; .
+\end{equation}
 
 1) Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with possible outcomes $\mathcal{X}$ and the probability mass function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $f_X(x)$. Then, the function $F_X(x): \mathbb{R} \to [0,1]$ with
 
@@ -462,7 +495,7 @@ is the cumulative distribution function of $X$.
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Wikipedia (2020): "Probability density function"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-17; URL: \url{https://en.wikipedia.org/wiki/Cumulative_distribution_function#Definition}.
+\item Wikipedia (2020): "Cumulative distribution function"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-02-17; URL: \url{https://en.wikipedia.org/wiki/Cumulative_distribution_function#Definition}.
 \end{itemize}
 
 
@@ -1403,7 +1436,7 @@ is always non-negative, thus the term on the right-hand side is a Lebesgue integ
 \subsubsection[\textbf{Variance of a constant}]{Variance of a constant} \label{sec:var-const}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of a constant ($\rightarrow$ Definition "const") is zero:
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of a constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}) is zero:
 
 \begin{equation} \label{eq:var-const-var-const}
 a = \text{const.} \quad \Rightarrow \quad \mathrm{Var}(a) = 0 \; .
@@ -1411,7 +1444,7 @@ a = \text{const.} \quad \Rightarrow \quad \mathrm{Var}(a) = 0 \; .
 
 
 \vspace{1em}
-\textbf{Proof:} A constant ($\rightarrow$ Definition "const") is a quantity that always has the same value. Thus, if understood as a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of a constant is equal to itself:
+\textbf{Proof:} A constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}) is a quantity that always has the same value. Thus, if understood as a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of a constant is equal to itself:
 
 \begin{equation} \label{eq:var-const-mean-const}
 \mathrm{E}(a) = a \; .
@@ -1453,7 +1486,7 @@ Together, \eqref{eq:var-const-var-const-s1} and \eqref{eq:var-const-var-const-s2
 \subsubsection[\textbf{Variance equals zero}]{Variance equals zero} \label{sec:var-zero}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} If the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is zero, then $X$ is a constant ($\rightarrow$ Definition "const"):
+\textbf{Theorem:} If the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is zero, then $X$ is a constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}):
 
 \begin{equation} \label{eq:var-zero-var-zero}
 \mathrm{Var}(X) = 0 \quad \Rightarrow \quad X = \text{const.}
@@ -1479,7 +1512,7 @@ Thus, in turn, requires that $X$ is equal to its expected value ($\rightarrow$ D
 X = \mathrm{E}(X)
 \end{equation}
 
-which can only be the case, if $X$ always has the same value ($\rightarrow$ Definition "const"):
+which can only be the case, if $X$ always has the same value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}):
 
 \begin{equation} \label{eq:var-zero-X-const}
 X = \text{const.}
@@ -1503,7 +1536,7 @@ X = \text{const.}
 \subsubsection[\textbf{Invariance under addition}]{Invariance under addition} \label{sec:var-inv}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is invariant under addition of a constant ($\rightarrow$ Definition "const"):
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is invariant under addition of a constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}):
 
 \begin{equation} \label{eq:var-inv-var-inv}
 \mathrm{Var}(X+a) = \mathrm{Var}(X)
@@ -1545,7 +1578,7 @@ Using this and the linearity of the expected value ($\rightarrow$ Proof \ref{sec
 \subsubsection[\textbf{Scaling upon multiplication}]{Scaling upon multiplication} \label{sec:var-scal}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) scales upon multiplication with a constant ($\rightarrow$ Definition "const"):
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) scales upon multiplication with a constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}):
 
 \begin{equation} \label{eq:var-scal-var-scal}
 \mathrm{Var}(aX) = a^2 \, \mathrm{Var}(X)
@@ -1689,7 +1722,7 @@ p(X,Y) = p(X) \, p(Y) \quad \Rightarrow \quad \mathrm{Var}(X+Y) = \mathrm{Var}(X
 \mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y) + 2 \, \mathrm{Cov}(X,Y) \; .
 \end{equation}
 
-The covariance of independent random variables ($\rightarrow$ Proof "cov-ind") is zero:
+The covariance of independent random variables ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:cov-ind}) is zero:
 
 \begin{equation} \label{eq:var-add-cov-ind}
 p(X,Y) = p(X) \, p(Y) \quad \Rightarrow \quad \mathrm{Cov}(X,Y) = 0 \; .
@@ -1782,10 +1815,57 @@ which, due to the linearity of the expected value ($\rightarrow$ Proof \ref{sec:
 
 
 
+\subsubsection[\textbf{Covariance under independence}]{Covariance under independence} \label{sec:cov-ind}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ and $Y$ be independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ is zero:
+
+\begin{equation} \label{eq:cov-ind-cov-ind}
+X, Y \; \text{independent} \quad \Rightarrow \quad \mathrm{Cov}(X,Y) = 0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The covariance can be expressed in terms of expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:cov-mean}) as
+
+\begin{equation} \label{eq:cov-ind-cov-mean}
+\mathrm{Cov}(X,Y) = \mathrm{E}(X\,Y) - \mathrm{E}(X) \, \mathrm{E}(Y) \; .
+\end{equation}
+
+For independent random variables, the expected value of the product is equal to the product of the expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-mult}):
+
+\begin{equation} \label{eq:cov-ind-mean-mult}
+\mathrm{E}(X\,Y) = \mathrm{E}(X) \, \mathrm{E}(Y) \; .
+\end{equation}
+
+Taking \eqref{eq:cov-ind-cov-mean} and \eqref{eq:cov-ind-mean-mult} together, we have
+
+\begin{equation} \label{eq:cov-ind-cov-ind-qed}
+\begin{split}
+\mathrm{Cov}(X,Y) &\overset{\eqref{eq:cov-ind-cov-mean}}{=} \mathrm{E}(X\,Y) - \mathrm{E}(X) \, \mathrm{E}(Y) \\
+&\overset{\eqref{eq:cov-ind-mean-mult}}{=} \mathrm{E}(X) \, \mathrm{E}(Y) - \mathrm{E}(X) \, \mathrm{E}(Y) \\
+&= 0 \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Covariance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-09-03; URL: \url{https://en.wikipedia.org/wiki/Covariance#Uncorrelatedness_and_independence}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P158 | shortcut: cov-ind | author: JoramSoch | date: 2020-09-03, 06:05.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Relationship to correlation}]{Relationship to correlation} \label{sec:cov-corr}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ and $Y$ be random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ is equal to the product of their correlation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corr}) and the standard deviations ($\rightarrow$ Definition "std") of $X$ and $Y$:
+\textbf{Theorem:} Let $X$ and $Y$ be random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ is equal to the product of their correlation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corr}) and the standard deviations ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:std}) of $X$ and $Y$:
 
 \begin{equation} \label{eq:cov-corr-cov-corr}
 \mathrm{Cov}(X,Y) = \sigma_X \, \mathrm{Corr}(X,Y) \, \sigma_Y \; .
@@ -1913,7 +1993,7 @@ Due to the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General
 \Sigma_{XX} = \mathrm{D}_X \cdot \mathrm{C}_{XX} \cdot \mathrm{D}_X \; ,
 \end{equation}
 
-where $\mathrm{D}_X$ is a diagonal matrix with the standard deviations ($\rightarrow$ Definition "std") of $X_1, \ldots, X_n$ as entries on the diagonal:
+where $\mathrm{D}_X$ is a diagonal matrix with the standard deviations ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:std}) of $X_1, \ldots, X_n$ as entries on the diagonal:
 
 \begin{equation} \label{eq:covmat-corrmat-diagmat}
 \mathrm{D}_X = \mathrm{diag}(\sigma_{X_1},\ldots,\sigma_{X_n}) =
@@ -2042,7 +2122,7 @@ which is nothing else than the definition of the covariance matrix ($\rightarrow
 \Lambda_{XX} = \mathrm{D}_X^{-1} \cdot \mathrm{C}_{XX}^{-1} \cdot \mathrm{D}_X^{-1} \; ,
 \end{equation}
 
-where $\mathrm{D}_X^{-1}$ is a diagonal matrix with the inverse standard deviations ($\rightarrow$ Definition "std") of $X_1, \ldots, X_n$ as entries on the diagonal:
+where $\mathrm{D}_X^{-1}$ is a diagonal matrix with the inverse standard deviations ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:std}) of $X_1, \ldots, X_n$ as entries on the diagonal:
 
 \begin{equation} \label{eq:precmat-corrmat-invdiagmat}
 \mathrm{D}_X^{-1} = \mathrm{diag}(1/\sigma_{X_1},\ldots,1/\sigma_{X_n}) =
@@ -2143,7 +2223,7 @@ which conforms to equation \eqref{eq:precmat-corrmat-precmat-corrmat}.
 \subsubsection[\textit{Definition}]{Definition} \label{sec:corr}
 \setcounter{equation}{0}
 
-\textbf{Definition:} The correlation of two random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$, also called Pearson product-moment correlation coefficient (PPMCC), is defined as the ratio of the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ relative to the product of their standard deviations ($\rightarrow$ Definition "std"):
+\textbf{Definition:} The correlation of two random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$, also called Pearson product-moment correlation coefficient (PPMCC), is defined as the ratio of the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ relative to the product of their standard deviations ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:std}):
 
 \begin{equation} \label{eq:corr-corr}
 \mathrm{Corr}(X,Y) = \frac{\sigma_{XY}}{\sigma_X \sigma_Y} = \frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathrm{Var}(X)} \sqrt{\mathrm{Var}(Y)}} = \frac{\mathrm{E}\left[ (X-\mathrm{E}[X]) (Y-\mathrm{E}[Y]) \right]}{\sqrt{\mathrm{E}\left[ (X-\mathrm{E}[X])^2 \right]} \sqrt{\mathrm{E}\left[ (Y-\mathrm{E}[Y])^2 \right]}} \; .
@@ -2198,6 +2278,29 @@ which conforms to equation \eqref{eq:precmat-corrmat-precmat-corrmat}.
 
 \subsection{Measures of statistical dispersion}
 
+\subsubsection[\textit{Standard deviation}]{Standard deviation} \label{sec:std}
+\setcounter{equation}{0}
+
+\textbf{Definition:} The standard deviation $\sigma$ of a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ with expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu$ is defined as the square root of the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}), i.e.
+
+\begin{equation} \label{eq:std-std}
+\sigma(X) = \sqrt{\mathrm{E}\left[ (X-\mu)^2 \right]} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Standard deviation"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-09-03; URL: \url{https://en.wikipedia.org/wiki/Standard_deviation#Definition_of_population_values}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D94 | shortcut: std | author: JoramSoch | date: 2020-09-03, 05:43.
+\vspace{1em}
+
+
+
 \subsubsection[\textit{Full width at half maximum}]{Full width at half maximum} \label{sec:fwhm}
 \setcounter{equation}{0}
 
@@ -2235,7 +2338,7 @@ f_X(x_1) = f_X(x_2) = \frac{1}{2} f_X(x_M) \quad \text{and} \quad x_1 < x_M < x_
 \textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) and let $n$ be a positive integer. Then, the $n$-th moment of $X$, also called ($n$-th) "raw moment" or "crude moment", is defined as the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the $n$-th power of $X$:
 
 \begin{equation} \label{eq:mom-mom}
-\mu_n = \mathrm{E}[X^n] \; .
+\mu_n' = \mathrm{E}[X^n] \; .
 \end{equation}
 
 
@@ -2348,6 +2451,48 @@ which conforms to equation \eqref{eq:mom-mgf-mom-mgf}.
 
 
 
+\subsubsection[\textbf{First central moment is zero}]{First central moment is zero} \label{sec:momcent-1st}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The first central moment ($\rightarrow$ Definition "mom-cent") is zero, i.e.
+
+\begin{equation} \label{eq:momcent-1st-momcent-1st}
+\mu_1 = 0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The first central moment ($\rightarrow$ Definition "mom-cent") of a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ with mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu$ is defined as
+
+\begin{equation} \label{eq:momcent-1st-momcent-1st-def}
+\mu_1 = \mathrm{E}\left[ (X-\mu)^1 \right] \; .
+\end{equation}
+
+Due to the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}) and by plugging in $\mu = \mathrm{E}(X)$, we have
+
+\begin{equation} \label{eq:momcent-1st-momcent-1st-qed}
+\begin{split}
+\mu_1 &= \mathrm{E}\left[ X-\mu \right] \\
+&= \mathrm{E}(X) - \mu \\
+&= \mathrm{E}(X) - \mathrm{E}(X) \\
+&= 0 \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item ProofWiki (2020): "First Central Moment is Zero"; in: \textit{ProofWiki}, retrieved on 2020-09-09; URL: \url{https://proofwiki.org/wiki/First_Central_Moment_is_Zero}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P167 | shortcut: momcent-1st | author: JoramSoch | date: 2020-08-19, 07:51.
+\vspace{1em}
+
+
+
 \pagebreak
 \section{Information theory}
 
@@ -2392,23 +2537,23 @@ where $b$ is the base of the logarithm specifying in which unit the entropy is d
 \textbf{Proof:} The entropy of a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) is defined as
 
 \begin{equation} \label{eq:ent-nonneg-ent}
-\mathrm{H}(X) = - \sum_{i=1}^{k} p(x_i) \cdot \log_b p(x_i)
+\mathrm{H}(X) = - \sum_{x \in \mathcal{X}} p(x) \cdot \log_b p(x)
 \end{equation}
 
 The minus sign can be moved into the sum:
 
 \begin{equation} \label{eq:ent-nonneg-ent-dev}
-\mathrm{H}(X) = \sum_{i=1}^{k} \left[ p(x_i) \cdot \left( - \log_b p(x_i) \right) \right]
+\mathrm{H}(X) = \sum_{x \in \mathcal{X}} \left[ p(x) \cdot \left( - \log_b p(x) \right) \right]
 \end{equation}
 
 Because the co-domain of probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) is $[0,1]$, we can deduce:
 
 \begin{equation} \label{eq:ent-nonneg-nonneg}
 \begin{array}{rcccl}
-0 &\leq &p(x_i) &\leq &1 \\
--\infty &\leq &\log_b p(x_i) &\leq &0 \\
-0 &\leq &-\log_b p(x_i) &\leq &+\infty \\
-0 &\leq &p(x_i) \cdot \left(-\log_b p(x_i)\right) &\leq &+\infty \; .
+0 &\leq &p(x) &\leq &1 \\
+-\infty &\leq &\log_b p(x) &\leq &0 \\
+0 &\leq &-\log_b p(x) &\leq &+\infty \\
+0 &\leq &p(x) \cdot \left(-\log_b p(x)\right) &\leq &+\infty \; .
 \end{array}
 \end{equation}
 
@@ -2639,6 +2784,133 @@ which is equivalent to \eqref{eq:entcross-conv-ent-cross-conv}.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P150 | shortcut: entcross-conv | author: JoramSoch | date: 2020-08-11, 09:16.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Gibbs' inequality}]{Gibbs' inequality} \label{sec:gibbs-ineq}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) and consider two probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) with probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $p(x)$ and $q(x)$. Then, Gibbs' inequality states that the entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of $X$ according to $P$ is smaller than or equal to the cross-entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cross}) of $P$ and $Q$:
+
+\begin{equation} \label{eq:gibbs-ineq-Gibbs-ineq}
+- \sum_{x \in \mathcal{X}} p(x) \, \log_b p(x) \leq - \sum_{x \in \mathcal{X}} p(x) \, \log_b q(x) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Without loss of generality, we will use the natural logarithm, because a change in the base of the logarithm only implies multiplication by a constant:
+
+\begin{equation} \label{eq:gibbs-ineq-log-ln}
+\log_b a = \frac{\ln a}{\ln b} \; .
+\end{equation}
+
+Let $I$ be the of all $x$ for which $p(x)$ is non-zero. Then, proving \eqref{eq:gibbs-ineq-Gibbs-ineq} requires to show that
+
+\begin{equation} \label{eq:gibbs-ineq-Gibbs-ineq-s1}
+\sum_{x \in I} p(x) \, \ln \frac{p(x)}{q(x)} \geq 0 \; .
+\end{equation}
+
+Because $\ln x \leq x - 1$, i.e. $-\ln x \geq 1 - x$, for all $x > 0$, with equality only if $x = 1$, we can say about the left-hand side that
+
+\begin{equation} \label{eq:gibbs-ineq-Gibbs-ineq-s2}
+\begin{split}
+\sum_{x \in I} p(x) \, \ln \frac{p(x)}{q(x)} &\geq \sum_{x \in I} p(x) \left( 1 - \frac{p(x)}{q(x)} \right) \\
+&= \sum_{x \in I} p(x) - \sum_{x \in I} q(x) \; .
+\end{split}
+\end{equation}
+
+Finally, since $p(x)$ and $q(x)$ are probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}), we have
+
+\begin{equation} \label{eq:gibbs-ineq-p-q-pmf}
+\begin{split}
+0 \leq p(x) \leq 1, \quad \sum_{x \in I} p(x) &= 1 \quad \text{and} \\
+0 \leq q(x) \leq 1, \quad \sum_{x \in I} q(x) &\leq 1 \; ,
+\end{split}
+\end{equation}
+
+such that it follows from \eqref{eq:gibbs-ineq-Gibbs-ineq-s2} that
+
+\begin{equation} \label{eq:gibbs-ineq-Gibbs-ineq-s3}
+\begin{split}
+\sum_{x \in I} p(x) \, \ln \frac{p(x)}{q(x)} &\geq \sum_{x \in I} p(x) - \sum_{x \in I} q(x) \\
+&= 1 - \sum_{x \in I} q(x) \geq 0 \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Gibbs' inequality"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-09-09; URL: \url{https://en.wikipedia.org/wiki/Gibbs%27_inequality#Proof}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P164 | shortcut: gibbs-ineq | author: JoramSoch | date: 2020-09-09, 02:18.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Log sum inequality}]{Log sum inequality} \label{sec:logsum-ineq}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $a_1, \ldots, a_n$ and $b_1, \ldots, b_n$ be non-negative real numbers and define $a = \sum_{i=1}^{n} a_i$ and $b = \sum_{i=1}^{n} b_i$. Then, the log sum inequality states that
+
+\begin{equation} \label{eq:logsum-ineq-logsum-ineq}
+\sum_{i=1}^n a_i \, \log_c \frac{a_i}{b_i} \geq a \, \log_c \frac{a}{b} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Without loss of generality, we will use the natural logarithm, because a change in the base of the logarithm only implies multiplication by a constant:
+
+\begin{equation} \label{eq:logsum-ineq-log-ln}
+\log_c a = \frac{\ln a}{\ln c} \; .
+\end{equation}
+
+Let $f(x) = x \ln x$. Then, the left-hand side of \eqref{eq:logsum-ineq-logsum-ineq} can be rewritten as
+
+\begin{equation} \label{eq:logsum-ineq-logsum-ineq-s2}
+\begin{split}
+\sum_{i=1}^n a_i \, \ln \frac{a_i}{b_i} &= \sum_{i=1}^n b_i \, f\left( \frac{a_i}{b_i} \right) \\
+&= b \sum_{i=1}^n \frac{b_i}{b} \, f\left( \frac{a_i}{b_i} \right) \; .
+\end{split}
+\end{equation}
+
+Because $f(x)$ is a convex function and
+
+\begin{equation} \label{eq:logsum-ineq-sum-bi-b}
+\begin{split}
+\frac{b_i}{b} &\geq 0 \\
+\sum_{i=1}^n \frac{b_i}{b} &= 1 \; ,
+\end{split}
+\end{equation}
+
+applying Jensen's inequality yields
+
+\begin{equation} \label{eq:logsum-ineq-logsum-ineq-s3}
+\begin{split}
+b \sum_{i=1}^n \frac{b_i}{b} \, f\left( \frac{a_i}{b_i} \right) &\geq b \, f\left( \sum_{i=1}^n \frac{b_i}{b} \frac{a_i}{b_i} \right) \\
+&= b \, f\left( \frac{1}{b} \sum_{i=1}^n a_i \right) \\
+&= b \, f\left( \frac{a}{b} \right) \\
+&= a \, \ln \frac{a}{b} \; .
+\end{split}
+\end{equation}
+
+Finally, combining \eqref{eq:logsum-ineq-logsum-ineq-s2} and \eqref{eq:logsum-ineq-logsum-ineq-s3}, this demonstrates \eqref{eq:logsum-ineq-logsum-ineq}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Log sum inequality"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-09-09; URL: \url{https://en.wikipedia.org/wiki/Log_sum_inequality#Proof}.
+\item Wikipedia (2020): "Jensen's inequality"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-09-09; URL: \url{https://en.wikipedia.org/wiki/Jensen%27s_inequality#Statements}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P165 | shortcut: logsum-ineq | author: JoramSoch | date: 2020-09-09, 02:46.
 \vspace{1em}
 
 
@@ -3344,16 +3616,16 @@ with $\mathrm{KL}[P \vert \vert Q] = 0$, if and only if $P = Q$.
 \textbf{Proof:} The discrete Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is defined as
 
 \begin{equation} \label{eq:kl-nonneg-KL}
-\mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)} \, \mathrm{d}x
+\mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)}
 \end{equation}
 
 which can be reformulated into
 
 \begin{equation} \label{eq:kl-nonneg-KL-dev}
-\mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log p(x) - \sum_{x \in \mathcal{X}} p(x) \cdot \log q(x) \, \mathrm{d}x \; .
+\mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log p(x) - \sum_{x \in \mathcal{X}} p(x) \cdot \log q(x) \; .
 \end{equation}
 
-Gibbs' inequality ($\rightarrow$ Proof "gibbs-ineq") states that the entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of a probability distribution is always less than or equal to the cross-entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cross}) with another probability distribution – with equality only if the distributions are identical –,
+Gibbs' inequality ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:gibbs-ineq}) states that the entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent}) of a probability distribution is always less than or equal to the cross-entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ent-cross}) with another probability distribution – with equality only if the distributions are identical –,
 
 \begin{equation} \label{eq:kl-nonneg-Gibbs-ineq}
 - \sum_{i=1}^n p(x_i) \, \log p(x_i) \leq - \sum_{i=1}^n p(x_i) \, \log q(x_i)
@@ -3377,6 +3649,60 @@ Applying \eqref{eq:kl-nonneg-Gibbs-ineq-dev} to \eqref{eq:kl-nonneg-KL-dev}, thi
 
 \vspace{1em}
 \textbf{Metadata:} ID: P117 | shortcut: kl-nonneg | author: JoramSoch | date: 2020-05-31, 23:43.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Non-negativity}]{Non-negativity} \label{sec:kl-nonneg2}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is always non-negative
+
+\begin{equation} \label{eq:kl-nonneg2-KL-nonneg}
+\mathrm{KL}[P||Q] \geq 0
+\end{equation}
+
+with $\mathrm{KL}[P \vert \vert Q] = 0$, if and only if $P = Q$.
+
+
+\vspace{1em}
+\textbf{Proof:} The discrete Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is defined as
+
+\begin{equation} \label{eq:kl-nonneg2-KL}
+\mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)} \; .
+\end{equation}
+
+The log sum inequality ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:logsum-ineq}) states that
+
+\begin{equation} \label{eq:kl-nonneg2-logsum-ineq}
+\sum_{i=1}^n a_i \, \log_c \frac{a_i}{b_i} \geq a \, \log_c \frac{a}{b} \; .
+\end{equation}
+
+where $a_1, \ldots, a_n$ and $b_1, \ldots, b_n$ be non-negative real numbers and $a = \sum_{i=1}^{n} a_i$ and $b = \sum_{i=1}^{n} b_i$. Because $p(x)$ and $q(x)$ are probability mass functions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}), such that
+
+\begin{equation} \label{eq:kl-nonneg2-p-q-pmf}
+\begin{split}
+p(x) \geq 0, \quad \sum_{x \in \mathcal{X}} p(x) &= 1 \quad \text{and} \\
+q(x) \geq 0, \quad \sum_{x \in \mathcal{X}} q(x) &= 1 \; ,
+\end{split}
+\end{equation}
+
+theorem \eqref{eq:kl-nonneg2-KL-nonneg} is simply a special case of \eqref{eq:kl-nonneg2-logsum-ineq}, i.e.
+
+\begin{equation} \label{eq:kl-nonneg2-KL-nonneg-qed}
+\mathrm{KL}[P||Q] \overset{\eqref{eq:kl-nonneg2-KL}}{=} \sum_{x \in \mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)} \overset{\eqref{eq:kl-nonneg2-logsum-ineq}}{\geq} 1 \, \log \frac{1}{1} = 0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Log sum inequality"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-09-09; URL: \url{https://en.wikipedia.org/wiki/Log_sum_inequality#Applications}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P166 | shortcut: kl-nonneg2 | author: JoramSoch | date: 2020-09-09, 07:02.
 \vspace{1em}
 
 
@@ -3490,7 +3816,7 @@ where $(p_1,q_1)$ and $(p_2,q_2)$ are two pairs of probability distributions and
 \mathrm{KL}[P||Q] = \sum_{x \in \mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)}
 \end{equation}
 
-and the log sum inequality ($\rightarrow$ Proof "logsum-ineq") states that
+and the log sum inequality ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:logsum-ineq}) states that
 
 \begin{equation} \label{eq:kl-conv-logsum-ineq}
 \sum_{i=1}^n a_i \log \frac{a_i}{b_i} \geq \left( \sum_{i=1}^n a_i \right) \log \frac{\sum_{i=1}^n a_i}{\sum_{i=1}^n b_i}
@@ -4365,7 +4691,7 @@ p(A|B) \overset{\eqref{eq:bayes-th-JP}}{=} \frac{p(B|A) \, p(A)}{p(B)} \; .
 \subsubsection[\textbf{Bayes' rule}]{Bayes' rule} \label{sec:bayes-rule}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $A_1$, $A_2$ and $B$ be arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) where $A_1$ and $A_2$ are mutually exclusive. Then, Bayes' rule states that the posterior odds ($\rightarrow$ Definition "post-odd") are equal to the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) times the prior odds ($\rightarrow$ Definition "prior-odd"), i.e.
+\textbf{Theorem:} Let $A_1$, $A_2$ and $B$ be arbitrary statements about random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) where $A_1$ and $A_2$ are mutually exclusive. Then, Bayes' rule states that the posterior odds ($\rightarrow$ Definition "post-odd") are equal to the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}) times the prior odds ($\rightarrow$ Definition "prior-odd"), i.e.
 
 \begin{equation} \label{eq:bayes-rule-bayes-rule}
 \frac{p(A_1|B)}{p(A_2|B)} = \frac{p(B|A_1)}{p(B|A_2)} \cdot \frac{p(A_1)}{p(A_2)} \; .
@@ -7521,6 +7847,71 @@ f_X(x) = \frac{1}{\mathrm{B}(\alpha, \beta)} \, x^{\alpha-1} \, (1-x)^{\beta-1} 
 
 
 
+\subsection{Wald distribution}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:wald}
+\setcounter{equation}{0}
+
+**Definition**: Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, $X$ is said to follow a Wald distribution with drift rate $\gamma$ and threshold $\alpha$
+
+\begin{equation} \label{eq:wald-wald}
+X \sim \mathrm{Wald}(\gamma, \alpha) \; ,
+\end{equation}
+
+if and only if its probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) is given by
+
+\begin{equation} \label{eq:wald-wald-pdf}
+\mathrm{Wald}(x; \gamma, \alpha) = \frac{\alpha}{\sqrt{2\pi x^3}}\exp\left(-\frac{(\alpha-\gamma x)^2}{2x}\right)
+\end{equation}
+
+where $\gamma > 0$, $\alpha > 0$, and the density is zero if $x \leq 0$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Anders, R., Alario, F.-X., and van Maanen, L. (2016): "The Shifted Wald Distribution for Response Time Data Analysis"; in: \textit{Psychological Methods}, vol. 21, no. 3, pp. 309-327; URL: \url{https://dx.doi.org/10.1037/met0000066}; DOI: 10.1037/met0000066.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D95 | shortcut: wald | author: tomfaulkenberry | date: 2020-09-04, 12:00.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:wald-pdf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a positive random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a Wald distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:wald}):
+
+\begin{equation} \label{eq:wald-pdf-wald}
+X \sim \mathrm{Wald}(\gamma, \alpha) \; .
+\end{equation}
+
+Then, the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $X$ is
+
+\begin{equation} \label{eq:wald-pdf-wald-pdf}
+f_X(x) = \frac{\alpha}{\sqrt{2\pi x^3}}\exp\left(-\frac{(\alpha-\gamma x)^2}{2x}\right) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} This follows directly from the definition of the Wald distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:wald}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P162 | shortcut: wald-pdf | author: tomfaulkenberry | date: 2020-09-04, 12:00.
+\vspace{1em}
+
+
+
 \pagebreak
 \section{Multivariate continuous distributions}
 
@@ -9739,7 +10130,7 @@ Together, \eqref{eq:mlr-mle-beta-MLE} and \eqref{eq:mlr-mle-s2-MLE} constitute t
 y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
 \end{equation}
 
-be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.
+be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ as well as unknown $p \times 1$ regression coefficients $\beta$ and unknown noise variance $\sigma^2$.
 
 Then, the conjugate prior ($\rightarrow$ Definition "prior-conj") for this model is a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng})
 
@@ -9789,13 +10180,13 @@ p(y|\beta,\tau) = \sqrt{\frac{|P|}{(2 \pi)^n}} \cdot \tau^{n/2} \cdot \exp\left[
 where $\tilde{X} = \left( X^\mathrm{T} P X \right)^{-1} X^\mathrm{T} P$ and $Q = \tilde{X}^\mathrm{T} \left( X^\mathrm{T} P X \right) \tilde{X}$.
 
 \vspace{1em}
-In other words, the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) is proportional to a power of $\tau$ times an exponential of $\tau$ and an exponential of a squared form of $\beta$, weighted by $\tau$:
+In other words, the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) is proportional to a power of $\tau$, times an exponential of $\tau$ and an exponential of a squared form of $\beta$, weighted by $\tau$:
 
 \begin{equation} \label{eq:blr-prior-GLM-LF-s4}
 p(y|\beta,\tau) \propto \tau^{n/2} \cdot \exp\left[ -\frac{\tau}{2} \left( y^\mathrm{T} P y - y^\mathrm{T} Q y \right) \right] \cdot \exp\left[ -\frac{\tau}{2} (\beta - \tilde{X}y)^\mathrm{T} X^\mathrm{T} P X (\beta - \tilde{X}y) \right] \; .
 \end{equation}
 
-The same is true for a normal gamma distribution over $\beta$ and $\tau$
+The same is true for a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}) over $\beta$ and $\tau$
 
 \begin{equation} \label{eq:blr-prior-BLR-prior-s1}
 p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0)
@@ -9838,7 +10229,7 @@ and is therefore conjugate relative to the likelihood.
 y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
 \end{equation}
 
-be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.  Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
+be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ as well as unknown $p \times 1$ regression coefficients $\beta$ and unknown noise variance $\sigma^2$. Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
 
 \begin{equation} \label{eq:blr-post-GLM-NG-prior}
 p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
@@ -9990,7 +10381,7 @@ Together, \eqref{eq:blr-post-GLM-NG-post-beta} and \eqref{eq:blr-post-GLM-NG-pos
 m: \; y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
 \end{equation}
 
-be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ and unknown $p \times 1$ regression coefficients $\beta$ and noise variance $\sigma^2$.  Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
+be a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ as well as unknown $p \times 1$ regression coefficients $\beta$ and unknown noise variance $\sigma^2$. Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
 
 \begin{equation} \label{eq:blr-lme-GLM-NG-prior}
 p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
@@ -10075,13 +10466,13 @@ Now, $\beta$ can be integrated out easily:
 Using the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}), we can rewrite this as
 
 \begin{equation}\label{eq:blr-lme-GLM-NG-LME-s4}
-\int p(y,\beta,\tau) \, \mathrm{d}\beta = \; \sqrt{\frac{|P|}{(2 \pi)^n}} \, \sqrt{\frac{|\Lambda_0|}{|\Lambda_n|}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \frac{\Gamma(a_n)}{ {b_n}^{a_n}} \, \mathrm{Gam}(\tau; a_n, b_n) \; .
+\int p(y,\beta,\tau) \, \mathrm{d}\beta = \sqrt{\frac{|P|}{(2 \pi)^n}} \, \sqrt{\frac{|\Lambda_0|}{|\Lambda_n|}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \frac{\Gamma(a_n)}{ {b_n}^{a_n}} \, \mathrm{Gam}(\tau; a_n, b_n) \; .
 \end{equation}
 
 Finally, $\tau$ can also be integrated out:
 
 \begin{equation} \label{eq:blr-lme-GLM-NG-LME-s5}
-\iint p(y,\beta,\tau) \, \mathrm{d}\beta \, \mathrm{d}\tau = \; \sqrt{\frac{|P|}{(2 \pi)^n}} \, \sqrt{\frac{|\Lambda_0|}{|\Lambda_n|}} \, \frac{\Gamma(a_n)}{\Gamma(a_0)} \, \frac{ {b_0}^{a_0}}{ {b_n}^{a_n}} = p(y|m) \; .
+\iint p(y,\beta,\tau) \, \mathrm{d}\beta \, \mathrm{d}\tau = \sqrt{\frac{|P|}{(2 \pi)^n}} \, \sqrt{\frac{|\Lambda_0|}{|\Lambda_n|}} \, \frac{\Gamma(a_n)}{\Gamma(a_0)} \, \frac{ {b_0}^{a_0}}{ {b_n}^{a_n}} = p(y|m) \; .
 \end{equation}
 
 Thus, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) of this model is given by
@@ -10608,6 +10999,384 @@ Together, \eqref{eq:glm-mle-B-MLE} and \eqref{eq:glm-mle-S-MLE} constitute the M
 
 \vspace{1em}
 \textbf{Metadata:} ID: P7 | shortcut: glm-mle | author: JoramSoch | date: 2019-12-06, 10:40.
+\vspace{1em}
+
+
+
+\subsection{Multivariate Bayesian linear regression}
+
+\subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:mblr-prior}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:mblr-prior-GLM}
+Y = X B + E, \; E \sim \mathcal{MN}(0, V, \Sigma)
+\end{equation}
+
+be a general linear model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:glm}) with measured $n \times v$ data matrix $Y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) $V$ as well as unknown $p \times v$ regression coefficients $B$ and unknown $v \times v$ noise covariance ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) $\Sigma$.
+
+Then, the conjugate prior ($\rightarrow$ Definition "prior-conj") for this model is a normal-Wishart distribution ($\rightarrow$ Definition "nw")
+
+\begin{equation} \label{eq:mblr-prior-GLM-NW-prior}
+p(B,T) = \mathcal{MN}(B; M_0, \Lambda_0^{-1}, T^{-1}) \cdot \mathcal{W}(T; \Omega_0^{-1}, \nu_0)
+\end{equation}
+
+where $T = \Sigma^{-1}$ is the inverse noise covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) or noise precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}).
+
+
+\vspace{1em}
+\textbf{Proof:} By definition, a conjugate prior ($\rightarrow$ Definition "prior-conj") is a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) that, when combined with the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}), leads to a posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) that belongs to the same family of probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}). This is fulfilled when the prior density and the likelihood function are proportional to the model parameters in the same way, i.e. the model parameters appear in the same functional form in both.
+
+Equation \eqref{eq:mblr-prior-GLM} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:mblr-prior-GLM-LF-Class}
+p(Y|B,\Sigma) = \mathcal{MN}(Y; X B, V, \Sigma) = \sqrt{\frac{1}{(2 \pi)^{nv} |\Sigma|^n |V|^v}} \, \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Sigma^{-1} (Y-XB)^\mathrm{T} V^{-1} (Y-XB) \right) \right]
+\end{equation}
+
+which, for mathematical convenience, can also be parametrized as
+
+\begin{equation} \label{eq:mblr-prior-GLM-LF-Bayes}
+p(Y|B,T) = \mathcal{MN}(Y; X B, P, T^{-1}) = \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \, \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T (Y-XB)^\mathrm{T} P (Y-XB) \right) \right]
+\end{equation}
+
+using the $v \times v$ precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) $T = \Sigma^{-1}$ and the $n \times n$ precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) $P = V^{-1}$.
+
+\vspace{1em}
+Seperating constant and variable terms, we have:
+
+\begin{equation} \label{eq:mblr-prior-GLM-LF-s1}
+p(Y|B,T) = \sqrt{\frac{|P|^v}{(2 \pi)^{nv}}} \cdot |T|^{n/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T (Y-XB)^\mathrm{T} P (Y-XB) \right) \right] \; .
+\end{equation}
+
+Expanding the product in the exponent, we have:
+
+\begin{equation} \label{eq:mblr-prior-GLM-LF-s2}
+p(Y|B,T) = \sqrt{\frac{|P|^v}{(2 \pi)^{nv}}} \cdot |T|^{n/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ Y^\mathrm{T} P Y - Y^\mathrm{T} P X B - B^\mathrm{T} X^\mathrm{T} P Y + B^\mathrm{T} X^\mathrm{T} P X B \right] \right) \right] \; .
+\end{equation}
+
+Completing the square over $\beta$, finally gives
+
+\begin{equation} \label{eq:mblr-prior-GLM-LF-s3}
+p(Y|B,T) = \sqrt{\frac{|P|^v}{(2 \pi)^{nv}}} \cdot |T|^{n/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ (B - \tilde{X}Y)^\mathrm{T} X^\mathrm{T} P X (B - \tilde{X}Y) - Y^\mathrm{T} Q Y + Y^\mathrm{T} P Y \right] \right) \right]
+\end{equation}
+
+where $\tilde{X} = \left( X^\mathrm{T} P X \right)^{-1} X^\mathrm{T} P$ and $Q = \tilde{X}^\mathrm{T} \left( X^\mathrm{T} P X \right) \tilde{X}$.
+
+\vspace{1em}
+In other words, the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) is proportional to a power of the determinant of $T$, times an exponential of the trace of $T$ and an exponential of the trace of a squared form of $B$, weighted by $T$:
+
+\begin{equation} \label{eq:mblr-prior-GLM-LF-s4}
+p(Y|B,T) \propto |T|^{n/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ Y^\mathrm{T} P Y - Y^\mathrm{T} Q Y \right] \right) \right] \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ (B - \tilde{X}Y)^\mathrm{T} X^\mathrm{T} P X (B - \tilde{X}Y) \right] \right) \right] \; .
+\end{equation}
+
+The same is true for a normal-Wishart distribution ($\rightarrow$ Definition "nw") over $B$ and $T$
+
+\begin{equation} \label{eq:mblr-prior-MBLR-prior-s1}
+p(B,T) = \mathcal{MN}(B; M_0, \Lambda_0^{-1}, T^{-1}) \cdot \mathcal{W}(T; \Omega_0^{-1}, \nu_0)
+\end{equation}
+
+the probability density function of which ($\rightarrow$ Proof "nw-pdf")
+
+\begin{equation} \label{eq:mblr-prior-MBLR-prior-s2}
+p(B,T) = \sqrt{\frac{|T|^p |\Lambda_0|^v}{(2 \pi)^{pv}}} \, \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T (B-M_0)^\mathrm{T} \Lambda_0 (B-M_0) \right) \right] \cdot \frac{1}{\Gamma_v \left( \frac{\nu_0}{2} \right)} \sqrt{\frac{|\Omega_0|^{\nu_0}}{2^{\nu_0 v}}} |T|^{(\nu_0-v-1)/2} \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Omega_0 T \right) \right]
+\end{equation}
+
+exhibits the same proportionality
+
+\begin{equation} \label{eq:mblr-prior-MBLR-prior-s3}
+p(B,T) \propto |T|^{(\nu_0+p-v-1)/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \Omega_0 \right) \right] \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ (B-M_0)^\mathrm{T} \Lambda_0 (B-M_0) \right] \right) \right]
+\end{equation}
+
+and is therefore conjugate relative to the likelihood.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Bayesian multivariate linear regression"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-09-03; URL: \url{https://en.wikipedia.org/wiki/Bayesian_multivariate_linear_regression#Conjugate_prior_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P159 | shortcut: mblr-prior | author: JoramSoch | date: 2020-09-03, 07:33.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:mblr-post}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:mblr-post-GLM}
+Y = X B + E, \; E \sim \mathcal{MN}(0, V, \Sigma)
+\end{equation}
+
+be a general linear model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:glm}) with measured $n \times v$ data matrix $Y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) $V$ as well as unknown $p \times v$ regression coefficients $B$ and unknown $v \times v$ noise covariance ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) $\Sigma$. Moreover, assume a normal-Wishart prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mblr-prior}) over the model parameters $B$ and $T = \Sigma^{-1}$:
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-prior}
+p(B,T) = \mathcal{MN}(B; M_0, \Lambda_0^{-1}, T^{-1}) \cdot \mathcal{W}(T; \Omega_0^{-1}, \nu_0) \; .
+\end{equation}
+
+Then, the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) is also a normal-Wishart distribution ($\rightarrow$ Definition "nw")
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-post}
+p(B,T|Y) = \mathcal{MN}(B; M_n, \Lambda_n^{-1}, T^{-1}) \cdot \mathcal{W}(T; \Omega_n^{-1}, \nu_n)
+\end{equation}
+
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-post-par}
+\begin{split}
+M_n &= \Lambda_n^{-1} (X^\mathrm{T} P Y + \Lambda_0 M_0) \\
+\Lambda_n &= X^\mathrm{T} P X + \Lambda_0 \\
+\Omega_n &= \Omega_0 + Y^\mathrm{T} P Y + M_0^\mathrm{T} \Lambda_0 M_0 - M_n^\mathrm{T} \Lambda_n M_n \\
+\nu_n &= \nu_0 + n \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} According to Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) is given by
+
+\begin{equation} \label{eq:mblr-post-GLM-NG-BT}
+p(B,T|Y) = \frac{p(Y|B,T) \, p(B,T)}{p(Y)} \; .
+\end{equation}
+
+Since $p(Y)$ is just a normalization factor, the posterior is proportional ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:post-jl}) to the numerator:
+
+\begin{equation} \label{eq:mblr-post-GLM-NG-post-JL}
+p(B,T|Y) \propto p(Y|B,T) \, p(B,T) = p(Y,B,T) \; .
+\end{equation}
+
+Equation \eqref{eq:mblr-post-GLM} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:mblr-post-GLM-LF-Class}
+p(Y|B,\Sigma) = \mathcal{MN}(Y; X B, V, \Sigma) = \sqrt{\frac{1}{(2 \pi)^{nv} |\Sigma|^n |V|^v}} \, \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Sigma^{-1} (Y-XB)^\mathrm{T} V^{-1} (Y-XB) \right) \right]
+\end{equation}
+
+which, for mathematical convenience, can also be parametrized as
+
+\begin{equation} \label{eq:mblr-post-GLM-LF-Bayes}
+p(Y|B,T) = \mathcal{MN}(Y; X B, P, T^{-1}) = \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \, \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T (Y-XB)^\mathrm{T} P (Y-XB) \right) \right]
+\end{equation}
+
+using the $v \times v$ precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) $T = \Sigma^{-1}$ and the $n \times n$ precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) $P = V^{-1}$.
+
+\vspace{1em}
+Combining the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) \eqref{eq:mblr-post-GLM-LF-Bayes} with the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) \eqref{eq:mblr-post-GLM-NW-prior}, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) of the model is given by
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-JL-s1}
+\begin{split}
+p(Y,B,T) = \; & p(Y|B,T) \, p(B,T) \\
+= \; & \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \, \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T (Y-XB)^\mathrm{T} P (Y-XB) \right) \right] \cdot \\
+& \sqrt{\frac{|T|^p |\Lambda_0|^v}{(2 \pi)^{pv}}} \, \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T (B-M_0)^\mathrm{T} \Lambda_0 (B-M_0) \right) \right] \cdot \\
+& \frac{1}{\Gamma_v \left( \frac{\nu_0}{2} \right)} \sqrt{\frac{|\Omega_0|^{\nu_0}}{2^{\nu_0 v}}} |T|^{(\nu_0-v-1)/2} \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Omega_0 T \right) \right] \; .
+\end{split}
+\end{equation}
+
+Collecting identical variables gives:
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-JL-s2}
+\begin{split}
+p(Y,B,T) = \; & \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \sqrt{\frac{|T|^p |\Lambda_0|^v}{(2 \pi)^{pv}}} \sqrt{\frac{|\Omega_0|^{\nu_0}}{2^{\nu_0 v}}} \frac{1}{\Gamma_v \left( \frac{\nu_0}{2} \right)} \cdot |T|^{(\nu_0-v-1)/2} \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Omega_0 T \right) \right] \cdot \\
+& \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ (Y-XB)^\mathrm{T} P (Y-XB) + (B-M_0)^\mathrm{T} \Lambda_0 (B-M_0) \right] \right) \right] \; .
+\end{split}
+\end{equation}
+
+Expanding the products in the exponent gives:
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-JL-s3}
+\begin{split}
+p(Y,B,T) = \; & \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \sqrt{\frac{|T|^p |\Lambda_0|^v}{(2 \pi)^{pv}}} \sqrt{\frac{|\Omega_0|^{\nu_0}}{2^{\nu_0 v}}} \frac{1}{\Gamma_v \left( \frac{\nu_0}{2} \right)} \cdot |T|^{(\nu_0-v-1)/2} \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Omega_0 T \right) \right] \cdot \\
+& \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ Y^\mathrm{T} P Y - Y^\mathrm{T} P X B - B^\mathrm{T} X^\mathrm{T} P Y + B^\mathrm{T} X^\mathrm{T} P X B + \right. \right. \right. \\
+& \hphantom{\exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ \right. \right. \right. \!\!\!} \; \left. \left. \left. B^\mathrm{T} \Lambda_0 B - B^\mathrm{T} \Lambda_0 M_0 - M_0^\mathrm{T} \Lambda_0 B + M_0^\mathrm{T} \Lambda_0 \mu_0 \right] \right) \right] \; .
+\end{split}
+\end{equation}
+
+Completing the square over $B$, we finally have
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-JL-s4}
+\begin{split}
+p(Y,B,T) = \; & \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \sqrt{\frac{|T|^p |\Lambda_0|^v}{(2 \pi)^{pv}}} \sqrt{\frac{|\Omega_0|^{\nu_0}}{2^{\nu_0 v}}} \frac{1}{\Gamma_v \left( \frac{\nu_0}{2} \right)} \cdot |T|^{(\nu_0-v-1)/2} \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Omega_0 T \right) \right] \cdot \\
+& \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ (B-M_n)^\mathrm{T} \Lambda_n (B-M_n) + (Y^\mathrm{T} P Y + M_0^\mathrm{T} \Lambda_0 M_0 - M_n^\mathrm{T} \Lambda_n M_n) \right] \right) \right] \; .
+\end{split}
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-post-B-par}
+\begin{split}
+M_n &= \Lambda_n^{-1} (X^\mathrm{T} P Y + \Lambda_0 M_0) \\
+\Lambda_n &= X^\mathrm{T} P X + \Lambda_0 \; .
+\end{split}
+\end{equation}
+
+Ergo, the joint likelihood is proportional to
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-JL-s5}
+p(Y,B,T) \propto |T|^{p/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ (B-M_n)^\mathrm{T} \Lambda_n (B-M_n) \right] \right) \right] \cdot |T|^{(\nu_n-v-1)/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Omega_n T \right) \right]
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-post-T-par}
+\begin{split}
+\Omega_n &= \Omega_0 + Y^\mathrm{T} P Y + M_0^\mathrm{T} \Lambda_0 M_0 - M_n^\mathrm{T} \Lambda_n M_n \\
+\nu_n &= \nu_0 + n \; .
+\end{split}
+\end{equation}
+
+From the term in \eqref{eq:mblr-post-GLM-NW-JL-s5}, we can isolate the posterior distribution over $B$ given $T$:
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-post-B}
+p(B|T,Y) = \mathcal{MN}(B; M_n, \Lambda_n^{-1}, T^{-1}) \; .
+\end{equation}
+
+From the remaining term, we can isolate the posterior distribution over $T$:
+
+\begin{equation} \label{eq:mblr-post-GLM-NW-post-T}
+p(T|Y) = \mathcal{W}(T; \Omega_n^{-1}, \nu_n) \; .
+\end{equation}
+
+Together, \eqref{eq:mblr-post-GLM-NW-post-B} and \eqref{eq:mblr-post-GLM-NW-post-T} constitute the joint ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of $B$ and $T$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Bayesian multivariate linear regression"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-09-03; URL: \url{https://en.wikipedia.org/wiki/Bayesian_multivariate_linear_regression#Posterior_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P160 | shortcut: mblr-post | author: JoramSoch | date: 2020-09-03, 08:37.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:mblr-lme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:mblr-lme-GLM}
+Y = X B + E, \; E \sim \mathcal{MN}(0, V, \Sigma)
+\end{equation}
+
+be a general linear model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:glm}) with measured $n \times v$ data matrix $Y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) $V$ as well as unknown $p \times v$ regression coefficients $B$ and unknown $v \times v$ noise covariance ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) $\Sigma$. Moreover, assume a normal-Wishart prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mblr-prior}) over the model parameters $B$ and $T = \Sigma^{-1}$:
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-prior}
+p(B,T) = \mathcal{MN}(B; M_0, \Lambda_0^{-1}, T^{-1}) \cdot \mathcal{W}(T; \Omega_0^{-1}, \nu_0) \; .
+\end{equation}
+
+Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) for this model is
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-LME}
+\begin{split}
+\log p(y|m) = & \frac{v}{2} \log |P| - \frac{nv}{2} \log (2 \pi)  + \frac{v}{2} \log |\Lambda_0| - \frac{v}{2} \log |\Lambda_n| + \\
+& \frac{\nu_0}{2} \log\left| \frac{1}{2} \Omega_0 \right| - \frac{\nu_n}{2} \log\left| \frac{1}{2} \Omega_n \right| + \log \Gamma_v \left( \frac{\nu_n}{2} \right) - \log \Gamma_v \left( \frac{\nu_0}{2} \right)
+\end{split}
+\end{equation}
+
+where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-post-par}
+\begin{split}
+M_n &= \Lambda_n^{-1} (X^\mathrm{T} P Y + \Lambda_0 M_0) \\
+\Lambda_n &= X^\mathrm{T} P X + \Lambda_0 \\
+\Omega_n &= \Omega_0 + Y^\mathrm{T} P Y + M_0^\mathrm{T} \Lambda_0 M_0 - M_n^\mathrm{T} \Lambda_n M_n \\
+\nu_n &= \nu_0 + n \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} According to the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), the model evidence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) for this model is:
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-ME-s1}
+p(Y|m) = \iint p(Y|B,T) \, p(B,T) \, \mathrm{d}B \, \mathrm{d}T \; .
+\end{equation}
+
+According to the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}), the integrand is equivalent to the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}):
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-ME-s2}
+p(Y|m) = \iint p(Y,B,T) \, \mathrm{d}B \, \mathrm{d}T \; .
+\end{equation}
+
+Equation \eqref{eq:mblr-lme-GLM} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:mblr-lme-GLM-LF-Class}
+p(Y|B,\Sigma) = \mathcal{MN}(Y; X B, V, \Sigma) = \sqrt{\frac{1}{(2 \pi)^{nv} |\Sigma|^n |V|^v}} \, \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Sigma^{-1} (Y-XB)^\mathrm{T} V^{-1} (Y-XB) \right) \right]
+\end{equation}
+
+which, for mathematical convenience, can also be parametrized as
+
+\begin{equation} \label{eq:mblr-lme-GLM-LF-Bayes}
+p(Y|B,T) = \mathcal{MN}(Y; X B, P, T^{-1}) = \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \, \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T (Y-XB)^\mathrm{T} P (Y-XB) \right) \right]
+\end{equation}
+
+using the $v \times v$ precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) $T = \Sigma^{-1}$ and the $n \times n$ precision matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:precmat}) $P = V^{-1}$.
+
+\vspace{1em}
+When deriving the posterior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mblr-post}) $p(B,T|Y)$, the joint likelihood $p(Y,B,T)$ is obtained as
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-LME-s1}
+\begin{split}
+p(Y,B,T) = \; & \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \sqrt{\frac{|T|^p |\Lambda_0|^v}{(2 \pi)^{pv}}} \sqrt{\frac{|\Omega_0|^{\nu_0}}{2^{\nu_0 v}}} \frac{1}{\Gamma_v \left( \frac{\nu_0}{2} \right)} \cdot |T|^{(\nu_0-v-1)/2} \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Omega_0 T \right) \right] \cdot \\
+& \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ (B-M_n)^\mathrm{T} \Lambda_n (B-M_n) + (Y^\mathrm{T} P Y + M_0^\mathrm{T} \Lambda_0 M_0 - M_n^\mathrm{T} \Lambda_n M_n) \right] \right) \right] \; .
+\end{split}
+\end{equation}
+
+Using the probability density function of the matrix-normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:matn-pdf}), we can rewrite this as
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-LME-s2}
+\begin{split}
+p(Y,B,T) = \; & \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \sqrt{\frac{|T|^p |\Lambda_0|^v}{(2 \pi)^{pv}}} \sqrt{\frac{(2 \pi)^{pv}}{|T|^p |\Lambda_n|^v}} \sqrt{\frac{|\Omega_0|^{\nu_0}}{2^{\nu_0 v}}} \frac{1}{\Gamma_v \left( \frac{\nu_0}{2} \right)} \cdot |T|^{(\nu_0-v-1)/2} \exp\left[ -\frac{1}{2} \mathrm{tr}\left( \Omega_0 T \right) \right] \cdot \\
+& \mathcal{MN}(B; M_n, \Lambda_n^{-1}, T^{-1}) \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ Y^\mathrm{T} P Y + M_0^\mathrm{T} \Lambda_0 M_0 - M_n^\mathrm{T} \Lambda_n M_n \right] \right) \right] \; .
+\end{split}
+\end{equation}
+
+Now, $B$ can be integrated out easily:
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-LME-s3}
+\begin{split}
+\int p(Y,B,T) \, \mathrm{d}B = \; & \sqrt{\frac{|T|^n |P|^v}{(2 \pi)^{nv}}} \sqrt{\frac{|\Lambda_0|^v}{|\Lambda_n|^v}} \sqrt{\frac{|\Omega_0|^{\nu_0}}{2^{\nu_0 v}}} \frac{1}{\Gamma_v \left( \frac{\nu_0}{2} \right)} \cdot |T|^{(\nu_0-v-1)/2} \cdot \\
+& \exp\left[ -\frac{1}{2} \mathrm{tr}\left( T \left[ \Omega_0 + Y^\mathrm{T} P Y + M_0^\mathrm{T} \Lambda_0 M_0 - M_n^\mathrm{T} \Lambda_n M_n \right] \right) \right] \; .
+\end{split}
+\end{equation}
+
+Using the probability density function of the Wishart distribution ($\rightarrow$ Proof "wish-pdf"), we can rewrite this as
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-LME-s4}
+\int p(Y,B,T) \, \mathrm{d}B = \sqrt{\frac{|P|^v}{(2 \pi)^{nv}}} \sqrt{\frac{|\Lambda_0|^v}{|\Lambda_n|^v}} \sqrt{\frac{|\Omega_0|^{\nu_0}}{2^{\nu_0 v}}} \sqrt{\frac{2^{\nu_n v}}{|\Omega_n|^{\nu_n}}} \, \frac{\Gamma_v \left( \frac{\nu_n}{2} \right)}{\Gamma_v \left( \frac{\nu_0}{2} \right)} \cdot \mathcal{W}(T; \Omega_n^{-1}, \nu_n) \; .
+\end{equation}
+
+Finally, $T$ can also be integrated out:
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-LME-s5}
+\iint p(Y,B,T) \, \mathrm{d}B \, \mathrm{d}T = \sqrt{\frac{|P|^v}{(2 \pi)^{nv}}} \sqrt{\frac{|\Lambda_0|^v}{|\Lambda_n|^v}} \sqrt{\frac{\left| \frac{1}{2} \Omega_0 \right|^{\nu_0}}{\left| \frac{1}{2} \Omega_n \right|^{\nu_n}}} \, \frac{\Gamma_v \left( \frac{\nu_n}{2} \right)}{\Gamma_v \left( \frac{\nu_0}{2} \right)} = p(y|m) \; .
+\end{equation}
+
+Thus, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) of this model is given by
+
+\begin{equation} \label{eq:mblr-lme-GLM-NW-LME-s6}
+\begin{split}
+\log p(y|m) = & \frac{v}{2} \log |P| - \frac{nv}{2} \log (2 \pi)  + \frac{v}{2} \log |\Lambda_0| - \frac{v}{2} \log |\Lambda_n| + \\
+& \frac{\nu_0}{2} \log\left| \frac{1}{2} \Omega_0 \right| - \frac{\nu_n}{2} \log\left| \frac{1}{2} \Omega_n \right| + \log \Gamma_v \left( \frac{\nu_n}{2} \right) - \log \Gamma_v \left( \frac{\nu_0}{2} \right) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P161 | shortcut: mblr-lme | author: JoramSoch | date: 2020-09-03, 09:23.
 \vspace{1em}
 
 
@@ -13057,6 +13826,248 @@ and applying \eqref{eq:lfe-lme-ME} to \eqref{eq:lfe-lme-LFE-LME-s1}, we finally 
 
 
 
+\subsection{Bayes factor}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:bf}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Consider two competing generative models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m_1$ and $m_2$ for observed data $y$. Then the Bayes factor in favor $m_1$ over $m_2$ is the ratio of marginal likelihoods ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) of $m_1$ and $m_2$:
+
+\begin{equation} \label{eq:bf-BF}
+\text{BF}_{12} = \frac{p(y\mid m_1)}{p(y\mid m_2)}.
+\end{equation}
+
+Note that by Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), the ratio of posterior model probabilities ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) (i.e., the posterior model odds) can be written as
+
+\begin{equation} \label{eq:bf-odds}
+\frac{p(m_1 \mid y)}{p(m_2 \mid y)} = \frac{p(m_1)}{p(m_2)} \cdot \frac{p(y\mid m_1)}{p(y\mid m_2)},
+\end{equation}
+
+or equivalently by \eqref{eq:bf-BF},
+
+\begin{equation} \label{eq:bf-odds2}
+\frac{p(m_1 \mid y)}{p(m_2 \mid y)} = \frac{p(m_1)}{p(m_2)} \cdot \text{BF}_{12}.
+\end{equation}
+
+In other words, the Bayes factor can be viewed as the factor by which the prior model odds are updated (after observing data $y$) to posterior model odds – which is also expressed by Bayes' rule ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-rule}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Kass, Robert E. and Raftery, Adrian E. (1995): "Bayes Factors"; in: \textit{Journal of the American Statistical Association}, vol. 90, no. 430, pp. 773-795; URL: \url{https://dx.doi.org/10.1080/01621459.1995.10476572}; DOI: 10.1080/01621459.1995.10476572.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D92 | shortcut: bf | author: tomfaulkenberry | date: 2020-08-26, 12:00.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Transitivity}]{Transitivity} \label{sec:bf-trans}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider three competing models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m_1$, $m_2$, and $m3$ for observed data $y$. Then the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}) for $m_1$ over $m_3$ can be written as:
+
+\begin{equation} \label{eq:bf-trans-bf-trans}
+\text{BF}_{13} = \text{BF}_{12}\cdot \text{BF}_{23}.
+\end{equation}
+
+\vspace{1em}
+\textbf{Proof:} By definition ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}), the Bayes factor $\text{BF}_{13}$ is the ratio of marginal likelihoods of data $y$ over $m_1$ and $m_3$, respectively. That is,
+
+\begin{equation} \label{eq:bf-trans-bf}
+\text{BF}_{13}=\frac{p(y \mid m_1)}{p(y \mid m_3)}.
+\end{equation}
+
+We can equivalently write 
+
+\begin{equation}
+\begin{split}
+  \text{BF}_{13} &\overset{\eqref{eq:bf-trans-bf}}{=} \frac{p(y \mid m_1)}{p(y \mid m_3)}\\
+  &= \frac{p(y \mid m_1)}{p(y \mid m_3)} \cdot \frac{p(y \mid m_2)}{p(y \mid m_2)}\\
+  &=\frac{p(y \mid m_1)}{p(y \mid m_2)} \cdot \frac{p(y \mid m_2)}{p(y \mid m_3)}\\
+  &\overset{\eqref{eq:bf-trans-bf}}{=}\text{BF}_{12} \cdot \text{BF}_{23},
+\end{split}
+\end{equation}
+
+which completes the proof of \eqref{eq:bf-trans-bf-trans}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P163 | shortcut: bf-trans | author: tomfaulkenberry | date: 2020-09-07, 12:00.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Computation using Savage-Dickey Density Ratio}]{Computation using Savage-Dickey Density Ratio} \label{sec:bf-sddr}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider two competing models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) on data $y$ containing parameters $\delta$ and $\varphi$, namely $m_0:\delta=\delta_0,\varphi$ and $m_1:\delta,\varphi$. In this context, we say that $\delta$ is a parameter of interest, $\varphi$ is a nuisance parameter (i.e., common to both models), and $m_0$ is a sharp point hypothesis nested within $m_1$. Suppose further that the prior for the nuisance parameter $\varphi$ in $m_0$ is equal to the prior for $\varphi$ in $m_1$ after conditioning on the restriction -- that is, $p(\varphi\mid m_0) = p(\varphi\mid \delta=\delta_0,m_1)$. Then the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}) for $m_0$ over $m_1$ can be computed as:
+
+\begin{equation} \label{eq:bf-sddr-sd}
+\text{BF}_{01} = \frac{p(\delta=\delta_0\mid y,m_1)}{p(\delta=\delta_0\mid m_1)}.
+\end{equation}
+
+\vspace{1em}
+\textbf{Proof:} By definition ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}), the Bayes factor $\text{BF}_{01}$ is the ratio of marginal likelihoods of data $y$ over $m_0$ and $m_1$, respectively. That is,
+
+\begin{equation} \label{eq:bf-sddr-bf}
+\text{BF}_{01}=\frac{p(y \mid m_0)}{p(y \mid m_1)}.
+\end{equation}
+
+The key idea in the proof is that we can use a "change of variables" technique to express $\text{BF}_{01}$ entirely in terms of the "encompassing" model $m_1$. This proceeds by first unpacking the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) for $m_0$ over the nuisance parameter $\varphi$ and then using the fact that $m_0$ is a sharp hypothesis nested within $m_1$ to rewrite everything in terms of $m_1$. Specifically,
+
+\begin{equation} \label{eq:bf-sddr-ml-m0}
+\begin{split}
+ p(y \mid m_0) &= \int p(y \mid \varphi,m_0) \, p(\varphi\mid m_0) \, \mathrm{d} \varphi \\
+  &= \int p(y \mid \varphi,\delta=\delta_0,m_1) \, p(\varphi\mid \delta=\delta_0,m_1) \, \mathrm{d} \varphi \\
+  &= p(y \mid \delta=\delta_0,m_1).\\
+\end{split}
+\end{equation}
+
+By Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), we can rewrite this last line as
+
+\begin{equation} \label{eq:bf-sddr-ml-m0-bt}
+p(y \mid \delta=\delta_0,m_1) = \frac{p(\delta=\delta_0\mid y,m_1) \, p(y \mid m_1)}{p(\delta=\delta_0\mid m_1)}.
+\end{equation}
+
+Thus we have
+
+\begin{equation} 
+\begin{split}
+  \text{BF}_{01} &\overset{\eqref{eq:bf-sddr-bf}}{=} \frac{p(y \mid m_0)}{p(y \mid m_1)}\\
+  &= p(y \mid m_0) \cdot \frac{1}{p(y \mid m_1)}\\
+  &\overset{\eqref{eq:bf-sddr-ml-m0}}{=} p(y \mid \delta=\delta_0,m_1) \cdot \frac{1}{p(y \mid m_1)}\\
+  &\overset{\eqref{eq:bf-sddr-ml-m0-bt}}{=} \frac{p(\delta=\delta_0\mid y,m_1) \, p(y \mid m_1)}{p(\delta=\delta_0\mid m_1)} \cdot \frac{1}{p(y \mid m_1)}\\
+  &= \frac{p(\delta=\delta_0 \mid y,m_1)}{p(\delta=\delta_0\mid m_1)},
+\end{split}
+\end{equation}
+
+which completes the proof of \eqref{eq:bf-sddr-sd}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Faulkenberry, Thomas J. (2019): "A tutorial on generalizing the default Bayesian t-test via posterior sampling and encompassing priors"; in: \textit{Communications for Statistical Applications and Methods}, vol. 26, no. 2, pp. 217-238; URL: \url{https://dx.doi.org/10.29220/CSAM.2019.26.2.217}; DOI: 10.29220/CSAM.2019.26.2.217.
+\item Penny, W.D. and Ridgway, G.R. (2013): "Efficient Posterior Probability Mapping Using Savage-Dickey Ratios"; in: \textit{PLoS ONE}, vol. 8, iss. 3, art. e59655, eq. 16; URL: \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0059655}; DOI: 10.1371/journal.pone.0059655.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P156 | shortcut: bf-sddr | author: tomfaulkenberry | date: 2020-08-26, 12:00.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Computation using Encompassing Prior Method}]{Computation using Encompassing Prior Method} \label{sec:bf-ep}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider two models $m_1$ and $m_e$, where $m_1$ is nested within an encompassing model ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:encm}) $m_e$ via an inequality constraint on some parameter $\theta$, and $\theta$ is unconstrained under $m_e$. Then, the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}) is
+
+\begin{equation} \label{eq:bf-ep-bf-ep}
+  \text{BF}_{1e} = \frac{c}{d} = \frac{1/d}{1/c}
+\end{equation}
+
+where $1/d$ and $1/c$ represent the proportions of the posterior and prior of the encompassing model, respectively, that are in agreement with the inequality constraint imposed by the nested model $m_1$.
+
+\vspace{1em}
+\textbf{Proof:} Consider first that for any model $m_1$ on data $y$ with parameter $\theta$, Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}) implies
+
+\begin{equation} \label{eq:bf-ep-bayesth}
+  p(\theta \mid y,m_1) = \frac{p(y \mid \theta,m_1) \cdot p(\theta \mid m_1)}{p(y \mid m_1)}.
+\end{equation}
+
+Rearranging equation \eqref{eq:bf-ep-bayesth} allows us to write the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) for $y$ under $m_1$ as
+
+\begin{equation} \label{eq:bf-ep-marginal}
+  p(y \mid m_1) = \frac{p(y \mid \theta,m_1) \cdot p(\theta \mid m_1)}{p(\theta \mid y,m_1)}.
+\end{equation}
+
+Taking the ratio of the marginal likelihoods for $m_1$ and the encompassing model ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:encm}) $m_e$ yields the following Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}):
+
+\begin{equation} \label{eq:bf-ep-bayesfactor}
+  \text{BF}_{1e} = \frac{p(y \mid \theta,m_1) \cdot p(\theta \mid m_1) / p(\theta \mid y,m_1)}{p(y \mid \theta,m_e) \cdot p(\theta \mid m_e) / p(\theta \mid y,m_e)}.
+\end{equation}
+
+Now, both the constrained model $m_1$ and the encompassing model ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:encm}) $m_e$ contain the same parameter vector $\theta$. Choose a specific value of $\theta$, say $\theta'$, that exists in the support of both models $m_1$ and $m_e$ (we can do this, because $m_1$ is nested within $m_e$). Then, for this parameter value $\theta'$, we have $p(y \mid \theta',m_1)=p(y \mid \theta',m_e)$, so the expression for the Bayes factor in equation \eqref{eq:bf-ep-bayesfactor} reduces to an expression involving only the priors and posteriors for $\theta'$ under $m_1$ and $m_e$:
+
+\begin{equation} \label{eq:bf-ep-bayesfactor2}
+  \text{BF}_{1e} = \frac{p(\theta' \mid m_1) / p(\theta' \mid y,m_1)}{p(\theta' \mid m_e) / p(\theta' \mid y,m_e)}.
+\end{equation}
+
+Because $m_1$ is nested within $m_e$ via an inequality constraint, the prior $p(\theta' \mid m_1)$ is simply a truncation of the encompassing prior $p(\theta' \mid m_e)$. Thus, we can express $p(\theta' \mid m_1)$ in terms of the encompassing prior $p(\theta' \mid m_e)$ by multiplying the encompassing prior by an indicator function over $m_1$ and then normalizing the resulting product.  That is,
+
+\begin{equation} \label{eq:bf-ep-normalize}
+\begin{split}
+  p(\theta' \mid m_1) & = \frac{p(\theta' \mid m_e) \cdot I_{\theta' \in m_1}}{\int p(\theta' \mid m_e) \cdot I_{\theta' \in m_1} \, \mathrm{d}\theta'}\\
+                      & = \Biggl(\frac{I_{\theta' \in m_1}}{\int p(\theta' \mid m_e) \cdot I_{\theta' \in m_1} \, \mathrm{d}\theta'}\Biggr) \cdot p(\theta' \mid m_e),
+\end{split}
+\end{equation}
+
+where $I_{\theta' \in m_1}$ is an indicator function. For parameters $\theta' \in m_1$, this indicator function is identically equal to 1, so the expression in parentheses reduces to a constant, say $c$, allowing us to write the prior as
+
+\begin{equation} \label{eq:bf-ep-prior}
+  p(\theta' \mid m_1) = c \cdot p(\theta' \mid m_e).
+\end{equation}
+
+By similar reasoning, we can write the posterior as
+
+\begin{equation} \label{eq:bf-ep-posterior}
+  p(\theta' \mid y,m_1) = \Biggl(\frac{I_{\theta' \in m_1}}{\int p(\theta' \mid y,m_e) \cdot I_{\theta' \in m_1} \, \mathrm{d}\theta'}\Biggr)\cdot p(\theta' \mid y,m_e) = d \cdot p(\theta' \mid y,m_e).
+\end{equation}
+
+Plugging \eqref{eq:bf-ep-prior} and \eqref{eq:bf-ep-posterior} into \eqref{eq:bf-ep-bayesfactor2}, this gives us
+
+\begin{equation} \label{eq:bf-ep-bayesfactor3}
+  \text{BF}_{1e} = \frac{c \cdot p(\theta' \mid m_e) / d \cdot p(\theta' \mid y,m_e)}{p(\theta' \mid m_e) / p(\theta' \mid y,m_e)} = \frac{c}{d} = \frac{1/d}{1/c},
+\end{equation}
+
+which completes the proof. Note that by definition, $1/d$ represents the proportion of the posterior distribution for $\theta$ under the encompassing model ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:encm}) $m_e$ that agrees with the constraints imposed by $m_1$.  Similarly, $1/c$ represents the proportion of the prior distribution for $\theta$ under the encompassing model ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:encm}) $m_e$ that agrees with the constraints imposed by $m_1$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Klugkist, I., Kato, B., and Hoijtink, H. (2005): "Bayesian model selection using encompassing priors"; in: \textit{Statistica Neerlandica}, vol. 59, no. 1., pp. 57-69; URL: \url{https://dx.doi.org/10.1111/j.1467-9574.2005.00279.x}; DOI: 10.1111/j.1467-9574.2005.00279.x.
+\item Faulkenberry, Thomas J. (2019): "A tutorial on generalizing the default Bayesian t-test via posterior sampling and encompassing priors"; in: \textit{Communications for Statistical Applications and Methods}, vol. 26, no. 2, pp. 217-238; URL: \url{https://dx.doi.org/10.29220/CSAM.2019.26.2.217}; DOI: 10.29220/CSAM.2019.26.2.217.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P157 | shortcut: bf-ep | author: tomfaulkenberry | date: 2020-09-02, 12:00.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Encompassing model}]{Encompassing model} \label{sec:encm}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Consider a family $f$ of generative models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ on data $y$, where each $m \in f$ is defined by placing an inequality constraint on model parameter(s) $\theta$ (e.g., $m:\theta>0$). Then the encompassing model $m_e$ is constructed such that each $m$ is nested within $m_e$ and all inequality constraints on the parameter(s) $\theta$ are removed.
+
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Klugkist, I., Kato, B., and Hoijtink, H. (2005): "Bayesian model selection using encompassing priors"; in: \textit{Statistica Neerlandica}, vol. 59, no. 1, pp. 57-69; URL: \url{https://dx.doi.org/10.1111/j.1467-9574.2005.00279.x}; DOI: 10.1111/j.1467-9574.2005.00279.x.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D93 | shortcut: encm | author: tomfaulkenberry | date: 2020-09-02, 12:00.
+\vspace{1em}
+
+
+
 \subsection{Log Bayes factor}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:lbf}
@@ -13111,7 +14122,7 @@ can be expressed as
 
 
 \vspace{1em}
-\textbf{Proof:} The Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) is defined as the posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) odds ratio ($\rightarrow$ Definition "odds") when both models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) are equally likely apriori ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
+\textbf{Proof:} The Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}) is defined as the posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) odds ratio ($\rightarrow$ Definition "odds") when both models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) are equally likely apriori ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
 
 \begin{equation} \label{eq:lbf-der-BF-s1}
 \mathrm{BF}_{12} = \frac{p(m_1|y)}{p(m_2|y)}
@@ -13155,7 +14166,7 @@ Equation \eqref{eq:lbf-der-LBF-ratio} follows by logarithmizing both sides of \e
 
 
 \vspace{1em}
-\textbf{Proof:} The Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) is defined as the ratio of the model evidences ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) of $m_1$ and $m_2$
+\textbf{Proof:} The Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}) is defined as the ratio of the model evidences ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) of $m_1$ and $m_2$
 
 \begin{equation} \label{eq:lbf-lme-BF}
 \mathrm{BF}_{12} = \frac{p(y|m_1)}{p(y|m_2)}
@@ -13268,17 +14279,17 @@ p(m_i|y) = \frac{p(y|m_i) \, p(m_i)}{\sum_{j=1}^{M} p(y|m_j) \, p(m_j)} \; .
 \subsubsection[\textbf{Calculation from Bayes factors}]{Calculation from Bayes factors} \label{sec:pmp-bf}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $m_0, m_1, \ldots, m_M$ be $M+1$ statistical models with model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $p(y \vert m_0), p(y \vert m_1), \ldots, p(y \vert m_M)$. Then, the posterior model probabilities ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) of the models $m_1, \ldots, m_M$ are given by:
+\textbf{Theorem:} Let $m_0, m_1, \ldots, m_M$ be $M+1$ statistical models with model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) $p(y \vert m_0), p(y \vert m_1), \ldots, p(y \vert m_M)$. Then, the posterior model probabilities ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:pmp}) of the models $m_1, \ldots, m_M$ are given by
 
 \begin{equation} \label{eq:pmp-bf-PMP-BF}
 p(m_i|y) = \frac{\mathrm{BF}_{i,0} \cdot \alpha_i}{\sum_{j=1}^{M} \mathrm{BF}_{j,0} \cdot \alpha_j}, \quad i = 1,\ldots,M \; ,
 \end{equation}
 
-where $\mathrm{BF}_{i,0}$ is the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) comparing model $m_i$ with $m_0$ and $\alpha_i$ is the prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) odds ratio ($\rightarrow$ Definition "odds") of model $m_i$ against $m_0$.
+where $\mathrm{BF}_{i,0}$ is the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}) comparing model $m_i$ with $m_0$ and $\alpha_i$ is the prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) odds ratio ($\rightarrow$ Definition "odds") of model $m_i$ against $m_0$.
 
 
 \vspace{1em}
-\textbf{Proof:} Define the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) for $m_i$
+\textbf{Proof:} Define the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}) for $m_i$
 
 \begin{equation} \label{eq:pmp-bf-BF-i0}
 \mathrm{BF}_{i,0} = \frac{p(y|m_i)}{p(y|m_0)}
@@ -13348,7 +14359,7 @@ When both models are equally likely apriori ($\rightarrow$ Definition \ref{sec:G
 \frac{p(m_1|y)}{p(m_2|y)} = \frac{p(y|m_1)}{p(y|m_2)} \; .
 \end{equation}
 
-Now the right-hand side corresponds to the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}), therefore
+Now the right-hand side corresponds to the Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bf}), therefore
 
 \begin{equation} \label{eq:pmp-lbf-post-odds-s4}
 \frac{p(m_1|y)}{p(m_2|y)} = \mathrm{BF}_{12} \; .
@@ -13513,7 +14524,7 @@ where $p(\theta \vert m_i,y)$ is the posterior distributions over $\theta$ obtai
 
 
 \vspace{1em}
-\textbf{Proof:} According to the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), the probability of the shared parameters $\theta$ conditional on the measured data $y$ can be obtained ($\rightarrow$ Definition "bma-der") by marginalizing over the discrete variable model $m$:
+\textbf{Proof:} According to the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), the probability of the shared parameters $\theta$ conditional on the measured data $y$ can be obtained ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:bma-der}) by marginalizing over the discrete variable model $m$:
 
 \begin{equation} \label{eq:bma-lme-BMA-PMP}
 p(\theta|y) = \sum_{i=1}^{M} p(\theta|m_i,y) \cdot p(m_i|y) \; ,
