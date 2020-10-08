@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-14 17:48:00
- Last edit: 2020-04-14 18:03:00
+ Last edit: 2020-10-08 08:18:00
 """
 
 
@@ -21,8 +21,9 @@ import BookTools as spbt
 
 # Define settings
 #-----------------------------------------------------------------------------#
-str1 = '/D/cat-pmf'
-str2 = '/P/cat-pmf'
+str1r= '.*.*Definition.*.*:'    # should be identical to str1, unless str1
+str1 = '**Definition**:'        # contains regexp-problematic characters 
+str2 = '**Definition:**'
 
 # Set repository directory
 #-----------------------------------------------------------------------------#
@@ -51,7 +52,7 @@ for file in files:
         for i, line in enumerate(file_txt):
             if line.find(str1) > -1:
                 str_found   = True
-                file_txt[i] = re.sub(str1, str2, line)
+                file_txt[i] = re.sub(str1r, str2, line)
         
         # Write proof file
         #---------------------------------------------------------------------#
@@ -81,7 +82,7 @@ for file in files:
         for i, line in enumerate(file_txt):
             if line.find(str1) > -1:
                 str_found   = True
-                file_txt[i] = re.sub(str1, str2, line)
+                file_txt[i] = re.sub(str1r, str2, line)
         
         # Write definition file
         #---------------------------------------------------------------------#
