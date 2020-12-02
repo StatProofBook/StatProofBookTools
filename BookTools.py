@@ -187,9 +187,10 @@ def extract_body(file_txt):
 #-----------------------------------------------------------------------------#
 def replace_links(line, rep_dir):
     """
-    Replace links such as [text](/P/shortcut) or [text](/D/shortcut)
-                       by (-> Proof I/1.2.3) or (Definition "shortcut").
+    Replace links in line from proof or definition
     """
+    # Replace links such as [text](/P/shortcut) or [text](/D/shortcut)
+    #                    by (-> Proof I/1.2.3) or (Definition "shortcut").
     while line.find('](/') > -1:
         # get bracket/parantheses indices
         i2 = line.find('](/')
@@ -211,6 +212,17 @@ def replace_links(line, rep_dir):
             new_ref = ' ($\\rightarrow$ ' + file_type + ' \\ref{sec:' + chapter + '}/\\ref{sec:' + shortcut + '})'
         else:
             new_ref = ' ($\\rightarrow$ ' + file_type + ' "' + shortcut + '")'
+        # adapt to new reference
+        line = line[0:i1] + line[i1+1:i2] + new_ref + line[i4+1:]
+    # Replace links such as [text](URL) by \footnote{\url{URL}}
+    while line.find('](') > -1:
+        # get bracket/parantheses indices
+        i2 = line.find('](')
+        i3 = i2 + 1
+        i4 = line.find(')', i2)
+        i1 = line.rfind('[', 0, i2)
+        # create new reference
+        new_ref = '\\footnote{\\url{' + line[i3+1:i4] + '}}'
         # adapt to new reference
         line = line[0:i1] + line[i1+1:i2] + new_ref + line[i4+1:]
     return line

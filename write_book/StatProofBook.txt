@@ -28,6 +28,7 @@
 \renewcommand\thechapter{\Roman{chapter}}
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\theequation{\arabic{equation}}
+\renewcommand\thefootnote{\arabic{footnote}}
 \let\Chaptermark\chaptermark
 \def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
 \let\Sectionmark\sectionmark

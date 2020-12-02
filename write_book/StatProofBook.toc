@@ -260,8 +260,8 @@
 \contentsline {subsubsection}{\numberline {3.7.1}\textit {Definition}}{157}%
 \contentsline {subsubsection}{\numberline {3.7.2}\textbf {Probability density function}}{157}%
 \contentsline {subsubsection}{\numberline {3.7.3}\textbf {Moment-generating function}}{158}%
-\contentsline {subsubsection}{\numberline {3.7.4}\textbf {Mean}}{159}%
-\contentsline {subsubsection}{\numberline {3.7.5}\textbf {Variance}}{160}%
+\contentsline {subsubsection}{\numberline {3.7.4}\textbf {Mean}}{160}%
+\contentsline {subsubsection}{\numberline {3.7.5}\textbf {Variance}}{161}%
 \contentsline {section}{\numberline {4}Multivariate continuous distributions}{163}%
 \contentsline {subsection}{\numberline {4.1}Multivariate normal distribution}{163}%
 \contentsline {subsubsection}{\numberline {4.1.1}\textit {Definition}}{163}%

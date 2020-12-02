@@ -28,6 +28,7 @@
 \renewcommand\thechapter{\Roman{chapter}}
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\theequation{\arabic{equation}}
+\renewcommand\thefootnote{\arabic{footnote}}
 \let\Chaptermark\chaptermark
 \def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
 \let\Sectionmark\sectionmark
@@ -36,7 +37,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{https://statproofbook.github.io/ \\ StatProofBook@gmail.com}
-\date{2020-12-02, 22:30}
+\date{2020-12-02, 23:09}
 
 \begin{document}
 
@@ -4943,11 +4944,11 @@ theorem \eqref{eq:kl-nonneg2-KL-nonneg} is simply a special case of \eqref{eq:kl
 \mathrm{KL}[P||Q] \neq \mathrm{KL}[Q||P]
 \end{equation}
 
-for some [probability distributions](dist) $P$ and $Q$.
+for some probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) $P$ and $Q$.
 
 
 \vspace{1em}
-\textbf{Proof:} Let $X \in \mathcal{X} = \left\lbrace 0, 1, 2 \right\rbrace$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) and consider the two [probability distributions](dist)
+\textbf{Proof:} Let $X \in \mathcal{X} = \left\lbrace 0, 1, 2 \right\rbrace$ be a discrete random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) and consider the two probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist})
 
 \begin{equation} \label{eq:kl-nonsymm-P-Q}
 \begin{split}
@@ -5426,7 +5427,7 @@ and compute the log-likelihood ratio ($\rightarrow$ Definition "llr")
 \log \Lambda(\phi) = \log p(y|\phi,\hat{\lambda}) - \log p(y|\hat{\phi},\hat{\lambda}) \; .
 \end{equation}
 
-[Wilks' theorem](llr-wilks) states that, when comparing two statistical models with parameter spaces $\Theta_1$ and $\Theta_0 \subset \Theta_1$, as the sample size approaches infinity, the quantity calculated as $-2$ times the log-ratio of maximum likelihoods follows a chi-squared distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:chi2}), if the null hypothesis is true:
+Wilks' theorem ($\rightarrow$ Proof "llr-wilks") states that, when comparing two statistical models with parameter spaces $\Theta_1$ and $\Theta_0 \subset \Theta_1$, as the sample size approaches infinity, the quantity calculated as $-2$ times the log-ratio of maximum likelihoods follows a chi-squared distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:chi2}), if the null hypothesis is true:
 
 \begin{equation} \label{eq:ci-wilks-wilks}
 H_0: \theta \in \Theta_0 \quad \Rightarrow \quad -2 \log \frac{\operatorname*{max}_{\theta \in \Theta_0} p(y|\theta)}{\operatorname*{max}_{\theta \in \Theta_1} p(y|\theta)} \sim \chi^2_{\Delta k}
@@ -10471,19 +10472,19 @@ M_X(t) &= \int_0^{\infty} e^{tx} \cdot \frac{\alpha}{\sqrt{2\pi x^3}}\cdot \exp\
 \end{split}
 \end{equation}
 
-To evaluate this integral, we will need two identities about [modified Bessel functions of the second kind](https://dlmf.nist.gov/10.25), denoted $K_{p}$. The function $K_{p}$ (for $p\in \mathbb{R}$) is one of the two linearly independent solutions of the differential equation
+To evaluate this integral, we will need two identities about modified Bessel functions of the second kind\footnote{\url{https://dlmf.nist.gov/10.25}}, denoted $K_{p}$. The function $K_{p}$ (for $p\in \mathbb{R}$) is one of the two linearly independent solutions of the differential equation
 
 \begin{equation} \label{eq:wald-mgf-bessel-de}
 x^2\frac{d^2y}{dx^2} + x\frac{dy}{dx}-(x^2+p^2)y=0 \; .
 \end{equation}
 
-The first of these [identities](https://dlmf.nist.gov/10.39.2) gives an explicit solution for $K_{-1/2}$:
+The first of these identities\footnote{\url{https://dlmf.nist.gov/10.39.2}} gives an explicit solution for $K_{-1/2}$:
 
 \begin{equation} \label{eq:wald-mgf-bessel-fact1}
 K_{-1/2}(x) = \sqrt{\frac{\pi}{2x}} e^{-x} \; .
 \end{equation}
 
-The second of these [identities](https://dlmf.nist.gov/10.32.10) gives an integral representation of $K_p$:
+The second of these identities\footnote{\url{https://dlmf.nist.gov/10.32.10}} gives an integral representation of $K_p$:
 
 \begin{equation} \label{eq:wald-mgf-bessel-fact2}
 K_p(\sqrt{ab}) = \frac{1}{2}\left(\frac{a}{b}\right)^{p/2} \int_0^{\infty}x^{p-1}\cdot \exp\left[-\frac{1}{2}\left(ax + \frac{b}{x}\right)\right]dx \; .
@@ -10509,10 +10510,10 @@ Combining with \eqref{eq:wald-mgf-bessel-fact1} and simplifying gives
 
 \begin{equation} \label{eq:wald-mgf-wald-mgf-s4}
 \begin{split}
-  M_X(t) &= \frac{\alpha}{\sqrt{2\pi}}\cdot e^{\alpha \gamma}\cdot 2\left(\frac{\gamma^2-2t}{\alpha^2}\right)^{1/4} \cdot \sqrt{\frac{\pi}{2\sqrt{\alpha^2(\gamma^2-2t)}}}\cdot \exp\left[-\sqrt{\alpha^2(\gamma^2-2t)}\right] \\
-         &= \frac{\alpha}{\sqrt{2}\cdot \sqrt{\pi}}\cdot e^{\alpha \gamma}\cdot 2 \cdot \frac{(\gamma^2-2t)^{1/4}}{\sqrt{\alpha}}\cdot \frac{\sqrt{\pi}}{\sqrt{2}\cdot \sqrt{\alpha}\cdot (\gamma^2-2t)^{1/4}}\cdot \exp\left[-\sqrt{\alpha^2(\gamma^2-2t)}\right] \\
-         &= e^{\alpha \gamma} \cdot \exp\left[-\sqrt{\alpha^2(\gamma^2-2t)}\right] \\
-         &= \exp\left[\alpha \gamma-\sqrt{\alpha^2(\gamma^2-2t)}\right] \; .
+M_X(t) &= \frac{\alpha}{\sqrt{2\pi}}\cdot e^{\alpha \gamma}\cdot 2\left(\frac{\gamma^2-2t}{\alpha^2}\right)^{1/4} \cdot \sqrt{\frac{\pi}{2\sqrt{\alpha^2(\gamma^2-2t)}}}\cdot \exp\left[-\sqrt{\alpha^2(\gamma^2-2t)}\right] \\
+       &= \frac{\alpha}{\sqrt{2}\cdot \sqrt{\pi}}\cdot e^{\alpha \gamma}\cdot 2 \cdot \frac{(\gamma^2-2t)^{1/4}}{\sqrt{\alpha}}\cdot \frac{\sqrt{\pi}}{\sqrt{2}\cdot \sqrt{\alpha}\cdot (\gamma^2-2t)^{1/4}}\cdot \exp\left[-\sqrt{\alpha^2(\gamma^2-2t)}\right] \\
+       &= e^{\alpha \gamma} \cdot \exp\left[-\sqrt{\alpha^2(\gamma^2-2t)}\right] \\
+       &= \exp\left[\alpha \gamma-\sqrt{\alpha^2(\gamma^2-2t)}\right] \; .
 \end{split}
 \end{equation}
 
