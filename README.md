@@ -1,5 +1,7 @@
 ## StatProofBookTools
 
+[![DOI](https://zenodo.org/badge/238672483.svg)](https://zenodo.org/badge/latestdoi/238672483)
+
 Tools for [The Book of Statistical Proofs](https://statproofbook.github.io/)
 
 ### Getting Started
