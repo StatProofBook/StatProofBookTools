@@ -36,7 +36,7 @@
 
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
-\author{https://statproofbook.github.io/ \\ StatProofBook@gmail.com}
+\author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
 \date{YYYY-MM-DD, HH:MM}
 
 
