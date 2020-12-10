@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2020-05-18 20:27:00
+ Last edit: 2020-12-10 22:03:00
 """
 
 
@@ -256,6 +256,36 @@ for i in sort_ind:
         book.write(def_info[i][0] + ' & ' + def_info[i][1] + ' & ' + def_info[i][2] + ' & ' + def_info[i][3] + ' & ' + \
                    def_info[i][4].strftime('%Y-%m-%d') + ' & \\pageref{sec:' + def_info[i][1] + '} \\\\ \\hline\n')
 book.write('\\end{longtable}\n')
+book.write('\n\n\n')
+
+# Write "Proof by Topic"
+#-----------------------------------------------------------------------------#
+book.write('\\pagebreak\n')
+book.write('\\section{Proof by Topic}\n\n')
+sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(pr_tits)])]
+lett_one = '0'
+for i in sort_ind:
+    if pr_nos[i] != 0:
+        if pr_info[i][2][0] != lett_one:
+            if lett_one != '0': book.write('\n\\vspace{1em}\n')
+            book.write('\\textbf{' + pr_info[i][2][0] + '}\n\n')
+        book.write('$\\bullet$ ' + pr_info[i][2] + ', \\pageref{sec:' + pr_info[i][1] + '}\n\n')
+        lett_one = pr_info[i][2][0]
+book.write('\n\n\n')
+
+# Write "Definition by Topic"
+#-----------------------------------------------------------------------------#
+book.write('\\pagebreak\n')
+book.write('\\section{Definition by Topic}\n\n')
+sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(def_tits)])]
+lett_one = '0'
+for i in sort_ind:
+    if def_nos[i] != 0:
+        if def_info[i][2][0] != lett_one:
+            if lett_one != '0': book.write('\n\\vspace{1em}\n')
+            book.write('\\textbf{' + def_info[i][2][0] + '}\n\n')
+        book.write('$\\bullet$ ' + def_info[i][2] + ', \\pageref{sec:' + def_info[i][1] + '}\n\n')
+        lett_one = def_info[i][2][0]
 book.write('\n\n\n')
 
 # Close "The Book of Statistical Proofs"

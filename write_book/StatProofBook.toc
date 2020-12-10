@@ -412,3 +412,5 @@
 \contentsline {chapter}{\numberline {V}Appendix}{283}%
 \contentsline {section}{\numberline {1}Proof by Number}{284}%
 \contentsline {section}{\numberline {2}Definition by Number}{296}%
+\contentsline {section}{\numberline {3}Proof by Topic}{301}%
+\contentsline {section}{\numberline {4}Definition by Topic}{307}%

@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2020-12-10, 20:36}
+\date{2020-12-10, 22:14}
 
 \begin{document}
 
@@ -18152,6 +18152,836 @@ D121 & prior-maxent & Maximum entropy prior distribution & JoramSoch & 2020-12-0
 D122 & prior-eb & Empirical Bayes prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-eb} \\ \hline
 D123 & prior-ref & Reference prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-ref} \\ \hline
 \end{longtable}
+
+
+
+\pagebreak
+\section{Proof by Topic}
+
+\textbf{(}
+
+$\bullet$ (Non-)Multiplicativity of the expected value, \pageref{sec:mean-mult}
+
+
+\vspace{1em}
+\textbf{A}
+
+$\bullet$ Addition of the differential entropy upon multiplication with a constant, \pageref{sec:dent-add}
+
+$\bullet$ Additivity of the Kullback-Leibler divergence for independent distributions, \pageref{sec:kl-add}
+
+$\bullet$ Additivity of the variance for independent random variables, \pageref{sec:var-add}
+
+
+\vspace{1em}
+\textbf{B}
+
+$\bullet$ Bayes' rule, \pageref{sec:bayes-rule}
+
+$\bullet$ Bayes' theorem, \pageref{sec:bayes-th}
+
+$\bullet$ Bayesian model averaging in terms of log model evidences, \pageref{sec:bma-lme}
+
+
+\vspace{1em}
+\textbf{C}
+
+$\bullet$ Chi-square distribution is a special case of gamma distribution, \pageref{sec:chi2-gam}
+
+$\bullet$ Concavity of the Shannon entropy, \pageref{sec:ent-conc}
+
+$\bullet$ Conditional distributions of the multivariate normal distribution, \pageref{sec:mvn-cond}
+
+$\bullet$ Conditional distributions of the normal-gamma distribution, \pageref{sec:ng-cond}
+
+$\bullet$ Conjugate prior distribution for Bayesian linear regression, \pageref{sec:blr-prior}
+
+$\bullet$ Conjugate prior distribution for binomial observations, \pageref{sec:bin-prior}
+
+$\bullet$ Conjugate prior distribution for multinomial observations, \pageref{sec:mult-prior}
+
+$\bullet$ Conjugate prior distribution for multivariate Bayesian linear regression, \pageref{sec:mblr-prior}
+
+$\bullet$ Conjugate prior distribution for the Poisson distribution with exposure values, \pageref{sec:poissexp-prior}
+
+$\bullet$ Construction of confidence intervals using Wilks' theorem, \pageref{sec:ci-wilks}
+
+$\bullet$ Construction of unbiased estimator for variance, \pageref{sec:resvar-unb}
+
+$\bullet$ Convexity of the Kullback-Leibler divergence, \pageref{sec:kl-conv}
+
+$\bullet$ Convexity of the cross-entropy, \pageref{sec:entcross-conv}
+
+$\bullet$ Covariance of independent random variables, \pageref{sec:cov-ind}
+
+$\bullet$ Cumulative distribution function in terms of probability density function of a continuous random variable, \pageref{sec:cdf-pdf}
+
+$\bullet$ Cumulative distribution function in terms of probability mass function of a discrete random variable, \pageref{sec:cdf-pmf}
+
+$\bullet$ Cumulative distribution function of a strictly decreasing function of a random variable, \pageref{sec:cdf-sdfct}
+
+$\bullet$ Cumulative distribution function of a strictly increasing function of a random variable, \pageref{sec:cdf-sifct}
+
+$\bullet$ Cumulative distribution function of the beta distribution, \pageref{sec:beta-cdf}
+
+$\bullet$ Cumulative distribution function of the continuous uniform distribution, \pageref{sec:cuni-cdf}
+
+$\bullet$ Cumulative distribution function of the discrete uniform distribution, \pageref{sec:duni-cdf}
+
+$\bullet$ Cumulative distribution function of the exponential distribution, \pageref{sec:exp-cdf}
+
+$\bullet$ Cumulative distribution function of the gamma distribution, \pageref{sec:gam-cdf}
+
+$\bullet$ Cumulative distribution function of the normal distribution, \pageref{sec:norm-cdf}
+
+
+\vspace{1em}
+\textbf{D}
+
+$\bullet$ Derivation of Bayesian model averaging, \pageref{sec:bma-der}
+
+$\bullet$ Derivation of R² and adjusted R², \pageref{sec:rsq-der}
+
+$\bullet$ Derivation of the Bayesian information criterion, \pageref{sec:bic-der}
+
+$\bullet$ Derivation of the log Bayes factor, \pageref{sec:lbf-der}
+
+$\bullet$ Derivation of the log family evidence, \pageref{sec:lfe-der}
+
+$\bullet$ Derivation of the log model evidence, \pageref{sec:lme-der}
+
+$\bullet$ Derivation of the posterior model probability, \pageref{sec:pmp-der}
+
+$\bullet$ Differential entropy can be negative, \pageref{sec:dent-neg}
+
+$\bullet$ Differential entropy of the multivariate normal distribution, \pageref{sec:mvn-dent}
+
+$\bullet$ Differential entropy of the normal distribution, \pageref{sec:norm-dent}
+
+
+\vspace{1em}
+\textbf{E}
+
+$\bullet$ Encompassing Prior Method for computing Bayes Factors, \pageref{sec:bf-ep}
+
+$\bullet$ Equivalence of matrix-normal distribution and multivariate normal distribution, \pageref{sec:matn-mvn}
+
+$\bullet$ Exceedance probabilities for the Dirichlet distribution, \pageref{sec:dir-ep}
+
+$\bullet$ Expectation of a quadratic form, \pageref{sec:mean-qf}
+
+$\bullet$ Expected value of a non-negative random variable, \pageref{sec:mean-nnrvar}
+
+$\bullet$ Expected value of x times ln(x) for a gamma distribution, \pageref{sec:gam-xlogx}
+
+$\bullet$ Exponential distribution is a special case of gamma distribution, \pageref{sec:exp-gam}
+
+$\bullet$ Expression of the cumulative distribution function of the normal distribution without the error function, \pageref{sec:norm-cdfwerf}
+
+
+\vspace{1em}
+\textbf{F}
+
+$\bullet$ First central moment is zero, \pageref{sec:momcent-1st}
+
+$\bullet$ First raw moment is mean, \pageref{sec:momraw-1st}
+
+$\bullet$ Full width at half maximum for the normal distribution, \pageref{sec:norm-fwhm}
+
+
+\vspace{1em}
+\textbf{G}
+
+$\bullet$ Gaussian integral, \pageref{sec:norm-gi}
+
+$\bullet$ Gibbs' inequality, \pageref{sec:gibbs-ineq}
+
+
+\vspace{1em}
+\textbf{I}
+
+$\bullet$ Invariance of the Kullback-Leibler divergence under parameter transformation, \pageref{sec:kl-inv}
+
+$\bullet$ Invariance of the differential entropy under addition of a constant, \pageref{sec:dent-inv}
+
+$\bullet$ Invariance of the variance under addition of a constant, \pageref{sec:var-inv}
+
+
+\vspace{1em}
+\textbf{J}
+
+$\bullet$ Joint likelihood is the product of likelihood function and prior density, \pageref{sec:jl-lfnprior}
+
+
+\vspace{1em}
+\textbf{K}
+
+$\bullet$ Kullback-Leibler divergence for the gamma distribution, \pageref{sec:gam-kl}
+
+$\bullet$ Kullback-Leibler divergence for the multivariate normal distribution, \pageref{sec:mvn-kl}
+
+$\bullet$ Kullback-Leibler divergence for the normal distribution, \pageref{sec:norm-kl}
+
+$\bullet$ Kullback-Leibler divergence for the normal-gamma distribution, \pageref{sec:ng-kl}
+
+
+\vspace{1em}
+\textbf{L}
+
+$\bullet$ Law of the unconscious statistician, \pageref{sec:mean-lotus}
+
+$\bullet$ Linear transformation theorem for the matrix-normal distribution, \pageref{sec:matn-ltt}
+
+$\bullet$ Linear transformation theorem for the moment-generating function, \pageref{sec:mgf-ltt}
+
+$\bullet$ Linear transformation theorem for the multivariate normal distribution, \pageref{sec:mvn-ltt}
+
+$\bullet$ Linearity of the expected value, \pageref{sec:mean-lin}
+
+$\bullet$ Log Bayes factor in terms of log model evidences, \pageref{sec:lbf-lme}
+
+$\bullet$ Log family evidences in terms of log model evidences, \pageref{sec:lfe-lme}
+
+$\bullet$ Log model evidence for Bayesian linear regression, \pageref{sec:blr-lme}
+
+$\bullet$ Log model evidence for binomial observations, \pageref{sec:bin-lme}
+
+$\bullet$ Log model evidence for multinomial observations, \pageref{sec:mult-lme}
+
+$\bullet$ Log model evidence for multivariate Bayesian linear regression, \pageref{sec:mblr-lme}
+
+$\bullet$ Log model evidence for the Poisson distribution with exposure values, \pageref{sec:poissexp-lme}
+
+$\bullet$ Log sum inequality, \pageref{sec:logsum-ineq}
+
+$\bullet$ Log-odds and probability in logistic regression, \pageref{sec:logreg-lonp}
+
+$\bullet$ Logarithmic expectation of the gamma distribution, \pageref{sec:gam-logmean}
+
+
+\vspace{1em}
+\textbf{M}
+
+$\bullet$ Marginal distributions of the multivariate normal distribution, \pageref{sec:mvn-marg}
+
+$\bullet$ Marginal distributions of the normal-gamma distribution, \pageref{sec:ng-marg}
+
+$\bullet$ Marginal likelihood is a definite integral of joint likelihood, \pageref{sec:ml-jl}
+
+$\bullet$ Maximum likelihood estimation for Dirichlet-distributed data, \pageref{sec:dir-mle}
+
+$\bullet$ Maximum likelihood estimation for Poisson-distributed data, \pageref{sec:poiss-mle}
+
+$\bullet$ Maximum likelihood estimation for multiple linear regression, \pageref{sec:mlr-mle}
+
+$\bullet$ Maximum likelihood estimation for the general linear model, \pageref{sec:glm-mle}
+
+$\bullet$ Maximum likelihood estimator of variance is biased, \pageref{sec:resvar-bias}
+
+$\bullet$ Mean of the Bernoulli distribution, \pageref{sec:bern-mean}
+
+$\bullet$ Mean of the Poisson distribution, \pageref{sec:poiss-mean}
+
+$\bullet$ Mean of the Wald distribution, \pageref{sec:wald-mean}
+
+$\bullet$ Mean of the binomial distribution, \pageref{sec:bin-mean}
+
+$\bullet$ Mean of the categorical distribution, \pageref{sec:cat-mean}
+
+$\bullet$ Mean of the continuous uniform distribution, \pageref{sec:cuni-mean}
+
+$\bullet$ Mean of the exponential distribution, \pageref{sec:exp-mean}
+
+$\bullet$ Mean of the gamma distribution, \pageref{sec:gam-mean}
+
+$\bullet$ Mean of the multinomial distribution, \pageref{sec:mult-mean}
+
+$\bullet$ Mean of the normal distribution, \pageref{sec:norm-mean}
+
+$\bullet$ Median of the continuous uniform distribution, \pageref{sec:cuni-med}
+
+$\bullet$ Median of the exponential distribution, \pageref{sec:exp-med}
+
+$\bullet$ Median of the normal distribution, \pageref{sec:norm-med}
+
+$\bullet$ Method of moments for beta-distributed data, \pageref{sec:beta-mom}
+
+$\bullet$ Mode of the continuous uniform distribution, \pageref{sec:cuni-med}
+
+$\bullet$ Mode of the exponential distribution, \pageref{sec:exp-mode}
+
+$\bullet$ Mode of the normal distribution, \pageref{sec:norm-mode}
+
+$\bullet$ Moment in terms of moment-generating function, \pageref{sec:mom-mgf}
+
+$\bullet$ Moment-generating function of linear combination of independent random variables, \pageref{sec:mgf-lincomb}
+
+$\bullet$ Moment-generating function of the Wald distribution, \pageref{sec:wald-mgf}
+
+$\bullet$ Moment-generating function of the beta distribution, \pageref{sec:beta-mgf}
+
+$\bullet$ Moment-generating function of the normal distribution, \pageref{sec:norm-mgf}
+
+$\bullet$ Moments of the chi-square distribution, \pageref{sec:chi2-mom}
+
+$\bullet$ Monotonicity of the expected value, \pageref{sec:mean-mono}
+
+
+\vspace{1em}
+\textbf{N}
+
+$\bullet$ Non-negativity of the Kullback-Leibler divergence, \pageref{sec:kl-nonneg}
+
+$\bullet$ Non-negativity of the Kullback-Leibler divergence, \pageref{sec:kl-nonneg2}
+
+$\bullet$ Non-negativity of the Shannon entropy, \pageref{sec:ent-nonneg}
+
+$\bullet$ Non-negativity of the expected value, \pageref{sec:mean-nonneg}
+
+$\bullet$ Non-negativity of the variance, \pageref{sec:var-nonneg}
+
+$\bullet$ Non-symmetry of the Kullback-Leibler divergence, \pageref{sec:kl-nonsymm}
+
+
+\vspace{1em}
+\textbf{O}
+
+$\bullet$ Ordinary least squares for multiple linear regression, \pageref{sec:mlr-ols}
+
+$\bullet$ Ordinary least squares for multiple linear regression, \pageref{sec:mlr-ols2}
+
+$\bullet$ Ordinary least squares for the general linear model, \pageref{sec:glm-ols}
+
+
+\vspace{1em}
+\textbf{P}
+
+$\bullet$ Partition of a covariance matrix into expected values, \pageref{sec:covmat-mean}
+
+$\bullet$ Partition of covariance into expected values, \pageref{sec:cov-mean}
+
+$\bullet$ Partition of sums of squares in ordinary least squares, \pageref{sec:mlr-pss}
+
+$\bullet$ Partition of the log model evidence into accuracy and complexity, \pageref{sec:lme-anc}
+
+$\bullet$ Partition of the mean squared error into bias and variance, \pageref{sec:mse-bnv}
+
+$\bullet$ Partition of variance into expected values, \pageref{sec:var-mean}
+
+$\bullet$ Posterior credibility region against the omnibus null hypothesis for Bayesian linear regression, \pageref{sec:blr-pcr}
+
+$\bullet$ Posterior density is proportional to joint likelihood, \pageref{sec:post-jl}
+
+$\bullet$ Posterior distribution for Bayesian linear regression, \pageref{sec:blr-post}
+
+$\bullet$ Posterior distribution for binomial observations, \pageref{sec:bin-post}
+
+$\bullet$ Posterior distribution for multinomial observations, \pageref{sec:mult-post}
+
+$\bullet$ Posterior distribution for multivariate Bayesian linear regression, \pageref{sec:mblr-post}
+
+$\bullet$ Posterior distribution for the Poisson distribution with exposure values, \pageref{sec:poissexp-post}
+
+$\bullet$ Posterior model probabilities in terms of Bayes factors, \pageref{sec:pmp-bf}
+
+$\bullet$ Posterior model probabilities in terms of log model evidences, \pageref{sec:pmp-lme}
+
+$\bullet$ Posterior model probability in terms of log Bayes factor, \pageref{sec:pmp-lbf}
+
+$\bullet$ Posterior probability of the alternative hypothesis for Bayesian linear regression, \pageref{sec:blr-pp}
+
+$\bullet$ Probability and log-odds in logistic regression, \pageref{sec:logreg-pnlo}
+
+$\bullet$ Probability density function is first derivative of cumulative distribution function, \pageref{sec:pdf-cdf}
+
+$\bullet$ Probability density function of a strictly decreasing function of a continuous random variable, \pageref{sec:pdf-sdfct}
+
+$\bullet$ Probability density function of a strictly increasing function of a continuous random variable, \pageref{sec:pdf-sifct}
+
+$\bullet$ Probability density function of the Dirichlet distribution, \pageref{sec:dir-pdf}
+
+$\bullet$ Probability density function of the Wald distribution, \pageref{sec:wald-pdf}
+
+$\bullet$ Probability density function of the beta distribution, \pageref{sec:beta-pdf}
+
+$\bullet$ Probability density function of the chi-square distribution, \pageref{sec:chi2-pdf}
+
+$\bullet$ Probability density function of the continuous uniform distribution, \pageref{sec:cuni-pdf}
+
+$\bullet$ Probability density function of the exponential distribution, \pageref{sec:exp-pdf}
+
+$\bullet$ Probability density function of the gamma distribution, \pageref{sec:gam-pdf}
+
+$\bullet$ Probability density function of the matrix-normal distribution, \pageref{sec:matn-pdf}
+
+$\bullet$ Probability density function of the multivariate normal distribution, \pageref{sec:mvn-pdf}
+
+$\bullet$ Probability density function of the normal distribution, \pageref{sec:norm-pdf}
+
+$\bullet$ Probability density function of the normal-gamma distribution, \pageref{sec:ng-pdf}
+
+$\bullet$ Probability mass function of a strictly decreasing function of a discrete random variable, \pageref{sec:pmf-sdfct}
+
+$\bullet$ Probability mass function of a strictly increasing function of a discrete random variable, \pageref{sec:pmf-sifct}
+
+$\bullet$ Probability mass function of the Bernoulli distribution, \pageref{sec:bern-pmf}
+
+$\bullet$ Probability mass function of the Poisson distribution, \pageref{sec:poiss-pmf}
+
+$\bullet$ Probability mass function of the binomial distribution, \pageref{sec:bin-pmf}
+
+$\bullet$ Probability mass function of the categorical distribution, \pageref{sec:cat-pmf}
+
+$\bullet$ Probability mass function of the discrete uniform distribution, \pageref{sec:duni-pmf}
+
+$\bullet$ Probability mass function of the multinomial distribution, \pageref{sec:mult-pmf}
+
+$\bullet$ Projection matrix and residual-forming matrix are idempotent, \pageref{sec:mlr-idem}
+
+
+\vspace{1em}
+\textbf{Q}
+
+$\bullet$ Quantile function is inverse of strictly monotonically increasing cumulative distribution function, \pageref{sec:qf-cdf}
+
+$\bullet$ Quantile function of the continuous uniform distribution, \pageref{sec:cuni-qf}
+
+$\bullet$ Quantile function of the discrete uniform distribution, \pageref{sec:duni-qf}
+
+$\bullet$ Quantile function of the exponential distribution, \pageref{sec:exp-qf}
+
+$\bullet$ Quantile function of the gamma distribution, \pageref{sec:gam-qf}
+
+$\bullet$ Quantile function of the normal distribution, \pageref{sec:norm-qf}
+
+
+\vspace{1em}
+\textbf{R}
+
+$\bullet$ Relation between gamma distribution and standard gamma distribution, \pageref{sec:gam-sgam}
+
+$\bullet$ Relation between gamma distribution and standard gamma distribution, \pageref{sec:gam-sgam2}
+
+$\bullet$ Relation between normal distribution and standard normal distribution, \pageref{sec:norm-snorm}
+
+$\bullet$ Relation between normal distribution and standard normal distribution, \pageref{sec:norm-snorm2}
+
+$\bullet$ Relation between normal distribution and standard normal distribution, \pageref{sec:norm-snorm3}
+
+$\bullet$ Relation of Kullback-Leibler divergence to entropy, \pageref{sec:kl-ent}
+
+$\bullet$ Relation of continuous Kullback-Leibler divergence to differential entropy, \pageref{sec:kl-dent}
+
+$\bullet$ Relation of continuous mutual information to joint and conditional differential entropy, \pageref{sec:cmi-jcde}
+
+$\bullet$ Relation of continuous mutual information to marginal and conditional differential entropy, \pageref{sec:cmi-mcde}
+
+$\bullet$ Relation of continuous mutual information to marginal and joint differential entropy, \pageref{sec:cmi-mjde}
+
+$\bullet$ Relation of mutual information to joint and conditional entropy, \pageref{sec:dmi-jce}
+
+$\bullet$ Relation of mutual information to marginal and conditional entropy, \pageref{sec:dmi-mce}
+
+$\bullet$ Relation of mutual information to marginal and joint entropy, \pageref{sec:dmi-mje}
+
+$\bullet$ Relationship between R² and maximum log-likelihood, \pageref{sec:rsq-mll}
+
+$\bullet$ Relationship between covariance and correlation, \pageref{sec:cov-corr}
+
+$\bullet$ Relationship between covariance matrix and correlation matrix, \pageref{sec:covmat-corrmat}
+
+$\bullet$ Relationship between precision matrix and correlation matrix, \pageref{sec:precmat-corrmat}
+
+$\bullet$ Relationship between second raw moment, variance and mean, \pageref{sec:momraw-2nd}
+
+$\bullet$ Relationship between signal-to-noise ratio and R², \pageref{sec:snr-rsq}
+
+
+\vspace{1em}
+\textbf{S}
+
+$\bullet$ Savage-Dickey Density Ratio for computing Bayes Factors, \pageref{sec:bf-sddr}
+
+$\bullet$ Scaling of the variance upon multiplication with a constant, \pageref{sec:var-scal}
+
+$\bullet$ Second central moment is variance, \pageref{sec:momcent-2nd}
+
+
+\vspace{1em}
+\textbf{T}
+
+$\bullet$ Transformation matrices for ordinary least squares, \pageref{sec:mlr-mat}
+
+$\bullet$ Transitivity of Bayes Factors, \pageref{sec:bf-trans}
+
+$\bullet$ Transposition of a matrix-normal random variable, \pageref{sec:matn-trans}
+
+
+\vspace{1em}
+\textbf{V}
+
+$\bullet$ Variance of constant is zero, \pageref{sec:var-const}
+
+$\bullet$ Variance of the Wald distribution, \pageref{sec:wald-var}
+
+$\bullet$ Variance of the gamma distribution, \pageref{sec:gam-var}
+
+$\bullet$ Variance of the linear combination of two random variables, \pageref{sec:var-lincomb}
+
+$\bullet$ Variance of the normal distribution, \pageref{sec:norm-var}
+
+$\bullet$ Variance of the sum of two random variables, \pageref{sec:var-sum}
+
+$\bullet$ Variance zero implies constant, \pageref{sec:var-zero}
+
+
+\vspace{1em}
+\textbf{W}
+
+$\bullet$ Weighted least squares for multiple linear regression, \pageref{sec:mlr-wls}
+
+$\bullet$ Weighted least squares for multiple linear regression, \pageref{sec:mlr-wls2}
+
+$\bullet$ Weighted least squares for the general linear model, \pageref{sec:glm-wls}
+
+
+
+
+\pagebreak
+\section{Definition by Topic}
+
+\textbf{A}
+
+$\bullet$ Akaike information criterion, \pageref{sec:aic}
+
+
+\vspace{1em}
+\textbf{B}
+
+$\bullet$ Bayes factor, \pageref{sec:bf}
+
+$\bullet$ Bayesian information criterion, \pageref{sec:bic}
+
+$\bullet$ Bayesian model averaging, \pageref{sec:bma}
+
+$\bullet$ Bernoulli distribution, \pageref{sec:bern}
+
+$\bullet$ Beta distribution, \pageref{sec:beta}
+
+$\bullet$ Beta-distributed data, \pageref{sec:beta-data}
+
+$\bullet$ Binomial distribution, \pageref{sec:bin}
+
+$\bullet$ Binomial observations, \pageref{sec:bin-data}
+
+
+\vspace{1em}
+\textbf{C}
+
+$\bullet$ Categorical distribution, \pageref{sec:cat}
+
+$\bullet$ Central moment, \pageref{sec:mom-cent}
+
+$\bullet$ Chi-square distribution, \pageref{sec:chi2}
+
+$\bullet$ Coefficient of determination, \pageref{sec:rsq}
+
+$\bullet$ Conditional differential entropy, \pageref{sec:dent-cond}
+
+$\bullet$ Conditional entropy, \pageref{sec:ent-cond}
+
+$\bullet$ Conditional independence, \pageref{sec:ind-cond}
+
+$\bullet$ Conditional probability distribution, \pageref{sec:dist-cond}
+
+$\bullet$ Conjugate and non-conjugate prior distribution, \pageref{sec:prior-conj}
+
+$\bullet$ Constant, \pageref{sec:const}
+
+$\bullet$ Continuous uniform distribution, \pageref{sec:cuni}
+
+$\bullet$ Correlation, \pageref{sec:corr}
+
+$\bullet$ Correlation matrix, \pageref{sec:corrmat}
+
+$\bullet$ Covariance, \pageref{sec:cov}
+
+$\bullet$ Covariance matrix, \pageref{sec:covmat}
+
+$\bullet$ Cross-entropy, \pageref{sec:ent-cross}
+
+$\bullet$ Cross-validated log model evidence, \pageref{sec:cvlme}
+
+$\bullet$ Cumulant-generating function, \pageref{sec:cgf}
+
+$\bullet$ Cumulative distribution function, \pageref{sec:cdf}
+
+
+\vspace{1em}
+\textbf{D}
+
+$\bullet$ Deviance information criterion, \pageref{sec:dic}
+
+$\bullet$ Differential cross-entropy, \pageref{sec:dent-cross}
+
+$\bullet$ Differential entropy, \pageref{sec:dent}
+
+$\bullet$ Dirichlet distribution, \pageref{sec:dir}
+
+$\bullet$ Dirichlet-distributed data, \pageref{sec:dir-data}
+
+$\bullet$ Discrete and continuous random variable, \pageref{sec:rvar-disc}
+
+$\bullet$ Discrete uniform distribution, \pageref{sec:duni}
+
+
+\vspace{1em}
+\textbf{E}
+
+$\bullet$ Empirical Bayes prior distribution, \pageref{sec:prior-eb}
+
+$\bullet$ Empirical Bayesian log model evidence, \pageref{sec:eblme}
+
+$\bullet$ Empirical and theoretical prior distribution, \pageref{sec:prior-emp}
+
+$\bullet$ Encompassing model, \pageref{sec:encm}
+
+$\bullet$ Estimation matrix, \pageref{sec:emat}
+
+$\bullet$ Exceedance probability, \pageref{sec:prob-exc}
+
+$\bullet$ Expected value, \pageref{sec:mean}
+
+$\bullet$ Explained sum of squares, \pageref{sec:ess}
+
+$\bullet$ Exponential distribution, \pageref{sec:exp}
+
+
+\vspace{1em}
+\textbf{F}
+
+$\bullet$ Flat, hard and soft prior distribution, \pageref{sec:prior-flat}
+
+$\bullet$ Full probability model, \pageref{sec:fpm}
+
+$\bullet$ Full width at half maximum, \pageref{sec:fwhm}
+
+
+\vspace{1em}
+\textbf{G}
+
+$\bullet$ Gamma distribution, \pageref{sec:gam}
+
+$\bullet$ General linear model, \pageref{sec:glm}
+
+$\bullet$ Generative model, \pageref{sec:gm}
+
+
+\vspace{1em}
+\textbf{I}
+
+$\bullet$ Informative and non-informative prior distribution, \pageref{sec:prior-inf}
+
+
+\vspace{1em}
+\textbf{J}
+
+$\bullet$ Joint differential entropy, \pageref{sec:dent-joint}
+
+$\bullet$ Joint entropy, \pageref{sec:ent-joint}
+
+$\bullet$ Joint likelihood, \pageref{sec:jl}
+
+$\bullet$ Joint probability, \pageref{sec:prob-joint}
+
+$\bullet$ Joint probability distribution, \pageref{sec:dist-joint}
+
+
+\vspace{1em}
+\textbf{K}
+
+$\bullet$ Kullback-Leibler divergence, \pageref{sec:kl}
+
+
+\vspace{1em}
+\textbf{L}
+
+$\bullet$ Law of conditional probability, \pageref{sec:prob-cond}
+
+$\bullet$ Law of marginal probability, \pageref{sec:prob-marg}
+
+$\bullet$ Likelihood function, \pageref{sec:lf}
+
+$\bullet$ Likelihood function, \pageref{sec:lf}
+
+$\bullet$ Log Bayes factor, \pageref{sec:lbf}
+
+$\bullet$ Log family evidence, \pageref{sec:lfe}
+
+$\bullet$ Log model evidence, \pageref{sec:lme}
+
+$\bullet$ Log-likelihood function, \pageref{sec:llf}
+
+$\bullet$ Logistic regression, \pageref{sec:logreg}
+
+
+\vspace{1em}
+\textbf{M}
+
+$\bullet$ Marginal likelihood, \pageref{sec:ml}
+
+$\bullet$ Marginal probability distribution, \pageref{sec:dist-marg}
+
+$\bullet$ Matrix-normal distribution, \pageref{sec:matn}
+
+$\bullet$ Maximum, \pageref{sec:max}
+
+$\bullet$ Maximum entropy prior distribution, \pageref{sec:prior-maxent}
+
+$\bullet$ Maximum likelihood estimation, \pageref{sec:mle}
+
+$\bullet$ Maximum log-likelihood, \pageref{sec:mll}
+
+$\bullet$ Median, \pageref{sec:med}
+
+$\bullet$ Minimum, \pageref{sec:min}
+
+$\bullet$ Mode, \pageref{sec:mode}
+
+$\bullet$ Moment, \pageref{sec:mom}
+
+$\bullet$ Moment-generating function, \pageref{sec:mgf}
+
+$\bullet$ Multinomial distribution, \pageref{sec:mult}
+
+$\bullet$ Multinomial observations, \pageref{sec:mult-data}
+
+$\bullet$ Multiple linear regression, \pageref{sec:mlr}
+
+$\bullet$ Multivariate normal distribution, \pageref{sec:mvn}
+
+$\bullet$ Mutual information, \pageref{sec:mi}
+
+$\bullet$ Mutual information, \pageref{sec:mi}
+
+
+\vspace{1em}
+\textbf{N}
+
+$\bullet$ Normal distribution, \pageref{sec:norm}
+
+$\bullet$ Normal-gamma distribution, \pageref{sec:ng}
+
+
+\vspace{1em}
+\textbf{P}
+
+$\bullet$ Poisson distribution, \pageref{sec:poiss}
+
+$\bullet$ Poisson distribution with exposure values, \pageref{sec:poissexp}
+
+$\bullet$ Poisson-distributed data, \pageref{sec:poiss-data}
+
+$\bullet$ Posterior distribution, \pageref{sec:post}
+
+$\bullet$ Posterior model probability, \pageref{sec:pmp}
+
+$\bullet$ Precision matrix, \pageref{sec:precmat}
+
+$\bullet$ Prior distribution, \pageref{sec:prior}
+
+$\bullet$ Probability, \pageref{sec:prob}
+
+$\bullet$ Probability density function, \pageref{sec:pdf}
+
+$\bullet$ Probability distribution, \pageref{sec:dist}
+
+$\bullet$ Probability mass function, \pageref{sec:pmf}
+
+$\bullet$ Probability-generating function, \pageref{sec:pgf}
+
+$\bullet$ Projection matrix, \pageref{sec:pmat}
+
+
+\vspace{1em}
+\textbf{Q}
+
+$\bullet$ Quantile function, \pageref{sec:qf}
+
+
+\vspace{1em}
+\textbf{R}
+
+$\bullet$ Random event, \pageref{sec:reve}
+
+$\bullet$ Random experiment, \pageref{sec:rexp}
+
+$\bullet$ Random matrix, \pageref{sec:rmat}
+
+$\bullet$ Random variable, \pageref{sec:rvar}
+
+$\bullet$ Random vector, \pageref{sec:rvec}
+
+$\bullet$ Raw moment, \pageref{sec:mom-raw}
+
+$\bullet$ Reference prior distribution, \pageref{sec:prior-ref}
+
+$\bullet$ Residual sum of squares, \pageref{sec:rss}
+
+$\bullet$ Residual variance, \pageref{sec:resvar}
+
+$\bullet$ Residual-forming matrix, \pageref{sec:rfmat}
+
+
+\vspace{1em}
+\textbf{S}
+
+$\bullet$ Shannon entropy, \pageref{sec:ent}
+
+$\bullet$ Signal-to-noise ratio, \pageref{sec:snr}
+
+$\bullet$ Standard deviation, \pageref{sec:std}
+
+$\bullet$ Standard gamma distribution, \pageref{sec:sgam}
+
+$\bullet$ Standard normal distribution, \pageref{sec:snorm}
+
+$\bullet$ Standardized moment, \pageref{sec:mom-stand}
+
+$\bullet$ Statistical independence, \pageref{sec:ind}
+
+
+\vspace{1em}
+\textbf{T}
+
+$\bullet$ Total sum of squares, \pageref{sec:tss}
+
+
+\vspace{1em}
+\textbf{U}
+
+$\bullet$ Uniform and non-uniform prior distribution, \pageref{sec:prior-uni}
+
+$\bullet$ Uniform-prior log model evidence, \pageref{sec:uplme}
+
+$\bullet$ Univariate and multivariate random variable, \pageref{sec:rvar-uni}
+
+
+\vspace{1em}
+\textbf{V}
+
+$\bullet$ Variance, \pageref{sec:var}
+
+$\bullet$ Variational Bayesian log model evidence, \pageref{sec:vblme}
+
+
+\vspace{1em}
+\textbf{W}
+
+$\bullet$ Wald distribution, \pageref{sec:wald}
+
+$\bullet$ Wishart distribution, \pageref{sec:wish}
+
 
 
 
