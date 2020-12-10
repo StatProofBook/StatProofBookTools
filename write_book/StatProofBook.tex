@@ -10,6 +10,7 @@
 \usepackage{csquotes}
 \usepackage{enumitem}
 \usepackage{setspace}
+\usepackage{longtable}
 
 %%% Settings %%%
 \pagestyle{headings}
@@ -23,6 +24,7 @@
 \setlist[enumerate]{leftmargin=*}
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
+\renewcommand{\arraystretch}{1.5}
 
 %%% Format %%%
 \renewcommand\thechapter{\Roman{chapter}}
@@ -37,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2020-12-10, 19:42}
+\date{2020-12-10, 20:36}
 
 \begin{document}
 
@@ -17802,6 +17804,354 @@ and by plugging \eqref{eq:bma-lme-PMP-LME} into \eqref{eq:bma-lme-BMA-PMP}, one 
 \vspace{1em}
 \textbf{Metadata:} ID: P67 | shortcut: bma-lme | author: JoramSoch | date: 2020-02-27, 21:58.
 \vspace{1em}
+
+
+
+% Appendix %
+\chapter{Appendix} \label{sec:Appendix} \newpage
+
+\pagebreak
+\section{Proof by Number}
+
+\begin{longtable}{|p{1cm}|p{2cm}|p{6.5cm}|p{3cm}|p{2cm}|c|}
+\hline
+\textbf{ID} & \textbf{Shortcut} & \textbf{Theorem} & \textbf{Author} & \textbf{Date} & \textbf{Page} \\ \hline
+P1 & mvn-ltt & Linear transformation theorem for the multivariate normal distribution & JoramSoch & 2019-08-27 & \pageref{sec:mvn-ltt} \\ \hline
+P2 & mlr-ols & Ordinary least squares for multiple linear regression & JoramSoch & 2019-09-27 & \pageref{sec:mlr-ols} \\ \hline
+P3 & lme-anc & Partition of the log model evidence into accuracy and complexity & JoramSoch & 2019-09-27 & \pageref{sec:lme-anc} \\ \hline
+P4 & bayes-th & Bayes' theorem & JoramSoch & 2019-09-27 & \pageref{sec:bayes-th} \\ \hline
+P5 & mse-bnv & Partition of the mean squared error into bias and variance & JoramSoch & 2019-11-27 & \pageref{sec:mse-bnv} \\ \hline
+P6 & ng-kl & Kullback-Leibler divergence for the normal-gamma distribution & JoramSoch & 2019-12-06 & \pageref{sec:ng-kl} \\ \hline
+P7 & glm-mle & Maximum likelihood estimation for the general linear model & JoramSoch & 2019-12-06 & \pageref{sec:glm-mle} \\ \hline
+P8 & rsq-der & Derivation of R² and adjusted R² & JoramSoch & 2019-12-06 & \pageref{sec:rsq-der} \\ \hline
+P9 & blr-prior & Conjugate prior distribution for Bayesian linear regression & JoramSoch & 2020-01-03 & \pageref{sec:blr-prior} \\ \hline
+P10 & blr-post & Posterior distribution for Bayesian linear regression & JoramSoch & 2020-01-03 & \pageref{sec:blr-post} \\ \hline
+P11 & blr-lme & Log model evidence for Bayesian linear regression & JoramSoch & 2020-01-03 & \pageref{sec:blr-lme} \\ \hline
+P12 & bayes-rule & Bayes' rule & JoramSoch & 2020-01-06 & \pageref{sec:bayes-rule} \\ \hline
+P13 & lme-der & Derivation of the log model evidence & JoramSoch & 2020-01-06 & \pageref{sec:lme-der} \\ \hline
+P14 & rsq-mll & Relationship between R² and maximum log-likelihood & JoramSoch & 2020-01-08 & \pageref{sec:rsq-mll} \\ \hline
+P15 & norm-mean & Mean of the normal distribution & JoramSoch & 2020-01-09 & \pageref{sec:norm-mean} \\ \hline
+P16 & norm-med & Median of the normal distribution & JoramSoch & 2020-01-09 & \pageref{sec:norm-med} \\ \hline
+P17 & norm-mode & Mode of the normal distribution & JoramSoch & 2020-01-09 & \pageref{sec:norm-mode} \\ \hline
+P18 & norm-var & Variance of the normal distribution & JoramSoch & 2020-01-09 & \pageref{sec:norm-var} \\ \hline
+P19 & dmi-mce & Relation of mutual information to marginal and conditional entropy & JoramSoch & 2020-01-13 & \pageref{sec:dmi-mce} \\ \hline
+P20 & dmi-mje & Relation of mutual information to marginal and joint entropy & JoramSoch & 2020-01-13 & \pageref{sec:dmi-mje} \\ \hline
+P21 & dmi-jce & Relation of mutual information to joint and conditional entropy & JoramSoch & 2020-01-13 & \pageref{sec:dmi-jce} \\ \hline
+P22 & bern-mean & Mean of the Bernoulli distribution & JoramSoch & 2020-01-16 & \pageref{sec:bern-mean} \\ \hline
+P23 & bin-mean & Mean of the binomial distribution & JoramSoch & 2020-01-16 & \pageref{sec:bin-mean} \\ \hline
+P24 & cat-mean & Mean of the categorical distribution & JoramSoch & 2020-01-16 & \pageref{sec:cat-mean} \\ \hline
+P25 & mult-mean & Mean of the multinomial distribution & JoramSoch & 2020-01-16 & \pageref{sec:mult-mean} \\ \hline
+P26 & matn-mvn & Equivalence of matrix-normal distribution and multivariate normal distribution & JoramSoch & 2020-01-20 & \pageref{sec:matn-mvn} \\ \hline
+P27 & poiss-mle & Maximum likelihood estimation for Poisson-distributed data & JoramSoch & 2020-01-20 & \pageref{sec:poiss-mle} \\ \hline
+P28 & beta-mom & Method of moments for beta-distributed data & JoramSoch & 2020-01-22 & \pageref{sec:beta-mom} \\ \hline
+P29 & bin-prior & Conjugate prior distribution for binomial observations & JoramSoch & 2020-01-23 & \pageref{sec:bin-prior} \\ \hline
+P30 & bin-post & Posterior distribution for binomial observations & JoramSoch & 2020-01-24 & \pageref{sec:bin-post} \\ \hline
+P31 & bin-lme & Log model evidence for binomial observations & JoramSoch & 2020-01-24 & \pageref{sec:bin-lme} \\ \hline
+P32 & bic-der & Derivation of the Bayesian information criterion & JoramSoch & 2020-01-26 & \pageref{sec:bic-der} \\ \hline
+P33 & norm-pdf & Probability density function of the normal distribution & JoramSoch & 2020-01-27 & \pageref{sec:norm-pdf} \\ \hline
+P34 & mvn-pdf & Probability density function of the multivariate normal distribution & JoramSoch & 2020-01-27 & \pageref{sec:mvn-pdf} \\ \hline
+P35 & mvn-marg & Marginal distributions of the multivariate normal distribution & JoramSoch & 2020-01-29 & \pageref{sec:mvn-marg} \\ \hline
+P36 & ng-marg & Marginal distributions of the normal-gamma distribution & JoramSoch & 2020-01-29 & \pageref{sec:ng-marg} \\ \hline
+P37 & cuni-pdf & Probability density function of the continuous uniform distribution & JoramSoch & 2020-01-31 & \pageref{sec:cuni-pdf} \\ \hline
+P38 & cuni-cdf & Cumulative distribution function of the continuous uniform distribution & JoramSoch & 2020-01-02 & \pageref{sec:cuni-cdf} \\ \hline
+P39 & cuni-qf & Quantile function of the continuous uniform distribution & JoramSoch & 2020-01-02 & \pageref{sec:cuni-qf} \\ \hline
+P40 & mlr-ols2 & Ordinary least squares for multiple linear regression & JoramSoch & 2020-02-03 & \pageref{sec:mlr-ols2} \\ \hline
+P41 & poissexp-prior & Conjugate prior distribution for the Poisson distribution with exposure values & JoramSoch & 2020-02-04 & \pageref{sec:poissexp-prior} \\ \hline
+P42 & poissexp-post & Posterior distribution for the Poisson distribution with exposure values & JoramSoch & 2020-02-04 & \pageref{sec:poissexp-post} \\ \hline
+P43 & poissexp-lme & Log model evidence for the Poisson distribution with exposure values & JoramSoch & 2020-02-04 & \pageref{sec:poissexp-lme} \\ \hline
+P44 & ng-pdf & Probability density function of the normal-gamma distribution & JoramSoch & 2020-02-07 & \pageref{sec:ng-pdf} \\ \hline
+P45 & gam-pdf & Probability density function of the gamma distribution & JoramSoch & 2020-02-08 & \pageref{sec:gam-pdf} \\ \hline
+P46 & exp-pdf & Probability density function of the exponential distribution & JoramSoch & 2020-02-08 & \pageref{sec:exp-pdf} \\ \hline
+P47 & exp-mean & Mean of the exponential distribution & JoramSoch & 2020-02-10 & \pageref{sec:exp-mean} \\ \hline
+P48 & exp-cdf & Cumulative distribution function of the exponential distribution & JoramSoch & 2020-02-11 & \pageref{sec:exp-cdf} \\ \hline
+P49 & exp-med & Median of the exponential distribution & JoramSoch & 2020-02-11 & \pageref{sec:exp-med} \\ \hline
+P50 & exp-qf & Quantile function of the exponential distribution & JoramSoch & 2020-02-12 & \pageref{sec:exp-qf} \\ \hline
+P51 & exp-mode & Mode of the exponential distribution & JoramSoch & 2020-02-12 & \pageref{sec:exp-mode} \\ \hline
+P52 & mean-nonneg & Non-negativity of the expected value & JoramSoch & 2020-02-13 & \pageref{sec:mean-nonneg} \\ \hline
+P53 & mean-lin & Linearity of the expected value & JoramSoch & 2020-02-13 & \pageref{sec:mean-lin} \\ \hline
+P54 & mean-mono & Monotonicity of the expected value & JoramSoch & 2020-02-17 & \pageref{sec:mean-mono} \\ \hline
+P55 & mean-mult & (Non-)Multiplicativity of the expected value & JoramSoch & 2020-02-17 & \pageref{sec:mean-mult} \\ \hline
+P56 & ci-wilks & Construction of confidence intervals using Wilks' theorem & JoramSoch & 2020-02-19 & \pageref{sec:ci-wilks} \\ \hline
+P57 & ent-nonneg & Non-negativity of the Shannon entropy & JoramSoch & 2020-02-19 & \pageref{sec:ent-nonneg} \\ \hline
+P58 & cmi-mcde & Relation of continuous mutual information to marginal and conditional differential entropy & JoramSoch & 2020-02-21 & \pageref{sec:cmi-mcde} \\ \hline
+P59 & cmi-mjde & Relation of continuous mutual information to marginal and joint differential entropy & JoramSoch & 2020-02-21 & \pageref{sec:cmi-mjde} \\ \hline
+P60 & cmi-jcde & Relation of continuous mutual information to joint and conditional differential entropy & JoramSoch & 2020-02-21 & \pageref{sec:cmi-jcde} \\ \hline
+P61 & resvar-bias & Maximum likelihood estimator of variance is biased & JoramSoch & 2020-02-24 & \pageref{sec:resvar-bias} \\ \hline
+P62 & resvar-unb & Construction of unbiased estimator for variance & JoramSoch & 2020-02-25 & \pageref{sec:resvar-unb} \\ \hline
+P63 & snr-rsq & Relationship between signal-to-noise ratio and R² & JoramSoch & 2020-02-26 & \pageref{sec:snr-rsq} \\ \hline
+P64 & lbf-lme & Log Bayes factor in terms of log model evidences & JoramSoch & 2020-02-27 & \pageref{sec:lbf-lme} \\ \hline
+P65 & lfe-lme & Log family evidences in terms of log model evidences & JoramSoch & 2020-02-27 & \pageref{sec:lfe-lme} \\ \hline
+P66 & pmp-lme & Posterior model probabilities in terms of log model evidences & JoramSoch & 2020-02-27 & \pageref{sec:pmp-lme} \\ \hline
+P67 & bma-lme & Bayesian model averaging in terms of log model evidences & JoramSoch & 2020-02-27 & \pageref{sec:bma-lme} \\ \hline
+P68 & dent-neg & Differential entropy can be negative & JoramSoch & 2020-03-02 & \pageref{sec:dent-neg} \\ \hline
+P69 & exp-gam & Exponential distribution is a special case of gamma distribution & JoramSoch & 2020-03-02 & \pageref{sec:exp-gam} \\ \hline
+P70 & matn-pdf & Probability density function of the matrix-normal distribution & JoramSoch & 2020-03-02 & \pageref{sec:matn-pdf} \\ \hline
+P71 & norm-mgf & Moment-generating function of the normal distribution & JoramSoch & 2020-03-03 & \pageref{sec:norm-mgf} \\ \hline
+P72 & logreg-lonp & Log-odds and probability in logistic regression & JoramSoch & 2020-03-03 & \pageref{sec:logreg-lonp} \\ \hline
+P73 & pmp-lbf & Posterior model probability in terms of log Bayes factor & JoramSoch & 2020-03-03 & \pageref{sec:pmp-lbf} \\ \hline
+P74 & pmp-bf & Posterior model probabilities in terms of Bayes factors & JoramSoch & 2020-03-03 & \pageref{sec:pmp-bf} \\ \hline
+P75 & mlr-mat & Transformation matrices for ordinary least squares & JoramSoch & 2020-03-09 & \pageref{sec:mlr-mat} \\ \hline
+P76 & mlr-pss & Partition of sums of squares in ordinary least squares & JoramSoch & 2020-03-09 & \pageref{sec:mlr-pss} \\ \hline
+P77 & mlr-wls & Weighted least squares for multiple linear regression & JoramSoch & 2020-03-11 & \pageref{sec:mlr-wls} \\ \hline
+P78 & mlr-mle & Maximum likelihood estimation for multiple linear regression & JoramSoch & 2020-03-11 & \pageref{sec:mlr-mle} \\ \hline
+P79 & mult-prior & Conjugate prior distribution for multinomial observations & JoramSoch & 2020-03-11 & \pageref{sec:mult-prior} \\ \hline
+P80 & mult-post & Posterior distribution for multinomial observations & JoramSoch & 2020-03-11 & \pageref{sec:mult-post} \\ \hline
+P81 & mult-lme & Log model evidence for multinomial observations & JoramSoch & 2020-03-11 & \pageref{sec:mult-lme} \\ \hline
+P82 & cuni-mean & Mean of the continuous uniform distribution & JoramSoch & 2020-03-16 & \pageref{sec:cuni-mean} \\ \hline
+P83 & cuni-med & Median of the continuous uniform distribution & JoramSoch & 2020-03-16 & \pageref{sec:cuni-med} \\ \hline
+P84 & cuni-med & Mode of the continuous uniform distribution & JoramSoch & 2020-03-16 & \pageref{sec:cuni-med} \\ \hline
+P85 & norm-cdf & Cumulative distribution function of the normal distribution & JoramSoch & 2020-03-20 & \pageref{sec:norm-cdf} \\ \hline
+P86 & norm-cdfwerf & Expression of the cumulative distribution function of the normal distribution without the error function & JoramSoch & 2020-03-20 & \pageref{sec:norm-cdfwerf} \\ \hline
+P87 & norm-qf & Quantile function of the normal distribution & JoramSoch & 2020-03-20 & \pageref{sec:norm-qf} \\ \hline
+P88 & mvn-cond & Conditional distributions of the multivariate normal distribution & JoramSoch & 2020-03-20 & \pageref{sec:mvn-cond} \\ \hline
+P89 & jl-lfnprior & Joint likelihood is the product of likelihood function and prior density & JoramSoch & 2020-05-05 & \pageref{sec:jl-lfnprior} \\ \hline
+P90 & post-jl & Posterior density is proportional to joint likelihood & JoramSoch & 2020-05-05 & \pageref{sec:post-jl} \\ \hline
+P91 & ml-jl & Marginal likelihood is a definite integral of joint likelihood & JoramSoch & 2020-05-05 & \pageref{sec:ml-jl} \\ \hline
+P92 & mvn-kl & Kullback-Leibler divergence for the multivariate normal distribution & JoramSoch & 2020-05-05 & \pageref{sec:mvn-kl} \\ \hline
+P93 & gam-kl & Kullback-Leibler divergence for the gamma distribution & JoramSoch & 2020-05-05 & \pageref{sec:gam-kl} \\ \hline
+P94 & beta-pdf & Probability density function of the beta distribution & JoramSoch & 2020-05-05 & \pageref{sec:beta-pdf} \\ \hline
+P95 & dir-pdf & Probability density function of the Dirichlet distribution & JoramSoch & 2020-05-05 & \pageref{sec:dir-pdf} \\ \hline
+P96 & bern-pmf & Probability mass function of the Bernoulli distribution & JoramSoch & 2020-05-11 & \pageref{sec:bern-pmf} \\ \hline
+P97 & bin-pmf & Probability mass function of the binomial distribution & JoramSoch & 2020-05-11 & \pageref{sec:bin-pmf} \\ \hline
+P98 & cat-pmf & Probability mass function of the categorical distribution & JoramSoch & 2020-05-11 & \pageref{sec:cat-pmf} \\ \hline
+P99 & mult-pmf & Probability mass function of the multinomial distribution & JoramSoch & 2020-05-11 & \pageref{sec:mult-pmf} \\ \hline
+P100 & mvn-dent & Differential entropy of the multivariate normal distribution & JoramSoch & 2020-05-14 & \pageref{sec:mvn-dent} \\ \hline
+P101 & norm-dent & Differential entropy of the normal distribution & JoramSoch & 2020-05-14 & \pageref{sec:norm-dent} \\ \hline
+P102 & poiss-pmf & Probability mass function of the Poisson distribution & JoramSoch & 2020-05-14 & \pageref{sec:poiss-pmf} \\ \hline
+P103 & mean-nnrvar & Expected value of a non-negative random variable & JoramSoch & 2020-05-18 & \pageref{sec:mean-nnrvar} \\ \hline
+P104 & var-mean & Partition of variance into expected values & JoramSoch & 2020-05-19 & \pageref{sec:var-mean} \\ \hline
+P105 & logreg-pnlo & Probability and log-odds in logistic regression & JoramSoch & 2020-05-19 & \pageref{sec:logreg-pnlo} \\ \hline
+P106 & glm-ols & Ordinary least squares for the general linear model & JoramSoch & 2020-05-19 & \pageref{sec:glm-ols} \\ \hline
+P107 & glm-wls & Weighted least squares for the general linear model & JoramSoch & 2020-05-19 & \pageref{sec:glm-wls} \\ \hline
+P108 & gam-mean & Mean of the gamma distribution & JoramSoch & 2020-05-19 & \pageref{sec:gam-mean} \\ \hline
+P109 & gam-var & Variance of the gamma distribution & JoramSoch & 2020-05-19 & \pageref{sec:gam-var} \\ \hline
+P110 & gam-logmean & Logarithmic expectation of the gamma distribution & JoramSoch & 2020-05-25 & \pageref{sec:gam-logmean} \\ \hline
+P111 & norm-snorm & Relation between normal distribution and standard normal distribution & JoramSoch & 2020-05-26 & \pageref{sec:norm-snorm} \\ \hline
+P112 & gam-sgam & Relation between gamma distribution and standard gamma distribution & JoramSoch & 2020-05-26 & \pageref{sec:gam-sgam} \\ \hline
+P113 & kl-ent & Relation of Kullback-Leibler divergence to entropy & JoramSoch & 2020-05-27 & \pageref{sec:kl-ent} \\ \hline
+P114 & kl-dent & Relation of continuous Kullback-Leibler divergence to differential entropy & JoramSoch & 2020-05-27 & \pageref{sec:kl-dent} \\ \hline
+P115 & kl-inv & Invariance of the Kullback-Leibler divergence under parameter transformation & JoramSoch & 2020-05-28 & \pageref{sec:kl-inv} \\ \hline
+P116 & kl-add & Additivity of the Kullback-Leibler divergence for independent distributions & JoramSoch & 2020-05-31 & \pageref{sec:kl-add} \\ \hline
+P117 & kl-nonneg & Non-negativity of the Kullback-Leibler divergence & JoramSoch & 2020-05-31 & \pageref{sec:kl-nonneg} \\ \hline
+P118 & cov-mean & Partition of covariance into expected values & JoramSoch & 2020-06-02 & \pageref{sec:cov-mean} \\ \hline
+P119 & cov-corr & Relationship between covariance and correlation & JoramSoch & 2020-06-02 & \pageref{sec:cov-corr} \\ \hline
+P120 & covmat-mean & Partition of a covariance matrix into expected values & JoramSoch & 2020-06-06 & \pageref{sec:covmat-mean} \\ \hline
+P121 & covmat-corrmat & Relationship between covariance matrix and correlation matrix & JoramSoch & 2020-06-06 & \pageref{sec:covmat-corrmat} \\ \hline
+P122 & precmat-corrmat & Relationship between precision matrix and correlation matrix & JoramSoch & 2020-06-06 & \pageref{sec:precmat-corrmat} \\ \hline
+P123 & var-nonneg & Non-negativity of the variance & JoramSoch & 2020-06-06 & \pageref{sec:var-nonneg} \\ \hline
+P124 & var-const & Variance of constant is zero & JoramSoch & 2020-06-27 & \pageref{sec:var-const} \\ \hline
+P125 & var-zero & Variance zero implies constant & JoramSoch & 2020-06-27 & \pageref{sec:var-zero} \\ \hline
+P126 & var-inv & Invariance of the variance under addition of a constant & JoramSoch & 2020-07-07 & \pageref{sec:var-inv} \\ \hline
+P127 & var-scal & Scaling of the variance upon multiplication with a constant & JoramSoch & 2020-07-07 & \pageref{sec:var-scal} \\ \hline
+P128 & var-sum & Variance of the sum of two random variables & JoramSoch & 2020-07-07 & \pageref{sec:var-sum} \\ \hline
+P129 & var-lincomb & Variance of the linear combination of two random variables & JoramSoch & 2020-07-07 & \pageref{sec:var-lincomb} \\ \hline
+P130 & var-add & Additivity of the variance for independent random variables & JoramSoch & 2020-07-07 & \pageref{sec:var-add} \\ \hline
+P131 & mean-qf & Expectation of a quadratic form & JoramSoch & 2020-07-13 & \pageref{sec:mean-qf} \\ \hline
+P132 & lfe-der & Derivation of the log family evidence & JoramSoch & 2020-07-13 & \pageref{sec:lfe-der} \\ \hline
+P133 & blr-pp & Posterior probability of the alternative hypothesis for Bayesian linear regression & JoramSoch & 2020-07-17 & \pageref{sec:blr-pp} \\ \hline
+P134 & blr-pcr & Posterior credibility region against the omnibus null hypothesis for Bayesian linear regression & JoramSoch & 2020-07-17 & \pageref{sec:blr-pcr} \\ \hline
+P135 & mlr-idem & Projection matrix and residual-forming matrix are idempotent & JoramSoch & 2020-07-22 & \pageref{sec:mlr-idem} \\ \hline
+P136 & mlr-wls2 & Weighted least squares for multiple linear regression & JoramSoch & 2020-07-22 & \pageref{sec:mlr-wls2} \\ \hline
+P137 & lbf-der & Derivation of the log Bayes factor & JoramSoch & 2020-07-22 & \pageref{sec:lbf-der} \\ \hline
+P138 & mean-lotus & Law of the unconscious statistician & JoramSoch & 2020-07-22 & \pageref{sec:mean-lotus} \\ \hline
+P139 & pmp-der & Derivation of the posterior model probability & JoramSoch & 2020-07-28 & \pageref{sec:pmp-der} \\ \hline
+P140 & duni-pmf & Probability mass function of the discrete uniform distribution & JoramSoch & 2020-07-28 & \pageref{sec:duni-pmf} \\ \hline
+P141 & duni-cdf & Cumulative distribution function of the discrete uniform distribution & JoramSoch & 2020-07-28 & \pageref{sec:duni-cdf} \\ \hline
+P142 & duni-qf & Quantile function of the discrete uniform distribution & JoramSoch & 2020-07-28 & \pageref{sec:duni-qf} \\ \hline
+P143 & bma-der & Derivation of Bayesian model averaging & JoramSoch & 2020-08-03 & \pageref{sec:bma-der} \\ \hline
+P144 & matn-trans & Transposition of a matrix-normal random variable & JoramSoch & 2020-08-03 & \pageref{sec:matn-trans} \\ \hline
+P145 & matn-ltt & Linear transformation theorem for the matrix-normal distribution & JoramSoch & 2020-08-03 & \pageref{sec:matn-ltt} \\ \hline
+P146 & ng-cond & Conditional distributions of the normal-gamma distribution & JoramSoch & 2020-08-05 & \pageref{sec:ng-cond} \\ \hline
+P147 & kl-nonsymm & Non-symmetry of the Kullback-Leibler divergence & JoramSoch & 2020-08-11 & \pageref{sec:kl-nonsymm} \\ \hline
+P148 & kl-conv & Convexity of the Kullback-Leibler divergence & JoramSoch & 2020-08-11 & \pageref{sec:kl-conv} \\ \hline
+P149 & ent-conc & Concavity of the Shannon entropy & JoramSoch & 2020-08-11 & \pageref{sec:ent-conc} \\ \hline
+P150 & entcross-conv & Convexity of the cross-entropy & JoramSoch & 2020-08-11 & \pageref{sec:entcross-conv} \\ \hline
+P151 & poiss-mean & Mean of the Poisson distribution & JoramSoch & 2020-08-19 & \pageref{sec:poiss-mean} \\ \hline
+P152 & norm-fwhm & Full width at half maximum for the normal distribution & JoramSoch & 2020-08-19 & \pageref{sec:norm-fwhm} \\ \hline
+P153 & mom-mgf & Moment in terms of moment-generating function & JoramSoch & 2020-08-19 & \pageref{sec:mom-mgf} \\ \hline
+P154 & mgf-ltt & Linear transformation theorem for the moment-generating function & JoramSoch & 2020-08-19 & \pageref{sec:mgf-ltt} \\ \hline
+P155 & mgf-lincomb & Moment-generating function of linear combination of independent random variables & JoramSoch & 2020-08-19 & \pageref{sec:mgf-lincomb} \\ \hline
+P156 & bf-sddr & Savage-Dickey Density Ratio for computing Bayes Factors & tomfaulkenberry & 2020-08-26 & \pageref{sec:bf-sddr} \\ \hline
+P157 & bf-ep & Encompassing Prior Method for computing Bayes Factors & tomfaulkenberry & 2020-09-02 & \pageref{sec:bf-ep} \\ \hline
+P158 & cov-ind & Covariance of independent random variables & JoramSoch & 2020-09-03 & \pageref{sec:cov-ind} \\ \hline
+P159 & mblr-prior & Conjugate prior distribution for multivariate Bayesian linear regression & JoramSoch & 2020-09-03 & \pageref{sec:mblr-prior} \\ \hline
+P160 & mblr-post & Posterior distribution for multivariate Bayesian linear regression & JoramSoch & 2020-09-03 & \pageref{sec:mblr-post} \\ \hline
+P161 & mblr-lme & Log model evidence for multivariate Bayesian linear regression & JoramSoch & 2020-09-03 & \pageref{sec:mblr-lme} \\ \hline
+P162 & wald-pdf & Probability density function of the Wald distribution & tomfaulkenberry & 2020-09-04 & \pageref{sec:wald-pdf} \\ \hline
+P163 & bf-trans & Transitivity of Bayes Factors & tomfaulkenberry & 2020-09-07 & \pageref{sec:bf-trans} \\ \hline
+P164 & gibbs-ineq & Gibbs' inequality & JoramSoch & 2020-09-09 & \pageref{sec:gibbs-ineq} \\ \hline
+P165 & logsum-ineq & Log sum inequality & JoramSoch & 2020-09-09 & \pageref{sec:logsum-ineq} \\ \hline
+P166 & kl-nonneg2 & Non-negativity of the Kullback-Leibler divergence & JoramSoch & 2020-09-09 & \pageref{sec:kl-nonneg2} \\ \hline
+P167 & momcent-1st & First central moment is zero & JoramSoch & 2020-09-09 & \pageref{sec:momcent-1st} \\ \hline
+P168 & wald-mgf & Moment-generating function of the Wald distribution & tomfaulkenberry & 2020-09-13 & \pageref{sec:wald-mgf} \\ \hline
+P169 & wald-mean & Mean of the Wald distribution & tomfaulkenberry & 2020-09-13 & \pageref{sec:wald-mean} \\ \hline
+P170 & wald-var & Variance of the Wald distribution & tomfaulkenberry & 2020-09-13 & \pageref{sec:wald-var} \\ \hline
+P171 & momraw-1st & First raw moment is mean & JoramSoch & 2020-10-08 & \pageref{sec:momraw-1st} \\ \hline
+P172 & momraw-2nd & Relationship between second raw moment, variance and mean & JoramSoch & 2020-10-08 & \pageref{sec:momraw-2nd} \\ \hline
+P173 & momcent-2nd & Second central moment is variance & JoramSoch & 2020-10-08 & \pageref{sec:momcent-2nd} \\ \hline
+P174 & chi2-gam & Chi-square distribution is a special case of gamma distribution & kjpetrykowski & 2020-10-12 & \pageref{sec:chi2-gam} \\ \hline
+P175 & chi2-mom & Moments of the chi-square distribution & kjpetrykowski & 2020-10-13 & \pageref{sec:chi2-mom} \\ \hline
+P176 & norm-snorm2 & Relation between normal distribution and standard normal distribution & JoramSoch & 2020-10-15 & \pageref{sec:norm-snorm2} \\ \hline
+P177 & gam-sgam2 & Relation between gamma distribution and standard gamma distribution & JoramSoch & 2020-10-15 & \pageref{sec:gam-sgam2} \\ \hline
+P178 & gam-cdf & Cumulative distribution function of the gamma distribution & JoramSoch & 2020-10-15 & \pageref{sec:gam-cdf} \\ \hline
+P179 & gam-xlogx & Expected value of x times ln(x) for a gamma distribution & JoramSoch & 2020-10-15 & \pageref{sec:gam-xlogx} \\ \hline
+P180 & norm-snorm3 & Relation between normal distribution and standard normal distribution & JoramSoch & 2020-10-22 & \pageref{sec:norm-snorm3} \\ \hline
+P181 & dir-ep & Exceedance probabilities for the Dirichlet distribution & JoramSoch & 2020-10-22 & \pageref{sec:dir-ep} \\ \hline
+P182 & dir-mle & Maximum likelihood estimation for Dirichlet-distributed data & JoramSoch & 2020-10-22 & \pageref{sec:dir-mle} \\ \hline
+P183 & cdf-sifct & Cumulative distribution function of a strictly increasing function of a random variable & JoramSoch & 2020-10-29 & \pageref{sec:cdf-sifct} \\ \hline
+P184 & pmf-sifct & Probability mass function of a strictly increasing function of a discrete random variable & JoramSoch & 2020-10-29 & \pageref{sec:pmf-sifct} \\ \hline
+P185 & pdf-sifct & Probability density function of a strictly increasing function of a continuous random variable & JoramSoch & 2020-10-29 & \pageref{sec:pdf-sifct} \\ \hline
+P186 & cdf-sdfct & Cumulative distribution function of a strictly decreasing function of a random variable & JoramSoch & 2020-11-06 & \pageref{sec:cdf-sdfct} \\ \hline
+P187 & pmf-sdfct & Probability mass function of a strictly decreasing function of a discrete random variable & JoramSoch & 2020-11-06 & \pageref{sec:pmf-sdfct} \\ \hline
+P188 & pdf-sdfct & Probability density function of a strictly decreasing function of a continuous random variable & JoramSoch & 2020-11-06 & \pageref{sec:pdf-sdfct} \\ \hline
+P189 & cdf-pmf & Cumulative distribution function in terms of probability mass function of a discrete random variable & JoramSoch & 2020-11-12 & \pageref{sec:cdf-pmf} \\ \hline
+P190 & cdf-pdf & Cumulative distribution function in terms of probability density function of a continuous random variable & JoramSoch & 2020-11-12 & \pageref{sec:cdf-pdf} \\ \hline
+P191 & pdf-cdf & Probability density function is first derivative of cumulative distribution function & JoramSoch & 2020-11-12 & \pageref{sec:pdf-cdf} \\ \hline
+P192 & qf-cdf & Quantile function is inverse of strictly monotonically increasing cumulative distribution function & JoramSoch & 2020-11-12 & \pageref{sec:qf-cdf} \\ \hline
+P193 & norm-kl & Kullback-Leibler divergence for the normal distribution & JoramSoch & 2020-11-19 & \pageref{sec:norm-kl} \\ \hline
+P194 & gam-qf & Quantile function of the gamma distribution & JoramSoch & 2020-11-19 & \pageref{sec:gam-qf} \\ \hline
+P195 & beta-cdf & Cumulative distribution function of the beta distribution & JoramSoch & 2020-11-19 & \pageref{sec:beta-cdf} \\ \hline
+P196 & norm-gi & Gaussian integral & JoramSoch & 2020-11-25 & \pageref{sec:norm-gi} \\ \hline
+P197 & chi2-pdf & Probability density function of the chi-square distribution & JoramSoch & 2020-11-25 & \pageref{sec:chi2-pdf} \\ \hline
+P198 & beta-mgf & Moment-generating function of the beta distribution & JoramSoch & 2020-11-25 & \pageref{sec:beta-mgf} \\ \hline
+P199 & dent-inv & Invariance of the differential entropy under addition of a constant & JoramSoch & 2020-12-02 & \pageref{sec:dent-inv} \\ \hline
+P200 & dent-add & Addition of the differential entropy upon multiplication with a constant & JoramSoch & 2020-12-02 & \pageref{sec:dent-add} \\ \hline
+\end{longtable}
+
+
+
+\pagebreak
+\section{Definition by Number}
+
+\begin{longtable}{|p{1cm}|p{2cm}|p{6.5cm}|p{3cm}|p{2cm}|c|}
+\hline
+\textbf{ID} & \textbf{Shortcut} & \textbf{Definition} & \textbf{Author} & \textbf{Date} & \textbf{Page} \\ \hline
+D1 & mvn & Multivariate normal distribution & JoramSoch & 2020-01-22 & \pageref{sec:mvn} \\ \hline
+D2 & mgf & Moment-generating function & JoramSoch & 2020-01-22 & \pageref{sec:mgf} \\ \hline
+D3 & cuni & Continuous uniform distribution & JoramSoch & 2020-01-27 & \pageref{sec:cuni} \\ \hline
+D4 & norm & Normal distribution & JoramSoch & 2020-01-27 & \pageref{sec:norm} \\ \hline
+D5 & ng & Normal-gamma distribution & JoramSoch & 2020-01-27 & \pageref{sec:ng} \\ \hline
+D6 & matn & Matrix-normal distribution & JoramSoch & 2020-01-27 & \pageref{sec:matn} \\ \hline
+D7 & gam & Gamma distribution & JoramSoch & 2020-02-08 & \pageref{sec:gam} \\ \hline
+D8 & exp & Exponential distribution & JoramSoch & 2020-02-08 & \pageref{sec:exp} \\ \hline
+D9 & pmf & Probability mass function & JoramSoch & 2020-02-13 & \pageref{sec:pmf} \\ \hline
+D10 & pdf & Probability density function & JoramSoch & 2020-02-13 & \pageref{sec:pdf} \\ \hline
+D11 & mean & Expected value & JoramSoch & 2020-02-13 & \pageref{sec:mean} \\ \hline
+D12 & var & Variance & JoramSoch & 2020-02-13 & \pageref{sec:var} \\ \hline
+D13 & cdf & Cumulative distribution function & JoramSoch & 2020-02-17 & \pageref{sec:cdf} \\ \hline
+D14 & qf & Quantile function & JoramSoch & 2020-02-17 & \pageref{sec:qf} \\ \hline
+D15 & ent & Shannon entropy & JoramSoch & 2020-02-19 & \pageref{sec:ent} \\ \hline
+D16 & dent & Differential entropy & JoramSoch & 2020-02-19 & \pageref{sec:dent} \\ \hline
+D17 & ent-cond & Conditional entropy & JoramSoch & 2020-02-19 & \pageref{sec:ent-cond} \\ \hline
+D18 & ent-joint & Joint entropy & JoramSoch & 2020-02-19 & \pageref{sec:ent-joint} \\ \hline
+D19 & mi & Mutual information & JoramSoch & 2020-02-19 & \pageref{sec:mi} \\ \hline
+D19 & mi & Mutual information & JoramSoch & 2020-02-19 & \pageref{sec:mi} \\ \hline
+D20 & resvar & Residual variance & JoramSoch & 2020-02-25 & \pageref{sec:resvar} \\ \hline
+D21 & rsq & Coefficient of determination & JoramSoch & 2020-02-25 & \pageref{sec:rsq} \\ \hline
+D22 & snr & Signal-to-noise ratio & JoramSoch & 2020-02-25 & \pageref{sec:snr} \\ \hline
+D23 & aic & Akaike information criterion & JoramSoch & 2020-02-25 & \pageref{sec:aic} \\ \hline
+D24 & bic & Bayesian information criterion & JoramSoch & 2020-02-25 & \pageref{sec:bic} \\ \hline
+D25 & dic & Deviance information criterion & JoramSoch & 2020-02-25 & \pageref{sec:dic} \\ \hline
+D26 & lme & Log model evidence & JoramSoch & 2020-02-25 & \pageref{sec:lme} \\ \hline
+D27 & gm & Generative model & JoramSoch & 2020-03-03 & \pageref{sec:gm} \\ \hline
+D28 & lf & Likelihood function & JoramSoch & 2020-03-03 & \pageref{sec:lf} \\ \hline
+D28 & lf & Likelihood function & JoramSoch & 2020-03-03 & \pageref{sec:lf} \\ \hline
+D29 & prior & Prior distribution & JoramSoch & 2020-03-03 & \pageref{sec:prior} \\ \hline
+D30 & fpm & Full probability model & JoramSoch & 2020-03-03 & \pageref{sec:fpm} \\ \hline
+D31 & jl & Joint likelihood & JoramSoch & 2020-03-03 & \pageref{sec:jl} \\ \hline
+D32 & post & Posterior distribution & JoramSoch & 2020-03-03 & \pageref{sec:post} \\ \hline
+D33 & ml & Marginal likelihood & JoramSoch & 2020-03-03 & \pageref{sec:ml} \\ \hline
+D34 & dent-cond & Conditional differential entropy & JoramSoch & 2020-03-21 & \pageref{sec:dent-cond} \\ \hline
+D35 & dent-joint & Joint differential entropy & JoramSoch & 2020-03-21 & \pageref{sec:dent-joint} \\ \hline
+D36 & mlr & Multiple linear regression & JoramSoch & 2020-03-21 & \pageref{sec:mlr} \\ \hline
+D37 & tss & Total sum of squares & JoramSoch & 2020-03-21 & \pageref{sec:tss} \\ \hline
+D38 & ess & Explained sum of squares & JoramSoch & 2020-03-21 & \pageref{sec:ess} \\ \hline
+D39 & rss & Residual sum of squares & JoramSoch & 2020-03-21 & \pageref{sec:rss} \\ \hline
+D40 & glm & General linear model & JoramSoch & 2020-03-21 & \pageref{sec:glm} \\ \hline
+D41 & poiss-data & Poisson-distributed data & JoramSoch & 2020-03-22 & \pageref{sec:poiss-data} \\ \hline
+D42 & poissexp & Poisson distribution with exposure values & JoramSoch & 2020-03-22 & \pageref{sec:poissexp} \\ \hline
+D43 & wish & Wishart distribution & JoramSoch & 2020-03-22 & \pageref{sec:wish} \\ \hline
+D44 & bern & Bernoulli distribution & JoramSoch & 2020-03-22 & \pageref{sec:bern} \\ \hline
+D45 & bin & Binomial distribution & JoramSoch & 2020-03-22 & \pageref{sec:bin} \\ \hline
+D46 & cat & Categorical distribution & JoramSoch & 2020-03-22 & \pageref{sec:cat} \\ \hline
+D47 & mult & Multinomial distribution & JoramSoch & 2020-03-22 & \pageref{sec:mult} \\ \hline
+D48 & prob & Probability & JoramSoch & 2020-05-10 & \pageref{sec:prob} \\ \hline
+D49 & prob-joint & Joint probability & JoramSoch & 2020-05-10 & \pageref{sec:prob-joint} \\ \hline
+D50 & prob-marg & Law of marginal probability & JoramSoch & 2020-05-10 & \pageref{sec:prob-marg} \\ \hline
+D51 & prob-cond & Law of conditional probability & JoramSoch & 2020-05-10 & \pageref{sec:prob-cond} \\ \hline
+D52 & kl & Kullback-Leibler divergence & JoramSoch & 2020-05-10 & \pageref{sec:kl} \\ \hline
+D53 & beta & Beta distribution & JoramSoch & 2020-05-10 & \pageref{sec:beta} \\ \hline
+D54 & dir & Dirichlet distribution & JoramSoch & 2020-05-10 & \pageref{sec:dir} \\ \hline
+D55 & dist & Probability distribution & JoramSoch & 2020-05-17 & \pageref{sec:dist} \\ \hline
+D56 & dist-joint & Joint probability distribution & JoramSoch & 2020-05-17 & \pageref{sec:dist-joint} \\ \hline
+D57 & dist-marg & Marginal probability distribution & JoramSoch & 2020-05-17 & \pageref{sec:dist-marg} \\ \hline
+D58 & dist-cond & Conditional probability distribution & JoramSoch & 2020-05-17 & \pageref{sec:dist-cond} \\ \hline
+D59 & llf & Log-likelihood function & JoramSoch & 2020-05-17 & \pageref{sec:llf} \\ \hline
+D60 & mle & Maximum likelihood estimation & JoramSoch & 2020-05-15 & \pageref{sec:mle} \\ \hline
+D61 & mll & Maximum log-likelihood & JoramSoch & 2020-05-15 & \pageref{sec:mll} \\ \hline
+D62 & poiss & Poisson distribution & JoramSoch & 2020-05-25 & \pageref{sec:poiss} \\ \hline
+D63 & snorm & Standard normal distribution & JoramSoch & 2020-05-26 & \pageref{sec:snorm} \\ \hline
+D64 & sgam & Standard gamma distribution & JoramSoch & 2020-05-26 & \pageref{sec:sgam} \\ \hline
+D65 & rvar & Random variable & JoramSoch & 2020-05-27 & \pageref{sec:rvar} \\ \hline
+D66 & rvec & Random vector & JoramSoch & 2020-05-27 & \pageref{sec:rvec} \\ \hline
+D67 & rmat & Random matrix & JoramSoch & 2020-05-27 & \pageref{sec:rmat} \\ \hline
+D68 & cgf & Cumulant-generating function & JoramSoch & 2020-05-31 & \pageref{sec:cgf} \\ \hline
+D69 & pgf & Probability-generating function & JoramSoch & 2020-05-31 & \pageref{sec:pgf} \\ \hline
+D70 & cov & Covariance & JoramSoch & 2020-06-02 & \pageref{sec:cov} \\ \hline
+D71 & corr & Correlation & JoramSoch & 2020-06-02 & \pageref{sec:corr} \\ \hline
+D72 & covmat & Covariance matrix & JoramSoch & 2020-06-06 & \pageref{sec:covmat} \\ \hline
+D73 & corrmat & Correlation matrix & JoramSoch & 2020-06-06 & \pageref{sec:corrmat} \\ \hline
+D74 & precmat & Precision matrix & JoramSoch & 2020-06-06 & \pageref{sec:precmat} \\ \hline
+D75 & ind & Statistical independence & JoramSoch & 2020-06-06 & \pageref{sec:ind} \\ \hline
+D76 & logreg & Logistic regression & JoramSoch & 2020-06-28 & \pageref{sec:logreg} \\ \hline
+D77 & beta-data & Beta-distributed data & JoramSoch & 2020-06-28 & \pageref{sec:beta-data} \\ \hline
+D78 & bin-data & Binomial observations & JoramSoch & 2020-07-07 & \pageref{sec:bin-data} \\ \hline
+D79 & mult-data & Multinomial observations & JoramSoch & 2020-07-07 & \pageref{sec:mult-data} \\ \hline
+D80 & lfe & Log family evidence & JoramSoch & 2020-07-13 & \pageref{sec:lfe} \\ \hline
+D81 & emat & Estimation matrix & JoramSoch & 2020-07-22 & \pageref{sec:emat} \\ \hline
+D82 & pmat & Projection matrix & JoramSoch & 2020-07-22 & \pageref{sec:pmat} \\ \hline
+D83 & rfmat & Residual-forming matrix & JoramSoch & 2020-07-22 & \pageref{sec:rfmat} \\ \hline
+D84 & lbf & Log Bayes factor & JoramSoch & 2020-07-22 & \pageref{sec:lbf} \\ \hline
+D85 & ent-cross & Cross-entropy & JoramSoch & 2020-07-28 & \pageref{sec:ent-cross} \\ \hline
+D86 & dent-cross & Differential cross-entropy & JoramSoch & 2020-07-28 & \pageref{sec:dent-cross} \\ \hline
+D87 & pmp & Posterior model probability & JoramSoch & 2020-07-28 & \pageref{sec:pmp} \\ \hline
+D88 & duni & Discrete uniform distribution & JoramSoch & 2020-07-28 & \pageref{sec:duni} \\ \hline
+D89 & bma & Bayesian model averaging & JoramSoch & 2020-08-03 & \pageref{sec:bma} \\ \hline
+D90 & mom & Moment & JoramSoch & 2020-08-19 & \pageref{sec:mom} \\ \hline
+D91 & fwhm & Full width at half maximum & JoramSoch & 2020-08-19 & \pageref{sec:fwhm} \\ \hline
+D92 & bf & Bayes factor & tomfaulkenberry & 2020-08-26 & \pageref{sec:bf} \\ \hline
+D93 & encm & Encompassing model & tomfaulkenberry & 2020-09-02 & \pageref{sec:encm} \\ \hline
+D94 & std & Standard deviation & JoramSoch & 2020-09-03 & \pageref{sec:std} \\ \hline
+D95 & wald & Wald distribution & tomfaulkenberry & 2020-09-04 & \pageref{sec:wald} \\ \hline
+D96 & const & Constant & JoramSoch & 2020-09-09 & \pageref{sec:const} \\ \hline
+D97 & mom-raw & Raw moment & JoramSoch & 2020-10-08 & \pageref{sec:mom-raw} \\ \hline
+D98 & mom-cent & Central moment & JoramSoch & 2020-10-08 & \pageref{sec:mom-cent} \\ \hline
+D99 & mom-stand & Standardized moment & JoramSoch & 2020-10-08 & \pageref{sec:mom-stand} \\ \hline
+D100 & chi2 & Chi-square distribution & kjpetrykowski & 2020-10-13 & \pageref{sec:chi2} \\ \hline
+D101 & med & Median & JoramSoch & 2020-10-15 & \pageref{sec:med} \\ \hline
+D102 & mode & Mode & JoramSoch & 2020-10-15 & \pageref{sec:mode} \\ \hline
+D103 & prob-exc & Exceedance probability & JoramSoch & 2020-10-22 & \pageref{sec:prob-exc} \\ \hline
+D104 & dir-data & Dirichlet-distributed data & JoramSoch & 2020-10-22 & \pageref{sec:dir-data} \\ \hline
+D105 & rvar-disc & Discrete and continuous random variable & JoramSoch & 2020-10-29 & \pageref{sec:rvar-disc} \\ \hline
+D106 & rvar-uni & Univariate and multivariate random variable & JoramSoch & 2020-11-06 & \pageref{sec:rvar-uni} \\ \hline
+D107 & min & Minimum & JoramSoch & 2020-11-12 & \pageref{sec:min} \\ \hline
+D108 & max & Maximum & JoramSoch & 2020-11-12 & \pageref{sec:max} \\ \hline
+D109 & rexp & Random experiment & JoramSoch & 2020-11-19 & \pageref{sec:rexp} \\ \hline
+D110 & reve & Random event & JoramSoch & 2020-11-19 & \pageref{sec:reve} \\ \hline
+D111 & cvlme & Cross-validated log model evidence & JoramSoch & 2020-11-19 & \pageref{sec:cvlme} \\ \hline
+D112 & ind-cond & Conditional independence & JoramSoch & 2020-11-19 & \pageref{sec:ind-cond} \\ \hline
+D113 & uplme & Uniform-prior log model evidence & JoramSoch & 2020-11-25 & \pageref{sec:uplme} \\ \hline
+D114 & eblme & Empirical Bayesian log model evidence & JoramSoch & 2020-11-25 & \pageref{sec:eblme} \\ \hline
+D115 & vblme & Variational Bayesian log model evidence & JoramSoch & 2020-11-25 & \pageref{sec:vblme} \\ \hline
+D116 & prior-flat & Flat, hard and soft prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-flat} \\ \hline
+D117 & prior-uni & Uniform and non-uniform prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-uni} \\ \hline
+D118 & prior-inf & Informative and non-informative prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-inf} \\ \hline
+D119 & prior-emp & Empirical and theoretical prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-emp} \\ \hline
+D120 & prior-conj & Conjugate and non-conjugate prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-conj} \\ \hline
+D121 & prior-maxent & Maximum entropy prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-maxent} \\ \hline
+D122 & prior-eb & Empirical Bayes prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-eb} \\ \hline
+D123 & prior-ref & Reference prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-ref} \\ \hline
+\end{longtable}
 
 
 

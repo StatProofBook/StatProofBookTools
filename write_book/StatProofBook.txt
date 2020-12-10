@@ -10,6 +10,7 @@
 \usepackage{csquotes}
 \usepackage{enumitem}
 \usepackage{setspace}
+\usepackage{longtable}
 
 %%% Settings %%%
 \pagestyle{headings}
@@ -23,6 +24,7 @@
 \setlist[enumerate]{leftmargin=*}
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
+\renewcommand{\arraystretch}{1.5}
 
 %%% Format %%%
 \renewcommand\thechapter{\Roman{chapter}}

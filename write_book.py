@@ -61,6 +61,15 @@ curr_sect = '';
 curr_ssec = '';
 curr_ssse = '';
 
+# Set proof and definition info
+#-----------------------------------------------------------------------------#
+pr_nos   = []
+pr_tits  = []
+pr_info  = []
+def_nos  = []
+def_tits = []
+def_info = []
+
 # Parse "Table of Contents"
 # Write "The Book of Statistical Proofs"
 #-----------------------------------------------------------------------------#
@@ -123,6 +132,16 @@ for entry in toc_txt:
         chapter, section, topic, item            = spbt.get_toc_info(file_txt)
         sources  = spbt.get_sources(file_txt)
         body_txt = spbt.extract_body(file_txt)
+        
+        # Store file information
+        if is_proof:
+            pr_nos.append(int(file_id[1:]))
+            pr_tits.append(title)
+            pr_info.append([file_id, shortcut, title, username, date])
+        else:
+            def_nos.append(int(file_id[1:]))
+            def_tits.append(title)
+            def_info.append([file_id, shortcut, title, username, date])
         
         # Write title
         if is_proof:
@@ -204,8 +223,43 @@ for entry in toc_txt:
         book.write('\\vspace{1em}\n')
         book.write('\n\n\n')
         
+# Open "Appendix"
+#-----------------------------------------------------------------------------#
+book.write('% Appendix %\n')
+book.write('\\chapter{Appendix} \\label{sec:Appendix} \\newpage\n\n')
+
+# Write "Proof by Number"
+#-----------------------------------------------------------------------------#
+book.write('\\pagebreak\n')
+book.write('\\section{Proof by Number}\n\n')
+book.write('\\begin{longtable}{|p{1cm}|p{2cm}|p{6.5cm}|p{3cm}|p{2cm}|c|}\n')
+book.write('\\hline\n')
+book.write('\\textbf{ID} & \\textbf{Shortcut} & \\textbf{Theorem} & \\textbf{Author} & \\textbf{Date} & \\textbf{Page} \\\\ \\hline\n')
+sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(pr_nos)])]
+for i in sort_ind:
+    if pr_nos[i] != 0:
+        book.write(pr_info[i][0] + ' & ' + pr_info[i][1] + ' & ' + pr_info[i][2] + ' & ' + pr_info[i][3] + ' & ' + \
+                   pr_info[i][4].strftime('%Y-%m-%d') + ' & \\pageref{sec:' + pr_info[i][1] + '} \\\\ \\hline\n')
+book.write('\\end{longtable}\n')
+book.write('\n\n\n')
+
+# Write "Definition by Number"
+#-----------------------------------------------------------------------------#
+book.write('\\pagebreak\n')
+book.write('\\section{Definition by Number}\n\n')
+book.write('\\begin{longtable}{|p{1cm}|p{2cm}|p{6.5cm}|p{3cm}|p{2cm}|c|}\n')
+book.write('\\hline\n')
+book.write('\\textbf{ID} & \\textbf{Shortcut} & \\textbf{Definition} & \\textbf{Author} & \\textbf{Date} & \\textbf{Page} \\\\ \\hline\n')
+sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(def_nos)])]
+for i in sort_ind:
+    if def_nos[i] != 0:
+        book.write(def_info[i][0] + ' & ' + def_info[i][1] + ' & ' + def_info[i][2] + ' & ' + def_info[i][3] + ' & ' + \
+                   def_info[i][4].strftime('%Y-%m-%d') + ' & \\pageref{sec:' + def_info[i][1] + '} \\\\ \\hline\n')
+book.write('\\end{longtable}\n')
+book.write('\n\n\n')
+
 # Close "The Book of Statistical Proofs"
-#-----------------------------------------------------------------------------#        
+#-----------------------------------------------------------------------------#
 book.write('\end{document}')
 book.close()
 print('   - written into "' + book.name + '"')
