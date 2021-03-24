@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2020-12-10, 22:14}
+\date{2021-03-24, 16:09}
 
 \begin{document}
 
@@ -76,7 +76,7 @@
 
 \item A set of zero or more outcomes is called a random event ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:reve}).
 
-\item A function that maps from events to probabilities is called a probability function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}).
+\item A function that maps from events to probabilities is called a probability function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}).
 
 \end{itemize}
 
@@ -134,7 +134,7 @@ In other words, a random event is a random variable ($\rightarrow$ Definition \r
 
 \item informally, as a real number $X \in \mathbb{R}$ whose value is the outcome of a random experiment ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rexp});
 
-\item formally, as a measurable function ($\rightarrow$ Definition "meas-fct") $X$ defined on a probability space ($\rightarrow$ Definition "prob-spc") $(\Omega, \mathcal{F}, P)$ that maps from a sample space $\Omega$ to the real numbers $\mathbb{R}$ using an event space $\mathcal{F}$ and a probability function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) $P$;
+\item formally, as a measurable function ($\rightarrow$ Definition "meas-fct") $X$ defined on a probability space ($\rightarrow$ Definition "prob-spc") $(\Omega, \mathcal{F}, P)$ that maps from a sample space $\Omega$ to the real numbers $\mathbb{R}$ using an event space $\mathcal{F}$ and a probability function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) $P$;
 
 \item more broadly, as any random quantity $X$ such as a random event ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:reve}), a random scalar ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) or a random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}).
 
@@ -3128,7 +3128,7 @@ i.e. the median is the value at which the CDF is $1/2$.
 where $x_1$ and $x_2$ are specified, such that
 
 \begin{equation} \label{eq:fwhm-x12}
-f_X(x_1) = f_X(x_2) = \frac{1}{2} f_X(x_M) \quad \text{and} \quad x_1 < x_M < x_2
+f_X(x_1) = f_X(x_2) = \frac{1}{2} f_X(x_M) \quad \text{and} \quad x_1 < x_M < x_2 \; .
 \end{equation}
 
 
@@ -5568,6 +5568,324 @@ The maximum log-likelihood can be obtained by plugging the maximum likelihood es
 
 \vspace{1em}
 \textbf{Metadata:} ID: D61 | shortcut: mll | author: JoramSoch | date: 2020-05-15, 23:13.
+\vspace{1em}
+
+
+
+\subsection{Statistical hypotheses}
+
+\subsubsection[\textit{Statistical hypothesis}]{Statistical hypothesis} \label{sec:hyp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} A statistical hypothesis is a statement about the parameters of a distribution describing a population from which observations can be sampled as measured data ($\rightarrow$ Definition "data").
+
+More precisely, let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) describing measured data $y$ in terms of a distribution $\mathcal{D}(\theta)$ with model parameters $\theta \in \Theta$. Then, a statistical hypothesis is formally specified as
+
+\begin{equation} \label{eq:hyp-hyp}
+H: \; \theta \in \Theta^{*} \quad \text{where} \quad \Theta^{*} \subset \Theta \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Statistical hypothesis testing"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-19; URL: \url{https://en.wikipedia.org/wiki/Statistical_hypothesis_testing#Definition_of_terms}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D127 | shortcut: hyp | author: JoramSoch | date: 2021-03-19, 14:18.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Simple vs. composite}]{Simple vs. composite} \label{sec:hyp-simp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $H$ be a statistical hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp}). Then,
+
+\begin{itemize}
+
+\item $H$ is called a simple hypothesis, if it completely specifies the population distribution; in this case, the sampling distribution ($\rightarrow$ Definition "dist-samp") of the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) is a function of sample size alone.
+
+\item $H$ is called a composite hypothesis, if it does not completely specify the population distribution; for example, the hypothesis may only specify one parameter of the distribution and leave others unspecified.
+
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Exclusion of the null hypothesis"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-19; URL: \url{https://en.wikipedia.org/wiki/Exclusion_of_the_null_hypothesis#Terminology}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D128 | shortcut: hyp-simp | author: JoramSoch | date: 2021-03-19, 14:24.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Point vs. set}]{Point vs. set} \label{sec:hyp-point}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $H$ be a statistical hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp}). Then,
+
+\begin{itemize}
+
+\item $H$ is called a point hypothesis or exact hypothesis, if it specifies an exact parameter value:
+
+\end{itemize}
+
+\begin{equation} \label{eq:hyp-point-hyp-point}
+H: \; \theta = \theta^{*} \; ;
+\end{equation}
+
+\begin{itemize}
+
+\item $H$ is called a set hypothesis or inexact hypothesis, if it specifies a set of possible values with more than one element for the parameter value (e.g. a range or an interval):
+
+\end{itemize}
+
+\begin{equation} \label{eq:hyp-point-hyp-non-point}
+H: \; \theta \in \Theta^{*} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Exclusion of the null hypothesis"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-19; URL: \url{https://en.wikipedia.org/wiki/Exclusion_of_the_null_hypothesis#Terminology}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D129 | shortcut: hyp-point | author: JoramSoch | date: 2021-03-19, 14:28.
+\vspace{1em}
+
+
+
+\subsection{Hypothesis testing}
+
+\subsubsection[\textit{Statistical test}]{Statistical test} \label{sec:test}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $y$ be a set of measured data ($\rightarrow$ Definition "data"). Then, a statistical hypothesis test consists of the following:
+
+\begin{itemize}
+
+\item an assumption about the distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) of the data, often expressed in terms of a statistical model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$;
+
+\item a null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) $H_0$ and an alternative hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1}) $H_1$ which make specific statements about the distribution of the data; 
+
+\item a test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) $T(Y)$ which is a function of the data and whose distribution under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) is known;
+
+\item a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$ which imposes an upper bound on the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of rejecting $H_0$, given that $H_0$ is true.
+
+\end{itemize}
+
+Procedurally, the statistical hypothesis test works as follows:
+
+\begin{itemize}
+
+\item Given the null hypothesis $H_0$ and the significance level $\alpha$, a critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) $t_\mathrm{crit}$ is determined which partitions the set of possible values of $T(Y)$ into "acceptance region" and "rejection region".
+
+\item Then, the observed test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) $t_\mathrm{obs} = T(y)$ is calculated from the actually measured data $y$. If it is in the rejection region, $H_0$ is rejected in favor of $H_1$. Otherwise, the test fails to reject $H_0$.
+
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Statistical hypothesis testing"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-19; URL: \url{https://en.wikipedia.org/wiki/Statistical_hypothesis_testing#The_testing_process}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D130 | shortcut: test | author: JoramSoch | date: 2021-03-19, 14:36.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Null hypothesis}]{Null hypothesis} \label{sec:h0}
+\setcounter{equation}{0}
+
+\textbf{Definition:} The statement which is tested in a statistical hypothesis test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}) is called the "null hypothesis", denoted as $H_0$. The test is designed to assess the strength of evidence against $H_0$ and possibly reject it. The opposite of $H_0$ is called the "alternative hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1})". Usually, $H_0$ is a statement that a particular parameter is zero, that there is no effect of a particular treatment or that there is no difference between particular conditions.
+
+More precisely, let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) describing measured data $y$ using model parameters $\theta \in \Theta$. Then, a null hypothesis is formally specified as
+
+\begin{equation} \label{eq:h0-h0}
+H_0: \; \theta \in \Theta_0 \quad \text{where} \quad \Theta_0 \subset \Theta \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Exclusion of the null hypothesis"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-12; URL: \url{https://en.wikipedia.org/wiki/Exclusion_of_the_null_hypothesis#Basic_definitions}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D125 | shortcut: h0 | author: JoramSoch | date: 2021-03-12, 10:25.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Alternative hypothesis}]{Alternative hypothesis} \label{sec:h1}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $H_0$ be a null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) of a statistical hypothesis test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}). Then, the corresponding alternative hypothesis, denoted as $H_1$, is either the negation of $H_0$ or an interesting sub-case in the negation of $H_0$, depending on context. The test is designed to assess the strength of evidence against $H_0$ and possibly reject it in favor of $H_1$. Usually, $H_1$ is a statement that a particular parameter is non-zero, that there is an effect of a particular treatment or that there is a difference between particular conditions.
+
+More precisely, let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) describing measured data $y$ using model parameters $\theta \in \Theta$. Then, null and alternative hypothesis are formally specified as
+
+\begin{equation} \label{eq:h1-h0}
+\begin{split}
+H_0&: \; \theta \in \Theta_0 \quad \text{where} \quad \Theta_0 \subset \Theta \\
+H_1&: \; \theta \in \Theta_1 \quad \text{where} \quad \Theta_1 = \Theta \setminus \Theta_0 \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Exclusion of the null hypothesis"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-12; URL: \url{https://en.wikipedia.org/wiki/Exclusion_of_the_null_hypothesis#Basic_definitions}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D126 | shortcut: h1 | author: JoramSoch | date: 2021-03-12, 10:36.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Test statistic}]{Test statistic} \label{sec:tstat}
+\setcounter{equation}{0}
+
+\textbf{Definition:} In a statistical hypothesis test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}), the test statistic $T(Y)$ is a scalar function of the measured data ($\rightarrow$ Definition "data") $y$ whose distribution under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) $H_0$ can be established. Together with a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$, this distribution implies a critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) $t_\mathrm{crit}$ of the test statistic which determines whether the test rejects or fails to reject $H_0$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Statistical hypothesis testing"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-19; URL: \url{https://en.wikipedia.org/wiki/Statistical_hypothesis_testing#The_testing_process}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D131 | shortcut: tstat | author: JoramSoch | date: 2021-03-19, 14:40.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Size of a test}]{Size of a test} \label{sec:size}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a statistical hypothesis test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}) with null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) $H_0$. Then, the size of the test is the probability of a false-positive result or making a type I error, i.e. the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of rejecting the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) $H_0$, given that $H_0$ is actually true.
+
+For a simple null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-simp}), the size is determined by the following conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}):
+
+\begin{equation} \label{eq:size-size-h0-simp}
+\mathrm{Pr}(\text{test rejects } H_0 \vert H_0) \; .
+\end{equation}
+
+For a composite null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-simp}), the size is the supremum over all possible realizations of the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}):
+
+\begin{equation} \label{eq:size-size-h0-comp}
+\operatorname*{sup}_{h \in H_0} \mathrm{Pr}(\text{test rejects } H_0 \vert h) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Size (statistics)"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-19; URL: \url{https://en.wikipedia.org/wiki/Size_(statistics)}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D132 | shortcut: size | author: JoramSoch | date: 2021-03-19, 14:46.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Significance level}]{Significance level} \label{sec:alpha}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let the size ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:size}) of a statistical hypothesis test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}) be the probability of a false-positive result or making a type I error, i.e. the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of rejecting the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) $H_0$, given that $H_0$ is actually true:
+
+\begin{equation} \label{eq:alpha-size}
+\mathrm{Pr}(\text{test rejects } H_0 \vert H_0) \; .
+\end{equation}
+
+Then, the test is said to have significance level $\alpha$, if the size is less than or equal to $\alpha$:
+
+\begin{equation} \label{eq:alpha-alpha}
+\mathrm{Pr}(\text{test rejects } H_0 \vert H_0) \leq \alpha \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Statistical hypothesis testing"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-19; URL: \url{https://en.wikipedia.org/wiki/Statistical_hypothesis_testing#Definition_of_terms}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D133 | shortcut: alpha | author: JoramSoch | date: 2021-03-19, 14:50.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Critical value}]{Critical value} \label{sec:cval}
+\setcounter{equation}{0}
+
+\textbf{Definition:} In a statistical hypothesis test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}), the critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) $t_\mathrm{crit}$ is that value of the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) $T(Y)$ which partitions the set of possible test statistics into "acceptance region" and "rejection region" based on a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$. Put differently, if the observed test statistic $t_\mathrm{obs} = T(y)$ computed from actually measured data ($\rightarrow$ Definition "data") $y$ is as extreme or more extreme than the critical value, the test rejects the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) $H_0$ in favor of the alternative hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Statistical hypothesis testing"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-19; URL: \url{https://en.wikipedia.org/wiki/Statistical_hypothesis_testing#Definition_of_terms}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D134 | shortcut: cval | author: JoramSoch | date: 2021-03-19, 14:54.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{p-value}]{p-value} \label{sec:pval}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a statistical test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}) of the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) $H_0$ and the alternative hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1}) $H_1$ using the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) $T(Y)$. Let $y$ be the measured data ($\rightarrow$ Definition "data") and let $t_\mathrm{obs} = T(y)$ be the observed test statistic computed from $y$. Moreover, assume that $F_T(t)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) (CDF) of the distribution of $T(Y)$ under $H_0$.
+
+Then, the p-value is the probability of obtaining a test statistic more extreme than or as extreme as $t_\mathrm{obs}$, given that the null hypothesis $H_0$ is true:
+
+\begin{itemize}
+
+\item $p = F_T^{-1}(t_\mathrm{obs})$, if $H_1$ is a left-sided one-tailed hypothesis ($\rightarrow$ Definition "hyp-tail");
+
+\item $p = 1 - F_T^{-1}(t_\mathrm{obs})$, if $H_1$ is a right-sided one-tailed hypothesis ($\rightarrow$ Definition "hyp-tail");
+
+\item $p = 2 \cdot \min \left( \left[ F_T^{-1}(t_\mathrm{obs}), \, 1 - F_T^{-1}(t_\mathrm{obs}) \right] \right)$, if $H_1$ is a two-tailed hypothesis ($\rightarrow$ Definition "hyp-tail").
+
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Statistical hypothesis testing"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-19; URL: \url{https://en.wikipedia.org/wiki/Statistical_hypothesis_testing#Definition_of_terms}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D135 | shortcut: pval | author: JoramSoch | date: 2021-03-19, 14:58.
 \vspace{1em}
 
 
@@ -12227,6 +12545,1879 @@ where $n > p - 1$ and $V$ is a positive definite symmetric covariance matrix.
 \pagebreak
 \section{Univariate normal data}
 
+\subsection{Univariate Gaussian}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:ug}
+\setcounter{equation}{0}
+
+\textbf{Definition:} A univariate Gaussian data set is given by a set of real numbers $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$, independent and identically distributed according to a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) with unknown mean $\mu$ and unknown variance $\sigma^2$:
+
+\begin{equation} \label{eq:ug-ug}
+y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop, Christopher M. (2006): "Example: The univariate Gaussian"; in: \textit{Pattern Recognition for Machine Learning}, ch. 10.1.3, p. 470, eq. 10.21; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D124 | shortcut: ug | author: JoramSoch | date: 2021-03-03, 07:21.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{One-sample t-test}]{One-sample t-test} \label{sec:ug-ttest1}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ug-ttest1-ug}
+y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ug}) with unknown mean $\mu$ and unknown variance $\sigma^2$. Then, the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat})
+
+\begin{equation} \label{eq:ug-ttest1-t}
+t = \frac{\bar{y}-\mu_0}{s / \sqrt{n}}
+\end{equation}
+
+with sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and sample variance ($\rightarrow$ Definition "var-samp") $s^2$ follows a Student's t-distribution ($\rightarrow$ Definition "t") with $n-1$ degrees of freedom ($\rightarrow$ Definition "dof")
+
+\begin{equation} \label{eq:ug-ttest1-t-dist}
+t \sim \mathrm{t}(n-1)
+\end{equation}
+
+under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})
+
+\begin{equation} \label{eq:ug-ttest1-ttest1-h0}
+H_0: \; \mu = \mu_0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The sample mean ($\rightarrow$ Definition "mean-samp") is given by
+
+\begin{equation} \label{eq:ug-ttest1-mean-samp}
+\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i
+\end{equation}
+
+and the sample variance ($\rightarrow$ Definition "var-samp") is given by
+
+\begin{equation} \label{eq:ug-ttest1-var-samp}
+s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (y_i - \bar{y})^2 \; .
+\end{equation}
+
+Using the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), the additivity of the variance under independence ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-add}) and scaling of the variance upon multiplication ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-scal}), the sample mean follows a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm})
+
+\begin{equation} \label{eq:ug-ttest1-mean-samp-dist}
+\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i \sim \mathcal{N}\left( \frac{1}{n} n \mu, \left(\frac{1}{n}\right)^2 n \sigma^2 \right) = \mathcal{N}\left( \mu, \sigma^2/n \right)
+\end{equation}
+
+and additionally using the invariance of the variance under addition ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-inv}) and applying the null hypothesis from \eqref{eq:ug-ttest1-ttest1-h0}, the distribution of $Z = \sqrt{n}(\bar{y}-\mu_0)/\sigma$ becomes standard normal ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
+
+\begin{equation} \label{eq:ug-ttest1-Z-dist}
+Z = \frac{\sqrt{n}(\bar{y}-\mu_0)}{\sigma} \sim \mathcal{N}\left( \frac{\sqrt{n}}{\sigma} (\mu - \mu_0), \left(\frac{\sqrt{n}}{\sigma}\right)^2 \frac{\sigma^2}{n} \right) \overset{H_0}{=} \mathcal{N}\left( 0, 1 \right) \; .
+\end{equation}
+
+Because sample variances calculated from independent normal random variables follow a chi-squared distribution ($\rightarrow$ Proof "norm-chi2"), the distribution of $V = (n-1)\,s^2/\sigma^2$ is
+
+\begin{equation} \label{eq:ug-ttest1-V-dist}
+V = \frac{(n-1)\,s^2}{\sigma^2} \sim \chi^2\left(n-1\right) \; .
+\end{equation}
+
+Finally, since the ratio of a standard normal random variable and a (normalized) chi-squared random variable follows a t-distribution ($\rightarrow$ Proof "norm-t"), the distribution of the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) is given by
+
+\begin{equation} \label{eq:ug-ttest1-t-dist-qed}
+t = \frac{\bar{y}-\mu_0}{s / \sqrt{n}} = \frac{Z}{\sqrt{V / (n-1)}} \sim \mathrm{t}(n-1) \; .
+\end{equation}
+
+This means that the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ Definition "t") with $n-1$ degrees of freedom ($\rightarrow$ Definition "dof") using a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Student's t-distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-12; URL: \url{https://en.wikipedia.org/wiki/Student%27s_t-distribution#Derivation}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P204 | shortcut: ug-ttest1 | author: JoramSoch | date: 2021-03-12, 08:43.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Two-sample t-test}]{Two-sample t-test} \label{sec:ug-ttest2}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ug-ttest2-ug}
+\begin{split}
+y_{1i} &\sim \mathcal{N}(\mu_1, \sigma^2), \quad i = 1, \ldots, n_1 \\
+y_{2i} &\sim \mathcal{N}(\mu_2, \sigma^2), \quad i = 1, \ldots, n_2
+\end{split}
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ug}) representing two groups of unequal size $n_1$ and $n_2$ with unknown means $\mu_1$ and $\mu_2$ and equal unknown variance $\sigma^2$. Then, the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat})
+
+\begin{equation} \label{eq:ug-ttest2-t}
+t = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{s_p \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
+\end{equation}
+
+with sample means ($\rightarrow$ Definition "mean-samp") $\bar{y}_1$ and $\bar{y}_2$ and pooled standard deviation ($\rightarrow$ Definition "std-pool") $s_p$ follows a Student's t-distribution ($\rightarrow$ Definition "t") with $n_1+n_2-1$ degrees of freedom ($\rightarrow$ Definition "dof")
+
+\begin{equation} \label{eq:ug-ttest2-t-dist}
+t \sim \mathrm{t}(n_1+n_2-1)
+\end{equation}
+
+under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})
+
+\begin{equation} \label{eq:ug-ttest2-ttest2-h0}
+H_0: \; \mu_1-\mu_2 = \mu_\Delta \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The sample means ($\rightarrow$ Definition "mean-samp") are given by
+
+\begin{equation} \label{eq:ug-ttest2-mean-samp}
+\begin{split}
+\bar{y}_1 &= \frac{1}{n_1} \sum_{i=1}^{n_1} y_{1i} \\
+\bar{y}_2 &= \frac{1}{n_2} \sum_{i=1}^{n_2} y_{2i}
+\end{split}
+\end{equation}
+
+and the pooled standard deviation ($\rightarrow$ Definition "std-pool") is given by
+
+\begin{equation} \label{eq:ug-ttest2-std-pool}
+s_p = \sqrt{ \frac{(n_1-1) s^2_1 + (n_2-1) s^2_2}{n_1+n_2-2} }
+\end{equation}
+
+with the sample variances ($\rightarrow$ Definition "var-samp")
+
+\begin{equation} \label{eq:ug-ttest2-var-samp}
+\begin{split}
+s^2_1 &= \frac{1}{n_1-1} \sum_{i=1}^{n_1} (y_{1i} - \bar{y}_1)^2 \\
+s^2_2 &= \frac{1}{n_2-1} \sum_{i=1}^{n_2} (y_{2i} - \bar{y}_2)^2 \; .
+\end{split}
+\end{equation}
+
+Using the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), the additivity of the variance under independence ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-add}) and scaling of the variance upon multiplication ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-scal}), the sample means follow a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm})
+
+\begin{equation} \label{eq:ug-ttest2-mean-samp-dist}
+\begin{split}
+\bar{y}_1 &= \frac{1}{n_1} \sum_{i=1}^{n_1} y_{1i} \sim \mathcal{N}\left( \frac{1}{n_1} n_1 \mu_1, \left(\frac{1}{n_1}\right)^2 n_1 \sigma^2 \right) = \mathcal{N}\left( \mu_1, \sigma^2/n_1 \right) \\
+\bar{y}_2 &= \frac{1}{n_2} \sum_{i=1}^{n_2} y_{2i} \sim \mathcal{N}\left( \frac{1}{n_2} n_2 \mu_2, \left(\frac{1}{n_2}\right)^2 n_2 \sigma^2 \right) = \mathcal{N}\left( \mu_2, \sigma^2/n_2 \right)
+\end{split}
+\end{equation}
+
+and additionally using the invariance of the variance under addition ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-inv}) and applying the null hypothesis from \eqref{eq:ug-ttest2-ttest2-h0}, the distribution of $Z = ( ( \bar{y}_1 - \bar{y}_2 ) - \mu_{\Delta} ) / ( \sigma \sqrt{1/n_1+1/n_2} )$ becomes standard normal ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
+
+\begin{equation} \label{eq:ug-ttest2-Z-dist}
+Z = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{\sigma \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim \mathcal{N}\left( \frac{(\mu_1-\mu_2)-\mu_\Delta}{\sigma \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}, \left(\frac{1}{\sigma \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\right)^2 \left( \frac{\sigma^2}{n_1} + \frac{\sigma^2}{n_2} \right) \right) \overset{H_0}{=} \mathcal{N}\left( 0, 1 \right) \; .
+\end{equation}
+
+Because sample variances calculated from independent normal random variables follow a chi-squared distribution ($\rightarrow$ Proof "norm-chi2"), the distribution of $V = (n_1+n_2-2)\,s_p^2/\sigma^2$ is
+
+\begin{equation} \label{eq:ug-ttest2-V-dist}
+V = \frac{(n_1+n_2-1)\,s_p^2}{\sigma^2} \sim \chi^2\left(n_1+n_2-2\right) \; .
+\end{equation}
+
+Finally, since the ratio of a standard normal random variable and a (normalized) chi-squared random variable follows a t-distribution ($\rightarrow$ Proof "norm-t"), the distribution of the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) is given by
+
+\begin{equation} \label{eq:ug-ttest2-t-dist-qed}
+t = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{s_p \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} = \frac{Z}{\sqrt{V / (n_1+n_2-2)}} \sim \mathrm{t}(n_1+n_2-2) \; .
+\end{equation}
+
+This means that the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ Definition "t") with $n_1+n_2-2$ degrees of freedom ($\rightarrow$ Definition "dof") using a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Student's t-distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-12; URL: \url{https://en.wikipedia.org/wiki/Student%27s_t-distribution#Derivation}.
+\item Wikipedia (2021): "Student's t-test"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-12; URL: \url{https://en.wikipedia.org/wiki/Student%27s_t-test#Equal_or_unequal_sample_sizes,_similar_variances_(1/2_%3C_sX1/sX2_%3C_2)}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P205 | shortcut: ug-ttest2 | author: JoramSoch | date: 2021-03-12, 09:20.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Paired t-test}]{Paired t-test} \label{sec:ug-ttestp}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $y_{i1}$ and $y_{i2}$ with $i = 1, \ldots, n$ be paired observations, such that
+
+\begin{equation} \label{eq:ug-ttestp-ug}
+y_{i1} \sim \mathcal{N}(y_{i2} + \mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+is a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ug}) with unknown shift $\mu$ and unknown variance $\sigma^2$. Then, the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat})
+
+\begin{equation} \label{eq:ug-ttestp-t}
+t = \frac{\bar{d}-\mu_0}{s_d / \sqrt{n}} \quad \text{where} \quad d_i = y_{i1} - y_{i2}
+\end{equation}
+
+with sample mean ($\rightarrow$ Definition "mean-samp") $\bar{d}$ and sample variance ($\rightarrow$ Definition "var-samp") $s^2_d$ follows a Student's t-distribution ($\rightarrow$ Definition "t") with $n-1$ degrees of freedom ($\rightarrow$ Definition "dof")
+
+\begin{equation} \label{eq:ug-ttestp-t-dist}
+t \sim \mathrm{t}(n-1)
+\end{equation}
+
+under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})
+
+\begin{equation} \label{eq:ug-ttestp-ttestp-h0}
+H_0: \; \mu = \mu_0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Define the pair-wise difference $d_i = y_{i1} - y_{i2}$ which is, according to the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}) and the invariance of the variance under addition ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-inv}), distributed as
+
+\begin{equation} \label{eq:ug-ttestp-d-dist}
+d_i = y_{i1} - y_{i2} \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+Therefore, $d_1, \ldots, d_n$ satisfy the conditions of the one-sample t-test ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ug-ttest1}) which results in the test statistic given by \eqref{eq:ug-ttestp-t}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Student's t-test"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-12; URL: \url{https://en.wikipedia.org/wiki/Student%27s_t-test#Dependent_t-test_for_paired_samples}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P206 | shortcut: ug-ttestp | author: JoramSoch | date: 2021-03-12, 09:34.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:ug-prior}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ug-prior-ug}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ug}) with unknown mean $\mu$ and unknown variance $\sigma^2$. Then, the conjugate prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior-conj}) for this model is a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng})
+
+\begin{equation} \label{eq:ug-prior-UG-NG-prior}
+p(\mu,\tau) = \mathcal{N}(\mu; \mu_0, (\tau \lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0)
+\end{equation}
+
+where $\tau = 1/\sigma^2$ is the inverse variance or precision.
+
+
+\vspace{1em}
+\textbf{Proof:} By definition, a conjugate prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior-conj}) is a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) that, when combined with the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}), leads to a posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) that belongs to the same family of probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}). This is fulfilled when the prior density and the likelihood function are proportional to the model model parameters in the same way, i.e. the model parameters appear in the same functional form in both.
+
+Equation \eqref{eq:ug-prior-ug} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:ug-prior-UG-LF-class}
+\begin{split}
+p(y|\mu,\sigma^2) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \sigma^2) \\
+&= \prod_{i=1}^{n} \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp\left[ -\frac{1}{2} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right] \\
+&= \frac{1}{(\sqrt{2 \pi \sigma^2})^n} \cdot \exp\left[ -\frac{1}{2 \sigma^2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+which, for mathematical convenience, can also be parametrized as
+
+\begin{equation} \label{eq:ug-prior-UG-LF-Bayes}
+\begin{split}
+p(y|\mu,\tau) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \tau^{-1}) \\
+&= \prod_{i=1}^{n} \sqrt{\frac{\tau}{2 \pi}} \cdot \exp\left[ -\frac{\tau}{2} \left( y_i-\mu \right)^2 \right] \\
+&= \left( \sqrt{\frac{\tau}{2 \pi}} \right)^n \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+using the inverse variance or precision $\tau = 1/\sigma^2$.
+
+\vspace{1em}
+Seperating constant and variable terms, we have:
+
+\begin{equation} \label{eq:ug-prior-UG-LF-s1}
+p(y|\mu,\tau) = \sqrt{\frac{1}{(2 \pi)^n}} \cdot \tau^{n/2} \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right] \; .
+\end{equation}
+
+Expanding the product in the exponent, we have
+
+\begin{equation} \label{eq:ug-prior-UG-LF-s2}
+\begin{split}
+p(y|\mu,\tau) &= \sqrt{\frac{1}{(2 \pi)^n}} \cdot \tau^{n/2} \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i^2 - 2 \mu y_i + \mu^2 \right) \right] \\
+&= \sqrt{\frac{1}{(2 \pi)^n}} \cdot \tau^{n/2} \cdot \exp\left[ -\frac{\tau}{2} \left( \sum_{i=1}^{n} y_i^2 - 2 \mu \sum_{i=1}^{n} y_i + n \mu^2 \right) \right] \\
+&= \sqrt{\frac{1}{(2 \pi)^n}} \cdot \tau^{n/2} \cdot \exp\left[ -\frac{\tau}{2} \left( y^\mathrm{T} y - 2 \mu n \bar{y} + n \mu^2 \right) \right] \\
+&= \sqrt{\frac{1}{(2 \pi)^n}} \cdot \tau^{n/2} \cdot \exp\left[ -\frac{\tau n}{2} \left( \frac{1}{n} y^\mathrm{T} y - 2 \mu \bar{y} + \mu^2 \right) \right]
+\end{split}
+\end{equation}
+
+where $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$ is the mean of data points and $y^\mathrm{T} y = \sum_{i=1}^{n} y_i^2$ is the sum of squared data points.
+
+Completing the square over $\mu$, finally gives
+
+\begin{equation} \label{eq:ug-prior-UG-LF-s3}
+p(y|\mu,\tau) = \sqrt{\frac{1}{(2 \pi)^n}} \cdot \tau^{n/2} \cdot \exp\left[ -\frac{\tau n}{2} \left( (\mu-\bar{y})^2 - \bar{y}^2 + \frac{1}{n} y^\mathrm{T} y \right) \right]
+\end{equation}
+
+\vspace{1em}
+In other words, the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) is proportional to a power of $\tau$ times an exponential of $\tau$ and an exponential of a squared form of $\mu$, weighted by $\tau$:
+
+\begin{equation} \label{eq:ug-prior-UG-LF-s4}
+p(y|\mu,\tau) \propto \tau^{n/2} \cdot \exp\left[ -\frac{\tau}{2} \left( y^\mathrm{T} y - n \bar{y}^2 \right) \right] \cdot \exp\left[ -\frac{\tau n}{2} \left( \mu-\bar{y} \right)^2 \right] \; .
+\end{equation}
+
+The same is true for a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng}) over $\mu$ and $\tau$
+
+\begin{equation} \label{eq:ug-prior-UG-prior-s1}
+p(\mu,\tau) = \mathcal{N}(\mu; \mu_0, (\tau \lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0)
+\end{equation}
+
+the probability density function of which ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:ng-pdf})
+
+\begin{equation} \label{eq:ug-prior-UG-prior-s2}
+p(\mu,\tau) = \sqrt{\frac{\tau \lambda_0}{2 \pi}} \cdot \exp\left[ -\frac{\tau \lambda_0}{2} \left( \mu-\mu_0 \right)^2 \right] \cdot \frac{ {b_0}^{a_0} }{\Gamma(a_0)} \, \tau^{a_0-1} \exp[-b_0 \tau]
+\end{equation}
+
+exhibits the same proportionality
+
+\begin{equation} \label{eq:ug-prior-UG-prior-s3}
+p(\mu,\tau) \propto \tau^{a_0+1/2-1} \cdot \exp[-\tau b_0] \cdot \exp\left[ -\frac{\tau \lambda_0}{2} \left( \mu-\mu_0 \right)^2 \right]
+\end{equation}
+
+and is therefore conjugate relative to the likelihood.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop CM (2006): "Bayesian inference for the Gaussian"; in: \textit{Pattern Recognition for Machine Learning}, pp. 97-102, eq. 2.154; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P201 | shortcut: ug-prior | author: JoramSoch | date: 2021-03-03, 08:54.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:ug-post}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ug-post-ug}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ug}) with unknown mean $\mu$ and unknown variance $\sigma^2$. Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ug-prior}) over the model parameters $\mu$ and $\tau = 1/\sigma^2$:
+
+\begin{equation} \label{eq:ug-post-UG-NG-prior}
+p(\mu,\tau) = \mathcal{N}(\mu; \mu_0, (\tau \lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
+\end{equation}
+
+Then, the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) is also a normal-gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:ng})
+
+\begin{equation} \label{eq:ug-post-UG-NG-post}
+p(\mu,\tau|y) = \mathcal{N}(\mu; \mu_n, (\tau \lambda_n)^{-1}) \cdot \mathrm{Gam}(\tau; a_n, b_n)
+\end{equation}
+
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:ug-post-UG-NG-post-par}
+\begin{split}
+\mu_n &= \frac{\lambda_0 \mu_0 + n \bar{y}}{\lambda_0 + n} \\
+\lambda_n &= \lambda_0 + n \\
+a_n &= a_0 + \frac{n}{2} \\
+b_n &= b_0 + \frac{1}{2} (y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} According to Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) is given by
+
+\begin{equation} \label{eq:ug-post-UG-NG-BT}
+p(\mu,\tau|y) = \frac{p(y|\mu,\tau) \, p(\mu,\tau)}{p(y)} \; .
+\end{equation}
+
+Since $p(y)$ is just a normalization factor, the posterior is proportional ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:post-jl}) to the numerator:
+
+\begin{equation} \label{eq:ug-post-UG-NG-post-JL}
+p(\mu,\tau|y) \propto p(y|\mu,\tau) \, p(\mu,\tau) = p(y,\mu,\tau) \; .
+\end{equation}
+
+Equation \eqref{eq:ug-post-ug} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:ug-post-UG-LF-class}
+\begin{split}
+p(y|\mu,\sigma^2) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \sigma^2) \\
+&= \prod_{i=1}^{n} \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp\left[ -\frac{1}{2} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right] \\
+&= \frac{1}{(\sqrt{2 \pi \sigma^2})^n} \cdot \exp\left[ -\frac{1}{2 \sigma^2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+which, for mathematical convenience, can also be parametrized as
+
+\begin{equation} \label{eq:ug-post-UG-LF-Bayes}
+\begin{split}
+p(y|\mu,\tau) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \tau^{-1}) \\
+&= \prod_{i=1}^{n} \sqrt{\frac{\tau}{2 \pi}} \cdot \exp\left[ -\frac{\tau}{2} \left( y_i-\mu \right)^2 \right] \\
+&= \left( \sqrt{\frac{\tau}{2 \pi}} \right)^n \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+using the inverse variance or precision $\tau = 1/\sigma^2$.
+
+\vspace{1em}
+Combining the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) \eqref{eq:ug-post-UG-LF-Bayes} with the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) \eqref{eq:ug-post-UG-NG-prior}, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) of the model is given by
+
+\begin{equation} \label{eq:ug-post-UG-NG-JL-s1}
+\begin{split}
+p(y,\mu,\tau) = \; & p(y|\mu,\tau) \, p(\mu,\tau) \\
+= \; & \left( \sqrt{\frac{\tau}{2 \pi}} \right)^n \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right] \cdot \\
+& \sqrt{\frac{\tau \lambda_0}{2 \pi}} \cdot \exp\left[ -\frac{\tau \lambda_0}{2} \left( \mu-\mu_0 \right)^2 \right] \cdot \\
+& \frac{ {b_0}^{a_0} }{\Gamma(a_0)} \, \tau^{a_0-1} \exp[-b_0 \tau] \; .
+\end{split}
+\end{equation}
+
+Collecting identical variables gives:
+
+\begin{equation} \label{eq:ug-post-UG-NG-JL-s2}
+\begin{split}
+p(y,\mu,\tau) = \; & \sqrt{\frac{\tau^{n+1} \lambda_0}{(2 \pi)^{n+1}}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \tau^{a_0-1} \exp[-b_0 \tau] \cdot \\
+& \exp\left[ -\frac{\tau}{2} \left( \sum_{i=1}^{n} \left( y_i-\mu \right)^2 + \lambda_0 \left( \mu-\mu_0 \right)^2 \right) \right] \; .
+\end{split}
+\end{equation}
+
+Expanding the products in the exponent ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ug-prior}) gives
+
+\begin{equation} \label{eq:ug-post-UG-NG-JL-s3}
+\begin{split}
+p(y,\mu,\tau) = \; & \sqrt{\frac{\tau^{n+1} \lambda_0}{(2 \pi)^{n+1}}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \tau^{a_0-1} \exp[-b_0 \tau] \cdot \\
+& \exp\left[ -\frac{\tau}{2} \left( (y^\mathrm{T} y - 2 \mu n \bar{y} + n \mu^2) + \lambda_0 (\mu^2 - 2 \mu \mu_0 + \mu_0^2) \right) \right]
+\end{split}
+\end{equation}
+
+where $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$ and $y^\mathrm{T} y = \sum_{i=1}^{n} y_i^2$, such that
+
+\begin{equation} \label{eq:ug-post-UG-NG-JL-s4}
+\begin{split}
+p(y,\mu,\tau) = \; & \sqrt{\frac{\tau^{n+1} \lambda_0}{(2 \pi)^{n+1}}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \tau^{a_0-1} \exp[-b_0 \tau] \cdot \\
+& \exp\left[ -\frac{\tau}{2} \left( \mu^2 (\lambda_0 + n) - 2 \mu (\lambda_0 \mu_0 + n \bar{y}) + (y^\mathrm{T} y + \lambda_0 \mu_0^2) \right) \right]
+\end{split}
+\end{equation}
+
+Completing the square over $\mu$, we finally have
+
+\begin{equation} \label{eq:ug-post-UG-NG-JL-s5}
+\begin{split}
+p(y,\mu,\tau) = \; & \sqrt{\frac{\tau^{n+1} \lambda_0}{(2 \pi)^{n+1}}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \tau^{a_0-1} \exp[-b_0 \tau] \cdot \\
+& \exp\left[ -\frac{\tau \lambda_n}{2} \left( \mu - \mu_n \right)^2 -\frac{\tau}{2} \left( y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \right]
+\end{split}
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:ug-post-UG-NG-post-mu-par}
+\begin{split}
+\mu_n &= \frac{\lambda_0 \mu_0 + n \bar{y}}{\lambda_0 + n} \\
+\lambda_n &= \lambda_0 + n \; .
+\end{split}
+\end{equation}
+
+Ergo, the joint likelihood is proportional to
+
+\begin{equation} \label{eq:ug-post-UG-NG-JL-s6}
+p(y,\mu,\tau) \propto \tau^{1/2} \cdot \exp\left[ -\frac{\tau \lambda_n}{2} \left( \mu - \mu_n \right)^2 \right] \cdot \tau^{a_n-1} \cdot \exp\left[ -b_n \tau \right]
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:ug-post-UG-NG-post-tau-par}
+\begin{split}
+a_n &= a_0 + \frac{n}{2} \\
+b_n &= b_0 + \frac{1}{2} \left( y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \; .
+\end{split}
+\end{equation}
+
+From the term in \eqref{eq:ug-post-UG-NG-JL-s5}, we can isolate the posterior distribution over $\mu$ given $\tau$:
+
+\begin{equation} \label{eq:ug-post-UG-NG-post-mu}
+p(\mu|\tau,y) = \mathcal{N}(\mu; \mu_n, (\tau \lambda_n)^{-1}) \; .
+\end{equation}
+
+From the remaining term, we can isolate the posterior distribution over $\tau$:
+
+\begin{equation} \label{eq:ug-post-UG-NG-post-tau}
+p(\tau|y) = \mathrm{Gam}(\tau; a_n, b_n) \; .
+\end{equation}
+
+Together, \eqref{eq:ug-post-UG-NG-post-mu} and \eqref{eq:ug-post-UG-NG-post-tau} constitute the joint ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-joint}) posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of $\mu$ and $\tau$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop CM (2006): "Bayesian inference for the Gaussian"; in: \textit{Pattern Recognition for Machine Learning}, pp. 97-102, eq. 2.154; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P202 | shortcut: ug-post | author: JoramSoch | date: 2021-03-03, 09:53.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:ug-lme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ug-lme-ug}
+m: \; y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ug}) with unknown mean $\mu$ and unknown variance $\sigma^2$. Moreover, assume a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ug-prior}) over the model parameters $\mu$ and $\tau = 1/\sigma^2$:
+
+\begin{equation} \label{eq:ug-lme-UG-NG-prior}
+p(\mu,\tau) = \mathcal{N}(\mu; \mu_0, (\tau \lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
+\end{equation}
+
+Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) for this model is
+
+\begin{equation} \label{eq:ug-lme-UG-NG-LME}
+\log p(y|m) = - \frac{n}{2} \log (2 \pi)  + \frac{1}{2} \log \frac{\lambda_0}{\lambda_n} + \log \Gamma(a_n) - \log \Gamma(a_0) + a_0 \log b_0 - a_n \log b_n
+\end{equation}
+
+where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:ug-lme-UG-NG-post-par}
+\begin{split}
+\mu_n &= \frac{\lambda_0 \mu_0 + n \bar{y}}{\lambda_0 + n} \\
+\lambda_n &= \lambda_0 + n \\
+a_n &= a_0 + \frac{n}{2} \\
+b_n &= b_0 + \frac{1}{2} (y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} According to the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), the model evidence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) for this model is:
+
+\begin{equation} \label{eq:ug-lme-UG-NG-ME-s1}
+p(y|m) = \iint p(y|\mu,\tau) \, p(\mu,\tau) \, \mathrm{d}\mu \, \mathrm{d}\tau \; .
+\end{equation}
+
+According to the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}), the integrand is equivalent to the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}):
+
+\begin{equation} \label{eq:ug-lme-UG-NG-ME-s2}
+p(y|m) = \iint p(y,\mu,\tau) \, \mathrm{d}\mu \, \mathrm{d}\tau \; .
+\end{equation}
+
+Equation \eqref{eq:ug-lme-ug} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:ug-lme-UG-LF-class}
+\begin{split}
+p(y|\mu,\sigma^2) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \sigma^2) \\
+&= \prod_{i=1}^{n} \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp\left[ -\frac{1}{2} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right] \\
+&= \frac{1}{(\sqrt{2 \pi \sigma^2})^n} \cdot \exp\left[ -\frac{1}{2 \sigma^2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+which, for mathematical convenience, can also be parametrized as
+
+\begin{equation} \label{eq:ug-lme-UG-LF-Bayes}
+\begin{split}
+p(y|\mu,\tau) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \tau^{-1}) \\
+&= \prod_{i=1}^{n} \sqrt{\frac{\tau}{2 \pi}} \cdot \exp\left[ -\frac{\tau}{2} \left( y_i-\mu \right)^2 \right] \\
+&= \left( \sqrt{\frac{\tau}{2 \pi}} \right)^n \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+using the inverse variance or precision $\tau = 1/\sigma^2$.
+
+\vspace{1em}
+When deriving the posterior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ug-post}) $p(\mu,\tau|y)$, the joint likelihood $p(y,\mu,\tau)$ is obtained as
+
+\begin{equation} \label{eq:ug-lme-UG-NG-LME-s1}
+\begin{split}
+p(y,\mu,\tau) = \; & \sqrt{\frac{\tau^{n+1} \lambda_0}{(2 \pi)^{n+1}}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \tau^{a_0-1} \exp[-b_0 \tau] \cdot \\
+& \exp\left[ -\frac{\tau \lambda_n}{2} \left( \mu - \mu_n \right)^2 -\frac{\tau}{2} \left( y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \right] \; .
+\end{split}
+\end{equation}
+
+Using the probability density function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf}), we can rewrite this as
+
+\begin{equation} \label{eq:ug-lme-UG-NG-LME-s2}
+\begin{split}
+p(y,\mu,\tau) = \; & \sqrt{\frac{\tau^{n}}{(2 \pi)^{n}}} \sqrt{\frac{\tau \lambda_0}{2 \pi}} \sqrt{\frac{2 \pi}{\tau \lambda_n}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \tau^{a_0-1} \exp[-b_0 \tau] \cdot \\
+& \mathcal{N}(\mu; \mu_n, (\tau \lambda_n)^{-1}) \, \exp\left[ -\frac{\tau}{2} \left( y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \right] \; .
+\end{split}
+\end{equation}
+
+Now, $\mu$ can be integrated out easily:
+
+\begin{equation} \label{eq:ug-lme-UG-NG-LME-s3}
+\begin{split}
+\int p(y,\mu,\tau) \, \mathrm{d}\mu = \; & \sqrt{\frac{1}{(2 \pi)^{n}}} \sqrt{\frac{\lambda_0}{\lambda_n}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \tau^{a_0+n/2-1} \exp[-b_0 \tau] \cdot \\
+& \exp\left[ -\frac{\tau}{2} \left( y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \right] \; .
+\end{split}
+\end{equation}
+
+Using the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}), we can rewrite this as
+
+\begin{equation} \label{eq:ug-lme-UG-NG-LME-s4}
+\int p(y,\mu,\tau) \, \mathrm{d}\mu = \sqrt{\frac{1}{(2 \pi)^{n}}} \sqrt{\frac{\lambda_0}{\lambda_n}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \frac{\Gamma(a_n)}{ {b_n}^{a_n}} \, \mathrm{Gam}(\tau; a_n, b_n) \; .
+\end{equation}
+
+Finally, $\tau$ can also be integrated out:
+
+\begin{equation} \label{eq:ug-lme-UG-NG-LME-s5}
+\iint p(y,\mu,\tau) \, \mathrm{d}\mu \, \mathrm{d}\tau = \sqrt{\frac{1}{(2 \pi)^{n}}} \sqrt{\frac{\lambda_0}{\lambda_n}} \, \frac{\Gamma(a_n)}{\Gamma(a_0)} \, \frac{ {b_0}^{a_0}}{ {b_n}^{a_n}} \; .
+\end{equation}
+
+Thus, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) of this model is given by
+
+\begin{equation} \label{eq:ug-lme-UG-NG-LME-s6}
+\log p(y|m) = - \frac{n}{2} \log (2 \pi)  + \frac{1}{2} \log \frac{\lambda_0}{\lambda_n} + \log \Gamma(a_n) - \log \Gamma(a_0) + a_0 \log b_0 - a_n \log b_n \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop CM (2006): "Bayesian linear regression"; in: \textit{Pattern Recognition for Machine Learning}, pp. 152-161, ex. 3.23, eq. 3.118; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P203 | shortcut: ug-lme | author: JoramSoch | date: 2021-03-03, 10:25.
+\vspace{1em}
+
+
+
+\subsection{Univariate Gaussian with known variance}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:ugkv}
+\setcounter{equation}{0}
+
+\textbf{Definition:} A univariate Gaussian data set with known variance is given by a set of real numbers $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$, independent and identically distributed according to a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) with unknown mean $\mu$ and known variance $\sigma^2$:
+
+\begin{equation} \label{eq:ugkv-ug}
+y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop, Christopher M. (2006): "Bayesian inference for the Gaussian"; in: \textit{Pattern Recognition for Machine Learning}, ch. 2.3.6, p. 97, eq. 2.137; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D136 | shortcut: ugkv | author: JoramSoch | date: 2021-03-23, 16:12.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:ugkv-mle}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let there be univariate Gaussian data with known variance ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$:
+
+\begin{equation} \label{eq:ugkv-mle-ugkv}
+y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+Then, the maximum likelihood estimate ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}) for the mean $\mu$ is given by
+
+\begin{equation} \label{eq:ugkv-mle-ugkv-MLE}
+\hat{\mu} = \bar{y}
+\end{equation}
+
+where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "mean-sample")
+
+\begin{equation} \label{eq:ugkv-mle-y-mean}
+\bar{y} = \frac{1}{n} \sum_{i=1}^n y_i \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) for each observation is given by the probability density function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf})
+
+\begin{equation} \label{eq:ugkv-mle-ugkv-yi}
+p(y_i|\mu) = \mathcal{N}(x; \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \cdot \exp \left[ -\frac{1}{2} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right]
+\end{equation}
+
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
+
+\begin{equation} \label{eq:ugkv-mle-ugkv-LF-s1}
+p(y|\mu) = \prod_{i=1}^n p(y_i|\mu) = \sqrt{ \frac{1}{(2 \pi \sigma^2)^n} } \cdot \exp \left[ -\frac{1}{2} \sum_{i=1}^{n} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right] \; .
+\end{equation}
+
+This can be developed into
+
+\begin{equation} \label{eq:ugkv-mle-ugkv-LF-s2}
+\begin{split}
+p(y|\mu) &= \left( \frac{1}{2 \pi \sigma^2} \right)^{n/2} \cdot \exp \left[ -\frac{1}{2} \sum_{i=1}^{n} \left( \frac{y_i^2 - 2 y_i \mu + \mu^2}{\sigma^2} \right) \right] \\
+&= \left( \frac{1}{2 \pi \sigma^2} \right)^{n/2} \cdot \exp \left[ -\frac{1}{2 \sigma^2} \left( y^\mathrm{T} y - 2 n \bar{y} \mu + n \mu^2 \right) \right]
+\end{split}
+\end{equation}
+
+where $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$ is the mean of data points and $y^\mathrm{T} y = \sum_{i=1}^{n} y_i^2$ is the sum of squared data points.
+
+Thus, the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) is
+
+\begin{equation} \label{eq:ugkv-mle-ugkv-LL}
+\mathrm{LL}(\mu) = \log p(y|\mu) = -\frac{n}{2} \log (2 \pi \sigma^2) - \frac{1}{2 \sigma^2} \left( y^\mathrm{T} y - 2 n \bar{y} \mu + n \mu^2 \right) \; .
+\end{equation}
+
+The derivatives of the log-likelihood with respect to $\mu$ are
+
+\begin{equation} \label{eq:ugkv-mle-ugkv-dLLdl-d2LLdl2}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\mu)}{\mathrm{d}\mu} &= \frac{n \bar{y}}{\sigma^2} - \frac{n \mu}{\sigma^2} = \frac{n}{\sigma^2} (\bar{y}-\mu) \\
+\frac{\mathrm{d}^2\mathrm{LL}(\mu)}{\mathrm{d}\mu^2} &= - \frac{n}{\sigma^2} \; . \\
+\end{split}
+\end{equation}
+
+Setting the first derivative to zero, we obtain:
+
+\begin{equation} \label{eq:ugkv-mle-ugkv-dLLdl}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\mu})}{\mathrm{d}\mu} &= 0 \\
+0 &= \frac{n}{\sigma^2} (\bar{y}-\hat{\mu}) \\
+0 &= \bar{y}-\hat{\mu} \\
+\hat{\mu} &= \bar{y} \\
+\end{split}
+\end{equation}
+
+Plugging this value into the second derivative, we confirm:
+
+\begin{equation} \label{eq:ugkv-mle-ugkv-d2LLdl2}
+\frac{\mathrm{d}^2\mathrm{LL}(\hat{\mu})}{\mathrm{d}\mu^2} = -\frac{n}{\sigma^2} < 0 \; .
+\end{equation}
+
+This demonstrates that the estimate $\hat{\mu} = \bar{y}$ maximizes the likelihood $p(y \vert \mu)$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop, Christopher M. (2006): "Bayesian inference for the Gaussian"; in: \textit{Pattern Recognition for Machine Learning}, ch. 2.3.6, p. 98, eq. 2.143; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P207 | shortcut: ugkv-mle | author: JoramSoch | date: 2021-03-24, 03:48.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{One-sample z-test}]{One-sample z-test} \label{sec:ugkv-ztest1}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-ztest1-ugkv}
+y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Then, the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat})
+
+\begin{equation} \label{eq:ugkv-ztest1-z}
+z = \sqrt{n} \, \frac{\bar{y}-\mu_0}{\sigma}
+\end{equation}
+
+with sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ follows a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
+
+\begin{equation} \label{eq:ugkv-ztest1-z-dist}
+z \sim \mathcal{N}(0, 1)
+\end{equation}
+
+under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})
+
+\begin{equation} \label{eq:ugkv-ztest1-ztest1-h0}
+H_0: \; \mu = \mu_0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The sample mean ($\rightarrow$ Definition "mean-samp") is given by
+
+\begin{equation} \label{eq:ugkv-ztest1-mean-samp}
+\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i \; .
+\end{equation}
+
+Using the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), the additivity of the variance under independence ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-add}) and scaling of the variance upon multiplication ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-scal}), the sample mean follows a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm})
+
+\begin{equation} \label{eq:ugkv-ztest1-mean-samp-dist}
+\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i \sim \mathcal{N}\left( \frac{1}{n} n \mu, \left(\frac{1}{n}\right)^2 n \sigma^2 \right) = \mathcal{N}\left( \mu, \sigma^2/n \right)
+\end{equation}
+
+and additionally using the invariance of the variance under addition ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-inv}), the distribution of $z = \sqrt{n/\sigma^2} (\bar{y}-\mu_0)$ becomes
+
+\begin{equation} \label{eq:ugkv-ztest1-z-dist-s1}
+z = \sqrt{\frac{n}{\sigma^2}} (\bar{y} - \mu_0) \sim \mathcal{N}\left( \sqrt{\frac{n}{\sigma^2}} (\mu - \mu_0), \left(\sqrt{\frac{n}{\sigma^2}}\right)^2 \frac{\sigma^2}{n} \right) = \mathcal{N}\left( \sqrt{n} \, \frac{\mu-\mu_0}{\sigma}, 1 \right) \; ,
+\end{equation}
+
+such that, under the null hypothesis in \eqref{eq:ugkv-ztest1-ztest1-h0}, we have:
+
+\begin{equation} \label{eq:ugkv-ztest1-z-dist-s2}
+z \sim \mathcal{N}(0, 1), \quad \text{if } \mu = \mu_0 \; .
+\end{equation}
+
+This means that the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $z$ is as extreme or more extreme than the critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}) using a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Z-test"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-24; URL: \url{https://en.wikipedia.org/wiki/Z-test#Use_in_location_testing}.
+\item Wikipedia (2021): "Gauß-Test"; in: \textit{Wikipedia – Die freie Enzyklopädie}, retrieved on 2021-03-24; URL: \url{https://de.wikipedia.org/wiki/Gau%C3%9F-Test#Einstichproben-Gau%C3%9F-Test}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P208 | shortcut: ugkv-ztest1 | author: JoramSoch | date: 2021-03-24, 04:23.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Two-sample z-test}]{Two-sample z-test} \label{sec:ugkv-ztest2}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-ztest2-ugkv}
+\begin{split}
+y_{1i} &\sim \mathcal{N}(\mu_1, \sigma_1^2), \quad i = 1, \ldots, n_1 \\
+y_{2i} &\sim \mathcal{N}(\mu_2, \sigma_2^2), \quad i = 1, \ldots, n_2
+\end{split}
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ug}) representing two groups of unequal size $n_1$ and $n_2$ with unknown means $\mu_1$ and $\mu_2$ and unknown variances $\sigma_1^2$ and $\sigma_2^2$. Then, the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat})
+
+\begin{equation} \label{eq:ugkv-ztest2-z}
+z = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}
+\end{equation}
+
+with sample means ($\rightarrow$ Definition "mean-samp") $\bar{y}_1$ and $\bar{y}_2$ follows a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
+
+\begin{equation} \label{eq:ugkv-ztest2-z-dist}
+z \sim \mathcal{N}(0, 1)
+\end{equation}
+
+under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})
+
+\begin{equation} \label{eq:ugkv-ztest2-ztest2-h0}
+H_0: \; \mu_1-\mu_2 = \mu_\Delta \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The sample means ($\rightarrow$ Definition "mean-samp") are given by
+
+\begin{equation} \label{eq:ugkv-ztest2-mean-samp}
+\begin{split}
+\bar{y}_1 &= \frac{1}{n_1} \sum_{i=1}^{n_1} y_{1i} \\
+\bar{y}_2 &= \frac{1}{n_2} \sum_{i=1}^{n_2} y_{2i} \; .
+\end{split}
+\end{equation}
+
+Using the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), the additivity of the variance under independence ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-add}) and scaling of the variance upon multiplication ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-scal}), the sample means follow a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm})
+
+\begin{equation} \label{eq:ugkv-ztest2-mean-samp-dist}
+\begin{split}
+\bar{y}_1 &= \frac{1}{n_1} \sum_{i=1}^{n_1} y_{1i} \sim \mathcal{N}\left( \frac{1}{n_1} n_1 \mu_1, \left(\frac{1}{n_1}\right)^2 n_1 \sigma^2 \right) = \mathcal{N}\left( \mu_1, \sigma_1^2/n_1 \right) \\
+\bar{y}_2 &= \frac{1}{n_2} \sum_{i=1}^{n_2} y_{2i} \sim \mathcal{N}\left( \frac{1}{n_2} n_2 \mu_2, \left(\frac{1}{n_2}\right)^2 n_2 \sigma^2 \right) = \mathcal{N}\left( \mu_2, \sigma_2^2/n_2 \right)
+\end{split}
+\end{equation}
+
+and additionally using the invariance of the variance under addition ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-inv}), the distribution of $z = [(\bar{y}_1-\bar{y}_2)-\mu_\Delta]/\sigma_\Delta$ becomes
+
+\begin{equation} \label{eq:ugkv-ztest2-z-dist-s1}
+z = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{\sigma_\Delta} \sim \mathcal{N}\left( \frac{(\mu_1-\mu_2)-\mu_\Delta}{\sigma_\Delta}, \left(\frac{1}{\sigma_\Delta}\right)^2 \sigma_\Delta^2 \right) = \mathcal{N}\left( \frac{(\mu_1-\mu_2)-\mu_\Delta}{\sigma_\Delta}, 1 \right)
+\end{equation}
+
+where $\sigma_\Delta$ is the pooled standard deviation ($\rightarrow$ Definition "std-pool")
+
+\begin{equation} \label{eq:ugkv-ztest2-std-pool}
+\sigma_\Delta = \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}} \; ,
+\end{equation}
+
+such that, under the null hypothesis in \eqref{eq:ugkv-ztest2-ztest2-h0}, we have:
+
+\begin{equation} \label{eq:ugkv-ztest2-z-dist-s2}
+z \sim \mathcal{N}(0, 1), \quad \text{if } \mu_\Delta = \mu_1-\mu_2 \; .
+\end{equation}
+
+This means that the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $z$ is as extreme or more extreme than the critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}) using a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Z-test"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-24; URL: \url{https://en.wikipedia.org/wiki/Z-test#Use_in_location_testing}.
+\item Wikipedia (2021): "Gauß-Test"; in: \textit{Wikipedia – Die freie Enzyklopädie}, retrieved on 2021-03-24; URL: \url{https://de.wikipedia.org/wiki/Gau%C3%9F-Test#Zweistichproben-Gau%C3%9F-Test_f%C3%BCr_unabh%C3%A4ngige_Stichproben}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P209 | shortcut: ugkv-ztest2 | author: JoramSoch | date: 2021-03-24, 04:38.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Paired z-test}]{Paired z-test} \label{sec:ugkv-ztestp}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $y_{i1}$ and $y_{i2}$ with $i = 1, \ldots, n$ be paired observations, such that
+
+\begin{equation} \label{eq:ugkv-ztestp-ugkv}
+y_{i1} \sim \mathcal{N}(y_{i2} + \mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+is a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown shift $\mu$ and known variance $\sigma^2$. Then, the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat})
+
+\begin{equation} \label{eq:ugkv-ztestp-z}
+z = \sqrt{n} \, \frac{\bar{d}-\mu_0}{\sigma} \quad \text{where} \quad d_i = y_{i1} - y_{i2}
+\end{equation}
+
+with sample mean ($\rightarrow$ Definition "mean-samp") $\bar{d}$ follows a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
+
+\begin{equation} \label{eq:ugkv-ztestp-z-dist}
+z \sim \mathcal{N}(0, 1)
+\end{equation}
+
+under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})
+
+\begin{equation} \label{eq:ugkv-ztestp-ztestp-h0}
+H_0: \; \mu = \mu_0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Define the pair-wise difference $d_i = y_{i1} - y_{i2}$ which is, according to the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}) and the invariance of the variance under addition ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-inv}), distributed as
+
+\begin{equation} \label{eq:ugkv-ztestp-d-dist}
+d_i = y_{i1} - y_{i2} \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+Therefore, $d_1, \ldots, d_n$ satisfy the conditions of the one-sample z-test ($\rightarrow$ Proof "ug-ztest1") which results in the test statistic given by \eqref{eq:ugkv-ztestp-z}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Z-test"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-24; URL: \url{https://en.wikipedia.org/wiki/Z-test#Use_in_location_testing}.
+\item Wikipedia (2021): "Gauß-Test"; in: \textit{Wikipedia – Die freie Enzyklopädie}, retrieved on 2021-03-24; URL: \url{https://de.wikipedia.org/wiki/Gau%C3%9F-Test#Zweistichproben-Gau%C3%9F-Test_f%C3%BCr_abh%C3%A4ngige_(verbundene)_Stichproben}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P210 | shortcut: ugkv-ztestp | author: JoramSoch | date: 2021-03-24, 05:10.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:ugkv-prior}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-prior-ugkv}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Then, the conjugate prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior-conj}) for this model is a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm})
+
+\begin{equation} \label{eq:ugkv-prior-UGkv-prior}
+p(\mu) = \mathcal{N}(\mu; \mu_0, \lambda_0^{-1})
+\end{equation}
+
+with prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu_0$ and prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) precision ($\rightarrow$ Definition "prec") $\lambda_0$.
+
+
+\vspace{1em}
+\textbf{Proof:} By definition, a conjugate prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior-conj}) is a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) that, when combined with the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}), leads to a posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) that belongs to the same family of probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}). This is fulfilled when the prior density and the likelihood function are proportional to the model model parameters in the same way, i.e. the model parameters appear in the same functional form in both.
+
+Equation \eqref{eq:ugkv-prior-ugkv} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:ugkv-prior-UGkv-LF-class}
+\begin{split}
+p(y|\mu) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \sigma^2) \\
+&= \prod_{i=1}^{n} \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp\left[ -\frac{1}{2} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right] \\
+&= \left( \sqrt{\frac{1}{2 \pi \sigma^2}} \right)^n \cdot \exp\left[ -\frac{1}{2 \sigma^2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+which, for mathematical convenience, can also be parametrized as
+
+\begin{equation} \label{eq:ugkv-prior-UGkv-LF-Bayes}
+\begin{split}
+p(y|\mu) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \tau^{-1}) \\
+&= \prod_{i=1}^{n} \sqrt{\frac{\tau}{2 \pi}} \cdot \exp\left[ -\frac{\tau}{2} \left( y_i-\mu \right)^2 \right] \\
+&= \left( \sqrt{\frac{\tau}{2 \pi}} \right)^n \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+using the inverse variance or precision $\tau = 1/\sigma^2$.
+
+\vspace{1em}
+Expanding the product in the exponent, we have
+
+\begin{equation} \label{eq:ugkv-prior-UGkv-LF-s2}
+\begin{split}
+p(y|\mu) &= \left( \frac{\tau}{2 \pi} \right)^{n/2} \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i^2 - 2 \mu y_i + \mu^2 \right) \right] \\
+&= \left( \frac{\tau}{2 \pi} \right)^{n/2} \cdot \exp\left[ -\frac{\tau}{2} \left( \sum_{i=1}^{n} y_i^2 - 2 \mu \sum_{i=1}^{n} y_i + n \mu^2 \right) \right] \\
+&= \left( \frac{\tau}{2 \pi} \right)^{n/2} \cdot \exp\left[ -\frac{\tau}{2} \left( y^\mathrm{T} y - 2 \mu n \bar{y} + n \mu^2 \right) \right] \\
+&= \left( \frac{\tau}{2 \pi} \right)^{n/2} \cdot \exp\left[ -\frac{\tau n}{2} \left( \frac{1}{n} y^\mathrm{T} y - 2 \mu \bar{y} + \mu^2 \right) \right]
+\end{split}
+\end{equation}
+
+where $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$ is the mean of data points and $y^\mathrm{T} y = \sum_{i=1}^{n} y_i^2$ is the sum of squared data points.
+
+Completing the square over $\mu$, finally gives
+
+\begin{equation} \label{eq:ugkv-prior-UGkv-LF-s3}
+p(y|\mu) = \left( \frac{\tau}{2 \pi} \right)^{n/2} \cdot \exp\left[ -\frac{\tau n}{2} \left( (\mu-\bar{y})^2 - \bar{y}^2 + \frac{1}{n} y^\mathrm{T} y \right) \right]
+\end{equation}
+
+\vspace{1em}
+In other words, the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) is proportional to an exponential of a squared form of $\mu$, weighted by some constant:
+
+\begin{equation} \label{eq:ugkv-prior-UGkv-LF-s4}
+p(y|\mu) \propto \exp\left[ -\frac{\tau n}{2} \left( \mu-\bar{y} \right)^2 \right] \; .
+\end{equation}
+
+The same is true for a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) over $\mu$
+
+\begin{equation} \label{eq:ugkv-prior-UGkv-prior-s1}
+p(\mu) = \mathcal{N}(\mu; \mu_0, \lambda_0^{-1})
+\end{equation}
+
+the probability density function of which ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf})
+
+\begin{equation} \label{eq:ugkv-prior-UGkv-prior-s2}
+p(\mu) = \sqrt{\frac{\lambda_0}{2 \pi}} \cdot \exp\left[ -\frac{\lambda_0}{2} \left( \mu-\mu_0 \right)^2 \right]
+\end{equation}
+
+exhibits the same proportionality
+
+\begin{equation} \label{eq:ugkv-prior-UGkv-prior-s3}
+p(\mu) \propto \exp\left[ -\frac{\lambda_0}{2} \left( \mu-\mu_0 \right)^2 \right]
+\end{equation}
+
+and is therefore conjugate relative to the likelihood.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop, Christopher M. (2006): "Bayesian inference for the Gaussian"; in: \textit{Pattern Recognition for Machine Learning}, ch. 2.3.6, pp. 97-98, eq. 2.138; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P211 | shortcut: ugkv-prior | author: JoramSoch | date: 2021-03-24, 05:57.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:ugkv-post}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-post-ugkv}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Moreover, assume a normal distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) over the model parameter $\mu$:
+
+\begin{equation} \label{eq:ugkv-post-UGkv-prior}
+p(\mu) = \mathcal{N}(\mu; \mu_0, \lambda_0^{-1}) \; .
+\end{equation}
+
+Then, the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) is also a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm})
+
+\begin{equation} \label{eq:ugkv-post-UGkv-post}
+p(\mu|y) = \mathcal{N}(\mu; \mu_n, \lambda_n^{-1})
+\end{equation}
+
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:ugkv-post-UGkv-post-par}
+\begin{split}
+\mu_n &= \frac{\lambda_0 \mu_0 + \tau n \bar{y}}{\lambda_0 + \tau n} \\
+\lambda_n &= \lambda_0 + \tau n
+\end{split}
+\end{equation}
+
+with the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$.
+
+
+\vspace{1em}
+\textbf{Proof:} According to Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) is given by
+
+\begin{equation} \label{eq:ugkv-post-UGkv-BT}
+p(\mu|y) = \frac{p(y|\mu) \, p(\mu)}{p(y)} \; .
+\end{equation}
+
+Since $p(y)$ is just a normalization factor, the posterior is proportional ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:post-jl}) to the numerator:
+
+\begin{equation} \label{eq:ugkv-post-UGkv-post-JL}
+p(\mu|y) \propto p(y|\mu) \, p(\mu) = p(y,\mu) \; .
+\end{equation}
+
+Equation \eqref{eq:ugkv-post-ugkv} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:ugkv-post-UGkv-LF-class}
+\begin{split}
+p(y|\mu) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \sigma^2) \\
+&= \prod_{i=1}^{n} \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp\left[ -\frac{1}{2} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right] \\
+&= \left( \sqrt{\frac{1}{2 \pi \sigma^2}} \right)^n \cdot \exp\left[ -\frac{1}{2 \sigma^2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+which, for mathematical convenience, can also be parametrized as
+
+\begin{equation} \label{eq:ugkv-post-UGkv-LF-Bayes}
+\begin{split}
+p(y|\mu) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \tau^{-1}) \\
+&= \prod_{i=1}^{n} \sqrt{\frac{\tau}{2 \pi}} \cdot \exp\left[ -\frac{\tau}{2} \left( y_i-\mu \right)^2 \right] \\
+&= \left( \sqrt{\frac{\tau}{2 \pi}} \right)^n \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+using the inverse variance or precision $\tau = 1/\sigma^2$.
+
+\vspace{1em}
+Combining the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) \eqref{eq:ugkv-post-UGkv-LF-Bayes} with the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) \eqref{eq:ugkv-post-UGkv-prior}, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) of the model is given by
+
+\begin{equation} \label{eq:ugkv-post-UGkv-JL-s1}
+\begin{split}
+p(y,\mu) = \; & p(y|\mu) \, p(\mu) \\
+= \; & \left( \sqrt{\frac{\tau}{2 \pi}} \right)^n \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right] \cdot \sqrt{\frac{\lambda_0}{2 \pi}} \cdot \exp\left[ -\frac{\lambda_0}{2} \left( \mu-\mu_0 \right)^2 \right] \; .
+\end{split}
+\end{equation}
+
+Rearranging the terms, we then have:
+
+\begin{equation} \label{eq:ugkv-post-UGkv-JL-s2}
+p(y,\mu) = \left( \frac{\tau}{2 \pi} \right)^{n/2} \cdot \sqrt{\frac{\lambda_0}{2 \pi}} \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 - \frac{\lambda_0}{2} \left( \mu-\mu_0 \right)^2 \right] \; .
+\end{equation}
+
+Expanding the products in the exponent ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) gives
+
+\begin{equation} \label{eq:ugkv-post-UGkv-JL-s3}
+\begin{split}
+p(y,\mu) &= \left( \frac{\tau}{2 \pi} \right)^\frac{n}{2} \cdot \left( \frac{\lambda_0}{2 \pi} \right)^\frac{1}{2} \cdot \exp \left[ -\frac{1}{2} \left( \sum_{i=1}^n \tau (y_i-\mu)^2 + \lambda_0 (\mu-\mu_0)^2 \right) \right] \\
+&= \left( \frac{\tau}{2 \pi} \right)^\frac{n}{2} \cdot \left( \frac{\lambda_0}{2 \pi} \right)^\frac{1}{2} \cdot \exp \left[ -\frac{1}{2} \left( \sum_{i=1}^n \tau (y_i^2 - 2 y_i \mu + \mu^2) + \lambda_0 (\mu^2 - 2 \mu \mu_0 + \mu_0^2) \right) \right] \\
+&= \left( \frac{\tau}{2 \pi} \right)^\frac{n}{2} \cdot \left( \frac{\lambda_0}{2 \pi} \right)^\frac{1}{2} \cdot \exp \left[ -\frac{1}{2} \left( \tau (y^\mathrm{T} y - 2 n \bar{y} \mu + n \mu^2) + \lambda_0 (\mu^2 - 2 \mu \mu_0 + \mu_0^2) \right) \right] \\
+&= \left( \frac{\tau}{2 \pi} \right)^\frac{n}{2} \cdot \left( \frac{\lambda_0}{2 \pi} \right)^\frac{1}{2} \cdot \exp \left[ -\frac{1}{2} \left( \mu^2 (\tau n + \lambda_0) - 2 \mu (\tau n \bar{y} + \lambda_0 \mu_0) + (\tau y^\mathrm{T} y + \lambda_0 \mu_0^2) \right) \right] \\
+\end{split}
+\end{equation}
+
+where $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$ and $y^\mathrm{T} y = \sum_{i=1}^{n} y_i^2$. Completing the square in $\mu$ then yields
+
+\begin{equation} \label{eq:ugkv-post-UGkv-JL-s4}
+p(y,\mu) = \left( \frac{\tau}{2 \pi} \right)^\frac{n}{2} \cdot \left( \frac{\lambda_0}{2 \pi} \right)^\frac{1}{2} \cdot \exp \left[ -\frac{\lambda_n}{2} (\mu - \mu_n)^2 + f_n \right]
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:ugkv-post-UGkv-post-mu-par}
+\begin{split}
+\mu_n &= \frac{\lambda_0 \mu_0 + \tau n \bar{y}}{\lambda_0 + \tau n} \\
+\lambda_n &= \lambda_0 + \tau n
+\end{split}
+\end{equation}
+
+and the remaining independent term
+
+\begin{equation} \label{eq:ugkv-post-UGkv-JL-fn}
+f_n = -\frac{1}{2} \left( \tau y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \; .
+\end{equation}
+
+Ergo, the joint likelihood in \eqref{eq:ugkv-post-UGkv-JL-s4} is proportional to
+
+\begin{equation} \label{eq:ugkv-post-UGkv-JL-s5}
+p(y,\mu) \propto \exp \left[ -\frac{\lambda_n}{2} (\mu - \mu_n)^2 \right] \; ,
+\end{equation}
+
+such that the posterior distribution over $\mu$ is given by
+
+\begin{equation} \label{eq:ugkv-post-UGkv-post-mu}
+p(\mu|y) = \mathcal{N}(\mu; \mu_n, \lambda_n^{-1}) \; .
+\end{equation}
+
+with the posterior hyperparameters given in \eqref{eq:ugkv-post-UGkv-post-mu-par}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop, Christopher M. (2006): "Bayesian inference for the Gaussian"; in: \textit{Pattern Recognition for Machine Learning}, ch. 2.3.6, p. 98, eqs. 2.139-2.142; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P212 | shortcut: ugkv-post | author: JoramSoch | date: 2021-03-24, 06:10.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:ugkv-lme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-lme-ug}
+m: \; y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Moreover, assume a normal distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) over the model parameter $\mu$:
+
+\begin{equation} \label{eq:ugkv-lme-UGkv-prior}
+p(\mu) = \mathcal{N}(\mu; \mu_0, \lambda_0^{-1}) \; .
+\end{equation}
+
+Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) for this model is
+
+\begin{equation} \label{eq:ugkv-lme-UGkv-LME}
+\log p(y|m) = \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) + \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \tau y^T y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \; .
+\end{equation}
+
+where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:ugkv-lme-UGkv-post-par}
+\begin{split}
+\mu_n &= \frac{\lambda_0 \mu_0 + \tau n \bar{y}}{\lambda_0 + \tau n} \\
+\lambda_n &= \lambda_0 + \tau n
+\end{split}
+\end{equation}
+
+with the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$.
+
+
+\vspace{1em}
+\textbf{Proof:} According to the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), the model evidence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) for this model is:
+
+\begin{equation} \label{eq:ugkv-lme-UGkv-ME-s1}
+p(y|m) = \int p(y|\mu) \, p(\mu) \, \mathrm{d}\mu \; .
+\end{equation}
+
+According to the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}), the integrand is equivalent to the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}):
+
+\begin{equation} \label{eq:ugkv-lme-UGkv-ME-s2}
+p(y|m) = \int p(y,\mu) \, \mathrm{d}\mu \; .
+\end{equation}
+
+Equation \eqref{eq:ugkv-lme-ug} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:ugkv-lme-UG-LF-class}
+\begin{split}
+p(y|\mu,\sigma^2) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \sigma^2) \\
+&= \prod_{i=1}^{n} \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp\left[ -\frac{1}{2} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right] \\
+&= \left( \sqrt{\frac{1}{2 \pi \sigma^2}} \right)^n \cdot \exp\left[ -\frac{1}{2 \sigma^2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+which, for mathematical convenience, can also be parametrized as
+
+\begin{equation} \label{eq:ugkv-lme-UG-LF-Bayes}
+\begin{split}
+p(y|\mu,\tau) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \tau^{-1}) \\
+&= \prod_{i=1}^{n} \sqrt{\frac{\tau}{2 \pi}} \cdot \exp\left[ -\frac{\tau}{2} \left( y_i-\mu \right)^2 \right] \\
+&= \left( \sqrt{\frac{\tau}{2 \pi}} \right)^n \cdot \exp\left[ -\frac{\tau}{2} \sum_{i=1}^{n} \left( y_i-\mu \right)^2 \right]
+\end{split}
+\end{equation}
+
+using the inverse variance or precision $\tau = 1/\sigma^2$.
+
+\vspace{1em}
+When deriving the posterior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}) $p(\mu|y)$, the joint likelihood $p(y,\mu)$ is obtained as
+
+\begin{equation} \label{eq:ugkv-lme-UGkv-LME-s1}
+p(y,\mu) = \left( \frac{\tau}{2 \pi} \right)^\frac{n}{2} \cdot \sqrt{\frac{\lambda_0}{2 \pi}} \cdot \exp \left[ -\frac{\lambda_n}{2} (\mu - \mu_n)^2 -\frac{1}{2} \left( \tau y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \right] \; .
+\end{equation}
+
+Using the probability density function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf}), we can rewrite this as
+
+\begin{equation} \label{eq:ugkv-lme-UGkv-LME-s2}
+p(y,\mu) =  \left( \frac{\tau}{2 \pi} \right)^\frac{n}{2} \cdot \sqrt{\frac{\lambda_0}{2 \pi}} \cdot \sqrt{\frac{2 \pi}{\lambda_n}} \cdot \mathcal{N}(\mu; \lambda_n^{-1}) \cdot \exp \left[ -\frac{1}{2} \left( \tau y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \right] \; .
+\end{equation}
+
+Now, $\mu$ can be integrated out using the properties of the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}):
+
+\begin{equation} \label{eq:ugkv-lme-UGkv-LME-s3}
+p(y|m) = \int p(y,\mu) \, \mathrm{d}\mu = \left( \frac{\tau}{2 \pi} \right)^\frac{n}{2} \cdot \sqrt{\frac{\lambda_0}{\lambda_n}} \cdot \exp \left[ -\frac{1}{2} \left( \tau y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \right] \; .
+\end{equation}
+
+Thus, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) of this model is given by
+
+\begin{equation} \label{eq:ugkv-lme-UGkv-LME-s4}
+\log p(y|m) = \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) + \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \tau y^T y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P213 | shortcut: ugkv-lme | author: JoramSoch | date: 2021-03-24, 06:45.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Accuracy and complexity}]{Accuracy and complexity} \label{sec:ugkv-anc}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-anc-ugkv}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Moreover, assume a statistical model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) imposing a normal distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) as the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on the model parameter $\mu$:
+
+\begin{equation} \label{eq:ugkv-anc-m}
+m: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu \sim \mathcal{N}(\mu_0, \lambda_0^{-1}) \; .
+\end{equation}
+
+Then, accuracy and complexity ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:lme-anc}) of this model are
+
+\begin{equation} \label{eq:ugkv-anc-UGkv-anc}
+\begin{split}
+\mathrm{Acc}(m) &= \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) - \frac{1}{2} \left[ \tau y^\mathrm{T} y - 2 \, \tau n \bar{y} \mu_n + \tau n \mu_n^2 + \frac{\tau n}{\lambda_n} \right] \\
+\mathrm{Com}(m) &= \frac{1}{2} \left[ \frac{\lambda_0}{\lambda_n} + \lambda_0 (\mu_0 - \mu_n)^2 - 1 + \log\left( \frac{\lambda_0}{\lambda_n} \right) \right]
+\end{split}
+\end{equation}
+
+where $\mu_n$ and $\lambda_n$ are the posterior hyperparameters for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}), $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition "prec") and $\bar{y}$ is the sample mean ($\rightarrow$ Definition "mean-samp").
+
+
+\vspace{1em}
+\textbf{Proof:} Model accuracy and complexity are defined as ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:lme-anc})
+
+\begin{equation} \label{eq:ugkv-anc-lme-anc}
+\begin{split}
+\mathrm{LME}(m) &= \mathrm{Acc}(m) - \mathrm{Com}(m) \\
+\mathrm{Acc}(m) &= \left\langle \log p(y|\mu,m) \right\rangle_{p(\mu|y,m)} \\
+\mathrm{Com}(m) &= \mathrm{KL} \left[ p(\mu|y,m) \, || \, p(\mu|m) \right] \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+The accuracy term is the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) $\log p(y|\mu)$ with respect to the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) $p(\mu|y)$. With the log-likelihood function for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-mle}) and the posterior distribution for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}), the model accuracy of $m$ evaluates to:
+
+\begin{equation} \label{eq:ugkv-anc-UGkv-Acc}
+\begin{split}
+\mathrm{Acc}(m) &= \left\langle \log p(y|\mu) \right\rangle_{p(\mu|y)} \\
+&= \left\langle \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) - \frac{\tau}{2} \left( y^\mathrm{T} y - 2 n \bar{y} \mu + n \mu^2 \right) \right\rangle_{\mathcal{N}(\mu_n, \lambda_n^{-1})} \\
+&= \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) - \frac{1}{2} \left[ \tau y^\mathrm{T} y - 2 \tau n \bar{y} \mu_n + \tau n \mu_n^2 + \frac{\tau n}{\lambda_n} \right] \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+The complexity penalty is the Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) of the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) $p(\mu|y)$ from the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) $p(\mu)$. With the prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) given by \eqref{eq:ugkv-anc-m}, the posterior distribution for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}) and the Kullback-Leibler divergence of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-kl}), the model complexity of $m$ evaluates to:
+
+\begin{equation} \label{eq:ugkv-anc-UGkv-Com}
+\begin{split}
+\mathrm{Com}(m) &= \mathrm{KL} \left[ p(\mu|y) \, || \, p(\mu) \right] \\
+&= \mathrm{KL} \left[ \mathcal{N}(\mu_n, \lambda_n^{-1}) \, || \, \mathcal{N}(\mu_0, \lambda_0^{-1}) \right] \\
+&= \frac{1}{2} \left[ \frac{\lambda_0}{\lambda_n} + \lambda_0 (\mu_0 - \mu_n)^2 - 1 + \log\left( \frac{\lambda_0}{\lambda_n} \right) \right] \; .
+\end{split}
+\end{equation}
+
+A control calculation confirms that
+
+\begin{equation} \label{eq:ugkv-anc-UGkv-anc-lme}
+\mathrm{Acc}(m) - \mathrm{Com}(m) = \mathrm{LME}(m)
+\end{equation}
+
+where $\mathrm{LME}(m)$ is the log model evidence for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-lme}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P214 | shortcut: ugkv-anc | author: JoramSoch | date: 2021-03-24, 07:49.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Log Bayes factor}]{Log Bayes factor} \label{sec:ugkv-lbf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-lbf-ugkv}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Moreover, assume two statistical models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), one assuming that $\mu$ is zero (null model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})), the other imposing a normal distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) as the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on the model parameter $\mu$ (alternative ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1})):
+
+\begin{equation} \label{eq:ugkv-lbf-UGkv-m01}
+\begin{split}
+m_0&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu = 0 \\
+m_1&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu \sim \mathcal{N}(\mu_0, \lambda_0^{-1}) \; .
+\end{split}
+\end{equation}
+
+Then, the log Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) in favor of $m_1$ against $m_0$ is
+
+\begin{equation} \label{eq:ugkv-lbf-UGkv-LBF}
+\mathrm{LBF}_{10} = \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right)
+\end{equation}
+
+where $\mu_n$ and $\lambda_n$ are the posterior hyperparameters for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}) which are functions of the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$ and the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$.
+
+
+\vspace{1em}
+\textbf{Proof:} The log Bayes factor is equal to the difference of two log model evidences ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:lbf-lme}):
+
+\begin{equation} \label{eq:ugkv-lbf-LBF-LME}
+\mathrm{LBF}_{12} = \mathrm{LME}(m_1) - \mathrm{LME}(m_2) \; .
+\end{equation}
+
+The LME of the alternative $m_1$ is equal to the log model evidence for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-lme}):
+
+\begin{equation} \label{eq:ugkv-lbf-UGkv-LME-m1}
+\mathrm{LME}(m_1) = \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) + \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \tau y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \; .
+\end{equation}
+
+Because the null model $m_0$ has no free parameter, its log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) (logarithmized marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml})) is equal to the log-likelihood function for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-mle}) at the value $\mu = 0$:
+
+\begin{equation} \label{eq:ugkv-lbf-UGkv-LME-m0}
+\mathrm{LME}(m_0) = \log p(y|\mu=0) = \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) - \frac{1}{2} \left( \tau y^\mathrm{T} y \right) \; .
+\end{equation}
+
+Subtracting the two LMEs from each other, the LBF emerges as
+
+\begin{equation} \label{eq:ugkv-lbf-UGkv-LBF-m10}
+\mathrm{LBF}_{10} = \mathrm{LME}(m_1) - \mathrm{LME}(m_0) = \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right)
+\end{equation}
+
+where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post})
+
+\begin{equation} \label{eq:ugkv-lbf-UGkv-post-par}
+\begin{split}
+\mu_n &= \frac{\lambda_0 \mu_0 + \tau n \bar{y}}{\lambda_0 + \tau n} \\
+\lambda_n &= \lambda_0 + \tau n
+\end{split}
+\end{equation}
+
+with the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P215 | shortcut: ugkv-lbf | author: JoramSoch | date: 2021-03-24, 09:05.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Expectation of log Bayes factor}]{Expectation of log Bayes factor} \label{sec:ugkv-lbfmean}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-lbfmean-ugkv}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Moreover, assume two statistical models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), one assuming that $\mu$ is zero (null model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})), the other imposing a normal distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) as the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on the model parameter $\mu$ (alternative ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1})):
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-m01}
+\begin{split}
+m_0&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu = 0 \\
+m_1&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu \sim \mathcal{N}(\mu_0, \lambda_0^{-1}) \; .
+\end{split}
+\end{equation}
+
+Then, under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) that $m_0$ generated the data, the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the log Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) in favor of $m_1$ with $\mu_0 = 0$ against $m_0$ is
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-LBF}
+\left\langle \mathrm{LBF}_{10} \right\rangle = \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) + \frac{1}{2} \left( \frac{\lambda_n - \lambda_0}{\lambda_n} \right)
+\end{equation}
+
+where $\lambda_n$ is the posterior precision for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}).
+
+
+\vspace{1em}
+\textbf{Proof:} The log Bayes factor for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-lbf}) is
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-LBF-m10-s1}
+\mathrm{LBF}_{10} = \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right)
+\end{equation}
+
+where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post})
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-post-par}
+\begin{split}
+\mu_n &= \frac{\lambda_0 \mu_0 + \tau n \bar{y}}{\lambda_0 + \tau n} \\
+\lambda_n &= \lambda_0 + \tau n
+\end{split}
+\end{equation}
+
+with the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$. Plugging $\mu_n$ from \eqref{eq:ugkv-lbfmean-UGkv-post-par} into \eqref{eq:ugkv-lbfmean-UGkv-LBF-m10-s1}, we obtain:
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-LBF-m10-s2}
+\begin{split}
+\mathrm{LBF}_{10} &= \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \lambda_0 \mu_0^2 - \lambda_n \, \frac{(\lambda_0 \mu_0 + \tau n \bar{y})^2}{\lambda_n^2} \right) \\
+&= \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \lambda_0 \mu_0^2 - \frac{1}{\lambda_n} (\lambda_0^2 \mu_0^2 - 2 \tau n \lambda_0 \mu_0 \bar{y} + \tau^2 (n \bar{y})^2) \right)
+\end{split}
+\end{equation}
+
+Because $m_1$ uses a zero-mean prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) with prior mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu_0 = 0$ per construction, the log Bayes factor simplifies to:
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-LBF-m10-s3}
+\mathrm{LBF}_{10} = \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) + \frac{1}{2} \left( \frac{\tau^2 (n \bar{y})^2}{\lambda_n} \right) \; .
+\end{equation}
+
+From \eqref{eq:ugkv-lbfmean-ugkv}, we know that the data are distributed as $y_i \sim \mathcal{N}(\mu, \sigma^2)$, such that we can derive the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $(n \bar{y})^2$ as follows:
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-E(ny2)}
+\begin{split}
+\left\langle (n \bar{y})^2 \right\rangle = \left\langle \sum_{i=1}^n \sum_{j=1}^n y_i y_j \right\rangle &= \left\langle n y_i^2 + (n^2-n) [y_i y_j]_{i \neq j} \right\rangle \\
+&= n (\mu^2 + \sigma^2) + (n^2 - n) \mu^2 \\
+&= n^2 \mu^2 + n \sigma^2 \; .
+\end{split}
+\end{equation}
+
+Applying this expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) to \eqref{eq:ugkv-lbfmean-UGkv-LBF-m10-s3}, the expected LBF emerges as:
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-LBF-m10-s4}
+\begin{split}
+\left\langle \mathrm{LBF}_{10} \right\rangle &= \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) + \frac{1}{2} \left( \frac{\tau^2 (n^2 \mu^2 + n \sigma^2)}{\lambda_n} \right) \\
+&= \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) + \frac{1}{2} \left( \frac{(\tau n \mu)^2 + \tau n}{\lambda_n} \right)
+\end{split}
+\end{equation}
+
+Under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) that $m_0$ generated the data, the unknown mean is $\mu = 0$, such that the log Bayes factor further simplifies to:
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-LBF-m10-s5}
+\left\langle \mathrm{LBF}_{10} \right\rangle = \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) + \frac{1}{2} \left( \frac{\tau n}{\lambda_n} \right) \; .
+\end{equation}
+
+Finally, plugging $\lambda_n$ from \eqref{eq:ugkv-lbfmean-UGkv-post-par} into \eqref{eq:ugkv-lbfmean-UGkv-LBF-m10-s5}, we obtain:
+
+\begin{equation} \label{eq:ugkv-lbfmean-UGkv-LBF-m10-s6}
+\left\langle \mathrm{LBF}_{10} \right\rangle = \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) + \frac{1}{2} \left( \frac{\lambda_n - \lambda_0}{\lambda_n} \right) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P216 | shortcut: ugkv-lbfmean | author: JoramSoch | date: 2021-03-24, 10:03.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Cross-validated log model evidence}]{Cross-validated log model evidence} \label{sec:ugkv-cvlme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-cvlme-ugkv}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Moreover, assume two statistical models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), one assuming that $\mu$ is zero (null model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})), the other imposing a normal distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) as the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on the model parameter $\mu$ (alternative ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1})):
+
+\begin{equation}\label{eq:ugkv-cvlme-UGkv-m01}
+\begin{split}
+m_0&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu = 0 \\
+m_1&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu \sim \mathcal{N}(\mu_0, \lambda_0^{-1}) \; .
+\end{split}
+\end{equation}
+
+Then, the cross-validated log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}) of $m_0$ and $m_1$ are
+
+\begin{equation} \label{eq:ugkv-cvlme-UGkv-cvLME-m01}
+\begin{split}
+\mathrm{cvLME}(m_0) &= \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) - \frac{1}{2} \left( \tau y^\mathrm{T} y \right) \\
+\mathrm{cvLME}(m_1) &= \frac{n}{2} \log \left( \frac{\tau}{2 \pi} \right) + \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \left[ y^\mathrm{T} y + \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right) \right]
+\end{split}
+\end{equation}
+
+where $\bar{y}$ is the sample mean ($\rightarrow$ Definition "mean-samp"), $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition "prec"), $y_1^{(i)}$ are the training data in the $i$-th cross-validation fold and $S$ is the number of data subsets ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}).
+
+
+\vspace{1em}
+\textbf{Proof:} For evaluation of the cross-validated log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}) (cvLME), we assume that $n$ data points are divided into $S \mid n$ data subsets without remainder. Then, the number of training data points $n_1$ and test data points $n_2$ are given by
+
+\begin{equation} \label{eq:ugkv-cvlme-CV-n12}
+\begin{split}
+n &= n_1 + n_2 \\
+n_1 &= \frac{S-1}{S} n \\
+n_2 &= \frac{1}{S} n \; ,
+\end{split}
+\end{equation}
+
+such that training data $y_1$ and test data $y_2$ in the $i$-th cross-validation fold are
+
+\begin{equation} \label{eq:ugkv-cvlme-CV-y12}
+\begin{split}
+y &= \left\lbrace y_1, \ldots, y_n \right\rbrace \\
+y_1^{(i)} &= \left\lbrace x \in y \mid x \notin y_2^{(i)} \right\rbrace = y \backslash y_2^{(i)} \\
+y_2^{(i)} &= \left\lbrace y_{(i-1) \cdot n_2 + 1}, \ldots, y_{i \cdot n_2} \right\rbrace \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+First, we consider the null model $m_0$ assuming $\mu = 0$. Because this model has no free parameter, nothing is estimated from the training data and the assumed parameter value is applied to the test data. Consequently, the out-of-sample log model evidence ($\rightarrow$ Definition "ooslme") (oosLME) is equal to the log-likelihood function ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-mle}) of the test data at $\mu = 0$:
+
+\begin{equation} \label{eq:ugkv-cvlme-UGkv-m0-oosLME}
+\mathrm{oosLME}_i(m_0) = \log p\left( \left. y_2^{(i)} \right| \mu=0 \right) = \frac{n_2}{2} \log \left( \frac{\tau}{2 \pi} \right) - \frac{1}{2} \left[ \tau {y_2^{(i)}}^\mathrm{T} y_2^{(i)} \right] \; .
+\end{equation}
+
+By definition, the cross-validated log model evidence is the sum of out-of-sample log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}) over cross-validation folds, such that the cvLME of $m_0$ is:
+
+\begin{equation} \label{eq:ugkv-cvlme-UGkv-m0-cvLME}
+\begin{split}
+\mathrm{cvLME}(m_0) &= \sum_{i=1}^S \mathrm{oosLME}_i(m_0) \\
+&= \sum_{i=1}^S \left( \frac{n_2}{2} \log \left( \frac{\tau}{2 \pi} \right) - \frac{1}{2} \left[ \tau {y_2^{(i)}}^\mathrm{T} y_2^{(i)} \right] \right) \\
+&= \frac{n}{2} \log \left( \frac{\tau}{2 \pi} \right) - \frac{1}{2} \left[ \tau y^\mathrm{T} y \right] \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+Next, we have a look at the alternative $m_1$ assuming $\mu \neq 0$. First, the training data $y_1^{(i)}$ are analyzed using a non-informative prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior-inf}) and applying the posterior distribution for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}):
+
+\begin{equation} \label{eq:ugkv-cvlme-UGkv-m1-y1}
+\begin{split}
+\mu_0^{(1)} &= 0 \\
+\lambda_0^{(1)} &= 0 \\
+\mu_n^{(1)} &= \frac{\tau n_1 \bar{y}_1^{(i)} + \lambda_0^{(1)} \mu_0^{(1)}}{\tau n_1 + \lambda_0^{(1)}} = \bar{y}_1^{(i)} \\
+\lambda_n^{(1)} &= \tau n_1 + \lambda_0^{(1)} = \tau n_1 \; .
+\end{split}
+\end{equation}
+
+This results in a posterior characterized by $\mu_n^{(1)}$ and $\lambda_n^{(1)}$. Then, the test data $y_2^{(i)}$ are analyzed using this posterior as an informative prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior-inf}), again applying the posterior distribution for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}):
+
+\begin{equation} \label{eq:ugkv-cvlme-UGkv-m1-y2}
+\begin{split}
+\mu_0^{(2)} &= \mu_n^{(1)} = \bar{y}_1^{(i)} \\
+\lambda_0^{(2)} &= \lambda_n^{(1)} = \tau n_1 \\
+\mu_n^{(2)} &= \frac{\tau n_2 \bar{y}_2^{(i)} + \lambda_0^{(2)} \mu_0^{(2)}}{\tau n_2 + \lambda_0^{(2)}} = \bar{y} \\
+\lambda_n^{(2)} &= \tau n_2 + \lambda_0^{(2)} = \tau n \; .
+\end{split}
+\end{equation}
+
+In the test data, we now have a prior characterized by $\mu_0^{(2)}$/$\lambda_0^{(2)}$ and a posterior characterized $\mu_n^{(2)}$/$\lambda_n^{(2)}$. Applying the log model evidence for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-lme}), the out-of-sample log model evidence ($\rightarrow$ Definition "ooslme") (oosLME) therefore follows as
+
+\begin{equation} \label{eq:ugkv-cvlme-UGkv-m1-oosLME}
+\begin{split}
+\mathrm{oosLME}_i(m_1) &= \frac{n_2}{2} \log \left( \frac{\tau}{2 \pi} \right) + \frac{1}{2} \log \left( \frac{\lambda_0^{(2)}}{\lambda_n^{(2)}} \right) - \frac{1}{2} \left[ \tau {y_2^{(i)}}^\mathrm{T} y_2^{(i)} + \lambda_0^{(2)} {\mu_0^{(2)}}^2 - \lambda_n^{(2)} {\mu_n^{(2)}}^2 \right] \\
+&= \frac{n_2}{2} \log \left( \frac{\tau}{2 \pi} \right) + \frac{1}{2} \log \left( \frac{n_1}{n} \right) - \frac{1}{2} \left[ \tau {y_2^{(i)}}^\mathrm{T} y_2^{(i)} + \frac{\tau}{n_1}\left(n_1 \bar{y}_1^{(i)}\right)^2 - \frac{\tau}{n}(n \bar{y})^2 \right] \; .
+\end{split}
+\end{equation}
+
+Again, because the cross-validated log model evidence is the sum of out-of-sample log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}) over cross-validation folds, the cvLME of $m_1$ becomes:
+
+\begin{equation} \label{eq:ugkv-cvlme-UGkv-m1-cvLME}
+\begin{split}
+\mathrm{cvLME}(m_1) &= \sum_{i=1}^S \mathrm{oosLME}_i(m_1) \\
+&= \sum_{i=1}^S \left( \frac{n_2}{2} \log \left( \frac{\tau}{2 \pi} \right) + \frac{1}{2} \log \left( \frac{n_1}{n} \right) - \frac{1}{2} \left[ \tau {y_2^{(i)}}^\mathrm{T} y_2^{(i)} + \frac{\tau}{n_1}\left(n_1 \bar{y}_1^{(i)}\right)^2 - \frac{\tau}{n}(n \bar{y})^2 \right] \right) \\
+&= \frac{S \cdot n_2}{2} \log \left( \frac{\tau}{2 \pi} \right) + \frac{S}{2} \log \left( \frac{n_1}{n} \right) - \frac{\tau}{2} \sum_{i=1}^S \left[ {y_2^{(i)}}^\mathrm{T} y_2^{(i)} + \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right] \\
+&= \frac{n}{2} \log \left( \frac{\tau}{2 \pi} \right) + \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \left[ y^\mathrm{T} y + \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right) \right] \; .
+\end{split}
+\end{equation}
+
+Together, \eqref{eq:ugkv-cvlme-UGkv-m0-cvLME} and \eqref{eq:ugkv-cvlme-UGkv-m1-cvLME} conform to the results given in \eqref{eq:ugkv-cvlme-UGkv-cvLME-m01}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P217 | shortcut: ugkv-cvlme | author: JoramSoch | date: 2021-03-24, 10:57.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Cross-validated log Bayes factor}]{Cross-validated log Bayes factor} \label{sec:ugkv-cvlbf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-cvlbf-ugkv}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Moreover, assume two statistical models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), one assuming that $\mu$ is zero (null model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})), the other imposing a normal distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) as the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on the model parameter $\mu$ (alternative ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1})):
+
+\begin{equation} \label{eq:ugkv-cvlbf-UGkv-m01}
+\begin{split}
+m_0&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu = 0 \\
+m_1&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu \sim \mathcal{N}(\mu_0, \lambda_0^{-1}) \; .
+\end{split}
+\end{equation}
+
+Then, the cross-validated ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}) log Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) in favor of $m_1$ against $m_0$ is
+
+\begin{equation} \label{eq:ugkv-cvlbf-UGkv-cvLBF}
+\mathrm{cvLBF}_{10} = \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right)
+\end{equation}
+
+where $\bar{y}$ is the sample mean ($\rightarrow$ Definition "mean-samp"), $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition "prec"), $y_1^{(i)}$ are the training data in the $i$-th cross-validation fold and $S$ is the number of data subsets ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}).
+
+
+\vspace{1em}
+\textbf{Proof:} The relationship between log Bayes factor and log model evidences ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:lbf-lme}) also holds for cross-validated log bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) (cvLBF) and cross-validated log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}) (cvLME):
+
+\begin{equation} \label{eq:ugkv-cvlbf-cvLBF-cvLME}
+\mathrm{cvLBF}_{12} = \mathrm{cvLME}(m_1) - \mathrm{cvLME}(m_2) \; .
+\end{equation}
+
+The cross-validated log model evidences ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}) of $m_0$ and $m_1$ are given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-cvlme})
+
+\begin{equation} \label{eq:ugkv-cvlbf-UGkv-cvLME-m01}
+\begin{split}
+\mathrm{cvLME}(m_0) &= \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) - \frac{1}{2} \left( \tau y^\mathrm{T} y \right) \\
+\mathrm{cvLME}(m_1) &= \frac{n}{2} \log \left( \frac{\tau}{2 \pi} \right) + \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \left[ y^\mathrm{T} y + \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right) \right] \; .
+\end{split}
+\end{equation}
+
+Subtracting the two cvLMEs from each other, the cvLBF emerges as
+
+\begin{equation} \label{eq:ugkv-cvlbf-UGkv-cvLBF-qed}
+\begin{split}
+\mathrm{cvLBF}_{10} &= \mathrm{cvLME}(m_1) - \mathrm{LME}(m_0) \\
+&= \left( \frac{n}{2} \log \left( \frac{\tau}{2 \pi} \right) + \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \left[ y^\mathrm{T} y + \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right) \right] \right) \\
+&- \left( \frac{n}{2} \log \left( \frac{\tau}{2 \pi} \right) - \frac{1}{2} \left( \tau y^\mathrm{T} y \right) \right) \\
+&= \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P218 | shortcut: ugkv-cvlbf | author: JoramSoch | date: 2021-03-24, 11:13.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Expectation of cross-validated log Bayes factor}]{Expectation of cross-validated log Bayes factor} \label{sec:ugkv-cvlbfmean}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:ugkv-cvlbfmean-ugkv}
+y = \left\lbrace y_1, \ldots, y_n \right\rbrace, \quad y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
+\end{equation}
+
+be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ugkv}) with unknown mean $\mu$ and known variance $\sigma^2$. Moreover, assume two statistical models ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), one assuming that $\mu$ is zero (null model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})), the other imposing a normal distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-prior}) as the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on the model parameter $\mu$ (alternative ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1})):
+
+\begin{equation} \label{eq:ugkv-cvlbfmean-UGkv-m01}
+\begin{split}
+m_0&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu = 0 \\
+m_1&: \; y_i \sim \mathcal{N}(\mu, \sigma^2), \; \mu \sim \mathcal{N}(\mu_0, \lambda_0^{-1}) \; .
+\end{split}
+\end{equation}
+
+Then, the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the cross-validated ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}) log Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lbf}) (cvLBF) in favor of $m_1$ against $m_0$ is
+
+\begin{equation} \label{eq:ugkv-cvlbfmean-UGkv-cvLBF}
+\left\langle \mathrm{cvLBF}_{10} \right\rangle = \frac{S}{2} \log \left( \frac{S-1}{S} \right) + \frac{1}{2} \left[ \tau n \mu^2 \right]
+\end{equation}
+
+where $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition "prec") and $S$ is the number of data subsets ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}).
+
+
+\vspace{1em}
+\textbf{Proof:} The cross-validated log Bayes factor for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-cvlbf}) is
+
+\begin{equation} \label{eq:ugkv-cvlbfmean-UGkv-cvLBF-m10-s1}
+\mathrm{cvLBF}_{10} = \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right)
+\end{equation}
+
+From \eqref{eq:ugkv-cvlbfmean-ugkv}, we know that the data are distributed as $y_i \sim \mathcal{N}(\mu, \sigma^2)$, such that we can derive the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $(n \bar{y})^2$ and $\left(n_1 \bar{y}_1^{(i)}\right)^2$ as follows:
+
+\begin{equation} \label{eq:ugkv-cvlbfmean-UGkv-E(ny2)}
+\begin{split}
+\left\langle (n \bar{y})^2 \right\rangle = \left\langle \sum_{i=1}^n \sum_{j=1}^n y_i y_j \right\rangle &= \left\langle n y_i^2 + (n^2-n) [y_i y_j]_{i \neq j} \right\rangle \\
+&= n (\mu^2 + \sigma^2) + (n^2 - n) \mu^2 \\
+&= n^2 \mu^2 + n \sigma^2 \; .
+\end{split}
+\end{equation}
+
+Applying this expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) to \eqref{eq:ugkv-cvlbfmean-UGkv-cvLBF-m10-s1}, the expected cvLBF emerges as:
+
+\begin{equation} \label{eq:ugkv-cvlbfmean-UGkv-cvLBF-m10-s2}
+\begin{split}
+\left\langle \mathrm{cvLBF}_{10} \right\rangle &= \left\langle \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right) \right\rangle \\
+&= \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S \left( \frac{\left\langle \left(n_1 \bar{y}_1^{(i)}\right)^2 \right\rangle}{n_1} - \frac{\left\langle (n \bar{y})^2 \right\rangle}{n} \right) \\
+&\overset{\eqref{eq:ugkv-cvlbfmean-UGkv-E(ny2)}}{=} \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S \left( \frac{n_1^2 \mu^2 + n_1 \sigma^2}{n_1} - \frac{n^2 \mu^2 + n \sigma^2}{n} \right) \\
+&= \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S \left( [n_1 \mu^2 + \sigma^2] - [n \mu^2 + \sigma^2] \right) \\
+&= \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S (n_1 - n) \mu^2
+\end{split}
+\end{equation}
+
+Because it holds that ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-cvlme}) $n_1 + n_2 = n$ and $n_2 = n/S$, we finally have:
+
+\begin{equation} \label{eq:ugkv-cvlbfmean-UGkv-cvLBF-m10-s3}
+\begin{split}
+\left\langle \mathrm{cvLBF}_{10} \right\rangle &= \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S (-n_2) \mu^2 \\
+&= \frac{S}{2} \log \left( \frac{S-1}{S} \right) + \frac{1}{2} \left[ \tau n \mu^2 \right] \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P219 | shortcut: ugkv-cvlbfmean | author: JoramSoch | date: 2021-03-24, 12:27.
+\vspace{1em}
+
+
+
 \subsection{Multiple linear regression}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:mlr}
@@ -13432,7 +15623,7 @@ Now, $\beta$ can be integrated out easily:
 
 Using the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}), we can rewrite this as
 
-\begin{equation}\label{eq:blr-lme-GLM-NG-LME-s4}
+\begin{equation} \label{eq:blr-lme-GLM-NG-LME-s4}
 \int p(y,\beta,\tau) \, \mathrm{d}\beta = \sqrt{\frac{|P|}{(2 \pi)^n}} \, \sqrt{\frac{|\Lambda_0|}{|\Lambda_n|}} \, \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \, \frac{\Gamma(a_n)}{ {b_n}^{a_n}} \, \mathrm{Gam}(\tau; a_n, b_n) \; .
 \end{equation}
 
@@ -13480,7 +15671,7 @@ and assume a normal-gamma ($\rightarrow$ Definition \ref{sec:Probability Distrib
 p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
 \end{equation}
 
-Then, the posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of the alternative hypothesis ($\rightarrow$ Definition "h1")
+Then, the posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of the alternative hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1})
 
 \begin{equation} \label{eq:blr-pp-GLM-H1}
 \mathrm{H}_1: \, c^\mathrm{T} \beta > 0
@@ -13584,7 +15775,7 @@ and assume a normal-gamma ($\rightarrow$ Definition \ref{sec:Probability Distrib
 p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
 \end{equation}
 
-Then, the largest posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) credibility region ($\rightarrow$ Definition "cr") that does not contain the omnibus null hypothesis ($\rightarrow$ Definition "h0")
+Then, the largest posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) credibility region ($\rightarrow$ Definition "cr") that does not contain the omnibus null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})
 
 \begin{equation} \label{eq:blr-pcr-GLM-H0}
 \mathrm{H}_0: \, C^\mathrm{T} \beta = 0
@@ -13596,7 +15787,7 @@ is given by the credibility level ($\rightarrow$ Definition "cr")
 (1-\alpha) = \mathrm{F}\left( \left[ \mu^\mathrm{T} C (C^\mathrm{T} \Sigma \, C)^{-1} C^\mathrm{T} \mu \right]/q; q, \nu \right)
 \end{equation}
 
-where $C$ is a $p \times q$ contrast matrix ($\rightarrow$ Definition "con"), $\mathrm{F}(x; v, w)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the F-distribution ($\rightarrow$ Definition "f") with $v$ numerator degrees of freedom ($\rightarrow$ Definition "dof") $w$ denominator degrees of freedom ($\rightarrow$ Definition "dof") and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
+where $C$ is a $p \times q$ contrast matrix ($\rightarrow$ Definition "con"), $\mathrm{F}(x; v, w)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the F-distribution ($\rightarrow$ Definition "f") with $v$ numerator degrees of freedom ($\rightarrow$ Definition "dof"), $w$ denominator degrees of freedom ($\rightarrow$ Definition "dof") and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
 
 
 \vspace{1em}
@@ -14447,7 +16638,7 @@ Setting the first derivative to zero, we obtain:
 \end{split}
 \end{equation}
 
-Plugging this value into the second deriative, we confirm:
+Plugging this value into the second derivative, we confirm:
 
 \begin{equation} \label{eq:poiss-mle-Poiss-d2LLdl2}
 \begin{split}
@@ -18016,6 +20207,25 @@ P197 & chi2-pdf & Probability density function of the chi-square distribution & 
 P198 & beta-mgf & Moment-generating function of the beta distribution & JoramSoch & 2020-11-25 & \pageref{sec:beta-mgf} \\ \hline
 P199 & dent-inv & Invariance of the differential entropy under addition of a constant & JoramSoch & 2020-12-02 & \pageref{sec:dent-inv} \\ \hline
 P200 & dent-add & Addition of the differential entropy upon multiplication with a constant & JoramSoch & 2020-12-02 & \pageref{sec:dent-add} \\ \hline
+P201 & ug-prior & Conjugate prior distribution for the univariate Gaussian & JoramSoch & 2021-03-03 & \pageref{sec:ug-prior} \\ \hline
+P202 & ug-post & Posterior distribution for the univariate Gaussian & JoramSoch & 2021-03-03 & \pageref{sec:ug-post} \\ \hline
+P203 & ug-lme & Log model evidence for the univariate Gaussian & JoramSoch & 2021-03-03 & \pageref{sec:ug-lme} \\ \hline
+P204 & ug-ttest1 & One-sample t-test for independent observations & JoramSoch & 2021-03-12 & \pageref{sec:ug-ttest1} \\ \hline
+P205 & ug-ttest2 & Two-sample t-test for independent observations & JoramSoch & 2021-03-12 & \pageref{sec:ug-ttest2} \\ \hline
+P206 & ug-ttestp & Paired t-test for dependent observations & JoramSoch & 2021-03-12 & \pageref{sec:ug-ttestp} \\ \hline
+P207 & ugkv-mle & Maximum likelihood estimation for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-mle} \\ \hline
+P208 & ugkv-ztest1 & One-sample z-test for independent observations & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-ztest1} \\ \hline
+P209 & ugkv-ztest2 & Two-sample z-test for independent observations & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-ztest2} \\ \hline
+P210 & ugkv-ztestp & Paired z-test for dependent observations & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-ztestp} \\ \hline
+P211 & ugkv-prior & Conjugate prior distribution for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-prior} \\ \hline
+P212 & ugkv-post & Posterior distribution for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-post} \\ \hline
+P213 & ugkv-lme & Log model evidence for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-lme} \\ \hline
+P214 & ugkv-anc & Accuracy and complexity for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-anc} \\ \hline
+P215 & ugkv-lbf & Log Bayes factor for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-lbf} \\ \hline
+P216 & ugkv-lbfmean & Expectation of the log Bayes factor for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-lbfmean} \\ \hline
+P217 & ugkv-cvlme & Cross-validated log model evidence for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-cvlme} \\ \hline
+P218 & ugkv-cvlbf & Cross-validated log Bayes factor for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-cvlbf} \\ \hline
+P219 & ugkv-cvlbfmean & Expectation of the cross-validated log Bayes factor for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-cvlbfmean} \\ \hline
 \end{longtable}
 
 
@@ -18151,6 +20361,19 @@ D120 & prior-conj & Conjugate and non-conjugate prior distribution & JoramSoch &
 D121 & prior-maxent & Maximum entropy prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-maxent} \\ \hline
 D122 & prior-eb & Empirical Bayes prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-eb} \\ \hline
 D123 & prior-ref & Reference prior distribution & JoramSoch & 2020-12-02 & \pageref{sec:prior-ref} \\ \hline
+D124 & ug & Univariate Gaussian & JoramSoch & 2021-03-03 & \pageref{sec:ug} \\ \hline
+D125 & h0 & Null hypothesis & JoramSoch & 2021-03-12 & \pageref{sec:h0} \\ \hline
+D126 & h1 & Alternative hypothesis & JoramSoch & 2021-03-12 & \pageref{sec:h1} \\ \hline
+D127 & hyp & Statistical hypothesis & JoramSoch & 2021-03-19 & \pageref{sec:hyp} \\ \hline
+D128 & hyp-simp & Simple and composite hypothesis & JoramSoch & 2021-03-19 & \pageref{sec:hyp-simp} \\ \hline
+D129 & hyp-point & Point and set hypothesis & JoramSoch & 2021-03-19 & \pageref{sec:hyp-point} \\ \hline
+D130 & test & Statistical hypothesis test & JoramSoch & 2021-03-19 & \pageref{sec:test} \\ \hline
+D131 & tstat & Test statistic & JoramSoch & 2021-03-19 & \pageref{sec:tstat} \\ \hline
+D132 & size & Size of a statistical test & JoramSoch & 2021-03-19 & \pageref{sec:size} \\ \hline
+D133 & alpha & Significance level & JoramSoch & 2021-03-19 & \pageref{sec:alpha} \\ \hline
+D134 & cval & Critical value & JoramSoch & 2021-03-19 & \pageref{sec:cval} \\ \hline
+D135 & pval & p-value & JoramSoch & 2021-03-19 & \pageref{sec:pval} \\ \hline
+D136 & ugkv & Univariate Gaussian with known variance & JoramSoch & 2021-03-23 & \pageref{sec:ugkv} \\ \hline
 \end{longtable}
 
 
@@ -18165,6 +20388,8 @@ $\bullet$ (Non-)Multiplicativity of the expected value, \pageref{sec:mean-mult}
 
 \vspace{1em}
 \textbf{A}
+
+$\bullet$ Accuracy and complexity for the univariate Gaussian with known variance, \pageref{sec:ugkv-anc}
 
 $\bullet$ Addition of the differential entropy upon multiplication with a constant, \pageref{sec:dent-add}
 
@@ -18204,6 +20429,10 @@ $\bullet$ Conjugate prior distribution for multivariate Bayesian linear regressi
 
 $\bullet$ Conjugate prior distribution for the Poisson distribution with exposure values, \pageref{sec:poissexp-prior}
 
+$\bullet$ Conjugate prior distribution for the univariate Gaussian, \pageref{sec:ug-prior}
+
+$\bullet$ Conjugate prior distribution for the univariate Gaussian with known variance, \pageref{sec:ugkv-prior}
+
 $\bullet$ Construction of confidence intervals using Wilks' theorem, \pageref{sec:ci-wilks}
 
 $\bullet$ Construction of unbiased estimator for variance, \pageref{sec:resvar-unb}
@@ -18213,6 +20442,10 @@ $\bullet$ Convexity of the Kullback-Leibler divergence, \pageref{sec:kl-conv}
 $\bullet$ Convexity of the cross-entropy, \pageref{sec:entcross-conv}
 
 $\bullet$ Covariance of independent random variables, \pageref{sec:cov-ind}
+
+$\bullet$ Cross-validated log Bayes factor for the univariate Gaussian with known variance, \pageref{sec:ugkv-cvlbf}
+
+$\bullet$ Cross-validated log model evidence for the univariate Gaussian with known variance, \pageref{sec:ugkv-cvlme}
 
 $\bullet$ Cumulative distribution function in terms of probability density function of a continuous random variable, \pageref{sec:cdf-pdf}
 
@@ -18269,6 +20502,10 @@ $\bullet$ Equivalence of matrix-normal distribution and multivariate normal dist
 $\bullet$ Exceedance probabilities for the Dirichlet distribution, \pageref{sec:dir-ep}
 
 $\bullet$ Expectation of a quadratic form, \pageref{sec:mean-qf}
+
+$\bullet$ Expectation of the cross-validated log Bayes factor for the univariate Gaussian with known variance, \pageref{sec:ugkv-cvlbfmean}
+
+$\bullet$ Expectation of the log Bayes factor for the univariate Gaussian with known variance, \pageref{sec:ugkv-lbfmean}
 
 $\bullet$ Expected value of a non-negative random variable, \pageref{sec:mean-nnrvar}
 
@@ -18338,6 +20575,8 @@ $\bullet$ Linear transformation theorem for the multivariate normal distribution
 
 $\bullet$ Linearity of the expected value, \pageref{sec:mean-lin}
 
+$\bullet$ Log Bayes factor for the univariate Gaussian with known variance, \pageref{sec:ugkv-lbf}
+
 $\bullet$ Log Bayes factor in terms of log model evidences, \pageref{sec:lbf-lme}
 
 $\bullet$ Log family evidences in terms of log model evidences, \pageref{sec:lfe-lme}
@@ -18351,6 +20590,10 @@ $\bullet$ Log model evidence for multinomial observations, \pageref{sec:mult-lme
 $\bullet$ Log model evidence for multivariate Bayesian linear regression, \pageref{sec:mblr-lme}
 
 $\bullet$ Log model evidence for the Poisson distribution with exposure values, \pageref{sec:poissexp-lme}
+
+$\bullet$ Log model evidence for the univariate Gaussian, \pageref{sec:ug-lme}
+
+$\bullet$ Log model evidence for the univariate Gaussian with known variance, \pageref{sec:ugkv-lme}
 
 $\bullet$ Log sum inequality, \pageref{sec:logsum-ineq}
 
@@ -18375,6 +20618,8 @@ $\bullet$ Maximum likelihood estimation for Poisson-distributed data, \pageref{s
 $\bullet$ Maximum likelihood estimation for multiple linear regression, \pageref{sec:mlr-mle}
 
 $\bullet$ Maximum likelihood estimation for the general linear model, \pageref{sec:glm-mle}
+
+$\bullet$ Maximum likelihood estimation for the univariate Gaussian with known variance, \pageref{sec:ugkv-mle}
 
 $\bullet$ Maximum likelihood estimator of variance is biased, \pageref{sec:resvar-bias}
 
@@ -18446,6 +20691,10 @@ $\bullet$ Non-symmetry of the Kullback-Leibler divergence, \pageref{sec:kl-nonsy
 \vspace{1em}
 \textbf{O}
 
+$\bullet$ One-sample t-test for independent observations, \pageref{sec:ug-ttest1}
+
+$\bullet$ One-sample z-test for independent observations, \pageref{sec:ugkv-ztest1}
+
 $\bullet$ Ordinary least squares for multiple linear regression, \pageref{sec:mlr-ols}
 
 $\bullet$ Ordinary least squares for multiple linear regression, \pageref{sec:mlr-ols2}
@@ -18455,6 +20704,10 @@ $\bullet$ Ordinary least squares for the general linear model, \pageref{sec:glm-
 
 \vspace{1em}
 \textbf{P}
+
+$\bullet$ Paired t-test for dependent observations, \pageref{sec:ug-ttestp}
+
+$\bullet$ Paired z-test for dependent observations, \pageref{sec:ugkv-ztestp}
 
 $\bullet$ Partition of a covariance matrix into expected values, \pageref{sec:covmat-mean}
 
@@ -18481,6 +20734,10 @@ $\bullet$ Posterior distribution for multinomial observations, \pageref{sec:mult
 $\bullet$ Posterior distribution for multivariate Bayesian linear regression, \pageref{sec:mblr-post}
 
 $\bullet$ Posterior distribution for the Poisson distribution with exposure values, \pageref{sec:poissexp-post}
+
+$\bullet$ Posterior distribution for the univariate Gaussian, \pageref{sec:ug-post}
+
+$\bullet$ Posterior distribution for the univariate Gaussian with known variance, \pageref{sec:ugkv-post}
 
 $\bullet$ Posterior model probabilities in terms of Bayes factors, \pageref{sec:pmp-bf}
 
@@ -18616,6 +20873,10 @@ $\bullet$ Transitivity of Bayes Factors, \pageref{sec:bf-trans}
 
 $\bullet$ Transposition of a matrix-normal random variable, \pageref{sec:matn-trans}
 
+$\bullet$ Two-sample t-test for independent observations, \pageref{sec:ug-ttest2}
+
+$\bullet$ Two-sample z-test for independent observations, \pageref{sec:ugkv-ztest2}
+
 
 \vspace{1em}
 \textbf{V}
@@ -18653,6 +20914,8 @@ $\bullet$ Weighted least squares for the general linear model, \pageref{sec:glm-
 \textbf{A}
 
 $\bullet$ Akaike information criterion, \pageref{sec:aic}
+
+$\bullet$ Alternative hypothesis, \pageref{sec:h1}
 
 
 \vspace{1em}
@@ -18707,6 +20970,8 @@ $\bullet$ Correlation matrix, \pageref{sec:corrmat}
 $\bullet$ Covariance, \pageref{sec:cov}
 
 $\bullet$ Covariance matrix, \pageref{sec:covmat}
+
+$\bullet$ Critical value, \pageref{sec:cval}
 
 $\bullet$ Cross-entropy, \pageref{sec:ent-cross}
 
@@ -18872,9 +21137,13 @@ $\bullet$ Normal distribution, \pageref{sec:norm}
 
 $\bullet$ Normal-gamma distribution, \pageref{sec:ng}
 
+$\bullet$ Null hypothesis, \pageref{sec:h0}
+
 
 \vspace{1em}
 \textbf{P}
+
+$\bullet$ Point and set hypothesis, \pageref{sec:hyp-point}
 
 $\bullet$ Poisson distribution, \pageref{sec:poiss}
 
@@ -18940,6 +21209,12 @@ $\bullet$ Shannon entropy, \pageref{sec:ent}
 
 $\bullet$ Signal-to-noise ratio, \pageref{sec:snr}
 
+$\bullet$ Significance level, \pageref{sec:alpha}
+
+$\bullet$ Simple and composite hypothesis, \pageref{sec:hyp-simp}
+
+$\bullet$ Size of a statistical test, \pageref{sec:size}
+
 $\bullet$ Standard deviation, \pageref{sec:std}
 
 $\bullet$ Standard gamma distribution, \pageref{sec:sgam}
@@ -18948,11 +21223,17 @@ $\bullet$ Standard normal distribution, \pageref{sec:snorm}
 
 $\bullet$ Standardized moment, \pageref{sec:mom-stand}
 
+$\bullet$ Statistical hypothesis, \pageref{sec:hyp}
+
+$\bullet$ Statistical hypothesis test, \pageref{sec:test}
+
 $\bullet$ Statistical independence, \pageref{sec:ind}
 
 
 \vspace{1em}
 \textbf{T}
+
+$\bullet$ Test statistic, \pageref{sec:tstat}
 
 $\bullet$ Total sum of squares, \pageref{sec:tss}
 
@@ -18963,6 +21244,10 @@ $\bullet$ Total sum of squares, \pageref{sec:tss}
 $\bullet$ Uniform and non-uniform prior distribution, \pageref{sec:prior-uni}
 
 $\bullet$ Uniform-prior log model evidence, \pageref{sec:uplme}
+
+$\bullet$ Univariate Gaussian, \pageref{sec:ug}
+
+$\bullet$ Univariate Gaussian with known variance, \pageref{sec:ugkv}
 
 $\bullet$ Univariate and multivariate random variable, \pageref{sec:rvar-uni}
 
@@ -18981,6 +21266,12 @@ $\bullet$ Variational Bayesian log model evidence, \pageref{sec:vblme}
 $\bullet$ Wald distribution, \pageref{sec:wald}
 
 $\bullet$ Wishart distribution, \pageref{sec:wish}
+
+
+\vspace{1em}
+\textbf{p}
+
+$\bullet$ p-value, \pageref{sec:pval}
 
 
 
