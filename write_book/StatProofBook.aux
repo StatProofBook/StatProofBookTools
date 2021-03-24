@@ -663,1606 +663,1874 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}\textit  {Maximum log-likelihood}}{83}\protected@file@percent }
 \newlabel{sec:mll}{{4.1.4}{83}}
 \newlabel{eq:mll-mll}{{1}{83}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Bayesian statistics}{84}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Probabilistic modeling}{84}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}\textit  {Generative model}}{84}\protected@file@percent }
-\newlabel{sec:gm}{{5.1.1}{84}}
-\newlabel{eq:gm-gm}{{1}{84}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}\textit  {Likelihood function}}{84}\protected@file@percent }
-\newlabel{sec:lf}{{5.1.2}{84}}
-\newlabel{eq:lf-lf}{{1}{84}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}\textit  {Prior distribution}}{84}\protected@file@percent }
-\newlabel{sec:prior}{{5.1.3}{84}}
-\newlabel{eq:prior-prior}{{1}{84}}
-\newlabel{eq:prior-prior-pdf}{{2}{84}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}\textit  {Full probability model}}{85}\protected@file@percent }
-\newlabel{sec:fpm}{{5.1.4}{85}}
-\newlabel{eq:fpm-fpm}{{1}{85}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.5}\textit  {Joint likelihood}}{85}\protected@file@percent }
-\newlabel{sec:jl}{{5.1.5}{85}}
-\newlabel{eq:jl-jl}{{1}{85}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.6}\textbf  {Joint likelihood is product of likelihood and prior}}{85}\protected@file@percent }
-\newlabel{sec:jl-lfnprior}{{5.1.6}{85}}
-\newlabel{eq:jl-lfnprior-jl}{{1}{85}}
-\newlabel{eq:jl-lfnprior-jl-def}{{2}{85}}
-\newlabel{eq:jl-lfnprior-jl-qed}{{3}{85}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.7}\textit  {Posterior distribution}}{86}\protected@file@percent }
-\newlabel{sec:post}{{5.1.7}{86}}
-\newlabel{eq:post-post}{{1}{86}}
-\newlabel{eq:post-prior-pdf}{{2}{86}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.8}\textbf  {Posterior density is proportional to joint likelihood}}{86}\protected@file@percent }
-\newlabel{sec:post-jl}{{5.1.8}{86}}
-\newlabel{eq:post-jl-post}{{1}{86}}
-\newlabel{eq:post-jl-post-s1}{{2}{86}}
-\newlabel{eq:post-jl-post-s2}{{3}{86}}
-\newlabel{eq:post-jl-post-qed}{{4}{86}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.9}\textit  {Marginal likelihood}}{87}\protected@file@percent }
-\newlabel{sec:ml}{{5.1.9}{87}}
-\newlabel{eq:ml-ml}{{1}{87}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.10}\textbf  {Marginal likelihood is integral of joint likelihood}}{87}\protected@file@percent }
-\newlabel{sec:ml-jl}{{5.1.10}{87}}
-\newlabel{eq:ml-jl-ml}{{1}{87}}
-\newlabel{eq:ml-jl-ml-def}{{2}{87}}
-\newlabel{eq:ml-jl-ml-int}{{3}{87}}
-\newlabel{eq:ml-jl-ml-qed}{{4}{87}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Prior distributions}{88}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}\textit  {Flat vs. hard vs. soft}}{88}\protected@file@percent }
-\newlabel{sec:prior-flat}{{5.2.1}{88}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}\textit  {Uniform vs. non-uniform}}{88}\protected@file@percent }
-\newlabel{sec:prior-uni}{{5.2.2}{88}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}\textit  {Informative vs. non-informative}}{88}\protected@file@percent }
-\newlabel{sec:prior-inf}{{5.2.3}{88}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.4}\textit  {Empirical vs. non-empirical}}{89}\protected@file@percent }
-\newlabel{sec:prior-emp}{{5.2.4}{89}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.5}\textit  {Conjugate vs. non-conjugate}}{89}\protected@file@percent }
-\newlabel{sec:prior-conj}{{5.2.5}{89}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.6}\textit  {Maximum entropy priors}}{89}\protected@file@percent }
-\newlabel{sec:prior-maxent}{{5.2.6}{89}}
-\newlabel{eq:prior-maxent-prior-maxent-disc}{{1}{90}}
-\newlabel{eq:prior-maxent-prior-maxent-cont}{{2}{90}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.7}\textit  {Empirical Bayes priors}}{90}\protected@file@percent }
-\newlabel{sec:prior-eb}{{5.2.7}{90}}
-\newlabel{eq:prior-eb-prior-eb}{{1}{90}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.8}\textit  {Reference priors}}{90}\protected@file@percent }
-\newlabel{sec:prior-ref}{{5.2.8}{90}}
-\newlabel{eq:prior-ref-prior-ref}{{1}{90}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Bayesian inference}{91}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}\textbf  {Bayes' theorem}}{91}\protected@file@percent }
-\newlabel{sec:bayes-th}{{5.3.1}{91}}
-\newlabel{eq:bayes-th-BT}{{1}{91}}
-\newlabel{eq:bayes-th-LCP}{{2}{91}}
-\newlabel{eq:bayes-th-LCP-rev}{{3}{91}}
-\newlabel{eq:bayes-th-JP}{{4}{91}}
-\newlabel{eq:bayes-th-BT-proof}{{5}{91}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}\textbf  {Bayes' rule}}{91}\protected@file@percent }
-\newlabel{sec:bayes-rule}{{5.3.2}{91}}
-\newlabel{eq:bayes-rule-bayes-rule}{{1}{92}}
-\newlabel{eq:bayes-rule-bayes-th-A1}{{2}{92}}
-\newlabel{eq:bayes-rule-bayes-th-A2}{{3}{92}}
-\newlabel{eq:bayes-rule-bayes-rule-qed}{{4}{92}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {II}Probability Distributions}{93}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Statistical hypotheses}{83}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}\textit  {Statistical hypothesis}}{83}\protected@file@percent }
+\newlabel{sec:hyp}{{4.2.1}{83}}
+\newlabel{eq:hyp-hyp}{{1}{83}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}\textit  {Simple vs. composite}}{83}\protected@file@percent }
+\newlabel{sec:hyp-simp}{{4.2.2}{83}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}\textit  {Point vs. set}}{84}\protected@file@percent }
+\newlabel{sec:hyp-point}{{4.2.3}{84}}
+\newlabel{eq:hyp-point-hyp-point}{{1}{84}}
+\newlabel{eq:hyp-point-hyp-non-point}{{2}{84}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Hypothesis testing}{84}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}\textit  {Statistical test}}{84}\protected@file@percent }
+\newlabel{sec:test}{{4.3.1}{84}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}\textit  {Null hypothesis}}{85}\protected@file@percent }
+\newlabel{sec:h0}{{4.3.2}{85}}
+\newlabel{eq:h0-h0}{{1}{85}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}\textit  {Alternative hypothesis}}{85}\protected@file@percent }
+\newlabel{sec:h1}{{4.3.3}{85}}
+\newlabel{eq:h1-h0}{{1}{85}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4}\textit  {Test statistic}}{86}\protected@file@percent }
+\newlabel{sec:tstat}{{4.3.4}{86}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5}\textit  {Size of a test}}{86}\protected@file@percent }
+\newlabel{sec:size}{{4.3.5}{86}}
+\newlabel{eq:size-size-h0-simp}{{1}{86}}
+\newlabel{eq:size-size-h0-comp}{{2}{86}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.6}\textit  {Significance level}}{86}\protected@file@percent }
+\newlabel{sec:alpha}{{4.3.6}{86}}
+\newlabel{eq:alpha-size}{{1}{86}}
+\newlabel{eq:alpha-alpha}{{2}{86}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.7}\textit  {Critical value}}{87}\protected@file@percent }
+\newlabel{sec:cval}{{4.3.7}{87}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.8}\textit  {p-value}}{87}\protected@file@percent }
+\newlabel{sec:pval}{{4.3.8}{87}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Bayesian statistics}{88}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Probabilistic modeling}{88}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}\textit  {Generative model}}{88}\protected@file@percent }
+\newlabel{sec:gm}{{5.1.1}{88}}
+\newlabel{eq:gm-gm}{{1}{88}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}\textit  {Likelihood function}}{88}\protected@file@percent }
+\newlabel{sec:lf}{{5.1.2}{88}}
+\newlabel{eq:lf-lf}{{1}{88}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}\textit  {Prior distribution}}{88}\protected@file@percent }
+\newlabel{sec:prior}{{5.1.3}{88}}
+\newlabel{eq:prior-prior}{{1}{88}}
+\newlabel{eq:prior-prior-pdf}{{2}{88}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}\textit  {Full probability model}}{89}\protected@file@percent }
+\newlabel{sec:fpm}{{5.1.4}{89}}
+\newlabel{eq:fpm-fpm}{{1}{89}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.5}\textit  {Joint likelihood}}{89}\protected@file@percent }
+\newlabel{sec:jl}{{5.1.5}{89}}
+\newlabel{eq:jl-jl}{{1}{89}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.6}\textbf  {Joint likelihood is product of likelihood and prior}}{89}\protected@file@percent }
+\newlabel{sec:jl-lfnprior}{{5.1.6}{89}}
+\newlabel{eq:jl-lfnprior-jl}{{1}{89}}
+\newlabel{eq:jl-lfnprior-jl-def}{{2}{89}}
+\newlabel{eq:jl-lfnprior-jl-qed}{{3}{89}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.7}\textit  {Posterior distribution}}{90}\protected@file@percent }
+\newlabel{sec:post}{{5.1.7}{90}}
+\newlabel{eq:post-post}{{1}{90}}
+\newlabel{eq:post-prior-pdf}{{2}{90}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.8}\textbf  {Posterior density is proportional to joint likelihood}}{90}\protected@file@percent }
+\newlabel{sec:post-jl}{{5.1.8}{90}}
+\newlabel{eq:post-jl-post}{{1}{90}}
+\newlabel{eq:post-jl-post-s1}{{2}{90}}
+\newlabel{eq:post-jl-post-s2}{{3}{90}}
+\newlabel{eq:post-jl-post-qed}{{4}{90}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.9}\textit  {Marginal likelihood}}{91}\protected@file@percent }
+\newlabel{sec:ml}{{5.1.9}{91}}
+\newlabel{eq:ml-ml}{{1}{91}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.10}\textbf  {Marginal likelihood is integral of joint likelihood}}{91}\protected@file@percent }
+\newlabel{sec:ml-jl}{{5.1.10}{91}}
+\newlabel{eq:ml-jl-ml}{{1}{91}}
+\newlabel{eq:ml-jl-ml-def}{{2}{91}}
+\newlabel{eq:ml-jl-ml-int}{{3}{91}}
+\newlabel{eq:ml-jl-ml-qed}{{4}{91}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Prior distributions}{92}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}\textit  {Flat vs. hard vs. soft}}{92}\protected@file@percent }
+\newlabel{sec:prior-flat}{{5.2.1}{92}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}\textit  {Uniform vs. non-uniform}}{92}\protected@file@percent }
+\newlabel{sec:prior-uni}{{5.2.2}{92}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}\textit  {Informative vs. non-informative}}{92}\protected@file@percent }
+\newlabel{sec:prior-inf}{{5.2.3}{92}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.4}\textit  {Empirical vs. non-empirical}}{93}\protected@file@percent }
+\newlabel{sec:prior-emp}{{5.2.4}{93}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.5}\textit  {Conjugate vs. non-conjugate}}{93}\protected@file@percent }
+\newlabel{sec:prior-conj}{{5.2.5}{93}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.6}\textit  {Maximum entropy priors}}{93}\protected@file@percent }
+\newlabel{sec:prior-maxent}{{5.2.6}{93}}
+\newlabel{eq:prior-maxent-prior-maxent-disc}{{1}{94}}
+\newlabel{eq:prior-maxent-prior-maxent-cont}{{2}{94}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.7}\textit  {Empirical Bayes priors}}{94}\protected@file@percent }
+\newlabel{sec:prior-eb}{{5.2.7}{94}}
+\newlabel{eq:prior-eb-prior-eb}{{1}{94}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.8}\textit  {Reference priors}}{94}\protected@file@percent }
+\newlabel{sec:prior-ref}{{5.2.8}{94}}
+\newlabel{eq:prior-ref-prior-ref}{{1}{94}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Bayesian inference}{95}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}\textbf  {Bayes' theorem}}{95}\protected@file@percent }
+\newlabel{sec:bayes-th}{{5.3.1}{95}}
+\newlabel{eq:bayes-th-BT}{{1}{95}}
+\newlabel{eq:bayes-th-LCP}{{2}{95}}
+\newlabel{eq:bayes-th-LCP-rev}{{3}{95}}
+\newlabel{eq:bayes-th-JP}{{4}{95}}
+\newlabel{eq:bayes-th-BT-proof}{{5}{95}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}\textbf  {Bayes' rule}}{95}\protected@file@percent }
+\newlabel{sec:bayes-rule}{{5.3.2}{95}}
+\newlabel{eq:bayes-rule-bayes-rule}{{1}{96}}
+\newlabel{eq:bayes-rule-bayes-th-A1}{{2}{96}}
+\newlabel{eq:bayes-rule-bayes-th-A2}{{3}{96}}
+\newlabel{eq:bayes-rule-bayes-rule-qed}{{4}{96}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {II}Probability Distributions}{97}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{sec:Probability Distributions}{{II}{93}}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Univariate discrete distributions}{94}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Discrete uniform distribution}{94}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}\textit  {Definition}}{94}\protected@file@percent }
-\newlabel{sec:duni}{{1.1.1}{94}}
-\newlabel{eq:duni-duni}{{1}{94}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}\textbf  {Probability mass function}}{94}\protected@file@percent }
-\newlabel{sec:duni-pmf}{{1.1.2}{94}}
-\newlabel{eq:duni-pmf-duni}{{1}{94}}
-\newlabel{eq:duni-pmf-duni-pmf}{{2}{94}}
-\newlabel{eq:duni-pmf-n}{{3}{94}}
-\newlabel{eq:duni-pmf-1}{{4}{94}}
-\newlabel{eq:duni-pmf-duni-pmf-qed}{{5}{94}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3}\textbf  {Cumulative distribution function}}{95}\protected@file@percent }
-\newlabel{sec:duni-cdf}{{1.1.3}{95}}
-\newlabel{eq:duni-cdf-duni}{{1}{95}}
-\newlabel{eq:duni-cdf-duni-cdf}{{2}{95}}
-\newlabel{eq:duni-cdf-duni-pmf}{{3}{95}}
-\newlabel{eq:duni-cdf-duni-cdf-s1}{{4}{95}}
-\newlabel{eq:duni-cdf-n}{{5}{95}}
-\newlabel{eq:duni-cdf-duni-cdf-s2b}{{6}{95}}
-\newlabel{eq:duni-cdf-duni-cdf-s2a}{{7}{95}}
-\newlabel{eq:duni-cdf-duni-cdf-s2c}{{8}{95}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.4}\textbf  {Quantile function}}{96}\protected@file@percent }
-\newlabel{sec:duni-qf}{{1.1.4}{96}}
-\newlabel{eq:duni-qf-duni}{{1}{96}}
-\newlabel{eq:duni-qf-duni-qf}{{2}{96}}
-\newlabel{eq:duni-qf-duni-cdf}{{3}{96}}
-\newlabel{eq:duni-qf-qf}{{4}{96}}
-\newlabel{eq:duni-qf-duni-cdf-p}{{5}{96}}
-\newlabel{eq:duni-qf-duni-qf-p}{{6}{96}}
-\newlabel{eq:duni-qf-duni-qf-qed}{{7}{96}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Bernoulli distribution}{97}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}\textit  {Definition}}{97}\protected@file@percent }
-\newlabel{sec:bern}{{1.2.1}{97}}
-\newlabel{eq:bern-bern}{{1}{97}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}\textbf  {Probability mass function}}{97}\protected@file@percent }
-\newlabel{sec:bern-pmf}{{1.2.2}{97}}
-\newlabel{eq:bern-pmf-Bern}{{1}{97}}
-\newlabel{eq:bern-pmf-Bern-pmf}{{2}{97}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}\textbf  {Mean}}{97}\protected@file@percent }
-\newlabel{sec:bern-mean}{{1.2.3}{97}}
-\newlabel{eq:bern-mean-bern}{{1}{97}}
-\newlabel{eq:bern-mean-bern-mean}{{2}{98}}
-\newlabel{eq:bern-mean-mean}{{3}{98}}
-\newlabel{eq:bern-mean-bern-mean-qed}{{4}{98}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Binomial distribution}{98}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.1}\textit  {Definition}}{98}\protected@file@percent }
-\newlabel{sec:bin}{{1.3.1}{98}}
-\newlabel{eq:bin-bin}{{1}{98}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.2}\textbf  {Probability mass function}}{98}\protected@file@percent }
-\newlabel{sec:bin-pmf}{{1.3.2}{98}}
-\newlabel{eq:bin-pmf-bin}{{1}{98}}
-\newlabel{eq:bin-pmf-bin-pmf}{{2}{99}}
-\newlabel{eq:bin-pmf-bin-prob}{{3}{99}}
-\newlabel{eq:bin-pmf-bin-coeff}{{4}{99}}
-\newlabel{eq:bin-pmf-bin-pmf-qed}{{5}{99}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.3}\textbf  {Mean}}{99}\protected@file@percent }
-\newlabel{sec:bin-mean}{{1.3.3}{99}}
-\newlabel{eq:bin-mean-bin}{{1}{99}}
-\newlabel{eq:bin-mean-bin-mean}{{2}{99}}
-\newlabel{eq:bin-mean-bin-mean-s1}{{3}{99}}
-\newlabel{eq:bin-mean-bin-mean-s2}{{4}{100}}
-\newlabel{eq:bin-mean-bin-mean-s3}{{5}{100}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Poisson distribution}{100}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1}\textit  {Definition}}{100}\protected@file@percent }
-\newlabel{sec:poiss}{{1.4.1}{100}}
-\newlabel{eq:poiss-poiss}{{1}{100}}
-\newlabel{eq:poiss-poiss-pmf}{{2}{100}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.2}\textbf  {Probability mass function}}{100}\protected@file@percent }
-\newlabel{sec:poiss-pmf}{{1.4.2}{100}}
-\newlabel{eq:poiss-pmf-Poiss}{{1}{100}}
-\newlabel{eq:poiss-pmf-Poiss-pmf}{{2}{101}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.3}\textbf  {Mean}}{101}\protected@file@percent }
-\newlabel{sec:poiss-mean}{{1.4.3}{101}}
-\newlabel{eq:poiss-mean-poiss}{{1}{101}}
-\newlabel{eq:poiss-mean-poiss-mean}{{2}{101}}
-\newlabel{eq:poiss-mean-mean}{{3}{101}}
-\newlabel{eq:poiss-mean-poiss-mean-s1}{{4}{101}}
-\newlabel{eq:poiss-mean-poiss-mean-s2}{{5}{101}}
-\newlabel{eq:poiss-mean-exp-ps}{{6}{101}}
-\newlabel{eq:poiss-mean-poiss-mean-s3}{{7}{102}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Multivariate discrete distributions}{103}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Categorical distribution}{103}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}\textit  {Definition}}{103}\protected@file@percent }
-\newlabel{sec:cat}{{2.1.1}{103}}
-\newlabel{eq:cat-cat}{{1}{103}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}\textbf  {Probability mass function}}{103}\protected@file@percent }
-\newlabel{sec:cat-pmf}{{2.1.2}{103}}
-\newlabel{eq:cat-pmf-cat}{{1}{103}}
-\newlabel{eq:cat-pmf-cat-pmf}{{2}{103}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}\textbf  {Mean}}{103}\protected@file@percent }
-\newlabel{sec:cat-mean}{{2.1.3}{103}}
-\newlabel{eq:cat-mean-cat}{{1}{103}}
-\newlabel{eq:cat-mean-cat-mean}{{2}{104}}
-\newlabel{eq:cat-mean-cat-mean-qed}{{3}{104}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Multinomial distribution}{104}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}\textit  {Definition}}{104}\protected@file@percent }
-\newlabel{sec:mult}{{2.2.1}{104}}
-\newlabel{eq:mult-mult}{{1}{104}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}\textbf  {Probability mass function}}{104}\protected@file@percent }
-\newlabel{sec:mult-pmf}{{2.2.2}{104}}
-\newlabel{eq:mult-pmf-mult}{{1}{105}}
-\newlabel{eq:mult-pmf-mult-pmf}{{2}{105}}
-\newlabel{eq:mult-pmf-mult-prob}{{3}{105}}
-\newlabel{eq:mult-pmf-mult-coeff}{{4}{105}}
-\newlabel{eq:mult-pmf-mult-pmf-qed}{{5}{105}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}\textbf  {Mean}}{105}\protected@file@percent }
-\newlabel{sec:mult-mean}{{2.2.3}{105}}
-\newlabel{eq:mult-mean-mult}{{1}{105}}
-\newlabel{eq:mult-mean-bin-mean}{{2}{105}}
-\newlabel{eq:mult-mean-mult-mean-s1}{{3}{106}}
-\newlabel{eq:mult-mean-mult-mean-s2}{{4}{106}}
-\newlabel{eq:mult-mean-mult-mean-s3}{{5}{106}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Univariate continuous distributions}{107}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Continuous uniform distribution}{107}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}\textit  {Definition}}{107}\protected@file@percent }
-\newlabel{sec:cuni}{{3.1.1}{107}}
-\newlabel{eq:cuni-cuni}{{1}{107}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}\textbf  {Probability density function}}{107}\protected@file@percent }
-\newlabel{sec:cuni-pdf}{{3.1.2}{107}}
-\newlabel{eq:cuni-pdf-cuni}{{1}{107}}
-\newlabel{eq:cuni-pdf-cuni-pdf}{{2}{107}}
-\newlabel{eq:cuni-pdf-cuni-pdf-s1}{{3}{107}}
-\newlabel{eq:cuni-pdf-cuni-pdf-s2}{{4}{107}}
-\newlabel{eq:cuni-pdf-cuni-pdf-s3}{{5}{107}}
-\newlabel{eq:cuni-pdf-cuni-pdf-s4}{{6}{108}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}\textbf  {Cumulative distribution function}}{108}\protected@file@percent }
-\newlabel{sec:cuni-cdf}{{3.1.3}{108}}
-\newlabel{eq:cuni-cdf-cuni}{{1}{108}}
-\newlabel{eq:cuni-cdf-cuni-cdf}{{2}{108}}
-\newlabel{eq:cuni-cdf-cuni-pdf}{{3}{108}}
-\newlabel{eq:cuni-cdf-cuni-cdf-s1}{{4}{108}}
-\newlabel{eq:cuni-cdf-cuni-cdf-s2a}{{5}{108}}
-\newlabel{eq:cuni-cdf-cuni-cdf-s2b}{{6}{109}}
-\newlabel{eq:cuni-cdf-cuni-cdf-s2c}{{7}{109}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}\textbf  {Quantile function}}{109}\protected@file@percent }
-\newlabel{sec:cuni-qf}{{3.1.4}{109}}
-\newlabel{eq:cuni-qf-cuni}{{1}{109}}
-\newlabel{eq:cuni-qf-cuni-qf}{{2}{109}}
-\newlabel{eq:cuni-qf-cuni-cdf}{{3}{109}}
-\newlabel{eq:cuni-qf-qf}{{4}{110}}
-\newlabel{eq:cuni-qf-exp-qf-s1}{{5}{110}}
-\newlabel{eq:cuni-qf-cuni-cdf-s2}{{6}{110}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}\textbf  {Mean}}{110}\protected@file@percent }
-\newlabel{sec:cuni-mean}{{3.1.5}{110}}
-\newlabel{eq:cuni-mean-cuni}{{1}{110}}
-\newlabel{eq:cuni-mean-cuni-mean}{{2}{110}}
-\newlabel{eq:cuni-mean-mean}{{3}{110}}
-\newlabel{eq:cuni-mean-cuni-mean-qed}{{4}{111}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.6}\textbf  {Median}}{111}\protected@file@percent }
-\newlabel{sec:cuni-med}{{3.1.6}{111}}
-\newlabel{eq:cuni-med-cuni}{{1}{111}}
-\newlabel{eq:cuni-med-cuni-med}{{2}{111}}
-\newlabel{eq:cuni-med-median}{{3}{111}}
-\newlabel{eq:cuni-med-cuni-cdf}{{4}{111}}
-\newlabel{eq:cuni-med-cuni-cdf-inv}{{5}{111}}
-\newlabel{eq:cuni-med-cuni-med-qed}{{6}{111}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.7}\textbf  {Mode}}{112}\protected@file@percent }
-\newlabel{sec:cuni-med}{{3.1.7}{112}}
-\newlabel{eq:cuni-med-cuni}{{1}{112}}
-\newlabel{eq:cuni-med-cuni-mode}{{2}{112}}
-\newlabel{eq:cuni-med-mode}{{3}{112}}
-\newlabel{eq:cuni-med-cuni-pdf}{{4}{112}}
-\newlabel{eq:cuni-med-cuni-pdf-max}{{5}{112}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Normal distribution}{112}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}\textit  {Definition}}{112}\protected@file@percent }
-\newlabel{sec:norm}{{3.2.1}{112}}
-\newlabel{eq:norm-norm}{{1}{112}}
-\newlabel{eq:norm-norm-pdf}{{2}{113}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}\textit  {Standard normal distribution}}{113}\protected@file@percent }
-\newlabel{sec:snorm}{{3.2.2}{113}}
-\newlabel{eq:snorm-snorm}{{1}{113}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}\textbf  {Relation to standard normal distribution}}{113}\protected@file@percent }
-\newlabel{sec:norm-snorm}{{3.2.3}{113}}
-\newlabel{eq:norm-snorm-X-norm}{{1}{113}}
-\newlabel{eq:norm-snorm-Z-snorm}{{2}{113}}
-\newlabel{eq:norm-snorm-Z-X}{{3}{113}}
-\newlabel{eq:norm-snorm-X-Z}{{4}{113}}
-\newlabel{eq:norm-snorm-cdf-sifct}{{5}{114}}
-\newlabel{eq:norm-snorm-norm-cdf}{{6}{114}}
-\newlabel{eq:norm-snorm-Z-cdf-s1}{{7}{114}}
-\newlabel{eq:norm-snorm-Z-cdf-s2}{{8}{114}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}\textbf  {Relation to standard normal distribution}}{114}\protected@file@percent }
-\newlabel{sec:norm-snorm2}{{3.2.4}{114}}
-\newlabel{eq:norm-snorm2-X-norm}{{1}{114}}
-\newlabel{eq:norm-snorm2-Z-snorm}{{2}{114}}
-\newlabel{eq:norm-snorm2-Z-X}{{3}{115}}
-\newlabel{eq:norm-snorm2-X-Z}{{4}{115}}
-\newlabel{eq:norm-snorm2-pdf-sifct}{{5}{115}}
-\newlabel{eq:norm-snorm2-pdf-Z}{{6}{115}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5}\textbf  {Relation to standard normal distribution}}{115}\protected@file@percent }
-\newlabel{sec:norm-snorm3}{{3.2.5}{115}}
-\newlabel{eq:norm-snorm3-X-norm}{{1}{115}}
-\newlabel{eq:norm-snorm3-Z-snorm}{{2}{115}}
-\newlabel{eq:norm-snorm3-mvn-ltt}{{3}{116}}
-\newlabel{eq:norm-snorm3-Z-X}{{4}{116}}
-\newlabel{eq:norm-snorm3-mvn-ltt-norm}{{5}{116}}
-\newlabel{eq:norm-snorm3-Z-snorm-qed}{{6}{116}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.6}\textbf  {Gaussian integral}}{116}\protected@file@percent }
-\newlabel{sec:norm-gi}{{3.2.6}{116}}
-\newlabel{eq:norm-gi-norm-gi}{{1}{116}}
-\newlabel{eq:norm-gi-I}{{2}{116}}
-\newlabel{eq:norm-gi-IP}{{3}{116}}
-\newlabel{eq:norm-gi-IP-I}{{4}{116}}
-\newlabel{eq:norm-gi-IP2-I2}{{5}{116}}
-\newlabel{eq:norm-gi-IP2}{{6}{117}}
-\newlabel{eq:norm-gi-IP2-ineq}{{7}{117}}
-\newlabel{eq:norm-gi-IP2-ineq-PC}{{8}{117}}
-\newlabel{eq:norm-gi-IP2-ineq-PC-int}{{9}{117}}
-\newlabel{eq:norm-gi-IP2-ineq-PC-int-lim}{{10}{117}}
-\newlabel{eq:norm-gi-I-qed}{{11}{117}}
-\newlabel{eq:norm-gi-norm-gi-qed}{{12}{118}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.7}\textbf  {Probability density function}}{118}\protected@file@percent }
-\newlabel{sec:norm-pdf}{{3.2.7}{118}}
-\newlabel{eq:norm-pdf-norm}{{1}{118}}
-\newlabel{eq:norm-pdf-norm-pdf}{{2}{118}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.8}\textbf  {Moment-generating function}}{118}\protected@file@percent }
-\newlabel{sec:norm-mgf}{{3.2.8}{118}}
-\newlabel{eq:norm-mgf-norm}{{1}{118}}
-\newlabel{eq:norm-mgf-norm-mgf}{{2}{118}}
-\newlabel{eq:norm-mgf-norm-pdf}{{3}{119}}
-\newlabel{eq:norm-mgf-mgf-var}{{4}{119}}
-\newlabel{eq:norm-mgf-norm-mgf-s1}{{5}{119}}
-\newlabel{eq:norm-mgf-norm-mgf-s2}{{6}{119}}
-\newlabel{eq:norm-mgf-norm-mgf-s3}{{7}{119}}
-\newlabel{eq:norm-mgf-gauss}{{8}{120}}
-\newlabel{eq:norm-mgf-norm-mgf-qed}{{9}{120}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.9}\textbf  {Cumulative distribution function}}{120}\protected@file@percent }
-\newlabel{sec:norm-cdf}{{3.2.9}{120}}
-\newlabel{eq:norm-cdf-norm}{{1}{120}}
-\newlabel{eq:norm-cdf-norm-cdf}{{2}{120}}
-\newlabel{eq:norm-cdf-erf}{{3}{120}}
-\newlabel{eq:norm-cdf-norm-pdf}{{4}{120}}
-\newlabel{eq:norm-cdf-norm-cdf-s1}{{5}{120}}
-\newlabel{eq:norm-cdf-norm-cdf-s2}{{6}{121}}
-\newlabel{eq:norm-cdf-norm-cdf-s3}{{7}{121}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.10}\textbf  {Cumulative distribution function without error function}}{121}\protected@file@percent }
-\newlabel{sec:norm-cdfwerf}{{3.2.10}{121}}
-\newlabel{eq:norm-cdfwerf-norm}{{1}{121}}
-\newlabel{eq:norm-cdfwerf-norm-cdf}{{2}{121}}
-\newlabel{eq:norm-cdfwerf-snorm-pdf}{{3}{122}}
-\newlabel{eq:norm-cdfwerf-snorm-pdf-ii-s1}{{4}{122}}
-\newlabel{eq:norm-cdfwerf-int-const}{{5}{122}}
-\newlabel{eq:norm-cdfwerf-snorm-pdf-ii-s2}{{6}{122}}
-\newlabel{eq:norm-cdfwerf-snorm-cdf}{{7}{122}}
-\newlabel{eq:norm-cdfwerf-snorm-cdf-c}{{8}{123}}
-\newlabel{eq:norm-cdfwerf-norm-snorm-cdf}{{9}{123}}
-\newlabel{eq:norm-cdfwerf-norm-cdf-qed}{{10}{123}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.11}\textbf  {Quantile function}}{123}\protected@file@percent }
-\newlabel{sec:norm-qf}{{3.2.11}{123}}
-\newlabel{eq:norm-qf-norm}{{1}{123}}
-\newlabel{eq:norm-qf-norm-qf}{{2}{123}}
-\newlabel{eq:norm-qf-norm-cdf}{{3}{123}}
-\newlabel{eq:norm-qf-norm-qf-s1}{{4}{124}}
-\newlabel{eq:norm-qf-norm-qf-s2}{{5}{124}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.12}\textbf  {Mean}}{124}\protected@file@percent }
-\newlabel{sec:norm-mean}{{3.2.12}{124}}
-\newlabel{eq:norm-mean-norm}{{1}{124}}
-\newlabel{eq:norm-mean-norm-mean}{{2}{124}}
-\newlabel{eq:norm-mean-mean}{{3}{124}}
-\newlabel{eq:norm-mean-norm-mean-s1}{{4}{124}}
-\newlabel{eq:norm-mean-norm-mean-s2}{{5}{125}}
-\newlabel{eq:norm-mean-exp-erf-anti-der}{{6}{125}}
-\newlabel{eq:norm-mean-norm-mean-s3}{{7}{125}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.13}\textbf  {Median}}{125}\protected@file@percent }
-\newlabel{sec:norm-med}{{3.2.13}{125}}
-\newlabel{eq:norm-med-norm}{{1}{126}}
-\newlabel{eq:norm-med-norm-median}{{2}{126}}
-\newlabel{eq:norm-med-median}{{3}{126}}
-\newlabel{eq:norm-med-norm-cdf}{{4}{126}}
-\newlabel{eq:norm-med-norm-cdf-inv}{{5}{126}}
-\newlabel{eq:norm-med-norm-med-qed}{{6}{126}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.14}\textbf  {Mode}}{126}\protected@file@percent }
-\newlabel{sec:norm-mode}{{3.2.14}{126}}
-\newlabel{eq:norm-mode-norm}{{1}{126}}
-\newlabel{eq:norm-mode-norm-mode}{{2}{126}}
-\newlabel{eq:norm-mode-mode}{{3}{126}}
-\newlabel{eq:norm-mode-norm-pdf}{{4}{126}}
-\newlabel{eq:norm-mode-norm-pdf-der1}{{5}{127}}
-\newlabel{eq:norm-mode-norm-pdf-der2}{{6}{127}}
-\newlabel{eq:norm-mode-norm-mode-s1}{{7}{127}}
-\newlabel{eq:norm-mode-norm-mode-s2}{{8}{127}}
-\newlabel{eq:norm-mode-norm-mode-qed}{{9}{127}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.15}\textbf  {Variance}}{127}\protected@file@percent }
-\newlabel{sec:norm-var}{{3.2.15}{127}}
-\newlabel{eq:norm-var-norm}{{1}{127}}
-\newlabel{eq:norm-var-norm-var}{{2}{127}}
-\newlabel{eq:norm-var-var}{{3}{128}}
-\newlabel{eq:norm-var-norm-var-s1}{{4}{128}}
-\newlabel{eq:norm-var-norm-var-s2}{{5}{128}}
-\newlabel{eq:norm-var-norm-var-s3}{{6}{128}}
-\newlabel{eq:norm-var-norm-var-s4}{{7}{128}}
-\newlabel{eq:norm-var-norm-var-s5}{{8}{128}}
-\newlabel{eq:norm-var-gam-fct}{{9}{128}}
-\newlabel{eq:norm-var-norm-var-s6}{{10}{128}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.16}\textbf  {Full width at half maximum}}{129}\protected@file@percent }
-\newlabel{sec:norm-fwhm}{{3.2.16}{129}}
-\newlabel{eq:norm-fwhm-norm}{{1}{129}}
-\newlabel{eq:norm-fwhm-norm-fwhm}{{2}{129}}
-\newlabel{eq:norm-fwhm-norm-pdf}{{3}{129}}
-\newlabel{eq:norm-fwhm-norm-mode}{{4}{129}}
-\newlabel{eq:norm-fwhm-norm-pdf-max}{{5}{129}}
-\newlabel{eq:norm-fwhm-x-FHWM}{{6}{129}}
-\newlabel{eq:norm-fwhm-x-FHWM-s1}{{7}{130}}
-\newlabel{eq:norm-fwhm-x-FHWM-s2}{{8}{130}}
-\newlabel{eq:norm-fwhm-norm-fwhm-qed}{{9}{130}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.17}\textbf  {Differential entropy}}{130}\protected@file@percent }
-\newlabel{sec:norm-dent}{{3.2.17}{130}}
-\newlabel{eq:norm-dent-norm}{{1}{130}}
-\newlabel{eq:norm-dent-norm-dent}{{2}{130}}
-\newlabel{eq:norm-dent-dent}{{3}{131}}
-\newlabel{eq:norm-dent-dent-nats}{{4}{131}}
-\newlabel{eq:norm-dent-mvn-dent-s1}{{5}{131}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.18}\textbf  {Kullback-Leibler divergence}}{131}\protected@file@percent }
-\newlabel{sec:norm-kl}{{3.2.18}{131}}
-\newlabel{eq:norm-kl-norms}{{1}{131}}
-\newlabel{eq:norm-kl-norm-KL}{{2}{131}}
-\newlabel{eq:norm-kl-KL-cont}{{3}{132}}
-\newlabel{eq:norm-kl-norm-KL-s1}{{4}{132}}
-\newlabel{eq:norm-kl-norm-KL-s2}{{5}{132}}
-\newlabel{eq:norm-kl-norm-KL-s3}{{6}{132}}
-\newlabel{eq:norm-kl-var}{{7}{132}}
-\newlabel{eq:norm-kl-norm-var}{{8}{132}}
-\newlabel{eq:norm-kl-norm-mom-raw}{{9}{133}}
-\newlabel{eq:norm-kl-norm-KL-s4}{{10}{133}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Gamma distribution}{133}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}\textit  {Definition}}{133}\protected@file@percent }
-\newlabel{sec:gam}{{3.3.1}{133}}
-\newlabel{eq:gam-gam}{{1}{133}}
-\newlabel{eq:gam-gam-pdf}{{2}{133}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}\textit  {Standard gamma distribution}}{133}\protected@file@percent }
-\newlabel{sec:sgam}{{3.3.2}{133}}
-\newlabel{eq:sgam-sgam}{{1}{133}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}\textbf  {Relation to standard gamma distribution}}{134}\protected@file@percent }
-\newlabel{sec:gam-sgam}{{3.3.3}{134}}
-\newlabel{eq:gam-sgam-X-gam}{{1}{134}}
-\newlabel{eq:gam-sgam-Y-snorm}{{2}{134}}
-\newlabel{eq:gam-sgam-Y-X}{{3}{134}}
-\newlabel{eq:gam-sgam-X-Y}{{4}{134}}
-\newlabel{eq:gam-sgam-cdf-sifct}{{5}{134}}
-\newlabel{eq:gam-sgam-gam-cdf}{{6}{134}}
-\newlabel{eq:gam-sgam-Y-cdf-s1}{{7}{134}}
-\newlabel{eq:gam-sgam-Z-cdf-s2}{{8}{135}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}\textbf  {Relation to standard gamma distribution}}{135}\protected@file@percent }
-\newlabel{sec:gam-sgam2}{{3.3.4}{135}}
-\newlabel{eq:gam-sgam2-X-gam}{{1}{135}}
-\newlabel{eq:gam-sgam2-Y-snorm}{{2}{135}}
-\newlabel{eq:gam-sgam2-Y-X}{{3}{135}}
-\newlabel{eq:gam-sgam2-X-Y}{{4}{135}}
-\newlabel{eq:gam-sgam2-pdf-sifct}{{5}{135}}
-\newlabel{eq:gam-sgam2-pdf-Y}{{6}{136}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5}\textbf  {Probability density function}}{136}\protected@file@percent }
-\newlabel{sec:gam-pdf}{{3.3.5}{136}}
-\newlabel{eq:gam-pdf-gam}{{1}{136}}
-\newlabel{eq:gam-pdf-gam-pdf}{{2}{136}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6}\textbf  {Cumulative distribution function}}{136}\protected@file@percent }
-\newlabel{sec:gam-cdf}{{3.3.6}{136}}
-\newlabel{eq:gam-cdf-gam}{{1}{136}}
-\newlabel{eq:gam-cdf-gam-cdf}{{2}{136}}
-\newlabel{eq:gam-cdf-gam-pdf}{{3}{137}}
-\newlabel{eq:gam-cdf-gam-cdf-s1}{{4}{137}}
-\newlabel{eq:gam-cdf-gam-cdf-s2}{{5}{137}}
-\newlabel{eq:gam-cdf-low-inc-gam-fct}{{6}{137}}
-\newlabel{eq:gam-cdf-gam-cdf-qed}{{7}{137}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.7}\textbf  {Quantile function}}{137}\protected@file@percent }
-\newlabel{sec:gam-qf}{{3.3.7}{137}}
-\newlabel{eq:gam-qf-gam}{{1}{137}}
-\newlabel{eq:gam-qf-gam-qf}{{2}{138}}
-\newlabel{eq:gam-qf-gam-cdf}{{3}{138}}
-\newlabel{eq:gam-qf-qf}{{4}{138}}
-\newlabel{eq:gam-qf-gam-qf-s1}{{5}{138}}
-\newlabel{eq:gam-qf-gam-qf-s2}{{6}{138}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.8}\textbf  {Mean}}{138}\protected@file@percent }
-\newlabel{sec:gam-mean}{{3.3.8}{138}}
-\newlabel{eq:gam-mean-gam}{{1}{138}}
-\newlabel{eq:gam-mean-gam-mean}{{2}{138}}
-\newlabel{eq:gam-mean-mean}{{3}{139}}
-\newlabel{eq:gam-mean-gam-mean-s1}{{4}{139}}
-\newlabel{eq:gam-mean-gam-mean-s2}{{5}{139}}
-\newlabel{eq:gam-mean-gam-mean-s3}{{6}{139}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.9}\textbf  {Variance}}{139}\protected@file@percent }
-\newlabel{sec:gam-var}{{3.3.9}{139}}
-\newlabel{eq:gam-var-gam}{{1}{139}}
-\newlabel{eq:gam-var-gam-var}{{2}{139}}
-\newlabel{eq:gam-var-var-mean}{{3}{139}}
-\newlabel{eq:gam-var-gam-mean}{{4}{140}}
-\newlabel{eq:gam-var-gam-sqr-mean-s1}{{5}{140}}
-\newlabel{eq:gam-var-gam-sqr-mean-s2}{{6}{140}}
-\newlabel{eq:gam-var-gam-sqr-mean-s3}{{7}{140}}
-\newlabel{eq:gam-var-gam-var-qed}{{8}{140}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.10}\textbf  {Logarithmic expectation}}{140}\protected@file@percent }
-\newlabel{sec:gam-logmean}{{3.3.10}{140}}
-\newlabel{eq:gam-logmean-gam}{{1}{140}}
-\newlabel{eq:gam-logmean-gam-logmean}{{2}{140}}
-\newlabel{eq:gam-logmean-X-pdf-s1}{{3}{141}}
-\newlabel{eq:gam-logmean-X-pdf-s2}{{4}{141}}
-\newlabel{eq:gam-logmean-Y-pdf-s1}{{5}{141}}
-\newlabel{eq:gam-logmean-Y-pdf-s2}{{6}{141}}
-\newlabel{eq:gam-logmean-dfy-da}{{7}{141}}
-\newlabel{eq:gam-logmean-E-Y-s1}{{8}{141}}
-\newlabel{eq:gam-logmean-log-der}{{9}{142}}
-\newlabel{eq:gam-logmean-psi}{{10}{142}}
-\newlabel{eq:gam-logmean-E-Y-s2}{{11}{142}}
-\newlabel{eq:gam-logmean-gam-sgam}{{12}{142}}
-\newlabel{eq:gam-logmean-logmean}{{13}{142}}
-\newlabel{eq:gam-logmean-E-Y-s3}{{14}{142}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.11}\textbf  {Expectation of x ln x}}{142}\protected@file@percent }
-\newlabel{sec:gam-xlogx}{{3.3.11}{142}}
-\newlabel{eq:gam-xlogx-gam}{{1}{142}}
-\newlabel{eq:gam-xlogx-gam-xlogx}{{2}{142}}
-\newlabel{eq:gam-xlogx-gam-xlogx-s1}{{3}{143}}
-\newlabel{eq:gam-xlogx-logmean-a+1}{{4}{143}}
-\newlabel{eq:gam-xlogx-gam-logmean}{{5}{143}}
-\newlabel{eq:gam-xlogx-gam-fct}{{6}{143}}
-\newlabel{eq:gam-xlogx-gam-xlogx-qed}{{7}{143}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.12}\textbf  {Kullback-Leibler divergence}}{143}\protected@file@percent }
-\newlabel{sec:gam-kl}{{3.3.12}{143}}
-\newlabel{eq:gam-kl-gams}{{1}{143}}
-\newlabel{eq:gam-kl-gam-KL}{{2}{143}}
-\newlabel{eq:gam-kl-KL-cont}{{3}{144}}
-\newlabel{eq:gam-kl-gam-KL-s1}{{4}{144}}
-\newlabel{eq:gam-kl-gam-KL-s2}{{5}{144}}
-\newlabel{eq:gam-kl-gam-means}{{6}{144}}
-\newlabel{eq:gam-kl-gam-KL-s3}{{7}{144}}
-\newlabel{eq:gam-kl-gam-KL-qed}{{8}{144}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Exponential distribution}{145}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}\textit  {Definition}}{145}\protected@file@percent }
-\newlabel{sec:exp}{{3.4.1}{145}}
-\newlabel{eq:exp-exp}{{1}{145}}
-\newlabel{eq:exp-exp-pdf}{{2}{145}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}\textbf  {Special case of gamma distribution}}{145}\protected@file@percent }
-\newlabel{sec:exp-gam}{{3.4.2}{145}}
-\newlabel{eq:exp-gam-gam-pdf}{{1}{145}}
-\newlabel{eq:exp-gam-exp-pdf}{{2}{145}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}\textbf  {Probability density function}}{146}\protected@file@percent }
-\newlabel{sec:exp-pdf}{{3.4.3}{146}}
-\newlabel{eq:exp-pdf-exp}{{1}{146}}
-\newlabel{eq:exp-pdf-gam-pdf}{{2}{146}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}\textbf  {Cumulative distribution function}}{146}\protected@file@percent }
-\newlabel{sec:exp-cdf}{{3.4.4}{146}}
-\newlabel{eq:exp-cdf-exp}{{1}{146}}
-\newlabel{eq:exp-cdf-exp-cdf}{{2}{146}}
-\newlabel{eq:exp-cdf-exp-pdf}{{3}{146}}
-\newlabel{eq:exp-cdf-exp-cdf-s1}{{4}{146}}
-\newlabel{eq:exp-cdf-exp-cdf-s2a}{{5}{146}}
-\newlabel{eq:exp-cdf-exp-cdf-s2b}{{6}{147}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5}\textbf  {Quantile function}}{147}\protected@file@percent }
-\newlabel{sec:exp-qf}{{3.4.5}{147}}
-\newlabel{eq:exp-qf-exp}{{1}{147}}
-\newlabel{eq:exp-qf-exp-qf}{{2}{147}}
-\newlabel{eq:exp-qf-exp-cdf}{{3}{147}}
-\newlabel{eq:exp-qf-qf}{{4}{147}}
-\newlabel{eq:exp-qf-exp-qf-s1}{{5}{147}}
-\newlabel{eq:exp-qf-exp-qf-s2}{{6}{148}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.6}\textbf  {Mean}}{148}\protected@file@percent }
-\newlabel{sec:exp-mean}{{3.4.6}{148}}
-\newlabel{eq:exp-mean-exp}{{1}{148}}
-\newlabel{eq:exp-mean-exp-mean}{{2}{148}}
-\newlabel{eq:exp-mean-mean}{{3}{148}}
-\newlabel{eq:exp-mean-exp-mean-s1}{{4}{148}}
-\newlabel{eq:exp-mean-exp-mean-s2}{{5}{148}}
-\newlabel{eq:exp-mean-exp-mean-s3}{{6}{149}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.7}\textbf  {Median}}{149}\protected@file@percent }
-\newlabel{sec:exp-med}{{3.4.7}{149}}
-\newlabel{eq:exp-med-exp}{{1}{149}}
-\newlabel{eq:exp-med-exp-med}{{2}{149}}
-\newlabel{eq:exp-med-median}{{3}{149}}
-\newlabel{eq:exp-med-exp-cdf}{{4}{149}}
-\newlabel{eq:exp-med-exp-cdf-inv}{{5}{149}}
-\newlabel{eq:exp-med-exp-med-qed}{{6}{149}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.8}\textbf  {Mode}}{150}\protected@file@percent }
-\newlabel{sec:exp-mode}{{3.4.8}{150}}
-\newlabel{eq:exp-mode-exp}{{1}{150}}
-\newlabel{eq:exp-mode-exp-mode}{{2}{150}}
-\newlabel{eq:exp-mode-mode}{{3}{150}}
-\newlabel{eq:exp-mode-exp-pdf}{{4}{150}}
-\newlabel{eq:exp-mode-exp-pdf-eq0}{{5}{150}}
-\newlabel{eq:exp-mode-exp-pdf-neq0}{{6}{150}}
-\newlabel{eq:exp-mode-exp-mode-qed}{{7}{150}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Chi-square distribution}{151}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}\textit  {Definition}}{151}\protected@file@percent }
-\newlabel{sec:chi2}{{3.5.1}{151}}
-\newlabel{eq:chi2-snorm}{{1}{151}}
-\newlabel{eq:chi2-chi2}{{2}{151}}
-\newlabel{eq:chi2-chi2-pdf}{{3}{151}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}\textbf  {Special case of gamma distribution}}{151}\protected@file@percent }
-\newlabel{sec:chi2-gam}{{3.5.2}{151}}
-\newlabel{eq:chi2-gam-chi2-gam}{{1}{151}}
-\newlabel{eq:chi2-gam-gam-pdf}{{2}{151}}
-\newlabel{eq:chi2-gam-gam-pdf-chi2}{{3}{151}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}\textbf  {Probability density function}}{152}\protected@file@percent }
-\newlabel{sec:chi2-pdf}{{3.5.3}{152}}
-\newlabel{eq:chi2-pdf-chi2}{{1}{152}}
-\newlabel{eq:chi2-pdf-chi2-pdf}{{2}{152}}
-\newlabel{eq:chi2-pdf-chi2-def}{{3}{152}}
-\newlabel{eq:chi2-pdf-y-x}{{4}{152}}
-\newlabel{eq:chi2-pdf-y-pdf-s0}{{5}{152}}
-\newlabel{eq:chi2-pdf-y-cdf-s1}{{6}{152}}
-\newlabel{eq:chi2-pdf-y-cdf-s2}{{7}{153}}
-\newlabel{eq:chi2-pdf-y-cdf-s3}{{8}{153}}
-\newlabel{eq:chi2-pdf-A}{{9}{153}}
-\newlabel{eq:chi2-pdf-dR}{{10}{153}}
-\newlabel{eq:chi2-pdf-y-cdf-s4}{{11}{153}}
-\newlabel{eq:chi2-pdf-y-cdf-s5}{{12}{153}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.4}\textbf  {Moments}}{154}\protected@file@percent }
-\newlabel{sec:chi2-mom}{{3.5.4}{154}}
-\newlabel{eq:chi2-mom-chi2}{{1}{154}}
-\newlabel{eq:chi2-mom-chi2-mom}{{2}{154}}
-\newlabel{eq:chi2-mom-chi2-mom-int}{{3}{154}}
-\newlabel{eq:chi2-mom-chi-2-mom-int-u}{{4}{154}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Beta distribution}{154}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}\textit  {Definition}}{154}\protected@file@percent }
-\newlabel{sec:beta}{{3.6.1}{154}}
-\newlabel{eq:beta-beta}{{1}{154}}
-\newlabel{eq:beta-beta-pdf}{{2}{154}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.2}\textbf  {Probability density function}}{155}\protected@file@percent }
-\newlabel{sec:beta-pdf}{{3.6.2}{155}}
-\newlabel{eq:beta-pdf-beta}{{1}{155}}
-\newlabel{eq:beta-pdf-beta-pdf}{{2}{155}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.3}\textbf  {Moment-generating function}}{155}\protected@file@percent }
-\newlabel{sec:beta-mgf}{{3.6.3}{155}}
-\newlabel{eq:beta-mgf-beta}{{1}{155}}
-\newlabel{eq:beta-mgf-beta-mgf}{{2}{155}}
-\newlabel{eq:beta-mgf-beta-pdf}{{3}{155}}
-\newlabel{eq:beta-mgf-mgf-var}{{4}{155}}
-\newlabel{eq:beta-mgf-beta-mgf-s1}{{5}{156}}
-\newlabel{eq:beta-mgf-beta-gam-fct}{{6}{156}}
-\newlabel{eq:beta-mgf-con-hyp-geo-fct-int}{{7}{156}}
-\newlabel{eq:beta-mgf-beta-mgf-s2}{{8}{156}}
-\newlabel{eq:beta-mgf-con-hyp-geo-fct-ser}{{9}{156}}
-\newlabel{eq:beta-mgf-fact-rise}{{10}{156}}
-\newlabel{eq:beta-mgf-beta-mgf-s3}{{11}{156}}
-\newlabel{eq:beta-mgf-beta-mgf-s4}{{12}{156}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.4}\textbf  {Cumulative distribution function}}{157}\protected@file@percent }
-\newlabel{sec:beta-cdf}{{3.6.4}{157}}
-\newlabel{eq:beta-cdf-beta}{{1}{157}}
-\newlabel{eq:beta-cdf-beta-cdf}{{2}{157}}
-\newlabel{eq:beta-cdf-beta-pdf}{{3}{157}}
-\newlabel{eq:beta-cdf-beta-cdf-app}{{4}{157}}
-\newlabel{eq:beta-cdf-inc-beta-fct}{{5}{157}}
-\newlabel{eq:beta-cdf-beta-cdf-qed}{{6}{157}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Wald distribution}{157}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.1}\textit  {Definition}}{157}\protected@file@percent }
-\newlabel{sec:wald}{{3.7.1}{157}}
-\newlabel{eq:wald-wald}{{1}{158}}
-\newlabel{eq:wald-wald-pdf}{{2}{158}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.2}\textbf  {Probability density function}}{158}\protected@file@percent }
-\newlabel{sec:wald-pdf}{{3.7.2}{158}}
-\newlabel{eq:wald-pdf-wald}{{1}{158}}
-\newlabel{eq:wald-pdf-wald-pdf}{{2}{158}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.3}\textbf  {Moment-generating function}}{158}\protected@file@percent }
-\newlabel{sec:wald-mgf}{{3.7.3}{158}}
-\newlabel{eq:wald-mgf-wald}{{1}{158}}
-\newlabel{eq:wald-mgf-wald-mgf}{{2}{158}}
-\newlabel{eq:wald-mgf-wald-pdf}{{3}{159}}
-\newlabel{eq:wald-mgf-mgf-var}{{4}{159}}
-\newlabel{eq:wald-mgf-wald-mgf-s1}{{5}{159}}
-\newlabel{eq:wald-mgf-bessel-de}{{6}{159}}
-\newlabel{eq:wald-mgf-bessel-fact1}{{7}{159}}
-\newlabel{eq:wald-mgf-bessel-fact2}{{8}{159}}
-\newlabel{eq:wald-mgf-wald-mgf-s2}{{9}{159}}
-\newlabel{eq:wald-mgf-wald-mgf-s3}{{10}{159}}
-\newlabel{eq:wald-mgf-wald-mgf-s4}{{11}{160}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.4}\textbf  {Mean}}{160}\protected@file@percent }
-\newlabel{sec:wald-mean}{{3.7.4}{160}}
-\newlabel{eq:wald-mean-wald}{{1}{160}}
-\newlabel{eq:wald-mean-wald-mean}{{2}{160}}
-\newlabel{eq:wald-mean-wald-moment}{{3}{160}}
-\newlabel{eq:wald-mean-wald-mgf}{{4}{160}}
-\newlabel{eq:wald-mean-wald-mean-s1}{{5}{160}}
-\newlabel{eq:wald-mean-wald-mean-s2}{{6}{161}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.5}\textbf  {Variance}}{161}\protected@file@percent }
-\newlabel{sec:wald-var}{{3.7.5}{161}}
-\newlabel{eq:wald-var-wald}{{1}{161}}
-\newlabel{eq:wald-var-wald-var}{{2}{161}}
-\newlabel{eq:wald-var-var-mean}{{3}{161}}
-\newlabel{eq:wald-var-wald-moment}{{4}{161}}
-\newlabel{eq:wald-var-wald-mgf}{{5}{161}}
-\newlabel{eq:wald-var-wald-var-s1}{{6}{161}}
-\newlabel{eq:wald-var-wald-var-s2}{{7}{162}}
-\newlabel{eq:wald-var-wald-var-s3}{{8}{162}}
-\newlabel{eq:wald-var-wald-var-s4}{{9}{162}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Multivariate continuous distributions}{163}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Multivariate normal distribution}{163}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}\textit  {Definition}}{163}\protected@file@percent }
-\newlabel{sec:mvn}{{4.1.1}{163}}
-\newlabel{eq:mvn-mvn}{{1}{163}}
-\newlabel{eq:mvn-mvn-pdf}{{2}{163}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}\textbf  {Probability density function}}{163}\protected@file@percent }
-\newlabel{sec:mvn-pdf}{{4.1.2}{163}}
-\newlabel{eq:mvn-pdf-mvn}{{1}{163}}
-\newlabel{eq:mvn-pdf-mvn-pdf}{{2}{163}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}\textbf  {Differential entropy}}{163}\protected@file@percent }
-\newlabel{sec:mvn-dent}{{4.1.3}{163}}
-\newlabel{eq:mvn-dent-mvn}{{1}{163}}
-\newlabel{eq:mvn-dent-mvn-dent}{{2}{164}}
-\newlabel{eq:mvn-dent-dent}{{3}{164}}
-\newlabel{eq:mvn-dent-dent-nats}{{4}{164}}
-\newlabel{eq:mvn-dent-mvn-dent-s1}{{5}{164}}
-\newlabel{eq:mvn-dent-mvn-dent-t3}{{6}{164}}
-\newlabel{eq:mvn-dent-mvn-dent-qed}{{7}{164}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}\textbf  {Kullback-Leibler divergence}}{165}\protected@file@percent }
-\newlabel{sec:mvn-kl}{{4.1.4}{165}}
-\newlabel{eq:mvn-kl-mvns}{{1}{165}}
-\newlabel{eq:mvn-kl-mvn-KL}{{2}{165}}
-\newlabel{eq:mvn-kl-KL-cont}{{3}{165}}
-\newlabel{eq:mvn-kl-mvn-KL-s1}{{4}{165}}
-\newlabel{eq:mvn-kl-mvn-KL-s2}{{5}{165}}
-\newlabel{eq:mvn-kl-mvn-KL-s3}{{6}{165}}
-\newlabel{eq:mvn-kl-mvn-KL-s4}{{7}{166}}
-\newlabel{eq:mvn-kl-mvn-lfmean}{{8}{166}}
-\newlabel{eq:mvn-kl-mvn-qfmean}{{9}{166}}
-\newlabel{eq:mvn-kl-mvn-KL-s5}{{10}{166}}
-\newlabel{eq:mvn-kl-mvn-KL-qed}{{11}{166}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.5}\textbf  {Linear transformation}}{166}\protected@file@percent }
-\newlabel{sec:mvn-ltt}{{4.1.5}{166}}
-\newlabel{eq:mvn-ltt-mvn}{{1}{166}}
-\newlabel{eq:mvn-ltt-mvn-lt}{{2}{166}}
-\newlabel{eq:mvn-ltt-vect-mgf}{{3}{167}}
-\newlabel{eq:mvn-ltt-y-mgf-s1}{{4}{167}}
-\newlabel{eq:mvn-ltt-mvn-mgf}{{5}{167}}
-\newlabel{eq:mvn-ltt-y-mgf-s2}{{6}{167}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.6}\textbf  {Marginal distributions}}{167}\protected@file@percent }
-\newlabel{sec:mvn-marg}{{4.1.6}{167}}
-\newlabel{eq:mvn-marg-mvn}{{1}{167}}
-\newlabel{eq:mvn-marg-mvn-marg}{{2}{167}}
-\newlabel{eq:mvn-marg-xs}{{3}{168}}
-\newlabel{eq:mvn-marg-mvn-marg-qed}{{4}{168}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.7}\textbf  {Conditional distributions}}{168}\protected@file@percent }
-\newlabel{sec:mvn-cond}{{4.1.7}{168}}
-\newlabel{eq:mvn-cond-mvn}{{1}{168}}
-\newlabel{eq:mvn-cond-mvn-cond}{{2}{168}}
-\newlabel{eq:mvn-cond-mvn-cond-hyp}{{3}{168}}
-\newlabel{eq:mvn-cond-mvn-joint-hyp}{{4}{168}}
-\newlabel{eq:mvn-cond-x}{{5}{168}}
-\newlabel{eq:mvn-cond-mvn-joint}{{6}{169}}
-\newlabel{eq:mvn-cond-mvn-marg}{{7}{169}}
-\newlabel{eq:mvn-cond-mvn-cond-s1}{{8}{169}}
-\newlabel{eq:mvn-cond-mvn-cond-s2}{{9}{169}}
-\newlabel{eq:mvn-cond-mvn-cond-s3}{{10}{169}}
-\newlabel{eq:mvn-cond-Sigma-inv-def}{{11}{169}}
-\newlabel{eq:mvn-cond-mvn-cond-s4}{{12}{169}}
-\newlabel{eq:mvn-cond-mvn-cond-s5}{{13}{170}}
-\newlabel{eq:mvn-cond-Block-inv}{{14}{170}}
-\newlabel{eq:mvn-cond-Sigma-inv}{{15}{170}}
-\newlabel{eq:mvn-cond-mvn-cond-s6}{{16}{170}}
-\newlabel{eq:mvn-cond-mvn-cond-s7}{{17}{170}}
-\newlabel{eq:mvn-cond-mvn-cond-s8}{{18}{171}}
-\newlabel{eq:mvn-cond-Block-det}{{19}{171}}
-\newlabel{eq:mvn-cond-Sigma-det}{{20}{171}}
-\newlabel{eq:mvn-cond-mvn-cond-s9}{{21}{171}}
-\newlabel{eq:mvn-cond-mvn-cond-s10}{{22}{171}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Normal-gamma distribution}{172}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}\textit  {Definition}}{172}\protected@file@percent }
-\newlabel{sec:ng}{{4.2.1}{172}}
-\newlabel{eq:ng-ng}{{1}{172}}
-\newlabel{eq:ng-ng-pdf}{{2}{172}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}\textbf  {Probability density function}}{172}\protected@file@percent }
-\newlabel{sec:ng-pdf}{{4.2.2}{172}}
-\newlabel{eq:ng-pdf-ng}{{1}{172}}
-\newlabel{eq:ng-pdf-ng-pdf}{{2}{172}}
-\newlabel{eq:ng-pdf-ng-pdf-w1}{{3}{172}}
-\newlabel{eq:ng-pdf-ng-pdf-s2}{{4}{172}}
-\newlabel{eq:ng-pdf-ng-pdf-qed}{{5}{173}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}\textbf  {Kullback-Leibler divergence}}{173}\protected@file@percent }
-\newlabel{sec:ng-kl}{{4.2.3}{173}}
-\newlabel{eq:ng-kl-NGs}{{1}{173}}
-\newlabel{eq:ng-kl-NG-KL}{{2}{173}}
-\newlabel{eq:ng-kl-NG-pdf}{{3}{173}}
-\newlabel{eq:ng-kl-mvn-KL}{{4}{173}}
-\newlabel{eq:ng-kl-gam-KL}{{5}{173}}
-\newlabel{eq:ng-kl-KL-cont}{{6}{173}}
-\newlabel{eq:ng-kl-NG-KL0}{{7}{174}}
-\newlabel{eq:ng-kl-NG-KL1}{{8}{174}}
-\newlabel{eq:ng-kl-exp-mvn-KL-s1}{{9}{174}}
-\newlabel{eq:ng-kl-exp-mvn-KL-s2}{{10}{174}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4}\textbf  {Marginal distributions}}{174}\protected@file@percent }
-\newlabel{sec:ng-marg}{{4.2.4}{174}}
-\newlabel{eq:ng-marg-ng}{{1}{174}}
-\newlabel{eq:ng-marg-ng-marg-y}{{2}{175}}
-\newlabel{eq:ng-marg-ng-marg-x}{{3}{175}}
-\newlabel{eq:ng-marg-ng-pdf}{{4}{175}}
-\newlabel{eq:ng-marg-ng-marg-y-qed}{{5}{175}}
-\newlabel{eq:ng-marg-ng-marg-x-qed}{{6}{176}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.5}\textbf  {Conditional distributions}}{177}\protected@file@percent }
-\newlabel{sec:ng-cond}{{4.2.5}{177}}
-\newlabel{eq:ng-cond-ng}{{1}{177}}
-\newlabel{eq:ng-cond-ng-cond-x-y}{{2}{177}}
-\newlabel{eq:ng-cond-ng-cond-x1-x2-y}{{3}{177}}
-\newlabel{eq:ng-cond-ng-cond-x1-x2-y-hyp}{{4}{177}}
-\newlabel{eq:ng-cond-ng-cond-y-x}{{5}{177}}
-\newlabel{eq:ng-cond-ng-pdf}{{6}{177}}
-\newlabel{eq:ng-cond-mvn-cond}{{7}{177}}
-\newlabel{eq:ng-cond-ng-cond-y-x-s1}{{8}{178}}
-\newlabel{eq:ng-cond-ng-x-y-pdf}{{9}{178}}
-\newlabel{eq:ng-cond-ng-y-pdf}{{10}{178}}
-\newlabel{eq:ng-cond-ng-x-pdf}{{11}{178}}
-\newlabel{eq:ng-cond-ng-cond-y-x-s2}{{12}{178}}
-\newlabel{eq:ng-cond-ng-cond-y-x-hyp}{{13}{178}}
-\newlabel{eq:ng-cond-ng-cond-y-x-qed}{{14}{178}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Dirichlet distribution}{179}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}\textit  {Definition}}{179}\protected@file@percent }
-\newlabel{sec:dir}{{4.3.1}{179}}
-\newlabel{eq:dir-Dir}{{1}{179}}
-\newlabel{eq:dir-beta-pdf}{{2}{179}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}\textbf  {Probability density function}}{179}\protected@file@percent }
-\newlabel{sec:dir-pdf}{{4.3.2}{179}}
-\newlabel{eq:dir-pdf-Dir}{{1}{179}}
-\newlabel{eq:dir-pdf-Dir-pdf}{{2}{179}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}\textbf  {Exceedance probabilities}}{180}\protected@file@percent }
-\newlabel{sec:dir-ep}{{4.3.3}{180}}
-\newlabel{eq:dir-ep-r-Dir}{{1}{180}}
-\newlabel{eq:dir-ep-Dir2-EP}{{2}{180}}
-\newlabel{eq:dir-ep-Dir-EP}{{3}{180}}
-\newlabel{eq:dir-ep-Dir-EP-def}{{4}{180}}
-\newlabel{eq:dir-ep-Dir-pdf}{{5}{180}}
-\newlabel{eq:dir-ep-Dir-req}{{6}{180}}
-\newlabel{eq:dir-ep-Dir2-pdf}{{7}{180}}
-\newlabel{eq:dir-ep-Beta-pdf}{{8}{180}}
-\newlabel{eq:dir-ep-beta-fct}{{9}{181}}
-\newlabel{eq:dir-ep-Dir2-EP-def}{{10}{181}}
-\newlabel{eq:dir-ep-Dir2-EP-qed}{{11}{181}}
-\newlabel{eq:dir-ep-inc-beta-fct}{{12}{181}}
-\newlabel{eq:dir-ep-Dir-EP-ineq}{{13}{181}}
-\newlabel{eq:dir-ep-Gam-Dir}{{14}{181}}
-\newlabel{eq:dir-ep-Gam-pdf}{{15}{181}}
-\newlabel{eq:dir-ep-Gam-Dir-A}{{16}{181}}
-\newlabel{eq:dir-ep-Gam-Dir-B}{{17}{181}}
-\newlabel{eq:dir-ep-Gam-Dir-eq}{{18}{181}}
-\newlabel{eq:dir-ep-Gam-EP0}{{19}{182}}
-\newlabel{eq:dir-ep-Gam-EP1}{{20}{182}}
-\newlabel{eq:dir-ep-Gam-EP2}{{21}{182}}
-\newlabel{eq:dir-ep-Dir-EP2a}{{22}{182}}
-\newlabel{eq:dir-ep-Dir-EP2b}{{23}{182}}
-\newlabel{eq:dir-ep-Dir-EP2c}{{24}{182}}
-\newlabel{eq:dir-ep-Dir-EP-qed}{{25}{182}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Matrix-variate continuous distributions}{183}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Matrix-normal distribution}{183}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}\textit  {Definition}}{183}\protected@file@percent }
-\newlabel{sec:matn}{{5.1.1}{183}}
-\newlabel{eq:matn-matn}{{1}{183}}
-\newlabel{eq:matn-matn-pdf}{{2}{183}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}\textbf  {Probability density function}}{183}\protected@file@percent }
-\newlabel{sec:matn-pdf}{{5.1.2}{183}}
-\newlabel{eq:matn-pdf-matn}{{1}{183}}
-\newlabel{eq:matn-pdf-matn-pdf}{{2}{183}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}\textbf  {Equivalence to multivariate normal distribution}}{184}\protected@file@percent }
-\newlabel{sec:matn-mvn}{{5.1.3}{184}}
-\newlabel{eq:matn-mvn-matn}{{1}{184}}
-\newlabel{eq:matn-mvn-mvn}{{2}{184}}
-\newlabel{eq:matn-mvn-matn-pdf}{{3}{184}}
-\newlabel{eq:matn-mvn-matn-mvn-s1}{{4}{184}}
-\newlabel{eq:matn-mvn-matn-mvn-s2}{{5}{184}}
-\newlabel{eq:matn-mvn-matn-mvn-s3}{{6}{184}}
-\newlabel{eq:matn-mvn-matn-mvn-s4}{{7}{184}}
-\newlabel{eq:matn-mvn-matn-mvn-s5}{{8}{184}}
-\newlabel{eq:matn-mvn-matn-mvn-s6}{{9}{184}}
-\newlabel{eq:matn-mvn-matn-mvn}{{10}{185}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}\textbf  {Transposition}}{185}\protected@file@percent }
-\newlabel{sec:matn-trans}{{5.1.4}{185}}
-\newlabel{eq:matn-trans-matn}{{1}{185}}
-\newlabel{eq:matn-trans-matn-trans}{{2}{185}}
-\newlabel{eq:matn-trans-matn-pdf-X}{{3}{185}}
-\newlabel{eq:matn-trans-matn-pdf-Y-s1}{{4}{185}}
-\newlabel{eq:matn-trans-matn-pdf-Y-s2}{{5}{185}}
-\newlabel{eq:matn-trans-matn-pdf-Y-s3}{{6}{185}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.5}\textbf  {Linear transformation}}{186}\protected@file@percent }
-\newlabel{sec:matn-ltt}{{5.1.5}{186}}
-\newlabel{eq:matn-ltt-matn}{{1}{186}}
-\newlabel{eq:matn-ltt-matn-trans}{{2}{186}}
-\newlabel{eq:matn-ltt-matn-mvn}{{3}{186}}
-\newlabel{eq:matn-ltt-mvn-ltt}{{4}{186}}
-\newlabel{eq:matn-ltt-vec-Y-s1}{{5}{186}}
-\newlabel{eq:matn-ltt-vec-Y-s2}{{6}{186}}
-\newlabel{eq:matn-ltt-matn-ltt-qed}{{7}{186}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Wishart distribution}{187}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}\textit  {Definition}}{187}\protected@file@percent }
-\newlabel{sec:wish}{{5.2.1}{187}}
-\newlabel{eq:wish-matn}{{1}{187}}
-\newlabel{eq:wish-scat-mat}{{2}{187}}
-\newlabel{eq:wish-wish}{{3}{187}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {III}Statistical Models}{189}\protected@file@percent }
+\newlabel{sec:Probability Distributions}{{II}{97}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Univariate discrete distributions}{98}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Discrete uniform distribution}{98}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}\textit  {Definition}}{98}\protected@file@percent }
+\newlabel{sec:duni}{{1.1.1}{98}}
+\newlabel{eq:duni-duni}{{1}{98}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}\textbf  {Probability mass function}}{98}\protected@file@percent }
+\newlabel{sec:duni-pmf}{{1.1.2}{98}}
+\newlabel{eq:duni-pmf-duni}{{1}{98}}
+\newlabel{eq:duni-pmf-duni-pmf}{{2}{98}}
+\newlabel{eq:duni-pmf-n}{{3}{98}}
+\newlabel{eq:duni-pmf-1}{{4}{98}}
+\newlabel{eq:duni-pmf-duni-pmf-qed}{{5}{98}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3}\textbf  {Cumulative distribution function}}{99}\protected@file@percent }
+\newlabel{sec:duni-cdf}{{1.1.3}{99}}
+\newlabel{eq:duni-cdf-duni}{{1}{99}}
+\newlabel{eq:duni-cdf-duni-cdf}{{2}{99}}
+\newlabel{eq:duni-cdf-duni-pmf}{{3}{99}}
+\newlabel{eq:duni-cdf-duni-cdf-s1}{{4}{99}}
+\newlabel{eq:duni-cdf-n}{{5}{99}}
+\newlabel{eq:duni-cdf-duni-cdf-s2b}{{6}{99}}
+\newlabel{eq:duni-cdf-duni-cdf-s2a}{{7}{99}}
+\newlabel{eq:duni-cdf-duni-cdf-s2c}{{8}{99}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.4}\textbf  {Quantile function}}{100}\protected@file@percent }
+\newlabel{sec:duni-qf}{{1.1.4}{100}}
+\newlabel{eq:duni-qf-duni}{{1}{100}}
+\newlabel{eq:duni-qf-duni-qf}{{2}{100}}
+\newlabel{eq:duni-qf-duni-cdf}{{3}{100}}
+\newlabel{eq:duni-qf-qf}{{4}{100}}
+\newlabel{eq:duni-qf-duni-cdf-p}{{5}{100}}
+\newlabel{eq:duni-qf-duni-qf-p}{{6}{100}}
+\newlabel{eq:duni-qf-duni-qf-qed}{{7}{100}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Bernoulli distribution}{101}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}\textit  {Definition}}{101}\protected@file@percent }
+\newlabel{sec:bern}{{1.2.1}{101}}
+\newlabel{eq:bern-bern}{{1}{101}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}\textbf  {Probability mass function}}{101}\protected@file@percent }
+\newlabel{sec:bern-pmf}{{1.2.2}{101}}
+\newlabel{eq:bern-pmf-Bern}{{1}{101}}
+\newlabel{eq:bern-pmf-Bern-pmf}{{2}{101}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}\textbf  {Mean}}{101}\protected@file@percent }
+\newlabel{sec:bern-mean}{{1.2.3}{101}}
+\newlabel{eq:bern-mean-bern}{{1}{101}}
+\newlabel{eq:bern-mean-bern-mean}{{2}{102}}
+\newlabel{eq:bern-mean-mean}{{3}{102}}
+\newlabel{eq:bern-mean-bern-mean-qed}{{4}{102}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Binomial distribution}{102}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.1}\textit  {Definition}}{102}\protected@file@percent }
+\newlabel{sec:bin}{{1.3.1}{102}}
+\newlabel{eq:bin-bin}{{1}{102}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.2}\textbf  {Probability mass function}}{102}\protected@file@percent }
+\newlabel{sec:bin-pmf}{{1.3.2}{102}}
+\newlabel{eq:bin-pmf-bin}{{1}{102}}
+\newlabel{eq:bin-pmf-bin-pmf}{{2}{103}}
+\newlabel{eq:bin-pmf-bin-prob}{{3}{103}}
+\newlabel{eq:bin-pmf-bin-coeff}{{4}{103}}
+\newlabel{eq:bin-pmf-bin-pmf-qed}{{5}{103}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.3}\textbf  {Mean}}{103}\protected@file@percent }
+\newlabel{sec:bin-mean}{{1.3.3}{103}}
+\newlabel{eq:bin-mean-bin}{{1}{103}}
+\newlabel{eq:bin-mean-bin-mean}{{2}{103}}
+\newlabel{eq:bin-mean-bin-mean-s1}{{3}{103}}
+\newlabel{eq:bin-mean-bin-mean-s2}{{4}{104}}
+\newlabel{eq:bin-mean-bin-mean-s3}{{5}{104}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Poisson distribution}{104}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1}\textit  {Definition}}{104}\protected@file@percent }
+\newlabel{sec:poiss}{{1.4.1}{104}}
+\newlabel{eq:poiss-poiss}{{1}{104}}
+\newlabel{eq:poiss-poiss-pmf}{{2}{104}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.2}\textbf  {Probability mass function}}{104}\protected@file@percent }
+\newlabel{sec:poiss-pmf}{{1.4.2}{104}}
+\newlabel{eq:poiss-pmf-Poiss}{{1}{104}}
+\newlabel{eq:poiss-pmf-Poiss-pmf}{{2}{105}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.3}\textbf  {Mean}}{105}\protected@file@percent }
+\newlabel{sec:poiss-mean}{{1.4.3}{105}}
+\newlabel{eq:poiss-mean-poiss}{{1}{105}}
+\newlabel{eq:poiss-mean-poiss-mean}{{2}{105}}
+\newlabel{eq:poiss-mean-mean}{{3}{105}}
+\newlabel{eq:poiss-mean-poiss-mean-s1}{{4}{105}}
+\newlabel{eq:poiss-mean-poiss-mean-s2}{{5}{105}}
+\newlabel{eq:poiss-mean-exp-ps}{{6}{105}}
+\newlabel{eq:poiss-mean-poiss-mean-s3}{{7}{106}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Multivariate discrete distributions}{107}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Categorical distribution}{107}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}\textit  {Definition}}{107}\protected@file@percent }
+\newlabel{sec:cat}{{2.1.1}{107}}
+\newlabel{eq:cat-cat}{{1}{107}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}\textbf  {Probability mass function}}{107}\protected@file@percent }
+\newlabel{sec:cat-pmf}{{2.1.2}{107}}
+\newlabel{eq:cat-pmf-cat}{{1}{107}}
+\newlabel{eq:cat-pmf-cat-pmf}{{2}{107}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}\textbf  {Mean}}{107}\protected@file@percent }
+\newlabel{sec:cat-mean}{{2.1.3}{107}}
+\newlabel{eq:cat-mean-cat}{{1}{107}}
+\newlabel{eq:cat-mean-cat-mean}{{2}{108}}
+\newlabel{eq:cat-mean-cat-mean-qed}{{3}{108}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Multinomial distribution}{108}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}\textit  {Definition}}{108}\protected@file@percent }
+\newlabel{sec:mult}{{2.2.1}{108}}
+\newlabel{eq:mult-mult}{{1}{108}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}\textbf  {Probability mass function}}{108}\protected@file@percent }
+\newlabel{sec:mult-pmf}{{2.2.2}{108}}
+\newlabel{eq:mult-pmf-mult}{{1}{109}}
+\newlabel{eq:mult-pmf-mult-pmf}{{2}{109}}
+\newlabel{eq:mult-pmf-mult-prob}{{3}{109}}
+\newlabel{eq:mult-pmf-mult-coeff}{{4}{109}}
+\newlabel{eq:mult-pmf-mult-pmf-qed}{{5}{109}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}\textbf  {Mean}}{109}\protected@file@percent }
+\newlabel{sec:mult-mean}{{2.2.3}{109}}
+\newlabel{eq:mult-mean-mult}{{1}{109}}
+\newlabel{eq:mult-mean-bin-mean}{{2}{109}}
+\newlabel{eq:mult-mean-mult-mean-s1}{{3}{110}}
+\newlabel{eq:mult-mean-mult-mean-s2}{{4}{110}}
+\newlabel{eq:mult-mean-mult-mean-s3}{{5}{110}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Univariate continuous distributions}{111}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Continuous uniform distribution}{111}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}\textit  {Definition}}{111}\protected@file@percent }
+\newlabel{sec:cuni}{{3.1.1}{111}}
+\newlabel{eq:cuni-cuni}{{1}{111}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}\textbf  {Probability density function}}{111}\protected@file@percent }
+\newlabel{sec:cuni-pdf}{{3.1.2}{111}}
+\newlabel{eq:cuni-pdf-cuni}{{1}{111}}
+\newlabel{eq:cuni-pdf-cuni-pdf}{{2}{111}}
+\newlabel{eq:cuni-pdf-cuni-pdf-s1}{{3}{111}}
+\newlabel{eq:cuni-pdf-cuni-pdf-s2}{{4}{111}}
+\newlabel{eq:cuni-pdf-cuni-pdf-s3}{{5}{111}}
+\newlabel{eq:cuni-pdf-cuni-pdf-s4}{{6}{112}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}\textbf  {Cumulative distribution function}}{112}\protected@file@percent }
+\newlabel{sec:cuni-cdf}{{3.1.3}{112}}
+\newlabel{eq:cuni-cdf-cuni}{{1}{112}}
+\newlabel{eq:cuni-cdf-cuni-cdf}{{2}{112}}
+\newlabel{eq:cuni-cdf-cuni-pdf}{{3}{112}}
+\newlabel{eq:cuni-cdf-cuni-cdf-s1}{{4}{112}}
+\newlabel{eq:cuni-cdf-cuni-cdf-s2a}{{5}{112}}
+\newlabel{eq:cuni-cdf-cuni-cdf-s2b}{{6}{113}}
+\newlabel{eq:cuni-cdf-cuni-cdf-s2c}{{7}{113}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}\textbf  {Quantile function}}{113}\protected@file@percent }
+\newlabel{sec:cuni-qf}{{3.1.4}{113}}
+\newlabel{eq:cuni-qf-cuni}{{1}{113}}
+\newlabel{eq:cuni-qf-cuni-qf}{{2}{113}}
+\newlabel{eq:cuni-qf-cuni-cdf}{{3}{113}}
+\newlabel{eq:cuni-qf-qf}{{4}{114}}
+\newlabel{eq:cuni-qf-exp-qf-s1}{{5}{114}}
+\newlabel{eq:cuni-qf-cuni-cdf-s2}{{6}{114}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}\textbf  {Mean}}{114}\protected@file@percent }
+\newlabel{sec:cuni-mean}{{3.1.5}{114}}
+\newlabel{eq:cuni-mean-cuni}{{1}{114}}
+\newlabel{eq:cuni-mean-cuni-mean}{{2}{114}}
+\newlabel{eq:cuni-mean-mean}{{3}{114}}
+\newlabel{eq:cuni-mean-cuni-mean-qed}{{4}{115}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.6}\textbf  {Median}}{115}\protected@file@percent }
+\newlabel{sec:cuni-med}{{3.1.6}{115}}
+\newlabel{eq:cuni-med-cuni}{{1}{115}}
+\newlabel{eq:cuni-med-cuni-med}{{2}{115}}
+\newlabel{eq:cuni-med-median}{{3}{115}}
+\newlabel{eq:cuni-med-cuni-cdf}{{4}{115}}
+\newlabel{eq:cuni-med-cuni-cdf-inv}{{5}{115}}
+\newlabel{eq:cuni-med-cuni-med-qed}{{6}{115}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.7}\textbf  {Mode}}{116}\protected@file@percent }
+\newlabel{sec:cuni-med}{{3.1.7}{116}}
+\newlabel{eq:cuni-med-cuni}{{1}{116}}
+\newlabel{eq:cuni-med-cuni-mode}{{2}{116}}
+\newlabel{eq:cuni-med-mode}{{3}{116}}
+\newlabel{eq:cuni-med-cuni-pdf}{{4}{116}}
+\newlabel{eq:cuni-med-cuni-pdf-max}{{5}{116}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Normal distribution}{116}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}\textit  {Definition}}{116}\protected@file@percent }
+\newlabel{sec:norm}{{3.2.1}{116}}
+\newlabel{eq:norm-norm}{{1}{116}}
+\newlabel{eq:norm-norm-pdf}{{2}{117}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}\textit  {Standard normal distribution}}{117}\protected@file@percent }
+\newlabel{sec:snorm}{{3.2.2}{117}}
+\newlabel{eq:snorm-snorm}{{1}{117}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}\textbf  {Relation to standard normal distribution}}{117}\protected@file@percent }
+\newlabel{sec:norm-snorm}{{3.2.3}{117}}
+\newlabel{eq:norm-snorm-X-norm}{{1}{117}}
+\newlabel{eq:norm-snorm-Z-snorm}{{2}{117}}
+\newlabel{eq:norm-snorm-Z-X}{{3}{117}}
+\newlabel{eq:norm-snorm-X-Z}{{4}{117}}
+\newlabel{eq:norm-snorm-cdf-sifct}{{5}{118}}
+\newlabel{eq:norm-snorm-norm-cdf}{{6}{118}}
+\newlabel{eq:norm-snorm-Z-cdf-s1}{{7}{118}}
+\newlabel{eq:norm-snorm-Z-cdf-s2}{{8}{118}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}\textbf  {Relation to standard normal distribution}}{118}\protected@file@percent }
+\newlabel{sec:norm-snorm2}{{3.2.4}{118}}
+\newlabel{eq:norm-snorm2-X-norm}{{1}{118}}
+\newlabel{eq:norm-snorm2-Z-snorm}{{2}{118}}
+\newlabel{eq:norm-snorm2-Z-X}{{3}{119}}
+\newlabel{eq:norm-snorm2-X-Z}{{4}{119}}
+\newlabel{eq:norm-snorm2-pdf-sifct}{{5}{119}}
+\newlabel{eq:norm-snorm2-pdf-Z}{{6}{119}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5}\textbf  {Relation to standard normal distribution}}{119}\protected@file@percent }
+\newlabel{sec:norm-snorm3}{{3.2.5}{119}}
+\newlabel{eq:norm-snorm3-X-norm}{{1}{119}}
+\newlabel{eq:norm-snorm3-Z-snorm}{{2}{119}}
+\newlabel{eq:norm-snorm3-mvn-ltt}{{3}{120}}
+\newlabel{eq:norm-snorm3-Z-X}{{4}{120}}
+\newlabel{eq:norm-snorm3-mvn-ltt-norm}{{5}{120}}
+\newlabel{eq:norm-snorm3-Z-snorm-qed}{{6}{120}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.6}\textbf  {Gaussian integral}}{120}\protected@file@percent }
+\newlabel{sec:norm-gi}{{3.2.6}{120}}
+\newlabel{eq:norm-gi-norm-gi}{{1}{120}}
+\newlabel{eq:norm-gi-I}{{2}{120}}
+\newlabel{eq:norm-gi-IP}{{3}{120}}
+\newlabel{eq:norm-gi-IP-I}{{4}{120}}
+\newlabel{eq:norm-gi-IP2-I2}{{5}{120}}
+\newlabel{eq:norm-gi-IP2}{{6}{121}}
+\newlabel{eq:norm-gi-IP2-ineq}{{7}{121}}
+\newlabel{eq:norm-gi-IP2-ineq-PC}{{8}{121}}
+\newlabel{eq:norm-gi-IP2-ineq-PC-int}{{9}{121}}
+\newlabel{eq:norm-gi-IP2-ineq-PC-int-lim}{{10}{121}}
+\newlabel{eq:norm-gi-I-qed}{{11}{121}}
+\newlabel{eq:norm-gi-norm-gi-qed}{{12}{122}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.7}\textbf  {Probability density function}}{122}\protected@file@percent }
+\newlabel{sec:norm-pdf}{{3.2.7}{122}}
+\newlabel{eq:norm-pdf-norm}{{1}{122}}
+\newlabel{eq:norm-pdf-norm-pdf}{{2}{122}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.8}\textbf  {Moment-generating function}}{122}\protected@file@percent }
+\newlabel{sec:norm-mgf}{{3.2.8}{122}}
+\newlabel{eq:norm-mgf-norm}{{1}{122}}
+\newlabel{eq:norm-mgf-norm-mgf}{{2}{122}}
+\newlabel{eq:norm-mgf-norm-pdf}{{3}{123}}
+\newlabel{eq:norm-mgf-mgf-var}{{4}{123}}
+\newlabel{eq:norm-mgf-norm-mgf-s1}{{5}{123}}
+\newlabel{eq:norm-mgf-norm-mgf-s2}{{6}{123}}
+\newlabel{eq:norm-mgf-norm-mgf-s3}{{7}{123}}
+\newlabel{eq:norm-mgf-gauss}{{8}{124}}
+\newlabel{eq:norm-mgf-norm-mgf-qed}{{9}{124}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.9}\textbf  {Cumulative distribution function}}{124}\protected@file@percent }
+\newlabel{sec:norm-cdf}{{3.2.9}{124}}
+\newlabel{eq:norm-cdf-norm}{{1}{124}}
+\newlabel{eq:norm-cdf-norm-cdf}{{2}{124}}
+\newlabel{eq:norm-cdf-erf}{{3}{124}}
+\newlabel{eq:norm-cdf-norm-pdf}{{4}{124}}
+\newlabel{eq:norm-cdf-norm-cdf-s1}{{5}{124}}
+\newlabel{eq:norm-cdf-norm-cdf-s2}{{6}{125}}
+\newlabel{eq:norm-cdf-norm-cdf-s3}{{7}{125}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.10}\textbf  {Cumulative distribution function without error function}}{125}\protected@file@percent }
+\newlabel{sec:norm-cdfwerf}{{3.2.10}{125}}
+\newlabel{eq:norm-cdfwerf-norm}{{1}{125}}
+\newlabel{eq:norm-cdfwerf-norm-cdf}{{2}{125}}
+\newlabel{eq:norm-cdfwerf-snorm-pdf}{{3}{126}}
+\newlabel{eq:norm-cdfwerf-snorm-pdf-ii-s1}{{4}{126}}
+\newlabel{eq:norm-cdfwerf-int-const}{{5}{126}}
+\newlabel{eq:norm-cdfwerf-snorm-pdf-ii-s2}{{6}{126}}
+\newlabel{eq:norm-cdfwerf-snorm-cdf}{{7}{126}}
+\newlabel{eq:norm-cdfwerf-snorm-cdf-c}{{8}{127}}
+\newlabel{eq:norm-cdfwerf-norm-snorm-cdf}{{9}{127}}
+\newlabel{eq:norm-cdfwerf-norm-cdf-qed}{{10}{127}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.11}\textbf  {Quantile function}}{127}\protected@file@percent }
+\newlabel{sec:norm-qf}{{3.2.11}{127}}
+\newlabel{eq:norm-qf-norm}{{1}{127}}
+\newlabel{eq:norm-qf-norm-qf}{{2}{127}}
+\newlabel{eq:norm-qf-norm-cdf}{{3}{127}}
+\newlabel{eq:norm-qf-norm-qf-s1}{{4}{128}}
+\newlabel{eq:norm-qf-norm-qf-s2}{{5}{128}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.12}\textbf  {Mean}}{128}\protected@file@percent }
+\newlabel{sec:norm-mean}{{3.2.12}{128}}
+\newlabel{eq:norm-mean-norm}{{1}{128}}
+\newlabel{eq:norm-mean-norm-mean}{{2}{128}}
+\newlabel{eq:norm-mean-mean}{{3}{128}}
+\newlabel{eq:norm-mean-norm-mean-s1}{{4}{128}}
+\newlabel{eq:norm-mean-norm-mean-s2}{{5}{129}}
+\newlabel{eq:norm-mean-exp-erf-anti-der}{{6}{129}}
+\newlabel{eq:norm-mean-norm-mean-s3}{{7}{129}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.13}\textbf  {Median}}{129}\protected@file@percent }
+\newlabel{sec:norm-med}{{3.2.13}{129}}
+\newlabel{eq:norm-med-norm}{{1}{130}}
+\newlabel{eq:norm-med-norm-median}{{2}{130}}
+\newlabel{eq:norm-med-median}{{3}{130}}
+\newlabel{eq:norm-med-norm-cdf}{{4}{130}}
+\newlabel{eq:norm-med-norm-cdf-inv}{{5}{130}}
+\newlabel{eq:norm-med-norm-med-qed}{{6}{130}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.14}\textbf  {Mode}}{130}\protected@file@percent }
+\newlabel{sec:norm-mode}{{3.2.14}{130}}
+\newlabel{eq:norm-mode-norm}{{1}{130}}
+\newlabel{eq:norm-mode-norm-mode}{{2}{130}}
+\newlabel{eq:norm-mode-mode}{{3}{130}}
+\newlabel{eq:norm-mode-norm-pdf}{{4}{130}}
+\newlabel{eq:norm-mode-norm-pdf-der1}{{5}{131}}
+\newlabel{eq:norm-mode-norm-pdf-der2}{{6}{131}}
+\newlabel{eq:norm-mode-norm-mode-s1}{{7}{131}}
+\newlabel{eq:norm-mode-norm-mode-s2}{{8}{131}}
+\newlabel{eq:norm-mode-norm-mode-qed}{{9}{131}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.15}\textbf  {Variance}}{131}\protected@file@percent }
+\newlabel{sec:norm-var}{{3.2.15}{131}}
+\newlabel{eq:norm-var-norm}{{1}{131}}
+\newlabel{eq:norm-var-norm-var}{{2}{131}}
+\newlabel{eq:norm-var-var}{{3}{132}}
+\newlabel{eq:norm-var-norm-var-s1}{{4}{132}}
+\newlabel{eq:norm-var-norm-var-s2}{{5}{132}}
+\newlabel{eq:norm-var-norm-var-s3}{{6}{132}}
+\newlabel{eq:norm-var-norm-var-s4}{{7}{132}}
+\newlabel{eq:norm-var-norm-var-s5}{{8}{132}}
+\newlabel{eq:norm-var-gam-fct}{{9}{132}}
+\newlabel{eq:norm-var-norm-var-s6}{{10}{132}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.16}\textbf  {Full width at half maximum}}{133}\protected@file@percent }
+\newlabel{sec:norm-fwhm}{{3.2.16}{133}}
+\newlabel{eq:norm-fwhm-norm}{{1}{133}}
+\newlabel{eq:norm-fwhm-norm-fwhm}{{2}{133}}
+\newlabel{eq:norm-fwhm-norm-pdf}{{3}{133}}
+\newlabel{eq:norm-fwhm-norm-mode}{{4}{133}}
+\newlabel{eq:norm-fwhm-norm-pdf-max}{{5}{133}}
+\newlabel{eq:norm-fwhm-x-FHWM}{{6}{133}}
+\newlabel{eq:norm-fwhm-x-FHWM-s1}{{7}{134}}
+\newlabel{eq:norm-fwhm-x-FHWM-s2}{{8}{134}}
+\newlabel{eq:norm-fwhm-norm-fwhm-qed}{{9}{134}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.17}\textbf  {Differential entropy}}{134}\protected@file@percent }
+\newlabel{sec:norm-dent}{{3.2.17}{134}}
+\newlabel{eq:norm-dent-norm}{{1}{134}}
+\newlabel{eq:norm-dent-norm-dent}{{2}{134}}
+\newlabel{eq:norm-dent-dent}{{3}{135}}
+\newlabel{eq:norm-dent-dent-nats}{{4}{135}}
+\newlabel{eq:norm-dent-mvn-dent-s1}{{5}{135}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.18}\textbf  {Kullback-Leibler divergence}}{135}\protected@file@percent }
+\newlabel{sec:norm-kl}{{3.2.18}{135}}
+\newlabel{eq:norm-kl-norms}{{1}{135}}
+\newlabel{eq:norm-kl-norm-KL}{{2}{135}}
+\newlabel{eq:norm-kl-KL-cont}{{3}{136}}
+\newlabel{eq:norm-kl-norm-KL-s1}{{4}{136}}
+\newlabel{eq:norm-kl-norm-KL-s2}{{5}{136}}
+\newlabel{eq:norm-kl-norm-KL-s3}{{6}{136}}
+\newlabel{eq:norm-kl-var}{{7}{136}}
+\newlabel{eq:norm-kl-norm-var}{{8}{136}}
+\newlabel{eq:norm-kl-norm-mom-raw}{{9}{137}}
+\newlabel{eq:norm-kl-norm-KL-s4}{{10}{137}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Gamma distribution}{137}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}\textit  {Definition}}{137}\protected@file@percent }
+\newlabel{sec:gam}{{3.3.1}{137}}
+\newlabel{eq:gam-gam}{{1}{137}}
+\newlabel{eq:gam-gam-pdf}{{2}{137}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}\textit  {Standard gamma distribution}}{137}\protected@file@percent }
+\newlabel{sec:sgam}{{3.3.2}{137}}
+\newlabel{eq:sgam-sgam}{{1}{137}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}\textbf  {Relation to standard gamma distribution}}{138}\protected@file@percent }
+\newlabel{sec:gam-sgam}{{3.3.3}{138}}
+\newlabel{eq:gam-sgam-X-gam}{{1}{138}}
+\newlabel{eq:gam-sgam-Y-snorm}{{2}{138}}
+\newlabel{eq:gam-sgam-Y-X}{{3}{138}}
+\newlabel{eq:gam-sgam-X-Y}{{4}{138}}
+\newlabel{eq:gam-sgam-cdf-sifct}{{5}{138}}
+\newlabel{eq:gam-sgam-gam-cdf}{{6}{138}}
+\newlabel{eq:gam-sgam-Y-cdf-s1}{{7}{138}}
+\newlabel{eq:gam-sgam-Z-cdf-s2}{{8}{139}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}\textbf  {Relation to standard gamma distribution}}{139}\protected@file@percent }
+\newlabel{sec:gam-sgam2}{{3.3.4}{139}}
+\newlabel{eq:gam-sgam2-X-gam}{{1}{139}}
+\newlabel{eq:gam-sgam2-Y-snorm}{{2}{139}}
+\newlabel{eq:gam-sgam2-Y-X}{{3}{139}}
+\newlabel{eq:gam-sgam2-X-Y}{{4}{139}}
+\newlabel{eq:gam-sgam2-pdf-sifct}{{5}{139}}
+\newlabel{eq:gam-sgam2-pdf-Y}{{6}{140}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5}\textbf  {Probability density function}}{140}\protected@file@percent }
+\newlabel{sec:gam-pdf}{{3.3.5}{140}}
+\newlabel{eq:gam-pdf-gam}{{1}{140}}
+\newlabel{eq:gam-pdf-gam-pdf}{{2}{140}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6}\textbf  {Cumulative distribution function}}{140}\protected@file@percent }
+\newlabel{sec:gam-cdf}{{3.3.6}{140}}
+\newlabel{eq:gam-cdf-gam}{{1}{140}}
+\newlabel{eq:gam-cdf-gam-cdf}{{2}{140}}
+\newlabel{eq:gam-cdf-gam-pdf}{{3}{141}}
+\newlabel{eq:gam-cdf-gam-cdf-s1}{{4}{141}}
+\newlabel{eq:gam-cdf-gam-cdf-s2}{{5}{141}}
+\newlabel{eq:gam-cdf-low-inc-gam-fct}{{6}{141}}
+\newlabel{eq:gam-cdf-gam-cdf-qed}{{7}{141}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.7}\textbf  {Quantile function}}{141}\protected@file@percent }
+\newlabel{sec:gam-qf}{{3.3.7}{141}}
+\newlabel{eq:gam-qf-gam}{{1}{141}}
+\newlabel{eq:gam-qf-gam-qf}{{2}{142}}
+\newlabel{eq:gam-qf-gam-cdf}{{3}{142}}
+\newlabel{eq:gam-qf-qf}{{4}{142}}
+\newlabel{eq:gam-qf-gam-qf-s1}{{5}{142}}
+\newlabel{eq:gam-qf-gam-qf-s2}{{6}{142}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.8}\textbf  {Mean}}{142}\protected@file@percent }
+\newlabel{sec:gam-mean}{{3.3.8}{142}}
+\newlabel{eq:gam-mean-gam}{{1}{142}}
+\newlabel{eq:gam-mean-gam-mean}{{2}{142}}
+\newlabel{eq:gam-mean-mean}{{3}{143}}
+\newlabel{eq:gam-mean-gam-mean-s1}{{4}{143}}
+\newlabel{eq:gam-mean-gam-mean-s2}{{5}{143}}
+\newlabel{eq:gam-mean-gam-mean-s3}{{6}{143}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.9}\textbf  {Variance}}{143}\protected@file@percent }
+\newlabel{sec:gam-var}{{3.3.9}{143}}
+\newlabel{eq:gam-var-gam}{{1}{143}}
+\newlabel{eq:gam-var-gam-var}{{2}{143}}
+\newlabel{eq:gam-var-var-mean}{{3}{143}}
+\newlabel{eq:gam-var-gam-mean}{{4}{144}}
+\newlabel{eq:gam-var-gam-sqr-mean-s1}{{5}{144}}
+\newlabel{eq:gam-var-gam-sqr-mean-s2}{{6}{144}}
+\newlabel{eq:gam-var-gam-sqr-mean-s3}{{7}{144}}
+\newlabel{eq:gam-var-gam-var-qed}{{8}{144}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.10}\textbf  {Logarithmic expectation}}{144}\protected@file@percent }
+\newlabel{sec:gam-logmean}{{3.3.10}{144}}
+\newlabel{eq:gam-logmean-gam}{{1}{144}}
+\newlabel{eq:gam-logmean-gam-logmean}{{2}{144}}
+\newlabel{eq:gam-logmean-X-pdf-s1}{{3}{145}}
+\newlabel{eq:gam-logmean-X-pdf-s2}{{4}{145}}
+\newlabel{eq:gam-logmean-Y-pdf-s1}{{5}{145}}
+\newlabel{eq:gam-logmean-Y-pdf-s2}{{6}{145}}
+\newlabel{eq:gam-logmean-dfy-da}{{7}{145}}
+\newlabel{eq:gam-logmean-E-Y-s1}{{8}{145}}
+\newlabel{eq:gam-logmean-log-der}{{9}{146}}
+\newlabel{eq:gam-logmean-psi}{{10}{146}}
+\newlabel{eq:gam-logmean-E-Y-s2}{{11}{146}}
+\newlabel{eq:gam-logmean-gam-sgam}{{12}{146}}
+\newlabel{eq:gam-logmean-logmean}{{13}{146}}
+\newlabel{eq:gam-logmean-E-Y-s3}{{14}{146}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.11}\textbf  {Expectation of x ln x}}{146}\protected@file@percent }
+\newlabel{sec:gam-xlogx}{{3.3.11}{146}}
+\newlabel{eq:gam-xlogx-gam}{{1}{146}}
+\newlabel{eq:gam-xlogx-gam-xlogx}{{2}{146}}
+\newlabel{eq:gam-xlogx-gam-xlogx-s1}{{3}{147}}
+\newlabel{eq:gam-xlogx-logmean-a+1}{{4}{147}}
+\newlabel{eq:gam-xlogx-gam-logmean}{{5}{147}}
+\newlabel{eq:gam-xlogx-gam-fct}{{6}{147}}
+\newlabel{eq:gam-xlogx-gam-xlogx-qed}{{7}{147}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.12}\textbf  {Kullback-Leibler divergence}}{147}\protected@file@percent }
+\newlabel{sec:gam-kl}{{3.3.12}{147}}
+\newlabel{eq:gam-kl-gams}{{1}{147}}
+\newlabel{eq:gam-kl-gam-KL}{{2}{147}}
+\newlabel{eq:gam-kl-KL-cont}{{3}{148}}
+\newlabel{eq:gam-kl-gam-KL-s1}{{4}{148}}
+\newlabel{eq:gam-kl-gam-KL-s2}{{5}{148}}
+\newlabel{eq:gam-kl-gam-means}{{6}{148}}
+\newlabel{eq:gam-kl-gam-KL-s3}{{7}{148}}
+\newlabel{eq:gam-kl-gam-KL-qed}{{8}{148}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Exponential distribution}{149}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}\textit  {Definition}}{149}\protected@file@percent }
+\newlabel{sec:exp}{{3.4.1}{149}}
+\newlabel{eq:exp-exp}{{1}{149}}
+\newlabel{eq:exp-exp-pdf}{{2}{149}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}\textbf  {Special case of gamma distribution}}{149}\protected@file@percent }
+\newlabel{sec:exp-gam}{{3.4.2}{149}}
+\newlabel{eq:exp-gam-gam-pdf}{{1}{149}}
+\newlabel{eq:exp-gam-exp-pdf}{{2}{149}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}\textbf  {Probability density function}}{150}\protected@file@percent }
+\newlabel{sec:exp-pdf}{{3.4.3}{150}}
+\newlabel{eq:exp-pdf-exp}{{1}{150}}
+\newlabel{eq:exp-pdf-gam-pdf}{{2}{150}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}\textbf  {Cumulative distribution function}}{150}\protected@file@percent }
+\newlabel{sec:exp-cdf}{{3.4.4}{150}}
+\newlabel{eq:exp-cdf-exp}{{1}{150}}
+\newlabel{eq:exp-cdf-exp-cdf}{{2}{150}}
+\newlabel{eq:exp-cdf-exp-pdf}{{3}{150}}
+\newlabel{eq:exp-cdf-exp-cdf-s1}{{4}{150}}
+\newlabel{eq:exp-cdf-exp-cdf-s2a}{{5}{150}}
+\newlabel{eq:exp-cdf-exp-cdf-s2b}{{6}{151}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5}\textbf  {Quantile function}}{151}\protected@file@percent }
+\newlabel{sec:exp-qf}{{3.4.5}{151}}
+\newlabel{eq:exp-qf-exp}{{1}{151}}
+\newlabel{eq:exp-qf-exp-qf}{{2}{151}}
+\newlabel{eq:exp-qf-exp-cdf}{{3}{151}}
+\newlabel{eq:exp-qf-qf}{{4}{151}}
+\newlabel{eq:exp-qf-exp-qf-s1}{{5}{151}}
+\newlabel{eq:exp-qf-exp-qf-s2}{{6}{152}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.6}\textbf  {Mean}}{152}\protected@file@percent }
+\newlabel{sec:exp-mean}{{3.4.6}{152}}
+\newlabel{eq:exp-mean-exp}{{1}{152}}
+\newlabel{eq:exp-mean-exp-mean}{{2}{152}}
+\newlabel{eq:exp-mean-mean}{{3}{152}}
+\newlabel{eq:exp-mean-exp-mean-s1}{{4}{152}}
+\newlabel{eq:exp-mean-exp-mean-s2}{{5}{152}}
+\newlabel{eq:exp-mean-exp-mean-s3}{{6}{153}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.7}\textbf  {Median}}{153}\protected@file@percent }
+\newlabel{sec:exp-med}{{3.4.7}{153}}
+\newlabel{eq:exp-med-exp}{{1}{153}}
+\newlabel{eq:exp-med-exp-med}{{2}{153}}
+\newlabel{eq:exp-med-median}{{3}{153}}
+\newlabel{eq:exp-med-exp-cdf}{{4}{153}}
+\newlabel{eq:exp-med-exp-cdf-inv}{{5}{153}}
+\newlabel{eq:exp-med-exp-med-qed}{{6}{153}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.8}\textbf  {Mode}}{154}\protected@file@percent }
+\newlabel{sec:exp-mode}{{3.4.8}{154}}
+\newlabel{eq:exp-mode-exp}{{1}{154}}
+\newlabel{eq:exp-mode-exp-mode}{{2}{154}}
+\newlabel{eq:exp-mode-mode}{{3}{154}}
+\newlabel{eq:exp-mode-exp-pdf}{{4}{154}}
+\newlabel{eq:exp-mode-exp-pdf-eq0}{{5}{154}}
+\newlabel{eq:exp-mode-exp-pdf-neq0}{{6}{154}}
+\newlabel{eq:exp-mode-exp-mode-qed}{{7}{154}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Chi-square distribution}{155}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}\textit  {Definition}}{155}\protected@file@percent }
+\newlabel{sec:chi2}{{3.5.1}{155}}
+\newlabel{eq:chi2-snorm}{{1}{155}}
+\newlabel{eq:chi2-chi2}{{2}{155}}
+\newlabel{eq:chi2-chi2-pdf}{{3}{155}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}\textbf  {Special case of gamma distribution}}{155}\protected@file@percent }
+\newlabel{sec:chi2-gam}{{3.5.2}{155}}
+\newlabel{eq:chi2-gam-chi2-gam}{{1}{155}}
+\newlabel{eq:chi2-gam-gam-pdf}{{2}{155}}
+\newlabel{eq:chi2-gam-gam-pdf-chi2}{{3}{155}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}\textbf  {Probability density function}}{156}\protected@file@percent }
+\newlabel{sec:chi2-pdf}{{3.5.3}{156}}
+\newlabel{eq:chi2-pdf-chi2}{{1}{156}}
+\newlabel{eq:chi2-pdf-chi2-pdf}{{2}{156}}
+\newlabel{eq:chi2-pdf-chi2-def}{{3}{156}}
+\newlabel{eq:chi2-pdf-y-x}{{4}{156}}
+\newlabel{eq:chi2-pdf-y-pdf-s0}{{5}{156}}
+\newlabel{eq:chi2-pdf-y-cdf-s1}{{6}{156}}
+\newlabel{eq:chi2-pdf-y-cdf-s2}{{7}{157}}
+\newlabel{eq:chi2-pdf-y-cdf-s3}{{8}{157}}
+\newlabel{eq:chi2-pdf-A}{{9}{157}}
+\newlabel{eq:chi2-pdf-dR}{{10}{157}}
+\newlabel{eq:chi2-pdf-y-cdf-s4}{{11}{157}}
+\newlabel{eq:chi2-pdf-y-cdf-s5}{{12}{157}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.4}\textbf  {Moments}}{158}\protected@file@percent }
+\newlabel{sec:chi2-mom}{{3.5.4}{158}}
+\newlabel{eq:chi2-mom-chi2}{{1}{158}}
+\newlabel{eq:chi2-mom-chi2-mom}{{2}{158}}
+\newlabel{eq:chi2-mom-chi2-mom-int}{{3}{158}}
+\newlabel{eq:chi2-mom-chi-2-mom-int-u}{{4}{158}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Beta distribution}{158}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}\textit  {Definition}}{158}\protected@file@percent }
+\newlabel{sec:beta}{{3.6.1}{158}}
+\newlabel{eq:beta-beta}{{1}{158}}
+\newlabel{eq:beta-beta-pdf}{{2}{158}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.2}\textbf  {Probability density function}}{159}\protected@file@percent }
+\newlabel{sec:beta-pdf}{{3.6.2}{159}}
+\newlabel{eq:beta-pdf-beta}{{1}{159}}
+\newlabel{eq:beta-pdf-beta-pdf}{{2}{159}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.3}\textbf  {Moment-generating function}}{159}\protected@file@percent }
+\newlabel{sec:beta-mgf}{{3.6.3}{159}}
+\newlabel{eq:beta-mgf-beta}{{1}{159}}
+\newlabel{eq:beta-mgf-beta-mgf}{{2}{159}}
+\newlabel{eq:beta-mgf-beta-pdf}{{3}{159}}
+\newlabel{eq:beta-mgf-mgf-var}{{4}{159}}
+\newlabel{eq:beta-mgf-beta-mgf-s1}{{5}{160}}
+\newlabel{eq:beta-mgf-beta-gam-fct}{{6}{160}}
+\newlabel{eq:beta-mgf-con-hyp-geo-fct-int}{{7}{160}}
+\newlabel{eq:beta-mgf-beta-mgf-s2}{{8}{160}}
+\newlabel{eq:beta-mgf-con-hyp-geo-fct-ser}{{9}{160}}
+\newlabel{eq:beta-mgf-fact-rise}{{10}{160}}
+\newlabel{eq:beta-mgf-beta-mgf-s3}{{11}{160}}
+\newlabel{eq:beta-mgf-beta-mgf-s4}{{12}{160}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.4}\textbf  {Cumulative distribution function}}{161}\protected@file@percent }
+\newlabel{sec:beta-cdf}{{3.6.4}{161}}
+\newlabel{eq:beta-cdf-beta}{{1}{161}}
+\newlabel{eq:beta-cdf-beta-cdf}{{2}{161}}
+\newlabel{eq:beta-cdf-beta-pdf}{{3}{161}}
+\newlabel{eq:beta-cdf-beta-cdf-app}{{4}{161}}
+\newlabel{eq:beta-cdf-inc-beta-fct}{{5}{161}}
+\newlabel{eq:beta-cdf-beta-cdf-qed}{{6}{161}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Wald distribution}{161}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.1}\textit  {Definition}}{161}\protected@file@percent }
+\newlabel{sec:wald}{{3.7.1}{161}}
+\newlabel{eq:wald-wald}{{1}{162}}
+\newlabel{eq:wald-wald-pdf}{{2}{162}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.2}\textbf  {Probability density function}}{162}\protected@file@percent }
+\newlabel{sec:wald-pdf}{{3.7.2}{162}}
+\newlabel{eq:wald-pdf-wald}{{1}{162}}
+\newlabel{eq:wald-pdf-wald-pdf}{{2}{162}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.3}\textbf  {Moment-generating function}}{162}\protected@file@percent }
+\newlabel{sec:wald-mgf}{{3.7.3}{162}}
+\newlabel{eq:wald-mgf-wald}{{1}{162}}
+\newlabel{eq:wald-mgf-wald-mgf}{{2}{162}}
+\newlabel{eq:wald-mgf-wald-pdf}{{3}{163}}
+\newlabel{eq:wald-mgf-mgf-var}{{4}{163}}
+\newlabel{eq:wald-mgf-wald-mgf-s1}{{5}{163}}
+\newlabel{eq:wald-mgf-bessel-de}{{6}{163}}
+\newlabel{eq:wald-mgf-bessel-fact1}{{7}{163}}
+\newlabel{eq:wald-mgf-bessel-fact2}{{8}{163}}
+\newlabel{eq:wald-mgf-wald-mgf-s2}{{9}{163}}
+\newlabel{eq:wald-mgf-wald-mgf-s3}{{10}{163}}
+\newlabel{eq:wald-mgf-wald-mgf-s4}{{11}{164}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.4}\textbf  {Mean}}{164}\protected@file@percent }
+\newlabel{sec:wald-mean}{{3.7.4}{164}}
+\newlabel{eq:wald-mean-wald}{{1}{164}}
+\newlabel{eq:wald-mean-wald-mean}{{2}{164}}
+\newlabel{eq:wald-mean-wald-moment}{{3}{164}}
+\newlabel{eq:wald-mean-wald-mgf}{{4}{164}}
+\newlabel{eq:wald-mean-wald-mean-s1}{{5}{164}}
+\newlabel{eq:wald-mean-wald-mean-s2}{{6}{165}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.5}\textbf  {Variance}}{165}\protected@file@percent }
+\newlabel{sec:wald-var}{{3.7.5}{165}}
+\newlabel{eq:wald-var-wald}{{1}{165}}
+\newlabel{eq:wald-var-wald-var}{{2}{165}}
+\newlabel{eq:wald-var-var-mean}{{3}{165}}
+\newlabel{eq:wald-var-wald-moment}{{4}{165}}
+\newlabel{eq:wald-var-wald-mgf}{{5}{165}}
+\newlabel{eq:wald-var-wald-var-s1}{{6}{165}}
+\newlabel{eq:wald-var-wald-var-s2}{{7}{166}}
+\newlabel{eq:wald-var-wald-var-s3}{{8}{166}}
+\newlabel{eq:wald-var-wald-var-s4}{{9}{166}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Multivariate continuous distributions}{167}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Multivariate normal distribution}{167}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}\textit  {Definition}}{167}\protected@file@percent }
+\newlabel{sec:mvn}{{4.1.1}{167}}
+\newlabel{eq:mvn-mvn}{{1}{167}}
+\newlabel{eq:mvn-mvn-pdf}{{2}{167}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}\textbf  {Probability density function}}{167}\protected@file@percent }
+\newlabel{sec:mvn-pdf}{{4.1.2}{167}}
+\newlabel{eq:mvn-pdf-mvn}{{1}{167}}
+\newlabel{eq:mvn-pdf-mvn-pdf}{{2}{167}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}\textbf  {Differential entropy}}{167}\protected@file@percent }
+\newlabel{sec:mvn-dent}{{4.1.3}{167}}
+\newlabel{eq:mvn-dent-mvn}{{1}{167}}
+\newlabel{eq:mvn-dent-mvn-dent}{{2}{168}}
+\newlabel{eq:mvn-dent-dent}{{3}{168}}
+\newlabel{eq:mvn-dent-dent-nats}{{4}{168}}
+\newlabel{eq:mvn-dent-mvn-dent-s1}{{5}{168}}
+\newlabel{eq:mvn-dent-mvn-dent-t3}{{6}{168}}
+\newlabel{eq:mvn-dent-mvn-dent-qed}{{7}{168}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}\textbf  {Kullback-Leibler divergence}}{169}\protected@file@percent }
+\newlabel{sec:mvn-kl}{{4.1.4}{169}}
+\newlabel{eq:mvn-kl-mvns}{{1}{169}}
+\newlabel{eq:mvn-kl-mvn-KL}{{2}{169}}
+\newlabel{eq:mvn-kl-KL-cont}{{3}{169}}
+\newlabel{eq:mvn-kl-mvn-KL-s1}{{4}{169}}
+\newlabel{eq:mvn-kl-mvn-KL-s2}{{5}{169}}
+\newlabel{eq:mvn-kl-mvn-KL-s3}{{6}{169}}
+\newlabel{eq:mvn-kl-mvn-KL-s4}{{7}{170}}
+\newlabel{eq:mvn-kl-mvn-lfmean}{{8}{170}}
+\newlabel{eq:mvn-kl-mvn-qfmean}{{9}{170}}
+\newlabel{eq:mvn-kl-mvn-KL-s5}{{10}{170}}
+\newlabel{eq:mvn-kl-mvn-KL-qed}{{11}{170}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.5}\textbf  {Linear transformation}}{170}\protected@file@percent }
+\newlabel{sec:mvn-ltt}{{4.1.5}{170}}
+\newlabel{eq:mvn-ltt-mvn}{{1}{170}}
+\newlabel{eq:mvn-ltt-mvn-lt}{{2}{170}}
+\newlabel{eq:mvn-ltt-vect-mgf}{{3}{171}}
+\newlabel{eq:mvn-ltt-y-mgf-s1}{{4}{171}}
+\newlabel{eq:mvn-ltt-mvn-mgf}{{5}{171}}
+\newlabel{eq:mvn-ltt-y-mgf-s2}{{6}{171}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.6}\textbf  {Marginal distributions}}{171}\protected@file@percent }
+\newlabel{sec:mvn-marg}{{4.1.6}{171}}
+\newlabel{eq:mvn-marg-mvn}{{1}{171}}
+\newlabel{eq:mvn-marg-mvn-marg}{{2}{171}}
+\newlabel{eq:mvn-marg-xs}{{3}{172}}
+\newlabel{eq:mvn-marg-mvn-marg-qed}{{4}{172}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.7}\textbf  {Conditional distributions}}{172}\protected@file@percent }
+\newlabel{sec:mvn-cond}{{4.1.7}{172}}
+\newlabel{eq:mvn-cond-mvn}{{1}{172}}
+\newlabel{eq:mvn-cond-mvn-cond}{{2}{172}}
+\newlabel{eq:mvn-cond-mvn-cond-hyp}{{3}{172}}
+\newlabel{eq:mvn-cond-mvn-joint-hyp}{{4}{172}}
+\newlabel{eq:mvn-cond-x}{{5}{172}}
+\newlabel{eq:mvn-cond-mvn-joint}{{6}{173}}
+\newlabel{eq:mvn-cond-mvn-marg}{{7}{173}}
+\newlabel{eq:mvn-cond-mvn-cond-s1}{{8}{173}}
+\newlabel{eq:mvn-cond-mvn-cond-s2}{{9}{173}}
+\newlabel{eq:mvn-cond-mvn-cond-s3}{{10}{173}}
+\newlabel{eq:mvn-cond-Sigma-inv-def}{{11}{173}}
+\newlabel{eq:mvn-cond-mvn-cond-s4}{{12}{173}}
+\newlabel{eq:mvn-cond-mvn-cond-s5}{{13}{174}}
+\newlabel{eq:mvn-cond-Block-inv}{{14}{174}}
+\newlabel{eq:mvn-cond-Sigma-inv}{{15}{174}}
+\newlabel{eq:mvn-cond-mvn-cond-s6}{{16}{174}}
+\newlabel{eq:mvn-cond-mvn-cond-s7}{{17}{174}}
+\newlabel{eq:mvn-cond-mvn-cond-s8}{{18}{175}}
+\newlabel{eq:mvn-cond-Block-det}{{19}{175}}
+\newlabel{eq:mvn-cond-Sigma-det}{{20}{175}}
+\newlabel{eq:mvn-cond-mvn-cond-s9}{{21}{175}}
+\newlabel{eq:mvn-cond-mvn-cond-s10}{{22}{175}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Normal-gamma distribution}{176}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}\textit  {Definition}}{176}\protected@file@percent }
+\newlabel{sec:ng}{{4.2.1}{176}}
+\newlabel{eq:ng-ng}{{1}{176}}
+\newlabel{eq:ng-ng-pdf}{{2}{176}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}\textbf  {Probability density function}}{176}\protected@file@percent }
+\newlabel{sec:ng-pdf}{{4.2.2}{176}}
+\newlabel{eq:ng-pdf-ng}{{1}{176}}
+\newlabel{eq:ng-pdf-ng-pdf}{{2}{176}}
+\newlabel{eq:ng-pdf-ng-pdf-w1}{{3}{176}}
+\newlabel{eq:ng-pdf-ng-pdf-s2}{{4}{176}}
+\newlabel{eq:ng-pdf-ng-pdf-qed}{{5}{177}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}\textbf  {Kullback-Leibler divergence}}{177}\protected@file@percent }
+\newlabel{sec:ng-kl}{{4.2.3}{177}}
+\newlabel{eq:ng-kl-NGs}{{1}{177}}
+\newlabel{eq:ng-kl-NG-KL}{{2}{177}}
+\newlabel{eq:ng-kl-NG-pdf}{{3}{177}}
+\newlabel{eq:ng-kl-mvn-KL}{{4}{177}}
+\newlabel{eq:ng-kl-gam-KL}{{5}{177}}
+\newlabel{eq:ng-kl-KL-cont}{{6}{177}}
+\newlabel{eq:ng-kl-NG-KL0}{{7}{178}}
+\newlabel{eq:ng-kl-NG-KL1}{{8}{178}}
+\newlabel{eq:ng-kl-exp-mvn-KL-s1}{{9}{178}}
+\newlabel{eq:ng-kl-exp-mvn-KL-s2}{{10}{178}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4}\textbf  {Marginal distributions}}{178}\protected@file@percent }
+\newlabel{sec:ng-marg}{{4.2.4}{178}}
+\newlabel{eq:ng-marg-ng}{{1}{178}}
+\newlabel{eq:ng-marg-ng-marg-y}{{2}{179}}
+\newlabel{eq:ng-marg-ng-marg-x}{{3}{179}}
+\newlabel{eq:ng-marg-ng-pdf}{{4}{179}}
+\newlabel{eq:ng-marg-ng-marg-y-qed}{{5}{179}}
+\newlabel{eq:ng-marg-ng-marg-x-qed}{{6}{180}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.5}\textbf  {Conditional distributions}}{181}\protected@file@percent }
+\newlabel{sec:ng-cond}{{4.2.5}{181}}
+\newlabel{eq:ng-cond-ng}{{1}{181}}
+\newlabel{eq:ng-cond-ng-cond-x-y}{{2}{181}}
+\newlabel{eq:ng-cond-ng-cond-x1-x2-y}{{3}{181}}
+\newlabel{eq:ng-cond-ng-cond-x1-x2-y-hyp}{{4}{181}}
+\newlabel{eq:ng-cond-ng-cond-y-x}{{5}{181}}
+\newlabel{eq:ng-cond-ng-pdf}{{6}{181}}
+\newlabel{eq:ng-cond-mvn-cond}{{7}{181}}
+\newlabel{eq:ng-cond-ng-cond-y-x-s1}{{8}{182}}
+\newlabel{eq:ng-cond-ng-x-y-pdf}{{9}{182}}
+\newlabel{eq:ng-cond-ng-y-pdf}{{10}{182}}
+\newlabel{eq:ng-cond-ng-x-pdf}{{11}{182}}
+\newlabel{eq:ng-cond-ng-cond-y-x-s2}{{12}{182}}
+\newlabel{eq:ng-cond-ng-cond-y-x-hyp}{{13}{182}}
+\newlabel{eq:ng-cond-ng-cond-y-x-qed}{{14}{182}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Dirichlet distribution}{183}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}\textit  {Definition}}{183}\protected@file@percent }
+\newlabel{sec:dir}{{4.3.1}{183}}
+\newlabel{eq:dir-Dir}{{1}{183}}
+\newlabel{eq:dir-beta-pdf}{{2}{183}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}\textbf  {Probability density function}}{183}\protected@file@percent }
+\newlabel{sec:dir-pdf}{{4.3.2}{183}}
+\newlabel{eq:dir-pdf-Dir}{{1}{183}}
+\newlabel{eq:dir-pdf-Dir-pdf}{{2}{183}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}\textbf  {Exceedance probabilities}}{184}\protected@file@percent }
+\newlabel{sec:dir-ep}{{4.3.3}{184}}
+\newlabel{eq:dir-ep-r-Dir}{{1}{184}}
+\newlabel{eq:dir-ep-Dir2-EP}{{2}{184}}
+\newlabel{eq:dir-ep-Dir-EP}{{3}{184}}
+\newlabel{eq:dir-ep-Dir-EP-def}{{4}{184}}
+\newlabel{eq:dir-ep-Dir-pdf}{{5}{184}}
+\newlabel{eq:dir-ep-Dir-req}{{6}{184}}
+\newlabel{eq:dir-ep-Dir2-pdf}{{7}{184}}
+\newlabel{eq:dir-ep-Beta-pdf}{{8}{184}}
+\newlabel{eq:dir-ep-beta-fct}{{9}{185}}
+\newlabel{eq:dir-ep-Dir2-EP-def}{{10}{185}}
+\newlabel{eq:dir-ep-Dir2-EP-qed}{{11}{185}}
+\newlabel{eq:dir-ep-inc-beta-fct}{{12}{185}}
+\newlabel{eq:dir-ep-Dir-EP-ineq}{{13}{185}}
+\newlabel{eq:dir-ep-Gam-Dir}{{14}{185}}
+\newlabel{eq:dir-ep-Gam-pdf}{{15}{185}}
+\newlabel{eq:dir-ep-Gam-Dir-A}{{16}{185}}
+\newlabel{eq:dir-ep-Gam-Dir-B}{{17}{185}}
+\newlabel{eq:dir-ep-Gam-Dir-eq}{{18}{185}}
+\newlabel{eq:dir-ep-Gam-EP0}{{19}{186}}
+\newlabel{eq:dir-ep-Gam-EP1}{{20}{186}}
+\newlabel{eq:dir-ep-Gam-EP2}{{21}{186}}
+\newlabel{eq:dir-ep-Dir-EP2a}{{22}{186}}
+\newlabel{eq:dir-ep-Dir-EP2b}{{23}{186}}
+\newlabel{eq:dir-ep-Dir-EP2c}{{24}{186}}
+\newlabel{eq:dir-ep-Dir-EP-qed}{{25}{186}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Matrix-variate continuous distributions}{187}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Matrix-normal distribution}{187}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}\textit  {Definition}}{187}\protected@file@percent }
+\newlabel{sec:matn}{{5.1.1}{187}}
+\newlabel{eq:matn-matn}{{1}{187}}
+\newlabel{eq:matn-matn-pdf}{{2}{187}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}\textbf  {Probability density function}}{187}\protected@file@percent }
+\newlabel{sec:matn-pdf}{{5.1.2}{187}}
+\newlabel{eq:matn-pdf-matn}{{1}{187}}
+\newlabel{eq:matn-pdf-matn-pdf}{{2}{187}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}\textbf  {Equivalence to multivariate normal distribution}}{188}\protected@file@percent }
+\newlabel{sec:matn-mvn}{{5.1.3}{188}}
+\newlabel{eq:matn-mvn-matn}{{1}{188}}
+\newlabel{eq:matn-mvn-mvn}{{2}{188}}
+\newlabel{eq:matn-mvn-matn-pdf}{{3}{188}}
+\newlabel{eq:matn-mvn-matn-mvn-s1}{{4}{188}}
+\newlabel{eq:matn-mvn-matn-mvn-s2}{{5}{188}}
+\newlabel{eq:matn-mvn-matn-mvn-s3}{{6}{188}}
+\newlabel{eq:matn-mvn-matn-mvn-s4}{{7}{188}}
+\newlabel{eq:matn-mvn-matn-mvn-s5}{{8}{188}}
+\newlabel{eq:matn-mvn-matn-mvn-s6}{{9}{188}}
+\newlabel{eq:matn-mvn-matn-mvn}{{10}{189}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}\textbf  {Transposition}}{189}\protected@file@percent }
+\newlabel{sec:matn-trans}{{5.1.4}{189}}
+\newlabel{eq:matn-trans-matn}{{1}{189}}
+\newlabel{eq:matn-trans-matn-trans}{{2}{189}}
+\newlabel{eq:matn-trans-matn-pdf-X}{{3}{189}}
+\newlabel{eq:matn-trans-matn-pdf-Y-s1}{{4}{189}}
+\newlabel{eq:matn-trans-matn-pdf-Y-s2}{{5}{189}}
+\newlabel{eq:matn-trans-matn-pdf-Y-s3}{{6}{189}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.5}\textbf  {Linear transformation}}{190}\protected@file@percent }
+\newlabel{sec:matn-ltt}{{5.1.5}{190}}
+\newlabel{eq:matn-ltt-matn}{{1}{190}}
+\newlabel{eq:matn-ltt-matn-trans}{{2}{190}}
+\newlabel{eq:matn-ltt-matn-mvn}{{3}{190}}
+\newlabel{eq:matn-ltt-mvn-ltt}{{4}{190}}
+\newlabel{eq:matn-ltt-vec-Y-s1}{{5}{190}}
+\newlabel{eq:matn-ltt-vec-Y-s2}{{6}{190}}
+\newlabel{eq:matn-ltt-matn-ltt-qed}{{7}{190}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Wishart distribution}{191}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}\textit  {Definition}}{191}\protected@file@percent }
+\newlabel{sec:wish}{{5.2.1}{191}}
+\newlabel{eq:wish-matn}{{1}{191}}
+\newlabel{eq:wish-scat-mat}{{2}{191}}
+\newlabel{eq:wish-wish}{{3}{191}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {III}Statistical Models}{193}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{sec:Statistical Models}{{III}{189}}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Univariate normal data}{190}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Multiple linear regression}{190}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}\textit  {Definition}}{190}\protected@file@percent }
-\newlabel{sec:mlr}{{1.1.1}{190}}
-\newlabel{eq:mlr-mlr-model}{{1}{190}}
-\newlabel{eq:mlr-mlr-noise}{{2}{190}}
-\newlabel{eq:mlr-mlr-model-sum}{{3}{190}}
-\newlabel{eq:mlr-mlr-model-sum-base}{{4}{190}}
-\newlabel{eq:mlr-mlr-noise-iid}{{5}{190}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}\textbf  {Ordinary least squares}}{191}\protected@file@percent }
-\newlabel{sec:mlr-ols}{{1.1.2}{191}}
-\newlabel{eq:mlr-ols-MLR}{{1}{191}}
-\newlabel{eq:mlr-ols-OLS}{{2}{191}}
-\newlabel{eq:mlr-ols-X-e-orth}{{3}{191}}
-\newlabel{eq:mlr-ols-OLS-qed}{{4}{191}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3}\textbf  {Ordinary least squares}}{191}\protected@file@percent }
-\newlabel{sec:mlr-ols2}{{1.1.3}{191}}
-\newlabel{eq:mlr-ols2-MLR}{{1}{191}}
-\newlabel{eq:mlr-ols2-OLS}{{2}{191}}
-\newlabel{eq:mlr-ols2-RSS}{{3}{191}}
-\newlabel{eq:mlr-ols2-RSS-dev}{{4}{192}}
-\newlabel{eq:mlr-ols2-RSS-der}{{5}{192}}
-\newlabel{eq:mlr-ols2-OLS-qed}{{6}{192}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.4}\textit  {Total sum of squares}}{192}\protected@file@percent }
-\newlabel{sec:tss}{{1.1.4}{192}}
-\newlabel{eq:tss-mlr}{{1}{192}}
-\newlabel{eq:tss-tss}{{2}{192}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.5}\textit  {Explained sum of squares}}{193}\protected@file@percent }
-\newlabel{sec:ess}{{1.1.5}{193}}
-\newlabel{eq:ess-mlr}{{1}{193}}
-\newlabel{eq:ess-ess}{{2}{193}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.6}\textit  {Residual sum of squares}}{193}\protected@file@percent }
-\newlabel{sec:rss}{{1.1.6}{193}}
-\newlabel{eq:rss-mlr}{{1}{193}}
-\newlabel{eq:rss-rss}{{2}{193}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.7}\textbf  {Total, explained and residual sum of squares}}{193}\protected@file@percent }
-\newlabel{sec:mlr-pss}{{1.1.7}{193}}
-\newlabel{eq:mlr-pss-mlr}{{1}{193}}
-\newlabel{eq:mlr-pss-pss}{{2}{194}}
-\newlabel{eq:mlr-pss-TSS}{{3}{194}}
-\newlabel{eq:mlr-pss-TSS-s1}{{4}{194}}
-\newlabel{eq:mlr-pss-e-est-sum}{{5}{194}}
-\newlabel{eq:mlr-pss-X-e-orth}{{6}{194}}
-\newlabel{eq:mlr-pss-TSS-s2}{{7}{194}}
-\newlabel{eq:mlr-pss-TSS-s3}{{8}{195}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.8}\textit  {Estimation matrix}}{195}\protected@file@percent }
-\newlabel{sec:emat}{{1.1.8}{195}}
-\newlabel{eq:emat-em}{{1}{195}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.9}\textit  {Projection matrix}}{195}\protected@file@percent }
-\newlabel{sec:pmat}{{1.1.9}{195}}
-\newlabel{eq:pmat-pm}{{1}{195}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.10}\textit  {Residual-forming matrix}}{195}\protected@file@percent }
-\newlabel{sec:rfmat}{{1.1.10}{195}}
-\newlabel{eq:rfmat-pm}{{1}{195}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.11}\textbf  {Estimation, projection and residual-forming matrix}}{196}\protected@file@percent }
-\newlabel{sec:mlr-mat}{{1.1.11}{196}}
-\newlabel{eq:mlr-mat-mlr}{{1}{196}}
-\newlabel{eq:mlr-mat-mlr-est}{{2}{196}}
-\newlabel{eq:mlr-mat-mlr-mat}{{3}{196}}
-\newlabel{eq:mlr-mat-ols}{{4}{196}}
-\newlabel{eq:mlr-mat-b-est-qed}{{5}{196}}
-\newlabel{eq:mlr-mat-y-est}{{6}{196}}
-\newlabel{eq:mlr-mat-y-est-qed}{{7}{197}}
-\newlabel{eq:mlr-mat-e-est}{{8}{197}}
-\newlabel{eq:mlr-mat-e-est-qed}{{9}{197}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.12}\textbf  {Idempotence of projection and residual-forming matrix}}{197}\protected@file@percent }
-\newlabel{sec:mlr-idem}{{1.1.12}{197}}
-\newlabel{eq:mlr-idem-P^2-R^2}{{1}{197}}
-\newlabel{eq:mlr-idem-P}{{2}{197}}
-\newlabel{eq:mlr-idem-P^2}{{3}{197}}
-\newlabel{eq:mlr-idem-R}{{4}{198}}
-\newlabel{eq:mlr-idem-R^2}{{5}{198}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.13}\textbf  {Weighted least squares}}{198}\protected@file@percent }
-\newlabel{sec:mlr-wls}{{1.1.13}{198}}
-\newlabel{eq:mlr-wls-MLR}{{1}{198}}
-\newlabel{eq:mlr-wls-WLS}{{2}{198}}
-\newlabel{eq:mlr-wls-W-def}{{3}{198}}
-\newlabel{eq:mlr-wls-W-V}{{4}{198}}
-\newlabel{eq:mlr-wls-MLR-W}{{5}{198}}
-\newlabel{eq:mlr-wls-MLR-W-dev}{{6}{198}}
-\newlabel{eq:mlr-wls-WLS-qed}{{7}{199}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.14}\textbf  {Weighted least squares}}{199}\protected@file@percent }
-\newlabel{sec:mlr-wls2}{{1.1.14}{199}}
-\newlabel{eq:mlr-wls2-MLR}{{1}{199}}
-\newlabel{eq:mlr-wls2-WLS}{{2}{199}}
-\newlabel{eq:mlr-wls2-W-def}{{3}{199}}
-\newlabel{eq:mlr-wls2-W-V}{{4}{199}}
-\newlabel{eq:mlr-wls2-MLR-W}{{5}{199}}
-\newlabel{eq:mlr-wls2-MLR-W-dev}{{6}{199}}
-\newlabel{eq:mlr-wls2-wRSS}{{7}{200}}
-\newlabel{eq:mlr-wls2-wRSS-dev}{{8}{200}}
-\newlabel{eq:mlr-wls2-wRSS-der}{{9}{200}}
-\newlabel{eq:mlr-wls2-WLS-qed}{{10}{200}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.15}\textbf  {Maximum likelihood estimation}}{200}\protected@file@percent }
-\newlabel{sec:mlr-mle}{{1.1.15}{200}}
-\newlabel{eq:mlr-mle-MLR}{{1}{200}}
-\newlabel{eq:mlr-mle-MLE-MLE}{{2}{200}}
-\newlabel{eq:mlr-mle-MLR-LF}{{3}{201}}
-\newlabel{eq:mlr-mle-MLR-LL1}{{4}{201}}
-\newlabel{eq:mlr-mle-MLR-LL2}{{5}{201}}
-\newlabel{eq:mlr-mle-dLL-dbeta}{{6}{201}}
-\newlabel{eq:mlr-mle-beta-MLE}{{7}{201}}
-\newlabel{eq:mlr-mle-dLL-ds2}{{8}{202}}
-\newlabel{eq:mlr-mle-s2-MLE}{{9}{202}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Bayesian linear regression}{202}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}\textbf  {Conjugate prior distribution}}{202}\protected@file@percent }
-\newlabel{sec:blr-prior}{{1.2.1}{202}}
-\newlabel{eq:blr-prior-GLM}{{1}{202}}
-\newlabel{eq:blr-prior-GLM-NG-prior}{{2}{202}}
-\newlabel{eq:blr-prior-GLM-LF-class}{{3}{203}}
-\newlabel{eq:blr-prior-GLM-LF-Bayes}{{4}{203}}
-\newlabel{eq:blr-prior-GLM-LF-s1}{{5}{203}}
-\newlabel{eq:blr-prior-GLM-LF-s2}{{6}{203}}
-\newlabel{eq:blr-prior-GLM-LF-s3}{{7}{203}}
-\newlabel{eq:blr-prior-GLM-LF-s4}{{8}{203}}
-\newlabel{eq:blr-prior-BLR-prior-s1}{{9}{203}}
-\newlabel{eq:blr-prior-BLR-prior-s2}{{10}{203}}
-\newlabel{eq:blr-prior-BLR-prior-s3}{{11}{203}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}\textbf  {Posterior distribution}}{204}\protected@file@percent }
-\newlabel{sec:blr-post}{{1.2.2}{204}}
-\newlabel{eq:blr-post-GLM}{{1}{204}}
-\newlabel{eq:blr-post-GLM-NG-prior}{{2}{204}}
-\newlabel{eq:blr-post-GLM-NG-post}{{3}{204}}
-\newlabel{eq:blr-post-GLM-NG-post-par}{{4}{204}}
-\newlabel{eq:blr-post-GLM-NG-BT}{{5}{204}}
-\newlabel{eq:blr-post-GLM-NG-post-JL}{{6}{204}}
-\newlabel{eq:blr-post-GLM-LF-class}{{7}{204}}
-\newlabel{eq:blr-post-GLM-LF-Bayes}{{8}{205}}
-\newlabel{eq:blr-post-GLM-NG-JL-s1}{{9}{205}}
-\newlabel{eq:blr-post-GLM-NG-JL-s2}{{10}{205}}
-\newlabel{eq:blr-post-GLM-NG-JL-s3}{{11}{205}}
-\newlabel{eq:blr-post-GLM-NG-JL-s4}{{12}{205}}
-\newlabel{eq:blr-post-GLM-NG-post-beta-par}{{13}{205}}
-\newlabel{eq:blr-post-GLM-NG-JL-s5}{{14}{206}}
-\newlabel{eq:blr-post-GLM-NG-post-tau-par}{{15}{206}}
-\newlabel{eq:blr-post-GLM-NG-post-beta}{{16}{206}}
-\newlabel{eq:blr-post-GLM-NG-post-tau}{{17}{206}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}\textbf  {Log model evidence}}{206}\protected@file@percent }
-\newlabel{sec:blr-lme}{{1.2.3}{206}}
-\newlabel{eq:blr-lme-GLM}{{1}{206}}
-\newlabel{eq:blr-lme-GLM-NG-prior}{{2}{206}}
-\newlabel{eq:blr-lme-GLM-NG-LME}{{3}{206}}
-\newlabel{eq:blr-lme-GLM-NG-post-par}{{4}{207}}
-\newlabel{eq:blr-lme-GLM-NG-ME-s1}{{5}{207}}
-\newlabel{eq:blr-lme-GLM-NG-ME-s2}{{6}{207}}
-\newlabel{eq:blr-lme-GLM-LF-class}{{7}{207}}
-\newlabel{eq:blr-lme-GLM-LF-Bayes}{{8}{207}}
-\newlabel{eq:blr-lme-GLM-NG-LME-s1}{{9}{207}}
-\newlabel{eq:blr-lme-GLM-NG-LME-s2}{{10}{207}}
-\newlabel{eq:blr-lme-GLM-NG-LME-s3}{{11}{208}}
-\newlabel{eq:blr-lme-GLM-NG-LME-s4}{{12}{208}}
-\newlabel{eq:blr-lme-GLM-NG-LME-s5}{{13}{208}}
-\newlabel{eq:blr-lme-GLM-NG-LME-s6}{{14}{208}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.4}\textbf  {Posterior probability of alternative hypothesis}}{208}\protected@file@percent }
-\newlabel{sec:blr-pp}{{1.2.4}{208}}
-\newlabel{eq:blr-pp-GLM}{{1}{208}}
-\newlabel{eq:blr-pp-GLM-NG-prior}{{2}{208}}
-\newlabel{eq:blr-pp-GLM-H1}{{3}{208}}
-\newlabel{eq:blr-pp-GLM-NG-PP}{{4}{209}}
-\newlabel{eq:blr-pp-GLM-NG-post}{{5}{209}}
-\newlabel{eq:blr-pp-GLM-NG-post-par}{{6}{209}}
-\newlabel{eq:blr-pp-GLM-NG-post-beta}{{7}{209}}
-\newlabel{eq:blr-pp-GLM-NG-post-par-beta}{{8}{209}}
-\newlabel{eq:blr-pp-GLM-NG-post-gamma}{{9}{209}}
-\newlabel{eq:blr-pp-GLM-NG-post-prob-H0-s1}{{10}{209}}
-\newlabel{eq:blr-pp-GLM-NG-post-prob-H0-s2}{{11}{210}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.5}\textbf  {Posterior credibility region excluding null hypothesis}}{210}\protected@file@percent }
-\newlabel{sec:blr-pcr}{{1.2.5}{210}}
-\newlabel{eq:blr-pcr-GLM}{{1}{210}}
-\newlabel{eq:blr-pcr-GLM-NG-prior}{{2}{210}}
-\newlabel{eq:blr-pcr-GLM-H0}{{3}{210}}
-\newlabel{eq:blr-pcr-GLM-NG-PCR}{{4}{210}}
-\newlabel{eq:blr-pcr-GLM-NG-post}{{5}{210}}
-\newlabel{eq:blr-pcr-GLM-NG-post-par}{{6}{211}}
-\newlabel{eq:blr-pcr-GLM-NG-post-beta}{{7}{211}}
-\newlabel{eq:blr-pcr-GLM-NG-post-par-beta}{{8}{211}}
-\newlabel{eq:blr-pcr-GLM-NG-post-gamma}{{9}{211}}
-\newlabel{eq:blr-pcr-GLM-NG-post-qf}{{10}{211}}
-\newlabel{eq:blr-pcr-GLM-NG-post-cred-reg-not-H0}{{11}{211}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Multivariate normal data}{212}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}General linear model}{212}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}\textit  {Definition}}{212}\protected@file@percent }
-\newlabel{sec:glm}{{2.1.1}{212}}
-\newlabel{eq:glm-glm}{{1}{212}}
-\newlabel{eq:glm-glm-iid}{{2}{212}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}\textbf  {Ordinary least squares}}{212}\protected@file@percent }
-\newlabel{sec:glm-ols}{{2.1.2}{212}}
-\newlabel{eq:glm-ols-GLM}{{1}{212}}
-\newlabel{eq:glm-ols-OLS}{{2}{212}}
-\newlabel{eq:glm-ols-OLS-exo}{{3}{213}}
-\newlabel{eq:glm-ols-OLS-uncorr}{{4}{213}}
-\newlabel{eq:glm-ols-X-E-orth}{{5}{213}}
-\newlabel{eq:glm-ols-OLS-qed}{{6}{213}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}\textbf  {Weighted least squares}}{213}\protected@file@percent }
-\newlabel{sec:glm-wls}{{2.1.3}{213}}
-\newlabel{eq:glm-wls-GLM}{{1}{213}}
-\newlabel{eq:glm-wls-WLS}{{2}{213}}
-\newlabel{eq:glm-wls-W-def}{{3}{213}}
-\newlabel{eq:glm-wls-W-V}{{4}{213}}
-\newlabel{eq:glm-wls-GLM-W}{{5}{213}}
-\newlabel{eq:glm-wls-GLM-W-dev}{{6}{214}}
-\newlabel{eq:glm-wls-WLS-qed}{{7}{214}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}\textbf  {Maximum likelihood estimation}}{214}\protected@file@percent }
-\newlabel{sec:glm-mle}{{2.1.4}{214}}
-\newlabel{eq:glm-mle-GLM}{{1}{214}}
-\newlabel{eq:glm-mle-GLM-MLE}{{2}{214}}
-\newlabel{eq:glm-mle-GLM-LF}{{3}{214}}
-\newlabel{eq:glm-mle-GLM-LL1}{{4}{215}}
-\newlabel{eq:glm-mle-GLM-LL2}{{5}{215}}
-\newlabel{eq:glm-mle-dLL-dB}{{6}{215}}
-\newlabel{eq:glm-mle-B-MLE}{{7}{215}}
-\newlabel{eq:glm-mle-dLL-dS}{{8}{215}}
-\newlabel{eq:glm-mle-S-MLE}{{9}{216}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Multivariate Bayesian linear regression}{216}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}\textbf  {Conjugate prior distribution}}{216}\protected@file@percent }
-\newlabel{sec:mblr-prior}{{2.2.1}{216}}
-\newlabel{eq:mblr-prior-GLM}{{1}{216}}
-\newlabel{eq:mblr-prior-GLM-NW-prior}{{2}{216}}
-\newlabel{eq:mblr-prior-GLM-LF-Class}{{3}{217}}
-\newlabel{eq:mblr-prior-GLM-LF-Bayes}{{4}{217}}
-\newlabel{eq:mblr-prior-GLM-LF-s1}{{5}{217}}
-\newlabel{eq:mblr-prior-GLM-LF-s2}{{6}{217}}
-\newlabel{eq:mblr-prior-GLM-LF-s3}{{7}{217}}
-\newlabel{eq:mblr-prior-GLM-LF-s4}{{8}{217}}
-\newlabel{eq:mblr-prior-MBLR-prior-s1}{{9}{217}}
-\newlabel{eq:mblr-prior-MBLR-prior-s2}{{10}{217}}
-\newlabel{eq:mblr-prior-MBLR-prior-s3}{{11}{218}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}\textbf  {Posterior distribution}}{218}\protected@file@percent }
-\newlabel{sec:mblr-post}{{2.2.2}{218}}
-\newlabel{eq:mblr-post-GLM}{{1}{218}}
-\newlabel{eq:mblr-post-GLM-NW-prior}{{2}{218}}
-\newlabel{eq:mblr-post-GLM-NW-post}{{3}{218}}
-\newlabel{eq:mblr-post-GLM-NW-post-par}{{4}{218}}
-\newlabel{eq:mblr-post-GLM-NG-BT}{{5}{218}}
-\newlabel{eq:mblr-post-GLM-NG-post-JL}{{6}{219}}
-\newlabel{eq:mblr-post-GLM-LF-Class}{{7}{219}}
-\newlabel{eq:mblr-post-GLM-LF-Bayes}{{8}{219}}
-\newlabel{eq:mblr-post-GLM-NW-JL-s1}{{9}{219}}
-\newlabel{eq:mblr-post-GLM-NW-JL-s2}{{10}{219}}
-\newlabel{eq:mblr-post-GLM-NW-JL-s3}{{11}{219}}
-\newlabel{eq:mblr-post-GLM-NW-JL-s4}{{12}{220}}
-\newlabel{eq:mblr-post-GLM-NW-post-B-par}{{13}{220}}
-\newlabel{eq:mblr-post-GLM-NW-JL-s5}{{14}{220}}
-\newlabel{eq:mblr-post-GLM-NW-post-T-par}{{15}{220}}
-\newlabel{eq:mblr-post-GLM-NW-post-B}{{16}{220}}
-\newlabel{eq:mblr-post-GLM-NW-post-T}{{17}{220}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}\textbf  {Log model evidence}}{220}\protected@file@percent }
-\newlabel{sec:mblr-lme}{{2.2.3}{220}}
-\newlabel{eq:mblr-lme-GLM}{{1}{220}}
-\newlabel{eq:mblr-lme-GLM-NW-prior}{{2}{221}}
-\newlabel{eq:mblr-lme-GLM-NW-LME}{{3}{221}}
-\newlabel{eq:mblr-lme-GLM-NW-post-par}{{4}{221}}
-\newlabel{eq:mblr-lme-GLM-NW-ME-s1}{{5}{221}}
-\newlabel{eq:mblr-lme-GLM-NW-ME-s2}{{6}{221}}
-\newlabel{eq:mblr-lme-GLM-LF-Class}{{7}{221}}
-\newlabel{eq:mblr-lme-GLM-LF-Bayes}{{8}{221}}
-\newlabel{eq:mblr-lme-GLM-NW-LME-s1}{{9}{222}}
-\newlabel{eq:mblr-lme-GLM-NW-LME-s2}{{10}{222}}
-\newlabel{eq:mblr-lme-GLM-NW-LME-s3}{{11}{222}}
-\newlabel{eq:mblr-lme-GLM-NW-LME-s4}{{12}{222}}
-\newlabel{eq:mblr-lme-GLM-NW-LME-s5}{{13}{222}}
-\newlabel{eq:mblr-lme-GLM-NW-LME-s6}{{14}{222}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Poisson data}{223}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Poisson-distributed data}{223}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}\textit  {Definition}}{223}\protected@file@percent }
-\newlabel{sec:poiss-data}{{3.1.1}{223}}
-\newlabel{eq:poiss-data-Poiss}{{1}{223}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}\textbf  {Maximum likelihood estimation}}{223}\protected@file@percent }
-\newlabel{sec:poiss-mle}{{3.1.2}{223}}
-\newlabel{eq:poiss-mle-Poiss}{{1}{223}}
-\newlabel{eq:poiss-mle-Poiss-MLE}{{2}{223}}
-\newlabel{eq:poiss-mle-y-mean}{{3}{223}}
-\newlabel{eq:poiss-mle-Poiss-yi}{{4}{223}}
-\newlabel{eq:poiss-mle-Poiss-LF}{{5}{223}}
-\newlabel{eq:poiss-mle-Poiss-LL}{{6}{223}}
-\newlabel{eq:poiss-mle-Poiss-LL-der}{{7}{224}}
-\newlabel{eq:poiss-mle-Poiss-dLLdl-d2LLdl2}{{8}{224}}
-\newlabel{eq:poiss-mle-Poiss-dLLdl}{{9}{224}}
-\newlabel{eq:poiss-mle-Poiss-d2LLdl2}{{10}{224}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Poisson distribution with exposure values}{225}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}\textit  {Definition}}{225}\protected@file@percent }
-\newlabel{sec:poissexp}{{3.2.1}{225}}
-\newlabel{eq:poissexp-Poiss-exp}{{1}{225}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}\textbf  {Conjugate prior distribution}}{225}\protected@file@percent }
-\newlabel{sec:poissexp-prior}{{3.2.2}{225}}
-\newlabel{eq:poissexp-prior-Poiss-exp}{{1}{225}}
-\newlabel{eq:poissexp-prior-Poiss-exp-prior}{{2}{225}}
-\newlabel{eq:poissexp-prior-Poiss-exp-LF-s1}{{3}{225}}
-\newlabel{eq:poissexp-prior-Poiss-exp-LF-s2}{{4}{225}}
-\newlabel{eq:poissexp-prior-Poiss-exp-LF-s3}{{5}{225}}
-\newlabel{eq:poissexp-prior-xy-mean}{{6}{226}}
-\newlabel{eq:poissexp-prior-Poiss-exp-LF-prop}{{7}{226}}
-\newlabel{eq:poissexp-prior-Poiss-exp-prior-s1}{{8}{226}}
-\newlabel{eq:poissexp-prior-Poiss-exp-prior-s2}{{9}{226}}
-\newlabel{eq:poissexp-prior-Poiss-exp-prior-s3}{{10}{226}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}\textbf  {Posterior distribution}}{226}\protected@file@percent }
-\newlabel{sec:poissexp-post}{{3.2.3}{226}}
-\newlabel{eq:poissexp-post-Poiss-exp}{{1}{226}}
-\newlabel{eq:poissexp-post-Poiss-exp-prior}{{2}{226}}
-\newlabel{eq:poissexp-post-Poiss-exp-post}{{3}{226}}
-\newlabel{eq:poissexp-post-Poiss-exp-post-par}{{4}{227}}
-\newlabel{eq:poissexp-post-Poiss-exp-LF-s1}{{5}{227}}
-\newlabel{eq:poissexp-post-Poiss-exp-LF-s2}{{6}{227}}
-\newlabel{eq:poissexp-post-Poiss-exp-JL-s1}{{7}{227}}
-\newlabel{eq:poissexp-post-Poiss-JL-s2}{{8}{227}}
-\newlabel{eq:poissexp-post-xy-mean}{{9}{227}}
-\newlabel{eq:poissexp-post-Poiss-exp-post-s1}{{10}{228}}
-\newlabel{eq:poissexp-post-Poiss-exp-post-s2}{{11}{228}}
-\newlabel{eq:poissexp-post-Poiss-exp-post-s3}{{12}{228}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}\textbf  {Log model evidence}}{228}\protected@file@percent }
-\newlabel{sec:poissexp-lme}{{3.2.4}{228}}
-\newlabel{eq:poissexp-lme-Poiss-exp}{{1}{228}}
-\newlabel{eq:poissexp-lme-Poiss-exp-prior}{{2}{228}}
-\newlabel{eq:poissexp-lme-Poiss-exp-LME}{{3}{228}}
-\newlabel{eq:poissexp-lme-Poiss-exp-post-par}{{4}{228}}
-\newlabel{eq:poissexp-lme-Poiss-exp-LF-s1}{{5}{228}}
-\newlabel{eq:poissexp-lme-Poiss-exp-LF-s2}{{6}{229}}
-\newlabel{eq:poissexp-lme-Poiss-exp-JL-s1}{{7}{229}}
-\newlabel{eq:poissexp-lme-Poiss-exp-JL-s2}{{8}{229}}
-\newlabel{eq:poissexp-lme-xy-mean}{{9}{229}}
-\newlabel{eq:poissexp-lme-Poiss-exp-ME}{{10}{229}}
-\newlabel{eq:poissexp-lme-Poiss-exp-JL-s3}{{11}{229}}
-\newlabel{eq:poissexp-lme-Poiss-exp-ME-qed}{{12}{230}}
-\newlabel{eq:poissexp-lme-Poiss-exp-LME-qed}{{13}{230}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Probability data}{231}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Beta-distributed data}{231}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}\textit  {Definition}}{231}\protected@file@percent }
-\newlabel{sec:beta-data}{{4.1.1}{231}}
-\newlabel{eq:beta-data-beta-data}{{1}{231}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}\textbf  {Method of moments}}{231}\protected@file@percent }
-\newlabel{sec:beta-mom}{{4.1.2}{231}}
-\newlabel{eq:beta-mom-Beta}{{1}{231}}
-\newlabel{eq:beta-mom-Beta-MoM}{{2}{231}}
-\newlabel{eq:beta-mom-y-mean-var}{{3}{231}}
-\newlabel{eq:beta-mom-Beta-E-Var}{{4}{231}}
-\newlabel{eq:beta-mom-Beta-mean-var}{{5}{232}}
-\newlabel{eq:beta-mom-beta-as-alpha}{{6}{232}}
-\newlabel{eq:beta-mom-alpha-as-q}{{7}{232}}
-\newlabel{eq:beta-mom-Beta-MoM-alpha}{{8}{232}}
-\newlabel{eq:beta-mom-Beta-MoM-beta}{{9}{233}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Dirichlet-distributed data}{233}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}\textit  {Definition}}{233}\protected@file@percent }
-\newlabel{sec:dir-data}{{4.2.1}{233}}
-\newlabel{eq:dir-data-dir-def}{{1}{233}}
-\newlabel{eq:dir-data-dir-data}{{2}{233}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}\textbf  {Maximum likelihood estimation}}{233}\protected@file@percent }
-\newlabel{sec:dir-mle}{{4.2.2}{233}}
-\newlabel{eq:dir-mle-Dir}{{1}{233}}
-\newlabel{eq:dir-mle-Dir-MLE}{{2}{233}}
-\newlabel{eq:dir-mle-log-pi}{{3}{234}}
-\newlabel{eq:dir-mle-Dir-yi}{{4}{234}}
-\newlabel{eq:dir-mle-Dir-LF}{{5}{234}}
-\newlabel{eq:dir-mle-Dir-LL}{{6}{234}}
-\newlabel{eq:dir-mle-Dir-LL-der}{{7}{234}}
-\newlabel{eq:dir-mle-log-pi-reit}{{8}{234}}
-\newlabel{eq:dir-mle-Dir-dLLdaj}{{9}{234}}
-\newlabel{eq:dir-mle-digamma-fct}{{10}{235}}
-\newlabel{eq:dir-mle-Dir-dLLdaj-0}{{11}{235}}
-\newlabel{eq:dir-mle-gamma-fct-bound}{{12}{235}}
-\newlabel{eq:dir-mle-Dir-LL-bound}{{13}{235}}
-\newlabel{eq:dir-mle-Dir-MLE-qed}{{14}{236}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Categorical data}{237}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Binomial observations}{237}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}\textit  {Definition}}{237}\protected@file@percent }
-\newlabel{sec:bin-data}{{5.1.1}{237}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}\textbf  {Conjugate prior distribution}}{237}\protected@file@percent }
-\newlabel{sec:bin-prior}{{5.1.2}{237}}
-\newlabel{eq:bin-prior-Bin}{{1}{237}}
-\newlabel{eq:bin-prior-Beta}{{2}{237}}
-\newlabel{eq:bin-prior-Bin-LF}{{3}{237}}
-\newlabel{eq:bin-prior-Bin-LF-prop}{{4}{237}}
-\newlabel{eq:bin-prior-Bin-prior-s1}{{5}{237}}
-\newlabel{eq:bin-prior-Bin-prior-s2}{{6}{237}}
-\newlabel{eq:bin-prior-Bin-prior-s3}{{7}{237}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}\textbf  {Posterior distribution}}{238}\protected@file@percent }
-\newlabel{sec:bin-post}{{5.1.3}{238}}
-\newlabel{eq:bin-post-Bin}{{1}{238}}
-\newlabel{eq:bin-post-Bin-prior}{{2}{238}}
-\newlabel{eq:bin-post-Bin-post}{{3}{238}}
-\newlabel{eq:bin-post-Bin-post-par}{{4}{238}}
-\newlabel{eq:bin-post-Bin-LF}{{5}{238}}
-\newlabel{eq:bin-post-Bin-JL}{{6}{238}}
-\newlabel{eq:bin-post-Bin-post-s1}{{7}{238}}
-\newlabel{eq:bin-post-Bin-post-s2}{{8}{238}}
-\newlabel{eq:bin-post-Bin-post-qed}{{9}{239}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}\textbf  {Log model evidence}}{239}\protected@file@percent }
-\newlabel{sec:bin-lme}{{5.1.4}{239}}
-\newlabel{eq:bin-lme-Bin}{{1}{239}}
-\newlabel{eq:bin-lme-Bin-prior}{{2}{239}}
-\newlabel{eq:bin-lme-Bin-LME}{{3}{239}}
-\newlabel{eq:bin-lme-Bin-post-par}{{4}{239}}
-\newlabel{eq:bin-lme-Bin-LF}{{5}{239}}
-\newlabel{eq:bin-lme-Bin-JL-s1}{{6}{239}}
-\newlabel{eq:bin-lme-Bin-ME-s1}{{7}{240}}
-\newlabel{eq:bin-lme-Bin-JL-s2}{{8}{240}}
-\newlabel{eq:bin-lme-Bin-ME-s2}{{9}{240}}
-\newlabel{eq:bin-lme-Bin-LME-s1}{{10}{240}}
-\newlabel{eq:bin-lme-bin-coeff}{{11}{240}}
-\newlabel{eq:bin-lme-gam-fct}{{12}{240}}
-\newlabel{eq:bin-lme-Bin-LME-s2}{{13}{240}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Multinomial observations}{241}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}\textit  {Definition}}{241}\protected@file@percent }
-\newlabel{sec:mult-data}{{5.2.1}{241}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}\textbf  {Conjugate prior distribution}}{241}\protected@file@percent }
-\newlabel{sec:mult-prior}{{5.2.2}{241}}
-\newlabel{eq:mult-prior-Mult}{{1}{241}}
-\newlabel{eq:mult-prior-Dir}{{2}{241}}
-\newlabel{eq:mult-prior-Mult-LF}{{3}{241}}
-\newlabel{eq:mult-prior-Mult-LF-prop}{{4}{241}}
-\newlabel{eq:mult-prior-Mult-prior-s1}{{5}{241}}
-\newlabel{eq:mult-prior-Mult-prior-s2}{{6}{241}}
-\newlabel{eq:mult-prior-Mult-prior-s3}{{7}{242}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}\textbf  {Posterior distribution}}{242}\protected@file@percent }
-\newlabel{sec:mult-post}{{5.2.3}{242}}
-\newlabel{eq:mult-post-Mult}{{1}{242}}
-\newlabel{eq:mult-post-Mult-prior}{{2}{242}}
-\newlabel{eq:mult-post-Mult-post}{{3}{242}}
-\newlabel{eq:mult-post-Mult-post-par}{{4}{242}}
-\newlabel{eq:mult-post-Mult-LF}{{5}{242}}
-\newlabel{eq:mult-post-Mult-JL}{{6}{242}}
-\newlabel{eq:mult-post-Mult-post-s1}{{7}{243}}
-\newlabel{eq:mult-post-Mult-post-s2}{{8}{243}}
-\newlabel{eq:mult-post-Mult-post-qed}{{9}{243}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.4}\textbf  {Log model evidence}}{243}\protected@file@percent }
-\newlabel{sec:mult-lme}{{5.2.4}{243}}
-\newlabel{eq:mult-lme-Mult}{{1}{243}}
-\newlabel{eq:mult-lme-Mult-prior}{{2}{243}}
-\newlabel{eq:mult-lme-Mult-LME}{{3}{243}}
-\newlabel{eq:mult-lme-Mult-post-par}{{4}{243}}
-\newlabel{eq:mult-lme-Mult-LF}{{5}{244}}
-\newlabel{eq:mult-lme-Mult-JL}{{6}{244}}
-\newlabel{eq:mult-lme-Mult-ME-s1}{{7}{244}}
-\newlabel{eq:mult-lme-Mult-JL-s2}{{8}{244}}
-\newlabel{eq:mult-lme-Mult-ME-s2}{{9}{244}}
-\newlabel{eq:mult-lme-Mult-LME-s1}{{10}{244}}
-\newlabel{eq:mult-lme-mult-coeff}{{11}{245}}
-\newlabel{eq:mult-lme-gam-fct}{{12}{245}}
-\newlabel{eq:mult-lme-Mult-LME-s2}{{13}{245}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Logistic regression}{245}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}\textit  {Definition}}{245}\protected@file@percent }
-\newlabel{sec:logreg}{{5.3.1}{245}}
-\newlabel{eq:logreg-logreg}{{1}{245}}
-\newlabel{eq:logreg-logodds}{{2}{245}}
-\newlabel{eq:logreg-X}{{3}{245}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}\textbf  {Probability and log-odds}}{246}\protected@file@percent }
-\newlabel{sec:logreg-pnlo}{{5.3.2}{246}}
-\newlabel{eq:logreg-pnlo-logreg}{{1}{246}}
-\newlabel{eq:logreg-pnlo-lodds}{{2}{246}}
-\newlabel{eq:logreg-pnlo-prob}{{3}{246}}
-\newlabel{eq:logreg-pnlo-lodds-qed}{{4}{246}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}\textbf  {Log-odds and probability}}{247}\protected@file@percent }
-\newlabel{sec:logreg-lonp}{{5.3.3}{247}}
-\newlabel{eq:logreg-lonp-logreg}{{1}{247}}
-\newlabel{eq:logreg-lonp-prob}{{2}{247}}
-\newlabel{eq:logreg-lonp-lodds}{{3}{247}}
-\newlabel{eq:logreg-lonp-prob-qed}{{4}{247}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {IV}Model Selection}{249}\protected@file@percent }
+\newlabel{sec:Statistical Models}{{III}{193}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Univariate normal data}{194}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Univariate Gaussian}{194}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}\textit  {Definition}}{194}\protected@file@percent }
+\newlabel{sec:ug}{{1.1.1}{194}}
+\newlabel{eq:ug-ug}{{1}{194}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}\textbf  {One-sample t-test}}{194}\protected@file@percent }
+\newlabel{sec:ug-ttest1}{{1.1.2}{194}}
+\newlabel{eq:ug-ttest1-ug}{{1}{194}}
+\newlabel{eq:ug-ttest1-t}{{2}{194}}
+\newlabel{eq:ug-ttest1-t-dist}{{3}{194}}
+\newlabel{eq:ug-ttest1-ttest1-h0}{{4}{194}}
+\newlabel{eq:ug-ttest1-mean-samp}{{5}{194}}
+\newlabel{eq:ug-ttest1-var-samp}{{6}{194}}
+\newlabel{eq:ug-ttest1-mean-samp-dist}{{7}{195}}
+\newlabel{eq:ug-ttest1-Z-dist}{{8}{195}}
+\newlabel{eq:ug-ttest1-V-dist}{{9}{195}}
+\newlabel{eq:ug-ttest1-t-dist-qed}{{10}{195}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3}\textbf  {Two-sample t-test}}{195}\protected@file@percent }
+\newlabel{sec:ug-ttest2}{{1.1.3}{195}}
+\newlabel{eq:ug-ttest2-ug}{{1}{195}}
+\newlabel{eq:ug-ttest2-t}{{2}{196}}
+\newlabel{eq:ug-ttest2-t-dist}{{3}{196}}
+\newlabel{eq:ug-ttest2-ttest2-h0}{{4}{196}}
+\newlabel{eq:ug-ttest2-mean-samp}{{5}{196}}
+\newlabel{eq:ug-ttest2-std-pool}{{6}{196}}
+\newlabel{eq:ug-ttest2-var-samp}{{7}{196}}
+\newlabel{eq:ug-ttest2-mean-samp-dist}{{8}{196}}
+\newlabel{eq:ug-ttest2-Z-dist}{{9}{197}}
+\newlabel{eq:ug-ttest2-V-dist}{{10}{197}}
+\newlabel{eq:ug-ttest2-t-dist-qed}{{11}{197}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.4}\textbf  {Paired t-test}}{197}\protected@file@percent }
+\newlabel{sec:ug-ttestp}{{1.1.4}{197}}
+\newlabel{eq:ug-ttestp-ug}{{1}{197}}
+\newlabel{eq:ug-ttestp-t}{{2}{197}}
+\newlabel{eq:ug-ttestp-t-dist}{{3}{197}}
+\newlabel{eq:ug-ttestp-ttestp-h0}{{4}{198}}
+\newlabel{eq:ug-ttestp-d-dist}{{5}{198}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.5}\textbf  {Conjugate prior distribution}}{198}\protected@file@percent }
+\newlabel{sec:ug-prior}{{1.1.5}{198}}
+\newlabel{eq:ug-prior-ug}{{1}{198}}
+\newlabel{eq:ug-prior-UG-NG-prior}{{2}{198}}
+\newlabel{eq:ug-prior-UG-LF-class}{{3}{198}}
+\newlabel{eq:ug-prior-UG-LF-Bayes}{{4}{199}}
+\newlabel{eq:ug-prior-UG-LF-s1}{{5}{199}}
+\newlabel{eq:ug-prior-UG-LF-s2}{{6}{199}}
+\newlabel{eq:ug-prior-UG-LF-s3}{{7}{199}}
+\newlabel{eq:ug-prior-UG-LF-s4}{{8}{199}}
+\newlabel{eq:ug-prior-UG-prior-s1}{{9}{199}}
+\newlabel{eq:ug-prior-UG-prior-s2}{{10}{200}}
+\newlabel{eq:ug-prior-UG-prior-s3}{{11}{200}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.6}\textbf  {Posterior distribution}}{200}\protected@file@percent }
+\newlabel{sec:ug-post}{{1.1.6}{200}}
+\newlabel{eq:ug-post-ug}{{1}{200}}
+\newlabel{eq:ug-post-UG-NG-prior}{{2}{200}}
+\newlabel{eq:ug-post-UG-NG-post}{{3}{200}}
+\newlabel{eq:ug-post-UG-NG-post-par}{{4}{200}}
+\newlabel{eq:ug-post-UG-NG-BT}{{5}{200}}
+\newlabel{eq:ug-post-UG-NG-post-JL}{{6}{201}}
+\newlabel{eq:ug-post-UG-LF-class}{{7}{201}}
+\newlabel{eq:ug-post-UG-LF-Bayes}{{8}{201}}
+\newlabel{eq:ug-post-UG-NG-JL-s1}{{9}{201}}
+\newlabel{eq:ug-post-UG-NG-JL-s2}{{10}{201}}
+\newlabel{eq:ug-post-UG-NG-JL-s3}{{11}{202}}
+\newlabel{eq:ug-post-UG-NG-JL-s4}{{12}{202}}
+\newlabel{eq:ug-post-UG-NG-JL-s5}{{13}{202}}
+\newlabel{eq:ug-post-UG-NG-post-mu-par}{{14}{202}}
+\newlabel{eq:ug-post-UG-NG-JL-s6}{{15}{202}}
+\newlabel{eq:ug-post-UG-NG-post-tau-par}{{16}{202}}
+\newlabel{eq:ug-post-UG-NG-post-mu}{{17}{202}}
+\newlabel{eq:ug-post-UG-NG-post-tau}{{18}{202}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.7}\textbf  {Log model evidence}}{203}\protected@file@percent }
+\newlabel{sec:ug-lme}{{1.1.7}{203}}
+\newlabel{eq:ug-lme-ug}{{1}{203}}
+\newlabel{eq:ug-lme-UG-NG-prior}{{2}{203}}
+\newlabel{eq:ug-lme-UG-NG-LME}{{3}{203}}
+\newlabel{eq:ug-lme-UG-NG-post-par}{{4}{203}}
+\newlabel{eq:ug-lme-UG-NG-ME-s1}{{5}{203}}
+\newlabel{eq:ug-lme-UG-NG-ME-s2}{{6}{203}}
+\newlabel{eq:ug-lme-UG-LF-class}{{7}{204}}
+\newlabel{eq:ug-lme-UG-LF-Bayes}{{8}{204}}
+\newlabel{eq:ug-lme-UG-NG-LME-s1}{{9}{204}}
+\newlabel{eq:ug-lme-UG-NG-LME-s2}{{10}{204}}
+\newlabel{eq:ug-lme-UG-NG-LME-s3}{{11}{204}}
+\newlabel{eq:ug-lme-UG-NG-LME-s4}{{12}{205}}
+\newlabel{eq:ug-lme-UG-NG-LME-s5}{{13}{205}}
+\newlabel{eq:ug-lme-UG-NG-LME-s6}{{14}{205}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Univariate Gaussian with known variance}{205}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}\textit  {Definition}}{205}\protected@file@percent }
+\newlabel{sec:ugkv}{{1.2.1}{205}}
+\newlabel{eq:ugkv-ug}{{1}{205}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}\textbf  {Maximum likelihood estimation}}{205}\protected@file@percent }
+\newlabel{sec:ugkv-mle}{{1.2.2}{205}}
+\newlabel{eq:ugkv-mle-ugkv}{{1}{205}}
+\newlabel{eq:ugkv-mle-ugkv-MLE}{{2}{206}}
+\newlabel{eq:ugkv-mle-y-mean}{{3}{206}}
+\newlabel{eq:ugkv-mle-ugkv-yi}{{4}{206}}
+\newlabel{eq:ugkv-mle-ugkv-LF-s1}{{5}{206}}
+\newlabel{eq:ugkv-mle-ugkv-LF-s2}{{6}{206}}
+\newlabel{eq:ugkv-mle-ugkv-LL}{{7}{206}}
+\newlabel{eq:ugkv-mle-ugkv-dLLdl-d2LLdl2}{{8}{206}}
+\newlabel{eq:ugkv-mle-ugkv-dLLdl}{{9}{206}}
+\newlabel{eq:ugkv-mle-ugkv-d2LLdl2}{{10}{207}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}\textbf  {One-sample z-test}}{207}\protected@file@percent }
+\newlabel{sec:ugkv-ztest1}{{1.2.3}{207}}
+\newlabel{eq:ugkv-ztest1-ugkv}{{1}{207}}
+\newlabel{eq:ugkv-ztest1-z}{{2}{207}}
+\newlabel{eq:ugkv-ztest1-z-dist}{{3}{207}}
+\newlabel{eq:ugkv-ztest1-ztest1-h0}{{4}{207}}
+\newlabel{eq:ugkv-ztest1-mean-samp}{{5}{207}}
+\newlabel{eq:ugkv-ztest1-mean-samp-dist}{{6}{207}}
+\newlabel{eq:ugkv-ztest1-z-dist-s1}{{7}{208}}
+\newlabel{eq:ugkv-ztest1-z-dist-s2}{{8}{208}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.4}\textbf  {Two-sample z-test}}{208}\protected@file@percent }
+\newlabel{sec:ugkv-ztest2}{{1.2.4}{208}}
+\newlabel{eq:ugkv-ztest2-ugkv}{{1}{208}}
+\newlabel{eq:ugkv-ztest2-z}{{2}{208}}
+\newlabel{eq:ugkv-ztest2-z-dist}{{3}{208}}
+\newlabel{eq:ugkv-ztest2-ztest2-h0}{{4}{208}}
+\newlabel{eq:ugkv-ztest2-mean-samp}{{5}{208}}
+\newlabel{eq:ugkv-ztest2-mean-samp-dist}{{6}{209}}
+\newlabel{eq:ugkv-ztest2-z-dist-s1}{{7}{209}}
+\newlabel{eq:ugkv-ztest2-std-pool}{{8}{209}}
+\newlabel{eq:ugkv-ztest2-z-dist-s2}{{9}{209}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.5}\textbf  {Paired z-test}}{209}\protected@file@percent }
+\newlabel{sec:ugkv-ztestp}{{1.2.5}{209}}
+\newlabel{eq:ugkv-ztestp-ugkv}{{1}{209}}
+\newlabel{eq:ugkv-ztestp-z}{{2}{209}}
+\newlabel{eq:ugkv-ztestp-z-dist}{{3}{210}}
+\newlabel{eq:ugkv-ztestp-ztestp-h0}{{4}{210}}
+\newlabel{eq:ugkv-ztestp-d-dist}{{5}{210}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.6}\textbf  {Conjugate prior distribution}}{210}\protected@file@percent }
+\newlabel{sec:ugkv-prior}{{1.2.6}{210}}
+\newlabel{eq:ugkv-prior-ugkv}{{1}{210}}
+\newlabel{eq:ugkv-prior-UGkv-prior}{{2}{210}}
+\newlabel{eq:ugkv-prior-UGkv-LF-class}{{3}{211}}
+\newlabel{eq:ugkv-prior-UGkv-LF-Bayes}{{4}{211}}
+\newlabel{eq:ugkv-prior-UGkv-LF-s2}{{5}{211}}
+\newlabel{eq:ugkv-prior-UGkv-LF-s3}{{6}{211}}
+\newlabel{eq:ugkv-prior-UGkv-LF-s4}{{7}{211}}
+\newlabel{eq:ugkv-prior-UGkv-prior-s1}{{8}{212}}
+\newlabel{eq:ugkv-prior-UGkv-prior-s2}{{9}{212}}
+\newlabel{eq:ugkv-prior-UGkv-prior-s3}{{10}{212}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.7}\textbf  {Posterior distribution}}{212}\protected@file@percent }
+\newlabel{sec:ugkv-post}{{1.2.7}{212}}
+\newlabel{eq:ugkv-post-ugkv}{{1}{212}}
+\newlabel{eq:ugkv-post-UGkv-prior}{{2}{212}}
+\newlabel{eq:ugkv-post-UGkv-post}{{3}{212}}
+\newlabel{eq:ugkv-post-UGkv-post-par}{{4}{212}}
+\newlabel{eq:ugkv-post-UGkv-BT}{{5}{213}}
+\newlabel{eq:ugkv-post-UGkv-post-JL}{{6}{213}}
+\newlabel{eq:ugkv-post-UGkv-LF-class}{{7}{213}}
+\newlabel{eq:ugkv-post-UGkv-LF-Bayes}{{8}{213}}
+\newlabel{eq:ugkv-post-UGkv-JL-s1}{{9}{213}}
+\newlabel{eq:ugkv-post-UGkv-JL-s2}{{10}{213}}
+\newlabel{eq:ugkv-post-UGkv-JL-s3}{{11}{214}}
+\newlabel{eq:ugkv-post-UGkv-JL-s4}{{12}{214}}
+\newlabel{eq:ugkv-post-UGkv-post-mu-par}{{13}{214}}
+\newlabel{eq:ugkv-post-UGkv-JL-fn}{{14}{214}}
+\newlabel{eq:ugkv-post-UGkv-JL-s5}{{15}{214}}
+\newlabel{eq:ugkv-post-UGkv-post-mu}{{16}{214}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.8}\textbf  {Log model evidence}}{215}\protected@file@percent }
+\newlabel{sec:ugkv-lme}{{1.2.8}{215}}
+\newlabel{eq:ugkv-lme-ug}{{1}{215}}
+\newlabel{eq:ugkv-lme-UGkv-prior}{{2}{215}}
+\newlabel{eq:ugkv-lme-UGkv-LME}{{3}{215}}
+\newlabel{eq:ugkv-lme-UGkv-post-par}{{4}{215}}
+\newlabel{eq:ugkv-lme-UGkv-ME-s1}{{5}{215}}
+\newlabel{eq:ugkv-lme-UGkv-ME-s2}{{6}{215}}
+\newlabel{eq:ugkv-lme-UG-LF-class}{{7}{215}}
+\newlabel{eq:ugkv-lme-UG-LF-Bayes}{{8}{216}}
+\newlabel{eq:ugkv-lme-UGkv-LME-s1}{{9}{216}}
+\newlabel{eq:ugkv-lme-UGkv-LME-s2}{{10}{216}}
+\newlabel{eq:ugkv-lme-UGkv-LME-s3}{{11}{216}}
+\newlabel{eq:ugkv-lme-UGkv-LME-s4}{{12}{216}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.9}\textbf  {Accuracy and complexity}}{216}\protected@file@percent }
+\newlabel{sec:ugkv-anc}{{1.2.9}{216}}
+\newlabel{eq:ugkv-anc-ugkv}{{1}{216}}
+\newlabel{eq:ugkv-anc-m}{{2}{216}}
+\newlabel{eq:ugkv-anc-UGkv-anc}{{3}{217}}
+\newlabel{eq:ugkv-anc-lme-anc}{{4}{217}}
+\newlabel{eq:ugkv-anc-UGkv-Acc}{{5}{217}}
+\newlabel{eq:ugkv-anc-UGkv-Com}{{6}{217}}
+\newlabel{eq:ugkv-anc-UGkv-anc-lme}{{7}{217}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.10}\textbf  {Log Bayes factor}}{218}\protected@file@percent }
+\newlabel{sec:ugkv-lbf}{{1.2.10}{218}}
+\newlabel{eq:ugkv-lbf-ugkv}{{1}{218}}
+\newlabel{eq:ugkv-lbf-UGkv-m01}{{2}{218}}
+\newlabel{eq:ugkv-lbf-UGkv-LBF}{{3}{218}}
+\newlabel{eq:ugkv-lbf-LBF-LME}{{4}{218}}
+\newlabel{eq:ugkv-lbf-UGkv-LME-m1}{{5}{218}}
+\newlabel{eq:ugkv-lbf-UGkv-LME-m0}{{6}{218}}
+\newlabel{eq:ugkv-lbf-UGkv-LBF-m10}{{7}{219}}
+\newlabel{eq:ugkv-lbf-UGkv-post-par}{{8}{219}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.11}\textbf  {Expectation of log Bayes factor}}{219}\protected@file@percent }
+\newlabel{sec:ugkv-lbfmean}{{1.2.11}{219}}
+\newlabel{eq:ugkv-lbfmean-ugkv}{{1}{219}}
+\newlabel{eq:ugkv-lbfmean-UGkv-m01}{{2}{219}}
+\newlabel{eq:ugkv-lbfmean-UGkv-LBF}{{3}{219}}
+\newlabel{eq:ugkv-lbfmean-UGkv-LBF-m10-s1}{{4}{219}}
+\newlabel{eq:ugkv-lbfmean-UGkv-post-par}{{5}{220}}
+\newlabel{eq:ugkv-lbfmean-UGkv-LBF-m10-s2}{{6}{220}}
+\newlabel{eq:ugkv-lbfmean-UGkv-LBF-m10-s3}{{7}{220}}
+\newlabel{eq:ugkv-lbfmean-UGkv-E(ny2)}{{8}{220}}
+\newlabel{eq:ugkv-lbfmean-UGkv-LBF-m10-s4}{{9}{220}}
+\newlabel{eq:ugkv-lbfmean-UGkv-LBF-m10-s5}{{10}{220}}
+\newlabel{eq:ugkv-lbfmean-UGkv-LBF-m10-s6}{{11}{220}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.12}\textbf  {Cross-validated log model evidence}}{221}\protected@file@percent }
+\newlabel{sec:ugkv-cvlme}{{1.2.12}{221}}
+\newlabel{eq:ugkv-cvlme-ugkv}{{1}{221}}
+\newlabel{eq:ugkv-cvlme-UGkv-m01}{{2}{221}}
+\newlabel{eq:ugkv-cvlme-UGkv-cvLME-m01}{{3}{221}}
+\newlabel{eq:ugkv-cvlme-CV-n12}{{4}{221}}
+\newlabel{eq:ugkv-cvlme-CV-y12}{{5}{221}}
+\newlabel{eq:ugkv-cvlme-UGkv-m0-oosLME}{{6}{222}}
+\newlabel{eq:ugkv-cvlme-UGkv-m0-cvLME}{{7}{222}}
+\newlabel{eq:ugkv-cvlme-UGkv-m1-y1}{{8}{222}}
+\newlabel{eq:ugkv-cvlme-UGkv-m1-y2}{{9}{222}}
+\newlabel{eq:ugkv-cvlme-UGkv-m1-oosLME}{{10}{222}}
+\newlabel{eq:ugkv-cvlme-UGkv-m1-cvLME}{{11}{223}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.13}\textbf  {Cross-validated log Bayes factor}}{223}\protected@file@percent }
+\newlabel{sec:ugkv-cvlbf}{{1.2.13}{223}}
+\newlabel{eq:ugkv-cvlbf-ugkv}{{1}{223}}
+\newlabel{eq:ugkv-cvlbf-UGkv-m01}{{2}{223}}
+\newlabel{eq:ugkv-cvlbf-UGkv-cvLBF}{{3}{223}}
+\newlabel{eq:ugkv-cvlbf-cvLBF-cvLME}{{4}{224}}
+\newlabel{eq:ugkv-cvlbf-UGkv-cvLME-m01}{{5}{224}}
+\newlabel{eq:ugkv-cvlbf-UGkv-cvLBF-qed}{{6}{224}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.14}\textbf  {Expectation of cross-validated log Bayes factor}}{224}\protected@file@percent }
+\newlabel{sec:ugkv-cvlbfmean}{{1.2.14}{224}}
+\newlabel{eq:ugkv-cvlbfmean-ugkv}{{1}{224}}
+\newlabel{eq:ugkv-cvlbfmean-UGkv-m01}{{2}{224}}
+\newlabel{eq:ugkv-cvlbfmean-UGkv-cvLBF}{{3}{225}}
+\newlabel{eq:ugkv-cvlbfmean-UGkv-cvLBF-m10-s1}{{4}{225}}
+\newlabel{eq:ugkv-cvlbfmean-UGkv-E(ny2)}{{5}{225}}
+\newlabel{eq:ugkv-cvlbfmean-UGkv-cvLBF-m10-s2}{{6}{225}}
+\newlabel{eq:ugkv-cvlbfmean-UGkv-cvLBF-m10-s3}{{7}{226}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Multiple linear regression}{226}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.1}\textit  {Definition}}{226}\protected@file@percent }
+\newlabel{sec:mlr}{{1.3.1}{226}}
+\newlabel{eq:mlr-mlr-model}{{1}{226}}
+\newlabel{eq:mlr-mlr-noise}{{2}{226}}
+\newlabel{eq:mlr-mlr-model-sum}{{3}{226}}
+\newlabel{eq:mlr-mlr-model-sum-base}{{4}{226}}
+\newlabel{eq:mlr-mlr-noise-iid}{{5}{226}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.2}\textbf  {Ordinary least squares}}{227}\protected@file@percent }
+\newlabel{sec:mlr-ols}{{1.3.2}{227}}
+\newlabel{eq:mlr-ols-MLR}{{1}{227}}
+\newlabel{eq:mlr-ols-OLS}{{2}{227}}
+\newlabel{eq:mlr-ols-X-e-orth}{{3}{227}}
+\newlabel{eq:mlr-ols-OLS-qed}{{4}{227}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.3}\textbf  {Ordinary least squares}}{227}\protected@file@percent }
+\newlabel{sec:mlr-ols2}{{1.3.3}{227}}
+\newlabel{eq:mlr-ols2-MLR}{{1}{227}}
+\newlabel{eq:mlr-ols2-OLS}{{2}{228}}
+\newlabel{eq:mlr-ols2-RSS}{{3}{228}}
+\newlabel{eq:mlr-ols2-RSS-dev}{{4}{228}}
+\newlabel{eq:mlr-ols2-RSS-der}{{5}{228}}
+\newlabel{eq:mlr-ols2-OLS-qed}{{6}{228}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.4}\textit  {Total sum of squares}}{228}\protected@file@percent }
+\newlabel{sec:tss}{{1.3.4}{228}}
+\newlabel{eq:tss-mlr}{{1}{228}}
+\newlabel{eq:tss-tss}{{2}{228}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.5}\textit  {Explained sum of squares}}{229}\protected@file@percent }
+\newlabel{sec:ess}{{1.3.5}{229}}
+\newlabel{eq:ess-mlr}{{1}{229}}
+\newlabel{eq:ess-ess}{{2}{229}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.6}\textit  {Residual sum of squares}}{229}\protected@file@percent }
+\newlabel{sec:rss}{{1.3.6}{229}}
+\newlabel{eq:rss-mlr}{{1}{229}}
+\newlabel{eq:rss-rss}{{2}{229}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.7}\textbf  {Total, explained and residual sum of squares}}{230}\protected@file@percent }
+\newlabel{sec:mlr-pss}{{1.3.7}{230}}
+\newlabel{eq:mlr-pss-mlr}{{1}{230}}
+\newlabel{eq:mlr-pss-pss}{{2}{230}}
+\newlabel{eq:mlr-pss-TSS}{{3}{230}}
+\newlabel{eq:mlr-pss-TSS-s1}{{4}{230}}
+\newlabel{eq:mlr-pss-e-est-sum}{{5}{230}}
+\newlabel{eq:mlr-pss-X-e-orth}{{6}{230}}
+\newlabel{eq:mlr-pss-TSS-s2}{{7}{231}}
+\newlabel{eq:mlr-pss-TSS-s3}{{8}{231}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.8}\textit  {Estimation matrix}}{231}\protected@file@percent }
+\newlabel{sec:emat}{{1.3.8}{231}}
+\newlabel{eq:emat-em}{{1}{231}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.9}\textit  {Projection matrix}}{231}\protected@file@percent }
+\newlabel{sec:pmat}{{1.3.9}{231}}
+\newlabel{eq:pmat-pm}{{1}{231}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.10}\textit  {Residual-forming matrix}}{232}\protected@file@percent }
+\newlabel{sec:rfmat}{{1.3.10}{232}}
+\newlabel{eq:rfmat-pm}{{1}{232}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.11}\textbf  {Estimation, projection and residual-forming matrix}}{232}\protected@file@percent }
+\newlabel{sec:mlr-mat}{{1.3.11}{232}}
+\newlabel{eq:mlr-mat-mlr}{{1}{232}}
+\newlabel{eq:mlr-mat-mlr-est}{{2}{232}}
+\newlabel{eq:mlr-mat-mlr-mat}{{3}{232}}
+\newlabel{eq:mlr-mat-ols}{{4}{232}}
+\newlabel{eq:mlr-mat-b-est-qed}{{5}{232}}
+\newlabel{eq:mlr-mat-y-est}{{6}{233}}
+\newlabel{eq:mlr-mat-y-est-qed}{{7}{233}}
+\newlabel{eq:mlr-mat-e-est}{{8}{233}}
+\newlabel{eq:mlr-mat-e-est-qed}{{9}{233}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.12}\textbf  {Idempotence of projection and residual-forming matrix}}{233}\protected@file@percent }
+\newlabel{sec:mlr-idem}{{1.3.12}{233}}
+\newlabel{eq:mlr-idem-P^2-R^2}{{1}{233}}
+\newlabel{eq:mlr-idem-P}{{2}{233}}
+\newlabel{eq:mlr-idem-P^2}{{3}{233}}
+\newlabel{eq:mlr-idem-R}{{4}{234}}
+\newlabel{eq:mlr-idem-R^2}{{5}{234}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.13}\textbf  {Weighted least squares}}{234}\protected@file@percent }
+\newlabel{sec:mlr-wls}{{1.3.13}{234}}
+\newlabel{eq:mlr-wls-MLR}{{1}{234}}
+\newlabel{eq:mlr-wls-WLS}{{2}{234}}
+\newlabel{eq:mlr-wls-W-def}{{3}{234}}
+\newlabel{eq:mlr-wls-W-V}{{4}{234}}
+\newlabel{eq:mlr-wls-MLR-W}{{5}{234}}
+\newlabel{eq:mlr-wls-MLR-W-dev}{{6}{234}}
+\newlabel{eq:mlr-wls-WLS-qed}{{7}{235}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.14}\textbf  {Weighted least squares}}{235}\protected@file@percent }
+\newlabel{sec:mlr-wls2}{{1.3.14}{235}}
+\newlabel{eq:mlr-wls2-MLR}{{1}{235}}
+\newlabel{eq:mlr-wls2-WLS}{{2}{235}}
+\newlabel{eq:mlr-wls2-W-def}{{3}{235}}
+\newlabel{eq:mlr-wls2-W-V}{{4}{235}}
+\newlabel{eq:mlr-wls2-MLR-W}{{5}{235}}
+\newlabel{eq:mlr-wls2-MLR-W-dev}{{6}{235}}
+\newlabel{eq:mlr-wls2-wRSS}{{7}{236}}
+\newlabel{eq:mlr-wls2-wRSS-dev}{{8}{236}}
+\newlabel{eq:mlr-wls2-wRSS-der}{{9}{236}}
+\newlabel{eq:mlr-wls2-WLS-qed}{{10}{236}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.15}\textbf  {Maximum likelihood estimation}}{236}\protected@file@percent }
+\newlabel{sec:mlr-mle}{{1.3.15}{236}}
+\newlabel{eq:mlr-mle-MLR}{{1}{236}}
+\newlabel{eq:mlr-mle-MLE-MLE}{{2}{236}}
+\newlabel{eq:mlr-mle-MLR-LF}{{3}{237}}
+\newlabel{eq:mlr-mle-MLR-LL1}{{4}{237}}
+\newlabel{eq:mlr-mle-MLR-LL2}{{5}{237}}
+\newlabel{eq:mlr-mle-dLL-dbeta}{{6}{237}}
+\newlabel{eq:mlr-mle-beta-MLE}{{7}{237}}
+\newlabel{eq:mlr-mle-dLL-ds2}{{8}{238}}
+\newlabel{eq:mlr-mle-s2-MLE}{{9}{238}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Bayesian linear regression}{238}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1}\textbf  {Conjugate prior distribution}}{238}\protected@file@percent }
+\newlabel{sec:blr-prior}{{1.4.1}{238}}
+\newlabel{eq:blr-prior-GLM}{{1}{238}}
+\newlabel{eq:blr-prior-GLM-NG-prior}{{2}{238}}
+\newlabel{eq:blr-prior-GLM-LF-class}{{3}{239}}
+\newlabel{eq:blr-prior-GLM-LF-Bayes}{{4}{239}}
+\newlabel{eq:blr-prior-GLM-LF-s1}{{5}{239}}
+\newlabel{eq:blr-prior-GLM-LF-s2}{{6}{239}}
+\newlabel{eq:blr-prior-GLM-LF-s3}{{7}{239}}
+\newlabel{eq:blr-prior-GLM-LF-s4}{{8}{239}}
+\newlabel{eq:blr-prior-BLR-prior-s1}{{9}{239}}
+\newlabel{eq:blr-prior-BLR-prior-s2}{{10}{239}}
+\newlabel{eq:blr-prior-BLR-prior-s3}{{11}{239}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.2}\textbf  {Posterior distribution}}{240}\protected@file@percent }
+\newlabel{sec:blr-post}{{1.4.2}{240}}
+\newlabel{eq:blr-post-GLM}{{1}{240}}
+\newlabel{eq:blr-post-GLM-NG-prior}{{2}{240}}
+\newlabel{eq:blr-post-GLM-NG-post}{{3}{240}}
+\newlabel{eq:blr-post-GLM-NG-post-par}{{4}{240}}
+\newlabel{eq:blr-post-GLM-NG-BT}{{5}{240}}
+\newlabel{eq:blr-post-GLM-NG-post-JL}{{6}{240}}
+\newlabel{eq:blr-post-GLM-LF-class}{{7}{240}}
+\newlabel{eq:blr-post-GLM-LF-Bayes}{{8}{241}}
+\newlabel{eq:blr-post-GLM-NG-JL-s1}{{9}{241}}
+\newlabel{eq:blr-post-GLM-NG-JL-s2}{{10}{241}}
+\newlabel{eq:blr-post-GLM-NG-JL-s3}{{11}{241}}
+\newlabel{eq:blr-post-GLM-NG-JL-s4}{{12}{241}}
+\newlabel{eq:blr-post-GLM-NG-post-beta-par}{{13}{241}}
+\newlabel{eq:blr-post-GLM-NG-JL-s5}{{14}{242}}
+\newlabel{eq:blr-post-GLM-NG-post-tau-par}{{15}{242}}
+\newlabel{eq:blr-post-GLM-NG-post-beta}{{16}{242}}
+\newlabel{eq:blr-post-GLM-NG-post-tau}{{17}{242}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.3}\textbf  {Log model evidence}}{242}\protected@file@percent }
+\newlabel{sec:blr-lme}{{1.4.3}{242}}
+\newlabel{eq:blr-lme-GLM}{{1}{242}}
+\newlabel{eq:blr-lme-GLM-NG-prior}{{2}{242}}
+\newlabel{eq:blr-lme-GLM-NG-LME}{{3}{242}}
+\newlabel{eq:blr-lme-GLM-NG-post-par}{{4}{243}}
+\newlabel{eq:blr-lme-GLM-NG-ME-s1}{{5}{243}}
+\newlabel{eq:blr-lme-GLM-NG-ME-s2}{{6}{243}}
+\newlabel{eq:blr-lme-GLM-LF-class}{{7}{243}}
+\newlabel{eq:blr-lme-GLM-LF-Bayes}{{8}{243}}
+\newlabel{eq:blr-lme-GLM-NG-LME-s1}{{9}{243}}
+\newlabel{eq:blr-lme-GLM-NG-LME-s2}{{10}{243}}
+\newlabel{eq:blr-lme-GLM-NG-LME-s3}{{11}{244}}
+\newlabel{eq:blr-lme-GLM-NG-LME-s4}{{12}{244}}
+\newlabel{eq:blr-lme-GLM-NG-LME-s5}{{13}{244}}
+\newlabel{eq:blr-lme-GLM-NG-LME-s6}{{14}{244}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.4}\textbf  {Posterior probability of alternative hypothesis}}{244}\protected@file@percent }
+\newlabel{sec:blr-pp}{{1.4.4}{244}}
+\newlabel{eq:blr-pp-GLM}{{1}{244}}
+\newlabel{eq:blr-pp-GLM-NG-prior}{{2}{244}}
+\newlabel{eq:blr-pp-GLM-H1}{{3}{244}}
+\newlabel{eq:blr-pp-GLM-NG-PP}{{4}{245}}
+\newlabel{eq:blr-pp-GLM-NG-post}{{5}{245}}
+\newlabel{eq:blr-pp-GLM-NG-post-par}{{6}{245}}
+\newlabel{eq:blr-pp-GLM-NG-post-beta}{{7}{245}}
+\newlabel{eq:blr-pp-GLM-NG-post-par-beta}{{8}{245}}
+\newlabel{eq:blr-pp-GLM-NG-post-gamma}{{9}{245}}
+\newlabel{eq:blr-pp-GLM-NG-post-prob-H0-s1}{{10}{245}}
+\newlabel{eq:blr-pp-GLM-NG-post-prob-H0-s2}{{11}{246}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.5}\textbf  {Posterior credibility region excluding null hypothesis}}{246}\protected@file@percent }
+\newlabel{sec:blr-pcr}{{1.4.5}{246}}
+\newlabel{eq:blr-pcr-GLM}{{1}{246}}
+\newlabel{eq:blr-pcr-GLM-NG-prior}{{2}{246}}
+\newlabel{eq:blr-pcr-GLM-H0}{{3}{246}}
+\newlabel{eq:blr-pcr-GLM-NG-PCR}{{4}{246}}
+\newlabel{eq:blr-pcr-GLM-NG-post}{{5}{246}}
+\newlabel{eq:blr-pcr-GLM-NG-post-par}{{6}{247}}
+\newlabel{eq:blr-pcr-GLM-NG-post-beta}{{7}{247}}
+\newlabel{eq:blr-pcr-GLM-NG-post-par-beta}{{8}{247}}
+\newlabel{eq:blr-pcr-GLM-NG-post-gamma}{{9}{247}}
+\newlabel{eq:blr-pcr-GLM-NG-post-qf}{{10}{247}}
+\newlabel{eq:blr-pcr-GLM-NG-post-cred-reg-not-H0}{{11}{247}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Multivariate normal data}{248}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}General linear model}{248}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}\textit  {Definition}}{248}\protected@file@percent }
+\newlabel{sec:glm}{{2.1.1}{248}}
+\newlabel{eq:glm-glm}{{1}{248}}
+\newlabel{eq:glm-glm-iid}{{2}{248}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}\textbf  {Ordinary least squares}}{248}\protected@file@percent }
+\newlabel{sec:glm-ols}{{2.1.2}{248}}
+\newlabel{eq:glm-ols-GLM}{{1}{248}}
+\newlabel{eq:glm-ols-OLS}{{2}{248}}
+\newlabel{eq:glm-ols-OLS-exo}{{3}{249}}
+\newlabel{eq:glm-ols-OLS-uncorr}{{4}{249}}
+\newlabel{eq:glm-ols-X-E-orth}{{5}{249}}
+\newlabel{eq:glm-ols-OLS-qed}{{6}{249}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}\textbf  {Weighted least squares}}{249}\protected@file@percent }
+\newlabel{sec:glm-wls}{{2.1.3}{249}}
+\newlabel{eq:glm-wls-GLM}{{1}{249}}
+\newlabel{eq:glm-wls-WLS}{{2}{249}}
+\newlabel{eq:glm-wls-W-def}{{3}{249}}
+\newlabel{eq:glm-wls-W-V}{{4}{249}}
+\newlabel{eq:glm-wls-GLM-W}{{5}{249}}
+\newlabel{eq:glm-wls-GLM-W-dev}{{6}{250}}
+\newlabel{eq:glm-wls-WLS-qed}{{7}{250}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}\textbf  {Maximum likelihood estimation}}{250}\protected@file@percent }
+\newlabel{sec:glm-mle}{{2.1.4}{250}}
+\newlabel{eq:glm-mle-GLM}{{1}{250}}
+\newlabel{eq:glm-mle-GLM-MLE}{{2}{250}}
+\newlabel{eq:glm-mle-GLM-LF}{{3}{250}}
+\newlabel{eq:glm-mle-GLM-LL1}{{4}{251}}
+\newlabel{eq:glm-mle-GLM-LL2}{{5}{251}}
+\newlabel{eq:glm-mle-dLL-dB}{{6}{251}}
+\newlabel{eq:glm-mle-B-MLE}{{7}{251}}
+\newlabel{eq:glm-mle-dLL-dS}{{8}{251}}
+\newlabel{eq:glm-mle-S-MLE}{{9}{252}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Multivariate Bayesian linear regression}{252}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}\textbf  {Conjugate prior distribution}}{252}\protected@file@percent }
+\newlabel{sec:mblr-prior}{{2.2.1}{252}}
+\newlabel{eq:mblr-prior-GLM}{{1}{252}}
+\newlabel{eq:mblr-prior-GLM-NW-prior}{{2}{252}}
+\newlabel{eq:mblr-prior-GLM-LF-Class}{{3}{253}}
+\newlabel{eq:mblr-prior-GLM-LF-Bayes}{{4}{253}}
+\newlabel{eq:mblr-prior-GLM-LF-s1}{{5}{253}}
+\newlabel{eq:mblr-prior-GLM-LF-s2}{{6}{253}}
+\newlabel{eq:mblr-prior-GLM-LF-s3}{{7}{253}}
+\newlabel{eq:mblr-prior-GLM-LF-s4}{{8}{253}}
+\newlabel{eq:mblr-prior-MBLR-prior-s1}{{9}{253}}
+\newlabel{eq:mblr-prior-MBLR-prior-s2}{{10}{253}}
+\newlabel{eq:mblr-prior-MBLR-prior-s3}{{11}{254}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}\textbf  {Posterior distribution}}{254}\protected@file@percent }
+\newlabel{sec:mblr-post}{{2.2.2}{254}}
+\newlabel{eq:mblr-post-GLM}{{1}{254}}
+\newlabel{eq:mblr-post-GLM-NW-prior}{{2}{254}}
+\newlabel{eq:mblr-post-GLM-NW-post}{{3}{254}}
+\newlabel{eq:mblr-post-GLM-NW-post-par}{{4}{254}}
+\newlabel{eq:mblr-post-GLM-NG-BT}{{5}{254}}
+\newlabel{eq:mblr-post-GLM-NG-post-JL}{{6}{255}}
+\newlabel{eq:mblr-post-GLM-LF-Class}{{7}{255}}
+\newlabel{eq:mblr-post-GLM-LF-Bayes}{{8}{255}}
+\newlabel{eq:mblr-post-GLM-NW-JL-s1}{{9}{255}}
+\newlabel{eq:mblr-post-GLM-NW-JL-s2}{{10}{255}}
+\newlabel{eq:mblr-post-GLM-NW-JL-s3}{{11}{255}}
+\newlabel{eq:mblr-post-GLM-NW-JL-s4}{{12}{256}}
+\newlabel{eq:mblr-post-GLM-NW-post-B-par}{{13}{256}}
+\newlabel{eq:mblr-post-GLM-NW-JL-s5}{{14}{256}}
+\newlabel{eq:mblr-post-GLM-NW-post-T-par}{{15}{256}}
+\newlabel{eq:mblr-post-GLM-NW-post-B}{{16}{256}}
+\newlabel{eq:mblr-post-GLM-NW-post-T}{{17}{256}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}\textbf  {Log model evidence}}{256}\protected@file@percent }
+\newlabel{sec:mblr-lme}{{2.2.3}{256}}
+\newlabel{eq:mblr-lme-GLM}{{1}{256}}
+\newlabel{eq:mblr-lme-GLM-NW-prior}{{2}{257}}
+\newlabel{eq:mblr-lme-GLM-NW-LME}{{3}{257}}
+\newlabel{eq:mblr-lme-GLM-NW-post-par}{{4}{257}}
+\newlabel{eq:mblr-lme-GLM-NW-ME-s1}{{5}{257}}
+\newlabel{eq:mblr-lme-GLM-NW-ME-s2}{{6}{257}}
+\newlabel{eq:mblr-lme-GLM-LF-Class}{{7}{257}}
+\newlabel{eq:mblr-lme-GLM-LF-Bayes}{{8}{257}}
+\newlabel{eq:mblr-lme-GLM-NW-LME-s1}{{9}{258}}
+\newlabel{eq:mblr-lme-GLM-NW-LME-s2}{{10}{258}}
+\newlabel{eq:mblr-lme-GLM-NW-LME-s3}{{11}{258}}
+\newlabel{eq:mblr-lme-GLM-NW-LME-s4}{{12}{258}}
+\newlabel{eq:mblr-lme-GLM-NW-LME-s5}{{13}{258}}
+\newlabel{eq:mblr-lme-GLM-NW-LME-s6}{{14}{258}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Poisson data}{259}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Poisson-distributed data}{259}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}\textit  {Definition}}{259}\protected@file@percent }
+\newlabel{sec:poiss-data}{{3.1.1}{259}}
+\newlabel{eq:poiss-data-Poiss}{{1}{259}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}\textbf  {Maximum likelihood estimation}}{259}\protected@file@percent }
+\newlabel{sec:poiss-mle}{{3.1.2}{259}}
+\newlabel{eq:poiss-mle-Poiss}{{1}{259}}
+\newlabel{eq:poiss-mle-Poiss-MLE}{{2}{259}}
+\newlabel{eq:poiss-mle-y-mean}{{3}{259}}
+\newlabel{eq:poiss-mle-Poiss-yi}{{4}{259}}
+\newlabel{eq:poiss-mle-Poiss-LF}{{5}{259}}
+\newlabel{eq:poiss-mle-Poiss-LL}{{6}{259}}
+\newlabel{eq:poiss-mle-Poiss-LL-der}{{7}{260}}
+\newlabel{eq:poiss-mle-Poiss-dLLdl-d2LLdl2}{{8}{260}}
+\newlabel{eq:poiss-mle-Poiss-dLLdl}{{9}{260}}
+\newlabel{eq:poiss-mle-Poiss-d2LLdl2}{{10}{260}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Poisson distribution with exposure values}{261}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}\textit  {Definition}}{261}\protected@file@percent }
+\newlabel{sec:poissexp}{{3.2.1}{261}}
+\newlabel{eq:poissexp-Poiss-exp}{{1}{261}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}\textbf  {Conjugate prior distribution}}{261}\protected@file@percent }
+\newlabel{sec:poissexp-prior}{{3.2.2}{261}}
+\newlabel{eq:poissexp-prior-Poiss-exp}{{1}{261}}
+\newlabel{eq:poissexp-prior-Poiss-exp-prior}{{2}{261}}
+\newlabel{eq:poissexp-prior-Poiss-exp-LF-s1}{{3}{261}}
+\newlabel{eq:poissexp-prior-Poiss-exp-LF-s2}{{4}{261}}
+\newlabel{eq:poissexp-prior-Poiss-exp-LF-s3}{{5}{261}}
+\newlabel{eq:poissexp-prior-xy-mean}{{6}{262}}
+\newlabel{eq:poissexp-prior-Poiss-exp-LF-prop}{{7}{262}}
+\newlabel{eq:poissexp-prior-Poiss-exp-prior-s1}{{8}{262}}
+\newlabel{eq:poissexp-prior-Poiss-exp-prior-s2}{{9}{262}}
+\newlabel{eq:poissexp-prior-Poiss-exp-prior-s3}{{10}{262}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}\textbf  {Posterior distribution}}{262}\protected@file@percent }
+\newlabel{sec:poissexp-post}{{3.2.3}{262}}
+\newlabel{eq:poissexp-post-Poiss-exp}{{1}{262}}
+\newlabel{eq:poissexp-post-Poiss-exp-prior}{{2}{262}}
+\newlabel{eq:poissexp-post-Poiss-exp-post}{{3}{262}}
+\newlabel{eq:poissexp-post-Poiss-exp-post-par}{{4}{263}}
+\newlabel{eq:poissexp-post-Poiss-exp-LF-s1}{{5}{263}}
+\newlabel{eq:poissexp-post-Poiss-exp-LF-s2}{{6}{263}}
+\newlabel{eq:poissexp-post-Poiss-exp-JL-s1}{{7}{263}}
+\newlabel{eq:poissexp-post-Poiss-JL-s2}{{8}{263}}
+\newlabel{eq:poissexp-post-xy-mean}{{9}{263}}
+\newlabel{eq:poissexp-post-Poiss-exp-post-s1}{{10}{264}}
+\newlabel{eq:poissexp-post-Poiss-exp-post-s2}{{11}{264}}
+\newlabel{eq:poissexp-post-Poiss-exp-post-s3}{{12}{264}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}\textbf  {Log model evidence}}{264}\protected@file@percent }
+\newlabel{sec:poissexp-lme}{{3.2.4}{264}}
+\newlabel{eq:poissexp-lme-Poiss-exp}{{1}{264}}
+\newlabel{eq:poissexp-lme-Poiss-exp-prior}{{2}{264}}
+\newlabel{eq:poissexp-lme-Poiss-exp-LME}{{3}{264}}
+\newlabel{eq:poissexp-lme-Poiss-exp-post-par}{{4}{264}}
+\newlabel{eq:poissexp-lme-Poiss-exp-LF-s1}{{5}{264}}
+\newlabel{eq:poissexp-lme-Poiss-exp-LF-s2}{{6}{265}}
+\newlabel{eq:poissexp-lme-Poiss-exp-JL-s1}{{7}{265}}
+\newlabel{eq:poissexp-lme-Poiss-exp-JL-s2}{{8}{265}}
+\newlabel{eq:poissexp-lme-xy-mean}{{9}{265}}
+\newlabel{eq:poissexp-lme-Poiss-exp-ME}{{10}{265}}
+\newlabel{eq:poissexp-lme-Poiss-exp-JL-s3}{{11}{265}}
+\newlabel{eq:poissexp-lme-Poiss-exp-ME-qed}{{12}{266}}
+\newlabel{eq:poissexp-lme-Poiss-exp-LME-qed}{{13}{266}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Probability data}{267}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Beta-distributed data}{267}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}\textit  {Definition}}{267}\protected@file@percent }
+\newlabel{sec:beta-data}{{4.1.1}{267}}
+\newlabel{eq:beta-data-beta-data}{{1}{267}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}\textbf  {Method of moments}}{267}\protected@file@percent }
+\newlabel{sec:beta-mom}{{4.1.2}{267}}
+\newlabel{eq:beta-mom-Beta}{{1}{267}}
+\newlabel{eq:beta-mom-Beta-MoM}{{2}{267}}
+\newlabel{eq:beta-mom-y-mean-var}{{3}{267}}
+\newlabel{eq:beta-mom-Beta-E-Var}{{4}{267}}
+\newlabel{eq:beta-mom-Beta-mean-var}{{5}{268}}
+\newlabel{eq:beta-mom-beta-as-alpha}{{6}{268}}
+\newlabel{eq:beta-mom-alpha-as-q}{{7}{268}}
+\newlabel{eq:beta-mom-Beta-MoM-alpha}{{8}{268}}
+\newlabel{eq:beta-mom-Beta-MoM-beta}{{9}{269}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Dirichlet-distributed data}{269}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}\textit  {Definition}}{269}\protected@file@percent }
+\newlabel{sec:dir-data}{{4.2.1}{269}}
+\newlabel{eq:dir-data-dir-def}{{1}{269}}
+\newlabel{eq:dir-data-dir-data}{{2}{269}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}\textbf  {Maximum likelihood estimation}}{269}\protected@file@percent }
+\newlabel{sec:dir-mle}{{4.2.2}{269}}
+\newlabel{eq:dir-mle-Dir}{{1}{269}}
+\newlabel{eq:dir-mle-Dir-MLE}{{2}{269}}
+\newlabel{eq:dir-mle-log-pi}{{3}{270}}
+\newlabel{eq:dir-mle-Dir-yi}{{4}{270}}
+\newlabel{eq:dir-mle-Dir-LF}{{5}{270}}
+\newlabel{eq:dir-mle-Dir-LL}{{6}{270}}
+\newlabel{eq:dir-mle-Dir-LL-der}{{7}{270}}
+\newlabel{eq:dir-mle-log-pi-reit}{{8}{270}}
+\newlabel{eq:dir-mle-Dir-dLLdaj}{{9}{270}}
+\newlabel{eq:dir-mle-digamma-fct}{{10}{271}}
+\newlabel{eq:dir-mle-Dir-dLLdaj-0}{{11}{271}}
+\newlabel{eq:dir-mle-gamma-fct-bound}{{12}{271}}
+\newlabel{eq:dir-mle-Dir-LL-bound}{{13}{271}}
+\newlabel{eq:dir-mle-Dir-MLE-qed}{{14}{272}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Categorical data}{273}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Binomial observations}{273}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}\textit  {Definition}}{273}\protected@file@percent }
+\newlabel{sec:bin-data}{{5.1.1}{273}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}\textbf  {Conjugate prior distribution}}{273}\protected@file@percent }
+\newlabel{sec:bin-prior}{{5.1.2}{273}}
+\newlabel{eq:bin-prior-Bin}{{1}{273}}
+\newlabel{eq:bin-prior-Beta}{{2}{273}}
+\newlabel{eq:bin-prior-Bin-LF}{{3}{273}}
+\newlabel{eq:bin-prior-Bin-LF-prop}{{4}{273}}
+\newlabel{eq:bin-prior-Bin-prior-s1}{{5}{273}}
+\newlabel{eq:bin-prior-Bin-prior-s2}{{6}{273}}
+\newlabel{eq:bin-prior-Bin-prior-s3}{{7}{273}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}\textbf  {Posterior distribution}}{274}\protected@file@percent }
+\newlabel{sec:bin-post}{{5.1.3}{274}}
+\newlabel{eq:bin-post-Bin}{{1}{274}}
+\newlabel{eq:bin-post-Bin-prior}{{2}{274}}
+\newlabel{eq:bin-post-Bin-post}{{3}{274}}
+\newlabel{eq:bin-post-Bin-post-par}{{4}{274}}
+\newlabel{eq:bin-post-Bin-LF}{{5}{274}}
+\newlabel{eq:bin-post-Bin-JL}{{6}{274}}
+\newlabel{eq:bin-post-Bin-post-s1}{{7}{274}}
+\newlabel{eq:bin-post-Bin-post-s2}{{8}{274}}
+\newlabel{eq:bin-post-Bin-post-qed}{{9}{275}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}\textbf  {Log model evidence}}{275}\protected@file@percent }
+\newlabel{sec:bin-lme}{{5.1.4}{275}}
+\newlabel{eq:bin-lme-Bin}{{1}{275}}
+\newlabel{eq:bin-lme-Bin-prior}{{2}{275}}
+\newlabel{eq:bin-lme-Bin-LME}{{3}{275}}
+\newlabel{eq:bin-lme-Bin-post-par}{{4}{275}}
+\newlabel{eq:bin-lme-Bin-LF}{{5}{275}}
+\newlabel{eq:bin-lme-Bin-JL-s1}{{6}{275}}
+\newlabel{eq:bin-lme-Bin-ME-s1}{{7}{276}}
+\newlabel{eq:bin-lme-Bin-JL-s2}{{8}{276}}
+\newlabel{eq:bin-lme-Bin-ME-s2}{{9}{276}}
+\newlabel{eq:bin-lme-Bin-LME-s1}{{10}{276}}
+\newlabel{eq:bin-lme-bin-coeff}{{11}{276}}
+\newlabel{eq:bin-lme-gam-fct}{{12}{276}}
+\newlabel{eq:bin-lme-Bin-LME-s2}{{13}{276}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Multinomial observations}{277}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}\textit  {Definition}}{277}\protected@file@percent }
+\newlabel{sec:mult-data}{{5.2.1}{277}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}\textbf  {Conjugate prior distribution}}{277}\protected@file@percent }
+\newlabel{sec:mult-prior}{{5.2.2}{277}}
+\newlabel{eq:mult-prior-Mult}{{1}{277}}
+\newlabel{eq:mult-prior-Dir}{{2}{277}}
+\newlabel{eq:mult-prior-Mult-LF}{{3}{277}}
+\newlabel{eq:mult-prior-Mult-LF-prop}{{4}{277}}
+\newlabel{eq:mult-prior-Mult-prior-s1}{{5}{277}}
+\newlabel{eq:mult-prior-Mult-prior-s2}{{6}{277}}
+\newlabel{eq:mult-prior-Mult-prior-s3}{{7}{278}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}\textbf  {Posterior distribution}}{278}\protected@file@percent }
+\newlabel{sec:mult-post}{{5.2.3}{278}}
+\newlabel{eq:mult-post-Mult}{{1}{278}}
+\newlabel{eq:mult-post-Mult-prior}{{2}{278}}
+\newlabel{eq:mult-post-Mult-post}{{3}{278}}
+\newlabel{eq:mult-post-Mult-post-par}{{4}{278}}
+\newlabel{eq:mult-post-Mult-LF}{{5}{278}}
+\newlabel{eq:mult-post-Mult-JL}{{6}{278}}
+\newlabel{eq:mult-post-Mult-post-s1}{{7}{279}}
+\newlabel{eq:mult-post-Mult-post-s2}{{8}{279}}
+\newlabel{eq:mult-post-Mult-post-qed}{{9}{279}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.4}\textbf  {Log model evidence}}{279}\protected@file@percent }
+\newlabel{sec:mult-lme}{{5.2.4}{279}}
+\newlabel{eq:mult-lme-Mult}{{1}{279}}
+\newlabel{eq:mult-lme-Mult-prior}{{2}{279}}
+\newlabel{eq:mult-lme-Mult-LME}{{3}{279}}
+\newlabel{eq:mult-lme-Mult-post-par}{{4}{279}}
+\newlabel{eq:mult-lme-Mult-LF}{{5}{280}}
+\newlabel{eq:mult-lme-Mult-JL}{{6}{280}}
+\newlabel{eq:mult-lme-Mult-ME-s1}{{7}{280}}
+\newlabel{eq:mult-lme-Mult-JL-s2}{{8}{280}}
+\newlabel{eq:mult-lme-Mult-ME-s2}{{9}{280}}
+\newlabel{eq:mult-lme-Mult-LME-s1}{{10}{280}}
+\newlabel{eq:mult-lme-mult-coeff}{{11}{281}}
+\newlabel{eq:mult-lme-gam-fct}{{12}{281}}
+\newlabel{eq:mult-lme-Mult-LME-s2}{{13}{281}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Logistic regression}{281}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}\textit  {Definition}}{281}\protected@file@percent }
+\newlabel{sec:logreg}{{5.3.1}{281}}
+\newlabel{eq:logreg-logreg}{{1}{281}}
+\newlabel{eq:logreg-logodds}{{2}{281}}
+\newlabel{eq:logreg-X}{{3}{281}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}\textbf  {Probability and log-odds}}{282}\protected@file@percent }
+\newlabel{sec:logreg-pnlo}{{5.3.2}{282}}
+\newlabel{eq:logreg-pnlo-logreg}{{1}{282}}
+\newlabel{eq:logreg-pnlo-lodds}{{2}{282}}
+\newlabel{eq:logreg-pnlo-prob}{{3}{282}}
+\newlabel{eq:logreg-pnlo-lodds-qed}{{4}{282}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}\textbf  {Log-odds and probability}}{283}\protected@file@percent }
+\newlabel{sec:logreg-lonp}{{5.3.3}{283}}
+\newlabel{eq:logreg-lonp-logreg}{{1}{283}}
+\newlabel{eq:logreg-lonp-prob}{{2}{283}}
+\newlabel{eq:logreg-lonp-lodds}{{3}{283}}
+\newlabel{eq:logreg-lonp-prob-qed}{{4}{283}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {IV}Model Selection}{285}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{sec:Model Selection}{{IV}{249}}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Goodness-of-fit measures}{250}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Residual variance}{250}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}\textit  {Definition}}{250}\protected@file@percent }
-\newlabel{sec:resvar}{{1.1.1}{250}}
-\newlabel{eq:resvar-mlr}{{1}{250}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}\textbf  {Maximum likelihood estimator is biased}}{250}\protected@file@percent }
-\newlabel{sec:resvar-bias}{{1.1.2}{250}}
-\newlabel{eq:resvar-bias-ug}{{1}{250}}
-\newlabel{eq:resvar-bias-resvar-mle}{{2}{250}}
-\newlabel{eq:resvar-bias-mean-mle}{{3}{250}}
-\newlabel{eq:resvar-bias-resvar-var}{{4}{250}}
-\newlabel{eq:resvar-bias-resvar-bias}{{5}{250}}
-\newlabel{eq:resvar-bias-resvar-mle-qed}{{6}{251}}
-\newlabel{eq:resvar-bias-E-resvar-mle-s1}{{7}{251}}
-\newlabel{eq:resvar-bias-var-mean}{{8}{251}}
-\newlabel{eq:resvar-bias-Var-xi-xb}{{9}{251}}
-\newlabel{eq:resvar-bias-E-resvar-mle-s2}{{10}{251}}
-\newlabel{eq:resvar-bias-E-Var-xi}{{11}{252}}
-\newlabel{eq:resvar-bias-E-mean-mle}{{12}{252}}
-\newlabel{eq:resvar-bias-Var-mean-mle}{{13}{252}}
-\newlabel{eq:resvar-bias-E-resvar-mle-s3}{{14}{252}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3}\textbf  {Construction of unbiased estimator}}{252}\protected@file@percent }
-\newlabel{sec:resvar-unb}{{1.1.3}{252}}
-\newlabel{eq:resvar-unb-ug}{{1}{253}}
-\newlabel{eq:resvar-unb-resvar-unb}{{2}{253}}
-\newlabel{eq:resvar-unb-resvar-mle}{{3}{253}}
-\newlabel{eq:resvar-unb-resvar-bias}{{4}{253}}
-\newlabel{eq:resvar-unb-resvar-bias-adj}{{5}{253}}
-\newlabel{eq:resvar-unb-resvar-unb-qed}{{6}{253}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}R-squared}{253}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}\textit  {Definition}}{253}\protected@file@percent }
-\newlabel{sec:rsq}{{1.2.1}{253}}
-\newlabel{eq:rsq-mlr}{{1}{254}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}\textbf  {Derivation of R² and adjusted R²}}{254}\protected@file@percent }
-\newlabel{sec:rsq-der}{{1.2.2}{254}}
-\newlabel{eq:rsq-der-rsq-mlr}{{1}{254}}
-\newlabel{eq:rsq-der-R2}{{2}{254}}
-\newlabel{eq:rsq-der-R2-adj}{{3}{254}}
-\newlabel{eq:rsq-der-SS}{{4}{254}}
-\newlabel{eq:rsq-der-ESS}{{5}{254}}
-\newlabel{eq:rsq-der-R2-s1}{{6}{255}}
-\newlabel{eq:rsq-der-R2-s2}{{7}{255}}
-\newlabel{eq:rsq-der-R2'}{{8}{255}}
-\newlabel{eq:rsq-der-R2-adj'}{{9}{255}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}\textbf  {Relationship to maximum log-likelihood}}{255}\protected@file@percent }
-\newlabel{sec:rsq-mll}{{1.2.3}{255}}
-\newlabel{eq:rsq-mll-MLR}{{1}{255}}
-\newlabel{eq:rsq-mll-R2-MLL}{{2}{255}}
-\newlabel{eq:rsq-mll-MLR-LL}{{3}{255}}
-\newlabel{eq:rsq-mll-MLR-MLE-beta}{{4}{256}}
-\newlabel{eq:rsq-mll-MLR-MLE-sigma2}{{5}{256}}
-\newlabel{eq:rsq-mll-RSS}{{6}{256}}
-\newlabel{eq:rsq-mll-MLR-MLL}{{7}{256}}
-\newlabel{eq:rsq-mll-MLR-MLL-RSS}{{8}{256}}
-\newlabel{eq:rsq-mll-m0-m1}{{9}{256}}
-\newlabel{eq:rsq-mll-TSS}{{10}{256}}
-\newlabel{eq:rsq-mll-MLR-DMLL}{{11}{256}}
-\newlabel{eq:rsq-mll-MLR-DMLL-RTSS}{{12}{256}}
-\newlabel{eq:rsq-mll-MLR-DMLL-R2}{{13}{257}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Signal-to-noise ratio}{257}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.1}\textit  {Definition}}{257}\protected@file@percent }
-\newlabel{sec:snr}{{1.3.1}{257}}
-\newlabel{eq:snr-mlr}{{1}{257}}
-\newlabel{eq:snr-SNR}{{2}{257}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.2}\textbf  {Relationship with R²}}{257}\protected@file@percent }
-\newlabel{sec:snr-rsq}{{1.3.2}{257}}
-\newlabel{eq:snr-rsq-mlr}{{1}{257}}
-\newlabel{eq:snr-rsq-OLS}{{2}{257}}
-\newlabel{eq:snr-rsq-SNR-R2}{{3}{258}}
-\newlabel{eq:snr-rsq-R2-SNR}{{4}{258}}
-\newlabel{eq:snr-rsq-SNR}{{5}{258}}
-\newlabel{eq:snr-rsq-SNR-s1}{{6}{258}}
-\newlabel{eq:snr-rsq-SNR-s2}{{7}{258}}
-\newlabel{eq:snr-rsq-SNR-s3}{{8}{258}}
-\newlabel{eq:snr-rsq-SNR-R2-qed}{{9}{258}}
-\newlabel{eq:snr-rsq-R2-SNR-qed}{{10}{258}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Classical information criteria}{259}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Akaike information criterion}{259}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}\textit  {Definition}}{259}\protected@file@percent }
-\newlabel{sec:aic}{{2.1.1}{259}}
-\newlabel{eq:aic-MLE}{{1}{259}}
-\newlabel{eq:aic-AIC}{{2}{259}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Bayesian information criterion}{259}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}\textit  {Definition}}{259}\protected@file@percent }
-\newlabel{sec:bic}{{2.2.1}{259}}
-\newlabel{eq:bic-MLE}{{1}{259}}
-\newlabel{eq:bic-BIC}{{2}{259}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}\textbf  {Derivation}}{259}\protected@file@percent }
-\newlabel{sec:bic-der}{{2.2.2}{259}}
-\newlabel{eq:bic-der-BIC}{{1}{260}}
-\newlabel{eq:bic-der-LL}{{2}{260}}
-\newlabel{eq:bic-der-gh}{{3}{260}}
-\newlabel{eq:bic-der-ML}{{4}{260}}
-\newlabel{eq:bic-der-LA}{{5}{260}}
-\newlabel{eq:bic-der-MLE}{{6}{260}}
-\newlabel{eq:bic-der-ML-approx}{{7}{260}}
-\newlabel{eq:bic-der-LME-approx}{{8}{260}}
-\newlabel{eq:bic-der-BIC-qed}{{9}{261}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Deviance information criterion}{261}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}\textit  {Definition}}{261}\protected@file@percent }
-\newlabel{sec:dic}{{2.3.1}{261}}
-\newlabel{eq:dic-PLL}{{1}{261}}
-\newlabel{eq:dic-LLP}{{2}{261}}
-\newlabel{eq:dic-DIC}{{3}{261}}
-\newlabel{eq:dic-DIC-pD}{{4}{261}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Bayesian model selection}{262}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Log model evidence}{262}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}\textit  {Definition}}{262}\protected@file@percent }
-\newlabel{sec:lme}{{3.1.1}{262}}
-\newlabel{eq:lme-LME}{{1}{262}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}\textbf  {Derivation}}{262}\protected@file@percent }
-\newlabel{sec:lme-der}{{3.1.2}{262}}
-\newlabel{eq:lme-der-LME-term}{{1}{262}}
-\newlabel{eq:lme-der-LME-marg}{{2}{262}}
-\newlabel{eq:lme-der-LME-bayes}{{3}{262}}
-\newlabel{eq:lme-der-ME}{{4}{262}}
-\newlabel{eq:lme-der-LME-marg-qed}{{5}{262}}
-\newlabel{eq:lme-der-BT}{{6}{263}}
-\newlabel{eq:lme-der-LME-bayes-qed}{{7}{263}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}\textbf  {Partition into accuracy and complexity}}{263}\protected@file@percent }
-\newlabel{sec:lme-anc}{{3.1.3}{263}}
-\newlabel{eq:lme-anc-LME}{{1}{263}}
-\newlabel{eq:lme-anc-Acc}{{2}{263}}
-\newlabel{eq:lme-anc-Com}{{3}{263}}
-\newlabel{eq:lme-anc-AnC-s1}{{4}{263}}
-\newlabel{eq:lme-anc-AnC-s2}{{5}{263}}
-\newlabel{eq:lme-anc-AnC-s3}{{6}{263}}
-\newlabel{eq:lme-anc-AnC-s4}{{7}{264}}
-\newlabel{eq:lme-anc-LME-AnC}{{8}{264}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}\textit  {Uniform-prior log model evidence}}{264}\protected@file@percent }
-\newlabel{sec:uplme}{{3.1.4}{264}}
-\newlabel{eq:uplme-upLME}{{1}{264}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}\textit  {Cross-validated log model evidence}}{264}\protected@file@percent }
-\newlabel{sec:cvlme}{{3.1.5}{264}}
-\newlabel{eq:cvlme-cvLME}{{1}{264}}
-\newlabel{eq:cvlme-post}{{2}{265}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.6}\textit  {Empirical Bayesian log model evidence}}{265}\protected@file@percent }
-\newlabel{sec:eblme}{{3.1.6}{265}}
-\newlabel{eq:eblme-ebLME}{{1}{265}}
-\newlabel{eq:eblme-ML}{{2}{265}}
-\newlabel{eq:eblme-EB}{{3}{265}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.7}\textit  {Variational Bayesian log model evidence}}{266}\protected@file@percent }
-\newlabel{sec:vblme}{{3.1.7}{266}}
-\newlabel{eq:vblme-vbLME}{{1}{266}}
-\newlabel{eq:vblme-ELL}{{2}{266}}
-\newlabel{eq:vblme-KL}{{3}{266}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Log family evidence}{266}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}\textit  {Definition}}{266}\protected@file@percent }
-\newlabel{sec:lfe}{{3.2.1}{266}}
-\newlabel{eq:lfe-fam}{{1}{266}}
-\newlabel{eq:lfe-fe}{{2}{266}}
-\newlabel{eq:lfe-lfe}{{3}{266}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}\textbf  {Derivation}}{267}\protected@file@percent }
-\newlabel{sec:lfe-der}{{3.2.2}{267}}
-\newlabel{eq:lfe-der-LFE-term}{{1}{267}}
-\newlabel{eq:lfe-der-LFE-marg}{{2}{267}}
-\newlabel{eq:lfe-der-fam-prior}{{3}{267}}
-\newlabel{eq:lfe-der-fam-post}{{4}{267}}
-\newlabel{eq:lfe-der-fe-bayes-th}{{5}{267}}
-\newlabel{eq:lfe-der-fe-me}{{6}{267}}
-\newlabel{eq:lfe-der-me-bayes-th}{{7}{267}}
-\newlabel{eq:lfe-der-me-bayes-th-dev}{{8}{267}}
-\newlabel{eq:lfe-der-fe-marg-qed}{{9}{268}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}\textbf  {Calculation from log model evidences}}{268}\protected@file@percent }
-\newlabel{sec:lfe-lme}{{3.2.3}{268}}
-\newlabel{eq:lfe-lme-LFE-LME}{{1}{268}}
-\newlabel{eq:lfe-lme-FE-ME-s1}{{2}{268}}
-\newlabel{eq:lfe-lme-FE-ME-s2}{{3}{268}}
-\newlabel{eq:lfe-lme-LFE-LME-s1}{{4}{268}}
-\newlabel{eq:lfe-lme-LME}{{5}{269}}
-\newlabel{eq:lfe-lme-ME}{{6}{269}}
-\newlabel{eq:lfe-lme-LFE-LME-s2}{{7}{269}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Log Bayes factor}{269}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}\textit  {Definition}}{269}\protected@file@percent }
-\newlabel{sec:lbf}{{3.3.1}{269}}
-\newlabel{eq:lbf-m12}{{1}{269}}
-\newlabel{eq:lbf-bf}{{2}{269}}
-\newlabel{eq:lbf-lbf}{{3}{269}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}\textbf  {Derivation}}{270}\protected@file@percent }
-\newlabel{sec:lbf-der}{{3.3.2}{270}}
-\newlabel{eq:lbf-der-LBF-term}{{1}{270}}
-\newlabel{eq:lbf-der-LBF-ratio}{{2}{270}}
-\newlabel{eq:lbf-der-BF-s1}{{3}{270}}
-\newlabel{eq:lbf-der-BF-s2}{{4}{270}}
-\newlabel{eq:lbf-der-BF-s3}{{5}{270}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}\textbf  {Calculation from log model evidences}}{270}\protected@file@percent }
-\newlabel{sec:lbf-lme}{{3.3.3}{270}}
-\newlabel{eq:lbf-lme-LBF-LME}{{1}{270}}
-\newlabel{eq:lbf-lme-BF}{{2}{270}}
-\newlabel{eq:lbf-lme-LBF}{{3}{271}}
-\newlabel{eq:lbf-lme-LME}{{4}{271}}
-\newlabel{eq:lbf-lme-LBF-LME-qed}{{5}{271}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Bayes factor}{271}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}\textit  {Definition}}{271}\protected@file@percent }
-\newlabel{sec:bf}{{3.4.1}{271}}
-\newlabel{eq:bf-BF}{{1}{271}}
-\newlabel{eq:bf-odds}{{2}{271}}
-\newlabel{eq:bf-odds2}{{3}{271}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}\textbf  {Transitivity}}{272}\protected@file@percent }
-\newlabel{sec:bf-trans}{{3.4.2}{272}}
-\newlabel{eq:bf-trans-bf-trans}{{1}{272}}
-\newlabel{eq:bf-trans-bf}{{2}{272}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}\textbf  {Computation using Savage-Dickey Density Ratio}}{272}\protected@file@percent }
-\newlabel{sec:bf-sddr}{{3.4.3}{272}}
-\newlabel{eq:bf-sddr-sd}{{1}{272}}
-\newlabel{eq:bf-sddr-bf}{{2}{273}}
-\newlabel{eq:bf-sddr-ml-m0}{{3}{273}}
-\newlabel{eq:bf-sddr-ml-m0-bt}{{4}{273}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}\textbf  {Computation using Encompassing Prior Method}}{274}\protected@file@percent }
-\newlabel{sec:bf-ep}{{3.4.4}{274}}
-\newlabel{eq:bf-ep-bf-ep}{{1}{274}}
-\newlabel{eq:bf-ep-bayesth}{{2}{274}}
-\newlabel{eq:bf-ep-marginal}{{3}{274}}
-\newlabel{eq:bf-ep-bayesfactor}{{4}{274}}
-\newlabel{eq:bf-ep-bayesfactor2}{{5}{274}}
-\newlabel{eq:bf-ep-normalize}{{6}{274}}
-\newlabel{eq:bf-ep-prior}{{7}{275}}
-\newlabel{eq:bf-ep-posterior}{{8}{275}}
-\newlabel{eq:bf-ep-bayesfactor3}{{9}{275}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5}\textit  {Encompassing model}}{275}\protected@file@percent }
-\newlabel{sec:encm}{{3.4.5}{275}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Posterior model probability}{275}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}\textit  {Definition}}{275}\protected@file@percent }
-\newlabel{sec:pmp}{{3.5.1}{275}}
-\newlabel{eq:pmp-PMP}{{1}{276}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}\textbf  {Derivation}}{276}\protected@file@percent }
-\newlabel{sec:pmp-der}{{3.5.2}{276}}
-\newlabel{eq:pmp-der-PMP}{{1}{276}}
-\newlabel{eq:pmp-der-PMP-s1}{{2}{276}}
-\newlabel{eq:pmp-der-PMP-s2}{{3}{276}}
-\newlabel{eq:pmp-der-PMP-s3}{{4}{276}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}\textbf  {Calculation from Bayes factors}}{276}\protected@file@percent }
-\newlabel{sec:pmp-bf}{{3.5.3}{276}}
-\newlabel{eq:pmp-bf-PMP-BF}{{1}{277}}
-\newlabel{eq:pmp-bf-BF-i0}{{2}{277}}
-\newlabel{eq:pmp-bf-prior-i0}{{3}{277}}
-\newlabel{eq:pmp-bf-PMP-s1}{{4}{277}}
-\newlabel{eq:pmp-bf-PMP-s2}{{5}{277}}
-\newlabel{eq:pmp-bf-PMP-BF-qed}{{6}{277}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.4}\textbf  {Calculation from log Bayes factor}}{277}\protected@file@percent }
-\newlabel{sec:pmp-lbf}{{3.5.4}{277}}
-\newlabel{eq:pmp-lbf-PMP-LBF}{{1}{277}}
-\newlabel{eq:pmp-lbf-post-odds-s1}{{2}{278}}
-\newlabel{eq:pmp-lbf-post-odds-s2}{{3}{278}}
-\newlabel{eq:pmp-lbf-post-odds-s4}{{4}{278}}
-\newlabel{eq:pmp-lbf-post-odds-s3}{{5}{278}}
-\newlabel{eq:pmp-lbf-post-s1}{{6}{278}}
-\newlabel{eq:pmp-lbf-post-s2}{{7}{278}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.5}\textbf  {Calculation from log model evidences}}{278}\protected@file@percent }
-\newlabel{sec:pmp-lme}{{3.5.5}{278}}
-\newlabel{eq:pmp-lme-PMP-LME}{{1}{278}}
-\newlabel{eq:pmp-lme-PMP-s1}{{2}{279}}
-\newlabel{eq:pmp-lme-LME}{{3}{279}}
-\newlabel{eq:pmp-lme-ME}{{4}{279}}
-\newlabel{eq:pmp-lme-PMP-s2}{{5}{279}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Bayesian model averaging}{279}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}\textit  {Definition}}{279}\protected@file@percent }
-\newlabel{sec:bma}{{3.6.1}{279}}
-\newlabel{eq:bma-BMA}{{1}{279}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.2}\textbf  {Derivation}}{280}\protected@file@percent }
-\newlabel{sec:bma-der}{{3.6.2}{280}}
-\newlabel{eq:bma-der-BMA}{{1}{280}}
-\newlabel{eq:bma-der-BMA-s1}{{2}{280}}
-\newlabel{eq:bma-der-BMA-s2}{{3}{280}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.3}\textbf  {Calculation from log model evidences}}{280}\protected@file@percent }
-\newlabel{sec:bma-lme}{{3.6.3}{280}}
-\newlabel{eq:bma-lme-BMA-LME}{{1}{280}}
-\newlabel{eq:bma-lme-BMA-PMP}{{2}{281}}
-\newlabel{eq:bma-lme-PMP-LME}{{3}{281}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {V}Appendix}{283}\protected@file@percent }
+\newlabel{sec:Model Selection}{{IV}{285}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Goodness-of-fit measures}{286}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Residual variance}{286}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}\textit  {Definition}}{286}\protected@file@percent }
+\newlabel{sec:resvar}{{1.1.1}{286}}
+\newlabel{eq:resvar-mlr}{{1}{286}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}\textbf  {Maximum likelihood estimator is biased}}{286}\protected@file@percent }
+\newlabel{sec:resvar-bias}{{1.1.2}{286}}
+\newlabel{eq:resvar-bias-ug}{{1}{286}}
+\newlabel{eq:resvar-bias-resvar-mle}{{2}{286}}
+\newlabel{eq:resvar-bias-mean-mle}{{3}{286}}
+\newlabel{eq:resvar-bias-resvar-var}{{4}{286}}
+\newlabel{eq:resvar-bias-resvar-bias}{{5}{286}}
+\newlabel{eq:resvar-bias-resvar-mle-qed}{{6}{287}}
+\newlabel{eq:resvar-bias-E-resvar-mle-s1}{{7}{287}}
+\newlabel{eq:resvar-bias-var-mean}{{8}{287}}
+\newlabel{eq:resvar-bias-Var-xi-xb}{{9}{287}}
+\newlabel{eq:resvar-bias-E-resvar-mle-s2}{{10}{287}}
+\newlabel{eq:resvar-bias-E-Var-xi}{{11}{288}}
+\newlabel{eq:resvar-bias-E-mean-mle}{{12}{288}}
+\newlabel{eq:resvar-bias-Var-mean-mle}{{13}{288}}
+\newlabel{eq:resvar-bias-E-resvar-mle-s3}{{14}{288}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3}\textbf  {Construction of unbiased estimator}}{288}\protected@file@percent }
+\newlabel{sec:resvar-unb}{{1.1.3}{288}}
+\newlabel{eq:resvar-unb-ug}{{1}{289}}
+\newlabel{eq:resvar-unb-resvar-unb}{{2}{289}}
+\newlabel{eq:resvar-unb-resvar-mle}{{3}{289}}
+\newlabel{eq:resvar-unb-resvar-bias}{{4}{289}}
+\newlabel{eq:resvar-unb-resvar-bias-adj}{{5}{289}}
+\newlabel{eq:resvar-unb-resvar-unb-qed}{{6}{289}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}R-squared}{289}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}\textit  {Definition}}{289}\protected@file@percent }
+\newlabel{sec:rsq}{{1.2.1}{289}}
+\newlabel{eq:rsq-mlr}{{1}{290}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}\textbf  {Derivation of R² and adjusted R²}}{290}\protected@file@percent }
+\newlabel{sec:rsq-der}{{1.2.2}{290}}
+\newlabel{eq:rsq-der-rsq-mlr}{{1}{290}}
+\newlabel{eq:rsq-der-R2}{{2}{290}}
+\newlabel{eq:rsq-der-R2-adj}{{3}{290}}
+\newlabel{eq:rsq-der-SS}{{4}{290}}
+\newlabel{eq:rsq-der-ESS}{{5}{290}}
+\newlabel{eq:rsq-der-R2-s1}{{6}{291}}
+\newlabel{eq:rsq-der-R2-s2}{{7}{291}}
+\newlabel{eq:rsq-der-R2'}{{8}{291}}
+\newlabel{eq:rsq-der-R2-adj'}{{9}{291}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}\textbf  {Relationship to maximum log-likelihood}}{291}\protected@file@percent }
+\newlabel{sec:rsq-mll}{{1.2.3}{291}}
+\newlabel{eq:rsq-mll-MLR}{{1}{291}}
+\newlabel{eq:rsq-mll-R2-MLL}{{2}{291}}
+\newlabel{eq:rsq-mll-MLR-LL}{{3}{291}}
+\newlabel{eq:rsq-mll-MLR-MLE-beta}{{4}{292}}
+\newlabel{eq:rsq-mll-MLR-MLE-sigma2}{{5}{292}}
+\newlabel{eq:rsq-mll-RSS}{{6}{292}}
+\newlabel{eq:rsq-mll-MLR-MLL}{{7}{292}}
+\newlabel{eq:rsq-mll-MLR-MLL-RSS}{{8}{292}}
+\newlabel{eq:rsq-mll-m0-m1}{{9}{292}}
+\newlabel{eq:rsq-mll-TSS}{{10}{292}}
+\newlabel{eq:rsq-mll-MLR-DMLL}{{11}{292}}
+\newlabel{eq:rsq-mll-MLR-DMLL-RTSS}{{12}{292}}
+\newlabel{eq:rsq-mll-MLR-DMLL-R2}{{13}{293}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Signal-to-noise ratio}{293}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.1}\textit  {Definition}}{293}\protected@file@percent }
+\newlabel{sec:snr}{{1.3.1}{293}}
+\newlabel{eq:snr-mlr}{{1}{293}}
+\newlabel{eq:snr-SNR}{{2}{293}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.2}\textbf  {Relationship with R²}}{293}\protected@file@percent }
+\newlabel{sec:snr-rsq}{{1.3.2}{293}}
+\newlabel{eq:snr-rsq-mlr}{{1}{293}}
+\newlabel{eq:snr-rsq-OLS}{{2}{293}}
+\newlabel{eq:snr-rsq-SNR-R2}{{3}{294}}
+\newlabel{eq:snr-rsq-R2-SNR}{{4}{294}}
+\newlabel{eq:snr-rsq-SNR}{{5}{294}}
+\newlabel{eq:snr-rsq-SNR-s1}{{6}{294}}
+\newlabel{eq:snr-rsq-SNR-s2}{{7}{294}}
+\newlabel{eq:snr-rsq-SNR-s3}{{8}{294}}
+\newlabel{eq:snr-rsq-SNR-R2-qed}{{9}{294}}
+\newlabel{eq:snr-rsq-R2-SNR-qed}{{10}{294}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Classical information criteria}{295}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Akaike information criterion}{295}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}\textit  {Definition}}{295}\protected@file@percent }
+\newlabel{sec:aic}{{2.1.1}{295}}
+\newlabel{eq:aic-MLE}{{1}{295}}
+\newlabel{eq:aic-AIC}{{2}{295}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Bayesian information criterion}{295}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}\textit  {Definition}}{295}\protected@file@percent }
+\newlabel{sec:bic}{{2.2.1}{295}}
+\newlabel{eq:bic-MLE}{{1}{295}}
+\newlabel{eq:bic-BIC}{{2}{295}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}\textbf  {Derivation}}{295}\protected@file@percent }
+\newlabel{sec:bic-der}{{2.2.2}{295}}
+\newlabel{eq:bic-der-BIC}{{1}{296}}
+\newlabel{eq:bic-der-LL}{{2}{296}}
+\newlabel{eq:bic-der-gh}{{3}{296}}
+\newlabel{eq:bic-der-ML}{{4}{296}}
+\newlabel{eq:bic-der-LA}{{5}{296}}
+\newlabel{eq:bic-der-MLE}{{6}{296}}
+\newlabel{eq:bic-der-ML-approx}{{7}{296}}
+\newlabel{eq:bic-der-LME-approx}{{8}{296}}
+\newlabel{eq:bic-der-BIC-qed}{{9}{297}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Deviance information criterion}{297}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}\textit  {Definition}}{297}\protected@file@percent }
+\newlabel{sec:dic}{{2.3.1}{297}}
+\newlabel{eq:dic-PLL}{{1}{297}}
+\newlabel{eq:dic-LLP}{{2}{297}}
+\newlabel{eq:dic-DIC}{{3}{297}}
+\newlabel{eq:dic-DIC-pD}{{4}{297}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Bayesian model selection}{298}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Log model evidence}{298}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}\textit  {Definition}}{298}\protected@file@percent }
+\newlabel{sec:lme}{{3.1.1}{298}}
+\newlabel{eq:lme-LME}{{1}{298}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}\textbf  {Derivation}}{298}\protected@file@percent }
+\newlabel{sec:lme-der}{{3.1.2}{298}}
+\newlabel{eq:lme-der-LME-term}{{1}{298}}
+\newlabel{eq:lme-der-LME-marg}{{2}{298}}
+\newlabel{eq:lme-der-LME-bayes}{{3}{298}}
+\newlabel{eq:lme-der-ME}{{4}{298}}
+\newlabel{eq:lme-der-LME-marg-qed}{{5}{298}}
+\newlabel{eq:lme-der-BT}{{6}{299}}
+\newlabel{eq:lme-der-LME-bayes-qed}{{7}{299}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}\textbf  {Partition into accuracy and complexity}}{299}\protected@file@percent }
+\newlabel{sec:lme-anc}{{3.1.3}{299}}
+\newlabel{eq:lme-anc-LME}{{1}{299}}
+\newlabel{eq:lme-anc-Acc}{{2}{299}}
+\newlabel{eq:lme-anc-Com}{{3}{299}}
+\newlabel{eq:lme-anc-AnC-s1}{{4}{299}}
+\newlabel{eq:lme-anc-AnC-s2}{{5}{299}}
+\newlabel{eq:lme-anc-AnC-s3}{{6}{299}}
+\newlabel{eq:lme-anc-AnC-s4}{{7}{300}}
+\newlabel{eq:lme-anc-LME-AnC}{{8}{300}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}\textit  {Uniform-prior log model evidence}}{300}\protected@file@percent }
+\newlabel{sec:uplme}{{3.1.4}{300}}
+\newlabel{eq:uplme-upLME}{{1}{300}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}\textit  {Cross-validated log model evidence}}{300}\protected@file@percent }
+\newlabel{sec:cvlme}{{3.1.5}{300}}
+\newlabel{eq:cvlme-cvLME}{{1}{300}}
+\newlabel{eq:cvlme-post}{{2}{301}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.6}\textit  {Empirical Bayesian log model evidence}}{301}\protected@file@percent }
+\newlabel{sec:eblme}{{3.1.6}{301}}
+\newlabel{eq:eblme-ebLME}{{1}{301}}
+\newlabel{eq:eblme-ML}{{2}{301}}
+\newlabel{eq:eblme-EB}{{3}{301}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.7}\textit  {Variational Bayesian log model evidence}}{302}\protected@file@percent }
+\newlabel{sec:vblme}{{3.1.7}{302}}
+\newlabel{eq:vblme-vbLME}{{1}{302}}
+\newlabel{eq:vblme-ELL}{{2}{302}}
+\newlabel{eq:vblme-KL}{{3}{302}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Log family evidence}{302}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}\textit  {Definition}}{302}\protected@file@percent }
+\newlabel{sec:lfe}{{3.2.1}{302}}
+\newlabel{eq:lfe-fam}{{1}{302}}
+\newlabel{eq:lfe-fe}{{2}{302}}
+\newlabel{eq:lfe-lfe}{{3}{302}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}\textbf  {Derivation}}{303}\protected@file@percent }
+\newlabel{sec:lfe-der}{{3.2.2}{303}}
+\newlabel{eq:lfe-der-LFE-term}{{1}{303}}
+\newlabel{eq:lfe-der-LFE-marg}{{2}{303}}
+\newlabel{eq:lfe-der-fam-prior}{{3}{303}}
+\newlabel{eq:lfe-der-fam-post}{{4}{303}}
+\newlabel{eq:lfe-der-fe-bayes-th}{{5}{303}}
+\newlabel{eq:lfe-der-fe-me}{{6}{303}}
+\newlabel{eq:lfe-der-me-bayes-th}{{7}{303}}
+\newlabel{eq:lfe-der-me-bayes-th-dev}{{8}{303}}
+\newlabel{eq:lfe-der-fe-marg-qed}{{9}{304}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}\textbf  {Calculation from log model evidences}}{304}\protected@file@percent }
+\newlabel{sec:lfe-lme}{{3.2.3}{304}}
+\newlabel{eq:lfe-lme-LFE-LME}{{1}{304}}
+\newlabel{eq:lfe-lme-FE-ME-s1}{{2}{304}}
+\newlabel{eq:lfe-lme-FE-ME-s2}{{3}{304}}
+\newlabel{eq:lfe-lme-LFE-LME-s1}{{4}{304}}
+\newlabel{eq:lfe-lme-LME}{{5}{305}}
+\newlabel{eq:lfe-lme-ME}{{6}{305}}
+\newlabel{eq:lfe-lme-LFE-LME-s2}{{7}{305}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Log Bayes factor}{305}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}\textit  {Definition}}{305}\protected@file@percent }
+\newlabel{sec:lbf}{{3.3.1}{305}}
+\newlabel{eq:lbf-m12}{{1}{305}}
+\newlabel{eq:lbf-bf}{{2}{305}}
+\newlabel{eq:lbf-lbf}{{3}{305}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}\textbf  {Derivation}}{306}\protected@file@percent }
+\newlabel{sec:lbf-der}{{3.3.2}{306}}
+\newlabel{eq:lbf-der-LBF-term}{{1}{306}}
+\newlabel{eq:lbf-der-LBF-ratio}{{2}{306}}
+\newlabel{eq:lbf-der-BF-s1}{{3}{306}}
+\newlabel{eq:lbf-der-BF-s2}{{4}{306}}
+\newlabel{eq:lbf-der-BF-s3}{{5}{306}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}\textbf  {Calculation from log model evidences}}{306}\protected@file@percent }
+\newlabel{sec:lbf-lme}{{3.3.3}{306}}
+\newlabel{eq:lbf-lme-LBF-LME}{{1}{306}}
+\newlabel{eq:lbf-lme-BF}{{2}{306}}
+\newlabel{eq:lbf-lme-LBF}{{3}{307}}
+\newlabel{eq:lbf-lme-LME}{{4}{307}}
+\newlabel{eq:lbf-lme-LBF-LME-qed}{{5}{307}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Bayes factor}{307}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}\textit  {Definition}}{307}\protected@file@percent }
+\newlabel{sec:bf}{{3.4.1}{307}}
+\newlabel{eq:bf-BF}{{1}{307}}
+\newlabel{eq:bf-odds}{{2}{307}}
+\newlabel{eq:bf-odds2}{{3}{307}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}\textbf  {Transitivity}}{308}\protected@file@percent }
+\newlabel{sec:bf-trans}{{3.4.2}{308}}
+\newlabel{eq:bf-trans-bf-trans}{{1}{308}}
+\newlabel{eq:bf-trans-bf}{{2}{308}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}\textbf  {Computation using Savage-Dickey Density Ratio}}{308}\protected@file@percent }
+\newlabel{sec:bf-sddr}{{3.4.3}{308}}
+\newlabel{eq:bf-sddr-sd}{{1}{308}}
+\newlabel{eq:bf-sddr-bf}{{2}{309}}
+\newlabel{eq:bf-sddr-ml-m0}{{3}{309}}
+\newlabel{eq:bf-sddr-ml-m0-bt}{{4}{309}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}\textbf  {Computation using Encompassing Prior Method}}{310}\protected@file@percent }
+\newlabel{sec:bf-ep}{{3.4.4}{310}}
+\newlabel{eq:bf-ep-bf-ep}{{1}{310}}
+\newlabel{eq:bf-ep-bayesth}{{2}{310}}
+\newlabel{eq:bf-ep-marginal}{{3}{310}}
+\newlabel{eq:bf-ep-bayesfactor}{{4}{310}}
+\newlabel{eq:bf-ep-bayesfactor2}{{5}{310}}
+\newlabel{eq:bf-ep-normalize}{{6}{310}}
+\newlabel{eq:bf-ep-prior}{{7}{311}}
+\newlabel{eq:bf-ep-posterior}{{8}{311}}
+\newlabel{eq:bf-ep-bayesfactor3}{{9}{311}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5}\textit  {Encompassing model}}{311}\protected@file@percent }
+\newlabel{sec:encm}{{3.4.5}{311}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Posterior model probability}{311}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}\textit  {Definition}}{311}\protected@file@percent }
+\newlabel{sec:pmp}{{3.5.1}{311}}
+\newlabel{eq:pmp-PMP}{{1}{312}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}\textbf  {Derivation}}{312}\protected@file@percent }
+\newlabel{sec:pmp-der}{{3.5.2}{312}}
+\newlabel{eq:pmp-der-PMP}{{1}{312}}
+\newlabel{eq:pmp-der-PMP-s1}{{2}{312}}
+\newlabel{eq:pmp-der-PMP-s2}{{3}{312}}
+\newlabel{eq:pmp-der-PMP-s3}{{4}{312}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}\textbf  {Calculation from Bayes factors}}{312}\protected@file@percent }
+\newlabel{sec:pmp-bf}{{3.5.3}{312}}
+\newlabel{eq:pmp-bf-PMP-BF}{{1}{313}}
+\newlabel{eq:pmp-bf-BF-i0}{{2}{313}}
+\newlabel{eq:pmp-bf-prior-i0}{{3}{313}}
+\newlabel{eq:pmp-bf-PMP-s1}{{4}{313}}
+\newlabel{eq:pmp-bf-PMP-s2}{{5}{313}}
+\newlabel{eq:pmp-bf-PMP-BF-qed}{{6}{313}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.4}\textbf  {Calculation from log Bayes factor}}{313}\protected@file@percent }
+\newlabel{sec:pmp-lbf}{{3.5.4}{313}}
+\newlabel{eq:pmp-lbf-PMP-LBF}{{1}{313}}
+\newlabel{eq:pmp-lbf-post-odds-s1}{{2}{314}}
+\newlabel{eq:pmp-lbf-post-odds-s2}{{3}{314}}
+\newlabel{eq:pmp-lbf-post-odds-s4}{{4}{314}}
+\newlabel{eq:pmp-lbf-post-odds-s3}{{5}{314}}
+\newlabel{eq:pmp-lbf-post-s1}{{6}{314}}
+\newlabel{eq:pmp-lbf-post-s2}{{7}{314}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.5}\textbf  {Calculation from log model evidences}}{314}\protected@file@percent }
+\newlabel{sec:pmp-lme}{{3.5.5}{314}}
+\newlabel{eq:pmp-lme-PMP-LME}{{1}{314}}
+\newlabel{eq:pmp-lme-PMP-s1}{{2}{315}}
+\newlabel{eq:pmp-lme-LME}{{3}{315}}
+\newlabel{eq:pmp-lme-ME}{{4}{315}}
+\newlabel{eq:pmp-lme-PMP-s2}{{5}{315}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Bayesian model averaging}{315}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}\textit  {Definition}}{315}\protected@file@percent }
+\newlabel{sec:bma}{{3.6.1}{315}}
+\newlabel{eq:bma-BMA}{{1}{315}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.2}\textbf  {Derivation}}{316}\protected@file@percent }
+\newlabel{sec:bma-der}{{3.6.2}{316}}
+\newlabel{eq:bma-der-BMA}{{1}{316}}
+\newlabel{eq:bma-der-BMA-s1}{{2}{316}}
+\newlabel{eq:bma-der-BMA-s2}{{3}{316}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.3}\textbf  {Calculation from log model evidences}}{316}\protected@file@percent }
+\newlabel{sec:bma-lme}{{3.6.3}{316}}
+\newlabel{eq:bma-lme-BMA-LME}{{1}{316}}
+\newlabel{eq:bma-lme-BMA-PMP}{{2}{317}}
+\newlabel{eq:bma-lme-PMP-LME}{{3}{317}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {V}Appendix}{319}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{sec:Appendix}{{V}{283}}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Proof by Number}{284}\protected@file@percent }
+\newlabel{sec:Appendix}{{V}{319}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Proof by Number}{320}\protected@file@percent }
 \gdef \LT@i {\LT@entry 
     {1}{40.45274pt}\LT@entry 
     {1}{68.9055pt}\LT@entry 
@@ -2270,7 +2538,7 @@
     {1}{97.35826pt}\LT@entry 
     {1}{68.9055pt}\LT@entry 
     {1}{40.33202pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Definition by Number}{296}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Definition by Number}{333}\protected@file@percent }
 \gdef \LT@ii {\LT@entry 
     {1}{40.45274pt}\LT@entry 
     {1}{68.9055pt}\LT@entry 
@@ -2278,5 +2546,5 @@
     {1}{97.35826pt}\LT@entry 
     {1}{68.9055pt}\LT@entry 
     {1}{40.33202pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Proof by Topic}{301}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Definition by Topic}{307}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Proof by Topic}{338}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Definition by Topic}{344}\protected@file@percent }
