@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2021-03-24, 16:09}
+\date{2021-05-04, 09:19}
 
 \begin{document}
 
@@ -582,6 +582,25 @@ where $F$ are the joint (conditional) ($\rightarrow$ Definition \ref{sec:General
 
 \vspace{1em}
 \textbf{Metadata:} ID: D58 | shortcut: dist-cond | author: JoramSoch | date: 2020-05-17, 21:25.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Sampling distribution}]{Sampling distribution} \label{sec:dist-samp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a random sample ($\rightarrow$ Definition "samp") with finite sample size ($\rightarrow$ Definition "samp-size"). Then, the probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) of a given statistic ($\rightarrow$ Definition "stat") computed from this sample, e.g. a test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}), is called a sampling distribution.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Sampling distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-31; URL: \url{https://en.wikipedia.org/wiki/Sampling_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D140 | shortcut: dist-samp | author: JoramSoch | date: 2021-03-31, 09:43.
 \vspace{1em}
 
 
@@ -1216,6 +1235,156 @@ F_X(x) &\overset{\eqref{eq:cdf-pdf-cdf}}{=} \mathrm{Pr}(X \in (-\infty, x]) \\
 
 
 
+\subsubsection[\textbf{Probability integral transform}]{Probability integral transform} \label{sec:cdf-pit}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a continuous ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar-disc}) random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with invertible ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:qf}) cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) $F_X(x)$. Then, the random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar})
+
+\begin{equation} \label{eq:cdf-pit-cdf-pit}
+Y = F_X(X)
+\end{equation}
+
+has a standard uniform distribution ($\rightarrow$ Definition "suni").
+
+
+\vspace{1em}
+\textbf{Proof:} The cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of $Y = F_X(X)$ can be derived as
+
+\begin{equation} \label{eq:cdf-pit-cdf-pit-qed}
+\begin{split}
+F_Y(y) &= \mathrm{Pr}(Y \leq y) \\
+&= \mathrm{Pr}(F_X(X) \leq y) \\
+&= \mathrm{Pr}(X \leq F_X^{-1}(y)) \\
+&= F_X(F_X^{-1}(y)) \\
+&= y \\
+\end{split}
+\end{equation}
+
+which is the cumulative distribution function of a continuous uniform distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:cuni-cdf}) with $a = 0$ and $b = 1$, i.e. the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard uniform distribution ($\rightarrow$ Definition "suni") $\mathcal{U}(0,1)$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Probability integral transform"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-04-07; URL: \url{https://en.wikipedia.org/wiki/Probability_integral_transform#Proof}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P220 | shortcut: cdf-pit | author: JoramSoch | date: 2021-04-07, 08:47.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Inverse transformation method}]{Inverse transformation method} \label{sec:cdf-itm}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $U$ be a continuous ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar-disc}) random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) having a standard uniform distribution ($\rightarrow$ Definition "suni"). Then, the random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar})
+
+\begin{equation} \label{eq:cdf-itm-cdf-itm}
+X = F_X^{-1}(U)
+\end{equation}
+
+has a probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) characterized by the invertible ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:qf}) cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) $F_X(x)$.
+
+
+\vspace{1em}
+\textbf{Proof:} The cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the transformation $X = F_X^{-1}(U)$ can be derived as
+
+\begin{equation} \label{eq:cdf-itm-cdf-itm-qed}
+\begin{split}
+&\hphantom{=} \;\; \mathrm{Pr}(X \leq x) \\
+&= \mathrm{Pr}(F_X^{-1}(U) \leq x) \\
+&= \mathrm{Pr}(U \leq F_X(x)) \\
+&= F_X(x) \; ,
+\end{split}
+\end{equation}
+
+because the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard uniform distribution ($\rightarrow$ Definition "suni") $\mathcal{U}(0,1)$ is
+
+\begin{equation} \label{eq:cdf-itm-suni-cdf}
+U \sim \mathcal{U}(0,1) \quad \Rightarrow \quad F_U(u) = \mathrm{Pr}(U \leq u) = u \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Inverse transform sampling"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-04-07; URL: \url{https://en.wikipedia.org/wiki/Inverse_transform_sampling#Proof_of_correctness}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P221 | shortcut: cdf-itm | author: JoramSoch | date: 2021-04-07, 08:47.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Distributional transformation}]{Distributional transformation} \label{sec:cdf-dt}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ and $Y$ be two continuous ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar-disc}) random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) $F_X(x)$ and invertible cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) $F_Y(y)$. Then, the random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar})
+
+\begin{equation} \label{eq:cdf-dt-cdf-dt}
+\tilde{X} = F_Y^{-1}(F_X(X))
+\end{equation}
+
+has the same probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) as $Y$.
+
+
+\vspace{1em}
+\textbf{Proof:} The cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the transformation $\tilde{X} = F_Y^{-1}(F_X(X))$ can be derived as
+
+\begin{equation} \label{eq:cdf-dt-cdf-dt-qed}
+\begin{split}
+F_{\tilde{X}}(y) &= \mathrm{Pr}\left( \tilde{X} \leq y \right) \\
+&= \mathrm{Pr}\left( F_Y^{-1}(F_X(X)) \leq y \right) \\
+&= \mathrm{Pr}\left( F_X(X) \leq F_Y(y) \right) \\
+&= \mathrm{Pr}\left( X \leq F_X^{-1}(F_Y(y)) \right) \\
+&= F_X\left( F_X^{-1}(F_Y(y)) \right) \\
+&= F_Y(y) \\
+\end{split}
+\end{equation}
+
+which shows that $\tilde{X}$ and $Y$ have the same cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) and are thus identically distributed ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Soch, Joram (2020): "Distributional Transformation Improves Decoding Accuracy When Predicting Chronological Age From Structural MRI"; in: \textit{Frontiers in Psychiatry}, vol. 11, art. 604268; URL: \url{https://www.frontiersin.org/articles/10.3389/fpsyt.2020.604268/full}; DOI: 10.3389/fpsyt.2020.604268.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P222 | shortcut: cdf-dt | author: JoramSoch | date: 2021-04-07, 09:19.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Joint cumulative distribution function}]{Joint cumulative distribution function} \label{sec:cdf-joint}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X \in \mathbb{R}^{n \times 1}$ be an $n \times 1$ random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, the joint ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-joint}) cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of $X$ is defined as the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) that each entry $X_i$ is smaller than a specific value $x_i$ for $i = 1, \ldots, n$:
+
+\begin{equation} \label{eq:cdf-joint-cdf-joint}
+F_X(x) = \mathrm{Pr}(X_1 \leq x_1, \ldots, X_n \leq x_n) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Cumulative distribution function"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-04-07; URL: \url{https://en.wikipedia.org/wiki/Cumulative_distribution_function#Definition_for_more_than_two_random_variables}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D141 | shortcut: cdf-joint | author: JoramSoch | date: 2020-04-07, 08:17.
+\vspace{1em}
+
+
+
 \subsubsection[\textit{Quantile function}]{Quantile function} \label{sec:qf}
 \setcounter{equation}{0}
 
@@ -1503,6 +1672,29 @@ where $f_X(x)$ is the probability density function ($\rightarrow$ Definition \re
 
 \vspace{1em}
 \textbf{Metadata:} ID: D11 | shortcut: mean | author: JoramSoch | date: 2020-02-13, 19:38.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Sample mean}]{Sample mean} \label{sec:mean-samp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ Definition "samp") from a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the sample mean of $x$ is denoted as $\bar{x}$ and is given by
+
+\begin{equation} \label{eq:mean-samp-mean-samp}
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Sample mean and covariance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-04-16; URL: \url{https://en.wikipedia.org/wiki/Sample_mean_and_covariance#Definition_of_the_sample_mean}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D142 | shortcut: mean-samp | author: JoramSoch | date: 2021-04-16, 11:53.
 \vspace{1em}
 
 
@@ -2084,6 +2276,37 @@ Finally, substituing \eqref{eq:mean-lotus-Y-pdf} into \eqref{eq:mean-lotus-mean-
 
 
 
+\subsubsection[\textit{Sample variance}]{Sample variance} \label{sec:var-samp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ Definition "samp") from a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the sample variance of $x$ is given by
+
+\begin{equation} \label{eq:var-samp-var-samp}
+\hat{\sigma}^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\end{equation}
+
+and the unbiased sample variance of $x$ is given by
+
+\begin{equation} \label{eq:var-samp-var-samp-unb}
+s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\end{equation}
+
+where $\bar{x}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-04-16; URL: \url{https://en.wikipedia.org/wiki/Variance#Sample_variance}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D143 | shortcut: var-samp | author: JoramSoch | date: 2021-04-16, 12:04.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Partition into expected values}]{Partition into expected values} \label{sec:var-mean}
 \setcounter{equation}{0}
 
@@ -2178,15 +2401,23 @@ is always non-negative, thus the term on the right-hand side is a Lebesgue integ
 \subsubsection[\textbf{Variance of a constant}]{Variance of a constant} \label{sec:var-const}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of a constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}) is zero:
+\textbf{Theorem:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of a constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}) is zero
 
 \begin{equation} \label{eq:var-const-var-const}
-a = \text{const.} \quad \Rightarrow \quad \mathrm{Var}(a) = 0 \; .
+a = \text{const.} \quad \Rightarrow \quad \mathrm{Var}(a) = 0
+\end{equation}
+
+and if the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is zero, then $X$ is a constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const})
+
+\begin{equation} \label{eq:var-const-var-zero}
+\mathrm{Var}(X) = 0 \quad \Rightarrow \quad X = \text{const.} \; .
 \end{equation}
 
 
 \vspace{1em}
-\textbf{Proof:} A constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}) is a quantity that always has the same value. Thus, if understood as a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of a constant is equal to itself:
+\textbf{Proof:}
+
+1) A constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}) is defined as a quantity that always has the same value. Thus, if understood as a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of a constant is equal to itself:
 
 \begin{equation} \label{eq:var-const-mean-const}
 \mathrm{E}(a) = a \; .
@@ -2210,6 +2441,31 @@ Applied to the formula of the expected value ($\rightarrow$ Definition \ref{sec:
 
 Together, \eqref{eq:var-const-var-const-s1} and \eqref{eq:var-const-var-const-s2} imply \eqref{eq:var-const-var-const}.
 
+\vspace{1em}
+
+2) The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is defined as
+
+\begin{equation} \label{eq:var-const-var}
+\mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
+\end{equation}
+
+Because $(X-\mathrm{E}(X))^2$ is strictly non-negative ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-nonneg}), the only way for the variance to become zero is, if the squared deviation is always zero:
+
+\begin{equation} \label{eq:var-const-sqr-dev-zero}
+(X-\mathrm{E}(X))^2 = 0 \; .
+\end{equation}
+
+Thus, in turn, requires that $X$ is equal to its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean})
+
+\begin{equation} \label{eq:var-const-X-eq-E-X}
+X = \mathrm{E}(X)
+\end{equation}
+
+which can only be the case, if $X$ always has the same value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}):
+
+\begin{equation} \label{eq:var-const-X-const}
+X = \text{const.}
+\end{equation}
 
 
 \vspace{1em}
@@ -2221,56 +2477,6 @@ Together, \eqref{eq:var-const-var-const-s1} and \eqref{eq:var-const-var-const-s2
 
 \vspace{1em}
 \textbf{Metadata:} ID: P124 | shortcut: var-const | author: JoramSoch | date: 2020-06-27, 06:44.
-\vspace{1em}
-
-
-
-\subsubsection[\textbf{Variance equals zero}]{Variance equals zero} \label{sec:var-zero}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} If the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is zero, then $X$ is a constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}):
-
-\begin{equation} \label{eq:var-zero-var-zero}
-\mathrm{Var}(X) = 0 \quad \Rightarrow \quad X = \text{const.}
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is defined as
-
-\begin{equation} \label{eq:var-zero-var}
-\mathrm{Var}(X) = \mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right] \; .
-\end{equation}
-
-Because $(X-\mathrm{E}(X))^2$ is strictly non-negative ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-nonneg}), the only way for the variance to become zero is, if the squared deviation is always zero:
-
-\begin{equation} \label{eq:var-zero-sqr-dev-zero}
-(X-\mathrm{E}(X))^2 = 0 \; .
-\end{equation}
-
-Thus, in turn, requires that $X$ is equal to its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean})
-
-\begin{equation} \label{eq:var-zero-X-eq-E-X}
-X = \mathrm{E}(X)
-\end{equation}
-
-which can only be the case, if $X$ always has the same value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}):
-
-\begin{equation} \label{eq:var-zero-X-const}
-X = \text{const.}
-\end{equation}
-
-
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item Wikipedia (2020): "Variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-06-27; URL: \url{https://en.wikipedia.org/wiki/Variance#Basic_properties}.
-\end{itemize}
-
-
-\vspace{1em}
-\textbf{Metadata:} ID: P125 | shortcut: var-zero | author: JoramSoch | date: 2020-06-27, 07:05.
 \vspace{1em}
 
 
@@ -2490,6 +2696,29 @@ Combining \eqref{eq:var-add-var-sum} and \eqref{eq:var-add-cov-ind}, we have:
 
 
 
+\subsubsection[\textit{Precision}]{Precision} \label{sec:prec}
+\setcounter{equation}{0}
+
+\textbf{Definition:} The precision of a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ is defined as the inverse of the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}), i.e. one divided by the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared deviation from its expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}):
+
+\begin{equation} \label{eq:prec-prec}
+\mathrm{Prec}(X) = \mathrm{Var}(X)^{-1} = \frac{1}{\mathrm{E}\left[ (X-\mathrm{E}(X))^2 \right]} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2020): "Precision (statistics)"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-04-21; URL: \url{https://en.wikipedia.org/wiki/Precision_(statistics)}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D145 | shortcut: prec | author: JoramSoch | date: 2020-04-21, 07:04.
+\vspace{1em}
+
+
+
 \subsection{Covariance}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:cov}
@@ -2511,6 +2740,37 @@ Combining \eqref{eq:var-add-var-sum} and \eqref{eq:var-add-cov-ind}, we have:
 
 \vspace{1em}
 \textbf{Metadata:} ID: D70 | shortcut: cov | author: JoramSoch | date: 2020-06-02, 20:20.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Sample covariance}]{Sample covariance} \label{sec:cov-samp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ Definition "samp") from a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) $X \in \mathbb{R}^{n \times 1}$. Then, the sample covariance matrix of $x$ is given by
+
+\begin{equation} \label{eq:cov-samp-cov-samp}
+\hat{\Sigma} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x}) (x_i - \bar{x})^\mathrm{T}
+\end{equation}
+
+and the unbiased sample variance matrix of $x$ is given by
+
+\begin{equation} \label{eq:cov-samp-cov-samp-unb}
+S = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x}) (x_i - \bar{x})^\mathrm{T}
+\end{equation}
+
+where $\bar{x}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Sample mean and covariance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-04-21; URL: \url{https://en.wikipedia.org/wiki/Sample_mean_and_covariance#Definition_of_sample_covariance}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D144 | shortcut: cov-samp | author: JoramSoch | date: 2021-04-21, 06:53.
 \vspace{1em}
 
 
@@ -5572,6 +5832,56 @@ The maximum log-likelihood can be obtained by plugging the maximum likelihood es
 
 
 
+\subsubsection[\textit{Method of moments}]{Method of moments} \label{sec:mome}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let measured data $y$ follow a probability distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) with probability mass ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pmf}) or probability density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) $p(y \vert \theta)$ governed by unknown parameters $\theta_1, \ldots, \theta_k$. Then, method-of-moments estimation, also referred to as "method of moments" or "matching the moments", consists in
+
+\vspace{1em}
+1) expressing the first $k$ moments ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mom}) of $y$ in terms of $\theta$
+
+\begin{equation} \label{eq:mome-mom}
+\begin{split}
+\mu_1 &= f_1(\theta_1, \ldots, \theta_k) \\
+&\vdots \\
+\mu_k &= f_k(\theta_1, \ldots, \theta_k) \; ,
+\end{split}
+\end{equation}
+
+\vspace{1em}
+2) calculating the first $k$ sample moments ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mom}) from $y$
+
+\begin{equation} \label{eq:mome-mom-samp}
+\hat{\mu}_1(y), \ldots, \hat{\mu}_k(y)
+\end{equation}
+
+\vspace{1em}
+3) and solving the system of $k$ equations
+
+\begin{equation} \label{eq:mome-mome}
+\begin{split}
+\hat{\mu}_1(y) &= f_1(\hat{\theta}_1, \ldots, \hat{\theta}_k) \\
+&\vdots \\
+\hat{\mu}_k(y) &= f_k(\hat{\theta}_1, \ldots, \hat{\theta}_k)
+\end{split}
+\end{equation}
+
+for $\hat{\theta}_1, \ldots, \hat{\theta}_k$, which are subsequently refered to as "method-of-moments estimates".
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Method of moments (statistics)"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-04-29; URL: \url{https://en.wikipedia.org/wiki/Method_of_moments_(statistics)#Method}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D151 | shortcut: mome | author: JoramSoch | date: 2021-04-29, 07:51.
+\vspace{1em}
+
+
+
 \subsection{Statistical hypotheses}
 
 \subsubsection[\textit{Statistical hypothesis}]{Statistical hypothesis} \label{sec:hyp}
@@ -5606,7 +5916,7 @@ H: \; \theta \in \Theta^{*} \quad \text{where} \quad \Theta^{*} \subset \Theta \
 
 \begin{itemize}
 
-\item $H$ is called a simple hypothesis, if it completely specifies the population distribution; in this case, the sampling distribution ($\rightarrow$ Definition "dist-samp") of the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) is a function of sample size alone.
+\item $H$ is called a simple hypothesis, if it completely specifies the population distribution; in this case, the sampling distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-samp}) of the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) is a function of sample size alone.
 
 \item $H$ is called a composite hypothesis, if it does not completely specify the population distribution; for example, the hypothesis may only specify one parameter of the distribution and leave others unspecified.
 
@@ -5626,7 +5936,7 @@ H: \; \theta \in \Theta^{*} \quad \text{where} \quad \Theta^{*} \subset \Theta \
 
 
 
-\subsubsection[\textit{Point vs. set}]{Point vs. set} \label{sec:hyp-point}
+\subsubsection[\textit{Point/exact vs. set/inexact}]{Point/exact vs. set/inexact} \label{sec:hyp-point}
 \setcounter{equation}{0}
 
 \textbf{Definition:} Let $H$ be a statistical hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp}). Then,
@@ -5661,6 +5971,61 @@ H: \; \theta \in \Theta^{*} \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D129 | shortcut: hyp-point | author: JoramSoch | date: 2021-03-19, 14:28.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{One-tailed vs. two-tailed}]{One-tailed vs. two-tailed} \label{sec:hyp-tail}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $H_0$ be a point ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-point}) null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0})
+
+\begin{equation} \label{eq:hyp-tail-h0-point}
+H_0: \; \theta = \theta_0 \;
+\end{equation}
+
+and consider a set ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-point}) alternative hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1}) $H_1$. Then,
+
+\begin{itemize}
+
+\item $H_1$ is called a left-sided one-tailed hypothesis, if $\theta$ is assumed to be smaller than $\theta_0$:
+
+\end{itemize}
+
+\begin{equation} \label{eq:hyp-tail-h1-tail1-left}
+H_1: \; \theta < \theta_0 \; ;
+\end{equation}
+
+\begin{itemize}
+
+\item $H_1$ is called a right-sided one-tailed hypothesis, if $\theta$ is assumed to be larger than $\theta_0$:
+
+\end{itemize}
+
+\begin{equation} \label{eq:hyp-tail-h1-tail1-right}
+H_1: \; \theta > \theta_0 \; ;
+\end{equation}
+
+\begin{itemize}
+
+\item $H_1$ is called a two-tailed hypothesis, if $\theta$ is assumed to be unequal to $\theta_0$:
+
+\end{itemize}
+
+\begin{equation} \label{eq:hyp-tail-h1-tail2}
+H_1: \; \theta \neq \theta_0 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "One- and two-tailed tests"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-31; URL: \url{https://en.wikipedia.org/wiki/One-_and_two-tailed_tests}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D138 | shortcut: hyp-tail | author: JoramSoch | date: 2021-03-31, 09:21.
 \vspace{1em}
 
 
@@ -5761,6 +6126,35 @@ H_1&: \; \theta \in \Theta_1 \quad \text{where} \quad \Theta_1 = \Theta \setminu
 
 
 
+\subsubsection[\textit{One-tailed vs. two-tailed}]{One-tailed vs. two-tailed} \label{sec:test-tail}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a statistical test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}) of an alternative hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1}) $H_1$ against a null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) $H_0$. Then,
+
+\begin{itemize}
+
+\item the test is called a one-tailed test, if $H_1$ is a one-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail});
+
+\item the test is called a two-tailed test, if $H_1$ is a two-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail}).
+
+\end{itemize}
+
+The fact whether a test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}) is one-tailed or two-tailed has consequences for the computation of critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) and p-value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pval}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "One- and two-tailed tests"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-31; URL: \url{https://en.wikipedia.org/wiki/One-_and_two-tailed_tests}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D139 | shortcut: test-tail | author: JoramSoch | date: 2021-03-31, 09:32.
+\vspace{1em}
+
+
+
 \subsubsection[\textit{Test statistic}]{Test statistic} \label{sec:tstat}
 \setcounter{equation}{0}
 
@@ -5807,6 +6201,31 @@ For a composite null hypothesis ($\rightarrow$ Definition \ref{sec:General Theor
 
 \vspace{1em}
 \textbf{Metadata:} ID: D132 | shortcut: size | author: JoramSoch | date: 2021-03-19, 14:46.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Power of a test}]{Power of a test} \label{sec:power}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a statistical hypothesis test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}) with null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) $H_0$ and alternative hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1}) $H_1$. Then, the power of the test is the probability of a true-positive result or not making a type II error, i.e. the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of rejecting $H_0$, given that $H_1$ is actually true.
+
+For given null ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) and alternative ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h1}) hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp}), the size is determined by the following conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}):
+
+\begin{equation} \label{eq:power-power}
+\mathrm{Pr}(\text{test rejects } H_0 \vert H_1) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Power of a test"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-03-31; URL: \url{https://en.wikipedia.org/wiki/Power_of_a_test#Description}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D137 | shortcut: power | author: JoramSoch | date: 2021-03-31, 09:01.
 \vspace{1em}
 
 
@@ -5868,11 +6287,11 @@ Then, the p-value is the probability of obtaining a test statistic more extreme 
 
 \begin{itemize}
 
-\item $p = F_T^{-1}(t_\mathrm{obs})$, if $H_1$ is a left-sided one-tailed hypothesis ($\rightarrow$ Definition "hyp-tail");
+\item $p = F_T^{-1}(t_\mathrm{obs})$, if $H_1$ is a left-sided one-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail});
 
-\item $p = 1 - F_T^{-1}(t_\mathrm{obs})$, if $H_1$ is a right-sided one-tailed hypothesis ($\rightarrow$ Definition "hyp-tail");
+\item $p = 1 - F_T^{-1}(t_\mathrm{obs})$, if $H_1$ is a right-sided one-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail});
 
-\item $p = 2 \cdot \min \left( \left[ F_T^{-1}(t_\mathrm{obs}), \, 1 - F_T^{-1}(t_\mathrm{obs}) \right] \right)$, if $H_1$ is a two-tailed hypothesis ($\rightarrow$ Definition "hyp-tail").
+\item $p = 2 \cdot \min \left( \left[ F_T^{-1}(t_\mathrm{obs}), \, 1 - F_T^{-1}(t_\mathrm{obs}) \right] \right)$, if $H_1$ is a two-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail}).
 
 \end{itemize}
 
@@ -6160,17 +6579,18 @@ p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
 p(y|m) \; .
 \end{equation}
 
-Using the law of marginal probabililty ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), this can be obtained by integrating over the product of likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) and prior density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
+Using the law of marginal probabililty ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), this can be obtained by integrating the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) function over the entire parameter space:
+
+\begin{equation} \label{eq:ml-jl-ml-qed}
+p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
+\end{equation}
+
+Applying the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}), the integrand can also be written as the product of likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) and prior density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
 
 \begin{equation} \label{eq:ml-jl-ml-int}
 p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
 
-Applying the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) to the integrand, we have:
-
-\begin{equation} \label{eq:ml-jl-ml-qed}
-p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
-\end{equation}
 
 
 \vspace{1em}
@@ -6194,11 +6614,11 @@ p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
 
 \begin{itemize}
 
-\item the distribution is called a "flat prior", if its precision ($\rightarrow$ Definition "prec") is zero or variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is infinite;
+\item the distribution is called a "flat prior", if its precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) is zero or variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is infinite;
 
-\item the distribution is called a "hard prior", if its precision ($\rightarrow$ Definition "prec") is infinite or variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is zero;
+\item the distribution is called a "hard prior", if its precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) is infinite or variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is zero;
 
-\item the distribution is called a "soft prior", if its precision ($\rightarrow$ Definition "prec") and variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) are non-zero and finite.
+\item the distribution is called a "soft prior", if its precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) and variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) are non-zero and finite.
 
 \end{itemize}
 
@@ -6361,7 +6781,7 @@ p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
 \subsubsection[\textit{Empirical Bayes priors}]{Empirical Bayes priors} \label{sec:prior-eb}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert \lambda, m)$ using prior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $\lambda$. Let $p(y \vert \lambda, m)$ be the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) when integrating the parameters out of the joint likelihood ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:ml-jl}). Then, the prior distribution is called an "Empirical Bayes prior", if it maximizes the logarithmized marginal likelihood:
+\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert \lambda, m)$ using prior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $\lambda$. Let $p(y \vert \lambda, m)$ be the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) when integrating the parameters out of the joint likelihood ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:ml-jl}). Then, the prior distribution is called an "Empirical Bayes ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:eb}) prior", if it maximizes the logarithmized marginal likelihood:
 
 \begin{equation} \label{eq:prior-eb-prior-eb}
 \lambda_{\mathrm{EB}} = \operatorname*{arg\,max}_{\lambda} \log p(y \vert \lambda, m) \; .
@@ -6497,6 +6917,92 @@ one obtains the posterior odds ratio as given by the theorem.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P12 | shortcut: bayes-rule | author: JoramSoch | date: 2020-01-06, 20:55.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Empirical Bayes}]{Empirical Bayes} \label{sec:eb}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with model parameters $\theta$ and hyper-parameters $\lambda$ implying the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, \lambda, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert \lambda, m)$. Then, an Empirical Bayes treatment of $m$, also referred to as "type II maximum likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle})" or "evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) approximation", consists in
+
+\vspace{1em}
+1) evaluating the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) of the model $m$
+
+\begin{equation} \label{eq:eb-ML}
+p(y \vert \lambda, m) = \int p(y \vert \theta, \lambda, m) \, (\theta \vert \lambda, m) \, \mathrm{d}\theta \; ,
+\end{equation}
+
+\vspace{1em}
+2) maximizing the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) with respect to $\lambda$
+
+\begin{equation} \label{eq:eb-EB}
+\hat{\lambda} = \operatorname*{arg\,max}_{\lambda} \log p(y \vert \lambda, m)
+\end{equation}
+
+\vspace{1em}
+3) and using the prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) at this maximum
+
+\begin{equation} \label{eq:eb-prior-eb}
+p(\theta \vert m) = p(\theta \vert \hat{\lambda}, m)
+\end{equation}
+
+for Bayesian inference ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}), i.e. obtaining the posterior distribution ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:post-jl}) and computing the marginal likelihood ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:ml-jl}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Empirical Bayes method"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-04-29; URL: \url{https://en.wikipedia.org/wiki/Empirical_Bayes_method#Introduction}.
+\item Bishop CM (2006): "The Evidence Approximation"; in: \textit{Pattern Recognition for Machine Learning}, ch. 3.5, pp. 165-172; URL: \url{https://www.springer.com/gp/book/9780387310732}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D149 | shortcut: eb | author: JoramSoch | date: 2021-04-29, 06:46.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Variational Bayes}]{Variational Bayes} \label{sec:vb}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with model parameters $\theta$ implying the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert m)$. Then, a Variational Bayes treatment of $m$, also referred to as "approximate inference" or "variational inference", consists in
+
+\vspace{1em}
+1) constructing an approximate posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:vb-post-vb}
+q(\theta) \approx p(\theta \vert y, m) \; ,
+\end{equation}
+
+\vspace{1em}
+2) evaluating the variational free energy ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:vblme})
+
+\begin{equation} \label{eq:vb-FE}
+F_q(m) = \int q(\theta) \log p(y|\theta,m) \, \mathrm{d}\theta - \int q(\theta) \frac{q(\theta)}{p(\theta|m)} \, \mathrm{d}\theta
+\end{equation}
+
+\vspace{1em}
+3) and maximizing this function with respect to $q(\theta)$
+
+\begin{equation} \label{eq:vb-VB}
+\hat{q}(\theta) = \operatorname*{arg\,max}_{q} F_q(m) \; .
+\end{equation}
+
+for Bayesian inference, i.e. obtaining the posterior distribution (from eq. \eqref{eq:vb-VB}) and approximating the marginal likelihood (by plugging eq. \eqref{eq:vb-VB} into eq. \eqref{eq:vb-FE}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Variational Bayesian methods"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-04-29; URL: \url{https://en.wikipedia.org/wiki/Variational_Bayesian_methods#Evidence_lower_bound}.
+\item Penny W, Flandin G, Trujillo-Barreto N (2007): "Bayesian Comparison of Spatially Regularised General Linear Models"; in: \textit{Human Brain Mapping}, vol. 28, pp. 275–293, eqs. 2-9; URL: \url{https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.20327}; DOI: 10.1002/hbm.20327.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D150 | shortcut: vb | author: JoramSoch | date: 2021-04-29, 07:15.
 \vspace{1em}
 
 
@@ -7112,6 +7618,102 @@ the expected value of $X$ finally becomes
 
 \vspace{1em}
 \textbf{Metadata:} ID: P151 | shortcut: poiss-mean | author: JoramSoch | date: 2020-08-19, 06:09.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Variance}]{Variance} \label{sec:poiss-var}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a Poisson distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:poiss}):
+
+\begin{equation} \label{eq:poiss-var-poiss}
+X \sim \mathrm{Poiss}(\lambda) \; .
+\end{equation}
+
+Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is
+
+\begin{equation} \label{eq:poiss-var-poiss-var}
+\mathrm{Var}(X) = \lambda \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) can be expressed in terms of expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-mean}) as
+
+\begin{equation} \label{eq:poiss-var-var-mean}
+\mathrm{Var}(X) = \mathrm{E}(X^2) - \mathrm{E}(X)^2 \; .
+\end{equation}
+
+The expected value of a Poisson random variable ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:poiss-mean}) is
+
+\begin{equation} \label{eq:poiss-var-poiss-mean}
+\mathrm{E}(X) = \lambda \; .
+\end{equation}
+
+Let us now consider the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X \, (X-1)$ which is defined as
+
+\begin{equation} \label{eq:poiss-var-mean}
+\mathrm{E}[X \, (X-1)] = \sum_{x \in \mathcal{X}} x \, (x-1) \cdot f_X(x) \; ,
+\end{equation}
+
+such that, with the probability mass function of the Poisson distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:poiss-pmf}), we have:
+
+\begin{equation} \label{eq:poiss-var-poiss-x2x-mean-s1}
+\begin{split}
+\mathrm{E}[X \, (X-1)] &= \sum_{x=0}^\infty x \, (x-1) \cdot \frac{\lambda^x \, e^{-\lambda}}{x!} \\
+&= \sum_{x=2}^\infty x \, (x-1) \cdot \frac{\lambda^x \, e^{-\lambda}}{x!} \\
+&= e^{-\lambda} \cdot \sum_{x=2}^\infty x \, (x-1) \cdot \frac{\lambda^x}{x \cdot (x-1) \cdot (x-2)!} \\
+&= \lambda^2 \cdot e^{-\lambda} \cdot \sum_{x=2}^\infty \frac{\lambda^{x-2}}{(x-2)!} \; .
+\end{split}
+\end{equation}
+
+Substituting $z = x-2$, such that $x = z+2$, we get:
+
+\begin{equation} \label{eq:poiss-var-poiss-x2x-mean-s2}
+\mathrm{E}[X \, (X-1)] = \lambda^2 \cdot e^{-\lambda} \cdot \sum_{z=0}^\infty \frac{\lambda^z}{z!} \; .
+\end{equation}
+
+Using the power series expansion of the exponential function
+
+\begin{equation} \label{eq:poiss-var-exp-ps}
+e^x = \sum_{n=0}^\infty \frac{x^n}{n!} \; ,
+\end{equation}
+
+the expected value of $X \, (X-1)$ finally becomes
+
+\begin{equation} \label{eq:poiss-var-poiss-x2x-mean-s3}
+\mathrm{E}[X \, (X-1)] = \lambda^2 \cdot e^{-\lambda} \cdot e^{\lambda} = \lambda^2 \; .
+\end{equation}
+
+Note that this expectation can be written as
+
+\begin{equation} \label{eq:poiss-var-poiss-x2-mean-s1}
+\mathrm{E}[X \, (X-1)] = \mathrm{E}(X^2 - X) = \mathrm{E}(X^2) - \mathrm{E}(X) \; ,
+\end{equation}
+
+such that, with \eqref{eq:poiss-var-poiss-x2x-mean-s3} and \eqref{eq:poiss-var-poiss-mean}, we have:
+
+\begin{equation} \label{eq:poiss-var-poiss-x2-mean-s2}
+\mathrm{E}(X^2) - \mathrm{E}(X) = \lambda^2 \quad \Rightarrow \quad \mathrm{E}(X^2) = \lambda^2 + \lambda \; .
+\end{equation}
+
+Plugging \eqref{eq:poiss-var-poiss-x2-mean-s2} and \eqref{eq:poiss-var-poiss-mean} into \eqref{eq:poiss-var-var-mean}, the variance of a Poisson random variable finally becomes
+
+\begin{equation} \label{eq:poiss-var-poiss-var-qed}
+\mathrm{Var}(X) = \lambda^2 + \lambda - \lambda^2 = \lambda \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item jbstatistics (2013): "The Poisson Distribution: Mathematically Deriving the Mean and Variance"; in: \textit{YouTube}, retrieved on 2021-04-29; URL: \url{https://www.youtube.com/watch?v=65n_v92JZeE}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P230 | shortcut: poiss-var | author: JoramSoch | date: 2021-04-29, 09:59.
 \vspace{1em}
 
 
@@ -8979,7 +9581,7 @@ Using the probability density function of the normal distribution ($\rightarrow$
 \end{split}
 \end{equation}
 
-Because trace function and expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) are both linear operators, the expectation can be moved inside the trace:
+Because the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is a linear operator ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), the expectation can be moved into the sum:
 
 \begin{equation} \label{eq:norm-kl-norm-KL-s3}
 \begin{split}
@@ -9027,6 +9629,39 @@ which is equivalent to \eqref{eq:norm-kl-norm-KL}.
 
 \vspace{1em}
 \textbf{Metadata:} ID: P193 | shortcut: norm-kl | author: JoramSoch | date: 2020-11-19, 07:08.
+\vspace{1em}
+
+
+
+\subsection{t-distribution}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:t}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X_1, ..., X_n$ be independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) where each of them is following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) with mean $\mu$ and variance $\sigma^2$:
+
+\begin{equation} \label{eq:t-norm}
+X_i \sim \mathcal{N}(\mu, \sigma^2) \quad \text{for} \quad i = 1, \ldots, n \; .
+\end{equation}
+
+Then, the following random variable with sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{X}$ and sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) $s^2$ is said to be $t$-distributed with $n-1$ degrees of freedom:
+
+\begin{equation} \label{eq:t-t}
+Y = \frac{\bar{X}-\mu}{s/\sqrt{n}} \sim t(n-1) \; .
+\end{equation}
+
+The $t$-distribution is also called "Student's $t$-distribution", after William S. Gosset a.k.a. "Student".
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Student's t-distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-04-21; URL: \url{https://en.wikipedia.org/wiki/Student%27s_t-distribution#How_Student's_distribution_arises_from_sampling}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D147 | shortcut: t | author: JoramSoch | date: 2020-04-21, 07:53.
 \vspace{1em}
 
 
@@ -10250,7 +10885,7 @@ it follows that
 \textbf{Definition:} Let $X_{1}, ..., X_{k}$ be independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) where each of them is following a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}):
 
 \begin{equation} \label{eq:chi2-snorm}
-X_{i} \sim \mathcal{N}(0,1) \; .
+X_{i} \sim \mathcal{N}(0,1) \quad \text{for} \quad i = 1, \ldots, n \; .
 \end{equation}
 
 Then, the sum of their squares follows a chi-square distribution with $k$ degrees of freedom:
@@ -10361,7 +10996,7 @@ Then, the cumulative distribution function ($\rightarrow$ Definition \ref{sec:Ge
 f_Y(y) \, \mathrm{d}y = \int_{V} \prod_{i=1}^{k} \left( \mathcal{N}(x_i; 0, 1) \, \mathrm{d}x_i \right)
 \end{equation}
 
-where $\mathcal{N}(x_i; 0, 1)$ is the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}) and $V$ is the elemental shell volume at $y(x)$, which is proportional to the $(k-1)$-dimensional surface in $k$-space for which equation \eqref{eq:chi2-pdf-y-x} is fulfilled. Using the probability density function of the normal distribution ($\rightarrow$ Definition "norm-pdf"), equation \eqref{eq:chi2-pdf-y-cdf-s1} can be developed as follows:
+where $\mathcal{N}(x_i; 0, 1)$ is the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}) and $V$ is the elemental shell volume at $y(x)$, which is proportional to the $(k-1)$-dimensional surface in $k$-space for which equation \eqref{eq:chi2-pdf-y-x} is fulfilled. Using the probability density function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf}), equation \eqref{eq:chi2-pdf-y-cdf-s1} can be developed as follows:
 
 \begin{equation} \label{eq:chi2-pdf-y-cdf-s2}
 \begin{split}
@@ -10463,6 +11098,42 @@ This leads to the desired result when $m > -k/2$. Observe that, if $m$ is a nonn
 
 \vspace{1em}
 \textbf{Metadata:} ID: P175 | shortcut: chi2-mom | author: kjpetrykowski | date: 2020-10-13, 01:30.
+\vspace{1em}
+
+
+
+\subsection{F-distribution}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:f}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X_1$ and $X_2$ be independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a chi-square distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $d_1$ and $d_2$ degrees of freedom ($\rightarrow$ Definition "dof"), respectively:
+
+\begin{equation} \label{eq:f-chi2}
+\begin{split}
+X_1 &\sim \chi^{2}(d_1) \\
+X_2 &\sim \chi^{2}(d_2) \; .
+\end{split}
+\end{equation}
+
+Then, the ratio of $X_1$ to $X_2$, divided by their respective degrees of freedom, is said to be $F$-distributed with numerator degrees of freedom $d_1$ and denominator degrees of freedom $d_2$:
+
+\begin{equation}\label{eq:f-F}
+Y = \frac{X_1 / d_1}{X_2 / d_2} \sim F(d_1,d_2) \quad \text{where} \quad d_1, d_2 > 0 \; .
+\end{equation}
+
+The $F$-distribution is also called "Snedecor's $F$-distribution" or "Fisher–Snedecor distribution", after Ronald A. Fisher and George W. Snedecor.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "F-distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-04-21; URL: \url{https://en.wikipedia.org/wiki/F-distribution#Characterization}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D146 | shortcut: f | author: JoramSoch | date: 2020-04-21, 07:26.
 \vspace{1em}
 
 
@@ -10685,6 +11356,175 @@ F_X(x) = \frac{B(x; \alpha, \beta)}{B(\alpha, \beta)} \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: P195 | shortcut: beta-cdf | author: JoramSoch | date: 2020-11-19, 08:01.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Mean}]{Mean} \label{sec:beta-mean}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a beta distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:beta}):
+
+\begin{equation} \label{eq:beta-mean-beta}
+X \sim \mathrm{Bet}(\alpha, \beta) \; .
+\end{equation}
+
+Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
+
+\begin{equation} \label{eq:beta-mean-beta-mean}
+\mathrm{E}(X) = \frac{\alpha}{\alpha + \beta} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is the probability-weighted average over all possible values:
+
+\begin{equation} \label{eq:beta-mean-mean}
+\mathrm{E}(X) = \int_{\mathcal{X}} x \cdot f_X(x) \, \mathrm{d}x \; .
+\end{equation}
+
+The probability density function of the beta distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:beta-pdf}) is
+
+\begin{equation} \label{eq:beta-mean-beta-pdf}
+f_X(x) = \frac{1}{\mathrm{B}(\alpha, \beta)} \, x^{\alpha-1} \, (1-x)^{\beta-1}, \quad 0 \leq x \leq 1
+\end{equation}
+
+where the beta function is given by a ratio gamma functions:
+
+\begin{equation} \label{eq:beta-mean-beta-fct}
+\mathrm{B}(\alpha, \beta) = \frac{\Gamma(\alpha) \cdot \Gamma(\beta)}{\Gamma(\alpha+\beta)} \; .
+\end{equation}
+
+Combining \eqref{eq:beta-mean-mean}, \eqref{eq:beta-mean-beta-pdf} and \eqref{eq:beta-mean-beta-fct}, we have:
+
+\begin{equation} \label{eq:beta-mean-beta-mean-s1}
+\begin{split}
+\mathrm{E}(X) &= \int_{0}^{1} x \cdot \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha) \cdot \Gamma(\beta)} \, x^{\alpha-1} \, (1-x)^{\beta-1} \, \mathrm{d}x \\
+&= \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)} \cdot \frac{\Gamma(\alpha+1)}{\Gamma(\alpha+1+\beta)} \int_{0}^{1} \frac{\Gamma(\alpha+1+\beta)}{\Gamma(\alpha+1) \cdot \Gamma(\beta)} \, x^{(\alpha+1)-1} \, (1-x)^{\beta-1} \, \mathrm{d}x \; .
+\end{split}
+\end{equation}
+
+Employing the relation $\Gamma(x+1) = \Gamma(x) \cdot x$, we have
+
+\begin{equation} \label{eq:beta-mean-beta-mean-s2}
+\begin{split}
+\mathrm{E}(X) &= \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)} \cdot \frac{\alpha \cdot \Gamma(\alpha)}{(\alpha+\beta) \cdot \Gamma(\alpha+\beta)} \int_{0}^{1} \frac{\Gamma(\alpha+1+\beta)}{\Gamma(\alpha+1) \cdot \Gamma(\beta)} \, x^{(\alpha+1)-1} \, (1-x)^{\beta-1} \, \mathrm{d}x \\
+&= \frac{\alpha}{\alpha+\beta} \int_{0}^{1} \frac{\Gamma(\alpha+1+\beta)}{\Gamma(\alpha+1) \cdot \Gamma(\beta)} \, x^{(\alpha+1)-1} \, (1-x)^{\beta-1} \, \mathrm{d}x
+\end{split}
+\end{equation}
+
+and again using the density of the beta distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:beta-pdf}), we get
+
+\begin{equation} \label{eq:beta-mean-beta-mean-s3}
+\begin{split}
+\mathrm{E}(X) &= \frac{\alpha}{\alpha+\beta} \int_{0}^{1} \mathrm{Bet}(x; \alpha+1, \beta) \, \mathrm{d}x \\
+&= \frac{\alpha}{\alpha+\beta} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Boer Commander (2020): "Beta Distribution Mean and Variance Proof"; in: \textit{YouTube}, retrieved on 2021-04-29; URL: \url{https://www.youtube.com/watch?v=3OgCcnpZtZ8}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P228 | shortcut: beta-mean | author: JoramSoch | date: 2021-04-29, 09:12.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Variance}]{Variance} \label{sec:beta-var}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a beta distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:beta}):
+
+\begin{equation} \label{eq:beta-var-beta}
+X \sim \mathrm{Bet}(\alpha, \beta) \; .
+\end{equation}
+
+Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is
+
+\begin{equation} \label{eq:beta-var-beta-var}
+\mathrm{Var}(X) = \frac{\alpha \beta}{(\alpha + \beta + 1) \cdot (\alpha + \beta)^2} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) can be expressed in terms of expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-mean}) as
+
+\begin{equation} \label{eq:beta-var-var-mean}
+\mathrm{Var}(X) = \mathrm{E}(X^2) - \mathrm{E}(X)^2 \; .
+\end{equation}
+
+The expected value of a beta random variable ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:beta-mean}) is
+
+\begin{equation} \label{eq:beta-var-beta-mean}
+\mathrm{E}(X) = \frac{\alpha}{\alpha+\beta} \; .
+\end{equation}
+
+The probability density function of the beta distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:beta-pdf}) is
+
+\begin{equation} \label{eq:beta-var-beta-pdf}
+f_X(x) = \frac{1}{\mathrm{B}(\alpha, \beta)} \, x^{\alpha-1} \, (1-x)^{\beta-1}, \quad 0 \leq x \leq 1
+\end{equation}
+
+where the beta function is given by a ratio gamma functions:
+
+\begin{equation} \label{eq:beta-var-beta-fct}
+\mathrm{B}(\alpha, \beta) = \frac{\Gamma(\alpha) \cdot \Gamma(\beta)}{\Gamma(\alpha+\beta)} \; .
+\end{equation}
+
+Therefore, the expected value of a squared beta random variable becomes
+
+\begin{equation} \label{eq:beta-var-beta-sqr-mean-s1}
+\begin{split}
+\mathrm{E}(X^2) &= \int_{0}^{1} x^2 \cdot \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha) \cdot \Gamma(\beta)} \, x^{\alpha-1} \, (1-x)^{\beta-1} \, \mathrm{d}x \\
+&= \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)} \cdot \frac{\Gamma(\alpha+2)}{\Gamma(\alpha+2+\beta)} \int_{0}^{1} \frac{\Gamma(\alpha+2+\beta)}{\Gamma(\alpha+2) \cdot \Gamma(\beta)} \, x^{(\alpha+2)-1} \, (1-x)^{\beta-1} \, \mathrm{d}x \; .
+\end{split}
+\end{equation}
+
+Twice-applying the relation $\Gamma(x+1) = \Gamma(x) \cdot x$, we have
+
+\begin{equation} \label{eq:beta-var-beta-sqr-mean-s2}
+\begin{split}
+\mathrm{E}(X^2) &= \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)} \cdot \frac{(\alpha+1) \cdot \alpha \cdot \Gamma(\alpha)}{(\alpha+\beta+1) \cdot (\alpha+\beta) \cdot \Gamma(\alpha+\beta)} \int_{0}^{1} \frac{\Gamma(\alpha+2+\beta)}{\Gamma(\alpha+2) \cdot \Gamma(\beta)} \, x^{(\alpha+2)-1} \, (1-x)^{\beta-1} \, \mathrm{d}x \\
+&= \frac{(\alpha+1) \cdot \alpha}{(\alpha+\beta+1) \cdot (\alpha+\beta)} \int_{0}^{1} \frac{\Gamma(\alpha+2+\beta)}{\Gamma(\alpha+2) \cdot \Gamma(\beta)} \, x^{(\alpha+2)-1} \, (1-x)^{\beta-1} \, \mathrm{d}x
+\end{split}
+\end{equation}
+
+and again using the density of the beta distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:beta-pdf}), we get
+
+\begin{equation} \label{eq:beta-var-beta-sqr-mean-s3}
+\begin{split}
+\mathrm{E}(X^2) &= \frac{(\alpha+1) \cdot \alpha}{(\alpha+\beta+1) \cdot (\alpha+\beta)} \int_{0}^{1} \mathrm{Bet}(x; \alpha+2, \beta) \, \mathrm{d}x \\
+&= \frac{(\alpha+1) \cdot \alpha}{(\alpha+\beta+1) \cdot (\alpha+\beta)} \; .
+\end{split}
+\end{equation}
+
+Plugging \eqref{eq:beta-var-beta-sqr-mean-s3} and \eqref{eq:beta-var-beta-mean} into \eqref{eq:beta-var-var-mean}, the variance of a beta random variable finally becomes
+
+\begin{equation} \label{eq:beta-var-beta-var-qed}
+\begin{split}
+\mathrm{Var}(X) &= \frac{(\alpha+1) \cdot \alpha}{(\alpha+\beta+1) \cdot (\alpha+\beta)} - \left( \frac{\alpha}{\alpha+\beta} \right)^2 \\
+&= \frac{(\alpha^2+\alpha) \cdot (\alpha + \beta)}{(\alpha + \beta + 1) \cdot (\alpha + \beta)^2} - \frac{\alpha^2 \cdot (\alpha + \beta + 1)}{(\alpha + \beta + 1) \cdot (\alpha + \beta)^2} \\
+&= \frac{(\alpha^3 + \alpha^2 \beta + \alpha^2 + \alpha \beta) - (\alpha^3 + \alpha^2 \beta + \alpha^2)}{(\alpha + \beta + 1) \cdot (\alpha + \beta)^2} \\
+&= \frac{\alpha \beta}{(\alpha + \beta + 1) \cdot (\alpha + \beta)^2} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Boer Commander (2020): "Beta Distribution Mean and Variance Proof"; in: \textit{YouTube}, retrieved on 2021-04-29; URL: \url{https://www.youtube.com/watch?v=3OgCcnpZtZ8}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P229 | shortcut: beta-var | author: JoramSoch | date: 2021-04-29, 09:31.
 \vspace{1em}
 
 
@@ -11567,6 +12407,39 @@ with the mean $\mu_{1 \vert 2}$ and variance $\Sigma_{1 \vert 2}$ given by \eqre
 
 
 
+\subsection{Multivariate t-distribution}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:mvt}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be an $n \times 1$ random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, $X$ is said to follow a multivariate $t$-distribution with mean $\mu$, scale matrix $\Sigma$ and degrees of freedom $\nu$
+
+\begin{equation} \label{eq:mvt-mvt}
+X \sim t(\mu, \Sigma, \nu) \; ,
+\end{equation}
+
+if and only if its probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) is given by
+
+\begin{equation} \label{eq:mvt-mvt-pdf}
+t(x; \mu, \Sigma, \nu) = \sqrt{\frac{1}{(\nu \pi)^{n} |\Sigma|}} \, \frac{\Gamma([\nu+n]/2)}{\Gamma(\nu/2)} \, \left[ 1 + \frac{1}{\nu} (x-\mu)^\mathrm{T} \Sigma^{-1} (x-\mu) \right]
+\end{equation}
+
+where $\mu$ is an $n \times 1$ real vector, $\Sigma$ is an $n \times n$ positive definite matrix and $\nu > 0$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Koch KR (2007): "Multivariate t-Distribution"; in: \textit{Introduction to Bayesian Statistics}, ch. 2.5.2, pp. 53-55; URL: \url{https://www.springer.com/gp/book/9783540727231}; DOI: 10.1007/978-3-540-72726-2.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D148 | shortcut: mvt | author: JoramSoch | date: 2020-04-21, 08:16.
+\vspace{1em}
+
+
+
 \subsection{Normal-gamma distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:ng}
@@ -11768,7 +12641,7 @@ Then, the marginal distribution ($\rightarrow$ Definition \ref{sec:General Theor
 y \sim \mathrm{Gam}(a, b)
 \end{equation}
 
-and the marginal distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-marg}) of $x$ is a multivariate t-distribution ($\rightarrow$ Definition "mvt")
+and the marginal distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist-marg}) of $x$ is a multivariate t-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvt})
 
 \begin{equation} \label{eq:ng-marg-ng-marg-x}
 x \sim \mathrm{t}\left( \mu, \left(\frac{a}{b} \Lambda \right)^{-1}, 2a \right) \; .
@@ -12570,6 +13443,115 @@ y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \; .
 
 
 
+\subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:ug-mle}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let there be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ug}) $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$:
+
+\begin{equation} \label{eq:ug-mle-ug}
+y_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+Then, the maximum likelihood estimates ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}) for mean $\mu$ and variance $\sigma^2$ are given by
+
+\begin{equation} \label{eq:ug-mle-ug-MLE}
+\begin{split}
+\hat{\mu} &= \frac{1}{n} \sum_{i=1}^n y_i \\
+\hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^n (y_i - \bar{y})^2 \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) for each observation is given by the probability density function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf})
+
+\begin{equation} \label{eq:ug-mle-ug-yi}
+p(y_i|\mu,\sigma^2) = \mathcal{N}(x; \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \cdot \exp \left[ -\frac{1}{2} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right]
+\end{equation}
+
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
+
+\begin{equation} \label{eq:ug-mle-ug-LF-s1}
+p(y|\mu,\sigma^2) = \prod_{i=1}^n p(y_i|\mu) = \sqrt{ \frac{1}{(2 \pi \sigma^2)^n} } \cdot \exp \left[ -\frac{1}{2} \sum_{i=1}^{n} \left( \frac{y_i-\mu}{\sigma} \right)^2 \right] \; .
+\end{equation}
+
+This can be developed into
+
+\begin{equation} \label{eq:ug-mle-ug-LF-s2}
+\begin{split}
+p(y|\mu,\sigma^2) &= \left( \frac{1}{2 \pi \sigma^2} \right)^{n/2} \cdot \exp \left[ -\frac{1}{2} \sum_{i=1}^{n} \left( \frac{y_i^2 - 2 y_i \mu + \mu^2}{\sigma^2} \right) \right] \\
+&= \left( \frac{1}{2 \pi \sigma^2} \right)^{n/2} \cdot \exp \left[ -\frac{1}{2 \sigma^2} \left( y^\mathrm{T} y - 2 n \bar{y} \mu + n \mu^2 \right) \right]
+\end{split}
+\end{equation}
+
+where $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$ is the mean of data points and $y^\mathrm{T} y = \sum_{i=1}^{n} y_i^2$ is the sum of squared data points.
+
+Thus, the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) is
+
+\begin{equation} \label{eq:ug-mle-ug-LL}
+\mathrm{LL}(\mu,\sigma^2) = \log p(y|\mu,\sigma^2) = -\frac{n}{2} \log (2 \pi \sigma^2) - \frac{1}{2 \sigma^2} \left( y^\mathrm{T} y - 2 n \bar{y} \mu + n \mu^2 \right) \; .
+\end{equation}
+
+\vspace{1em}
+The derivative of the log-likelihood function \eqref{eq:ug-mle-ug-LL} with respect to $\mu$ is
+
+\begin{equation} \label{eq:ug-mle-dLL-dmu}
+\frac{\mathrm{d}\mathrm{LL}(\mu,\sigma^2)}{\mathrm{d}\mu} = \frac{n \bar{y}}{\sigma^2} - \frac{n \mu}{\sigma^2} = \frac{n}{\sigma^2} (\bar{y}-\mu)
+\end{equation}
+
+and setting this derivative to zero gives the MLE for $\mu$:
+
+\begin{equation} \label{eq:ug-mle-mu-MLE}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\mu},\sigma^2)}{\mathrm{d}\mu} &= 0 \\
+0 &= \frac{n}{\sigma^2} (\bar{y}-\hat{\mu}) \\
+0 &= \bar{y}-\hat{\mu} \\
+\hat{\mu} &= \bar{y} \\
+\hat{\mu} &= \frac{1}{n} \sum_{i=1}^n y_i \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+The derivative of the log-likelihood function \eqref{eq:ug-mle-ug-LL} at $\hat{\mu}$ with respect to $\sigma^2$ is
+
+\begin{equation} \label{eq:ug-mle-dLL-ds2}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\mu},\sigma^2)}{\mathrm{d}\sigma^2} &= -\frac{n}{2} \frac{1}{\sigma^2} + \frac{1}{2 (\sigma^2)^2} \left( y^\mathrm{T} y - 2 n \bar{y} \hat{\mu} + n \hat{\mu}^2 \right) \\
+&= -\frac{n}{2 \sigma^2} + \frac{1}{2 (\sigma^2)^2} \sum_{i=1}^n \left( y_i^2 - 2 y_i \hat{\mu} + \hat{\mu}^2 \right) \\
+&= -\frac{n}{2 \sigma^2} + \frac{1}{2 (\sigma^2)^2} \sum_{i=1}^n (y_i - \hat{\mu})^2
+\end{split}
+\end{equation}
+
+and setting this derivative to zero gives the MLE for $\sigma^2$:
+
+\begin{equation} \label{eq:ug-mle-s2-MLE}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\mu},\hat{\sigma}^2)}{\mathrm{d}\sigma^2} &= 0 \\
+0 &= \frac{1}{2 (\hat{\sigma}^2)^2} \sum_{i=1}^n (y_i - \hat{\mu})^2 \\
+\frac{n}{2 \hat{\sigma}^2} &= \frac{1}{2 (\hat{\sigma}^2)^2} \sum_{i=1}^n (y_i - \hat{\mu})^2 \\
+\frac{2 (\hat{\sigma}^2)^2}{n} \cdot \frac{n}{2 \hat{\sigma}^2} &= \frac{2 (\hat{\sigma}^2)^2}{n} \cdot \frac{1}{2 (\hat{\sigma}^2)^2} \sum_{i=1}^n (y_i - \hat{\mu})^2 \\
+\hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^n (y_i - \hat{\mu})^2 \\
+\hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^n (y_i - \bar{y})^2 \\
+\end{split}
+\end{equation}
+
+\vspace{1em}
+Together, \eqref{eq:ug-mle-mu-MLE} and \eqref{eq:ug-mle-s2-MLE} constitute the MLE for the univariate Gaussian.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop CM (2006): "Bayesian inference for the Gaussian"; in: \textit{Pattern Recognition for Machine Learning}, pp. 93-94, eqs. 2.121, 2.122; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P223 | shortcut: ug-mle | author: JoramSoch | date: 2021-04-16, 11:03.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{One-sample t-test}]{One-sample t-test} \label{sec:ug-ttest1}
 \setcounter{equation}{0}
 
@@ -12585,7 +13567,7 @@ be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical
 t = \frac{\bar{y}-\mu_0}{s / \sqrt{n}}
 \end{equation}
 
-with sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and sample variance ($\rightarrow$ Definition "var-samp") $s^2$ follows a Student's t-distribution ($\rightarrow$ Definition "t") with $n-1$ degrees of freedom ($\rightarrow$ Definition "dof")
+with sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$ and sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) $s^2$ follows a Student's t-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom ($\rightarrow$ Definition "dof")
 
 \begin{equation} \label{eq:ug-ttest1-t-dist}
 t \sim \mathrm{t}(n-1)
@@ -12599,13 +13581,13 @@ H_0: \; \mu = \mu_0 \; .
 
 
 \vspace{1em}
-\textbf{Proof:} The sample mean ($\rightarrow$ Definition "mean-samp") is given by
+\textbf{Proof:} The sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) is given by
 
 \begin{equation} \label{eq:ug-ttest1-mean-samp}
 \bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i
 \end{equation}
 
-and the sample variance ($\rightarrow$ Definition "var-samp") is given by
+and the sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) is given by
 
 \begin{equation} \label{eq:ug-ttest1-var-samp}
 s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (y_i - \bar{y})^2 \; .
@@ -12635,7 +13617,7 @@ Finally, since the ratio of a standard normal random variable and a (normalized)
 t = \frac{\bar{y}-\mu_0}{s / \sqrt{n}} = \frac{Z}{\sqrt{V / (n-1)}} \sim \mathrm{t}(n-1) \; .
 \end{equation}
 
-This means that the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ Definition "t") with $n-1$ degrees of freedom ($\rightarrow$ Definition "dof") using a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+This means that the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom ($\rightarrow$ Definition "dof") using a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
 
 
 \vspace{1em}
@@ -12669,7 +13651,7 @@ be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical
 t = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{s_p \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
 \end{equation}
 
-with sample means ($\rightarrow$ Definition "mean-samp") $\bar{y}_1$ and $\bar{y}_2$ and pooled standard deviation ($\rightarrow$ Definition "std-pool") $s_p$ follows a Student's t-distribution ($\rightarrow$ Definition "t") with $n_1+n_2-1$ degrees of freedom ($\rightarrow$ Definition "dof")
+with sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}_1$ and $\bar{y}_2$ and pooled standard deviation ($\rightarrow$ Definition "std-pool") $s_p$ follows a Student's t-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:t}) with $n_1+n_2-1$ degrees of freedom ($\rightarrow$ Definition "dof")
 
 \begin{equation} \label{eq:ug-ttest2-t-dist}
 t \sim \mathrm{t}(n_1+n_2-1)
@@ -12683,7 +13665,7 @@ H_0: \; \mu_1-\mu_2 = \mu_\Delta \; .
 
 
 \vspace{1em}
-\textbf{Proof:} The sample means ($\rightarrow$ Definition "mean-samp") are given by
+\textbf{Proof:} The sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) are given by
 
 \begin{equation} \label{eq:ug-ttest2-mean-samp}
 \begin{split}
@@ -12698,7 +13680,7 @@ and the pooled standard deviation ($\rightarrow$ Definition "std-pool") is given
 s_p = \sqrt{ \frac{(n_1-1) s^2_1 + (n_2-1) s^2_2}{n_1+n_2-2} }
 \end{equation}
 
-with the sample variances ($\rightarrow$ Definition "var-samp")
+with the sample variances ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp})
 
 \begin{equation} \label{eq:ug-ttest2-var-samp}
 \begin{split}
@@ -12734,7 +13716,7 @@ Finally, since the ratio of a standard normal random variable and a (normalized)
 t = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{s_p \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} = \frac{Z}{\sqrt{V / (n_1+n_2-2)}} \sim \mathrm{t}(n_1+n_2-2) \; .
 \end{equation}
 
-This means that the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ Definition "t") with $n_1+n_2-2$ degrees of freedom ($\rightarrow$ Definition "dof") using a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+This means that the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:t}) with $n_1+n_2-2$ degrees of freedom ($\rightarrow$ Definition "dof") using a significance level ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
 
 
 \vspace{1em}
@@ -12766,7 +13748,7 @@ is a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical
 t = \frac{\bar{d}-\mu_0}{s_d / \sqrt{n}} \quad \text{where} \quad d_i = y_{i1} - y_{i2}
 \end{equation}
 
-with sample mean ($\rightarrow$ Definition "mean-samp") $\bar{d}$ and sample variance ($\rightarrow$ Definition "var-samp") $s^2_d$ follows a Student's t-distribution ($\rightarrow$ Definition "t") with $n-1$ degrees of freedom ($\rightarrow$ Definition "dof")
+with sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{d}$ and sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) $s^2_d$ follows a Student's t-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom ($\rightarrow$ Definition "dof")
 
 \begin{equation} \label{eq:ug-ttestp-t-dist}
 t \sim \mathrm{t}(n-1)
@@ -13248,7 +14230,7 @@ Then, the maximum likelihood estimate ($\rightarrow$ Definition \ref{sec:General
 \hat{\mu} = \bar{y}
 \end{equation}
 
-where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "mean-sample")
+where $\bar{y}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp})
 
 \begin{equation} \label{eq:ugkv-mle-y-mean}
 \bar{y} = \frac{1}{n} \sum_{i=1}^n y_i \; .
@@ -13342,7 +14324,7 @@ be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical
 z = \sqrt{n} \, \frac{\bar{y}-\mu_0}{\sigma}
 \end{equation}
 
-with sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ follows a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
+with sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$ follows a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
 
 \begin{equation} \label{eq:ugkv-ztest1-z-dist}
 z \sim \mathcal{N}(0, 1)
@@ -13356,7 +14338,7 @@ H_0: \; \mu = \mu_0 \; .
 
 
 \vspace{1em}
-\textbf{Proof:} The sample mean ($\rightarrow$ Definition "mean-samp") is given by
+\textbf{Proof:} The sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) is given by
 
 \begin{equation} \label{eq:ugkv-ztest1-mean-samp}
 \bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i \; .
@@ -13415,7 +14397,7 @@ be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical
 z = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}
 \end{equation}
 
-with sample means ($\rightarrow$ Definition "mean-samp") $\bar{y}_1$ and $\bar{y}_2$ follows a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
+with sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}_1$ and $\bar{y}_2$ follows a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
 
 \begin{equation} \label{eq:ugkv-ztest2-z-dist}
 z \sim \mathcal{N}(0, 1)
@@ -13429,7 +14411,7 @@ H_0: \; \mu_1-\mu_2 = \mu_\Delta \; .
 
 
 \vspace{1em}
-\textbf{Proof:} The sample means ($\rightarrow$ Definition "mean-samp") are given by
+\textbf{Proof:} The sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) are given by
 
 \begin{equation} \label{eq:ugkv-ztest2-mean-samp}
 \begin{split}
@@ -13497,7 +14479,7 @@ is a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical
 z = \sqrt{n} \, \frac{\bar{d}-\mu_0}{\sigma} \quad \text{where} \quad d_i = y_{i1} - y_{i2}
 \end{equation}
 
-with sample mean ($\rightarrow$ Definition "mean-samp") $\bar{d}$ follows a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
+with sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{d}$ follows a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
 
 \begin{equation} \label{eq:ugkv-ztestp-z-dist}
 z \sim \mathcal{N}(0, 1)
@@ -13517,7 +14499,7 @@ H_0: \; \mu = \mu_0 \; .
 d_i = y_{i1} - y_{i2} \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \; .
 \end{equation}
 
-Therefore, $d_1, \ldots, d_n$ satisfy the conditions of the one-sample z-test ($\rightarrow$ Proof "ug-ztest1") which results in the test statistic given by \eqref{eq:ugkv-ztestp-z}.
+Therefore, $d_1, \ldots, d_n$ satisfy the conditions of the one-sample z-test ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-ztest1}) which results in the test statistic given by \eqref{eq:ugkv-ztestp-z}.
 
 
 \vspace{1em}
@@ -13549,7 +14531,7 @@ be a univariate Gaussian data set ($\rightarrow$ Definition \ref{sec:Statistical
 p(\mu) = \mathcal{N}(\mu; \mu_0, \lambda_0^{-1})
 \end{equation}
 
-with prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu_0$ and prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) precision ($\rightarrow$ Definition "prec") $\lambda_0$.
+with prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu_0$ and prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) $\lambda_0$.
 
 
 \vspace{1em}
@@ -13668,7 +14650,7 @@ and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General The
 \end{split}
 \end{equation}
 
-with the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$.
+with the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) $\tau = 1/\sigma^2$.
 
 
 \vspace{1em}
@@ -13812,7 +14794,7 @@ where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General T
 \end{split}
 \end{equation}
 
-with the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$.
+with the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) $\tau = 1/\sigma^2$.
 
 
 \vspace{1em}
@@ -13912,7 +14894,7 @@ Then, accuracy and complexity ($\rightarrow$ Proof \ref{sec:Model Selection}/\re
 \end{split}
 \end{equation}
 
-where $\mu_n$ and $\lambda_n$ are the posterior hyperparameters for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}), $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition "prec") and $\bar{y}$ is the sample mean ($\rightarrow$ Definition "mean-samp").
+where $\mu_n$ and $\lambda_n$ are the posterior hyperparameters for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}), $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) and $\bar{y}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}).
 
 
 \vspace{1em}
@@ -13993,7 +14975,7 @@ Then, the log Bayes factor ($\rightarrow$ Definition \ref{sec:Model Selection}/\
 \mathrm{LBF}_{10} = \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right)
 \end{equation}
 
-where $\mu_n$ and $\lambda_n$ are the posterior hyperparameters for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}) which are functions of the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$ and the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$.
+where $\mu_n$ and $\lambda_n$ are the posterior hyperparameters for the univariate Gaussian with known variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ugkv-post}) which are functions of the inverse variance or precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) $\tau = 1/\sigma^2$ and the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$.
 
 
 \vspace{1em}
@@ -14030,7 +15012,7 @@ where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General T
 \end{split}
 \end{equation}
 
-with the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$.
+with the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) $\tau = 1/\sigma^2$.
 
 
 \vspace{1em}
@@ -14088,7 +15070,7 @@ where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General T
 \end{split}
 \end{equation}
 
-with the sample mean ($\rightarrow$ Definition "mean-samp") $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition "prec") $\tau = 1/\sigma^2$. Plugging $\mu_n$ from \eqref{eq:ugkv-lbfmean-UGkv-post-par} into \eqref{eq:ugkv-lbfmean-UGkv-LBF-m10-s1}, we obtain:
+with the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$ and the inverse variance or precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) $\tau = 1/\sigma^2$. Plugging $\mu_n$ from \eqref{eq:ugkv-lbfmean-UGkv-post-par} into \eqref{eq:ugkv-lbfmean-UGkv-LBF-m10-s1}, we obtain:
 
 \begin{equation} \label{eq:ugkv-lbfmean-UGkv-LBF-m10-s2}
 \begin{split}
@@ -14174,7 +15156,7 @@ Then, the cross-validated log model evidences ($\rightarrow$ Definition \ref{sec
 \end{split}
 \end{equation}
 
-where $\bar{y}$ is the sample mean ($\rightarrow$ Definition "mean-samp"), $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition "prec"), $y_1^{(i)}$ are the training data in the $i$-th cross-validation fold and $S$ is the number of data subsets ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}).
+where $\bar{y}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}), $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}), $y_1^{(i)}$ are the training data in the $i$-th cross-validation fold and $S$ is the number of data subsets ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}).
 
 
 \vspace{1em}
@@ -14297,7 +15279,7 @@ Then, the cross-validated ($\rightarrow$ Definition \ref{sec:Model Selection}/\r
 \mathrm{cvLBF}_{10} = \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right)
 \end{equation}
 
-where $\bar{y}$ is the sample mean ($\rightarrow$ Definition "mean-samp"), $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition "prec"), $y_1^{(i)}$ are the training data in the $i$-th cross-validation fold and $S$ is the number of data subsets ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}).
+where $\bar{y}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}), $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}), $y_1^{(i)}$ are the training data in the $i$-th cross-validation fold and $S$ is the number of data subsets ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}).
 
 
 \vspace{1em}
@@ -14364,7 +15346,7 @@ Then, the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{
 \left\langle \mathrm{cvLBF}_{10} \right\rangle = \frac{S}{2} \log \left( \frac{S-1}{S} \right) + \frac{1}{2} \left[ \tau n \mu^2 \right]
 \end{equation}
 
-where $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition "prec") and $S$ is the number of data subsets ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}).
+where $\tau = 1/\sigma^2$ is the inverse variance or precision ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prec}) and $S$ is the number of data subsets ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:cvlme}).
 
 
 \vspace{1em}
@@ -15683,7 +16665,7 @@ is given by
 \mathrm{Pr}\left( \mathrm{H}_1 | y \right) = 1 - \mathrm{T}\left( -\frac{c^\mathrm{T} \mu}{\sqrt{c^\mathrm{T} \Sigma c}}; \nu \right)
 \end{equation}
 
-where $c$ is a $p \times 1$ contrast vector ($\rightarrow$ Definition "con"), $\mathrm{T}(x; \nu)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the t-distribution ($\rightarrow$ Definition "t") with $\nu$ degrees of freedom ($\rightarrow$ Definition "dof") and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
+where $c$ is a $p \times 1$ contrast vector ($\rightarrow$ Definition "con"), $\mathrm{T}(x; \nu)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the t-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:t}) with $\nu$ degrees of freedom ($\rightarrow$ Definition "dof") and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
 
 
 \vspace{1em}
@@ -15720,7 +16702,7 @@ with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Th
 \end{split}
 \end{equation}
 
-Define the quantity $\gamma = c^\mathrm{T} \beta$. According to the linear transformation theorem for the multivariate t-distribution ($\rightarrow$ Proof "mvt-ltt"), $\gamma$ also follows a multivariate t-distribution ($\rightarrow$ Definition "mvt"):
+Define the quantity $\gamma = c^\mathrm{T} \beta$. According to the linear transformation theorem for the multivariate t-distribution ($\rightarrow$ Proof "mvt-ltt"), $\gamma$ also follows a multivariate t-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvt}):
 
 \begin{equation} \label{eq:blr-pp-GLM-NG-post-gamma}
 p(\gamma|y) = \mathrm{t}(\gamma; c^\mathrm{T} \mu, c^\mathrm{T} \Sigma \, c, \nu) \; .
@@ -15787,7 +16769,7 @@ is given by the credibility level ($\rightarrow$ Definition "cr")
 (1-\alpha) = \mathrm{F}\left( \left[ \mu^\mathrm{T} C (C^\mathrm{T} \Sigma \, C)^{-1} C^\mathrm{T} \mu \right]/q; q, \nu \right)
 \end{equation}
 
-where $C$ is a $p \times q$ contrast matrix ($\rightarrow$ Definition "con"), $\mathrm{F}(x; v, w)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the F-distribution ($\rightarrow$ Definition "f") with $v$ numerator degrees of freedom ($\rightarrow$ Definition "dof"), $w$ denominator degrees of freedom ($\rightarrow$ Definition "dof") and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
+where $C$ is a $p \times q$ contrast matrix ($\rightarrow$ Definition "con"), $\mathrm{F}(x; v, w)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the F-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:f}) with $v$ numerator degrees of freedom ($\rightarrow$ Definition "dof"), $w$ denominator degrees of freedom ($\rightarrow$ Definition "dof") and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
 
 
 \vspace{1em}
@@ -15824,7 +16806,7 @@ with the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Th
 \end{split}
 \end{equation}
 
-Define the quantity $\gamma = C^\mathrm{T} \beta$. According to the linear transformation theorem for the multivariate t-distribution ($\rightarrow$ Proof "mvt-ltt"), $\gamma$ also follows a multivariate t-distribution ($\rightarrow$ Definition "mvt"):
+Define the quantity $\gamma = C^\mathrm{T} \beta$. According to the linear transformation theorem for the multivariate t-distribution ($\rightarrow$ Proof "mvt-ltt"), $\gamma$ also follows a multivariate t-distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvt}):
 
 \begin{equation} \label{eq:blr-pcr-GLM-NG-post-gamma}
 p(\gamma|y) = \mathrm{t}(\gamma; C^\mathrm{T} \mu, C^\mathrm{T} \Sigma \, C, \nu) \; .
@@ -15930,7 +16912,7 @@ Otherwise, it is called a general linear model with correlated observations.
 Y = X B + E, \; E \sim \mathcal{MN}(0, \sigma^2 I_n, \Sigma) \; ,
 \end{equation}
 
-the ordinary least squares ($\rightarrow$ Definition "ols") parameters estimates are given by
+the ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}) parameters estimates are given by
 
 \begin{equation} \label{eq:glm-ols-OLS}
 \hat{B} = (X^\mathrm{T} X)^{-1} X^\mathrm{T} Y \; .
@@ -15938,7 +16920,7 @@ the ordinary least squares ($\rightarrow$ Definition "ols") parameters estimates
 
 
 \vspace{1em}
-\textbf{Proof:} Let $\hat{B}$ be the ordinary least squares ($\rightarrow$ Definition "ols") (OLS) solution and let $\hat{E} = Y - X\hat{B}$ be the resulting matrix of residuals. According to the exogeneity assumption of OLS, the errors have conditional mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) zero
+\textbf{Proof:} Let $\hat{B}$ be the ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}) (OLS) solution and let $\hat{E} = Y - X\hat{B}$ be the resulting matrix of residuals. According to the exogeneity assumption of OLS, the errors have conditional mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) zero
 
 \begin{equation} \label{eq:glm-ols-OLS-exo}
 \mathrm{E}(E|X) = 0 \; ,
@@ -15990,7 +16972,7 @@ X^\mathrm{T} X\hat{B} &= X^\mathrm{T} Y \\
 Y = X B + E, \; E \sim \mathcal{MN}(0, V, \Sigma) \; ,
 \end{equation}
 
-the weighted least sqaures ($\rightarrow$ Definition "wls") parameter estimates are given by
+the weighted least sqaures ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-wls}) parameter estimates are given by
 
 \begin{equation} \label{eq:glm-wls-WLS}
 \hat{B} = (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} Y \; .
@@ -16582,7 +17564,7 @@ Then, the maximum likelihood estimate ($\rightarrow$ Definition \ref{sec:General
 \hat{\lambda} = \bar{y}
 \end{equation}
 
-where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "mean-sample")
+where $\bar{y}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp})
 
 \begin{equation} \label{eq:poiss-mle-y-mean}
 \bar{y} = \frac{1}{n} \sum_{i=1}^n y_i \; .
@@ -16663,6 +17645,301 @@ This demonstrates that the estimate $\hat{\lambda} = \bar{y}$ maximizes the like
 
 
 
+\subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:poiss-prior}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let there be a Poisson-distributed data ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:poiss-data}) set $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$:
+
+\begin{equation} \label{eq:poiss-prior-Poiss}
+y_i \sim \mathrm{Poiss}(\lambda), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+Then, the conjugate prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior-conj}) for the model parameter $\lambda$ is a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam}):
+
+\begin{equation} \label{eq:poiss-prior-Poiss-prior}
+p(\lambda) = \mathrm{Gam}(\lambda; a_0, b_0) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} With the probability mass function of the Poisson distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:poiss-pmf}), the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) for each observation implied by \eqref{eq:poiss-prior-Poiss} is given by
+
+\begin{equation} \label{eq:poiss-prior-Poiss-LF-s1}
+p(y_i|\lambda) = \mathrm{Poiss}(y_i; \lambda) = \frac{\lambda^{y_i} \cdot \exp\left[-\lambda\right]}{y_i !}
+\end{equation}
+
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
+
+\begin{equation} \label{eq:poiss-prior-Poiss-LF-s2}
+p(y|\lambda) = \prod_{i=1}^n p(y_i|\lambda) = \prod_{i=1}^n \frac{\lambda^{y_i} \cdot \exp\left[-\lambda\right]}{y_i !} \; .
+\end{equation}
+
+Resolving the product in the likelihood function, we have
+
+\begin{equation} \label{eq:poiss-prior-Poiss-LF-s3}
+\begin{split}
+p(y|\lambda) &= \prod_{i=1}^n \frac{1}{y_i !} \cdot \prod_{i=1}^n \lambda^{y_i} \cdot \prod_{i=1}^n \exp\left[-\lambda\right] \\
+&= \prod_{i=1}^n \left(\frac{1}{y_i !}\right) \cdot \lambda^{n \bar{y}} \cdot \exp\left[-n \lambda\right]
+\end{split}
+\end{equation}
+
+where $\bar{y}$ is the mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) of $y$:
+
+\begin{equation} \label{eq:poiss-prior-y-mean}
+\bar{y} = \frac{1}{n} \sum_{i=1}^n y_i \; .
+\end{equation}
+
+In other words, the likelihood function is proportional to a power of $\lambda$ times an exponential of $\lambda$:
+
+\begin{equation} \label{eq:poiss-prior-Poiss-LF-prop}
+p(y|\lambda) \propto \lambda^{n \bar{y}} \cdot \exp\left[-n \lambda\right] \; .
+\end{equation}
+
+The same is true for a gamma distribution over $\lambda$
+
+\begin{equation} \label{eq:poiss-prior-Poiss-prior-s1}
+p(\lambda) = \mathrm{Gam}(\lambda; a_0, b_0)
+\end{equation}
+
+the probability density function of which ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf})
+
+\begin{equation} \label{eq:poiss-prior-Poiss-prior-s2}
+p(\lambda) = \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda]
+\end{equation}
+
+exhibits the same proportionality
+
+\begin{equation} \label{eq:poiss-prior-Poiss-prior-s3}
+p(\lambda) \propto \lambda^{a_0-1} \cdot \exp[-b_0 \lambda]
+\end{equation}
+
+and is therefore conjugate relative to the likelihood.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Gelman A, Carlin JB, Stern HS, Dunson DB, Vehtari A, Rubin DB (2014): "Other standard single-parameter models"; in: \textit{Bayesian Data Analysis}, 3rd edition, ch. 2.6, p. 45, eq. 2.14ff.; URL: \url{http://www.stat.columbia.edu/~gelman/book/}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P225 | shortcut: poiss-prior | author: JoramSoch | date: 2020-04-21, 08:31.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:poiss-post}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let there be a Poisson-distributed data ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:poiss-data}) set $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$:
+
+\begin{equation} \label{eq:poiss-post-Poiss}
+y_i \sim \mathrm{Poiss}(\lambda), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+Moreover, assume a gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:poiss-prior}) over the model parameter $\lambda$:
+
+\begin{equation} \label{eq:poiss-post-Poiss-prior}
+p(\lambda) = \mathrm{Gam}(\lambda; a_0, b_0) \; .
+\end{equation}
+
+Then, the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) is also a gamma distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:gam})
+
+\begin{equation} \label{eq:poiss-post-Poiss-post}
+p(\lambda|y) = \mathrm{Gam}(\lambda; a_n, b_n)
+\end{equation}
+
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:poiss-post-Poiss-post-par}
+\begin{split}
+a_n &= a_0 + n \bar{y} \\
+b_n &= b_0 + n \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} With the probability mass function of the Poisson distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:poiss-pmf}), the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) for each observation implied by \eqref{eq:poiss-post-Poiss} is given by
+
+\begin{equation} \label{eq:poiss-post-Poiss-LF-s1}
+p(y_i|\lambda) = \mathrm{Poiss}(y_i; \lambda) = \frac{\lambda^{y_i} \cdot \exp\left[-\lambda\right]}{y_i !}
+\end{equation}
+
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
+
+\begin{equation} \label{eq:poiss-post-Poiss-LF-s2}
+p(y|\lambda) = \prod_{i=1}^n p(y_i|\lambda) = \prod_{i=1}^n \frac{\lambda^{y_i} \cdot \exp\left[-\lambda\right]}{y_i !} \; .
+\end{equation}
+
+Combining the likelihood function \eqref{eq:poiss-post-Poiss-LF-s2} with the prior distribution \eqref{eq:poiss-post-Poiss-prior}, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) of the model is given by
+
+\begin{equation} \label{eq:poiss-post-Poiss-JL-s1}
+\begin{split}
+p(y,\lambda) &= p(y|\lambda) \, p(\lambda) \\
+&= \prod_{i=1}^n \frac{\lambda^{y_i} \cdot \exp\left[-\lambda\right]}{y_i !} \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda] \; .
+\end{split}
+\end{equation}
+
+Resolving the product in the joint likelihood, we have
+
+\begin{equation} \label{eq:poiss-post-Poiss-JL-s2}
+\begin{split}
+p(y,\lambda) &= \prod_{i=1}^n \frac{1}{y_i !} \prod_{i=1}^n \lambda^{y_i} \prod_{i=1}^n \exp\left[-\lambda\right] \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda] \\
+&= \prod_{i=1}^n \left(\frac{1}{y_i !}\right) \lambda^{n \bar{y}} \exp\left[-n \lambda\right] \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda] \\
+&= \prod_{i=1}^n \left(\frac{1}{y_i !}\right) \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)}  \cdot \lambda^{a_0 + n \bar{y} - 1} \cdot \exp\left[-(b_0 + n \lambda)\right] \\
+\end{split}
+\end{equation}
+
+where $\bar{y}$ is the mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) of $y$:
+
+\begin{equation} \label{eq:poiss-post-y-mean}
+\bar{y} = \frac{1}{n} \sum_{i=1}^n y_i \; .
+\end{equation}
+
+Note that the posterior distribution is proportional to the joint likelihood ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:post-jl}):
+
+\begin{equation} \label{eq:poiss-post-Poiss-post-s1}
+p(\lambda|y) \propto p(y,\lambda) \; .
+\end{equation}
+
+Setting $a_n = a_0 + n \bar{y}$ and $b_n = b_0 + n$, the posterior distribution is therefore proportional to
+
+\begin{equation} \label{eq:poiss-post-Poiss-post-s2}
+p(\lambda|y) \propto \lambda^{a_n-1} \cdot \exp\left[-b_n \lambda\right]
+\end{equation}
+
+which, when normalized to one, results in the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}):
+
+\begin{equation} \label{eq:poiss-post-Poiss-post-s3}
+p(\lambda|y) = \frac{ {b_n}^{a_n}}{\Gamma(a_0)} \lambda^{a_n-1} \exp\left[-b_n \lambda\right] = \mathrm{Gam}(\lambda; a_n, b_n) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Gelman A, Carlin JB, Stern HS, Dunson DB, Vehtari A, Rubin DB (2014): "Other standard single-parameter models"; in: \textit{Bayesian Data Analysis}, 3rd edition, ch. 2.6, p. 45, eq. 2.15; URL: \url{http://www.stat.columbia.edu/~gelman/book/}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P226 | shortcut: poiss-post | author: JoramSoch | date: 2020-04-21, 08:48.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:poiss-lme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let there be a Poisson-distributed data ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:poiss-data}) set $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$:
+
+\begin{equation} \label{eq:poiss-lme-Poiss}
+y_i \sim \mathrm{Poiss}(\lambda), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+Moreover, assume a gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:poiss-prior}) over the model parameter $\lambda$:
+
+\begin{equation} \label{eq:poiss-lme-Poiss-prior}
+p(\lambda) = \mathrm{Gam}(\lambda; a_0, b_0) \; .
+\end{equation}
+
+Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) for this model is
+
+\begin{equation} \label{eq:poiss-lme-Poiss-LME}
+\log p(y|m) = - \sum_{i=1}^n \log y_i ! + \log \Gamma(a_n) - \log \Gamma(a_0) + a_0 \log b_0 - a_n \log b_n \; .
+\end{equation}
+
+and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:poiss-lme-Poiss-post-par}
+\begin{split}
+a_n &= a_0 + n \bar{y} \\
+b_n &= b_0 + n \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} With the probability mass function of the Poisson distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:poiss-pmf}), the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) for each observation implied by \eqref{eq:poiss-lme-Poiss} is given by
+
+\begin{equation} \label{eq:poiss-lme-Poiss-LF-s1}
+p(y_i|\lambda) = \mathrm{Poiss}(y_i; \lambda) = \frac{\lambda^{y_i} \cdot \exp\left[-\lambda\right]}{y_i !}
+\end{equation}
+
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
+
+\begin{equation} \label{eq:poiss-lme-Poiss-LF-s2}
+p(y|\lambda) = \prod_{i=1}^n p(y_i|\lambda) = \prod_{i=1}^n \frac{\lambda^{y_i} \cdot \exp\left[-\lambda\right]}{y_i !} \; .
+\end{equation}
+
+Combining the likelihood function \eqref{eq:poiss-lme-Poiss-LF-s2} with the prior distribution \eqref{eq:poiss-lme-Poiss-prior}, the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) of the model is given by
+
+\begin{equation} \label{eq:poiss-lme-Poiss-JL-s1}
+\begin{split}
+p(y,\lambda) &= p(y|\lambda) \, p(\lambda) \\
+&= \prod_{i=1}^n \frac{\lambda^{y_i} \cdot \exp\left[-\lambda\right]}{y_i !} \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda] \; .
+\end{split}
+\end{equation}
+
+Resolving the product in the joint likelihood, we have
+
+\begin{equation} \label{eq:poiss-lme-Poiss-JL-s2}
+\begin{split}
+p(y,\lambda) &= \prod_{i=1}^n \frac{1}{y_i !} \prod_{i=1}^n \lambda^{y_i} \prod_{i=1}^n \exp\left[-\lambda\right] \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda] \\
+&= \prod_{i=1}^n \left(\frac{1}{y_i !}\right) \lambda^{n \bar{y}} \exp\left[-n \lambda\right] \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda] \\
+&= \prod_{i=1}^n \left(\frac{1}{y_i !}\right) \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)}  \cdot \lambda^{a_0 + n \bar{y} - 1} \cdot \exp\left[-(b_0 + n \lambda)\right] \\
+\end{split}
+\end{equation}
+
+where $\bar{y}$ is the mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) of $y$:
+
+\begin{equation} \label{eq:poiss-lme-y-mean}
+\bar{y} = \frac{1}{n} \sum_{i=1}^n y_i \; .
+\end{equation}
+
+Note that the model evidence is the marginal density of the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}):
+
+\begin{equation} \label{eq:poiss-lme-Poiss-ME}
+p(y) = \int p(y,\lambda) \, \mathrm{d}\lambda \; .
+\end{equation}
+
+Setting $a_n = a_0 + n \bar{y}$ and $b_n = b_0 + n$, the joint likelihood can also be written as
+
+\begin{equation} \label{eq:poiss-lme-Poiss-JL-s3}
+p(y,\lambda) = \prod_{i=1}^n \left(\frac{1}{y_i !}\right) \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \frac{\Gamma(a_n)}{ {b_n}^{a_n}} \cdot \frac{ {b_n}^{a_n}}{\Gamma(a_n)} \lambda^{a_n-1} \exp\left[-b_n \lambda\right] \; .
+\end{equation}
+
+Using the probability density function of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}), $\lambda$ can now be integrated out easily
+
+\begin{equation} \label{eq:poiss-lme-Poiss-ME-qed}
+\begin{split}
+\mathrm{p}(y) &= \int \prod_{i=1}^n \left(\frac{1}{y_i !}\right) \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \frac{\Gamma(a_n)}{ {b_n}^{a_n}} \cdot \frac{ {b_n}^{a_n}}{\Gamma(a_n)} \lambda^{a_n-1} \exp\left[-b_n \lambda\right] \, \mathrm{d}\lambda \\
+&= \prod_{i=1}^n \left(\frac{1}{y_i !}\right) \frac{\Gamma(a_n)}{\Gamma(a_0)} \frac{ {b_0}^{a_0}}{ {b_n}^{a_n}} \int \mathrm{Gam}(\lambda; a_n, b_n) \, \mathrm{d}\lambda \\
+&= \prod_{i=1}^n \left(\frac{1}{y_i !}\right) \frac{\Gamma(a_n)}{\Gamma(a_0)} \frac{ {b_0}^{a_0}}{ {b_n}^{a_n}} \; ,
+\end{split}
+\end{equation}
+
+such that the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) is shown to be
+
+\begin{equation} \label{eq:poiss-lme-Poiss-LME-qed}
+\log p(y|m) = - \sum_{i=1}^n \log y_i ! + \log \Gamma(a_n) - \log \Gamma(a_0) + a_0 \log b_0 - a_n \log b_n \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P227 | shortcut: poiss-lme | author: JoramSoch | date: 2020-04-21, 09:09.
+\vspace{1em}
+
+
+
 \subsection{Poisson distribution with exposure values}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:poissexp}
@@ -16684,6 +17961,109 @@ y_i \sim \mathrm{Poiss}(\lambda x_i), \quad i = 1, \ldots, n \; .
 
 \vspace{1em}
 \textbf{Metadata:} ID: D42 | shortcut: poissexp | author: JoramSoch | date: 2020-03-22, 22:57.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:poissexp-mle}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider data $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ following a Poisson distribution with exposure values ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:poissexp}):
+
+\begin{equation} \label{eq:poissexp-mle-Poiss-exp}
+y_i \sim \mathrm{Poiss}(\lambda x_i), \quad i = 1, \ldots, n \; .
+\end{equation}
+
+Then, the maximum likelihood estimate ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}) for the rate parameter $\lambda$ is given by
+
+\begin{equation} \label{eq:poissexp-mle-Poiss-exp-MLE}
+\hat{\lambda} = \frac{\bar{y}}{\bar{x}}
+\end{equation}
+
+where $\bar{y}$ and $\bar{x}$ are the sample means ($\rightarrow$ Definition "mean-sample")
+
+\begin{equation} \label{eq:poissexp-mle-xy-mean}
+\begin{split}
+\bar{y} &= \frac{1}{n} \sum_{i=1}^n y_i \\
+\bar{x} &= \frac{1}{n} \sum_{i=1}^n x_i \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} With the probability mass function of the Poisson distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:poiss-pmf}), the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) for each observation implied by \eqref{eq:poissexp-mle-Poiss-exp} is given by
+
+\begin{equation} \label{eq:poissexp-mle-Poiss-exp-LF-s1}
+p(y_i|\lambda) = \mathrm{Poiss}(y_i; \lambda x_i) = \frac{(\lambda x_i)^{y_i} \cdot \exp[-\lambda x_i]}{y_i !}
+\end{equation}
+
+and because observations are independent ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the likelihood function for all observations is the product of the individual ones:
+
+\begin{equation} \label{eq:poissexp-mle-Poiss-exp-LF-s2}
+p(y|\lambda) = \prod_{i=1}^n p(y_i|\lambda) = \prod_{i=1}^n \frac{(\lambda x_i)^{y_i} \cdot \exp[-\lambda x_i]}{y_i !} \; .
+\end{equation}
+
+Thus, the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) is
+
+\begin{equation} \label{eq:poissexp-mle-Poiss-LL}
+\mathrm{LL}(\lambda) = \log p(y|\lambda) = \log \left[ \prod_{i=1}^n \frac{(\lambda x_i)^{y_i} \cdot \exp[-\lambda x_i]}{y_i !} \right]
+\end{equation}
+
+which can be developed into
+
+\begin{equation} \label{eq:poissexp-mle-Poiss-LL-der}
+\begin{split}
+\mathrm{LL}(\lambda) &= \sum_{i=1}^n \log \left[ \frac{(\lambda x_i)^{y_i} \cdot \exp[-\lambda x_i]}{y_i !} \right] \\
+&= \sum_{i=1}^n \left[ y_i \cdot \log(\lambda x_i) - \lambda x_i - \log(y_i !) \right] \\
+&= - \sum_{i=1}^n \lambda x_i + \sum_{i=1}^n y_i \cdot \left[ \log(\lambda) + \log(x_i) \right] - \sum_{i=1}^n \log(y_i !) \\
+&= - \lambda \sum_{i=1}^n x_i + \log(\lambda) \sum_{i=1}^n y_i + \sum_{i=1}^n y_i \log(x_i) - \sum_{i=1}^n \log(y_i !) \\
+&= - n \bar{x} \lambda + n \bar{y} \log(\lambda) + \sum_{i=1}^n y_i \log(x_i) - \sum_{i=1}^n \log(y_i !) \\
+\end{split}
+\end{equation}
+
+where $\bar{x}$ and $\bar{y}$ are the sample means from equation \eqref{eq:poissexp-mle-xy-mean}.
+
+\vspace{1em}
+The derivatives of the log-likelihood with respect to $\lambda$ are
+
+\begin{equation} \label{eq:poissexp-mle-Poiss-dLLdl-d2LLdl2}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\lambda)}{\mathrm{d}\lambda} &= - n \bar{x} + \frac{n \bar{y}}{\lambda} \\
+\frac{\mathrm{d}^2\mathrm{LL}(\lambda)}{\mathrm{d}\lambda^2} &= -\frac{n \bar{y}}{\lambda^2} \; . \\
+\end{split}
+\end{equation}
+
+Setting the first derivative to zero, we obtain:
+
+\begin{equation} \label{eq:poissexp-mle-Poiss-dLLdl}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\lambda})}{\mathrm{d}\lambda} &= 0 \\
+0 &= - n \bar{x} + \frac{n \bar{y}}{\hat{\lambda}} \\
+\hat{\lambda} &= \frac{n \bar{y}}{n \bar{x}} = \frac{\bar{y}}{\bar{x}} \; .
+\end{split}
+\end{equation}
+
+Plugging this value into the second derivative, we confirm:
+
+\begin{equation} \label{eq:poissexp-mle-Poiss-d2LLdl2}
+\begin{split}
+\frac{\mathrm{d}^2\mathrm{LL}(\hat{\lambda})}{\mathrm{d}\lambda^2} &= -\frac{n \bar{y}}{\hat{\lambda}^2} \\
+&= -\frac{n \cdot \bar{y}}{(\bar{y}/\bar{x})^2} \\
+&= -\frac{n \cdot \bar{x}^2}{\bar{y}} < 0 \; .
+\end{split}
+\end{equation}
+
+This demonstrates that the estimate $\hat{\lambda} = \bar{y}/\bar{x}$ maximizes the likelihood $p(y \vert \lambda)$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P224 | shortcut: poissexp-mle | author: JoramSoch | date: 2021-04-16, 11:42.
 \vspace{1em}
 
 
@@ -16727,7 +18107,7 @@ p(y|\lambda) &= \prod_{i=1}^n \frac{ {x_i}^{y_i}}{y_i !} \cdot \prod_{i=1}^n \la
 \end{split}
 \end{equation}
 
-where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Proof "mean-sample") of $y$ and $x$ respectively:
+where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) of $y$ and $x$ respectively:
 
 \begin{equation} \label{eq:poissexp-prior-xy-mean}
 \begin{split}
@@ -16802,7 +18182,7 @@ and the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General The
 \begin{equation} \label{eq:poissexp-post-Poiss-exp-post-par}
 \begin{split}
 a_n &= a_0 + n \bar{y} \\
-a_n &= a_0 + n \bar{x} \; .
+b_n &= b_0 + n \bar{x} \; .
 \end{split}
 \end{equation}
 
@@ -16836,11 +18216,11 @@ Resolving the product in the joint likelihood, we have
 p(y,\lambda) &= \prod_{i=1}^n \frac{ {x_i}^{y_i}}{y_i !} \prod_{i=1}^n \lambda^{y_i} \prod_{i=1}^n \exp\left[-\lambda x_i\right] \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda] \\
 &= \prod_{i=1}^n \left(\frac{ {x_i}^{y_i}}{y_i !}\right) \lambda^{\sum_{i=1}^n y_i} \exp\left[-\lambda \sum_{i=1}^n x_i\right] \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda] \\
 &= \prod_{i=1}^n \left(\frac{ {x_i}^{y_i}}{y_i !}\right) \lambda^{n \bar{y}} \exp\left[-n \bar{x} \lambda\right] \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)} \lambda^{a_0-1} \exp[-b_0 \lambda] \\
-&= \prod_{i=1}^n \left(\frac{ {x_i}^{y_i}}{y_i !}\right) \frac{ {b_0}^{a_0}}{\Gamma(a_0)}  \cdot \lambda^{a_0 + n \bar{y} - 1} \cdot \exp\left[-(b_0 + n \bar{x}) \lambda\right] \\
+&= \prod_{i=1}^n \left(\frac{ {x_i}^{y_i}}{y_i !}\right) \cdot \frac{ {b_0}^{a_0}}{\Gamma(a_0)}  \cdot \lambda^{a_0 + n \bar{y} - 1} \cdot \exp\left[-(b_0 + n \bar{x}) \lambda\right] \\
 \end{split}
 \end{equation}
 
-where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Proof "mean-sample") of $y$ and $x$ respectively:
+where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) of $y$ and $x$ respectively:
 
 \begin{equation} \label{eq:poissexp-post-xy-mean}
 \begin{split}
@@ -16948,7 +18328,7 @@ p(y,\lambda) &= \prod_{i=1}^n \frac{ {x_i}^{y_i}}{y_i !} \prod_{i=1}^n \lambda^{
 \end{split}
 \end{equation}
 
-where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Proof "mean-sample") of $y$ and $x$ respectively:
+where $\bar{y}$ and $\bar{x}$ are the means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) of $y$ and $x$ respectively:
 
 \begin{equation} \label{eq:poissexp-lme-xy-mean}
 \begin{split}
@@ -17028,27 +18408,27 @@ y_i \sim \mathrm{Bet}(\alpha,\beta), \quad i = 1, \ldots, n \; .
 
 
 
-\subsubsection[\textbf{Method of moments}]{Method of moments} \label{sec:beta-mom}
+\subsubsection[\textbf{Method of moments}]{Method of moments} \label{sec:beta-mome}
 \setcounter{equation}{0}
 
 \textbf{Theorem:} Let $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be a set of observed counts independent and identically distributed ($\rightarrow$ Definition "iid") according to a beta distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:beta}) with shapes $\alpha$ and $\beta$:
 
-\begin{equation} \label{eq:beta-mom-Beta}
+\begin{equation} \label{eq:beta-mome-Beta}
 y_i \sim \mathrm{Bet}(\alpha,\beta), \quad i = 1, \ldots, n \; .
 \end{equation}
 
-Then, the method-of-moments estimates ($\rightarrow$ Definition "mome") for the shape parameters $\alpha$ and $\beta$ are given by
+Then, the method-of-moments estimates ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mome}) for the shape parameters $\alpha$ and $\beta$ are given by
 
-\begin{equation} \label{eq:beta-mom-Beta-MoM}
+\begin{equation} \label{eq:beta-mome-Beta-MoM}
 \begin{split}
 \hat{\alpha} &= \bar{y} \left( \frac{\bar{y} (1-\bar{y})}{\bar{v}} - 1  \right) \\
 \hat{\beta} &= (1-\bar{y}) \left( \frac{\bar{y} (1-\bar{y})}{\bar{v}} - 1  \right)
 \end{split}
 \end{equation}
 
-where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "mean-sample") and $\bar{v}$ is the unbiased sample variance ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:resvar-unb}):
+where $\bar{y}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) and $\bar{v}$ is the unbiased sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}):
 
-\begin{equation} \label{eq:beta-mom-y-mean-var}
+\begin{equation} \label{eq:beta-mome-y-mean-var}
 \begin{split}
 \bar{y} &= \frac{1}{n} \sum_{i=1}^n y_i \\
 \bar{v} &= \frac{1}{n-1} \sum_{i=1}^n (y_i - \bar{y})^2 \; .
@@ -17057,18 +18437,18 @@ where $\bar{y}$ is the sample mean ($\rightarrow$ Proof "mean-sample") and $\bar
 
 
 \vspace{1em}
-\textbf{Proof:} Mean ($\rightarrow$ Proof "beta-mean") and variance ($\rightarrow$ Proof "beta-var") of the beta distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:beta}) in terms of the parameters $\alpha$ and $\beta$ are given by
+\textbf{Proof:} Mean ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:beta-mean}) and variance ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:beta-var}) of the beta distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:beta}) in terms of the parameters $\alpha$ and $\beta$ are given by
 
-\begin{equation} \label{eq:beta-mom-Beta-E-Var}
+\begin{equation} \label{eq:beta-mome-Beta-E-Var}
 \begin{split}
 \mathrm{E}(X) &= \frac{\alpha}{\alpha+\beta} \\
 \mathrm{Var}(X) &= \frac{\alpha\beta}{(\alpha+\beta)^2 (\alpha+\beta+1)} \; .
 \end{split}
 \end{equation}
 
-Thus, matching the moments ($\rightarrow$ Definition "mome") requires us to solve the following equation system for $\alpha$ and $\beta$:
+Thus, matching the moments ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mome}) requires us to solve the following equation system for $\alpha$ and $\beta$:
 
-\begin{equation} \label{eq:beta-mom-Beta-mean-var}
+\begin{equation} \label{eq:beta-mome-Beta-mean-var}
 \begin{split}
 \bar{y} &= \frac{\alpha}{\alpha+\beta} \\
 \bar{v} &= \frac{\alpha\beta}{(\alpha+\beta)^2 (\alpha+\beta+1)} \; .
@@ -17077,7 +18457,7 @@ Thus, matching the moments ($\rightarrow$ Definition "mome") requires us to solv
 
 From the first equation, we can deduce:
 
-\begin{equation} \label{eq:beta-mom-beta-as-alpha}
+\begin{equation} \label{eq:beta-mome-beta-as-alpha}
 \begin{split}
 \bar{y}(\alpha+\beta) &= \alpha \\
 \alpha \bar{y} + \beta \bar{y} &= \alpha \\
@@ -17087,9 +18467,9 @@ From the first equation, we can deduce:
 \end{split}
 \end{equation}
 
-If we define $q = 1/\bar{y} - 1$ and plug \eqref{eq:beta-mom-beta-as-alpha} into the second equation, we have:
+If we define $q = 1/\bar{y} - 1$ and plug \eqref{eq:beta-mome-beta-as-alpha} into the second equation, we have:
 
-\begin{equation} \label{eq:beta-mom-alpha-as-q}
+\begin{equation} \label{eq:beta-mome-alpha-as-q}
 \begin{split}
 \bar{v} &= \frac{\alpha \cdot \alpha q}{(\alpha + \alpha q)^2 (\alpha + \alpha q + 1)} \\
 &= \frac{\alpha^2 q}{(\alpha (1+q))^2 (\alpha (1+q) + 1)} \\
@@ -17101,7 +18481,7 @@ q &= \bar{v} \left[ \alpha (1+q)^3 + (1+q)^2 \right] \; .
 
 Noting that $1+q = 1/\bar{y}$ and $q = (1-\bar{y})/\bar{y}$, one obtains for $\alpha$:
 
-\begin{equation} \label{eq:beta-mom-Beta-MoM-alpha}
+\begin{equation} \label{eq:beta-mome-Beta-MoM-alpha}
 \begin{split}
 \frac{1-\bar{y}}{\bar{y}} &= \bar{v} \left[ \frac{\alpha}{\bar{y}^3} + \frac{1}{\bar{y}^2} \right] \\
 \frac{1-\bar{y}}{\bar{y} \, \bar{v}} &= \frac{\alpha}{\bar{y}^3} + \frac{1}{\bar{y}^2} \\
@@ -17111,16 +18491,16 @@ Noting that $1+q = 1/\bar{y}$ and $q = (1-\bar{y})/\bar{y}$, one obtains for $\a
 \end{split}
 \end{equation}
 
-Plugging this into equation \eqref{eq:beta-mom-beta-as-alpha}, one obtains for $\beta$:
+Plugging this into equation \eqref{eq:beta-mome-beta-as-alpha}, one obtains for $\beta$:
 
-\begin{equation} \label{eq:beta-mom-Beta-MoM-beta}
+\begin{equation} \label{eq:beta-mome-Beta-MoM-beta}
 \begin{split}
 \beta &= \bar{y} \left( \frac{\bar{y} (1-\bar{y})}{\bar{v}} - 1 \right) \cdot \left( \frac{1-\bar{y}}{\bar{y}} \right) \\
 &= (1-\bar{y}) \left( \frac{\bar{y} (1-\bar{y})}{\bar{v}} - 1 \right) \; .
 \end{split}
 \end{equation}
 
-Together, \eqref{eq:beta-mom-Beta-MoM-alpha} and \eqref{eq:beta-mom-Beta-MoM-beta} constitute the method-of-moment estimates of $\alpha$ and $\beta$.
+Together, \eqref{eq:beta-mome-Beta-MoM-alpha} and \eqref{eq:beta-mome-Beta-MoM-beta} constitute the method-of-moment estimates of $\alpha$ and $\beta$.
 
 
 \vspace{1em}
@@ -17131,7 +18511,7 @@ Together, \eqref{eq:beta-mom-Beta-MoM-alpha} and \eqref{eq:beta-mom-Beta-MoM-bet
 
 
 \vspace{1em}
-\textbf{Metadata:} ID: P28 | shortcut: beta-mom | author: JoramSoch | date: 2020-01-22, 02:53.
+\textbf{Metadata:} ID: P28 | shortcut: beta-mome | author: JoramSoch | date: 2020-01-22, 02:53.
 \vspace{1em}
 
 
@@ -18091,7 +19471,7 @@ more precisely:
 \vspace{1em}
 \textbf{Proof:}
 
-1) This is equivalent to the maximum likelihood estimator for the univariate Gaussian with unknown variance ($\rightarrow$ Proof "ug-mle") and a special case of the maximum likelihood estimator for multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle}) in which $y = x$, $X = 1_n$ and $\hat{\beta} = \bar{x}$:
+1) This is equivalent to the maximum likelihood estimator for the univariate Gaussian with unknown variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:ug-mle}) and a special case of the maximum likelihood estimator for multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle}) in which $y = x$, $X = 1_n$ and $\hat{\beta} = \bar{x}$:
 
 \begin{equation} \label{eq:resvar-bias-resvar-mle-qed}
 \begin{split}
@@ -18902,7 +20282,7 @@ Rearranging for $p(y \vert m)$ and logarithmizing, we have:
 \mathrm{LME}(m) = \mathrm{Acc}(m) - \mathrm{Com}(m)
 \end{equation}
 
-where the accuracy term is the posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) expectation ($\rightarrow$ Definition "mean-lotus") of the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf})
+where the accuracy term is the posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) expectation ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lotus}) of the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf})
 
 \begin{equation} \label{eq:lme-anc-Acc}
 \mathrm{Acc}(m) = \left\langle \log p(y|\theta,m) \right\rangle_{p(\theta|y,m)}
@@ -19023,7 +20403,7 @@ p( \theta \vert y_{\neg i}, m ) = \frac{p( y_{\neg i} \vert \theta, m ) \, p_{\m
 \subsubsection[\textit{Empirical Bayesian log model evidence}]{Empirical Bayesian log model evidence} \label{sec:eblme}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with model parameters $\theta$ and hyper-parameters $\lambda$ implying the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, \lambda, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert \lambda, m)$. Then, the Empirical Bayesian ($\rightarrow$ Definition "eb") log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) is the logarithm of the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}), maximized with respect to the hyper-parameters:
+\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with model parameters $\theta$ and hyper-parameters $\lambda$ implying the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, \lambda, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert \lambda, m)$. Then, the Empirical Bayesian ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:eb}) log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) is the logarithm of the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}), maximized with respect to the hyper-parameters:
 
 \begin{equation} \label{eq:eblme-ebLME}
 \mathrm{ebLME}(m) = \log p(y \vert \hat{\lambda}, m)
@@ -19046,6 +20426,7 @@ and ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior-eb})
 \textbf{Sources:}
 \begin{itemize}
 \item Wikipedia (2020): "Empirical Bayes method"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-11-25; URL: \url{https://en.wikipedia.org/wiki/Empirical_Bayes_method#Introduction}.
+\item Penny, W.D. and Ridgway, G.R. (2013): "Efficient Posterior Probability Mapping Using Savage-Dickey Ratios"; in: \textit{PLoS ONE}, vol. 8, iss. 3, art. e59655, eqs. 7/11; URL: \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0059655}; DOI: 10.1371/journal.pone.0059655.
 \end{itemize}
 
 
@@ -19058,30 +20439,31 @@ and ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior-eb})
 \subsubsection[\textit{Variational Bayesian log model evidence}]{Variational Bayesian log model evidence} \label{sec:vblme}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with model parameters $\theta$ implying the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$. Moreover, assume a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert m)$, a resulting posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) $p(\theta \vert y, m)$ and an approximate ($\rightarrow$ Definition "vb") posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) $q(\theta)$. Then, the Variational Bayesian ($\rightarrow$ Definition "vb") log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) is the expectation of the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) with respect to the approximate posterior, minus the Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) between approximate posterior and true posterior distribution:
+\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with model parameters $\theta$ implying the likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert m)$. Moreover, assume an approximate ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:vb}) posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) $q(\theta)$. Then, the Variational Bayesian ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:vb}) log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}), also referred to as the "negative free energy", is the expectation of the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) with respect to the approximate posterior, minus the Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) between approximate posterior and the prior distribution:
 
 \begin{equation} \label{eq:vblme-vbLME}
-\mathrm{vbLME}(m) = \mathcal{L}\left[q(\theta)\right] - \mathrm{KL}\left[q(\theta) || p(\theta \vert y)\right]
+\mathrm{vbLME}(m) = \left\langle \log p(y \vert \theta, m) \right\rangle_{q(\theta)} - \mathrm{KL}\left[q(\theta) || p(\theta \vert m)\right]
 \end{equation}
 
 where
 
 \begin{equation} \label{eq:vblme-ELL}
-\mathcal{L}\left[q(\theta)\right] = \int q(\theta) \log \frac{p(y,\theta|m)}{q(\theta)} \, \mathrm{d}\theta
+\left\langle \log p(y \vert \theta, m) \right\rangle_{q(\theta)} = \int q(\theta) \log p(y \vert \theta, m) \, \mathrm{d}\theta
 \end{equation}
 
 and
 
 \begin{equation} \label{eq:vblme-KL}
-\mathrm{KL}\left[q(\theta) || p(\theta \vert y)\right] = \int q(\theta) \log \frac{q(\theta)}{p(\theta|y,m)} \, \mathrm{d}\theta  \; .
+\mathrm{KL}\left[q(\theta) || p(\theta \vert m)\right] = \int q(\theta) \log \frac{q(\theta)}{p(\theta \vert m)} \, \mathrm{d}\theta  \; .
 \end{equation}
+
 
 
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
 \item Wikipedia (2020): "Variational Bayesian methods"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-11-25; URL: \url{https://en.wikipedia.org/wiki/Variational_Bayesian_methods#Evidence_lower_bound}.
-\item Bishop CM (2006): "Variational Inference"; in: \textit{Pattern Recognition for Machine Learning}, pp. 462-474, eqs. 10.2-10.4; URL: \url{https://www.springer.com/gp/book/9780387310732}.
+\item Penny W, Flandin G, Trujillo-Barreto N (2007): "Bayesian Comparison of Spatially Regularised General Linear Models"; in: \textit{Human Brain Mapping}, vol. 28, pp. 275–293, eqs. 2-9; URL: \url{https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.20327}; DOI: 10.1002/hbm.20327.
 \end{itemize}
 
 
@@ -20034,7 +21416,7 @@ P24 & cat-mean & Mean of the categorical distribution & JoramSoch & 2020-01-16 &
 P25 & mult-mean & Mean of the multinomial distribution & JoramSoch & 2020-01-16 & \pageref{sec:mult-mean} \\ \hline
 P26 & matn-mvn & Equivalence of matrix-normal distribution and multivariate normal distribution & JoramSoch & 2020-01-20 & \pageref{sec:matn-mvn} \\ \hline
 P27 & poiss-mle & Maximum likelihood estimation for Poisson-distributed data & JoramSoch & 2020-01-20 & \pageref{sec:poiss-mle} \\ \hline
-P28 & beta-mom & Method of moments for beta-distributed data & JoramSoch & 2020-01-22 & \pageref{sec:beta-mom} \\ \hline
+P28 & beta-mome & Method of moments for beta-distributed data & JoramSoch & 2020-01-22 & \pageref{sec:beta-mome} \\ \hline
 P29 & bin-prior & Conjugate prior distribution for binomial observations & JoramSoch & 2020-01-23 & \pageref{sec:bin-prior} \\ \hline
 P30 & bin-post & Posterior distribution for binomial observations & JoramSoch & 2020-01-24 & \pageref{sec:bin-post} \\ \hline
 P31 & bin-lme & Log model evidence for binomial observations & JoramSoch & 2020-01-24 & \pageref{sec:bin-lme} \\ \hline
@@ -20131,7 +21513,6 @@ P121 & covmat-corrmat & Relationship between covariance matrix and correlation m
 P122 & precmat-corrmat & Relationship between precision matrix and correlation matrix & JoramSoch & 2020-06-06 & \pageref{sec:precmat-corrmat} \\ \hline
 P123 & var-nonneg & Non-negativity of the variance & JoramSoch & 2020-06-06 & \pageref{sec:var-nonneg} \\ \hline
 P124 & var-const & Variance of constant is zero & JoramSoch & 2020-06-27 & \pageref{sec:var-const} \\ \hline
-P125 & var-zero & Variance zero implies constant & JoramSoch & 2020-06-27 & \pageref{sec:var-zero} \\ \hline
 P126 & var-inv & Invariance of the variance under addition of a constant & JoramSoch & 2020-07-07 & \pageref{sec:var-inv} \\ \hline
 P127 & var-scal & Scaling of the variance upon multiplication with a constant & JoramSoch & 2020-07-07 & \pageref{sec:var-scal} \\ \hline
 P128 & var-sum & Variance of the sum of two random variables & JoramSoch & 2020-07-07 & \pageref{sec:var-sum} \\ \hline
@@ -20226,6 +21607,17 @@ P216 & ugkv-lbfmean & Expectation of the log Bayes factor for the univariate Gau
 P217 & ugkv-cvlme & Cross-validated log model evidence for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-cvlme} \\ \hline
 P218 & ugkv-cvlbf & Cross-validated log Bayes factor for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-cvlbf} \\ \hline
 P219 & ugkv-cvlbfmean & Expectation of the cross-validated log Bayes factor for the univariate Gaussian with known variance & JoramSoch & 2021-03-24 & \pageref{sec:ugkv-cvlbfmean} \\ \hline
+P220 & cdf-pit & Probability integral transform using cumulative distribution function & JoramSoch & 2021-04-07 & \pageref{sec:cdf-pit} \\ \hline
+P221 & cdf-itm & Inverse transformation method using cumulative distribution function & JoramSoch & 2021-04-07 & \pageref{sec:cdf-itm} \\ \hline
+P222 & cdf-dt & Distributional transformation using cumulative distribution function & JoramSoch & 2021-04-07 & \pageref{sec:cdf-dt} \\ \hline
+P223 & ug-mle & Maximum likelihood estimation for the univariate Gaussian & JoramSoch & 2021-04-16 & \pageref{sec:ug-mle} \\ \hline
+P224 & poissexp-mle & Maximum likelihood estimation for the Poisson distribution with exposure values & JoramSoch & 2021-04-16 & \pageref{sec:poissexp-mle} \\ \hline
+P225 & poiss-prior & Conjugate prior distribution for Poisson-distributed data & JoramSoch & 2020-04-21 & \pageref{sec:poiss-prior} \\ \hline
+P226 & poiss-post & Posterior distribution for Poisson-distributed data & JoramSoch & 2020-04-21 & \pageref{sec:poiss-post} \\ \hline
+P227 & poiss-lme & Log model evidence for Poisson-distributed data & JoramSoch & 2020-04-21 & \pageref{sec:poiss-lme} \\ \hline
+P228 & beta-mean & Mean of the beta distribution & JoramSoch & 2021-04-29 & \pageref{sec:beta-mean} \\ \hline
+P229 & beta-var & Variance of the beta distribution & JoramSoch & 2021-04-29 & \pageref{sec:beta-var} \\ \hline
+P230 & poiss-var & Variance of the Poisson distribution & JoramSoch & 2021-04-29 & \pageref{sec:poiss-var} \\ \hline
 \end{longtable}
 
 
@@ -20374,6 +21766,21 @@ D133 & alpha & Significance level & JoramSoch & 2021-03-19 & \pageref{sec:alpha}
 D134 & cval & Critical value & JoramSoch & 2021-03-19 & \pageref{sec:cval} \\ \hline
 D135 & pval & p-value & JoramSoch & 2021-03-19 & \pageref{sec:pval} \\ \hline
 D136 & ugkv & Univariate Gaussian with known variance & JoramSoch & 2021-03-23 & \pageref{sec:ugkv} \\ \hline
+D137 & power & Power of a statistical test & JoramSoch & 2021-03-31 & \pageref{sec:power} \\ \hline
+D138 & hyp-tail & One-tailed and two-tailed hypothesis & JoramSoch & 2021-03-31 & \pageref{sec:hyp-tail} \\ \hline
+D139 & test-tail & One-tailed and two-tailed test & JoramSoch & 2021-03-31 & \pageref{sec:test-tail} \\ \hline
+D140 & dist-samp & Sampling distribution & JoramSoch & 2021-03-31 & \pageref{sec:dist-samp} \\ \hline
+D141 & cdf-joint & Joint cumulative distribution function & JoramSoch & 2020-04-07 & \pageref{sec:cdf-joint} \\ \hline
+D142 & mean-samp & Sample mean & JoramSoch & 2021-04-16 & \pageref{sec:mean-samp} \\ \hline
+D143 & var-samp & Sample variance & JoramSoch & 2021-04-16 & \pageref{sec:var-samp} \\ \hline
+D144 & cov-samp & Sample covariance & JoramSoch & 2021-04-21 & \pageref{sec:cov-samp} \\ \hline
+D145 & prec & Precision & JoramSoch & 2020-04-21 & \pageref{sec:prec} \\ \hline
+D146 & f & F-distribution & JoramSoch & 2020-04-21 & \pageref{sec:f} \\ \hline
+D147 & t & t-distribution & JoramSoch & 2020-04-21 & \pageref{sec:t} \\ \hline
+D148 & mvt & Multivariate t-distribution & JoramSoch & 2020-04-21 & \pageref{sec:mvt} \\ \hline
+D149 & eb & Empirical Bayes & JoramSoch & 2021-04-29 & \pageref{sec:eb} \\ \hline
+D150 & vb & Variational Bayes & JoramSoch & 2021-04-29 & \pageref{sec:vb} \\ \hline
+D151 & mome & Method-of-moments estimation & JoramSoch & 2021-04-29 & \pageref{sec:mome} \\ \hline
 \end{longtable}
 
 
@@ -20420,6 +21827,8 @@ $\bullet$ Conditional distributions of the multivariate normal distribution, \pa
 $\bullet$ Conditional distributions of the normal-gamma distribution, \pageref{sec:ng-cond}
 
 $\bullet$ Conjugate prior distribution for Bayesian linear regression, \pageref{sec:blr-prior}
+
+$\bullet$ Conjugate prior distribution for Poisson-distributed data, \pageref{sec:poiss-prior}
 
 $\bullet$ Conjugate prior distribution for binomial observations, \pageref{sec:bin-prior}
 
@@ -20491,6 +21900,8 @@ $\bullet$ Differential entropy of the multivariate normal distribution, \pageref
 
 $\bullet$ Differential entropy of the normal distribution, \pageref{sec:norm-dent}
 
+$\bullet$ Distributional transformation using cumulative distribution function, \pageref{sec:cdf-dt}
+
 
 \vspace{1em}
 \textbf{E}
@@ -20543,6 +21954,8 @@ $\bullet$ Invariance of the differential entropy under addition of a constant, \
 
 $\bullet$ Invariance of the variance under addition of a constant, \pageref{sec:var-inv}
 
+$\bullet$ Inverse transformation method using cumulative distribution function, \pageref{sec:cdf-itm}
+
 
 \vspace{1em}
 \textbf{J}
@@ -20583,6 +21996,8 @@ $\bullet$ Log family evidences in terms of log model evidences, \pageref{sec:lfe
 
 $\bullet$ Log model evidence for Bayesian linear regression, \pageref{sec:blr-lme}
 
+$\bullet$ Log model evidence for Poisson-distributed data, \pageref{sec:poiss-lme}
+
 $\bullet$ Log model evidence for binomial observations, \pageref{sec:bin-lme}
 
 $\bullet$ Log model evidence for multinomial observations, \pageref{sec:mult-lme}
@@ -20617,7 +22032,11 @@ $\bullet$ Maximum likelihood estimation for Poisson-distributed data, \pageref{s
 
 $\bullet$ Maximum likelihood estimation for multiple linear regression, \pageref{sec:mlr-mle}
 
+$\bullet$ Maximum likelihood estimation for the Poisson distribution with exposure values, \pageref{sec:poissexp-mle}
+
 $\bullet$ Maximum likelihood estimation for the general linear model, \pageref{sec:glm-mle}
+
+$\bullet$ Maximum likelihood estimation for the univariate Gaussian, \pageref{sec:ug-mle}
 
 $\bullet$ Maximum likelihood estimation for the univariate Gaussian with known variance, \pageref{sec:ugkv-mle}
 
@@ -20628,6 +22047,8 @@ $\bullet$ Mean of the Bernoulli distribution, \pageref{sec:bern-mean}
 $\bullet$ Mean of the Poisson distribution, \pageref{sec:poiss-mean}
 
 $\bullet$ Mean of the Wald distribution, \pageref{sec:wald-mean}
+
+$\bullet$ Mean of the beta distribution, \pageref{sec:beta-mean}
 
 $\bullet$ Mean of the binomial distribution, \pageref{sec:bin-mean}
 
@@ -20649,7 +22070,7 @@ $\bullet$ Median of the exponential distribution, \pageref{sec:exp-med}
 
 $\bullet$ Median of the normal distribution, \pageref{sec:norm-med}
 
-$\bullet$ Method of moments for beta-distributed data, \pageref{sec:beta-mom}
+$\bullet$ Method of moments for beta-distributed data, \pageref{sec:beta-mome}
 
 $\bullet$ Mode of the continuous uniform distribution, \pageref{sec:cuni-med}
 
@@ -20727,6 +22148,8 @@ $\bullet$ Posterior density is proportional to joint likelihood, \pageref{sec:po
 
 $\bullet$ Posterior distribution for Bayesian linear regression, \pageref{sec:blr-post}
 
+$\bullet$ Posterior distribution for Poisson-distributed data, \pageref{sec:poiss-post}
+
 $\bullet$ Posterior distribution for binomial observations, \pageref{sec:bin-post}
 
 $\bullet$ Posterior distribution for multinomial observations, \pageref{sec:mult-post}
@@ -20776,6 +22199,8 @@ $\bullet$ Probability density function of the multivariate normal distribution, 
 $\bullet$ Probability density function of the normal distribution, \pageref{sec:norm-pdf}
 
 $\bullet$ Probability density function of the normal-gamma distribution, \pageref{sec:ng-pdf}
+
+$\bullet$ Probability integral transform using cumulative distribution function, \pageref{sec:cdf-pit}
 
 $\bullet$ Probability mass function of a strictly decreasing function of a discrete random variable, \pageref{sec:pmf-sdfct}
 
@@ -20883,7 +22308,11 @@ $\bullet$ Two-sample z-test for independent observations, \pageref{sec:ugkv-ztes
 
 $\bullet$ Variance of constant is zero, \pageref{sec:var-const}
 
+$\bullet$ Variance of the Poisson distribution, \pageref{sec:poiss-var}
+
 $\bullet$ Variance of the Wald distribution, \pageref{sec:wald-var}
+
+$\bullet$ Variance of the beta distribution, \pageref{sec:beta-var}
 
 $\bullet$ Variance of the gamma distribution, \pageref{sec:gam-var}
 
@@ -20892,8 +22321,6 @@ $\bullet$ Variance of the linear combination of two random variables, \pageref{s
 $\bullet$ Variance of the normal distribution, \pageref{sec:norm-var}
 
 $\bullet$ Variance of the sum of two random variables, \pageref{sec:var-sum}
-
-$\bullet$ Variance zero implies constant, \pageref{sec:var-zero}
 
 
 \vspace{1em}
@@ -21003,6 +22430,8 @@ $\bullet$ Discrete uniform distribution, \pageref{sec:duni}
 \vspace{1em}
 \textbf{E}
 
+$\bullet$ Empirical Bayes, \pageref{sec:eb}
+
 $\bullet$ Empirical Bayes prior distribution, \pageref{sec:prior-eb}
 
 $\bullet$ Empirical Bayesian log model evidence, \pageref{sec:eblme}
@@ -21024,6 +22453,8 @@ $\bullet$ Exponential distribution, \pageref{sec:exp}
 
 \vspace{1em}
 \textbf{F}
+
+$\bullet$ F-distribution, \pageref{sec:f}
 
 $\bullet$ Flat, hard and soft prior distribution, \pageref{sec:prior-flat}
 
@@ -21050,6 +22481,8 @@ $\bullet$ Informative and non-informative prior distribution, \pageref{sec:prior
 
 \vspace{1em}
 \textbf{J}
+
+$\bullet$ Joint cumulative distribution function, \pageref{sec:cdf-joint}
 
 $\bullet$ Joint differential entropy, \pageref{sec:dent-joint}
 
@@ -21109,6 +22542,8 @@ $\bullet$ Maximum log-likelihood, \pageref{sec:mll}
 
 $\bullet$ Median, \pageref{sec:med}
 
+$\bullet$ Method-of-moments estimation, \pageref{sec:mome}
+
 $\bullet$ Minimum, \pageref{sec:min}
 
 $\bullet$ Mode, \pageref{sec:mode}
@@ -21124,6 +22559,8 @@ $\bullet$ Multinomial observations, \pageref{sec:mult-data}
 $\bullet$ Multiple linear regression, \pageref{sec:mlr}
 
 $\bullet$ Multivariate normal distribution, \pageref{sec:mvn}
+
+$\bullet$ Multivariate t-distribution, \pageref{sec:mvt}
 
 $\bullet$ Mutual information, \pageref{sec:mi}
 
@@ -21141,6 +22578,14 @@ $\bullet$ Null hypothesis, \pageref{sec:h0}
 
 
 \vspace{1em}
+\textbf{O}
+
+$\bullet$ One-tailed and two-tailed hypothesis, \pageref{sec:hyp-tail}
+
+$\bullet$ One-tailed and two-tailed test, \pageref{sec:test-tail}
+
+
+\vspace{1em}
 \textbf{P}
 
 $\bullet$ Point and set hypothesis, \pageref{sec:hyp-point}
@@ -21154,6 +22599,10 @@ $\bullet$ Poisson-distributed data, \pageref{sec:poiss-data}
 $\bullet$ Posterior distribution, \pageref{sec:post}
 
 $\bullet$ Posterior model probability, \pageref{sec:pmp}
+
+$\bullet$ Power of a statistical test, \pageref{sec:power}
+
+$\bullet$ Precision, \pageref{sec:prec}
 
 $\bullet$ Precision matrix, \pageref{sec:precmat}
 
@@ -21204,6 +22653,14 @@ $\bullet$ Residual-forming matrix, \pageref{sec:rfmat}
 
 \vspace{1em}
 \textbf{S}
+
+$\bullet$ Sample covariance, \pageref{sec:cov-samp}
+
+$\bullet$ Sample mean, \pageref{sec:mean-samp}
+
+$\bullet$ Sample variance, \pageref{sec:var-samp}
+
+$\bullet$ Sampling distribution, \pageref{sec:dist-samp}
 
 $\bullet$ Shannon entropy, \pageref{sec:ent}
 
@@ -21257,6 +22714,8 @@ $\bullet$ Univariate and multivariate random variable, \pageref{sec:rvar-uni}
 
 $\bullet$ Variance, \pageref{sec:var}
 
+$\bullet$ Variational Bayes, \pageref{sec:vb}
+
 $\bullet$ Variational Bayesian log model evidence, \pageref{sec:vblme}
 
 
@@ -21272,6 +22731,12 @@ $\bullet$ Wishart distribution, \pageref{sec:wish}
 \textbf{p}
 
 $\bullet$ p-value, \pageref{sec:pval}
+
+
+\vspace{1em}
+\textbf{t}
+
+$\bullet$ t-distribution, \pageref{sec:t}
 
 
 
