@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-08-25 19:25:00
- Last edit: 2020-08-25 19:25:00
+ Last edit: 2021-11-08 23:02:00
 """
 
 
@@ -21,7 +21,7 @@ import BookTools as spbt
 # Set repository directory
 #-----------------------------------------------------------------------------#
 rep_dir = spbt.get_rep_dir('offline')
-toc_md  = '/I/Table_of_Contents.md'
+toc_md  = '/I/ToC.md'
 
 # Load "Table of Contents"
 #-----------------------------------------------------------------------------#

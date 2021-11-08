@@ -1,2 +1,2 @@
-C:\Joram\ownCloud\StatProofBook\Repositories\StatProofBook.github.io
+C:\Users\sochj\ownCloud\StatProofBook\Repositories\StatProofBook.github.io
 https://raw.githubusercontent.com/StatProofBook/StatProofBook.github.io/master

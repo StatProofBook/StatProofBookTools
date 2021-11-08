@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2020-12-10 22:03:00
+ Last edit: 2021-11-08 23:03:00
 """
 
 
@@ -23,7 +23,7 @@ from datetime import datetime
 #-----------------------------------------------------------------------------#
 rep_dir = spbt.get_rep_dir('offline')
 www_dir = spbt.get_rep_dir('online')
-toc_md  = '/I/Table_of_Contents.md'
+toc_md  = '/I/ToC.md'
 
 # Read "Table of Contents"
 #-----------------------------------------------------------------------------#

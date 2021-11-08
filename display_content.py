@@ -10,7 +10,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-15 18:15:00
- Last edit: 2020-08-25 18:23:00
+ Last edit: 2021-11-08 22:59:00
 """
 
 
@@ -42,7 +42,7 @@ D_secs = []
 
 # Load "Table of Contents"
 #-----------------------------------------------------------------------------#
-toc_md  = '/I/Table_of_Contents.md'
+toc_md  = '/I/ToC.md'
 toc_obj = open(rep_dir + toc_md, 'r')
 toc_txt = toc_obj.readlines()
 toc_obj.close()
