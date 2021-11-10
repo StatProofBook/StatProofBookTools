@@ -148,6 +148,7 @@ def get_sources(file_txt):
             new_src = True
             source  = dict()
             source['authors'] = re.sub('"', '', line[13:-1])
+            source['authors'] = re.sub('_', '-', source['authors'])
             source['authors'] = re.sub('&', '\&', source['authors'])
         if line.find('    year:') == 0:
             source['year'] = re.sub('"', '', line[10:-1])
