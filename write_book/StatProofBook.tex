@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2021-11-08, 23:05}
+\date{2021-11-10, 10:40}
 
 \begin{document}
 
@@ -18155,39 +18155,55 @@ Otherwise, it is called simple linear regression with correlated observations.
 
 
 
-\subsubsection[\textit{Regression line}]{Regression line} \label{sec:regline}
+\subsubsection[\textbf{Special case of multiple linear regression}]{Special case of multiple linear regression} \label{sec:slr-mlr}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a simple linear regression with independent observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}) using dependent variable $y$ and independent variable $x$:
+\textbf{Theorem:} Simple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}) is a special case of multiple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with design matrix $X$ and regression coefficients $\beta$
 
-\begin{equation} \label{eq:regline-slr}
+\begin{equation} \label{eq:slr-mlr-slr-mlr}
+X = \left[ 1_n, \, x \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right]
+\end{equation}
+
+where $1_n$ is an $n \times 1$ vector of ones, $x$ is the $n \times 1$ single predictor variable, $\beta_0$ is the intercept and $\beta_1$ is the slope of the regression line ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:regline}).
+
+
+\vspace{1em}
+\textbf{Proof:} Without loss of generality, consider the simple linear regression case with uncorrelated errors ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}):
+
+\begin{equation} \label{eq:slr-mlr-slr}
 y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \; \varepsilon_i \sim \mathcal{N}(0, \sigma^2) \; .
 \end{equation}
 
-Then, given some parameters $\beta_0, \beta_1 \in \mathbb{R}$, the set
+In matrix notation and using the multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}), this can also be written as
 
-\begin{equation} \label{eq:regline-regline}
-L(\beta_0, \beta_1) = \left\lbrace (x,y) \in \mathbb{R}^2 \mid y = \beta_0 + \beta_1 x \right\rbrace
+\begin{equation} \label{eq:slr-mlr-slr-mlr-s1}
+\begin{split}
+y &= \beta_0 1_n + \beta_1 x + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, I_n) \\
+y &= \left[ 1_n, \, x \right] \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, I_n) \; .
+\end{split}
 \end{equation}
 
-is called a "regression line" and the set
+Comparing with the multiple linear regression equations for uncorrelated errors ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}), we finally note:
 
-\begin{equation} \label{eq:regline-regline-ols}
-L(\hat{\beta}_0, \hat{\beta}_1)
+\begin{equation} \label{eq:slr-mlr-slr-mlr-s3}
+y = X\beta + \varepsilon \quad \text{with} \quad X = \left[ 1_n, \, x \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] \; .
 \end{equation}
 
-is called the "fitted regression line", with estimated regression coefficients $\hat{\beta}_0, \hat{\beta}_1$, e.g. obtained via ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-ols}).
+In the case of correlated observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}), the error distribution changes to ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}):
+
+\begin{equation} \label{eq:slr-mlr-mlr-noise}
+\varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; .
+\end{equation}
 
 
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Wikipedia (2021): "Simple linear regression"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-10-27; URL: \url{https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line}.
-\end{itemize}
+\item original work\end{itemize}
 
 
 \vspace{1em}
-\textbf{Metadata:} ID: D164 | shortcut: regline | author: JoramSoch | date: 2021-10-27, 07:30.
+\textbf{Metadata:} ID: P281 | shortcut: slr-mlr | author: JoramSoch | date: 2021-11-09, 07:57.
 \vspace{1em}
 
 
@@ -18549,6 +18565,104 @@ Applying the formula for the sample variance ($\rightarrow$ Definition \ref{sec:
 
 
 
+\subsubsection[\textbf{Distribution of estimates}]{Distribution of estimates} \label{sec:slr-olsdist}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Assume a simple linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}) with independent observations
+
+\begin{equation} \label{eq:slr-olsdist-slr}
+y = \beta_0 + \beta_1 x + \varepsilon, \; \varepsilon_i \sim \mathcal{N}(0, \sigma^2)
+\end{equation}
+
+and consider estimation using ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-ols}). Then, the estimated parameters are normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}) as
+
+\begin{equation} \label{eq:slr-olsdist-slr-olsdist}
+\left[ \begin{matrix} \hat{\beta}_0 \\ \hat{\beta}_1 \end{matrix} \right] \sim \mathcal{N}\left( \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right], \, \frac{\sigma^2}{(n-1) \, s_x^2} \cdot \left[ \begin{matrix} x^\mathrm{T}x/n & -\bar{x} \\ -\bar{x} & 1 \end{matrix} \right] \right)
+\end{equation}
+
+where $\bar{x}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) and $s_x^2$ is the sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) of $x$.
+
+
+\vspace{1em}
+\textbf{Proof:} Simple linear regression is a special case of multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-mlr}) with
+
+\begin{equation} \label{eq:slr-olsdist-slr-mlr}
+X = \left[ 1_n, \, x \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] \; ,
+\end{equation}
+
+such that \eqref{eq:slr-olsdist-slr} can also be written as
+
+\begin{equation} \label{eq:slr-olsdist-mlr}
+y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 I_n)
+\end{equation}
+
+and ordinary least sqaures estimates ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}) are given by
+
+\begin{equation} \label{eq:slr-olsdist-mlr-ols}
+\hat{\beta} = (X^\mathrm{T} X)^{-1} X^\mathrm{T} y \; .
+\end{equation}
+
+From \eqref{eq:slr-olsdist-mlr} and the linear transformation theorem for the multivariate normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-ltt}), it follows that
+
+\begin{equation} \label{eq:slr-olsdist-y-dist}
+y \sim \mathcal{N}\left( X\beta, \, \sigma^2 I_n \right) \; .
+\end{equation}
+
+From \eqref{eq:slr-olsdist-mlr-ols}, in combination with \eqref{eq:slr-olsdist-y-dist} and the transformation theorem ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-ltt}), it follows that
+
+\begin{equation} \label{eq:slr-olsdist-b-est-dist}
+\begin{split}
+\hat{\beta} &\sim \mathcal{N}\left( (X^\mathrm{T} X)^{-1} X^\mathrm{T} X\beta, \, \sigma^2 (X^\mathrm{T} X)^{-1} X^\mathrm{T} I_n X (X^\mathrm{T} X)^{-1} \right) \\
+&\sim \mathcal{N}\left( \beta, \, \sigma^2 (X^\mathrm{T} X)^{-1} \right) \; .
+\end{split}
+\end{equation}
+
+Applying \eqref{eq:slr-olsdist-slr-mlr}, the covariance matrix ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}) can be further developed as follows:
+
+\begin{equation} \label{eq:slr-olsdist-b-est-cov}
+\begin{split}
+\sigma^2 (X^\mathrm{T} X)^{-1} &= \sigma^2 \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \left[ 1_n, \, x \right] \right)^{-1} \\
+&= \sigma^2 \left( \left[ \begin{matrix} n & n\bar{x} \\ n\bar{x} & x^\mathrm{T} x \end{matrix} \right] \right)^{-1} \\
+&= \frac{\sigma^2}{n x^\mathrm{T} x - (n\bar{x})^2} \left[ \begin{matrix} x^\mathrm{T} x & -n\bar{x} \\ -n\bar{x} & n \end{matrix} \right] \\
+&= \frac{\sigma^2}{x^\mathrm{T} x - n\bar{x}^2} \left[ \begin{matrix} x^\mathrm{T} x/n & -\bar{x} \\ -\bar{x} & 1 \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+Note that the denominator in the first factor is equal to
+
+\begin{equation} \label{eq:slr-olsdist-b-est-cov-den}
+\begin{split}
+x^\mathrm{T} x - n\bar{x}^2 &= x^\mathrm{T} x - 2 n\bar{x}^2 + n\bar{x}^2 \\
+&= \sum_{i=1}^{n} x_i^2 - 2 n \bar{x} \frac{1}{n} \sum_{i=1}^{n} x_i + \sum_{i=1}^{n} \bar{x}^2 \\
+&= \sum_{i=1}^{n} x_i^2 - 2 \sum_{i=1}^{n} x_i \bar{x} + \sum_{i=1}^{n} \bar{x}^2 \\
+&= \sum_{i=1}^{n} \left( x_i^2 - 2 x_i \bar{x} + \bar{x}^2 \right) \\
+&= \sum_{i=1}^{n} \left( x_i^2 - \bar{x} \right)^2 \\
+&= (n-1) \, s_x^2 \; .
+\end{split}
+\end{equation}
+
+Thus, combining \eqref{eq:slr-olsdist-b-est-dist}, \eqref{eq:slr-olsdist-b-est-cov} and \eqref{eq:slr-olsdist-b-est-cov-den}, we have
+
+\begin{equation} \label{eq:slr-olsdist-slr-olsdist-qed}
+\hat{\beta} \sim \mathcal{N}\left( \beta, \, \frac{\sigma^2}{(n-1) \, s_x^2} \cdot \left[ \begin{matrix} x^\mathrm{T}x/n & -\bar{x} \\ -\bar{x} & 1 \end{matrix} \right] \right)
+\end{equation}
+
+which is equivalent to equation \eqref{eq:slr-olsdist-slr-olsdist}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Proofs involving ordinary least squares"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-11-09; URL: \url{https://en.wikipedia.org/wiki/Proofs_involving_ordinary_least_squares#Unbiasedness_and_variance_of_%7F'%22%60UNIQ--postMath-00000037-QINU%60%22'%7F}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P282 | shortcut: slr-olsdist | author: JoramSoch | date: 2021-11-09, 09:09.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Effects of mean-centering}]{Effects of mean-centering} \label{sec:slr-meancent}
 \setcounter{equation}{0}
 
@@ -18645,6 +18759,43 @@ and we can see that $\hat{\beta}_1(\tilde{x},\tilde{y}) = \hat{\beta}_1(x,y)$, b
 
 
 
+\subsubsection[\textit{Regression line}]{Regression line} \label{sec:regline}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a simple linear regression with independent observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}) using dependent variable $y$ and independent variable $x$:
+
+\begin{equation} \label{eq:regline-slr}
+y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \; \varepsilon_i \sim \mathcal{N}(0, \sigma^2) \; .
+\end{equation}
+
+Then, given some parameters $\beta_0, \beta_1 \in \mathbb{R}$, the set
+
+\begin{equation} \label{eq:regline-regline}
+L(\beta_0, \beta_1) = \left\lbrace (x,y) \in \mathbb{R}^2 \mid y = \beta_0 + \beta_1 x \right\rbrace
+\end{equation}
+
+is called a "regression line" and the set
+
+\begin{equation} \label{eq:regline-regline-ols}
+L(\hat{\beta}_0, \hat{\beta}_1)
+\end{equation}
+
+is called the "fitted regression line", with estimated regression coefficients $\hat{\beta}_0, \hat{\beta}_1$, e.g. obtained via ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-ols}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Simple linear regression"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-10-27; URL: \url{https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D164 | shortcut: regline | author: JoramSoch | date: 2021-10-27, 07:30.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Regression line includes center of mass}]{Regression line includes center of mass} \label{sec:slr-comp}
 \setcounter{equation}{0}
 
@@ -18679,6 +18830,301 @@ which is a true statement. Thus, the regression line ($\rightarrow$ Definition \
 
 \vspace{1em}
 \textbf{Metadata:} ID: P275 | shortcut: slr-comp | author: JoramSoch | date: 2021-10-27, 12:52.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Projection of data point to regression line}]{Projection of data point to regression line} \label{sec:slr-proj}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider simple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}) and an estimated regression line ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:regline}) specified by
+
+\begin{equation} \label{eq:slr-proj-slr-regline}
+y = \hat{\beta}_0 + \hat{\beta}_1 x \quad \text{where} \quad x,y \in \mathbb{R} \; .
+\end{equation}
+
+For any given data point $O(x_o \vert y_o)$, the point on the regression line $P(x_p \vert y_p)$ that is closest to this data point is given by:
+
+\begin{equation} \label{eq:slr-proj-slr-proj}
+P\left(w \mid \hat{\beta}_0 + \hat{\beta}_1 w\right) \quad \text{with} \quad w = \frac{x_0 + (y_o - \hat{\beta}_0) \hat{\beta}_1}{1 + \hat{\beta}_1^2} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The intersection point of the regression line ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:regline}) with the y-axis is
+
+\begin{equation} \label{eq:slr-proj-S}
+S(0 \vert \hat{\beta}_0) \; .
+\end{equation}
+
+Let $a$ be a vector describing the direction of the regression line, let $b$ be the vector pointing from $S$ to $O$ and let $p$ be the vector pointing from $S$ to $P$.
+
+Because $\hat{\beta}_1$ is the slope of the regression line, we have
+
+\begin{equation} \label{eq:slr-proj-a}
+a = \left( \begin{matrix} 1 \\ \hat{\beta}_1 \end{matrix} \right) \; .
+\end{equation}
+
+Moreover, with the points $O$ and $S$, we have
+
+\begin{equation} \label{eq:slr-proj-b}
+b = \left( \begin{matrix} x_o \\ y_o \end{matrix} \right) - \left( \begin{matrix} 0 \\ \hat{\beta}_0 \end{matrix} \right) = \left( \begin{matrix} x_o \\ y_o - \hat{\beta}_0 \end{matrix} \right) \; .
+\end{equation}
+
+Because $P$ is located on the regression line, $p$ is collinear with $a$ and thus a scalar multiple of this vector:
+
+\begin{equation} \label{eq:slr-proj-p}
+p = w \cdot a \; .
+\end{equation}
+
+Moreover, as $P$ is the point on the regression line which is closest to $O$, this means that the vector $b-p$ is orthogonal to $a$, such that the inner product of these two vectors is equal to zero:
+
+\begin{equation} \label{eq:slr-proj-a-b-p-orth}
+a^\mathrm{T} (b-p) = 0 \; .
+\end{equation}
+
+Rearranging this equation gives
+
+\begin{equation} \label{eq:slr-proj-w}
+\begin{split}
+a^\mathrm{T} (b-p) &= 0 \\
+a^\mathrm{T} (b - w \cdot a) &= 0 \\
+a^\mathrm{T} b - w \cdot a^\mathrm{T} a &= 0 \\
+w \cdot a^\mathrm{T} a &= a^\mathrm{T} b \\
+w &= \frac{a^\mathrm{T} b}{a^\mathrm{T} a} \; .
+\end{split}
+\end{equation}
+
+With \eqref{eq:slr-proj-a} and \eqref{eq:slr-proj-b}, $w$ can be calculated as
+
+\begin{equation} \label{eq:slr-proj-w-qed}
+\begin{split}
+w &= \frac{a^\mathrm{T} b}{a^\mathrm{T} a} \\
+w &= \frac{\left( \begin{matrix} 1 \\ \hat{\beta}_1 \end{matrix} \right)^\mathrm{T} \left( \begin{matrix} x_o \\ y_o - \hat{\beta}_0 \end{matrix} \right)}{\left( \begin{matrix} 1 \\ \hat{\beta}_1 \end{matrix} \right)^\mathrm{T} \left( \begin{matrix} 1 \\ \hat{\beta}_1 \end{matrix} \right)} \\
+w &= \frac{x_0 + (y_o - \hat{\beta}_0) \hat{\beta}_1}{1 + \hat{\beta}_1^2}
+\end{split}
+\end{equation}
+
+Finally, with the point $S$ \eqref{eq:slr-proj-S} and the vector $p$ \eqref{eq:slr-proj-p}, the coordinates of $P$ are obtained as
+
+\begin{equation} \label{eq:slr-proj-P-qed}
+\left( \begin{matrix} x_p \\ y_p \end{matrix} \right) = \left( \begin{matrix} 0 \\ \hat{\beta}_0 \end{matrix} \right) + w \cdot \left( \begin{matrix} 1 \\ \hat{\beta}_1 \end{matrix} \right) = \left( \begin{matrix} w \\ \hat{\beta}_0 + \hat{\beta}_1 w \end{matrix} \right) \; .
+\end{equation}
+
+Together, \eqref{eq:slr-proj-P-qed} and \eqref{eq:slr-proj-w-qed} constitute the proof of equation \eqref{eq:slr-proj-slr-proj}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Penny, William (2006): "Projects"; in: \textit{Mathematics for Brain Imaging}, ch. 1.4.10, pp. 34-35, eqs. 1.87/1.88; URL: \url{https://ueapsylabs.co.uk/sites/wpenny/mbi/mbi_course.pdf}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P283 | shortcut: slr-proj | author: JoramSoch | date: 2021-11-09, 10:16.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Sums of squares}]{Sums of squares} \label{sec:slr-sss}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Under ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-ols}) for simple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}), total ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:tss}), explained ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ess}) and residual ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) sums of squares are given by
+
+\begin{equation} \label{eq:slr-sss-slr-sss}
+\begin{split}
+\mathrm{TSS} &= (n-1) \, s_y^2 \\
+\mathrm{ESS} &= (n-1) \, \frac{s_{xy}^2}{s_x^2} \\
+\mathrm{RSS} &= (n-1) \left( s_y^2 - \frac{s_{xy}^2}{s_x^2} \right)
+\end{split}
+\end{equation}
+
+where $s_x^2$ and $s_y^2$ are the sample variances ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) of $x$ and $y$ and $s_{xy}$ is the sample covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov-samp}) between $x$ and $y$.
+
+
+\vspace{1em}
+\textbf{Proof:} The ordinary least squares parameter estimates ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-ols}) are given by
+
+\begin{equation} \label{eq:slr-sss-slr-ols}
+\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x} \quad \text{and} \quad \hat{\beta}_1 = \frac{s_{xy}}{s_x^2} \; .
+\end{equation}
+
+\vspace{1em}
+1) The total sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:tss}) is defined as
+
+\begin{equation} \label{eq:slr-sss-TSS}
+\mathrm{TSS} = \sum_{i=1}^{n} (y_i - \bar{y})^2
+\end{equation}
+
+which can be reformulated as follows:
+
+\begin{equation} \label{eq:slr-sss-TSS-qed}
+\begin{split}
+\mathrm{TSS} &= \sum_{i=1}^{n} (y_i - \bar{y})^2 \\
+&= (n-1) \frac{1}{n-1} \sum_{i=1}^{n} (y_i - \bar{y})^2 \\
+&= (n-1) s_y^2 \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+2) The explained sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:ess}) is defined as
+
+\begin{equation} \label{eq:slr-sss-ESS}
+\mathrm{ESS} = \sum_{i=1}^n (\hat{y}_i - \bar{y})^2 \quad \text{where} \quad \hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i
+\end{equation}
+
+which, with the OLS parameter estimats, becomes:
+
+\begin{equation} \label{eq:slr-sss-ESS-qed}
+\begin{split}
+\mathrm{ESS} &= \sum_{i=1}^n (\hat{y}_i - \bar{y})^2 \\
+&= \sum_{i=1}^n (\hat{\beta}_0 + \hat{\beta}_1 x_i - \bar{y})^2 \\
+&\overset{\eqref{eq:slr-sss-slr-ols}}{=} \sum_{i=1}^n (\bar{y} - \hat{\beta}_1 \bar{x} + \hat{\beta}_1 x_i - \bar{y})^2 \\
+&= \sum_{i=1}^n \left( \hat{\beta}_1 (x_i - \bar{x}) \right)^2 \\
+&\overset{\eqref{eq:slr-sss-slr-ols}}{=} \sum_{i=1}^n \left( \frac{s_{xy}}{s_x^2} (x_i - \bar{x}) \right)^2 \\
+&= \left( \frac{s_{xy}}{s_x^2} \right)^2 \sum_{i=1}^n (x_i - \bar{x})^2 \\
+&= \left( \frac{s_{xy}}{s_x^2} \right)^2 (n-1) s_x^2 \\
+&= (n-1) \, \frac{s_{xy}^2}{s_x^2} \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+3) The residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) is defined as
+
+\begin{equation} \label{eq:slr-sss-RSS}
+\mathrm{RSS} = \sum_{i=1}^n (y_i - \hat{y}_i)^2 \quad \text{where} \quad \hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i
+\end{equation}
+
+which, with the OLS parameter estimats, becomes:
+
+\begin{equation} \label{eq:slr-sss-RSS-qed}
+\begin{split}
+\mathrm{RSS} &= \sum_{i=1}^n (y_i - \hat{y}_i)^2 \\
+&= \sum_{i=1}^n (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2 \\
+&\overset{\eqref{eq:slr-sss-slr-ols}}{=} \sum_{i=1}^n (y_i - \bar{y} + \hat{\beta}_1 \bar{x} - \hat{\beta}_1 x_i)^2 \\
+&= \sum_{i=1}^n \left( (y_i - \bar{y}) - \hat{\beta}_1 (x_i - \bar{x}) \right)^2 \\
+&= \sum_{i=1}^n \left( (y_i - \bar{y})^2 - 2 \hat{\beta}_1 (x_i - \bar{x}) (y_i - \bar{y}) + \hat{\beta}_1^2 (x_i - \bar{x})^2 \right) \\
+&= \sum_{i=1}^n (y_i - \bar{y})^2 - 2 \hat{\beta}_1 \sum_{i=1}^n (x_i - \bar{x}) (y_i - \bar{y}) + \hat{\beta}_1^2 \sum_{i=1}^n (x_i - \bar{x})^2 \\
+&= (n-1) \, s_y^2 - 2 (n-1) \, \hat{\beta}_1 \, s_{xy} + (n-1) \, \hat{\beta}_1^2 \, s_x^2 \\
+&\overset{\eqref{eq:slr-sss-slr-ols}}{=} (n-1) \, s_y^2 - 2 (n-1) \left( \frac{s_{xy}}{s_x^2} \right) s_{xy} + (n-1) \left( \frac{s_{xy}}{s_x^2} \right)^2 s_x^2 \\
+&= (n-1) \, s_y^2 - (n-1) \, \frac{s_{xy}^2}{s_x^2} \\
+&= (n-1) \left( s_y^2 - \frac{s_{xy}^2}{s_x^2} \right) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P284 | shortcut: slr-sss | author: JoramSoch | date: 2021-11-09, 11:34.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Transformation matrices}]{Transformation matrices} \label{sec:slr-mat}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Under ordinary least squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-ols}) for simple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}), estimation ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:emat}), projection ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:pmat}) and residual-forming ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rfmat}) matrices are given by
+
+\begin{equation} \label{eq:slr-mat-slr-mat}
+\begin{split}
+E &= \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} (x^\mathrm{T} x/n) \, 1_n^\mathrm{T} - \bar{x} \, x^\mathrm{T} \\ - \bar{x} \, 1_n^\mathrm{T} + x^\mathrm{T} \end{matrix} \right] \\
+P &= \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} (x^\mathrm{T} x/n) - 2 \bar{x} x_1 + x_1^2 & \cdots & (x^\mathrm{T} x/n) - \bar{x} (x_1 + x_n) + x_1 x_n \\ \vdots & \ddots & \vdots \\ (x^\mathrm{T} x/n) - \bar{x} (x_1 + x_n) + x_1 x_n & \cdots & (x^\mathrm{T} x/n) - 2 \bar{x} x_n + x_n^2 \end{matrix} \right] \\
+R &= \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} (n-1) (x^\mathrm{T} x/n) + \bar{x} (2 x_1 - n\bar{x}) - x_1^2 & \cdots & -(x^\mathrm{T} x/n) + \bar{x} (x_1 + x_n) - x_1 x_n \\ \vdots & \ddots & \vdots \\ -(x^\mathrm{T} x/n) + \bar{x} (x_1 + x_n) - x_1 x_n & \cdots &  (n-1) (x^\mathrm{T} x/n) + \bar{x} (2 x_n - n\bar{x}) - x_n^2 \end{matrix} \right]
+\end{split}
+\end{equation}
+
+where $1_n$ is an $n \times 1$ vector of ones, $x$ is the $n \times 1$ single predictor variable, $\bar{x}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) of $x$ and $s_x^2$ is the sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) of $x$.
+
+
+\vspace{1em}
+\textbf{Proof:} Simple linear regression is a special case of multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-mlr}) with
+
+\begin{equation} \label{eq:slr-mat-slr-mlr}
+X = \left[ 1_n, \, x \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] \; ,
+\end{equation}
+
+such that the simple linear regression model can also be written as
+
+\begin{equation} \label{eq:slr-mat-mlr}
+y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 I_n) \; .
+\end{equation}
+
+Moreover, we note the following equality ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-olsdist}):
+
+\begin{equation} \label{eq:slr-mat-b-est-cov-den}
+x^\mathrm{T} x - n\bar{x}^2 = (n-1) \, s_x^2 \; .
+\end{equation}
+
+\vspace{1em}
+1) The estimation matrix is given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mat})
+
+\begin{equation} \label{eq:slr-mat-E}
+E = (X^\mathrm{T} X)^{-1} X^\mathrm{T}
+\end{equation}
+
+which is a $2 \times n$ matrix and can be reformulated as follows:
+
+\begin{equation} \label{eq:slr-mat-E-qed}
+\begin{split}
+E &= (X^\mathrm{T} X)^{-1} X^\mathrm{T} \\
+&= \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \left[ 1_n, \, x \right] \right)^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \\
+&= \left( \left[ \begin{matrix} n & n\bar{x} \\ n\bar{x} & x^\mathrm{T} x \end{matrix} \right] \right)^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \\
+&= \frac{1}{n x^\mathrm{T} x - (n\bar{x})^2} \left[ \begin{matrix} x^\mathrm{T} x & -n\bar{x} \\ -n\bar{x} & n \end{matrix} \right] \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \\
+&= \frac{1}{x^\mathrm{T} x - n\bar{x}^2} \left[ \begin{matrix} x^\mathrm{T} x/n & -\bar{x} \\ -\bar{x} & 1 \end{matrix} \right] \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \\
+&\overset{\eqref{eq:slr-mat-b-est-cov-den}}{=} \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} (x^\mathrm{T} x/n) \, 1_n^\mathrm{T} - \bar{x} \, x^\mathrm{T} \\ - \bar{x} \, 1_n^\mathrm{T} + x^\mathrm{T} \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+2) The projection matrix is given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mat})
+
+\begin{equation} \label{eq:slr-mat-P}
+P = X (X^\mathrm{T} X)^{-1} X^\mathrm{T} = X \, E
+\end{equation}
+
+which is an $n \times n$ matrix and can be reformulated as follows:
+
+\begin{equation} \label{eq:slr-mat-P-qed}
+\begin{split}
+P &= X \, E = \left[ 1_n, \, x \right] \left[ \begin{matrix} e_1 \\ e_2 \end{matrix} \right] \\
+&= \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} 1 & x_1 \\ \vdots & \vdots \\ 1 & x_n \end{matrix} \right] \left[ \begin{matrix} (x^\mathrm{T} x/n) - \bar{x} x_1 & \cdots & (x^\mathrm{T} x/n) - \bar{x} x_n \\ -\bar{x} + x_1 & \cdots & -\bar{x} + x_n \end{matrix} \right] \\
+&= \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} (x^\mathrm{T} x/n) - 2 \bar{x} x_1 + x_1^2 & \cdots & (x^\mathrm{T} x/n) - \bar{x} (x_1 + x_n) + x_1 x_n \\ \vdots & \ddots & \vdots \\ (x^\mathrm{T} x/n) - \bar{x} (x_1 + x_n) + x_1 x_n & \cdots & (x^\mathrm{T} x/n) - 2 \bar{x} x_n + x_n^2 \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+3) The residual-forming matrix is given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mat})
+
+\begin{equation} \label{eq:slr-mat-R}
+R = I_n - X (X^\mathrm{T} X)^{-1} X^\mathrm{T} = I_n - P
+\end{equation}
+
+which also is an $n \times n$ matrix and can be reformulated as follows:
+
+\begin{equation} \label{eq:slr-mat-R-qed}
+\begin{split}
+R &= I_n - P = \left[ \begin{matrix} 1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & 1 \end{matrix} \right] - \left[ \begin{matrix} p_{11} & \cdots & p_{1n} \\ \vdots & \ddots & \vdots \\ p_{n1} & \cdots & p_{nn} \end{matrix} \right] \\
+&\overset{\eqref{eq:slr-mat-b-est-cov-den}}{=} \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} x^\mathrm{T} x - n\bar{x}^2 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & x^\mathrm{T} x - n\bar{x}^2 \end{matrix} \right] \\
+&- \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} (x^\mathrm{T} x/n) - 2 \bar{x} x_1 + x_1^2 & \cdots & (x^\mathrm{T} x/n) - \bar{x} (x_1 + x_n) + x_1 x_n \\ \vdots & \ddots & \vdots \\ (x^\mathrm{T} x/n) - \bar{x} (x_1 + x_n) + x_1 x_n & \cdots & (x^\mathrm{T} x/n) - 2 \bar{x} x_n + x_n^2 \end{matrix} \right] \\
+&= \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} (n-1) (x^\mathrm{T} x/n) + \bar{x} (2 x_1 - n\bar{x}) - x_1^2 & \cdots & -(x^\mathrm{T} x/n) + \bar{x} (x_1 + x_n) - x_1 x_n \\ \vdots & \ddots & \vdots \\ -(x^\mathrm{T} x/n) + \bar{x} (x_1 + x_n) - x_1 x_n & \cdots &  (n-1) (x^\mathrm{T} x/n) + \bar{x} (2 x_n - n\bar{x}) - x_n^2 \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P285 | shortcut: slr-mat | author: JoramSoch | date: 2021-11-09, 15:19.
 \vspace{1em}
 
 
@@ -18805,7 +19251,7 @@ and consider estimation using ordinary least squares ($\rightarrow$ Proof \ref{s
 \hat{\sigma}^2 = \frac{1}{n-1} \, \mathrm{RSS}(\hat{\beta}_0,\hat{\beta}_1)
 \end{equation}
 
-and the residual sum of squares for simple linear regression ($\rightarrow$ Proof "slr-sss") is
+and the residual sum of squares for simple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-sss}) is
 
 \begin{equation} \label{eq:slr-resvar-slr-rss}
 \mathrm{RSS}(\hat{\beta}_0,\hat{\beta}_1) = (n-1) \left( s_y^2 - \frac{s_{xy}^2}{s_x^2} \right) \; .
@@ -18947,7 +19393,7 @@ The coefficient of determination ($\rightarrow$ Definition \ref{sec:Model Select
 R^2 = \frac{\mathrm{ESS}}{\mathrm{TSS}} \; .
 \end{equation}
 
-Using the explained and total sum of squares for simple linear regression ($\rightarrow$ Proof "slr-sss"), we have:
+Using the explained and total sum of squares for simple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-sss}), we have:
 
 \begin{equation} \label{eq:slr-rsq-slr-R2-s2}
 \begin{split}
@@ -25815,6 +26261,11 @@ P277 & slr-rescorr & The residuals and the covariate are uncorrelated in simple 
 P278 & slr-resvar & Relationship between residual variance and sample variance in simple linear regression & JoramSoch & 2021-10-27 & \pageref{sec:slr-resvar} \\ \hline
 P279 & slr-corr & Relationship between correlation coefficient and slope estimate in simple linear regression & JoramSoch & 2021-10-27 & \pageref{sec:slr-corr} \\ \hline
 P280 & slr-rsq & Relationship between coefficient of determination and correlation coefficient in simple linear regression & JoramSoch & 2021-10-27 & \pageref{sec:slr-rsq} \\ \hline
+P281 & slr-mlr & Simple linear regression is a special case of multiple linear regression & JoramSoch & 2021-11-09 & \pageref{sec:slr-mlr} \\ \hline
+P282 & slr-olsdist & Distribution of parameter estimates for simple linear regression & JoramSoch & 2021-11-09 & \pageref{sec:slr-olsdist} \\ \hline
+P283 & slr-proj & Projection of a data point to the regression line & JoramSoch & 2021-11-09 & \pageref{sec:slr-proj} \\ \hline
+P284 & slr-sss & Sums of squares for simple linear regression & JoramSoch & 2021-11-09 & \pageref{sec:slr-sss} \\ \hline
+P285 & slr-mat & Transformation matrices for simple linear regression & JoramSoch & 2021-11-09 & \pageref{sec:slr-mat} \\ \hline
 \end{longtable}
 
 
@@ -25998,12 +26449,6 @@ D164 & regline & Regression line & JoramSoch & 2021-10-27 & \pageref{sec:regline
 \pagebreak
 \section{Proof by Topic}
 
-\textbf{(}
-
-$\bullet$ (Non-)Multiplicativity of the expected value, \pageref{sec:mean-mult}
-
-
-\vspace{1em}
 \textbf{A}
 
 $\bullet$ Accuracy and complexity for the univariate Gaussian, \pageref{sec:ug-anc}
@@ -26048,13 +26493,13 @@ $\bullet$ Conditional distributions of the normal-gamma distribution, \pageref{s
 
 $\bullet$ Conjugate prior distribution for Bayesian linear regression, \pageref{sec:blr-prior}
 
-$\bullet$ Conjugate prior distribution for Poisson-distributed data, \pageref{sec:poiss-prior}
-
 $\bullet$ Conjugate prior distribution for binomial observations, \pageref{sec:bin-prior}
 
 $\bullet$ Conjugate prior distribution for multinomial observations, \pageref{sec:mult-prior}
 
 $\bullet$ Conjugate prior distribution for multivariate Bayesian linear regression, \pageref{sec:mblr-prior}
+
+$\bullet$ Conjugate prior distribution for Poisson-distributed data, \pageref{sec:poiss-prior}
 
 $\bullet$ Conjugate prior distribution for the Poisson distribution with exposure values, \pageref{sec:poissexp-prior}
 
@@ -26066,9 +26511,9 @@ $\bullet$ Construction of confidence intervals using Wilks' theorem, \pageref{se
 
 $\bullet$ Construction of unbiased estimator for variance, \pageref{sec:resvar-unb}
 
-$\bullet$ Convexity of the Kullback-Leibler divergence, \pageref{sec:kl-conv}
-
 $\bullet$ Convexity of the cross-entropy, \pageref{sec:entcross-conv}
+
+$\bullet$ Convexity of the Kullback-Leibler divergence, \pageref{sec:kl-conv}
 
 $\bullet$ Covariance of independent random variables, \pageref{sec:cov-ind}
 
@@ -26125,6 +26570,8 @@ $\bullet$ Differential entropy of the multivariate normal distribution, \pageref
 $\bullet$ Differential entropy of the normal distribution, \pageref{sec:norm-dent}
 
 $\bullet$ Differential entropy of the normal-gamma distribution, \pageref{sec:ng-dent}
+
+$\bullet$ Distribution of parameter estimates for simple linear regression, \pageref{sec:slr-olsdist}
 
 $\bullet$ Distribution of the inverse general linear model, \pageref{sec:iglm-dist}
 
@@ -26190,9 +26637,9 @@ $\bullet$ Gibbs' inequality, \pageref{sec:gibbs-ineq}
 
 $\bullet$ Inflection points of the probability density function of the normal distribution, \pageref{sec:norm-infl}
 
-$\bullet$ Invariance of the Kullback-Leibler divergence under parameter transformation, \pageref{sec:kl-inv}
-
 $\bullet$ Invariance of the differential entropy under addition of a constant, \pageref{sec:dent-inv}
+
+$\bullet$ Invariance of the Kullback-Leibler divergence under parameter transformation, \pageref{sec:kl-inv}
 
 $\bullet$ Invariance of the variance under addition of a constant, \pageref{sec:var-inv}
 
@@ -26242,13 +26689,13 @@ $\bullet$ Log family evidences in terms of log model evidences, \pageref{sec:lfe
 
 $\bullet$ Log model evidence for Bayesian linear regression, \pageref{sec:blr-lme}
 
-$\bullet$ Log model evidence for Poisson-distributed data, \pageref{sec:poiss-lme}
-
 $\bullet$ Log model evidence for binomial observations, \pageref{sec:bin-lme}
 
 $\bullet$ Log model evidence for multinomial observations, \pageref{sec:mult-lme}
 
 $\bullet$ Log model evidence for multivariate Bayesian linear regression, \pageref{sec:mblr-lme}
+
+$\bullet$ Log model evidence for Poisson-distributed data, \pageref{sec:poiss-lme}
 
 $\bullet$ Log model evidence for the Poisson distribution with exposure values, \pageref{sec:poissexp-lme}
 
@@ -26274,13 +26721,13 @@ $\bullet$ Marginal likelihood is a definite integral of joint likelihood, \pager
 
 $\bullet$ Maximum likelihood estimation for Dirichlet-distributed data, \pageref{sec:dir-mle}
 
-$\bullet$ Maximum likelihood estimation for Poisson-distributed data, \pageref{sec:poiss-mle}
-
 $\bullet$ Maximum likelihood estimation for multiple linear regression, \pageref{sec:mlr-mle}
 
-$\bullet$ Maximum likelihood estimation for the Poisson distribution with exposure values, \pageref{sec:poissexp-mle}
+$\bullet$ Maximum likelihood estimation for Poisson-distributed data, \pageref{sec:poiss-mle}
 
 $\bullet$ Maximum likelihood estimation for the general linear model, \pageref{sec:glm-mle}
+
+$\bullet$ Maximum likelihood estimation for the Poisson distribution with exposure values, \pageref{sec:poissexp-mle}
 
 $\bullet$ Maximum likelihood estimation for the univariate Gaussian, \pageref{sec:ug-mle}
 
@@ -26289,10 +26736,6 @@ $\bullet$ Maximum likelihood estimation for the univariate Gaussian with known v
 $\bullet$ Maximum likelihood estimator of variance is biased, \pageref{sec:resvar-bias}
 
 $\bullet$ Mean of the Bernoulli distribution, \pageref{sec:bern-mean}
-
-$\bullet$ Mean of the Poisson distribution, \pageref{sec:poiss-mean}
-
-$\bullet$ Mean of the Wald distribution, \pageref{sec:wald-mean}
 
 $\bullet$ Mean of the beta distribution, \pageref{sec:beta-mean}
 
@@ -26311,6 +26754,10 @@ $\bullet$ Mean of the multinomial distribution, \pageref{sec:mult-mean}
 $\bullet$ Mean of the normal distribution, \pageref{sec:norm-mean}
 
 $\bullet$ Mean of the normal-gamma distribution, \pageref{sec:ng-mean}
+
+$\bullet$ Mean of the Poisson distribution, \pageref{sec:poiss-mean}
+
+$\bullet$ Mean of the Wald distribution, \pageref{sec:wald-mean}
 
 $\bullet$ Median of the continuous uniform distribution, \pageref{sec:cuni-med}
 
@@ -26332,11 +26779,11 @@ $\bullet$ Moment-generating function of a function of a random variable, \pagere
 
 $\bullet$ Moment-generating function of linear combination of independent random variables, \pageref{sec:mgf-lincomb}
 
-$\bullet$ Moment-generating function of the Wald distribution, \pageref{sec:wald-mgf}
-
 $\bullet$ Moment-generating function of the beta distribution, \pageref{sec:beta-mgf}
 
 $\bullet$ Moment-generating function of the normal distribution, \pageref{sec:norm-mgf}
+
+$\bullet$ Moment-generating function of the Wald distribution, \pageref{sec:wald-mgf}
 
 $\bullet$ Moments of the chi-squared distribution, \pageref{sec:chi2-mom}
 
@@ -26352,13 +26799,15 @@ $\bullet$ Necessary and sufficient condition for independence of multivariate no
 
 $\bullet$ Non-invariance of the differential entropy under change of variables, \pageref{sec:dent-noninv}
 
+$\bullet$ (Non-)Multiplicativity of the expected value, \pageref{sec:mean-mult}
+
+$\bullet$ Non-negativity of the expected value, \pageref{sec:mean-nonneg}
+
 $\bullet$ Non-negativity of the Kullback-Leibler divergence, \pageref{sec:kl-nonneg}
 
 $\bullet$ Non-negativity of the Kullback-Leibler divergence, \pageref{sec:kl-nonneg2}
 
 $\bullet$ Non-negativity of the Shannon entropy, \pageref{sec:ent-nonneg}
-
-$\bullet$ Non-negativity of the expected value, \pageref{sec:mean-nonneg}
 
 $\bullet$ Non-negativity of the variance, \pageref{sec:var-nonneg}
 
@@ -26410,13 +26859,13 @@ $\bullet$ Posterior density is proportional to joint likelihood, \pageref{sec:po
 
 $\bullet$ Posterior distribution for Bayesian linear regression, \pageref{sec:blr-post}
 
-$\bullet$ Posterior distribution for Poisson-distributed data, \pageref{sec:poiss-post}
-
 $\bullet$ Posterior distribution for binomial observations, \pageref{sec:bin-post}
 
 $\bullet$ Posterior distribution for multinomial observations, \pageref{sec:mult-post}
 
 $\bullet$ Posterior distribution for multivariate Bayesian linear regression, \pageref{sec:mblr-post}
+
+$\bullet$ Posterior distribution for Poisson-distributed data, \pageref{sec:poiss-post}
 
 $\bullet$ Posterior distribution for the Poisson distribution with exposure values, \pageref{sec:poissexp-post}
 
@@ -26446,19 +26895,17 @@ $\bullet$ Probability density function of a sum of independent discrete random v
 
 $\bullet$ Probability density function of an invertible function of a continuous random vector, \pageref{sec:pdf-invfct}
 
-$\bullet$ Probability density function of the Dirichlet distribution, \pageref{sec:dir-pdf}
-
-$\bullet$ Probability density function of the F-distribution, \pageref{sec:f-pdf}
-
-$\bullet$ Probability density function of the Wald distribution, \pageref{sec:wald-pdf}
-
 $\bullet$ Probability density function of the beta distribution, \pageref{sec:beta-pdf}
 
 $\bullet$ Probability density function of the chi-squared distribution, \pageref{sec:chi2-pdf}
 
 $\bullet$ Probability density function of the continuous uniform distribution, \pageref{sec:cuni-pdf}
 
+$\bullet$ Probability density function of the Dirichlet distribution, \pageref{sec:dir-pdf}
+
 $\bullet$ Probability density function of the exponential distribution, \pageref{sec:exp-pdf}
+
+$\bullet$ Probability density function of the F-distribution, \pageref{sec:f-pdf}
 
 $\bullet$ Probability density function of the gamma distribution, \pageref{sec:gam-pdf}
 
@@ -26472,6 +26919,8 @@ $\bullet$ Probability density function of the normal-gamma distribution, \pagere
 
 $\bullet$ Probability density function of the t-distribution, \pageref{sec:t-pdf}
 
+$\bullet$ Probability density function of the Wald distribution, \pageref{sec:wald-pdf}
+
 $\bullet$ Probability integral transform using cumulative distribution function, \pageref{sec:cdf-pit}
 
 $\bullet$ Probability mass function of a strictly decreasing function of a discrete random variable, \pageref{sec:pmf-sdfct}
@@ -26484,8 +26933,6 @@ $\bullet$ Probability mass function of an invertible function of a random vector
 
 $\bullet$ Probability mass function of the Bernoulli distribution, \pageref{sec:bern-pmf}
 
-$\bullet$ Probability mass function of the Poisson distribution, \pageref{sec:poiss-pmf}
-
 $\bullet$ Probability mass function of the binomial distribution, \pageref{sec:bin-pmf}
 
 $\bullet$ Probability mass function of the categorical distribution, \pageref{sec:cat-pmf}
@@ -26493,6 +26940,8 @@ $\bullet$ Probability mass function of the categorical distribution, \pageref{se
 $\bullet$ Probability mass function of the discrete uniform distribution, \pageref{sec:duni-pmf}
 
 $\bullet$ Probability mass function of the multinomial distribution, \pageref{sec:mult-pmf}
+
+$\bullet$ Probability mass function of the Poisson distribution, \pageref{sec:poiss-pmf}
 
 $\bullet$ Probability of exhaustive events, \pageref{sec:prob-exh}
 
@@ -26505,6 +26954,8 @@ $\bullet$ Probability under mutual exclusivity, \pageref{sec:prob-exc}
 $\bullet$ Probability under statistical independence, \pageref{sec:prob-ind}
 
 $\bullet$ Projection matrix and residual-forming matrix are idempotent, \pageref{sec:mlr-idem}
+
+$\bullet$ Projection of a data point to the regression line, \pageref{sec:slr-proj}
 
 
 \vspace{1em}
@@ -26528,8 +26979,6 @@ $\bullet$ Quantile function of the normal distribution, \pageref{sec:norm-qf}
 
 $\bullet$ Range of probability, \pageref{sec:prob-range}
 
-$\bullet$ Relation of Kullback-Leibler divergence to entropy, \pageref{sec:kl-ent}
-
 $\bullet$ Relation of continuous Kullback-Leibler divergence to differential entropy, \pageref{sec:kl-dent}
 
 $\bullet$ Relation of continuous mutual information to joint and conditional differential entropy, \pageref{sec:cmi-jcde}
@@ -26538,13 +26987,13 @@ $\bullet$ Relation of continuous mutual information to marginal and conditional 
 
 $\bullet$ Relation of continuous mutual information to marginal and joint differential entropy, \pageref{sec:cmi-mjde}
 
+$\bullet$ Relation of Kullback-Leibler divergence to entropy, \pageref{sec:kl-ent}
+
 $\bullet$ Relation of mutual information to joint and conditional entropy, \pageref{sec:dmi-jce}
 
 $\bullet$ Relation of mutual information to marginal and conditional entropy, \pageref{sec:dmi-mce}
 
 $\bullet$ Relation of mutual information to marginal and joint entropy, \pageref{sec:dmi-mje}
-
-$\bullet$ Relationship between R² and maximum log-likelihood, \pageref{sec:rsq-mll}
 
 $\bullet$ Relationship between coefficient of determination and correlation coefficient in simple linear regression, \pageref{sec:slr-rsq}
 
@@ -26574,6 +27023,8 @@ $\bullet$ Relationship between normal distribution and t-distribution, \pageref{
 
 $\bullet$ Relationship between precision matrix and correlation matrix, \pageref{sec:precmat-corrmat}
 
+$\bullet$ Relationship between R² and maximum log-likelihood, \pageref{sec:rsq-mll}
+
 $\bullet$ Relationship between residual variance and sample variance in simple linear regression, \pageref{sec:slr-resvar}
 
 $\bullet$ Relationship between second raw moment, variance and mean, \pageref{sec:momraw-2nd}
@@ -26590,6 +27041,10 @@ $\bullet$ Scaling of the variance upon multiplication with a constant, \pageref{
 
 $\bullet$ Second central moment is variance, \pageref{sec:momcent-2nd}
 
+$\bullet$ Simple linear regression is a special case of multiple linear regression, \pageref{sec:slr-mlr}
+
+$\bullet$ Sums of squares for simple linear regression, \pageref{sec:slr-sss}
+
 
 \vspace{1em}
 \textbf{T}
@@ -26601,6 +27056,8 @@ $\bullet$ The residuals and the covariate are uncorrelated in simple linear regr
 $\bullet$ The sum of residuals is zero in simple linear regression, \pageref{sec:slr-ressum}
 
 $\bullet$ Transformation matrices for ordinary least squares, \pageref{sec:mlr-mat}
+
+$\bullet$ Transformation matrices for simple linear regression, \pageref{sec:slr-mat}
 
 $\bullet$ Transitivity of Bayes Factors, \pageref{sec:bf-trans}
 
@@ -26618,10 +27075,6 @@ $\bullet$ Variance of constant is zero, \pageref{sec:var-const}
 
 $\bullet$ Variance of parameter estimates for simple linear regression, \pageref{sec:slr-olsvar}
 
-$\bullet$ Variance of the Poisson distribution, \pageref{sec:poiss-var}
-
-$\bullet$ Variance of the Wald distribution, \pageref{sec:wald-var}
-
 $\bullet$ Variance of the beta distribution, \pageref{sec:beta-var}
 
 $\bullet$ Variance of the gamma distribution, \pageref{sec:gam-var}
@@ -26630,7 +27083,11 @@ $\bullet$ Variance of the linear combination of two random variables, \pageref{s
 
 $\bullet$ Variance of the normal distribution, \pageref{sec:norm-var}
 
+$\bullet$ Variance of the Poisson distribution, \pageref{sec:poiss-var}
+
 $\bullet$ Variance of the sum of two random variables, \pageref{sec:var-sum}
+
+$\bullet$ Variance of the Wald distribution, \pageref{sec:wald-var}
 
 
 \vspace{1em}
@@ -26744,13 +27201,13 @@ $\bullet$ Discrete uniform distribution, \pageref{sec:duni}
 \vspace{1em}
 \textbf{E}
 
+$\bullet$ Empirical and theoretical prior distribution, \pageref{sec:prior-emp}
+
 $\bullet$ Empirical Bayes, \pageref{sec:eb}
 
 $\bullet$ Empirical Bayes prior distribution, \pageref{sec:prior-eb}
 
 $\bullet$ Empirical Bayesian log model evidence, \pageref{sec:eblme}
-
-$\bullet$ Empirical and theoretical prior distribution, \pageref{sec:prior-emp}
 
 $\bullet$ Encompassing model, \pageref{sec:encm}
 
@@ -26914,6 +27371,8 @@ $\bullet$ One-tailed and two-tailed test, \pageref{sec:test-tail}
 \vspace{1em}
 \textbf{P}
 
+$\bullet$ p-value, \pageref{sec:pval}
+
 $\bullet$ Point and set hypothesis, \pageref{sec:hyp-point}
 
 $\bullet$ Poisson distribution, \pageref{sec:poiss}
@@ -27024,6 +27483,8 @@ $\bullet$ Statistical independence, \pageref{sec:ind}
 \vspace{1em}
 \textbf{T}
 
+$\bullet$ t-distribution, \pageref{sec:t}
+
 $\bullet$ Test statistic, \pageref{sec:tstat}
 
 $\bullet$ Total sum of squares, \pageref{sec:tss}
@@ -27038,11 +27499,11 @@ $\bullet$ Uniform and non-uniform prior distribution, \pageref{sec:prior-uni}
 
 $\bullet$ Uniform-prior log model evidence, \pageref{sec:uplme}
 
+$\bullet$ Univariate and multivariate random variable, \pageref{sec:rvar-uni}
+
 $\bullet$ Univariate Gaussian, \pageref{sec:ug}
 
 $\bullet$ Univariate Gaussian with known variance, \pageref{sec:ugkv}
-
-$\bullet$ Univariate and multivariate random variable, \pageref{sec:rvar-uni}
 
 
 \vspace{1em}
@@ -27061,18 +27522,6 @@ $\bullet$ Variational Bayesian log model evidence, \pageref{sec:vblme}
 $\bullet$ Wald distribution, \pageref{sec:wald}
 
 $\bullet$ Wishart distribution, \pageref{sec:wish}
-
-
-\vspace{1em}
-\textbf{p}
-
-$\bullet$ p-value, \pageref{sec:pval}
-
-
-\vspace{1em}
-\textbf{t}
-
-$\bullet$ t-distribution, \pageref{sec:t}
 
 
 

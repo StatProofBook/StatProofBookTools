@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2021-11-08 23:03:00
+ Last edit: 2021-11-10 10:39:00
 """
 
 
@@ -133,14 +133,18 @@ for entry in toc_txt:
         sources  = spbt.get_sources(file_txt)
         body_txt = spbt.extract_body(file_txt)
         
+        # Edit title for sorting
+        title_edit = re.sub('[^a-zA-Z- ]', '', title)
+        title_sort = title_edit.upper()
+        
         # Store file information
         if is_proof:
             pr_nos.append(int(file_id[1:]))
-            pr_tits.append(title)
+            pr_tits.append(title_sort)
             pr_info.append([file_id, shortcut, title, username, date])
         else:
             def_nos.append(int(file_id[1:]))
-            def_tits.append(title)
+            def_tits.append(title_sort)
             def_info.append([file_id, shortcut, title, username, date])
         
         # Write title
@@ -266,11 +270,11 @@ sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(pr_tits)])]
 lett_one = '0'
 for i in sort_ind:
     if pr_nos[i] != 0:
-        if pr_info[i][2][0] != lett_one:
+        if pr_tits[i][0] != lett_one:
             if lett_one != '0': book.write('\n\\vspace{1em}\n')
-            book.write('\\textbf{' + pr_info[i][2][0] + '}\n\n')
+            book.write('\\textbf{' + pr_tits[i][0] + '}\n\n')
         book.write('$\\bullet$ ' + pr_info[i][2] + ', \\pageref{sec:' + pr_info[i][1] + '}\n\n')
-        lett_one = pr_info[i][2][0]
+        lett_one = pr_tits[i][0]
 book.write('\n\n\n')
 
 # Write "Definition by Topic"
@@ -281,11 +285,11 @@ sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(def_tits)])]
 lett_one = '0'
 for i in sort_ind:
     if def_nos[i] != 0:
-        if def_info[i][2][0] != lett_one:
+        if def_tits[i][0] != lett_one:
             if lett_one != '0': book.write('\n\\vspace{1em}\n')
-            book.write('\\textbf{' + def_info[i][2][0] + '}\n\n')
+            book.write('\\textbf{' + def_tits[i][0] + '}\n\n')
         book.write('$\\bullet$ ' + def_info[i][2] + ', \\pageref{sec:' + def_info[i][1] + '}\n\n')
-        lett_one = def_info[i][2][0]
+        lett_one = def_tits[i][0]
 book.write('\n\n\n')
 
 # Close "The Book of Statistical Proofs"
