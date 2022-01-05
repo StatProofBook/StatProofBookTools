@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2021-11-10, 10:50}
+\date{2022-01-05, 11:55}
 
 \begin{document}
 
@@ -63,7 +63,7 @@
 \pagebreak
 \section{Probability theory}
 
-\subsection{Random variables}
+\subsection{Random experiments}
 
 \subsubsection[\textit{Random experiment}]{Random experiment} \label{sec:rexp}
 \setcounter{equation}{0}
@@ -72,7 +72,7 @@
 
 \begin{itemize}
 
-\item The set of possible outcomes is called sample space.
+\item The set of possible outcomes is called sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}).
 
 \item A set of zero or more outcomes is called a random event ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:reve}).
 
@@ -80,7 +80,7 @@
 
 \end{itemize}
 
-Together, sample space, event space and probability function characterize a random experiment.
+Together, sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}), event space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:eve-spc}) and probability function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-spc}) characterize a random experiment.
 
 
 \vspace{1em}
@@ -95,6 +95,75 @@ Together, sample space, event space and probability function characterize a rand
 \vspace{1em}
 
 
+
+\subsubsection[\textit{Sample space}]{Sample space} \label{sec:samp-spc}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Given a random experiment ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rexp}), the set of all possible outcomes from this experiment is called the sample space of the experiment. A sample space is usually denoted as $\Omega$ and specified using set notation.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Sample space"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-11-26; URL: \url{https://en.wikipedia.org/wiki/Sample_space}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D165 | shortcut: samp-spc | author: JoramSoch | date: 2021-11-26, 14:13.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Event space}]{Event space} \label{sec:eve-spc}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Given a random experiment ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rexp}), an event space $\mathcal{E}$ is any set of events, where an event ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:reve}) is any set of zero or more elements from the sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}) $\Omega$ of this experiment.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Event (probability theory)"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-11-26; URL: \url{https://en.wikipedia.org/wiki/Event_(probability_theory)}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D166 | shortcut: eve-spc | author: JoramSoch | date: 2021-11-26, 14:26.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Probability space}]{Probability space} \label{sec:prob-spc}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Given a random experiment ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rexp}), a probability space $(\Omega, \mathcal{E}, P)$ is a triple consisting of
+
+\begin{itemize}
+
+\item the sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}) $\Omega$, i.e. the set of all possible outcomes from this experiment;
+
+\item an event space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:eve-spc}) $\mathcal{E} \subseteq 2^\Omega$, i.e. a set of subsets from the sample space, called events ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:reve});
+
+\item a probability measure ($\rightarrow$ Definition "prob-meas") $P: \; \mathcal{E} \rightarrow [0,1]$, i.e. a function mapping from the event space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:eve-spc}) to the real numbers, observing the axioms of probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-ax}).
+
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Probability space"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-11-26; URL: \url{https://en.wikipedia.org/wiki/Probability_space#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D167 | shortcut: prob-spc | author: JoramSoch | date: 2021-11-26, 14:30.
+\vspace{1em}
+
+
+
+\subsection{Random variables}
 
 \subsubsection[\textit{Random event}]{Random event} \label{sec:reve}
 \setcounter{equation}{0}
@@ -134,7 +203,7 @@ In other words, a random event is a random variable ($\rightarrow$ Definition \r
 
 \item informally, as a real number $X \in \mathbb{R}$ whose value is the outcome of a random experiment ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rexp});
 
-\item formally, as a measurable function ($\rightarrow$ Definition "meas-fct") $X$ defined on a probability space ($\rightarrow$ Definition "prob-spc") $(\Omega, \mathcal{F}, P)$ that maps from a sample space $\Omega$ to the real numbers $\mathbb{R}$ using an event space $\mathcal{F}$ and a probability function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) $P$;
+\item formally, as a measurable function ($\rightarrow$ Definition "meas-fct") $X$ defined on a probability space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-spc}) $(\Omega, \mathcal{E}, P)$ that maps from a sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}) $\Omega$ to the real numbers $\mathbb{R}$ using an event space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:eve-spc}) $\mathcal{E}$ and a probability function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) $P$;
 
 \item more broadly, as any random quantity $X$ such as a random event ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:reve}), a random scalar ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}), a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) or a random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}).
 
@@ -635,7 +704,7 @@ p(A \vee B) = p(A) + p(B) - p(A,B) \overset{\eqref{eq:prob-exc-exc}}{=} p(A) + p
 \subsubsection[\textit{Axioms of probability}]{Axioms of probability} \label{sec:prob-ax}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a sample space ($\rightarrow$ Definition "samp-spc") $\Omega$, an event space ($\rightarrow$ Definition "eve-spc") $\mathcal{E}$ and a probability measure ($\rightarrow$ Definition "prob-meas") $P$, such that $P(E)$ is the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of some event ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:reve}) $E \in \mathcal{E}$. Then, we introduce three axioms of probability:
+\textbf{Definition:} Let there be a sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}) $\Omega$, an event space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:eve-spc}) $\mathcal{E}$ and a probability measure ($\rightarrow$ Definition "prob-meas") $P$, such that $P(E)$ is the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of some event ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:reve}) $E \in \mathcal{E}$. Then, we introduce three axioms of probability:
 
 \begin{itemize}
 
@@ -766,7 +835,7 @@ the right-hand side would be infinite. However, by the first axiom of probabilit
 P(A^\mathrm{c}) = 1 - P(A)
 \end{equation}
 
-where $A^\mathrm{c} = \Omega \setminus A$ and $\Omega$ is the sample space ($\rightarrow$ Definition "samp-spc").
+where $A^\mathrm{c} = \Omega \setminus A$ and $\Omega$ is the sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}).
 
 
 \vspace{1em}
@@ -905,7 +974,7 @@ P(A \cup B) = P(A) + P(B) - P(A \cap B) \; .
 \subsubsection[\textbf{Law of total probability}]{Law of total probability} \label{sec:prob-tot}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $A$ be a subset of sample space ($\rightarrow$ Definition "samp-spc") $\Omega$ and let $B_1, \ldots, B_n$ be finite or countably infinite partition of $\Omega$, such that $B_i \cap B_j = \emptyset$ for all $i \neq j$ and $\cup_i \, B_i = \Omega$. Then, the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of the event $A$ is
+\textbf{Theorem:} Let $A$ be a subset of sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}) $\Omega$ and let $B_1, \ldots, B_n$ be finite or countably infinite partition of $\Omega$, such that $B_i \cap B_j = \emptyset$ for all $i \neq j$ and $\cup_i \, B_i = \Omega$. Then, the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of the event $A$ is
 
 \begin{equation} \label{eq:prob-tot-prob-tot}
 P(A) = \sum_i P(A \cap B_i) \; .
@@ -950,7 +1019,7 @@ P(A) = \sum_i P(A \cap B_i) \; .
 \subsubsection[\textbf{Probability of exhaustive events}]{Probability of exhaustive events} \label{sec:prob-exh}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $B_1, \ldots, B_n$ be mutually exclusive and collectively exhaustive subsets of a sample space ($\rightarrow$ Definition "samp-spc") $\Omega$. Then, their total probability ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:prob-tot}) is one:
+\textbf{Theorem:} Let $B_1, \ldots, B_n$ be mutually exclusive and collectively exhaustive subsets of a sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}) $\Omega$. Then, their total probability ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:prob-tot}) is one:
 
 \begin{equation} \label{eq:prob-exh-prob-exh}
 \sum_i P(B_i) = 1 \; .
@@ -2834,13 +2903,13 @@ is strictly non-negative, thus the term on the right-hand side is a Lebesgue int
 \end{split}
 \end{equation}
 
-for random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ and a constant $a$.
+for random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$ and a constant ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:const}) $a$.
 
 
 \vspace{1em}
 \textbf{Proof:}
 
-1) If $X$ and $Y$ are discrete random variables, the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is
+1) If $X$ and $Y$ are discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar-disc}), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is
 
 \begin{equation} \label{eq:mean-lin-mean-disc}
 \mathrm{E}(X) = \sum_{x \in \mathcal{X}} x \cdot f_X(x)
@@ -2875,7 +2944,7 @@ as well as
 \end{equation}
 
 \vspace{1em}
-2) If $X$ and $Y$ are continuous random variables, the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is
+2) If $X$ and $Y$ are continuous random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar-disc}), the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is
 
 \begin{equation} \label{eq:mean-lin-mean-cont}
 \mathrm{E}(X) = \int_{\mathcal{X}} x \cdot f_X(x) \, \mathrm{d}x
@@ -2910,7 +2979,7 @@ as well as
 \end{equation}
 
 \vspace{1em}
-Collectively, this shows that both requirements for linearity are fulfilled for the expected value, for discrete as well as for continuous random variables.
+Collectively, this shows that both requirements for linearity are fulfilled for the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}), for discrete ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar-disc}) as well as for continuous ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar-disc}) random variables.
 
 
 \vspace{1em}
@@ -3088,6 +3157,48 @@ and thus,
 
 
 
+\subsubsection[\textbf{Expectation of a trace}]{Expectation of a trace} \label{sec:mean-tr}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $A$ be an $n \times n$ random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}). Then, the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the trace of $A$ is equal to the trace of the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $A$:
+
+\begin{equation} \label{eq:mean-tr-mean-tr}
+\mathrm{E}\left[ \mathrm{tr}(A) \right] = \mathrm{tr}\left( \mathrm{E}[A] \right) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The trace of an $n \times n$ matrix $A$ is defined as:
+
+\begin{equation} \label{eq:mean-tr-tr}
+\mathrm{tr}(A) = \sum_{i=1}^{n} a_{ii} \; .
+\end{equation}
+
+Using this definition of the trace, the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}) and the expected value of a random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-rmat}), we have:
+
+\begin{equation} \label{eq:mean-tr-mean-tr-qed}
+\begin{split}
+\mathrm{E}\left[ \mathrm{tr}(A) \right] &= \mathrm{E}\left[ \sum_{i=1}^{n} a_{ii} \right] \\
+&= \sum_{i=1}^{n} \mathrm{E}\left[ a_{ii} \right] \\
+&= \mathrm{tr}\left( \left[ \begin{matrix} \mathrm{E}[a_{11}] & \ldots & \mathrm{E}[a_{1n}] \\ \vdots & \ddots & \vdots \\ \mathrm{E}[a_{n1}] & \ldots & \mathrm{E}[a_{nn}] \end{matrix} \right] \right) \\
+&= \mathrm{tr}\left( \mathrm{E}[A] \right) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item drerD (2018): "'Trace trick' for expectations of quadratic forms"; in: \textit{StackExchange Mathematics}, retrieved on 2021-12-07; URL: \url{https://math.stackexchange.com/a/3004034/480910}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P298 | shortcut: mean-tr | author: JoramSoch | date: 2021-12-07, 09:03.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Expectation of a quadratic form}]{Expectation of a quadratic form} \label{sec:mean-qf}
 \setcounter{equation}{0}
 
@@ -3111,7 +3222,7 @@ Using the trace property $\mathrm{tr}(ABC) = \mathrm{tr}(BCA)$, this becomes
 \mathrm{E}\left[ X^\mathrm{T} A X \right] =  \mathrm{E}\left[ \mathrm{tr} \left( A X X^\mathrm{T} \right) \right] \; .
 \end{equation}
 
-Because mean and trace are linear operators ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), we have
+Because mean and trace are linear operators ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-tr}), we have
 
 \begin{equation} \label{eq:mean-qf-mean-qf-s3}
 \mathrm{E}\left[ X^\mathrm{T} A X \right] =  \mathrm{tr} \left( A \; \mathrm{E}\left[ X X^\mathrm{T} \right] \right) \; .
@@ -3154,6 +3265,59 @@ Finally, applying mean and covariance of $X$, we have
 
 \vspace{1em}
 \textbf{Metadata:} ID: P131 | shortcut: mean-qf | author: JoramSoch | date: 2020-07-13, 21:59.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Law of total expectation}]{Law of total expectation} \label{sec:mean-tot}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} (law of total expectation, also called "law of iterated expectations") Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) with expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mathrm{E}(X)$ and let $Y$ be any random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) defined on the same probability space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-spc}). Then, the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the conditional expectation ($\rightarrow$ Definition "mean-cond") of $X$ given $Y$ is the same as the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$:
+
+\begin{equation} \label{eq:mean-tot-mean-tot}
+\mathrm{E}(X) = \mathrm{E}[\mathrm{E}(X \vert Y)] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Let $X$ and $Y$ be discrete random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar-disc}) with sets of possible outcomes $\mathcal{X}$ and $\mathcal{Y}$. Then, the expectation of the conditional expetectation can be rewritten as:
+
+\begin{equation} \label{eq:mean-tot-mean-tot-s1}
+\begin{split}
+\mathrm{E}[\mathrm{E}(X \vert Y)] &= \mathrm{E}\left[ \sum_{x \in \mathcal{X}} x \cdot \mathrm{Pr}(X = x \vert Y) \right] \\
+&= \sum_{y \in \mathcal{Y}} \left[ \sum_{x \in \mathcal{X}} x \cdot \mathrm{Pr}(X = x \vert Y = y) \right] \cdot \mathrm{Pr}(Y = y) \\
+&= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} x \cdot \mathrm{Pr}(X = x \vert Y = y) \cdot \mathrm{Pr}(Y = y) \; .
+\end{split}
+\end{equation}
+
+Using the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}), this becomes:
+
+\begin{equation} \label{eq:mean-tot-mean-tot-s2}
+\begin{split}
+\mathrm{E}[\mathrm{E}(X \vert Y)] &= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} x \cdot \mathrm{Pr}(X = x, Y = y) \\
+&= \sum_{x \in \mathcal{X}} x \sum_{y \in \mathcal{Y}} \mathrm{Pr}(X = x, Y = y) \; .
+\end{split}
+\end{equation}
+
+Using the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), this becomes:
+
+\begin{equation} \label{eq:mean-tot-mean-tot-s3}
+\begin{split}
+\mathrm{E}[\mathrm{E}(X \vert Y)] &= \sum_{x \in \mathcal{X}} x \cdot \mathrm{Pr}(X = x) \\
+&= \mathrm{E}(X) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Law of total expectation"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-11-26; URL: \url{https://en.wikipedia.org/wiki/Law_of_total_expectation#Proof_in_the_finite_and_countable_cases}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P291 | shortcut: mean-tot | author: JoramSoch | date: 2021-11-26, 10:57.
 \vspace{1em}
 
 
@@ -3757,6 +3921,73 @@ Combining \eqref{eq:var-add-var-sum} and \eqref{eq:var-add-cov-ind}, we have:
 
 
 
+\subsubsection[\textbf{Law of total variance}]{Law of total variance} \label{sec:var-tot}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} (law of total variance, also called "conditional variance formula") Let $X$ and $Y$ be random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) defined on the same probability space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-spc}) and assume that the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $Y$ is finite. Then, the sum of the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the conditional variance and the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of the conditional expectation of $Y$ given $X$ is equal to the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $Y$:
+
+\begin{equation} \label{eq:var-tot-var-tot}
+\mathrm{Var}(Y) = \mathrm{E}[\mathrm{Var}(Y \vert X)] + \mathrm{Var}[\mathrm{E}(Y \vert X)] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance can be decomposed into expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-mean}) as follows:
+
+\begin{equation} \label{eq:var-tot-var-tot-s1}
+\mathrm{Var}(Y) = \mathrm{E}(Y^2) - \mathrm{E}(Y)^2 \; .
+\end{equation}
+
+This can be rearranged into:
+
+\begin{equation} \label{eq:var-tot-var-tot-s2}
+\mathrm{E}(Y^2) = \mathrm{Var}(Y) + \mathrm{E}(Y)^2 \; .
+\end{equation}
+
+Applying the law of total expectation ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-tot}), we have:
+
+\begin{equation} \label{eq:var-tot-var-tot-s3}
+\mathrm{E}(Y^2) = \mathrm{E}\left[ \mathrm{Var}(Y \vert X) + \mathrm{E}(Y \vert X)^2 \right] \; .
+\end{equation}
+
+Now subtract the second term from \eqref{eq:var-tot-var-tot-s1}:
+
+\begin{equation} \label{eq:var-tot-var-tot-s4}
+\mathrm{E}(Y^2) - \mathrm{E}(Y)^2 = \mathrm{E}\left[ \mathrm{Var}(Y \vert X) + \mathrm{E}(Y \vert X)^2 \right] - \mathrm{E}(Y)^2 \; .
+\end{equation}
+
+Again applying the law of total expectation ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-tot}), we have:
+
+\begin{equation} \label{eq:var-tot-var-tot-s5}
+\mathrm{E}(Y^2) - \mathrm{E}(Y)^2 = \mathrm{E}\left[ \mathrm{Var}(Y \vert X) + \mathrm{E}(Y \vert X)^2 \right] - \mathrm{E}\left[ \mathrm{E}(Y \vert X) \right]^2 \; .
+\end{equation}
+
+With the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), the terms can be regrouped to give:
+
+\begin{equation} \label{eq:var-tot-var-tot-s6}
+\mathrm{E}(Y^2) - \mathrm{E}(Y)^2 = \mathrm{E}\left[ \mathrm{Var}(Y \vert X) \right] + \left( \mathrm{E}\left[ \mathrm{E}(Y \vert X)^2 \right] - \mathrm{E}\left[ \mathrm{E}(Y \vert X) \right]^2 \right) \; .
+\end{equation}
+
+Using the decomposition of variance into expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-mean}), we finally have:
+
+\begin{equation} \label{eq:var-tot-var-tot-s7}
+\mathrm{Var}(Y) = \mathrm{E}[\mathrm{Var}(Y \vert X)] + \mathrm{Var}[\mathrm{E}(Y \vert X)] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Law of total variance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-11-26; URL: \url{https://en.wikipedia.org/wiki/Law_of_total_variance#Proof}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P292 | shortcut: var-tot | author: JoramSoch | date: 2021-11-26, 11:20.
+\vspace{1em}
+
+
+
 \subsubsection[\textit{Precision}]{Precision} \label{sec:prec}
 \setcounter{equation}{0}
 
@@ -3957,6 +4188,61 @@ which can be rearranged for the covariance ($\rightarrow$ Definition \ref{sec:Ge
 
 \vspace{1em}
 \textbf{Metadata:} ID: P119 | shortcut: cov-corr | author: JoramSoch | date: 2020-06-02, 21:00.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Law of total covariance}]{Law of total covariance} \label{sec:cov-tot}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} (law of total covariance, also called "conditional covariance formula") Let $X$, $Y$ and $Z$ be random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) defined on the same probability space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-spc}) and assume that the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$ is finite. Then, the sum of the expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the conditional covariance and the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of the conditional expectations of $X$ and $Y$ given $Z$ is equal to the covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov}) of $X$ and $Y$:
+
+\begin{equation} \label{eq:cov-tot-cov-tot}
+\mathrm{Cov}(X,Y) = \mathrm{E}[\mathrm{Cov}(X,Y \vert Z)] + \mathrm{Cov}[\mathrm{E}(X \vert Z),\mathrm{E}(Y \vert Z)] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The covariance can be decomposed into expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:cov-mean}) as follows:
+
+\begin{equation} \label{eq:cov-tot-cov-tot-s1}
+\mathrm{Cov}(X,Y) = \mathrm{E}(XY) - \mathrm{E}(X) \mathrm{E}(Y) \; .
+\end{equation}
+
+Then, conditioning on $Z$ and applying the law of total expectation ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-tot}), we have:
+
+\begin{equation} \label{eq:cov-tot-cov-tot-s2}
+\mathrm{Cov}(X,Y) = \mathrm{E}\left[ \mathrm{E}(XY \vert Z) \right] - \mathrm{E}\left[ \mathrm{E}(X \vert Z ) \right] \mathrm{E}\left[ \mathrm{E}(Y \vert Z) \right] \; .
+\end{equation}
+
+Applying the decomposition of covariance into expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:cov-mean}) to the first term gives:
+
+\begin{equation} \label{eq:cov-tot-cov-tot-s3}
+\mathrm{Cov}(X,Y) = \mathrm{E}\left[ \mathrm{Cov}(X,Y \vert Z) + \mathrm{E}(X \vert Z) \mathrm{E}(Y \vert Z) \right] - \mathrm{E}\left[ \mathrm{E}(X \vert Z ) \right] \mathrm{E}\left[ \mathrm{E}(Y \vert Z) \right] \; .
+\end{equation}
+
+With the linearity of the expected value ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), the terms can be regrouped to give:
+
+\begin{equation} \label{eq:cov-tot-cov-tot-s4}
+\mathrm{Cov}(X,Y) = \mathrm{E}\left[ \mathrm{Cov}(X,Y \vert Z) \right] + \left( \mathrm{E}\left[ \mathrm{E}(X \vert Z) \mathrm{E}(Y \vert Z) \right] - \mathrm{E}\left[ \mathrm{E}(X \vert Z ) \right] \mathrm{E}\left[ \mathrm{E}(Y \vert Z) \right] \right) \; .
+\end{equation}
+
+Once more using the decomposition of covariance into expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:cov-mean}), we finally have:
+
+\begin{equation} \label{eq:cov-tot-var-tot-s5}
+\mathrm{Cov}(X,Y) = \mathrm{E}[\mathrm{Cov}(X,Y \vert Z)] + \mathrm{Cov}[\mathrm{E}(X \vert Z),\mathrm{E}(Y \vert Z)] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Law of total covariance"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-11-26; URL: \url{https://en.wikipedia.org/wiki/Law_of_total_covariance#Proof}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P293 | shortcut: cov-tot | author: JoramSoch | date: 2021-11-26, 11:38.
 \vspace{1em}
 
 
@@ -4337,6 +4623,147 @@ which conforms to equation \eqref{eq:precmat-corrmat-precmat-corrmat}.
 
 
 
+\subsubsection[\textbf{Range}]{Range} \label{sec:corr-range}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ and $Y$ be two random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}). Then, the correlation of $X$ and $Y$ is between and including $-1$ and $+1$:
+
+\begin{equation} \label{eq:corr-range-corr-range}
+-1 \leq \mathrm{Corr}(X,Y) \leq +1 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Consider the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ plus or minus $Y$, each divided by their standard deviations ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:std}):
+
+\begin{equation} \label{eq:corr-range-var-XY}
+\mathrm{Var}\left( \frac{X}{\sigma_X} \pm \frac{Y}{\sigma_Y} \right) \; .
+\end{equation}
+
+Because the variance is non-negative ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-nonneg}), this term is larger than or equal to zero:
+
+\begin{equation} \label{eq:corr-range-var-XY-0}
+0 \leq \mathrm{Var}\left( \frac{X}{\sigma_X} \pm \frac{Y}{\sigma_Y} \right) \; .
+\end{equation}
+
+Using the variance of a linear combination ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-lincomb}), it can also be written as:
+
+\begin{equation} \label{eq:corr-range-var-XY-s1}
+\begin{split}
+\mathrm{Var}\left( \frac{X}{\sigma_X} \pm \frac{Y}{\sigma_Y} \right) &= \mathrm{Var}\left( \frac{X}{\sigma_X} \right) + \mathrm{Var}\left( \frac{Y}{\sigma_Y} \right) \pm 2 \, \mathrm{Cov}\left( \frac{X}{\sigma_X}, \frac{Y}{\sigma_Y} \right) \\
+&= \frac{1}{\sigma_X^2} \mathrm{Var}(X) + \frac{1}{\sigma_Y^2} \mathrm{Var}(Y) \pm 2 \, \frac{1}{\sigma_X \sigma_Y} \, \mathrm{Cov}(X,Y) \\
+&= \frac{1}{\sigma_X^2} \sigma_X^2 + \frac{1}{\sigma_Y^2} \sigma_Y^2 \pm 2 \, \frac{1}{\sigma_X \sigma_Y} \, \sigma_{XY} \; .
+\end{split}
+\end{equation}
+
+Using the relationship between covariance and correlation ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:cov-corr}), we have:
+
+\begin{equation} \label{eq:corr-range-var-XY-s2}
+\mathrm{Var}\left( \frac{X}{\sigma_X} \pm \frac{Y}{\sigma_Y} \right) = 1 + 1 + \pm 2 \, \mathrm{Corr}(X,Y) \; .
+\end{equation}
+
+Thus, the combination of \eqref{eq:corr-range-var-XY-0} with \eqref{eq:corr-range-var-XY-s2} yields
+
+\begin{equation} \label{eq:corr-range-var-XY-ineq}
+0 \leq 2 \pm 2 \, \mathrm{Corr}(X,Y)
+\end{equation}
+
+which is equivalent to
+
+\begin{equation} \label{eq:corr-range-corr-range-qed}
+-1 \leq \mathrm{Corr}(X,Y) \leq +1 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Dor Leventer (2021): "How can I simply prove that the pearson correlation coefficient is between -1 and 1?"; in: \textit{StackExchange Mathematics}, retrieved on 2021-12-14; URL: \url{https://math.stackexchange.com/a/4260655/480910}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P300 | shortcut: corr-range | author: JoramSoch | date: 2021-12-14, 02:08.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Sample correlation coefficient}]{Sample correlation coefficient} \label{sec:corr-samp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ and $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be samples ($\rightarrow$ Definition "samp") from random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$. Then, the sample correlation coefficient of $x$ and $y$ is given by
+
+\begin{equation} \label{eq:corr-samp-corr-samp}
+r_{xy} = \frac{\sum_{i=1}^n (x_i-\bar{x}) (y_i-\bar{y})}{\sqrt{\sum_{i=1}^n (x_i-\bar{x})^2} \sqrt{\sum_{i=1}^n (y_i-\bar{y})^2}}
+\end{equation}
+
+where $\bar{x}$ and $\bar{y}$ are the sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Pearson correlation coefficient"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-12-14; URL: \url{https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#For_a_sample}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D168 | shortcut: corr-samp | author: JoramSoch | date: 2021-12-14, 07:23.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Relationship to standard scores}]{Relationship to standard scores} \label{sec:corr-z}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ and $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be samples ($\rightarrow$ Definition "samp") from random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$. Then, the sample correlation coefficient ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corr-samp}) $r_{xy}$ can be expressed in terms of the standard scores ($\rightarrow$ Definition "z") of $x$ and $y$:
+
+\begin{equation} \label{eq:corr-z-corr-z}
+r_{xy} = \frac{1}{n-1} \sum_{i=1}^n z_i^{(x)} \cdot z_i^{(y)} = \frac{1}{n-1} \sum_{i=1}^n \left( \frac{x_i-\bar{x}}{s_x} \right) \left( \frac{y_i-\bar{y}}{s_y} \right)
+\end{equation}
+
+where $\bar{x}$ and $\bar{y}$ are the sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}) and $s_x$ and $s_y$ are the sample variances ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}).
+
+
+\vspace{1em}
+\textbf{Proof:} The sample correlation coefficient ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corr-samp}) is defined as
+
+\begin{equation} \label{eq:corr-z-corr-samp}
+r_{xy} = \frac{\sum_{i=1}^n (x_i-\bar{x}) (y_i-\bar{y})}{\sqrt{\sum_{i=1}^n (x_i-\bar{x})^2} \sqrt{\sum_{i=1}^n (y_i-\bar{y})^2}} \; .
+\end{equation}
+
+Using the sample variances ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) of $x$ and $y$, we can write:
+
+\begin{equation} \label{eq:corr-z-corr-z-s1}
+r_{xy} = \frac{\sum_{i=1}^n (x_i-\bar{x}) (y_i-\bar{y})}{\sqrt{(n-1) s_x^2} \sqrt{(n-1) s_y^2}} \; .
+\end{equation}
+
+Rearranging the terms, we arrive at:
+
+\begin{equation} \label{eq:corr-z-corr-z-s2}
+r_{xy} = \frac{1}{(n-1) \, s_x \, s_y} \sum_{i=1}^n (x_i-\bar{x}) (y_i-\bar{y}) \; .
+\end{equation}
+
+Further simplifying, the result is:
+
+\begin{equation} \label{eq:corr-z-corr-z-s3}
+r_{xy} = \frac{1}{n-1} \sum_{i=1}^n \left( \frac{x_i-\bar{x}}{s_x} \right) \left( \frac{y_i-\bar{y}}{s_y} \right) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Peason correlation coefficient"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-12-14; URL: \url{https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#For_a_sample}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P299 | shortcut: corr-z | author: JoramSoch | date: 2021-12-14, 02:31.
+\vspace{1em}
+
+
+
 \subsubsection[\textit{Correlation matrix}]{Correlation matrix} \label{sec:corrmat}
 \setcounter{equation}{0}
 
@@ -4366,6 +4793,48 @@ which conforms to equation \eqref{eq:precmat-corrmat-precmat-corrmat}.
 
 \vspace{1em}
 \textbf{Metadata:} ID: D73 | shortcut: corrmat | author: JoramSoch | date: 2020-06-06, 04:56.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Sample correlation matrix}]{Sample correlation matrix} \label{sec:corrmat-samp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ Definition "samp") from a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}) $X \in \mathbb{R}^{p \times 1}$. Then, the sample correlation matrix of $x$ is the matrix whose entries are the sample correlation coefficients ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corr-samp}) between pairs of entries of $x_1, \ldots, x_n$:
+
+\begin{equation} \label{eq:corrmat-samp-corrmat-samp-v1}
+\mathrm{R}_{xx} =
+\begin{bmatrix}
+r_{x^{(1)},x^{(1)}} & \ldots & r_{x^{(1)},x^{(n)}} \\
+\vdots & \ddots & \vdots \\
+r_{x^{(n)},x^{(1)}} & \ldots & r_{x^{(n)},x^{(n)}}
+\end{bmatrix}
+\end{equation}
+
+where the $r_{x^{(j)},x^{(k)}}$ is the sample correlation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corr-samp}) between the $j$-th and the $k$-th entry of $X$ given by
+
+\begin{equation} \label{eq:corrmat-samp-corrmat-samp-v2}
+r_{x^{(j)},x^{(k)}} = \frac{\sum_{i=1}^n (x_{ij}-\bar{x}^{(j)}) (x_{ik}-\bar{x}^{(k)})}{\sqrt{\sum_{i=1}^n (x_{ij}-\bar{x}^{(j)})^2} \sqrt{\sum_{i=1}^n (x_{ik}-\bar{x}^{(k)})^2}}
+\end{equation}
+
+in which $\bar{x}^{(j)}$ and $\bar{x}^{(k)}$ are the sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp})
+
+\begin{equation} \label{eq:corrmat-samp-mean-samp}
+\begin{split}
+\bar{x}^{(j)} &= \frac{1}{n} \sum_{i=1}^n x_{ij} \\
+\bar{x}^{(k)} &= \frac{1}{n} \sum_{i=1}^n x_{ik} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D169 | shortcut: corrmat-samp | author: JoramSoch | date: 2021-12-14, 07:45.
 \vspace{1em}
 
 
@@ -11188,7 +11657,7 @@ With the probability density function of the normal distribution ($\rightarrow$ 
 \begin{equation} \label{eq:norm-kl-norms}
 \begin{split}
 P: \; X &\sim \mathcal{N}(\mu_1, \sigma_1^2) \\
-Q: \; X &\sim \mathcal{N}(\mu_2, \sigma_2^2) \; . \\
+Q: \; X &\sim \mathcal{N}(\mu_2, \sigma_2^2) \; .
 \end{split}
 \end{equation}
 
@@ -12476,7 +12945,7 @@ the differential entropy ($\rightarrow$ Definition \ref{sec:General Theorems}/\r
 \begin{equation} \label{eq:gam-kl-gams}
 \begin{split}
 P: \; X &\sim \mathrm{Gam}(a_1, b_1) \\
-Q: \; X &\sim \mathrm{Gam}(a_2, b_2) \; . \\
+Q: \; X &\sim \mathrm{Gam}(a_2, b_2) \; .
 \end{split}
 \end{equation}
 
@@ -14222,7 +14691,7 @@ such that the differential entropy is
 \begin{equation} \label{eq:mvn-kl-mvns}
 \begin{split}
 P: \; x &\sim \mathcal{N}(\mu_1, \Sigma_1) \\
-Q: \; x &\sim \mathcal{N}(\mu_2, \Sigma_2) \; . \\
+Q: \; x &\sim \mathcal{N}(\mu_2, \Sigma_2) \; .
 \end{split}
 \end{equation}
 
@@ -14268,7 +14737,7 @@ Now, using the fact that $x = \mathrm{tr}(x)$, if $a$ is scalar, and the trace p
 \end{split}
 \end{equation}
 
-Because trace function and expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) are both linear operators, the expectation can be moved inside the trace:
+Because trace function and expected value are both linear operators ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-tr}), the expectation can be moved inside the trace:
 
 \begin{equation} \label{eq:mvn-kl-mvn-KL-s4}
 \begin{split}
@@ -15128,7 +15597,7 @@ By plugging \eqref{eq:ng-dent-exp-mvn-dent-s2} and \eqref{eq:ng-dent-gam-dent} i
 \begin{equation} \label{eq:ng-kl-NGs}
 \begin{split}
 P: \; (x,y) &\sim \mathrm{NG}(\mu_1, \Lambda_1^{-1}, a_1, b_1) \\
-Q: \; (x,y) &\sim \mathrm{NG}(\mu_2, \Lambda_2^{-1}, a_2, b_2) \; . \\
+Q: \; (x,y) &\sim \mathrm{NG}(\mu_2, \Lambda_2^{-1}, a_2, b_2) \; .
 \end{split}
 \end{equation}
 
@@ -15444,7 +15913,7 @@ p(y|x) = \mathrm{Gam}\left( y; a + \frac{n}{2}, b + \frac{1}{2} (x-\mu)^\mathrm{
 \subsubsection[\textit{Definition}]{Definition} \label{sec:dir}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X$ be a random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, $X$ is said to follow a Dirichlet distribution with concentration parameters $\alpha = \left[ \alpha_1, \ldots, \alpha_k \right]$
+\textbf{Definition:} Let $X$ be a $k \times 1$ random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Then, $X$ is said to follow a Dirichlet distribution with concentration parameters $\alpha = \left[ \alpha_1, \ldots, \alpha_k \right]$
 
 \begin{equation} \label{eq:dir-Dir}
 X \sim \mathrm{Dir}(\alpha) \; ,
@@ -15500,6 +15969,80 @@ f_X(x) = \frac{\Gamma\left( \sum_{i=1}^k \alpha_i \right)}{\prod_{i=1}^k \Gamma(
 
 \vspace{1em}
 \textbf{Metadata:} ID: P95 | shortcut: dir-pdf | author: JoramSoch | date: 2020-05-05, 21:22.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:dir-kl}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $x$ be an $k \times 1$ random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}). Assume two Dirichlet distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:dir}) $P$ and $Q$ specifying the probability distribution of $x$ as
+
+\begin{equation} \label{eq:dir-kl-dirs}
+\begin{split}
+P: \; x &\sim \mathrm{Dir}(\alpha_1) \\
+Q: \; x &\sim \mathrm{Dir}(\alpha_2) \; .
+\end{split}
+\end{equation}
+
+Then, the Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) of $P$ from $Q$ is given by
+
+\begin{equation} \label{eq:dir-kl-dir-KL}
+\mathrm{KL}[P\,||\,Q] = \ln \frac{\Gamma\left(\sum_{i=1}^{k} \alpha_{1i}\right)}{\Gamma\left(\sum_{i=1}^{k} \alpha_{2i}\right)} + \sum_{i=1}^{k} \ln \frac{\Gamma(\alpha_{2i})}{\Gamma(\alpha_{1i})} + \sum_{i=1}^{k} \left( \alpha_{1i} - \alpha_{2i} \right) \left[ \psi(\alpha_{1i}) - \psi\left(\sum_{i=1}^{k} \alpha_{1i}\right) \right] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The KL divergence for a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is given by 
+
+\begin{equation} \label{eq:dir-kl-KL-cont}
+\mathrm{KL}[P\,||\,Q] = \int_{\mathcal{X}} p(x) \, \ln \frac{p(x)}{q(x)} \, \mathrm{d}x
+\end{equation}
+
+which, applied to the Dirichlet distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}) in \eqref{eq:dir-kl-dirs}, yields
+
+\begin{equation} \label{eq:dir-kl-dir-KL-s1}
+\begin{split}
+\mathrm{KL}[P\,||\,Q] &= \int_{\mathcal{X}^k} \mathrm{Dir}(x; \alpha_1) \, \ln \frac{\mathrm{Dir}(x; \alpha_1)}{\mathrm{Dir}(x; \alpha_2)} \, \mathrm{d}x \\
+&= \left\langle \ln \frac{\mathrm{Dir}(x; \alpha_1)}{\mathrm{Dir}(x; \alpha_2)} \right\rangle_{p(x)}
+\end{split}
+\end{equation}
+
+where $\mathcal{X}^k$ is the set $\left\lbrace x \in \mathbb{R}^k \; \vert \; \sum_{i=1}^{k} x_i = 1, \; 0 \leq x_i \leq 1, \; i = 1,\ldots,k \right\rbrace$.
+
+Using the probability density function of the Dirichlet distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:dir-pdf}), this becomes:
+
+\begin{equation} \label{eq:dir-kl-dir-KL-s2}
+\begin{split}
+\mathrm{KL}[P\,||\,Q] &= \left\langle \ln \frac{ \frac{\Gamma\left( \sum_{i=1}^k \alpha_{1i} \right)}{\prod_{i=1}^k \Gamma(\alpha_{1i})} \, \prod_{i=1}^k {x_i}^{\alpha_{1i}-1} }{ \frac{\Gamma\left( \sum_{i=1}^k \alpha_{2i} \right)}{\prod_{i=1}^k \Gamma(\alpha_{2i})} \, \prod_{i=1}^k {x_i}^{\alpha_{2i}-1} } \right\rangle_{p(x)} \\
+&= \left\langle \ln \left( \frac{\Gamma\left( \sum_{i=1}^k \alpha_{1i} \right)}{\Gamma\left( \sum_{i=1}^k \alpha_{2i} \right)} \cdot \frac{\prod_{i=1}^k \Gamma(\alpha_{2i})}{\prod_{i=1}^k \Gamma(\alpha_{1i})} \cdot \prod_{i=1}^k {x_i}^{\alpha_{1i}-\alpha_{2i}} \right) \right\rangle_{p(x)} \\
+&= \left\langle \ln \frac{\Gamma\left( \sum_{i=1}^k \alpha_{1i} \right)}{\Gamma\left( \sum_{i=1}^k \alpha_{2i} \right)} + \sum_{i=1}^k \ln \frac{\Gamma(\alpha_{2i})}{\Gamma(\alpha_{1i})} + \sum_{i=1}^k (\alpha_{1i}-\alpha_{2i}) \cdot \ln (x_i) \right\rangle_{p(x)} \\
+&= \ln \frac{\Gamma\left( \sum_{i=1}^k \alpha_{1i} \right)}{\Gamma\left( \sum_{i=1}^k \alpha_{2i} \right)} + \sum_{i=1}^k \ln \frac{\Gamma(\alpha_{2i})}{\Gamma(\alpha_{1i})} + \sum_{i=1}^k (\alpha_{1i}-\alpha_{2i}) \cdot \left\langle \ln x_i \right\rangle_{p(x)} \; .
+\end{split}
+\end{equation}
+
+Using the expected value of a logarithmized Dirichlet variate ($\rightarrow$ Proof "dir-logmean")
+
+\begin{equation} \label{eq:dir-kl-dir-logmean}
+x \sim \mathrm{Dir}(\alpha) \quad \Rightarrow \quad \left\langle \ln x_i \right\rangle = \psi(\alpha_i) - \psi\left(\sum_{i=1}^{k} \alpha_i\right) \; ,
+\end{equation}
+
+the Kullback-Leibler divergence from \eqref{eq:dir-kl-dir-KL-s2} becomes:
+
+\begin{equation} \label{eq:dir-kl-dir-KL-s3}
+\mathrm{KL}[P\,||\,Q] = \ln \frac{\Gamma\left( \sum_{i=1}^k \alpha_{1i} \right)}{\Gamma\left( \sum_{i=1}^k \alpha_{2i} \right)} + \sum_{i=1}^k \ln \frac{\Gamma(\alpha_{2i})}{\Gamma(\alpha_{1i})} + \sum_{i=1}^k (\alpha_{1i}-\alpha_{2i}) \cdot \left[ \psi(\alpha_{1i}) - \psi\left(\sum_{i=1}^{k} \alpha_{1i}\right) \right]
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Penny, William D. (2001): "KL-Divergences of Normal, Gamma, Dirichlet and Wishart densities"; in: \textit{University College, London}, p. 2, eqs. 8-9; URL: \url{https://www.fil.ion.ucl.ac.uk/~wpenny/publications/densities.ps}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P294 | shortcut: dir-kl | author: JoramSoch | date: 2021-12-02, 14:28.
 \vspace{1em}
 
 
@@ -15651,7 +16194,7 @@ where $\Gamma(x)$ is the gamma function and $\gamma(s,x)$ is the lower incomplet
 p(\forall_{j \neq i} \left[ q_i > q_j \right]|q_i) = \prod_{j \neq i} p(q_i > q_j|q_i) = \prod_{j \neq i} \frac{\gamma(\alpha_j,q_i)}{\Gamma(\alpha_j)} \; .
 \end{equation}
 
-In order to obtain the exceedance probability $\varphi_i$, the dependency on $q_i$ in this probability still has to be removed. From equations (\ref{eq:Dir-EP-def}) and (\ref{eq:Gam-Dir-eq}), it follows that
+In order to obtain the exceedance probability $\varphi_i$, the dependency on $q_i$ in this probability still has to be removed. From equations \eqref{eq:dir-ep-Dir-EP-def} and \eqref{eq:dir-ep-Gam-Dir-eq}, it follows that
 
 \begin{equation} \label{eq:dir-ep-Dir-EP2a}
 \varphi_i = p(\forall_{j \neq i} \left[ r_i > r_j \right]) = p(\forall_{j \neq i} \left[ q_i > q_j \right]) \; .
@@ -15663,13 +16206,13 @@ Using the law of marginal probability ($\rightarrow$ Definition \ref{sec:General
 \varphi_i = \int_0^\infty p(\forall_{j \neq i} \left[ q_i > q_j \right]|q_i) \, p(q_i) \, \mathrm{d}q_i \; .
 \end{equation}
 
-With (\ref{eq:Gam-EP2}) and (\ref{eq:Gam-Dir-A}), this becomes
+With \eqref{eq:dir-ep-Gam-EP2} and \eqref{eq:dir-ep-Gam-Dir-A}, this becomes
 
 \begin{equation} \label{eq:dir-ep-Dir-EP2c}
 \varphi_i = \int_0^\infty \prod_{j \neq i} \left( p(q_i > q_j|q_i) \right) \cdot \mathrm{Gam}(q_i;\alpha_i,1) \, \mathrm{d}q_i \; .
 \end{equation}
 
-And with (\ref{eq:Gam-EP1}) and (\ref{eq:Gam-pdf}), it becomes
+And with \eqref{eq:dir-ep-Gam-EP1} and \eqref{eq:dir-ep-Gam-pdf}, it becomes
 
 \begin{equation} \label{eq:dir-ep-Dir-EP-qed}
 \varphi_i = \int_0^\infty \prod_{j \neq i} \left( \frac{\gamma(\alpha_j,q_i)}{\Gamma(\alpha_j)} \right) \cdot \frac{q_i^{\alpha_i-1} \exp[-q_i]}{\Gamma(\alpha_i)} \, \mathrm{d}q_i \; .
@@ -15772,7 +16315,7 @@ X \sim \mathcal{MN}(M, U, V) \; ,
 if and only if $\mathrm{vec}(X)$ is multivariate normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn})
 
 \begin{equation} \label{eq:matn-mvn-mvn}
-\mathrm{vec}(X) \sim \mathcal{MN}(\mathrm{vec}(M), V \otimes U)
+\mathrm{vec}(X) \sim \mathcal{N}(\mathrm{vec}(M), V \otimes U)
 \end{equation}
 
 where $\mathrm{vec}(X)$ is the vectorization operator and $\otimes$ is the Kronecker product.
@@ -15843,48 +16386,93 @@ By showing that the probability density functions ($\rightarrow$ Definition \ref
 
 
 
-\subsubsection[\textbf{Transposition}]{Transposition} \label{sec:matn-trans}
+\subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:matn-kl}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}) following a matrix-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}):
+\textbf{Theorem:} Let $X$ be an $n \times p$ random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}). Assume two matrix-normal distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) $P$ and $Q$ specifying the probability distribution of $X$ as
 
-\begin{equation} \label{eq:matn-trans-matn}
-X \sim \mathcal{MN}(M, U, V) \; .
+\begin{equation} \label{eq:matn-kl-matns}
+\begin{split}
+P: \; X &\sim \mathcal{MN}(M_1, U_1, V_1) \\
+Q: \; X &\sim \mathcal{MN}(M_2, U_2, V_2) \; .
+\end{split}
 \end{equation}
 
-Then, the transpose of $X$ also has a matrix-normal distribution:
+Then, the Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) of $P$ from $Q$ is given by
 
-\begin{equation} \label{eq:matn-trans-matn-trans}
-X^\mathrm{T} \sim \mathcal{MN}(M^\mathrm{T}, V, U) \; .
+\begin{equation} \label{eq:matn-kl-matn-KL}
+\begin{split}
+\mathrm{KL}[P\,||\,Q] &= \frac{1}{2} \left[ \mathrm{vec}(M_2 - M_1)^\mathrm{T} \mathrm{vec}\left(U_2^{-1} (M_2 - M_1) V_2^{-1}\right) \right. \\
+&+ \left. \mathrm{tr}\left( (V_2^{-1}V_1) \otimes (U_2^{-1}U_1) \right) - n \ln \frac{|V_1|}{|V_2|} - p \ln \frac{|U_1|}{|U_2|} - n p \right] \; .
+\end{split}
 \end{equation}
 
 
 \vspace{1em}
-\textbf{Proof:} The probability density function of the matrix-normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:matn-pdf}) is:
+\textbf{Proof:} The matrix-normal distribution is equivalent to the multivariate normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:matn-mvn}),
 
-\begin{equation} \label{eq:matn-trans-matn-pdf-X}
-f(X) = \mathcal{MN}(X; M, U, V) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \mathrm{tr}\left( V^{-1} (X-M)^\mathrm{T} \, U^{-1} (X-M) \right) \right] \; .
+\begin{equation} \label{eq:matn-kl-matn-mvn}
+X \sim \mathcal{MN}(M, U, V) \quad \Leftrightarrow \quad \mathrm{vec}(X) \sim \mathcal{N}(\mathrm{vec}(M), V \otimes U) \; ,
 \end{equation}
 
-Define $Y = X^\mathrm{T}$. Then, $X = Y^\mathrm{T}$ and we can substitute:
+and the Kullback-Leibler divergence for the multivariate normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-kl}) is
 
-\begin{equation} \label{eq:matn-trans-matn-pdf-Y-s1}
-f(Y) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \mathrm{tr}\left( V^{-1} (Y^\mathrm{T}-M)^\mathrm{T} \, U^{-1} (Y^\mathrm{T}-M) \right) \right] \; .
+\begin{equation} \label{eq:matn-kl-mvn-KL}
+\mathrm{KL}[P\,||\,Q] = \frac{1}{2} \left[ (\mu_2 - \mu_1)^T \Sigma_2^{-1} (\mu_2 - \mu_1) + \mathrm{tr}(\Sigma_2^{-1} \Sigma_1) - \ln \frac{|\Sigma_1|}{|\Sigma_2|} - n \right]
 \end{equation}
 
-Using $(A+B)^\mathrm{T} = (A^\mathrm{T} + B^\mathrm{T})$, we have:
+where $X$ is an $n \times 1$ random vector ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvec}).
 
-\begin{equation} \label{eq:matn-trans-matn-pdf-Y-s2}
-f(Y) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \mathrm{tr}\left( V^{-1} (Y-M^\mathrm{T}) \, U^{-1} (Y-M^\mathrm{T})^\mathrm{T} \right) \right] \; .
+Thus, we can plug the distribution parameters from \eqref{eq:matn-kl-matns} into the KL divergence in \eqref{eq:matn-kl-mvn-KL} using the relationship given by \eqref{eq:matn-kl-matn-mvn}
+
+\begin{equation} \label{eq:matn-kl-matn-KL-s1}
+\begin{split}
+\mathrm{KL}[P\,||\,Q] &= \frac{1}{2} \left[ (\mathrm{vec}(M_2) - \mathrm{vec}(M_1))^T (V_2 \otimes U_2)^{-1} (\mathrm{vec}(M_2) - \mathrm{vec}(M_1)) \right. \\
+&+ \left. \mathrm{tr}\left( (V_2 \otimes U_2)^{-1} (V_1 \otimes U_1) \right) - \ln \frac{|V_1 \otimes U_1|}{|V_2 \otimes U_2|} - n p \right] \; .
+\end{split}
 \end{equation}
 
-Using $\mathrm{tr}(ABC) = \mathrm{tr}(CAB)$, we obtain
+Using the vectorization operator and Kronecker product properties
 
-\begin{equation} \label{eq:matn-trans-matn-pdf-Y-s3}
-f(Y) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \mathrm{tr}\left( U^{-1} (Y-M^\mathrm{T})^\mathrm{T} \, V^{-1} (Y-M^\mathrm{T}) \right) \right]
+\begin{equation} \label{eq:matn-kl-vec-add}
+\mathrm{vec}(A) + \mathrm{vec}(B) = \mathrm{vec}(A+B)
 \end{equation}
 
-which is the probability density function of a matrix-normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:matn-pdf}) with mean $M^T$, covariance across rows $V$ and covariance across columns $U$.
+\begin{equation} \label{eq:matn-kl-kron-inv}
+(A \otimes B)^{-1} = A^{-1} \otimes B^{-1}
+\end{equation}
+
+\begin{equation} \label{eq:matn-kl-kron-prod}
+(A \otimes B) (C \otimes D) = (AC) \otimes (BD)
+\end{equation}
+
+\begin{equation} \label{eq:matn-kl-kron-det}
+|A \otimes B| = |A|^m \, |B|^n \quad \text{where} \quad A \in \mathbb{R}^{n \times n} \quad \text{and} \quad B \in \mathbb{R}^{m \times m} \; ,
+\end{equation}
+
+the Kullback-Leibler divergence from \eqref{eq:matn-kl-matn-KL-s1} becomes:
+
+\begin{equation} \label{eq:matn-kl-matn-KL-s2}
+\begin{split}
+\mathrm{KL}[P\,||\,Q] &= \frac{1}{2} \left[ \mathrm{vec}(M_2 - M_1)^\mathrm{T} \, (V_2^{-1} \otimes U_2^{-1}) \, \mathrm{vec}(M_2 - M_1) \right. \\
+&+ \left. \mathrm{tr}\left( (V_2^{-1}V_1) \otimes (U_2^{-1}U_1) \right) - n \ln \frac{|V_1|}{|V_2|} - p \ln \frac{|U_1|}{|U_2|} - n p \right] \; .
+\end{split}
+\end{equation}
+
+Using the relationship between Kronecker product and vectorization operator
+
+\begin{equation} \label{eq:matn-kl-kron-vec}
+(C^\mathrm{T} \otimes A) \, \mathrm{vec}(B) = \mathrm{vec}(ABC) \; ,
+\end{equation}
+
+we finally have:
+
+\begin{equation} \label{eq:matn-kl-matn-KL-s3}
+\begin{split}
+\mathrm{KL}[P\,||\,Q] &= \frac{1}{2} \left[ \mathrm{vec}(M_2 - M_1)^\mathrm{T} \mathrm{vec}\left(U_2^{-1} (M_2 - M_1) V_2^{-1}\right) \right. \\
+&+ \left. \mathrm{tr}\left( (V_2^{-1}V_1) \otimes (U_2^{-1}U_1) \right) - n \ln \frac{|V_1|}{|V_2|} - p \ln \frac{|U_1|}{|U_2|} - n p \right] \; .
+\end{split}
+\end{equation}
 
 
 \vspace{1em}
@@ -15894,7 +16482,7 @@ which is the probability density function of a matrix-normal distribution ($\rig
 
 
 \vspace{1em}
-\textbf{Metadata:} ID: P144 | shortcut: matn-trans | author: JoramSoch | date: 2020-08-03, 22:21.
+\textbf{Metadata:} ID: P296 | shortcut: matn-kl | author: JoramSoch | date: 2021-12-02, 20:22.
 \vspace{1em}
 
 
@@ -15969,6 +16557,122 @@ Y \sim \mathcal{MN}(AMB + C, AUA^\mathrm{T} ,B^\mathrm{T}VB) \; .
 
 
 
+\subsubsection[\textbf{Transposition}]{Transposition} \label{sec:matn-trans}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}) following a matrix-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}):
+
+\begin{equation} \label{eq:matn-trans-matn}
+X \sim \mathcal{MN}(M, U, V) \; .
+\end{equation}
+
+Then, the transpose of $X$ also has a matrix-normal distribution:
+
+\begin{equation} \label{eq:matn-trans-matn-trans}
+X^\mathrm{T} \sim \mathcal{MN}(M^\mathrm{T}, V, U) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The probability density function of the matrix-normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:matn-pdf}) is:
+
+\begin{equation} \label{eq:matn-trans-matn-pdf-X}
+f(X) = \mathcal{MN}(X; M, U, V) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \mathrm{tr}\left( V^{-1} (X-M)^\mathrm{T} \, U^{-1} (X-M) \right) \right] \; .
+\end{equation}
+
+Define $Y = X^\mathrm{T}$. Then, $X = Y^\mathrm{T}$ and we can substitute:
+
+\begin{equation} \label{eq:matn-trans-matn-pdf-Y-s1}
+f(Y) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \mathrm{tr}\left( V^{-1} (Y^\mathrm{T}-M)^\mathrm{T} \, U^{-1} (Y^\mathrm{T}-M) \right) \right] \; .
+\end{equation}
+
+Using $(A+B)^\mathrm{T} = (A^\mathrm{T} + B^\mathrm{T})$, we have:
+
+\begin{equation} \label{eq:matn-trans-matn-pdf-Y-s2}
+f(Y) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \mathrm{tr}\left( V^{-1} (Y-M^\mathrm{T}) \, U^{-1} (Y-M^\mathrm{T})^\mathrm{T} \right) \right] \; .
+\end{equation}
+
+Using $\mathrm{tr}(ABC) = \mathrm{tr}(CAB)$, we obtain
+
+\begin{equation} \label{eq:matn-trans-matn-pdf-Y-s3}
+f(Y) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \mathrm{tr}\left( U^{-1} (Y-M^\mathrm{T})^\mathrm{T} \, V^{-1} (Y-M^\mathrm{T}) \right) \right]
+\end{equation}
+
+which is the probability density function of a matrix-normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:matn-pdf}) with mean $M^T$, covariance across rows $V$ and covariance across columns $U$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P144 | shortcut: matn-trans | author: JoramSoch | date: 2020-08-03, 22:21.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Drawing samples}]{Drawing samples} \label{sec:matn-samp}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X \in \mathbb{R}^{n \times p}$ be a random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}) with all entries independently following a standard normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm}). Moreover, let $A \in \mathbb{R}^{n \times n}$ and $B \in \mathbb{R}^{p \times p}$, such that $A A^\mathrm{T} = U$ and $B^\mathrm{T} B = V$. Then, $Y = M + A X B$ follows a matrix-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:matn}) with mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-rmat}) $M$, covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) across rows $U$ and covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:covmat}) across rows $U$:
+
+\begin{equation} \label{eq:matn-samp-matn-samp}
+Y = M + A X B \sim \mathcal{MN}(M, U, V) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} If all entries of $X$ are independent and standard normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:snorm})
+
+\begin{equation} \label{eq:matn-samp-xij-dist}
+x_{ij} \sim \mathcal{N}(0, 1) \quad \text{ind. for all} \quad i = 1,\ldots,n \quad \text{and} \quad j = 1,\ldots,p \; ,
+\end{equation}
+
+this implies a multivariate normal distribution with diagonal covariance matrix ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-ind}):
+
+\begin{equation} \label{eq:matn-samp-vecX-dist}
+\begin{split}
+\mathrm{vec}(X) &\sim \mathcal{N}\left(\mathrm{vec}(0_{np}), I_{np} \right) \\
+&\sim \mathcal{N}\left(\mathrm{vec}(0_{np}), I_p \otimes I_n \right) \; .
+\end{split}
+\end{equation}
+
+where $0_{np}$ is an $n \times p$ matrix of zeros and $I_n$ is the $n \times n$ identity matrix.
+
+Due to the relationship between multivariate and matrix-normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:matn-mvn}), we have:
+
+\begin{equation} \label{eq:matn-samp-X-dist}
+X \sim \mathcal{MN}(0_{np}, I_n, I_p) \; .
+\end{equation}
+
+Thus, with the linear transformation theorem for the matrix-normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:matn-ltt}), it follows that
+
+\begin{equation} \label{eq:matn-samp-matn-samp-qed}
+\begin{split}
+Y = M + AXB &\sim \mathcal{MN}\left(M + A 0_{np} B, A I_n A^\mathrm{T}, B^\mathrm{T} I_p B \right) \\
+&\sim \mathcal{MN}\left(M, A A^\mathrm{T}, B^\mathrm{T} B \right) \\
+&\sim \mathcal{MN}\left(M, U, V \right) \; .
+\end{split}
+\end{equation}
+
+Thus, given $X$ defined by \eqref{eq:matn-samp-xij-dist}, $Y$ defined by \eqref{eq:matn-samp-matn-samp} is a sample ($\rightarrow$ Definition "samp") from $\mathcal{N}\left(M, U, V \right)$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2021): "Matrix normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-12-07; URL: \url{https://en.wikipedia.org/wiki/Matrix_normal_distribution#Drawing_values_from_the_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P297 | shortcut: matn-samp | author: JoramSoch | date: 2021-12-07, 08:43.
+\vspace{1em}
+
+
+
 \subsection{Wishart distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:wish}
@@ -16004,6 +16708,112 @@ where $n > p - 1$ and $V$ is a positive definite symmetric covariance matrix.
 
 \vspace{1em}
 \textbf{Metadata:} ID: D43 | shortcut: wish | author: JoramSoch | date: 2020-03-22, 17:15.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:wish-kl}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $S$ be a $p \times p$ random matrix ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rmat}). Assume two Wishart distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:wish}) $P$ and $Q$ specifying the probability distribution of $S$ as
+
+\begin{equation} \label{eq:wish-kl-wishs}
+\begin{split}
+P: \; S &\sim \mathcal{W}(V_1, n_1) \\
+Q: \; S &\sim \mathcal{W}(V_2, n_2) \; .
+\end{split}
+\end{equation}
+
+Then, the Kullback-Leibler divergence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) of $P$ from $Q$ is given by
+
+\begin{equation} \label{eq:wish-kl-wish-KL}
+\mathrm{KL}[P\,||\,Q] = \frac{1}{2} \left[ n_2 \left( \ln |V_2| - \ln |V_1| \right) + n_1 \mathrm{tr}(V_2^{-1} V_1) + 2 \ln \frac{\Gamma_p\left(\frac{n_2}{2}\right)}{\Gamma_p\left(\frac{n_1}{2}\right)} + (n_1-n_2) \psi_p\left(\frac{n_1}{2}\right) - n_1 p \right]
+\end{equation}
+
+where $\Gamma_p(x)$ is the multivariate gamma function
+
+\begin{equation} \label{eq:wish-kl-mult-gam-fct}
+\Gamma_p(x) = \pi^{p(p-1)/4} \, \prod_{j=1}^k \Gamma\left(x - \frac{j-1}{2}\right)
+\end{equation}
+
+and $\psi_p(x)$ is the multivariate digamma function
+
+\begin{equation} \label{eq:wish-kl-mult-psi-fct}
+\psi_p(x) = \frac{\mathrm{d}\ln \Gamma_p(x)}{\mathrm{d}x} = \sum_{j=1}^k \psi\left(x - \frac{j-1}{2}\right) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The KL divergence for a continuous random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:kl}) is given by 
+
+\begin{equation} \label{eq:wish-kl-KL-cont}
+\mathrm{KL}[P\,||\,Q] = \int_{\mathcal{X}} p(x) \, \ln \frac{p(x)}{q(x)} \, \mathrm{d}x
+\end{equation}
+
+which, applied to the Wishart distributions ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:wish}) in \eqref{eq:wish-kl-wishs}, yields
+
+\begin{equation} \label{eq:wish-kl-wish-KL-s1}
+\begin{split}
+\mathrm{KL}[P\,||\,Q] &= \int_{\mathcal{S}^p} \mathcal{W}(S; V_1, n_1) \, \ln \frac{\mathcal{W}(S; V_1, n_1)}{\mathcal{W}(S; V_2, n_2)} \, \mathrm{d}S \\
+&= \left\langle \ln \frac{\mathcal{W}(S; \alpha_1)}{\mathcal{W}(S; \alpha_1)} \right\rangle_{p(S)}
+\end{split}
+\end{equation}
+
+where $\mathcal{S}^p$ is the set of all positive-definite symmetric $p \times p$ matrices.
+
+Using the probability density function of the Wishart distribution ($\rightarrow$ Proof "wish-pdf"), this becomes:
+
+\begin{equation} \label{eq:wish-kl-wish-KL-s2}
+\begin{split}
+\mathrm{KL}[P\,||\,Q] &= \left\langle \ln \frac{\frac{1}{\sqrt{2^{n_1 p} |V_1|^{n_1}} \Gamma_p \left( \frac{n_1}{2} \right)} \cdot |S|^{(n_1-p-1)/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( V_1^{-1} S \right) \right]}{\frac{1}{\sqrt{2^{n_2 p} |V_2|^{n_2}} \Gamma_p \left( \frac{n_2}{2} \right)} \cdot |S|^{(n_2-p-1)/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( V_2^{-1} S \right) \right]} \right\rangle_{p(S)} \\
+&= \left\langle \ln \left( \sqrt{2^{(n_2-n_1)p} \cdot \frac{|V_2|^{n_2}}{|V_1|^{n_1}}} \cdot \frac{\Gamma_p\left( \frac{n_2}{2} \right)}{\Gamma_p\left( \frac{n_1}{2} \right)} \cdot |S|^{(n_1-n_2)/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\left( V_1^{-1} S \right) -\frac{1}{2} \mathrm{tr}\left( V_2^{-1} S \right) \right] \right) \right\rangle_{p(S)} \\
+&= \left\langle \frac{(n_2-n_1)p}{2} \ln 2 + \frac{n_2}{2} \ln |V_2| - \frac{n_1}{2} \ln |V_1| + \ln \frac{\Gamma_p\left( \frac{n_2}{2} \right)}{\Gamma_p\left( \frac{n_1}{2} \right)} \right. \\
+&+ \left. \quad \frac{n_1-n_2}{2} \ln |S| - \frac{1}{2} \mathrm{tr}\left( V_1^{-1} S \right) - \frac{1}{2} \mathrm{tr}\left( V_2^{-1} S \right) \right\rangle_{p(S)} \\
+&= \frac{(n_2-n_1)p}{2} \ln 2 + \frac{n_2}{2} \ln |V_2| - \frac{n_1}{2} \ln |V_1| + \ln \frac{\Gamma_p\left( \frac{n_2}{2} \right)}{\Gamma_p\left( \frac{n_1}{2} \right)} \\
+&+ \frac{n_1-n_2}{2} \left\langle \ln |S| \right\rangle_{p(S)} - \frac{1}{2} \left\langle \mathrm{tr}\left( V_1^{-1} S \right) \right\rangle_{p(S)} - \frac{1}{2} \left\langle \mathrm{tr}\left( V_2^{-1} S \right) \right\rangle_{p(S)} \; .
+\end{split}
+\end{equation}
+
+Using the expected value of a Wishart random matrix ($\rightarrow$ Proof "wish-mean")
+
+\begin{equation} \label{eq:wish-kl-wish-mean}
+S \sim \mathcal{W}(V,n) \quad \Rightarrow \quad \left\langle S \right\rangle = n V \; ,
+\end{equation}
+
+such that the expected value of the matrix trace ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-tr}) becomes
+
+\begin{equation} \label{eq:wish-kl-wish-trmean}
+\left\langle \mathrm{tr}(AS) \right\rangle = \mathrm{tr}\left( \left\langle AS \right\rangle \right) = \mathrm{tr}\left( A \left\langle S \right\rangle \right) = \mathrm{tr}\left( A \cdot (nV) \right) = n \cdot \mathrm{tr}(AV) \; ,
+\end{equation}
+
+and the expected value of a Wishart log-determinant ($\rightarrow$ Proof "wish-logdetmean")
+
+\begin{equation} \label{eq:wish-kl-wish-logdetmean}
+S \sim \mathcal{W}(V,n) \quad \Rightarrow \quad \left\langle \ln |S| \right\rangle = \psi_p\left(\frac{n}{2}\right) + p \cdot \ln 2 + \ln |V| \; ,
+\end{equation}
+
+the Kullback-Leibler divergence from \eqref{eq:wish-kl-wish-KL-s2} becomes:
+
+\begin{equation} \label{eq:wish-kl-wish-KL-s3}
+\begin{split}
+\mathrm{KL}[P\,||\,Q] &= \frac{(n_2-n_1)p}{2} \ln 2 + \frac{n_2}{2} \ln |V_2| - \frac{n_1}{2} \ln |V_1| + \ln \frac{\Gamma_p\left( \frac{n_2}{2} \right)}{\Gamma_p\left( \frac{n_1}{2} \right)} \\
+&+ \frac{n_1-n_2}{2} \left[ \psi_p\left(\frac{n_1}{2}\right) + p \cdot \ln 2 + \ln |V_1| \right] - \frac{n_1}{2} \mathrm{tr}\left( V_1^{-1} V_1 \right) - \frac{n_1}{2} \mathrm{tr}\left( V_2^{-1} V_1 \right) \\
+&= \frac{n_2}{2} \left( \ln |V_2| - \ln |V_1| \right) + \ln \frac{\Gamma_p\left( \frac{n_2}{2} \right)}{\Gamma_p\left( \frac{n_1}{2} \right)} + \frac{n_1-n_2}{2} \psi_p\left(\frac{n_1}{2}\right) - \frac{n_1}{2} \mathrm{tr}\left( I_p \right) - \frac{n_1}{2} \mathrm{tr}\left( V_2^{-1} V_1 \right) \\
+& = \frac{1}{2} \left[ n_2 \left( \ln |V_2| - \ln |V_1| \right) + n_1 \mathrm{tr}(V_2^{-1} V_1) + 2 \ln \frac{\Gamma_p\left(\frac{n_2}{2}\right)}{\Gamma_p\left(\frac{n_1}{2}\right)} + (n_1-n_2) \psi_p\left(\frac{n_1}{2}\right) - n_1 p \right] \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Penny, William D. (2001): "KL-Divergences of Normal, Gamma, Dirichlet and Wishart densities"; in: \textit{University College, London}, pp. 2-3, eqs. 13/15; URL: \url{https://www.fil.ion.ucl.ac.uk/~wpenny/publications/densities.ps}.
+\item Wikipedia (2021): "Wishart distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-12-02; URL: \url{https://en.wikipedia.org/wiki/Wishart_distribution#KL-divergence}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P295 | shortcut: wish-kl | author: JoramSoch | date: 2021-12-02, 15:33.
 \vspace{1em}
 
 
@@ -18161,7 +18971,7 @@ Otherwise, it is called simple linear regression with correlated observations.
 \textbf{Theorem:} Simple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}) is a special case of multiple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with design matrix $X$ and regression coefficients $\beta$
 
 \begin{equation} \label{eq:slr-mlr-slr-mlr}
-X = \left[ 1_n, \, x \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right]
+X = \left[ \begin{matrix} 1_n & x \end{matrix} \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right]
 \end{equation}
 
 where $1_n$ is an $n \times 1$ vector of ones, $x$ is the $n \times 1$ single predictor variable, $\beta_0$ is the intercept and $\beta_1$ is the slope of the regression line ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:regline}).
@@ -18171,7 +18981,7 @@ where $1_n$ is an $n \times 1$ vector of ones, $x$ is the $n \times 1$ single pr
 \textbf{Proof:} Without loss of generality, consider the simple linear regression case with uncorrelated errors ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}):
 
 \begin{equation} \label{eq:slr-mlr-slr}
-y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \; \varepsilon_i \sim \mathcal{N}(0, \sigma^2) \; .
+y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \; \varepsilon_i \sim \mathcal{N}(0, \sigma^2), \; i = 1,\ldots,n \; .
 \end{equation}
 
 In matrix notation and using the multivariate normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:mvn}), this can also be written as
@@ -18179,14 +18989,14 @@ In matrix notation and using the multivariate normal distribution ($\rightarrow$
 \begin{equation} \label{eq:slr-mlr-slr-mlr-s1}
 \begin{split}
 y &= \beta_0 1_n + \beta_1 x + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, I_n) \\
-y &= \left[ 1_n, \, x \right] \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, I_n) \; .
+y &= \left[ \begin{matrix} 1_n & x \end{matrix} \right] \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, I_n) \; .
 \end{split}
 \end{equation}
 
 Comparing with the multiple linear regression equations for uncorrelated errors ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}), we finally note:
 
 \begin{equation} \label{eq:slr-mlr-slr-mlr-s3}
-y = X\beta + \varepsilon \quad \text{with} \quad X = \left[ 1_n, \, x \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] \; .
+y = X\beta + \varepsilon \quad \text{with} \quad X = \left[ \begin{matrix} 1_n & x \end{matrix} \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] \; .
 \end{equation}
 
 In the case of correlated observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}), the error distribution changes to ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}):
@@ -18333,6 +19143,90 @@ Together, \eqref{eq:slr-ols-slr-ols-int} and \eqref{eq:slr-ols-slr-ols-sl-qed} c
 
 \vspace{1em}
 \textbf{Metadata:} ID: P271 | shortcut: slr-ols | author: JoramSoch | date: 2021-10-27, 08:56.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Ordinary least squares}]{Ordinary least squares} \label{sec:slr-ols2}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a simple linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}) with independent observations
+
+\begin{equation} \label{eq:slr-ols2-slr}
+y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \; \varepsilon_i \sim \mathcal{N}(0, \sigma^2), \; i = 1,\ldots,n \; ,
+\end{equation}
+
+the parameters minimizing the residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) are given by
+
+\begin{equation} \label{eq:slr-ols2-slr-ols}
+\begin{split}
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1 \bar{x} \\
+\hat{\beta}_1 &= \frac{s_{xy}}{s_x^2}
+\end{split}
+\end{equation}
+
+where $\bar{x}$ and $\bar{y}$ are the sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}), $s_x^2$ is the sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) of $x$ and $s_{xy}$ is the sample covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov-samp}) between $x$ and $y$.
+
+
+\vspace{1em}
+\textbf{Proof:} Simple linear regression is a special case of multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-mlr}) with
+
+\begin{equation} \label{eq:slr-ols2-slr-mlr}
+X = \left[ \begin{matrix} 1_n & x \end{matrix} \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right]
+\end{equation}
+
+and ordinary least sqaures estimates ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}) are given by
+
+\begin{equation} \label{eq:slr-ols2-mlr-ols}
+\hat{\beta} = (X^\mathrm{T} X)^{-1} X^\mathrm{T} y \; .
+\end{equation}
+
+Writing out equation \eqref{eq:slr-ols2-mlr-ols}, we have
+
+\begin{equation} \label{eq:slr-ols2-slr-ols-b}
+\begin{split}
+\hat{\beta} &= \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \left[ \begin{matrix} 1_n & x \end{matrix} \right] \right)^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] y \\
+&= \left( \left[ \begin{matrix} n & n\bar{x} \\ n\bar{x} & x^\mathrm{T} x \end{matrix} \right] \right)^{-1} \left[ \begin{matrix} n \bar{y} \\ x^\mathrm{T} y \end{matrix} \right] \\
+&= \frac{1}{n x^\mathrm{T} x - (n\bar{x})^2} \left[ \begin{matrix} x^\mathrm{T} x & -n\bar{x} \\ -n\bar{x} & n \end{matrix} \right]  \left[ \begin{matrix} n \bar{y} \\ x^\mathrm{T} y \end{matrix} \right] \\
+&= \frac{1}{n x^\mathrm{T} x - (n\bar{x})^2} \left[ \begin{matrix} n \bar{y} \, x^\mathrm{T} x - n \bar{x} \, x^\mathrm{T} y \\ n \, x^\mathrm{T} y - (n \bar{x})(n \bar{y}) \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+Thus, the second entry of $\hat{\beta}$ is equal to ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-ols}):
+
+\begin{equation} \label{eq:slr-ols2-slr-ols-b1}
+\begin{split}
+\hat{\beta}_1 &= \frac{n \, x^\mathrm{T} y - (n \bar{x})(n \bar{y})}{n x^\mathrm{T} x - (n\bar{x})^2} \\
+&= \frac{x^\mathrm{T} y - n \bar{x} \bar{y}}{x^\mathrm{T} x - n \bar{x}^2} \\
+&= \frac{\sum_{i=1}^n x_i y_i - \sum_{i=1}^n \bar{x} \bar{y}}{\sum_{i=1}^n x_i^2 - \sum_{i=1}^n \bar{x}^2} \\
+&= \frac{\sum_{i=1}^n (x_i - \bar{x}) (y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} \\
+&= \frac{s_{xy}}{s_x^2} \; .
+\end{split}
+\end{equation}
+
+Moreover, the first entry of $\hat{\beta}$ is equal to:
+
+\begin{equation} \label{eq:slr-ols2-slr-ols-b2}
+\begin{split}
+\hat{\beta}_0 &= \frac{n \bar{y} \, x^\mathrm{T} x - n \bar{x} \, x^\mathrm{T} y}{n x^\mathrm{T} x - (n\bar{x})^2} \\
+&= \frac{\bar{y} \, x^\mathrm{T} x - \bar{x} \, x^\mathrm{T} y}{x^\mathrm{T} x - n \bar{x}^2} \\
+&= \frac{\bar{y} \, x^\mathrm{T} x - \bar{x} \, x^\mathrm{T} y + n \bar{x}^2 \bar{y} - n \bar{x}^2 \bar{y}}{x^\mathrm{T} x - n \bar{x}^2} \\
+&= \frac{\bar{y} (x^\mathrm{T} x - n \bar{x}^2) - \bar{x} (x^\mathrm{T} y - n \bar{x} \bar{y})}{x^\mathrm{T} x - n \bar{x}^2} \\
+&= \frac{\bar{y} (x^\mathrm{T} x - n \bar{x}^2)}{x^\mathrm{T} x - n \bar{x}^2} - \frac{\bar{x} (x^\mathrm{T} y - n \bar{x} \bar{y})}{x^\mathrm{T} x - n \bar{x}^2} \\
+&= \bar{y} - \bar{x} \, \frac{\sum_{i=1}^n x_i y_i - \sum_{i=1}^n \bar{x} \bar{y}}{\sum_{i=1}^n x_i^2 - \sum_{i=1}^n \bar{x}^2} \\
+&= \bar{y} - \hat{\beta}_1 \bar{x} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P288 | shortcut: slr-ols2 | author: JoramSoch | date: 2021-11-16, 09:36.
 \vspace{1em}
 
 
@@ -18587,7 +19481,7 @@ where $\bar{x}$ is the sample mean ($\rightarrow$ Definition \ref{sec:General Th
 \textbf{Proof:} Simple linear regression is a special case of multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-mlr}) with
 
 \begin{equation} \label{eq:slr-olsdist-slr-mlr}
-X = \left[ 1_n, \, x \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] \; ,
+X = \left[ \begin{matrix} 1_n & x \end{matrix} \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] \; ,
 \end{equation}
 
 such that \eqref{eq:slr-olsdist-slr} can also be written as
@@ -18621,7 +19515,7 @@ Applying \eqref{eq:slr-olsdist-slr-mlr}, the covariance matrix ($\rightarrow$ De
 
 \begin{equation} \label{eq:slr-olsdist-b-est-cov}
 \begin{split}
-\sigma^2 (X^\mathrm{T} X)^{-1} &= \sigma^2 \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \left[ 1_n, \, x \right] \right)^{-1} \\
+\sigma^2 (X^\mathrm{T} X)^{-1} &= \sigma^2 \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \left[ \begin{matrix} 1_n & x \end{matrix} \right] \right)^{-1} \\
 &= \sigma^2 \left( \left[ \begin{matrix} n & n\bar{x} \\ n\bar{x} & x^\mathrm{T} x \end{matrix} \right] \right)^{-1} \\
 &= \frac{\sigma^2}{n x^\mathrm{T} x - (n\bar{x})^2} \left[ \begin{matrix} x^\mathrm{T} x & -n\bar{x} \\ -n\bar{x} & n \end{matrix} \right] \\
 &= \frac{\sigma^2}{x^\mathrm{T} x - n\bar{x}^2} \left[ \begin{matrix} x^\mathrm{T} x/n & -\bar{x} \\ -\bar{x} & 1 \end{matrix} \right] \; .
@@ -18917,7 +19811,7 @@ Together, \eqref{eq:slr-proj-P-qed} and \eqref{eq:slr-proj-w-qed} constitute the
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Penny, William (2006): "Projects"; in: \textit{Mathematics for Brain Imaging}, ch. 1.4.10, pp. 34-35, eqs. 1.87/1.88; URL: \url{https://ueapsylabs.co.uk/sites/wpenny/mbi/mbi_course.pdf}.
+\item Penny, William (2006): "Projections"; in: \textit{Mathematics for Brain Imaging}, ch. 1.4.10, pp. 34-35, eqs. 1.87/1.88; URL: \url{https://ueapsylabs.co.uk/sites/wpenny/mbi/mbi_course.pdf}.
 \end{itemize}
 
 
@@ -19046,7 +19940,7 @@ where $1_n$ is an $n \times 1$ vector of ones, $x$ is the $n \times 1$ single pr
 \textbf{Proof:} Simple linear regression is a special case of multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-mlr}) with
 
 \begin{equation} \label{eq:slr-mat-slr-mlr}
-X = \left[ 1_n, \, x \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] \; ,
+X = \left[ \begin{matrix} 1_n & x \end{matrix} \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] \; ,
 \end{equation}
 
 such that the simple linear regression model can also be written as
@@ -19073,7 +19967,7 @@ which is a $2 \times n$ matrix and can be reformulated as follows:
 \begin{equation} \label{eq:slr-mat-E-qed}
 \begin{split}
 E &= (X^\mathrm{T} X)^{-1} X^\mathrm{T} \\
-&= \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \left[ 1_n, \, x \right] \right)^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \\
+&= \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \left[ \begin{matrix} 1_n & x \end{matrix} \right] \right)^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \\
 &= \left( \left[ \begin{matrix} n & n\bar{x} \\ n\bar{x} & x^\mathrm{T} x \end{matrix} \right] \right)^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \\
 &= \frac{1}{n x^\mathrm{T} x - (n\bar{x})^2} \left[ \begin{matrix} x^\mathrm{T} x & -n\bar{x} \\ -n\bar{x} & n \end{matrix} \right] \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \\
 &= \frac{1}{x^\mathrm{T} x - n\bar{x}^2} \left[ \begin{matrix} x^\mathrm{T} x/n & -\bar{x} \\ -\bar{x} & 1 \end{matrix} \right] \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \\
@@ -19092,7 +19986,7 @@ which is an $n \times n$ matrix and can be reformulated as follows:
 
 \begin{equation} \label{eq:slr-mat-P-qed}
 \begin{split}
-P &= X \, E = \left[ 1_n, \, x \right] \left[ \begin{matrix} e_1 \\ e_2 \end{matrix} \right] \\
+P &= X \, E = \left[ \begin{matrix} 1_n & x \end{matrix} \right] \left[ \begin{matrix} e_1 \\ e_2 \end{matrix} \right] \\
 &= \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} 1 & x_1 \\ \vdots & \vdots \\ 1 & x_n \end{matrix} \right] \left[ \begin{matrix} (x^\mathrm{T} x/n) - \bar{x} x_1 & \cdots & (x^\mathrm{T} x/n) - \bar{x} x_n \\ -\bar{x} + x_1 & \cdots & -\bar{x} + x_n \end{matrix} \right] \\
 &= \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} (x^\mathrm{T} x/n) - 2 \bar{x} x_1 + x_1^2 & \cdots & (x^\mathrm{T} x/n) - \bar{x} (x_1 + x_n) + x_1 x_n \\ \vdots & \ddots & \vdots \\ (x^\mathrm{T} x/n) - \bar{x} (x_1 + x_n) + x_1 x_n & \cdots & (x^\mathrm{T} x/n) - 2 \bar{x} x_n + x_n^2 \end{matrix} \right] \; .
 \end{split}
@@ -19125,6 +20019,379 @@ R &= I_n - P = \left[ \begin{matrix} 1 & \cdots & 0 \\ \vdots & \ddots & \vdots 
 
 \vspace{1em}
 \textbf{Metadata:} ID: P285 | shortcut: slr-mat | author: JoramSoch | date: 2021-11-09, 15:19.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Weighted least squares}]{Weighted least squares} \label{sec:slr-wls}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a simple linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}) with correlated observations
+
+\begin{equation} \label{eq:slr-wls-slr}
+y = \beta_0 + \beta_1 x + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; ,
+\end{equation}
+
+the parameters minimizing the weighted residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) are given by
+
+\begin{equation} \label{eq:slr-wls-slr-wls}
+\begin{split}
+\hat{\beta}_0 &= \frac{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} y - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} y}{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} 1_n - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} 1_n} \\
+\hat{\beta}_1 &= \frac{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} y - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} y}{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} x - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} x}
+\end{split}
+\end{equation}
+
+where $1_n$ is an $n \times 1$ vector of ones.
+
+
+\vspace{1em}
+\textbf{Proof:} Let there be an $n \times n$ square matrix $W$, such that
+
+\begin{equation} \label{eq:slr-wls-W-def}
+W V W^\mathrm{T} = I_n \; .
+\end{equation}
+
+Since $V$ is a covariance matrix and thus symmetric, $W$ is also symmetric and can be expressed as the matrix square root of the inverse of $V$:
+
+\begin{equation} \label{eq:slr-wls-W-V}
+W V W = I_n \quad \Leftrightarrow \quad V = W^{-1} W^{-1} \quad \Leftrightarrow \quad V^{-1} = W W \quad \Leftrightarrow \quad W = V^{-1/2} \; .
+\end{equation}
+
+Because $\beta_0$ is a scalar, \eqref{eq:slr-wls-slr} may also be written as
+
+\begin{equation} \label{eq:slr-wls-slr-s1}
+y = \beta_0 1_n + \beta_1 x + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; ,
+\end{equation}
+
+Left-multiplying \eqref{eq:slr-wls-slr-s1} with $W$, the linear transformation theorem ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:mvn-ltt}) implies that
+
+\begin{equation} \label{eq:slr-wls-slr-s2}
+W y = \beta_0 W 1_n + \beta_1 W x + W \varepsilon, \; W \varepsilon \sim \mathcal{N}(0, \sigma^2 W V W^\mathrm{T}) \; .
+\end{equation}
+
+Applying \eqref{eq:slr-wls-W-def}, we see that \eqref{eq:slr-wls-slr-s2} is actually a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
+
+\begin{equation} \label{eq:slr-wls-slr-s3}
+\tilde{y} = \left[ \begin{matrix} \tilde{x}_0 & \tilde{x} \end{matrix} \right] \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right] + \tilde{\varepsilon}, \; \tilde{\varepsilon} \sim \mathcal{N}(0, \sigma^2 I_n)
+\end{equation}
+
+where $\tilde{y} = Wy$, $\tilde{x}_0 = W 1_n$, $\tilde{x} = W x$ and $\tilde{\varepsilon} = W\varepsilon$, such that we can apply the ordinary least squares solution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-ols}) giving:
+
+\begin{equation} \label{eq:slr-wls-slr-wls-s1}
+\begin{split}
+\hat{\beta} &= (\tilde{X}^\mathrm{T} \tilde{X})^{-1} \tilde{X}^\mathrm{T} \tilde{y} \\
+&= \left( \left[ \begin{matrix} \tilde{x}_0^\mathrm{T} \\ \tilde{x}^\mathrm{T} \end{matrix} \right] \left[ \begin{matrix} \tilde{x}_0 & \tilde{x} \end{matrix} \right] \right)^{-1} \left[ \begin{matrix} \tilde{x}_0^\mathrm{T} \\ \tilde{x}^\mathrm{T} \end{matrix} \right] \tilde{y} \\
+&= \left[ \begin{matrix} \tilde{x}_0^\mathrm{T} \tilde{x}_0 & \tilde{x}_0^\mathrm{T} \tilde{x} \\ \tilde{x}^\mathrm{T} \tilde{x}_0 & \tilde{x}^\mathrm{T} \tilde{x} \end{matrix} \right]^{-1} \left[ \begin{matrix} \tilde{x}_0^\mathrm{T} \\ \tilde{x}^\mathrm{T} \end{matrix} \right] \tilde{y} \; .
+\end{split}
+\end{equation}
+
+Applying the inverse of a $2 \times 2$ matrix, this reformulates to:
+
+\begin{equation} \label{eq:slr-wls-slr-wls-s2}
+\begin{split}
+\hat{\beta} &= \frac{1}{\tilde{x}_0^\mathrm{T} \tilde{x}_0 \, \tilde{x}^\mathrm{T} \tilde{x} - \tilde{x}_0^\mathrm{T} \tilde{x} \, \tilde{x}^\mathrm{T} \tilde{x}_0} \left[ \begin{matrix} \tilde{x}^\mathrm{T} \tilde{x} & -\tilde{x}_0^\mathrm{T} \tilde{x} \\ -\tilde{x}^\mathrm{T} \tilde{x}_0 & \tilde{x}_0^\mathrm{T} \tilde{x}_0 \end{matrix} \right]^{-1} \left[ \begin{matrix} \tilde{x}_0^\mathrm{T} \\ \tilde{x}^\mathrm{T} \end{matrix} \right] \tilde{y} \\
+&= \frac{1}{\tilde{x}_0^\mathrm{T} \tilde{x}_0 \, \tilde{x}^\mathrm{T} \tilde{x} - \tilde{x}_0^\mathrm{T} \tilde{x} \, \tilde{x}^\mathrm{T} \tilde{x}_0} \left[ \begin{matrix} \tilde{x}^\mathrm{T} \tilde{x} \, \tilde{x}_0^\mathrm{T} - \tilde{x}_0^\mathrm{T} \tilde{x} \, \tilde{x}^\mathrm{T} \\ \tilde{x}_0^\mathrm{T} \tilde{x}_0 \, \tilde{x}^\mathrm{T} - \tilde{x}^\mathrm{T} \tilde{x}_0 \, \tilde{x}_0^\mathrm{T} \end{matrix} \right] \tilde{y} \\
+&= \frac{1}{\tilde{x}_0^\mathrm{T} \tilde{x}_0 \, \tilde{x}^\mathrm{T} \tilde{x} - \tilde{x}_0^\mathrm{T} \tilde{x} \, \tilde{x}^\mathrm{T} \tilde{x}_0} \left[ \begin{matrix} \tilde{x}^\mathrm{T} \tilde{x} \, \tilde{x}_0^\mathrm{T} \tilde{y} - \tilde{x}_0^\mathrm{T} \tilde{x} \, \tilde{x}^\mathrm{T} \tilde{y} \\ \tilde{x}_0^\mathrm{T} \tilde{x}_0 \, \tilde{x}^\mathrm{T} \tilde{y} - \tilde{x}^\mathrm{T} \tilde{x}_0 \, \tilde{x}_0^\mathrm{T} \tilde{y} \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+Applying $\tilde{x}_0 = W 1_n$, $\tilde{x} = W x$ and $W^\mathrm{T} W = W W = V^{-1}$, we finally have
+
+\begin{equation} \label{eq:slr-wls-slr-wls-s3}
+\begin{split}
+\hat{\beta} &= \frac{1}{1_n^\mathrm{T} W^\mathrm{T} W 1_n \, x^\mathrm{T} W^\mathrm{T} W x - 1_n^\mathrm{T} W^\mathrm{T} W x \, x^\mathrm{T} W^\mathrm{T} W 1_n} \left[ \begin{matrix} x^\mathrm{T} W^\mathrm{T} W x \, 1_n^\mathrm{T} W^\mathrm{T} W y - 1_n^\mathrm{T} W^\mathrm{T} W x \, x^\mathrm{T} W^\mathrm{T} W y \\ 1_n^\mathrm{T} W^\mathrm{T} W 1_n \, x^\mathrm{T} W^\mathrm{T} W y - x^\mathrm{T} W^\mathrm{T} W 1_n \, 1_n^\mathrm{T} W^\mathrm{T} W y \end{matrix} \right] \\
+&= \frac{1}{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} 1_n - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} 1_n} \left[ \begin{matrix} x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} y - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} y \\ 1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} y - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} y \end{matrix} \right] \\
+&= \left[ \begin{matrix} \frac{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} y - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} y}{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} 1_n - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} 1_n} \\ 
+\frac{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} y - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} y}{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} x - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} x} \end{matrix} \right]
+\end{split}
+\end{equation}
+
+which corresponds to the weighted least squares solution \eqref{eq:slr-wls-slr-wls}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P286 | shortcut: slr-wls | author: JoramSoch | date: 2021-11-16, 07:16.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Weighted least squares}]{Weighted least squares} \label{sec:slr-wls2}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a simple linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:slr}) with correlated observations
+
+\begin{equation} \label{eq:slr-wls2-slr}
+y = \beta_0 + \beta_1 x + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; ,
+\end{equation}
+
+the parameters minimizing the weighted residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) are given by
+
+\begin{equation} \label{eq:slr-wls2-slr-wls}
+\begin{split}
+\hat{\beta}_0 &= \frac{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} y - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} y}{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} 1_n - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} 1_n} \\
+\hat{\beta}_1 &= \frac{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} y - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} y}{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} x - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} x}
+\end{split}
+\end{equation}
+
+where $1_n$ is an $n \times 1$ vector of ones.
+
+
+\vspace{1em}
+\textbf{Proof:} Simple linear regression is a special case of multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-mlr}) with
+
+\begin{equation} \label{eq:slr-wls2-slr-mlr}
+X = \left[ \begin{matrix} 1_n & x \end{matrix} \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right]
+\end{equation}
+
+and weighted least sqaures estimates ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-wls}) are given by
+
+\begin{equation} \label{eq:slr-wls2-mlr-wls}
+\hat{\beta} = (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} y \; .
+\end{equation}
+
+Writing out equation \eqref{eq:slr-wls2-mlr-wls}, we have
+
+\begin{equation} \label{eq:slr-wls2-slr-wls-b}
+\begin{split}
+\hat{\beta} &= \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] V^{-1} \left[ \begin{matrix} 1_n & x \end{matrix} \right] \right)^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] V^{-1} y \\
+&= \left[ \begin{matrix} 1_n^\mathrm{T} V^{-1} 1_n & 1_n^\mathrm{T} V^{-1} x \\ x^\mathrm{T} V^{-1} 1_n & x^\mathrm{T} V^{-1} x \end{matrix} \right]^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} V^{-1} y \\ x^\mathrm{T} V^{-1} y \end{matrix} \right] \\
+&= \frac{1}{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} 1_n - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} 1_n} \left[ \begin{matrix} x^\mathrm{T} V^{-1} x & -1_n^\mathrm{T} V^{-1} x \\ -x^\mathrm{T} V^{-1} 1_n & 1_n^\mathrm{T} V^{-1} 1_n \end{matrix} \right] \left[ \begin{matrix} 1_n^\mathrm{T} V^{-1} y \\ x^\mathrm{T} V^{-1} y \end{matrix} \right] \\
+&= \frac{1}{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} 1_n - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} 1_n} \left[ \begin{matrix} x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} y - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} y \\ 1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} y - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} y \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+Thus, the first entry of $\hat{\beta}$ is equal to:
+
+\begin{equation} \label{eq:slr-wls2-slr-wls-b1}
+\hat{\beta}_0 = \frac{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} y - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} y}{x^\mathrm{T} V^{-1} x \, 1_n^\mathrm{T} V^{-1} 1_n - 1_n^\mathrm{T} V^{-1} x \, x^\mathrm{T} V^{-1} 1_n} \; .
+\end{equation}
+
+Moreover, the second entry of $\hat{\beta}$ is equal to ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-wls}):
+
+\begin{equation} \label{eq:slr-wls2-slr-wls-b2}
+\hat{\beta}_1 = \frac{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} y - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} y}{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} x - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} x} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P289 | shortcut: slr-wls2 | author: JoramSoch | date: 2021-11-16, 11:20.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:slr-mle}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a simple linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
+
+\begin{equation} \label{eq:slr-mle-slr}
+y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \; \varepsilon_i \sim \mathcal{N}(0, \sigma^2), \; i = 1,\ldots,n \; ,
+\end{equation}
+
+the maximum likelihood estimates ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}) of $\beta_0$, $\beta_1$ and $\sigma^2$ are given by
+
+\begin{equation} \label{eq:slr-mle-slr-mle}
+\begin{split}
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1 \bar{x} \\
+\hat{\beta}_1 &= \frac{s_{xy}}{s_x^2} \\
+\hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2
+\end{split}
+\end{equation}
+
+where $\bar{x}$ and $\bar{y}$ are the sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}), $s_x^2$ is the sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) of $x$ and $s_{xy}$ is the sample covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov-samp}) between $x$ and $y$.
+
+
+\vspace{1em}
+\textbf{Proof:} With the probability density function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf}) and probability under independence ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ind}), the linear regression equation \eqref{eq:slr-mle-slr} implies the following likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf})
+
+\begin{equation} \label{eq:slr-mle-slr-lf}
+\begin{split}
+p(y|\beta_0,\beta_1,\sigma^2) &= \prod_{i=1}^n p(y_i|\beta_0,\beta_1,\sigma^2) \\
+&= \prod_{i=1}^n \mathcal{N}(y_i; \beta_0 + \beta_1 x_i, \sigma^2) \\
+&= \prod_{i=1}^n \frac{1}{\sqrt{2 \pi \sigma}} \cdot \exp \left[ -\frac{(y_i - \beta_0 - \beta_1 x_i)^2}{2 \sigma^2} \right] \\
+&= \frac{1}{\sqrt{(2 \pi \sigma^2)^n}} \cdot \exp\left[ -\frac{1}{2 \sigma^2} \sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)^2 \right]
+\end{split}
+\end{equation}
+
+and the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf})
+
+\begin{equation} \label{eq:slr-mle-slr-ll}
+\begin{split}
+\mathrm{LL}(\beta_0,\beta_1,\sigma^2) &= \log p(y|\beta_0,\beta_1,\sigma^2) \\
+&= -\frac{n}{2} \log(2\pi) - \frac{n}{2} \log (\sigma^2) -\frac{1}{2 \sigma^2} \sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)^2 \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+The derivative of the log-likelihood function \eqref{eq:slr-mle-slr-ll} with respect to $\beta_0$ is
+
+\begin{equation} \label{eq:slr-mle-dLL-dbeta0}
+\frac{\mathrm{d}\mathrm{LL}(\beta_0,\beta_1,\sigma^2)}{\mathrm{d}\beta_0} = \frac{1}{\sigma^2} \sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)
+\end{equation}
+
+and setting this derivative to zero gives the MLE for $\beta_0$:
+
+\begin{equation} \label{eq:slr-mle-beta0-mle}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\beta}_0,\hat{\beta}_1,\hat{\sigma}^2)}{\mathrm{d}\beta_0} &= 0 \\
+0 &= \frac{1}{\hat{\sigma}^2} \sum_{i=1}^n (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i) \\
+0 &= \sum_{i=1}^n y_i - n \hat{\beta}_0 - \hat{\beta}_1 \sum_{i=1}^n x_i \\
+\hat{\beta}_0 &= \frac{1}{n} \sum_{i=1}^n y_i - \hat{\beta}_1 \frac{1}{n} \sum_{i=1}^n x_i \\
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1 \bar{x} \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+The derivative of the log-likelihood function \eqref{eq:slr-mle-slr-ll} at $\hat{\beta}_0$ with respect to $\beta_1$ is
+
+\begin{equation} \label{eq:slr-mle-dLL-dbeta1}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\beta}_0,\beta_1,\sigma^2)}{\mathrm{d}\beta_1} = \frac{1}{\sigma^2} \sum_{i=1}^n (x_i y_i - \hat{\beta}_0 x_i - \beta_1 x_i^2) \\
+\end{equation}
+
+and setting this derivative to zero gives the MLE for $\beta_1$:
+
+\begin{equation} \label{eq:slr-mle-beta1-mle}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\beta}_0,\hat{\beta}_1,\hat{\sigma}^2)}{\mathrm{d}\beta_1} &= 0 \\
+0 &= \frac{1}{\hat{\sigma}^2} \sum_{i=1}^n (x_i y_i - \hat{\beta}_0 x_i - \hat{\beta}_1 x_i^2) \\
+0 &= \sum_{i=1}^n x_i y_i - \hat{\beta}_0 \sum_{i=1}^n x_i - \hat{\beta}_1 \sum_{i=1}^n x_i^2) \\
+0 &\overset{\eqref{eq:slr-mle-beta0-mle}}{=} \sum_{i=1}^n x_i y_i - (\bar{y} - \hat{\beta}_1 \bar{x}) \sum_{i=1}^n x_i - \hat{\beta}_1 \sum_{i=1}^n x_i^2 \\
+0 &= \sum_{i=1}^n x_i y_i - \bar{y} \sum_{i=1}^n x_i + \hat{\beta}_1 \bar{x} \sum_{i=1}^n x_i - \hat{\beta}_1 \sum_{i=1}^n x_i^2 \\
+0 &= \sum_{i=1}^n x_i y_i - n \bar{x} \bar{y} + \hat{\beta}_1 n \bar{x}^2 - \hat{\beta}_1 \sum_{i=1}^n x_i^2 \\
+\hat{\beta}_1 &= \frac{\sum_{i=1}^n x_i y_i - \sum_{i=1}^n \bar{x} \bar{y}}{\sum_{i=1}^n x_i^2 - \sum_{i=1}^n \bar{x}^2} \\
+\hat{\beta}_1 &= \frac{\sum_{i=1}^n (x_i - \bar{x}) (y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} \\
+\hat{\beta}_1 &= \frac{s_{xy}}{s_x^2} \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+The derivative of the log-likelihood function \eqref{eq:slr-mle-slr-ll} at $(\hat{\beta}_0,\hat{\beta}_1)$ with respect to $\sigma^2$ is
+
+\begin{equation} \label{eq:slr-mle-dLL-ds2}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\beta}_0,\hat{\beta}_1,\sigma^2)}{\mathrm{d}\sigma^2} = - \frac{n}{2\sigma^2} + \frac{1}{2(\sigma^2)^2} \sum_{i=1}^n (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2
+\end{equation}
+
+and setting this derivative to zero gives the MLE for $\sigma^2$:
+
+\begin{equation} \label{eq:slr-mle-s2-mle}
+\begin{split}
+\frac{\mathrm{d}\mathrm{LL}(\hat{\beta}_0,\hat{\beta}_1,\hat{\sigma}^2)}{\mathrm{d}\sigma^2} &= 0 \\
+0 &= - \frac{n}{2\hat{\sigma}^2} + \frac{1}{2(\hat{\sigma}^2)^2} \sum_{i=1}^n (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2 \\
+\frac{n}{2\hat{\sigma}^2} &= \frac{1}{2(\hat{\sigma}^2)^2} \sum_{i=1}^n (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2 \\
+\hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^n (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2 \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+Together, \eqref{eq:slr-mle-beta0-mle}, \eqref{eq:slr-mle-beta1-mle} and \eqref{eq:slr-mle-s2-mle} constitute the MLE for simple linear regression.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P287 | shortcut: slr-mle | author: JoramSoch | date: 2021-11-16, 08:34.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:slr-mle2}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Given a simple linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) with independent observations
+
+\begin{equation} \label{eq:slr-mle2-slr}
+y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \; \varepsilon_i \sim \mathcal{N}(0, \sigma^2), \; i = 1,\ldots,n \; ,
+\end{equation}
+
+the maximum likelihood estimates ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}) of $\beta_0$, $\beta_1$ and $\sigma^2$ are given by
+
+\begin{equation} \label{eq:slr-mle2-slr-mle}
+\begin{split}
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1 \bar{x} \\
+\hat{\beta}_1 &= \frac{s_{xy}}{s_x^2} \\
+\hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2
+\end{split}
+\end{equation}
+
+where $\bar{x}$ and $\bar{y}$ are the sample means ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean-samp}), $s_x^2$ is the sample variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var-samp}) of $x$ and $s_{xy}$ is the sample covariance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cov-samp}) between $x$ and $y$.
+
+
+\vspace{1em}
+\textbf{Proof:} Simple linear regression is a special case of multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-mlr}) with
+
+\begin{equation} \label{eq:slr-mle2-slr-mlr}
+X = \left[ \begin{matrix} 1_n & x \end{matrix} \right] \quad \text{and} \quad \beta = \left[ \begin{matrix} \beta_0 \\ \beta_1 \end{matrix} \right]
+\end{equation}
+
+and weighted least sqaures estimates ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle}) are given by
+
+\begin{equation} \label{eq:slr-mle2-mlr-mle}
+\begin{split}
+\hat{\beta} &= (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} y \\
+\hat{\sigma}^2 &= \frac{1}{n} (y-X\hat{\beta})^\mathrm{T} V^{-1} (y-X\hat{\beta}) \; .
+\end{split}
+\end{equation}
+
+Under independent observations, the covariance matrix is
+
+\begin{equation} \label{eq:slr-mle2-mlr-ind}
+V = I_n, \quad \text{such that} \quad V^{-1} = I_n \; .
+\end{equation}
+
+Thus, we can write out the estimate of $\beta$
+
+\begin{equation} \label{eq:slr-mle2-slr-mle-b}
+\begin{split}
+\hat{\beta} &= \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] V^{-1} \left[ \begin{matrix} 1_n & x \end{matrix} \right] \right)^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] V^{-1} y \\
+&= \left( \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] \left[ \begin{matrix} 1_n & x \end{matrix} \right] \right)^{-1} \left[ \begin{matrix} 1_n^\mathrm{T} \\ x^\mathrm{T} \end{matrix} \right] y
+\end{split}
+\end{equation}
+
+which is equal to the ordinary least squares solution for simple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:slr-ols2}):
+
+\begin{equation} \label{eq:slr-mle2-slr-mle-b-qed}
+\begin{split}
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1 \bar{x} \\
+\hat{\beta}_1 &= \frac{s_{xy}}{s_x^2} \; .
+\end{split}
+\end{equation}
+
+Additionally, we can write out the estimate of $\sigma^2$:
+
+\begin{equation} \label{eq:slr-mle2-slr-mle-s2}
+\begin{split}
+\hat{\sigma}^2 &= \frac{1}{n} (y-X\hat{\beta})^\mathrm{T} V^{-1} (y-X\hat{\beta}) \\
+&= \frac{1}{n} \left( y - \left[ \begin{matrix} 1_n & x \end{matrix} \right] \left[ \begin{matrix} \hat{\beta}_0 \\ \hat{\beta}_1 \end{matrix} \right] \right)^\mathrm{T} \left( y - \left[ \begin{matrix} 1_n & x \end{matrix} \right] \left[ \begin{matrix} \hat{\beta}_0 \\ \hat{\beta}_1 \end{matrix} \right] \right) \\
+&= \frac{1}{n} \left( y - \hat{\beta}_0 - \hat{\beta}_1 x \right)^\mathrm{T} \left( y - \hat{\beta}_0 - \hat{\beta}_1 x \right) \\
+&= \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2 \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P290 | shortcut: slr-mle2 | author: JoramSoch | date: 2021-11-16, 11:53.
 \vspace{1em}
 
 
@@ -20087,6 +21354,7 @@ which corresponds to the weighted least squares solution \eqref{eq:mlr-wls-WLS}.
 \textbf{Sources:}
 \begin{itemize}
 \item Stephan, Klaas Enno (2010): "The General Linear Model (GLM)"; in: \textit{Methods and models for fMRI data analysis in neuroeconomics}, Lecture 3, Slides 20/23; URL: \url{http://www.socialbehavior.uzh.ch/teaching/methodsspring10.html}.
+\item Wikipedia (2021): "Weighted least squares"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2021-11-17; URL: \url{https://en.wikipedia.org/wiki/Weighted_least_squares#Motivation}.
 \end{itemize}
 
 
@@ -20199,7 +21467,7 @@ the maximum likelihood estimates ($\rightarrow$ Definition \ref{sec:General Theo
 \begin{equation} \label{eq:mlr-mle-MLE-MLE}
 \begin{split}
 \hat{\beta} &= (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} y \\
-\hat{\sigma}^2 &= \frac{1}{n} (y-X\hat{\beta})^\mathrm{T} (y-X\hat{\beta}) \; .
+\hat{\sigma}^2 &= \frac{1}{n} (y-X\hat{\beta})^\mathrm{T} V^{-1} (y-X\hat{\beta}) \; .
 \end{split}
 \end{equation}
 
@@ -26266,6 +27534,21 @@ P282 & slr-olsdist & Distribution of parameter estimates for simple linear regre
 P283 & slr-proj & Projection of a data point to the regression line & JoramSoch & 2021-11-09 & \pageref{sec:slr-proj} \\ \hline
 P284 & slr-sss & Sums of squares for simple linear regression & JoramSoch & 2021-11-09 & \pageref{sec:slr-sss} \\ \hline
 P285 & slr-mat & Transformation matrices for simple linear regression & JoramSoch & 2021-11-09 & \pageref{sec:slr-mat} \\ \hline
+P286 & slr-wls & Weighted least squares for simple linear regression & JoramSoch & 2021-11-16 & \pageref{sec:slr-wls} \\ \hline
+P287 & slr-mle & Maximum likelihood estimation for simple linear regression & JoramSoch & 2021-11-16 & \pageref{sec:slr-mle} \\ \hline
+P288 & slr-ols2 & Ordinary least squares for simple linear regression & JoramSoch & 2021-11-16 & \pageref{sec:slr-ols2} \\ \hline
+P289 & slr-wls2 & Weighted least squares for simple linear regression & JoramSoch & 2021-11-16 & \pageref{sec:slr-wls2} \\ \hline
+P290 & slr-mle2 & Maximum likelihood estimation for simple linear regression & JoramSoch & 2021-11-16 & \pageref{sec:slr-mle2} \\ \hline
+P291 & mean-tot & Law of total expectation & JoramSoch & 2021-11-26 & \pageref{sec:mean-tot} \\ \hline
+P292 & var-tot & Law of total variance & JoramSoch & 2021-11-26 & \pageref{sec:var-tot} \\ \hline
+P293 & cov-tot & Law of total covariance & JoramSoch & 2021-11-26 & \pageref{sec:cov-tot} \\ \hline
+P294 & dir-kl & Kullback-Leibler divergence for the Dirichlet distribution & JoramSoch & 2021-12-02 & \pageref{sec:dir-kl} \\ \hline
+P295 & wish-kl & Kullback-Leibler divergence for the Wishart distribution & JoramSoch & 2021-12-02 & \pageref{sec:wish-kl} \\ \hline
+P296 & matn-kl & Kullback-Leibler divergence for the matrix-normal distribution & JoramSoch & 2021-12-02 & \pageref{sec:matn-kl} \\ \hline
+P297 & matn-samp & Sampling from the matrix-normal distribution & JoramSoch & 2021-12-07 & \pageref{sec:matn-samp} \\ \hline
+P298 & mean-tr & Expected value of the trace of a matrix & JoramSoch & 2021-12-07 & \pageref{sec:mean-tr} \\ \hline
+P299 & corr-z & Correlation coefficient in terms of standard scores & JoramSoch & 2021-12-14 & \pageref{sec:corr-z} \\ \hline
+P300 & corr-range & Correlation always falls between -1 and +1 & JoramSoch & 2021-12-14 & \pageref{sec:corr-range} \\ \hline
 \end{longtable}
 
 
@@ -26442,6 +27725,11 @@ D161 & iglm & Inverse general linear model & JoramSoch & 2021-10-21 & \pageref{s
 D162 & cfm & Corresponding forward model & JoramSoch & 2021-10-21 & \pageref{sec:cfm} \\ \hline
 D163 & slr & Simple linear regression & JoramSoch & 2021-10-27 & \pageref{sec:slr} \\ \hline
 D164 & regline & Regression line & JoramSoch & 2021-10-27 & \pageref{sec:regline} \\ \hline
+D165 & samp-spc & Sample space & JoramSoch & 2021-11-26 & \pageref{sec:samp-spc} \\ \hline
+D166 & eve-spc & Event space & JoramSoch & 2021-11-26 & \pageref{sec:eve-spc} \\ \hline
+D167 & prob-spc & Probability space & JoramSoch & 2021-11-26 & \pageref{sec:prob-spc} \\ \hline
+D168 & corr-samp & Sample correlation coefficient & JoramSoch & 2021-12-14 & \pageref{sec:corr-samp} \\ \hline
+D169 & corrmat-samp & Sample correlation matrix & JoramSoch & 2021-12-14 & \pageref{sec:corrmat-samp} \\ \hline
 \end{longtable}
 
 
@@ -26514,6 +27802,10 @@ $\bullet$ Construction of unbiased estimator for variance, \pageref{sec:resvar-u
 $\bullet$ Convexity of the cross-entropy, \pageref{sec:entcross-conv}
 
 $\bullet$ Convexity of the Kullback-Leibler divergence, \pageref{sec:kl-conv}
+
+$\bullet$ Correlation always falls between -1 and +1, \pageref{sec:corr-range}
+
+$\bullet$ Correlation coefficient in terms of standard scores, \pageref{sec:corr-z}
 
 $\bullet$ Covariance of independent random variables, \pageref{sec:cov-ind}
 
@@ -26605,6 +27897,8 @@ $\bullet$ Expectation of the log Bayes factor for the univariate Gaussian with k
 
 $\bullet$ Expected value of a non-negative random variable, \pageref{sec:mean-nnrvar}
 
+$\bullet$ Expected value of the trace of a matrix, \pageref{sec:mean-tr}
+
 $\bullet$ Expected value of x times ln(x) for a gamma distribution, \pageref{sec:gam-xlogx}
 
 $\bullet$ Exponential distribution is a special case of gamma distribution, \pageref{sec:exp-gam}
@@ -26655,7 +27949,11 @@ $\bullet$ Joint likelihood is the product of likelihood function and prior densi
 \vspace{1em}
 \textbf{K}
 
+$\bullet$ Kullback-Leibler divergence for the Dirichlet distribution, \pageref{sec:dir-kl}
+
 $\bullet$ Kullback-Leibler divergence for the gamma distribution, \pageref{sec:gam-kl}
+
+$\bullet$ Kullback-Leibler divergence for the matrix-normal distribution, \pageref{sec:matn-kl}
 
 $\bullet$ Kullback-Leibler divergence for the multivariate normal distribution, \pageref{sec:mvn-kl}
 
@@ -26663,13 +27961,21 @@ $\bullet$ Kullback-Leibler divergence for the normal distribution, \pageref{sec:
 
 $\bullet$ Kullback-Leibler divergence for the normal-gamma distribution, \pageref{sec:ng-kl}
 
+$\bullet$ Kullback-Leibler divergence for the Wishart distribution, \pageref{sec:wish-kl}
+
 
 \vspace{1em}
 \textbf{L}
 
 $\bullet$ Law of the unconscious statistician, \pageref{sec:mean-lotus}
 
+$\bullet$ Law of total covariance, \pageref{sec:cov-tot}
+
+$\bullet$ Law of total expectation, \pageref{sec:mean-tot}
+
 $\bullet$ Law of total probability, \pageref{sec:prob-tot}
+
+$\bullet$ Law of total variance, \pageref{sec:var-tot}
 
 $\bullet$ Linear combination of independent normal random variables, \pageref{sec:norm-lincomb}
 
@@ -26724,6 +28030,10 @@ $\bullet$ Maximum likelihood estimation for Dirichlet-distributed data, \pageref
 $\bullet$ Maximum likelihood estimation for multiple linear regression, \pageref{sec:mlr-mle}
 
 $\bullet$ Maximum likelihood estimation for Poisson-distributed data, \pageref{sec:poiss-mle}
+
+$\bullet$ Maximum likelihood estimation for simple linear regression, \pageref{sec:slr-mle}
+
+$\bullet$ Maximum likelihood estimation for simple linear regression, \pageref{sec:slr-mle2}
 
 $\bullet$ Maximum likelihood estimation for the general linear model, \pageref{sec:glm-mle}
 
@@ -26828,6 +28138,8 @@ $\bullet$ Ordinary least squares for multiple linear regression, \pageref{sec:ml
 $\bullet$ Ordinary least squares for multiple linear regression, \pageref{sec:mlr-ols2}
 
 $\bullet$ Ordinary least squares for simple linear regression, \pageref{sec:slr-ols}
+
+$\bullet$ Ordinary least squares for simple linear regression, \pageref{sec:slr-ols2}
 
 $\bullet$ Ordinary least squares for the general linear model, \pageref{sec:glm-ols}
 
@@ -27035,6 +28347,8 @@ $\bullet$ Relationship between signal-to-noise ratio and R², \pageref{sec:snr-r
 \vspace{1em}
 \textbf{S}
 
+$\bullet$ Sampling from the matrix-normal distribution, \pageref{sec:matn-samp}
+
 $\bullet$ Savage-Dickey Density Ratio for computing Bayes Factors, \pageref{sec:bf-sddr}
 
 $\bullet$ Scaling of the variance upon multiplication with a constant, \pageref{sec:var-scal}
@@ -27096,6 +28410,10 @@ $\bullet$ Variance of the Wald distribution, \pageref{sec:wald-var}
 $\bullet$ Weighted least squares for multiple linear regression, \pageref{sec:mlr-wls}
 
 $\bullet$ Weighted least squares for multiple linear regression, \pageref{sec:mlr-wls2}
+
+$\bullet$ Weighted least squares for simple linear regression, \pageref{sec:slr-wls}
+
+$\bullet$ Weighted least squares for simple linear regression, \pageref{sec:slr-wls2}
 
 $\bullet$ Weighted least squares for the general linear model, \pageref{sec:glm-wls}
 
@@ -27212,6 +28530,8 @@ $\bullet$ Empirical Bayesian log model evidence, \pageref{sec:eblme}
 $\bullet$ Encompassing model, \pageref{sec:encm}
 
 $\bullet$ Estimation matrix, \pageref{sec:emat}
+
+$\bullet$ Event space, \pageref{sec:eve-spc}
 
 $\bullet$ Exceedance probability, \pageref{sec:prob-exc}
 
@@ -27401,6 +28721,8 @@ $\bullet$ Probability distribution, \pageref{sec:dist}
 
 $\bullet$ Probability mass function, \pageref{sec:pmf}
 
+$\bullet$ Probability space, \pageref{sec:prob-spc}
+
 $\bullet$ Probability-generating function, \pageref{sec:pgf}
 
 $\bullet$ Projection matrix, \pageref{sec:pmat}
@@ -27441,11 +28763,17 @@ $\bullet$ Residual-forming matrix, \pageref{sec:rfmat}
 \vspace{1em}
 \textbf{S}
 
+$\bullet$ Sample correlation coefficient, \pageref{sec:corr-samp}
+
+$\bullet$ Sample correlation matrix, \pageref{sec:corrmat-samp}
+
 $\bullet$ Sample covariance, \pageref{sec:cov-samp}
 
 $\bullet$ Sample covariance matrix, \pageref{sec:covmat-samp}
 
 $\bullet$ Sample mean, \pageref{sec:mean-samp}
+
+$\bullet$ Sample space, \pageref{sec:samp-spc}
 
 $\bullet$ Sample variance, \pageref{sec:var-samp}
 
