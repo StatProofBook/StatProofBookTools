@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2022-01-05, 11:55}
+\date{2022-03-28, 03:52}
 
 \begin{document}
 
@@ -755,7 +755,7 @@ P\left(\bigcup_{i=1}^\infty E_i \right) = \sum_{i=1}^\infty P(E_i) \; .
 \subsubsection[\textbf{Monotonicity of probability}]{Monotonicity of probability} \label{sec:prob-mon}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) is monotonic, i.e. if $A$ is a subset of or equal to  $B$, then the probability of $A$ is smaller than or equal to $B$:
+\textbf{Theorem:} Probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) is monotonic, i.e. if $A$ is a subset of or equal to $B$, then the probability of $A$ is smaller than or equal to $B$:
 
 \begin{equation} \label{eq:prob-mon-prob-mon}
 A \subseteq B \quad \Rightarrow \quad P(A) \leq P(B) \; .
@@ -802,13 +802,13 @@ P(\emptyset) = 0 \; .
 
 
 \vspace{1em}
-\textbf{Proof:} Assume that the probability of the empty set is not zero, i.e. $P(\emptyset) > 0$. Then, in an equation derived when proving that probability is monotonic ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:prob-mon}),
+\textbf{Proof:} Let $A$ and $B$ be two events fulfilling $A \subseteq B$. Set $E_1 = A$, $E_2 = B \setminus A$ and $E_i = \emptyset$ for $i \geq 3$. Then, the sets $E_i$ are pairwise disjoint and $E_1 \cup E_2 \cup \ldots = B$. Thus, from the third axiom of probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-ax}), we have:
 
 \begin{equation} \label{eq:prob-emp-pB}
-P(B) = P(A) + P(B \setminus A) + \sum_{i=3}^\infty P(E_i) \quad \text{where} \quad E_i = \emptyset \quad \text{for} \quad i \geq 3 \; ,
+P(B) = P(A) + P(B \setminus A) + \sum_{i=3}^\infty P(E_i) \; .
 \end{equation}
 
-the right-hand side would be infinite. However, by the first axiom of probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-ax}), the left-hand side must be finite. This is a contradiction. Therefore, $P(\emptyset) = 0$.
+Assume that the probability of the empty set is not zero, i.e. $P(\emptyset) > 0$. Then, the right-hand side of \eqref{eq:prob-emp-pB} would be infinite. However, by the first axiom of probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-ax}), the left-hand side must be finite. This is a contradiction. Therefore, $P(\emptyset) = 0$.
 
 
 \vspace{1em}
@@ -1019,7 +1019,7 @@ P(A) = \sum_i P(A \cap B_i) \; .
 \subsubsection[\textbf{Probability of exhaustive events}]{Probability of exhaustive events} \label{sec:prob-exh}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $B_1, \ldots, B_n$ be mutually exclusive and collectively exhaustive subsets of a sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}) $\Omega$. Then, their total probability ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:prob-tot}) is one:
+\textbf{Theorem:} Let $B_1, \ldots, B_n$ be mutually exclusive ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:exc}) and collectively exhaustive subsets of a sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}) $\Omega$. Then, their total probability ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:prob-tot}) is one:
 
 \begin{equation} \label{eq:prob-exh-prob-exh}
 \sum_i P(B_i) = 1 \; .
@@ -1062,6 +1062,77 @@ and the second axiom of probability ($\rightarrow$ Definition \ref{sec:General T
 
 \vspace{1em}
 \textbf{Metadata:} ID: P249 | shortcut: prob-exh | author: JoramSoch | date: 2021-08-08, 04:10.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Probability of exhaustive events}]{Probability of exhaustive events} \label{sec:prob-exh2}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $B_1, \ldots, B_n$ be mutually exclusive ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:exc}) and collectively exhaustive subsets of a sample space ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:samp-spc}) $\Omega$. Then, their total probability ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:prob-tot}) is one:
+
+\begin{equation} \label{eq:prob-exh2-prob-exh}
+\sum_i P(B_i) = 1 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The addition law of probability ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:prob-add}) states that for two events ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:reve}) $A$ and $B$, the probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob}) of at least one of them occuring is:
+
+\begin{equation} \label{eq:prob-exh2-prob-add}
+P(A \cup B) = P(A) + P(B) - P(A \cap B) \; .
+\end{equation}
+
+Recursively applying this law to the events $B_1, \ldots, B_n$, we have:
+
+\begin{equation} \label{eq:prob-exh2-prob-all-s1}
+\begin{split}
+P(B_1 \cup \ldots \cup B_n) &= P(B_1) + P(B_2 \cup \ldots \cup B_n) - P(B_1 \cap [B_2 \cup \ldots \cup B_n]) \\
+&= P(B_1) + P(B_2) + P(B_3 \cup \ldots \cup B_n) - P(B_2 \cap [B_3 \cup \ldots \cup B_n])- P(B_1 \cap [B_2 \cup \ldots \cup B_n]) \\
+&\;\; \vdots \\
+&= P(B_1) + \ldots + P(B_n) - P(B_1 \cap [B_2 \cup \ldots \cup B_n]) - \ldots - P(B_{n-1} \cap B_n) \\
+P(\cup_i^n \, B_i) &= \sum_i^n P(B_i) - \sum_i^{n-1} P(B_i \cap [\cup_{j=i+1}^n B_j]) \\
+&= \sum_i^n P(B_i) - \sum_i^{n-1} P(\cup_{j=i+1}^n [B_i \cap B_j]) \; .
+\end{split}
+\end{equation}
+
+Because all $B_i$ are mutually exclusive, we have:
+
+\begin{equation} \label{eq:prob-exh2-B-exclusive}
+B_i \cap B_j = \emptyset \quad \text{for all} \quad i \neq j \; .
+\end{equation}
+
+Since the probability of the empty set is zero ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:prob-emp}), this means that the second sum on the righ-hand side of \eqref{eq:prob-exh2-prob-all-s1} disappears:
+
+\begin{equation} \label{eq:prob-exh2-prob-all-s2}
+P(\cup_i^n \, B_i) = \sum_i^n P(B_i) \; .
+\end{equation}
+
+Because the $B_i$ are collectively exhaustive, we have:
+
+\begin{equation} \label{eq:prob-exh2-B-exhaustive}
+\cup_i \, B_i = \Omega \; .
+\end{equation}
+
+Since the probability of the sample space is one ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-ax}), this means that the left-hand side of \eqref{eq:prob-exh2-prob-all-s2} becomes equal to one:
+
+\begin{equation} \label{eq:prob-exh2-prob-all-s3}
+1 = \sum_i^n P(B_i) \; .
+\end{equation}
+
+This proofs the statement in \eqref{eq:prob-exh2-prob-exh}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Alan Stuart \& J. Keith Ord (1994): "Probability and Statistical Inference"; in: \textit{Kendall's Advanced Theory of Statistics, Vol. 1: Distribution Theory}, pp. 288-289; URL: \url{https://www.wiley.com/en-us/Kendall%27s+Advanced+Theory+of+Statistics%2C+3+Volumes%2C+Set%2C+6th+Edition-p-9780470669549}.
+\item Wikipedia (2022): "Probability axioms"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-03-27; URL: \url{https://en.wikipedia.org/wiki/Probability_axioms#Consequences}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P319 | shortcut: prob-exh2 | author: JoramSoch | date: 2022-03-27, 23:14.
 \vspace{1em}
 
 
@@ -7343,10 +7414,35 @@ we can finally show:
 
 \subsection{Point estimates}
 
+\subsubsection[\textit{Mean squared error}]{Mean squared error} \label{sec:mse}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $\hat{\theta}$ be an estimator ($\rightarrow$ Definition "est") of an unknown parameter ($\rightarrow$ Definition "para") $\hat{\theta}$ based on measured data ($\rightarrow$ Definition "data") $y$. Then, the mean squared error is defined as the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared difference between the estimated value and the true value of the parameter:
+
+\begin{equation} \label{eq:mse-mse}
+\mathrm{MSE} = \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \; .
+\end{equation}
+
+where $\mathrm{E}_{\hat{\theta}}\left[ \cdot \right]$ is expectation calculated over all possible samples ($\rightarrow$ Definition "samp") $y$ leading to values of $\hat{\theta}$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2022): "Estimator"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-03-27; URL: \url{https://en.wikipedia.org/wiki/Estimator#Mean_squared_error}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D173 | shortcut: mse | author: JoramSoch | date: 2022-03-27, 23:41.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Partition of the mean squared error into bias and variance}]{Partition of the mean squared error into bias and variance} \label{sec:mse-bnv}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} The mean squared error ($\rightarrow$ Definition "mse") can be partitioned into variance and squared bias
+\textbf{Theorem:} The mean squared error ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mse}) can be partitioned into variance and squared bias
 
 \begin{equation} \label{eq:mse-bnv-MSE}
 \mathrm{MSE}(\hat{\theta}) = \mathrm{Var}(\hat{\theta}) + \mathrm{Bias}(\hat{\theta},\theta)^2
@@ -7355,41 +7451,41 @@ we can finally show:
 where the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) is given by
 
 \begin{equation} \label{eq:mse-bnv-Var}
-\mathrm{Var}(\hat{\theta}) = \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right]
+\mathrm{Var}(\hat{\theta}) = \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right]
 \end{equation}
 
 and the bias ($\rightarrow$ Definition "bias") is given by
 
 \begin{equation} \label{eq:mse-bnv-Bias}
-\mathrm{Bias}(\hat{\theta},\theta) = \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \; .
+\mathrm{Bias}(\hat{\theta},\theta) = \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \; .
 \end{equation}
 
 
 \vspace{1em}
-\textbf{Proof:} The mean squared error (MSE) is defined as ($\rightarrow$ Definition "mse") the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared deviation of the estimated value $\hat{\theta}$ from the true value $\theta$ of a parameter, over all values $\hat{\theta}$:
+\textbf{Proof:} The mean squared error ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mse}) (MSE) is defined as the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of the squared deviation of the estimated value $\hat{\theta}$ from the true value $\theta$ of a parameter, over all values $\hat{\theta}$:
 
 \begin{equation} \label{eq:mse-bnv-MSE-def}
-\mathrm{MSE}(\hat{\theta}) = \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \; .
+\mathrm{MSE}(\hat{\theta}) = \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \; .
 \end{equation}
 
 This formula can be evaluated in the following way:
 
 \begin{equation} \label{eq:mse-bnv-MSE-ref1}
 \begin{split}
-\mathrm{MSE}(\hat{\theta}) &= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) + \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 + 2 \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right) \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + \mathbb{E}_{\hat{\theta}}\left[ 2 \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right) \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \right] + \mathbb{E}_{\hat{\theta}}\left[ \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \; . \\
+\mathrm{MSE}(\hat{\theta}) &= \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \\
+&= \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) + \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \\
+&= \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 + 2 \left( \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right) \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) + \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \\
+&= \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + \mathrm{E}_{\hat{\theta}}\left[ 2 \left( \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right) \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \right] + \mathrm{E}_{\hat{\theta}}\left[ \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \right] \; . \\
 \end{split}
 \end{equation}
 
-Because $\mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta$ is constant as a function of $\hat{\theta}$, we have:
+Because $\mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta$ is constant as a function of $\hat{\theta}$, we have:
 
 \begin{equation} \label{eq:mse-bnv-MSE-ref2}
 \begin{split}
-\mathrm{MSE}(\hat{\theta}) &= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + 2  \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \mathbb{E}_{\hat{\theta}}\left[ \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right] + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + 2  \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right) + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \\
-&= \mathbb{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathbb{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + \left( \mathbb{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \; . \\
+\mathrm{MSE}(\hat{\theta}) &= \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + 2  \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \mathrm{E}_{\hat{\theta}}\left[ \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right] + \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \\
+&= \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + 2  \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right) \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right) + \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \\
+&= \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \mathrm{E}_{\hat{\theta}}(\hat{\theta}) \right)^2 \right] + \left( \mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta \right)^2 \; . \\
 \end{split}
 \end{equation}
 
@@ -7411,6 +7507,31 @@ This proofs the partition given by \eqref{eq:mse-bnv-MSE}.
 
 \subsection{Interval estimates}
 
+\subsubsection[\textit{Confidence interval}]{Confidence interval} \label{sec:ci}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $y$ be a random sample ($\rightarrow$ Definition "samp") from a probability distributions ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) governed by a parameter ($\rightarrow$ Definition "para") of interest $\theta$ and quantities not of interest $\varphi$. A confidence interval for $\theta$ is defined as an interval $[u(y), v(y)]$ determined by the random variables ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) $u(y)$ and $v(y)$ with the property
+
+\begin{equation} \label{eq:ci-ci}
+\mathrm{Pr}(u(y) < \theta < v(y) \, \vert \, \theta, \varphi) = \gamma \quad \text{for all} \quad (\theta, \varphi) \; .
+\end{equation}
+
+where $\gamma = 1 - \alpha$ is called the confidence level.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2022): "Confidence interval"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-03-27; URL: \url{https://en.wikipedia.org/wiki/Confidence_interval#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D174 | shortcut: ci | author: JoramSoch | date: 2022-03-27, 23:56.
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Construction of confidence intervals using Wilks' theorem}]{Construction of confidence intervals using Wilks' theorem} \label{sec:ci-wilks}
 \setcounter{equation}{0}
 
@@ -7426,7 +7547,7 @@ Further, let $\hat{\theta}$ be an estimate of $\theta$, obtained using maximum-l
 \hat{\theta} = \operatorname*{arg\,max}_{\theta} \log p(y|\theta), \quad \hat{\theta} = \left\lbrace \hat{\phi}, \hat{\lambda} \right\rbrace \; .
 \end{equation}
 
-Then, an asymptotic confidence interval ($\rightarrow$ Definition "ci") for $\theta$ is given by
+Then, an asymptotic confidence interval ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ci}) for $\theta$ is given by
 
 \begin{equation} \label{eq:ci-wilks-ci-wilks}
 \mathrm{CI}_{1-\alpha}(\hat{\phi}) = \left\lbrace \phi \, \vert \, \log p(y|\phi,\hat{\lambda}) \geq \log p(y|\hat{\phi},\hat{\lambda}) - \frac{1}{2} \chi^2_{1,1-\alpha} \right\rbrace
@@ -7436,7 +7557,7 @@ where $1-\alpha$ is the confidence level and $\chi^2_{1,1-\alpha}$ is the $(1-\a
 
 
 \vspace{1em}
-\textbf{Proof:} The confidence interval ($\rightarrow$ Definition "ci") is defined as the interval that, under infinitely repeated random experiments ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rexp}), contains the true parameter value with a certain probability.
+\textbf{Proof:} The confidence interval ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ci}) is defined as the interval that, under infinitely repeated random experiments ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rexp}), contains the true parameter value with a certain probability.
 
 Let us define the likelihood ratio ($\rightarrow$ Definition "lr")
 
@@ -7565,6 +7686,44 @@ The process of calculating $\hat{\theta}$ is called "maximum likelihood estimati
 
 \vspace{1em}
 \textbf{Metadata:} ID: D60 | shortcut: mle | author: JoramSoch | date: 2020-05-15, 23:05.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{MLE can be biased}]{MLE can be biased} \label{sec:mle-bias}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Maximum likelihood estimation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}) can result in biased estimates ($\rightarrow$ Definition "est-unb") of model parameters, i.e. estimates whose long-term expected value is unequal to the quantities they estimate:
+
+\begin{equation} \label{eq:mle-bias-aicc-aic}
+\mathrm{E}\left[ \hat{\theta}_\mathrm{MLE} \right] = \mathrm{E}\left[ \operatorname*{arg\,max}_\theta \mathrm{LL}_m(\theta) \right] \neq \theta \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Consider a set of independent and identical ($\rightarrow$ Definition "iid") normally distributed ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) observations $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ with unknown mean ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) $\mu$ and variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) $\sigma^2$:
+
+\begin{equation} \label{eq:mle-bias-ug}
+x_i \overset{\text{i.i.d.}}{\sim} \mathcal{N}(\mu, \sigma^2), \quad i = 1,\ldots,n \; .
+\end{equation}
+
+Then, we know that the maximum likelihood estimator ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle}) for the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) $\sigma^2$ is underestimating the true variance of the data distribution ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:resvar-bias}):
+
+\begin{equation} \label{eq:mle-bias-resvar-bias}
+\mathrm{E}\left[ \hat{\sigma}^2_\mathrm{MLE} \right] = \frac{n-1}{n} \sigma^2 \neq \sigma^2 \; .
+\end{equation}
+
+This proofs the existence of cases such as those stated by the theorem.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P317 | shortcut: mle-bias | author: JoramSoch | date: 2022-03-18, 17:26.
 \vspace{1em}
 
 
@@ -8048,11 +8207,11 @@ Then, the p-value is the probability of obtaining a test statistic more extreme 
 
 \begin{itemize}
 
-\item $p = F_T^{-1}(t_\mathrm{obs})$, if $H_1$ is a left-sided one-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail});
+\item $p = F_T(t_\mathrm{obs})$, if $H_1$ is a left-sided one-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail});
 
-\item $p = 1 - F_T^{-1}(t_\mathrm{obs})$, if $H_1$ is a right-sided one-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail});
+\item $p = 1 - F_T(t_\mathrm{obs})$, if $H_1$ is a right-sided one-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail});
 
-\item $p = 2 \cdot \min \left( \left[ F_T^{-1}(t_\mathrm{obs}), \, 1 - F_T^{-1}(t_\mathrm{obs}) \right] \right)$, if $H_1$ is a two-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail}).
+\item $p = 2 \cdot \min \left( \left[ F_T(t_\mathrm{obs}), \, 1 - F_T(t_\mathrm{obs}) \right] \right)$, if $H_1$ is a two-tailed hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail}).
 
 \end{itemize}
 
@@ -8070,6 +8229,60 @@ Then, the p-value is the probability of obtaining a test statistic more extreme 
 
 
 
+\subsubsection[\textbf{Distribution of p-value under null hypothesis}]{Distribution of p-value under null hypothesis} \label{sec:pval-h0}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}), the p-value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pval}) in a statistical test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:test}) follows a continuous uniform distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:cuni}):
+
+\begin{equation} \label{eq:pval-h0-pval-h0}
+p \sim \mathcal{U}(0,1) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Without loss of generality, consider a left-sided one-tailed hypothesis test ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:hyp-tail}). Then, the p-value is a function of the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pval})
+
+\begin{equation} \label{eq:pval-h0-pval}
+\begin{split}
+P &= F_T(T) \\
+p &= F_T(t_\mathrm{obs})
+\end{split}
+\end{equation}
+
+where $t_\mathrm{obs}$ is the observed test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) and $F_T(t)$ is the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the test statistic ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:tstat}) under the null hypothesis ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:h0}).
+
+Then, we can obtain the cumulative distribution function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:cdf}) of the p-value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pval}) as
+
+\begin{equation} \label{eq:pval-h0-pval-cdf-s1}
+\begin{split}
+F_P(p) &= \mathrm{Pr}(P < p) \\
+&= \mathrm{Pr}(F_T(T) < p) \\
+&= \mathrm{Pr}(T < F_T^{-1}(p)) \\
+&= F_T^{-1}(F_T^{-1}(p)) \\
+&= p
+\end{split}
+\end{equation}
+
+which is the cumulative distribution function of a continuous uniform distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:cuni-cdf}) over the interval $[0,1]$:
+
+\begin{equation} \label{eq:pval-h0-cuni-cdf}
+F_X(x) = \int_{-\infty}^{x} \mathcal{U}(z; 0, 1) \, \mathrm{d}z = x \quad \text{where} \quad 0 \leq x \leq 1 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item jll (2018): "Why are p-values uniformly distributed under the null hypothesis?"; in: \textit{StackExchange CrossValidated}, retrieved on 2022-03-18; URL: \url{https://stats.stackexchange.com/a/345763/270304}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P318 | shortcut: pval-h0 | author: JoramSoch | date: 2022-03-18, 22:37.
+\vspace{1em}
+
+
+
 \pagebreak
 \section{Bayesian statistics}
 
@@ -8078,17 +8291,20 @@ Then, the p-value is the probability of obtaining a test statistic more extreme 
 \subsubsection[\textit{Generative model}]{Generative model} \label{sec:gm}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. A statement about the distribution of $y$ given $\theta$ is called a generative model $m$:
+\textbf{Definition:} Consider measured data ($\rightarrow$ Definition "data") $y$ and some unknown latent parameters ($\rightarrow$ Definition "para") $\theta$. A statement about the distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:dist}) of $y$ given $\theta$ is called a generative model $m$
 
 \begin{equation} \label{eq:gm-gm}
-m: \, y \sim \mathcal{D}(\theta) \; .
+m: \, y \sim \mathcal{D}(\theta) \; ,
 \end{equation}
+
+where $\mathcal{D}$ denotes an arbitrary probability distribution and $\theta$ are the parameters of this distribution.
 
 
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item original work\end{itemize}
+\item Friston et al. (2008): "Bayesian decoding of brain images"; in: \textit{NeuroImage}, vol. 39, pp. 181-205; URL: \url{https://www.sciencedirect.com/science/article/abs/pii/S1053811907007203}; DOI: 10.1016/j.neuroimage.2007.08.013.
+\end{itemize}
 
 
 \vspace{1em}
@@ -8160,7 +8376,8 @@ m: \, y \sim \mathcal{D}(\theta), \, \theta \sim \mathcal{D}(\lambda) \; .
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item original work\end{itemize}
+\item Gelman A, Carlin JB, Stern HS, Dunson DB, Vehtari A, Rubin DB (2014): "Probability and inference"; in: \textit{Bayesian Data Analysis}, ch. 1, p. 3; URL: \url{http://www.stat.columbia.edu/~gelman/book/}.
+\end{itemize}
 
 
 \vspace{1em}
@@ -8307,7 +8524,7 @@ p(\theta|y,m) \propto p(y,\theta|m) \; .
 \textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}) density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ across the parameter space $\Theta$ is called the marginal likelihood:
 
 \begin{equation} \label{eq:ml-ml}
-p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
+p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
 
 
@@ -8326,10 +8543,16 @@ p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \subsubsection[\textbf{Marginal likelihood is integral of joint likelihood}]{Marginal likelihood is integral of joint likelihood} \label{sec:ml-jl}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) $m$ describing measured data $y$ using model parameters $\theta$, the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) is the integral of the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) across the parameter space $\Theta$:
+\textbf{Theorem:} In a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) $m$ describing measured data $y$ using model parameters $\theta$, the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}) is the integral of the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) across the parameter space $\Theta$
 
-\begin{equation} \label{eq:ml-jl-ml}
-p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
+\begin{equation} \label{eq:ml-jl-ml-jl}
+p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta
+\end{equation}
+
+is and related to likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) as follows:
+
+\begin{equation} \label{eq:ml-jl-ml-lf}
+p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
 
 
@@ -8342,13 +8565,13 @@ p(y|m) \; .
 
 Using the law of marginal probabililty ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}), this can be obtained by integrating the joint likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:jl}) function over the entire parameter space:
 
-\begin{equation} \label{eq:ml-jl-ml-qed}
+\begin{equation} \label{eq:ml-jl-ml-jl-qed}
 p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
 
 Applying the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}), the integrand can also be written as the product of likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) and prior density ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}):
 
-\begin{equation} \label{eq:ml-jl-ml-int}
+\begin{equation} \label{eq:ml-jl-ml-lf-qed}
 p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
 
@@ -9118,6 +9341,144 @@ Since there are only two possible outcomes for a Bernoulli random variable ($\ri
 
 
 
+\subsubsection[\textbf{Variance}]{Variance} \label{sec:bern-var}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a Bernoulli distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}):
+
+\begin{equation} \label{eq:bern-var-bern}
+X \sim \mathrm{Bern}(p) \; .
+\end{equation}
+
+Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $X$ is
+
+\begin{equation} \label{eq:bern-var-bern-var}
+\mathrm{Var}(X) = p \, (1-p) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) is the probability-weighted average of the squared deviation from the expected value ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) across all possible values
+
+\begin{equation} \label{eq:bern-var-var}
+\mathrm{Var}(X) = \sum_{x \in \mathcal{X}} (x - \mathrm{E}(X))^2 \cdot \mathrm{Pr}(X = x)
+\end{equation}
+
+and can also be written in terms of the expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-mean}):
+
+\begin{equation} \label{eq:bern-var-var-mean}
+\mathrm{Var}(X) = \mathrm{E}\left( X^2 \right) - \mathrm{E}(X)^2 \; .
+\end{equation}
+
+The mean of a Bernoulli random variable ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:bern-mean}) is
+
+\begin{equation} \label{eq:bern-var-bern-mean}
+X \sim \mathrm{Bern}(p) \quad \Rightarrow \quad \mathrm{E}(X) = p
+\end{equation}
+
+and the mean of a squared Bernoulli random variable is
+
+\begin{equation} \label{eq:bern-var-bern-sqr-mean}
+\mathrm{E}\left( X^2 \right) = 0^2 \cdot \mathrm{Pr}(X = 0) + 1^2 \cdot \mathrm{Pr}(X = 1) = 0 \cdot (1-p) + 1 \cdot p = p \; .
+\end{equation}
+
+Combining \eqref{eq:bern-var-var-mean}, \eqref{eq:bern-var-bern-mean} and \eqref{eq:bern-var-bern-sqr-mean}, we have:
+
+\begin{equation} \label{eq:bern-var-bern-var-qed}
+\mathrm{Var}(X) = p - p^2 = p \, (1-p) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2022): "Bernoulli distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-01-20; URL: \url{https://en.wikipedia.org/wiki/Bernoulli_distribution#Variance}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P301 | shortcut: bern-var | author: JoramSoch | date: 2022-01-20, 15:06.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Range of variance}]{Range of variance} \label{sec:bern-varrange}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a Bernoulli distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}):
+
+\begin{equation} \label{eq:bern-varrange-bern}
+X \sim \mathrm{Bern}(p) \; .
+\end{equation}
+
+Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is necessarily between 0 and 1/4:
+
+\begin{equation} \label{eq:bern-varrange-bern-var-range}
+0 \leq \mathrm{Var}(X) \leq \frac{1}{4} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The variance of a Bernoulli random variable ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:bern-var}) is
+
+\begin{equation} \label{eq:bern-varrange-bern-var}
+X \sim \mathrm{Bern}(p) \quad \Rightarrow \quad \mathrm{Var}(X) = p \, (1-p)
+\end{equation}
+
+which can also be understood as a function of the success probability ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) $p$:
+
+\begin{equation} \label{eq:bern-varrange-bern-var-p}
+\mathrm{Var}(X) = \mathrm{Var}(p) = -p^2 + p \; .
+\end{equation}
+
+The first derivative of this function is
+
+\begin{equation} \label{eq:bern-varrange-dVar-dp}
+\frac{\mathrm{d}\mathrm{Var}(p)}{\mathrm{d}p} = -2 \, p + 1
+\end{equation}
+
+and setting this deriative to zero
+
+\begin{equation} \label{eq:bern-varrange-dVar-dp-0}
+\begin{split}
+\frac{\mathrm{d}\mathrm{Var}(p_M)}{\mathrm{d}p} &= 0 \\
+0 &= -2 \, p_M + 1 \\
+p_M &= \frac{1}{2} \; ,
+\end{split}
+\end{equation}
+
+we obtain the maximum possible variance
+
+\begin{equation} \label{eq:bern-varrange-bern-var-max}
+\mathrm{max}\left[\mathrm{Var}(X)\right] = \mathrm{Var}(p_M) = -\left( \frac{1}{2} \right)^2 + \frac{1}{2} = \frac{1}{4} \; .
+\end{equation}
+
+The function $\mathrm{Var}(p)$ is monotonically increasing for $0 < p < p_M$ as $\mathrm{d}\mathrm{Var}(p)/\mathrm{d}p > 0$ in this interval and it is monotonically decreasing for $p_M < p < 1$ as $\mathrm{d}\mathrm{Var}(p)/\mathrm{d}p < 0$ in this interval. Moreover, as variance is always non-negative ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-nonneg}), the minimum variance is
+
+\begin{equation} \label{eq:bern-varrange-bern-var-min}
+\mathrm{min}\left[\mathrm{Var}(X)\right] = \mathrm{Var}(0) = \mathrm{Var}(1) = 0 \; .
+\end{equation}
+
+Thus, we have:
+
+\begin{equation} \label{eq:bern-varrange-bern-var-int}
+\mathrm{Var}(p) \in \left[ 0, \; \frac{1}{4} \right] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2022): "Bernoulli distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-01-27; URL: \url{https://en.wikipedia.org/wiki/Bernoulli_distribution#Variance}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P303 | shortcut: bern-varrange | author: JoramSoch | date: 2022-01-27, 09:03.
+\vspace{1em}
+
+
+
 \subsection{Binomial distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:bin}
@@ -9214,7 +9575,7 @@ Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theo
 
 
 \vspace{1em}
-\textbf{Proof:} By definition, a binomial random variable ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}) is the sum of $n$ independent and identical Bernoulli trials ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) with success probability $p$. Therefore, the expected value is
+\textbf{Proof:} By definition, a binomial random variable ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}) is the sum of $n$ independent and identical ($\rightarrow$ Definition "iid") Bernoulli trials ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) with success probability $p$. Therefore, the expected value is
 
 \begin{equation} \label{eq:bin-mean-bin-mean-s1}
 \mathrm{E}(X) = \mathrm{E}(X_1 + \ldots + X_n)
@@ -9223,10 +9584,7 @@ Then, the mean or expected value ($\rightarrow$ Definition \ref{sec:General Theo
 and because the expected value is a linear operator ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-lin}), this is equal to
 
 \begin{equation} \label{eq:bin-mean-bin-mean-s2}
-\begin{split}
-\mathrm{E}(X) &= \mathrm{E}(X_1) + \ldots + \mathrm{E}(X_n) \\
-&= \sum_{i=1}^{n} \mathrm{E}(X_i) \; .
-\end{split}
+\mathrm{E}(X) = \mathrm{E}(X_1) + \ldots + \mathrm{E}(X_n) = \sum_{i=1}^{n} \mathrm{E}(X_i) \; .
 \end{equation}
 
 With the expected value of the Bernoulli distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:bern-mean}), we have:
@@ -9245,6 +9603,121 @@ With the expected value of the Bernoulli distribution ($\rightarrow$ Proof \ref{
 
 \vspace{1em}
 \textbf{Metadata:} ID: P23 | shortcut: bin-mean | author: JoramSoch | date: 2020-01-16, 11:06.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Variance}]{Variance} \label{sec:bin-var}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
+
+\begin{equation} \label{eq:bin-var-bin}
+X \sim \mathrm{Bin}(n,p) \; .
+\end{equation}
+
+Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is
+
+\begin{equation} \label{eq:bin-var-bin-var}
+\mathrm{Var}(X) = n p \, (1-p) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} By definition, a binomial random variable ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}) is the sum of $n$ independent and identical ($\rightarrow$ Definition "iid") Bernoulli trials ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) with success probability $p$. Therefore, the variance is
+
+\begin{equation} \label{eq:bin-var-bin-var-s1}
+\mathrm{Var}(X) = \mathrm{Var}(X_1 + \ldots + X_n)
+\end{equation}
+
+and because variances add up under independence ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-add}), this is equal to
+
+\begin{equation} \label{eq:bin-var-bin-var-s2}
+\mathrm{Var}(X) = \mathrm{Var}(X_1) + \ldots + \mathrm{Var}(X_n) = \sum_{i=1}^{n} \mathrm{Var}(X_i) \; .
+\end{equation}
+
+With the variance of the Bernoulli distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:bern-var}), we have:
+
+\begin{equation} \label{eq:bin-var-bin-var-s3}
+\mathrm{Var}(X) = \sum_{i=1}^{n} p \, (1-p) = n p \, (1-p) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2022): "Binomial distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-01-20; URL: \url{https://en.wikipedia.org/wiki/Binomial_distribution#Expected_value_and_variance}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P302 | shortcut: bin-var | author: JoramSoch | date: 2022-01-20, 15:19.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Range of variance}]{Range of variance} \label{sec:bin-varrange}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a binomial distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}):
+
+\begin{equation} \label{eq:bin-varrange-bin}
+X \sim \mathrm{Bin}(n,p) \; .
+\end{equation}
+
+Then, the variance ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:var}) of $X$ is necessarily between 0 and $n/4$:
+
+\begin{equation} \label{eq:bin-varrange-bin-var-range}
+0 \leq \mathrm{Var}(X) \leq \frac{n}{4} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} By definition, a binomial random variable ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bin}) is the sum of $n$ independent and identical ($\rightarrow$ Definition "iid") Bernoulli trials ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:bern}) with success probability $p$. Therefore, the variance is
+
+\begin{equation} \label{eq:bin-varrange-bin-var-s1}
+\mathrm{Var}(X) = \mathrm{Var}(X_1 + \ldots + X_n)
+\end{equation}
+
+and because variances add up under independence ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-add}), this is equal to
+
+\begin{equation} \label{eq:bin-varrange-bin-var-s2}
+\mathrm{Var}(X) = \mathrm{Var}(X_1) + \ldots + \mathrm{Var}(X_n) = \sum_{i=1}^{n} \mathrm{Var}(X_i) \; .
+\end{equation}
+
+As the variance of a Bernoulli random variable is always between 0 and 1/4 ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:bern-varrange})
+
+\begin{equation} \label{eq:bin-varrange-bern-var-range}
+0 \leq \mathrm{Var}(X_i) \leq \frac{1}{4} \quad \text{for all} \quad i = 1,\ldots,n \; ,
+\end{equation}
+
+the minimum variance of $X$ is
+
+\begin{equation} \label{eq:bin-varrange-bin-var-min}
+\mathrm{min}\left[\mathrm{Var}(X)\right] = n \cdot 0 = 0
+\end{equation}
+
+and the maximum variance of $X$ is
+
+\begin{equation} \label{eq:bin-varrange-bin-var-max}
+\mathrm{max}\left[\mathrm{Var}(X)\right] = n \cdot \frac{1}{4} = \frac{n}{4} \; .
+\end{equation}
+
+Thus, we have:
+
+\begin{equation} \label{eq:bin-varrange-bin-var-int}
+\mathrm{Var}(X) \in \left[ 0, \; \frac{n}{4} \right] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P304 | shortcut: bin-varrange | author: JoramSoch | date: 2022-01-27, 09:20.
 \vspace{1em}
 
 
@@ -13440,6 +13913,265 @@ it follows that
 
 \vspace{1em}
 \textbf{Metadata:} ID: P51 | shortcut: exp-mode | author: JoramSoch | date: 2020-02-12, 15:53.
+\vspace{1em}
+
+
+
+\subsection{Log-normal distribution}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:lognorm}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $\ln X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}) with mean $\mu$ and variance $\sigma^2$ (or, standard deviation $\sigma$):
+
+\begin{equation} \label{eq:lognorm-norm}
+Y = \ln (X) \sim \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Then, the exponential function of $Y$ is said to have a log-normal distribution with location parameter $\mu$ and scale parameter $\sigma$
+
+\begin{equation} \label{eq:lognorm-lognorm}
+\begin{split} 
+X = \mathrm{exp}(Y) \sim \ln \mathcal{N}(\mu, \sigma^2)
+\end{split}
+\end{equation}
+
+where $\mu \in \mathbb{R}$ and $\sigma^2 > 0$.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2022): "Log-normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-02-07; URL: \url{https://en.wikipedia.org/wiki/Log-normal_distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D170 | shortcut: lognorm | author: majapavlo | date: 2022-02-07, 22:33.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:lognorm-pdf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a log-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:lognorm}):
+
+\begin{equation} \label{eq:lognorm-pdf-lognorm}
+X \sim \ln \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Then, the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of $X$ is given by:
+
+\begin{equation} \label{eq:lognorm-pdf-lognorm-pdf}
+f_X(x) = \frac{1}{x \sigma \sqrt{2 \pi}} \cdot \mathrm{exp} \left[ -\frac{\left( \ln x -\mu \right)^2}{2 \sigma^2} \right] \; .
+\end{equation}
+
+\vspace{1em}
+\textbf{Proof:} A log-normally distributed random variable ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:lognorm}) is defined as the exponential function of a normal random variable ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:norm}):
+
+\begin{equation} \label{eq:lognorm-pdf-lognorm-def}
+Y \sim \mathcal{N}(\mu,\sigma^2) \;  \quad \Rightarrow \quad X = \mathrm{exp} (Y) \sim \ln \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+The probability density function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf}) is
+
+\begin{equation} \label{eq:lognorm-pdf-norm-pdf}
+f_X(x) = \frac{1}{\sigma \sqrt{2 \pi}} \cdot \mathrm{exp} \left[ -\frac{\left( x -\mu \right)^2}{2 \sigma^2} \right] \; .
+\end{equation}
+
+Writing $X$ as a function of $Y$ we have
+
+\begin{equation} \label{eq:lognorm-pdf-X-Y}
+X = g(Y) = \mathrm{exp} (Y) \;
+\end{equation}
+
+with the inverse function
+
+\begin{equation} \label{eq:lognorm-pdf-Y-X}
+Y = g^{-1}(X) = \ln (X) \; .
+\end{equation}
+
+Because the derivative of $\exp (Y)$ is always positive, $g(Y)$ is strictly increasing and we can calculate the probability density function of a strictly increasing function ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:pdf-sifct}) as
+
+\begin{equation} \label{eq:lognorm-pdf-pdf-sifct}
+f_X(x) = \left\{
+\begin{array}{rl}
+f_Y(g^{-1}(x)) \, \frac{\mathrm{d}g^{-1}(x)}{\mathrm{d}x} \; , & \text{if} \; x \in \mathcal{X} \\
+0 \; , & \text{if} \; x \notin \mathcal{X}
+\end{array}
+\right.
+\end{equation}
+
+where $\mathcal{X} = \left\lbrace x = g(y): y \in \mathcal{Y} \right\rbrace$. With the probability density function of the normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:norm-pdf}), we have
+
+\begin{equation} \label{eq:lognorm-pdf-pdf-X}
+\begin{split}
+f_X(x) &= f_Y(g^{-1}(x))\cdot \frac{dg^{-1}(x)}{dx} \\
+&= \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \frac{g^{-1}(x)-\mu}{\sigma} \right)^2 \right] \cdot \frac{\mathrm{d}g^{-1}(x)}{\mathrm{d}x} \\
+&= \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \frac{(\ln x)-\mu}{\sigma} \right)^2 \right] \cdot \frac{\mathrm{d}(\ln x)}{\mathrm{d}x} \\
+&= \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \frac{ \ln x -\mu}{\sigma} \right)^2 \right] \cdot \frac{1}{x} \\
+&= \frac{1}{x \sigma \sqrt{2 \pi}} \cdot \exp \left[ - \frac{\left( \ln x -\mu\right)^2}{2 \sigma^2} \right]
+\end{split}
+\end{equation}
+
+which is the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}) of the log-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:lognorm}).
+
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Taboga, Marco (2021): "Log-normal distribution"; in: \textit{Lectures on probability and statistics}, retrieved on 2022-02-13; URL: \url{https://www.statlect.com/probability-distributions/log-normal-distribution}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P310 | shortcut: lognorm-pdf | author: majapavlo | date: 2022-02-13, 10:05.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Median}]{Median} \label{sec:lognorm-med}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a log-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:lognorm}):
+
+\begin{equation} \label{eq:lognorm-med-lognorm}
+X \sim \ln \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Then, the median ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:med}) of $X$ is
+
+\begin{equation} \label{eq:lognorm-med-lognorm-med}
+\mathrm{median}(X) = e^\mu \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The median ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:med}) is the value at which the cumulative distribution function is $1/2$:
+
+\begin{equation} \label{eq:lognorm-med-median}
+F_X(\mathrm{median}(X)) = \frac{1}{2} \; .
+\end{equation}
+
+The cumulative distribution function of the lognormal distribution ($\rightarrow$ Proof "lognorm-cdf") is
+
+\begin{equation} \label{eq:lognorm-med-lognorm-cdf}
+F_X(x) = \frac{1}{2} \left[ 1 + \mathrm{erf} \left( \frac{\ln (x)-\mu}{\sigma \sqrt{2}} \right) \right]
+\end{equation}
+
+where $\mathrm{erf}(x)$ is the error function. Thus, the inverse CDF is
+
+\begin{equation} \label{eq:lognorm-med-lognorm-cdf-inv}
+\begin{split}
+\ln(x) &= \sigma \sqrt{2} \cdot \mathrm{erf}^{-1}(2p-1) + \mu \\
+x &= \mathrm{exp} \left[ \sigma \sqrt{2} \cdot \mathrm{erf}^{-1}(2p-1) + \mu \right]
+\end{split}
+\end{equation}
+
+where $\mathrm{erf}^{-1}(x)$ is the inverse error function. Setting $p = 1/2$, we obtain:
+
+\begin{equation} \label{eq:lognorm-med-lognorm-med-qed}
+\begin{split}
+\ln \left[ \mathrm{median}(X) \right] &= \sigma \sqrt{2} \cdot \mathrm{erf}^{-1}(0) + \mu \\
+\mathrm{median}(X) &= e^\mu \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P306 | shortcut: lognorm-med | author: majapavlo | date: 2022-02-07, 22:33.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Mode}]{Mode} \label{sec:lognorm-mode}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:rvar}) following a log-normal distribution ($\rightarrow$ Definition \ref{sec:Probability Distributions}/\ref{sec:lognorm}):
+
+\begin{equation} \label{eq:lognorm-mode-lognorm}
+X \sim \ln \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Then, the mode ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mode}) of $X$ is
+
+\begin{equation} \label{eq:lognorm-mode-lognorm-mode}
+\mathrm{mode}(X) = e^\left( \mu -\sigma^2 \right) \; .
+\end{equation}
+
+\vspace{1em}
+\textbf{Proof:} The mode ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mode}) is the value which maximizes the probability density function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:pdf}):
+
+\begin{equation} \label{eq:lognorm-mode-mode}
+\mathrm{mode}(X) = \operatorname*{arg\,max}_x f_X(x) \; .
+\end{equation}
+
+The probability density function of the log-normal distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:lognorm-pdf}) is:
+
+\begin{equation} \label{eq:lognorm-mode-lognorm-pdf}
+f_X(x) = \frac{1}{x \sigma \sqrt{2 \pi}} \cdot \mathrm{exp} \left[ -\frac{\left( \ln x -\mu \right)^2}{2 \sigma^2} \right] \; .
+\end{equation}
+
+The first two derivatives of this function are:
+
+\begin{equation} \label{eq:lognorm-mode-lognorm-pdf-der1}
+f'_X(x) = -\frac{1}{x^2 \sigma \sqrt{2 \pi}} \cdot \mathrm{exp} \left[ -\frac{\left( \ln x -\mu \right)^2}{2 \sigma^2} \right] \cdot \left(1 + \frac{\ln x -\mu}{\sigma^2} \right)
+\end{equation}
+
+\begin{equation} \label{eq:lognorm-mode-lognorm-pdf-der2}
+\begin{split}
+f''_X(x) &= \frac{1}{\sqrt{2\pi}\sigma^2x^3} \mathrm{exp} \left[ -\frac{\left( \ln x -\mu \right)^2}{2 \sigma^2} \right] \cdot \left( \ln x -\mu \right) \cdot \left(1 + \frac{ \ln x -\mu}{\sigma^2}\right) \\
+&+ \frac{\sqrt{2}}{\sqrt{\pi}x^3}\mathrm{exp} \left[ -\frac{\left( \ln x -\mu \right)^2}{2 \sigma^2} \right] \cdot \left(1 + \frac{ \ln x -\mu}{\sigma^2}\right) \\
+&- \frac{1}{\sqrt{2\pi}\sigma^2x^3} \mathrm{exp} \left[ -\frac{\left( \ln x -\mu \right)^2}{2 \sigma^2} \right] \; .
+\end{split}
+\end{equation}
+
+We now calculate the root of the first derivative \eqref{eq:lognorm-mode-lognorm-pdf-der1}:
+
+\begin{equation} \label{eq:lognorm-mode-lognorm-mode-s1}
+\begin{split}
+f'_X(x) = 0 &= -\frac{1}{x^2 \sigma \sqrt{2 \pi}} \cdot \mathrm{exp} \left[ -\frac{\left( \ln x -\mu \right)^2}{2 \sigma^2} \right] \cdot \left(1 + \frac{\ln x -\mu}{\sigma^2} \right) \\
+-1 &= \frac{\ln x -\mu}{\sigma^2} \\
+x &= e^\left( \mu -\sigma^2 \right) \; .
+\end{split}
+\end{equation}
+
+By plugging this value into the second derivative \eqref{eq:lognorm-mode-lognorm-pdf-der2},
+
+\begin{equation} \label{eq:lognorm-mode-lognorm-mode-s2}
+\begin{split}
+f''_X(e^{(\mu-\sigma^2)}) &= \frac{1}{\sqrt{2\pi}\sigma^2(e^{(\mu-\sigma^2)})^3} \mathrm{exp} \left[ -\frac{\sigma^2}{2} \right] \cdot \left( \sigma^2 \right) \cdot \left(0\right) \\
+&+ \frac{\sqrt{2}}{\sqrt{\pi}(e^{(\mu-\sigma^2)})^3} \mathrm{exp} \left[ -\frac{\sigma^2}{2} \right] \cdot \left(0 \right) \\
+&- \frac{1}{\sqrt{2\pi}\sigma^2(e^{(\mu-\sigma^2)})^3} \mathrm{exp} \left[ -\frac{\sigma^2}{2} \right] \\
+&= - \frac{1}{\sqrt{2\pi}\sigma^2(e^{(\mu-\sigma^2)})^3} \mathrm{exp} \left[ -\frac{\sigma^2}{2} \right] < 0 \; ,
+\end{split}
+\end{equation}
+
+we confirm that it is a maximum, showing that
+
+\begin{equation} \label{eq:lognorm-mode-lognorm-mode-qed}
+\mathrm{mode}(X) = e^\left( \mu -\sigma^2 \right) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2022): "Log-normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-02-12; URL: \url{https://en.wikipedia.org/wiki/Log-normal_distribution#Mode}.
+\item Mdoc (2015): "Mode of lognormal distribution"; in: \textit{Mathematics Stack Exchange}, retrieved on 2022-02-12; URL: \url{https://math.stackexchange.com/questions/1321221/mode-of-lognormal-distribution/1321626}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P311 | shortcut: lognorm-mode | author: majapavlo | date: 2022-02-13, 10:15.
 \vspace{1em}
 
 
@@ -21408,7 +22140,7 @@ Wy = WX\beta + W\varepsilon, \; W\varepsilon \sim \mathcal{N}(0, \sigma^2 I_n) \
 With this, we can express the weighted residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) as
 
 \begin{equation} \label{eq:mlr-wls2-wRSS}
-\mathrm{wRSS}(\beta) = \sum_{i=1}^n (W \varepsilon)_i = (W \varepsilon)^\mathrm{T} (W \varepsilon) = (Wy-WX\beta)^\mathrm{T} (Wy-WX\beta)
+\mathrm{wRSS}(\beta) = \sum_{i=1}^n (W \varepsilon)_i^2 = (W \varepsilon)^\mathrm{T} (W \varepsilon) = (Wy-WX\beta)^\mathrm{T} (Wy-WX\beta)
 \end{equation}
 
 which can be developed into
@@ -21560,6 +22292,374 @@ Together, \eqref{eq:mlr-mle-beta-MLE} and \eqref{eq:mlr-mle-s2-MLE} constitute t
 
 \vspace{1em}
 \textbf{Metadata:} ID: P78 | shortcut: mlr-mle | author: JoramSoch | date: 2020-03-11, 12:27.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Maximum log-likelihood}]{Maximum log-likelihood} \label{sec:mlr-mll}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $m$ with correlation structure ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corrmat}) $V$
+
+\begin{equation} \label{eq:mlr-mll-mlr}
+m: \; y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; .
+\end{equation}
+
+Then, the maximum log-likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mll}) for this model is
+
+\begin{equation} \label{eq:mlr-mll-mlr-mll-v1}
+\mathrm{MLL}(m) = - \frac{n}{2} \log\left( \frac{\mathrm{RSS}}{n} \right) - \frac{n}{2} \left[ 1 + \log(2\pi) \right]
+\end{equation}
+
+under uncorrelated observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}), i.e. if $V = I_n$, and
+
+\begin{equation} \label{eq:mlr-mll-mlr-mll-v2}
+\mathrm{MLL}(m) = - \frac{n}{2} \log\left( \frac{\mathrm{wRSS}}{n} \right) - \frac{n}{2} \left[ 1 + \log(2\pi) \right] - \frac{1}{2} \log|V| \; ,
+\end{equation}
+
+in the general case, i.e. if $V \neq I_n$, where $\mathrm{RSS}$ is the residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) and $\mathrm{wRSS}$ is the weighted residual sum of squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-wls2}).
+
+
+\vspace{1em}
+\textbf{Proof:} The likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) for multiple linear regression is given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle})
+
+\begin{equation} \label{eq:mlr-mll-mlr-lf}
+\begin{split}
+p(y|\beta,\sigma^2) &= \mathcal{N}(y; X\beta, \sigma^2 V) \\
+&= \sqrt{\frac{1}{(2\pi)^n |\sigma^2 V|}} \cdot \exp\left[ -\frac{1}{2} (y - X\beta)^\mathrm{T} (\sigma^2 V)^{-1} (y - X\beta) \right] \; ,
+\end{split}
+\end{equation}
+
+such that, with $\lvert \sigma^2 V \rvert = (\sigma^2)^n \lvert V \rvert$, the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) for this model becomes ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle})
+
+\begin{equation} \label{eq:mlr-mll-mlr-llf}
+\begin{split}
+\mathrm{LL}(\beta,\sigma^2) = &\log p(y|\beta,\sigma^2) \\
+= &- \frac{n}{2} \log(2\pi) - \frac{n}{2} \log (\sigma^2) - \frac{1}{2} \log |V| - \frac{1}{2 \sigma^2} (y - X\beta)^\mathrm{T} V^{-1} (y - X\beta) \; .
+\end{split}
+\end{equation}
+
+The maximum likelihood estimate for the noise variance ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle}) is
+
+\begin{equation} \label{eq:mlr-mll-mlr-mle-s2}
+\hat{\sigma}^2 = \frac{1}{n} (y-X\hat{\beta})^\mathrm{T} V^{-1} (y-X\hat{\beta})
+\end{equation}
+
+which can also be expressed in terms of the (weighted) residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) as
+
+\begin{equation} \label{eq:mlr-mll-s2-rss}
+\frac{1}{n} (y-X\hat{\beta})^\mathrm{T} V^{-1} (y-X\hat{\beta}) = \frac{1}{n} (Wy-WX\hat{\beta})^\mathrm{T} (Wy-WX\hat{\beta}) = \frac{1}{n} \sum_{i=1}^{n} (W\hat{\varepsilon})_i^2 = \frac{\mathrm{wRSS}}{n}
+\end{equation}
+
+where $W = V^{-1/2}$. Plugging \eqref{eq:mlr-mll-mlr-mle-s2} into \eqref{eq:mlr-mll-mlr-llf}, we obtain the maximum log-likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mll}) as
+
+\begin{equation} \label{eq:mlr-mll-mlr-mll-v2-qed}
+\begin{split}
+\mathrm{MLL}(m) &= \mathrm{LL}(\hat{\beta},\hat{\sigma}^2) \\
+&= - \frac{n}{2} \log(2\pi) - \frac{n}{2} \log (\hat{\sigma}^2) - \frac{1}{2} \log |V| - \frac{1}{2 \hat{\sigma}^2} (y - X\hat{\beta})^\mathrm{T} V^{-1} (y - X\hat{\beta}) \\
+&= - \frac{n}{2} \log(2\pi) - \frac{n}{2} \log\left( \frac{\mathrm{wRSS}}{n} \right) - \frac{1}{2} \log |V| - \frac{1}{2} \cdot \frac{n}{\mathrm{wRSS}} \cdot \mathrm{wRSS} \\
+&= - \frac{n}{2} \log\left( \frac{\mathrm{wRSS}}{n} \right) - \frac{n}{2} \left[ 1 + \log(2\pi) \right] - \frac{1}{2} \log|V|
+\end{split}
+\end{equation}
+
+which proves the result in \eqref{eq:mlr-mll-mlr-mll-v2}. Assuming $V = I_n$, we have
+
+\begin{equation} \label{eq:mlr-mll-mlr-mle-s2-iid}
+\hat{\sigma}^2 = \frac{1}{n} (y-X\hat{\beta})^\mathrm{T} (y-X\hat{\beta}) = \frac{1}{n} \sum_{i=1}^{n} \hat{\varepsilon}_i^2 = \frac{\mathrm{RSS}}{n}
+\end{equation}
+
+and
+
+\begin{equation} \label{eq:mlr-mll-mlr-logdet-V-iid}
+\frac{1}{2} \log|V| = \frac{1}{2} \log|I_n| = \frac{1}{2} \log 1 = 0 \; ,
+\end{equation}
+
+such that
+
+\begin{equation} \label{eq:mlr-mll-mlr-mll-v1-qed}
+\mathrm{MLL}(m) = - \frac{n}{2} \log\left( \frac{\mathrm{RSS}}{n} \right) - \frac{n}{2} \left[ 1 + \log(2\pi) \right]
+\end{equation}
+
+which proves the result in \eqref{eq:mlr-mll-mlr-mll-v1}. This completes the proof.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Claeskens G, Hjort NL (2008): "Akaike's information criterion"; in: \textit{Model Selection and Model Averaging}, ex. 2.2, p. 66; URL: \url{https://www.cambridge.org/core/books/model-selection-and-model-averaging/E6F1EC77279D1223423BB64FC3A12C37}; DOI: 10.1017/CBO9780511790485.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P305 | shortcut: mlr-mll | author: JoramSoch | date: 2022-02-04, 07:27.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Deviance function}]{Deviance function} \label{sec:mlr-dev}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $m$ with correlation structure ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:corrmat}) $V$
+
+\begin{equation} \label{eq:mlr-dev-mlr}
+m: \; y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; .
+\end{equation}
+
+Then, the deviance ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:dev}) for this model is
+
+\begin{equation} \label{eq:mlr-dev-mlr-dev-v1}
+D(\beta,\sigma^2) = \mathrm{RSS}/\sigma^2 + n \cdot \left[ \log(\sigma^2) + \log(2\pi) \right]
+\end{equation}
+
+under uncorrelated observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}), i.e. if $V = I_n$, and
+
+\begin{equation} \label{eq:mlr-dev-mlr-dev-v2}
+D(\beta,\sigma^2) = \mathrm{wRSS}/\sigma^2 + n \cdot \left[ \log(\sigma^2) + \log(2\pi) \right] + \log|V| \; ,
+\end{equation}
+
+in the general case, i.e. if $V \neq I_n$, where $\mathrm{RSS}$ is the residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) and $\mathrm{wRSS}$ is the weighted residual sum of squares ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-wls2}).
+
+
+\vspace{1em}
+\textbf{Proof:} The likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) for multiple linear regression is given by ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle})
+
+\begin{equation} \label{eq:mlr-dev-mlr-lf}
+\begin{split}
+p(y|\beta,\sigma^2) &= \mathcal{N}(y; X\beta, \sigma^2 V) \\
+&= \sqrt{\frac{1}{(2\pi)^n |\sigma^2 V|}} \cdot \exp\left[ -\frac{1}{2} (y - X\beta)^\mathrm{T} (\sigma^2 V)^{-1} (y - X\beta) \right] \; ,
+\end{split}
+\end{equation}
+
+such that, with $\lvert \sigma^2 V \rvert = (\sigma^2)^n \lvert V \rvert$, the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) for this model becomes ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mle})
+
+\begin{equation} \label{eq:mlr-dev-mlr-llf}
+\begin{split}
+\mathrm{LL}(\beta,\sigma^2) = &\log p(y|\beta,\sigma^2) \\
+= &- \frac{n}{2} \log(2\pi) - \frac{n}{2} \log (\sigma^2) - \frac{1}{2} \log |V| - \frac{1}{2 \sigma^2} (y - X\beta)^\mathrm{T} V^{-1} (y - X\beta) \; .
+\end{split}
+\end{equation}
+
+
+The last term can be expressed in terms of the (weighted) residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}) as
+
+\begin{equation} \label{eq:mlr-dev-mll-rss}
+\begin{split}
+- \frac{1}{2 \sigma^2} (y - X\beta)^\mathrm{T} V^{-1} (y - X\beta) &= - \frac{1}{2 \sigma^2} (Wy-WX\beta)^\mathrm{T} (Wy-WX\beta) \\
+&= - \frac{1}{2 \sigma^2} \left( \frac{1}{n} \sum_{i=1}^{n} (W\varepsilon)_i^2 \right) = - \frac{\mathrm{wRSS}}{2 \sigma^2}
+\end{split}
+\end{equation}
+
+where $W = V^{-1/2}$. Plugging \eqref{eq:mlr-dev-mll-rss} into \eqref{eq:mlr-dev-mlr-llf} and multiplying with $-2$, we obtain the deviance ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:dev}) as
+
+\begin{equation} \label{eq:mlr-dev-mlr-dev-v2-qed}
+\begin{split}
+D(\beta,\sigma^2) &= -2 \, \mathrm{LL}(\beta,\sigma^2) \\
+&= -2 \left( - \frac{\mathrm{wRSS}}{2 \sigma^2} - \frac{n}{2} \log (\sigma^2) - \frac{n}{2} \log(2\pi) - \frac{1}{2} \log |V| \right) \\
+&= \mathrm{wRSS}/\sigma^2 + n \cdot \left[ \log(\sigma^2) + \log(2\pi) \right] + \log|V|
+\end{split}
+\end{equation}
+
+which proves the result in \eqref{eq:mlr-dev-mlr-dev-v2}. Assuming $V = I_n$, we have
+
+\begin{equation} \label{eq:mlr-dev-mll-rss-iid}
+\begin{split}
+- \frac{1}{2 \sigma^2} (y - X\beta)^\mathrm{T} V^{-1} (y - X\beta) &= - \frac{1}{2 \sigma^2} (y - X\beta)^\mathrm{T} (y - X\beta) \\
+&= - \frac{1}{2 \sigma^2} \left( \frac{1}{n} \sum_{i=1}^{n} \varepsilon_i^2 \right) = - \frac{\mathrm{RSS}}{2 \sigma^2}
+\end{split}
+\end{equation}
+
+and
+
+\begin{equation} \label{eq:mlr-dev-mlr-logdet-V-iid}
+\frac{1}{2} \log|V| = \frac{1}{2} \log|I_n| = \frac{1}{2} \log 1 = 0 \; ,
+\end{equation}
+
+such that
+
+\begin{equation} \label{eq:mlr-dev-mlr-mll-v1-qed}
+D(\beta,\sigma^2) = \mathrm{RSS}/\sigma^2 + n \cdot \left[ \log(\sigma^2) + \log(2\pi) \right]
+\end{equation}
+
+which proves the result in \eqref{eq:mlr-dev-mlr-dev-v1}. This completes the proof.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P312 | shortcut: mlr-dev | author: JoramSoch | date: 2022-03-01, 08:42.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Akaike information criterion}]{Akaike information criterion} \label{sec:mlr-aic}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $m$
+
+\begin{equation} \label{eq:mlr-aic-mlr}
+m: \; y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; .
+\end{equation}
+
+Then, the Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aic}) for this model is
+
+\begin{equation} \label{eq:mlr-aic-mlr-aic}
+\mathrm{AIC}(m) = n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + 2 (p + 1)
+\end{equation}
+
+where $\mathrm{wRSS}$ is the weighted residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}), $p$ is the number of regressors ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) in the design matrix $X$ and $n$ is the number of observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) in the data vector $y$.
+
+
+\vspace{1em}
+\textbf{Proof:} The Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aic}) is defined as
+
+\begin{equation} \label{eq:mlr-aic-aic}
+\mathrm{AIC}(m) = -2 \, \mathrm{MLL}(m) + 2 \, k
+\end{equation}
+
+where $\mathrm{MLL}(m)$ is the maximum log-likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mll}) is $k$ is the number of free parameters in $m$.
+
+The maximum log-likelihood for multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mll}) is given by
+
+\begin{equation} \label{eq:mlr-aic-mlr-mll}
+\mathrm{MLL}(m) = - \frac{n}{2} \log\left( \frac{\mathrm{wRSS}}{n} \right) - \frac{n}{2} \left[ 1 + \log(2\pi) \right] - \frac{1}{2} \log|V|
+\end{equation}
+
+and the number of free paramters in multiple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) is $k = p + 1$, i.e. one for each regressor in the design matrix ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $X$, plus one for the noise variance ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $\sigma^2$.
+
+Thus, the AIC of $m$ follows from \eqref{eq:mlr-aic-aic} and \eqref{eq:mlr-aic-mlr-mll} as
+
+\begin{equation} \label{eq:mlr-aic-mlr-aic-qed}
+\mathrm{AIC}(m) = n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + 2 (p + 1) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Claeskens G, Hjort NL (2008): "Akaike's information criterion"; in: \textit{Model Selection and Model Averaging}, ex. 2.2, p. 66; URL: \url{https://www.cambridge.org/core/books/model-selection-and-model-averaging/E6F1EC77279D1223423BB64FC3A12C37}; DOI: 10.1017/CBO9780511790485.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P307 | shortcut: mlr-aic | author: JoramSoch | date: 2022-02-11, 06:26.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Bayesian information criterion}]{Bayesian information criterion} \label{sec:mlr-bic}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $m$
+
+\begin{equation} \label{eq:mlr-bic-mlr}
+m: \; y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; .
+\end{equation}
+
+Then, the Bayesian information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bic}) for this model is
+
+\begin{equation} \label{eq:mlr-bic-mlr-bic}
+\mathrm{BIC}(m) = n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + \log(n) \, (p + 1)
+\end{equation}
+
+where $\mathrm{wRSS}$ is the weighted residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}), $p$ is the number of regressors ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) in the design matrix $X$ and $n$ is the number of observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) in the data vector $y$.
+
+
+\vspace{1em}
+\textbf{Proof:} The Bayesian information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:bic}) is defined as
+
+\begin{equation} \label{eq:mlr-bic-bic}
+\mathrm{BIC}(m) = -2 \, \mathrm{MLL}(m) + k \log(n)
+\end{equation}
+
+where $\mathrm{MLL}(m)$ is the maximum log-likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mll}), $k$ is the number of free parameters in $m$ and $n$ is the number of observations.
+
+The maximum log-likelihood for multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mll}) is given by
+
+\begin{equation} \label{eq:mlr-bic-mlr-mll}
+\mathrm{MLL}(m) = - \frac{n}{2} \log\left( \frac{\mathrm{wRSS}}{n} \right) - \frac{n}{2} \left[ 1 + \log(2\pi) \right] - \frac{1}{2} \log|V|
+\end{equation}
+
+and the number of free paramters in multiple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) is $k = p + 1$, i.e. one for each regressor in the design matrix ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $X$, plus one for the noise variance ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $\sigma^2$.
+
+Thus, the BIC of $m$ follows from \eqref{eq:mlr-bic-bic} and \eqref{eq:mlr-bic-mlr-mll} as
+
+\begin{equation} \label{eq:mlr-bic-mlr-bic-qed}
+\mathrm{BIC}(m) = n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + \log(n) \, (p + 1) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P308 | shortcut: mlr-bic | author: JoramSoch | date: 2022-02-11, 06:43.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Corrected Akaike information criterion}]{Corrected Akaike information criterion} \label{sec:mlr-aicc}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $m$
+
+\begin{equation} \label{eq:mlr-aicc-mlr}
+m: \; y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; .
+\end{equation}
+
+Then, the corrected Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aicc}) for this model is
+
+\begin{equation} \label{eq:mlr-aicc-mlr-aicc}
+\mathrm{AIC}_\mathrm{c}(m) = n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + \frac{2 \, n \, (p+1)}{n-p-2}
+\end{equation}
+
+where $\mathrm{wRSS}$ is the weighted residual sum of squares ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:rss}), $p$ is the number of regressors ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) in the design matrix $X$ and $n$ is the number of observations ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) in the data vector $y$.
+
+
+\vspace{1em}
+\textbf{Proof:} The corrected Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aicc}) is defined as
+
+\begin{equation} \label{eq:mlr-aicc-aicc}
+\mathrm{AIC}_\mathrm{c}(m) = \mathrm{AIC}(m) + \frac{2k^2 + 2k}{n-k-1}
+\end{equation}
+
+where $\mathrm{AIC}(m)$ is the Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aic}), $k$ is the number of free parameters in $m$ and $n$ is the number of observations.
+
+The Akaike information criterion for multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-mll}) is given by
+
+\begin{equation} \label{eq:mlr-aicc-mlr-aic}
+\mathrm{AIC}(m) = n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + 2 (p + 1)
+\end{equation}
+
+and the number of free paramters in multiple linear regression ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) is $k = p + 1$, i.e. one for each regressor in the design matrix ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $X$, plus one for the noise variance ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $\sigma^2$.
+
+Thus, the corrected AIC of $m$ follows from \eqref{eq:mlr-aicc-aicc} and \eqref{eq:mlr-aicc-mlr-aic} as
+
+\begin{equation} \label{eq:mlr-aicc-mlr-aicc-qed}
+\begin{split}
+\mathrm{AIC}_\mathrm{c}(m) &= n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + 2 \, k + \frac{2k^2 + 2k}{n-k-1} \\
+&= n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + \frac{2nk - 2k^2 - 2k}{n-k-1} + \frac{2k^2 + 2k}{n-k-1} \\ 
+&= n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + \frac{2nk}{n-k-1} \\ 
+&= n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + \frac{2 \, n \, (p+1)}{n-p-2} \\ \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Claeskens G, Hjort NL (2008): "Akaike's information criterion"; in: \textit{Model Selection and Model Averaging}, ex. 2.5, p. 67; URL: \url{https://www.cambridge.org/core/books/model-selection-and-model-averaging/E6F1EC77279D1223423BB64FC3A12C37}; DOI: 10.1017/CBO9780511790485.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P309 | shortcut: mlr-aicc | author: JoramSoch | date: 2022-02-11, 07:07.
 \vspace{1em}
 
 
@@ -21939,6 +23039,167 @@ Thus, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}
 
 \vspace{1em}
 \textbf{Metadata:} ID: P11 | shortcut: blr-lme | author: JoramSoch | date: 2020-01-03, 22:05.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Deviance information criterion}]{Deviance information criterion} \label{sec:blr-dic}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider a linear regression model ($\rightarrow$ Definition \ref{sec:Statistical Models}/\ref{sec:mlr}) $m$
+
+\begin{equation} \label{eq:blr-dic-mlr}
+m: \; y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V), \; \sigma^2 V = (\tau P)^{-1}
+\end{equation}
+
+with a normal-gamma prior distribution ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-prior})
+
+\begin{equation} \label{eq:blr-dic-blr-prior}
+p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
+\end{equation}
+
+Then, the deviance information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:dic}) for this model is
+
+\begin{equation} \label{eq:blr-dic-mlr-dic}
+\begin{split}
+\mathrm{DIC}(m) &= n \cdot \log(2\pi) - n \left[ 2 \psi(a_n) - \log(a_n) - \log(b_n) \right] - \log|P| \\
+&+ \frac{a_n}{b_n} (y - X\mu_n)^\mathrm{T} P (y - X\mu_n) + \mathrm{tr}\left( X^\mathrm{T} P X \Lambda_n^{-1} \right)
+\end{split}
+\end{equation}
+
+where $\mu_n$ and $\Lambda_n$ as well as $a_n$ and $b_n$ are posterior parameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) describing the posterior distribution in Bayesian linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-post}).
+
+
+\vspace{1em}
+\textbf{Proof:} The deviance for multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:mlr-dev}) is
+
+\begin{equation} \label{eq:blr-dic-mlr-dev-s1}
+D(\beta,\sigma^2) = n \cdot \log(2\pi) + n \cdot \log(\sigma^2) + \log|V| + \frac{1}{\sigma^2} (y - X\beta)^\mathrm{T} V^{-1} (y - X\beta)
+\end{equation}
+
+which, applying the equalities $\tau = 1/\sigma^2$ and $P = V^{-1}$, becomes
+
+\begin{equation} \label{eq:blr-dic-mlr-dev-s2}
+D(\beta,\tau) = n \cdot \log(2\pi) - n \cdot \log(\tau) - \log|P| + \tau \cdot (y - X\beta)^\mathrm{T} P (y - X\beta) \; .
+\end{equation}
+
+The deviance information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:dic}) (DIC) is defined as
+
+\begin{equation} \label{eq:blr-dic-dic}
+\mathrm{DIC}(m) = -2 \log p(y|\left\langle \beta \right\rangle, \left\langle \tau \right\rangle, m) + 2 \, p_D
+\end{equation}
+
+where $\log p(y \vert \left\langle \beta \right\rangle, \left\langle \tau \right\rangle, m)$ is the log-likelihood function ($\rightarrow$ Definition "mlr-mll") at the posterior expectations ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) and the "effective number of parameters" $p_D$ is the difference between the expectation of the deviance and the deviance at the expectation ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:dic}):
+
+\begin{equation} \label{eq:blr-dic-dic-pD}
+p_D = \left\langle D(\beta,\tau) \right\rangle - D(\left\langle \beta \right\rangle, \left\langle \tau \right\rangle) \; .
+\end{equation}
+
+With that, the DIC for multiple linear regression becomes:
+
+\begin{equation} \label{eq:blr-dic-mlr-dic-s1}
+\begin{split}
+\mathrm{DIC}(m) &= -2 \log p(y|\left\langle \beta \right\rangle, \left\langle \tau \right\rangle, m) + 2 \, p_D \\
+&= D(\left\langle \beta \right\rangle, \left\langle \tau \right\rangle) + 2 \left[ \left\langle D(\beta,\tau) \right\rangle - D(\left\langle \beta \right\rangle, \left\langle \tau \right\rangle) \right] \\
+&= 2 \left\langle D(\beta,\tau) \right\rangle - D(\left\langle \beta \right\rangle, \left\langle \tau \right\rangle) \; .
+\end{split}
+\end{equation}
+
+The posterior distribution for multiple linear regression ($\rightarrow$ Proof \ref{sec:Statistical Models}/\ref{sec:blr-post}) is
+
+\begin{equation} \label{eq:blr-dic-blr-post}
+p(\beta,\tau|y) = \mathcal{N}(\beta; \mu_n, (\tau \Lambda_n)^{-1}) \cdot \mathrm{Gam}(\tau; a_n, b_n)
+\end{equation}
+
+where the posterior hyperparameters ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:blr-dic-blr-post-par}
+\begin{split}
+\mu_n &= \Lambda_n^{-1} (X^\mathrm{T} P y + \Lambda_0 \mu_0) \\
+\Lambda_n &= X^\mathrm{T} P X + \Lambda_0 \\
+a_n &= a_0 + \frac{n}{2} \\
+b_n &= b_0 + \frac{1}{2} (y^\mathrm{T} P y + \mu_0^\mathrm{T} \Lambda_0 \mu_0 - \mu_n^\mathrm{T} \Lambda_n \mu_n) \; .
+\end{split}
+\end{equation}
+
+Thus, we have the following posterior expectations:
+
+\begin{equation} \label{eq:blr-dic-blr-post-beta}
+\left\langle \beta \right\rangle_{\beta,\tau|y} = \mu_n
+\end{equation}
+
+\begin{equation} \label{eq:blr-dic-blr-post-tau}
+\left\langle \tau \right\rangle_{\beta,\tau|y} = \frac{a_n}{b_n}
+\end{equation}
+
+\begin{equation} \label{eq:blr-dic-blr-post-log-tau}
+\left\langle \log \tau \right\rangle_{\beta,\tau|y} = \psi(a_n) - \log(b_n)
+\end{equation}
+
+\begin{equation} \label{eq:blr-dic-blr-post-beta-qf}
+\begin{split}
+\left\langle \beta^\mathrm{T} A \beta \right\rangle_{\beta|\tau,y} &= \mu_n^\mathrm{T} A \mu_n + \mathrm{tr}\left( A (\tau \Lambda_n)^{-1} \right) \\
+&= \mu_n^\mathrm{T} A \mu_n + \frac{1}{\tau} \mathrm{tr}\left( A \Lambda_n^{-1} \right) \; .
+\end{split}
+\end{equation}
+
+In these identities, we have used the mean of the multivariate normal distribution ($\rightarrow$ Proof "mvn-mean"), the mean of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-mean}), the logarithmic expectation of the gamma distribution ($\rightarrow$ Proof \ref{sec:Probability Distributions}/\ref{sec:gam-logmean}), the expectation of a quadratic form ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:mean-qf}) and the covariance of the multivariate normal distribution ($\rightarrow$ Proof "mvn-cov").
+
+With that, the deviance at the expectation is:
+
+\begin{equation} \label{eq:blr-dic-mlr-dev-exp}
+\begin{split}
+D(\left\langle \beta \right\rangle, \left\langle \tau \right\rangle) &\overset{\eqref{eq:blr-dic-mlr-dev-s2}}{=} n \cdot \log(2\pi) - n \cdot \log(\left\langle \tau \right\rangle) - \log|P| + \tau \cdot (y - X\left\langle \beta \right\rangle)^\mathrm{T} P (y - X\left\langle \beta \right\rangle) \\
+&\overset{\eqref{eq:blr-dic-blr-post-beta}}{=} n \cdot \log(2\pi) - n \cdot \log(\left\langle \tau \right\rangle) - \log|P| + \tau \cdot (y - X\mu_n)^\mathrm{T} P (y - X\mu_n) \\
+&\overset{\eqref{eq:blr-dic-blr-post-tau}}{=} n \cdot \log(2\pi) - n \cdot \log\left(\frac{a_n}{b_n}\right) - \log|P| + \frac{a_n}{b_n} \cdot (y - X\mu_n)^\mathrm{T} P (y - X\mu_n) \; .
+\end{split}
+\end{equation}
+
+Moreover, the expectation of the deviance is:
+
+\begin{equation} \label{eq:blr-dic-mlr-exp-dev}
+\begin{split}
+\left\langle D(\beta,\tau) \right\rangle &\overset{\eqref{eq:blr-dic-mlr-dev-s2}}{=} \left\langle n \cdot \log(2\pi) - n \cdot \log(\tau) - \log|P| + \tau \cdot (y - X\beta)^\mathrm{T} P (y - X\beta) \right\rangle \\
+&= n \cdot \log(2\pi) - n \cdot \left\langle \log(\tau) \right\rangle - \log|P| + \left\langle \tau \cdot (y - X\beta)^\mathrm{T} P (y - X\beta) \right\rangle \\
+&\overset{\eqref{eq:blr-dic-blr-post-log-tau}}{=} n \cdot \log(2\pi) - n \cdot \left[ \psi(a_n) - \log(b_n) \right] - \log|P| \\
+&+ \left\langle \tau \cdot \left\langle (y - X\beta)^\mathrm{T} P (y - X\beta) \right\rangle_{\beta|\tau,y} \right\rangle_{\tau|y} \\
+&= n \cdot \log(2\pi) - n \cdot \left[ \psi(a_n) - \log(b_n) \right] - \log|P| \\
+&+ \left\langle \tau \cdot \left\langle y^\mathrm{T} P y - y^\mathrm{T} P X\beta - \beta^\mathrm{T} X^\mathrm{T} P y + \beta^\mathrm{T} X^\mathrm{T} P X \beta \right\rangle_{\beta|\tau,y} \right\rangle_{\tau|y} \\
+&\overset{\eqref{eq:blr-dic-blr-post-beta-qf}}{=} n \cdot \log(2\pi) - n \cdot \left[ \psi(a_n) - \log(b_n) \right] - \log|P| \\
+&+ \left\langle \tau \cdot \left[ y^\mathrm{T} P y - y^\mathrm{T} P X\mu_n - \mu_n^\mathrm{T} X^\mathrm{T} P y + \mu_n^\mathrm{T} X^\mathrm{T} P X \mu_n  + \frac{1}{\tau} \mathrm{tr}\left( X^\mathrm{T} P X \Lambda_n^{-1} \right) \right] \right\rangle_{\tau|y} \\
+&= n \cdot \log(2\pi) - n \cdot \left[ \psi(a_n) - \log(b_n) \right] - \log|P| \\
+&+ \left\langle \tau \cdot (y - X\mu_n)^\mathrm{T} P (y - X\mu_n) \right\rangle_{\tau|y} + \mathrm{tr}\left( X^\mathrm{T} P X \Lambda_n^{-1} \right) \\
+&\overset{\eqref{eq:blr-dic-blr-post-tau}}{=} n \cdot \log(2\pi) - n \cdot \left[ \psi(a_n) - \log(b_n) \right] - \log|P| \\
+&+ \frac{a_n}{b_n} \cdot (y - X\mu_n)^\mathrm{T} P (y - X\mu_n) + \mathrm{tr}\left( X^\mathrm{T} P X \Lambda_n^{-1} \right) \; .
+\end{split}
+\end{equation}
+
+Finally, combining the two terms, we have:
+
+\begin{equation} \label{eq:blr-dic-mlr-dic-s2}
+\begin{split}
+\mathrm{DIC}(m) &\overset{\eqref{eq:blr-dic-mlr-dic-s1}}{=} 2 \left\langle D(\beta,\tau) \right\rangle - D(\left\langle \beta \right\rangle, \left\langle \tau \right\rangle) \\
+&\overset{\eqref{eq:blr-dic-mlr-exp-dev}}{=} 2 \left[ n \cdot \log(2\pi) - n \cdot \left[ \psi(a_n) - \log(b_n) \right] - \log|P| \right. \\
+&+ \left. \frac{a_n}{b_n} \cdot (y - X\mu_n)^\mathrm{T} P (y - X\mu_n) + \mathrm{tr}\left( X^\mathrm{T} P X \Lambda_n^{-1} \right) \right] \\
+&\overset{\eqref{eq:blr-dic-mlr-dev-exp}}{-} \left[ n \cdot \log(2\pi) - n \cdot \log\left(\frac{a_n}{b_n}\right) - \log|P| + \frac{a_n}{b_n} \cdot (y - X\mu_n)^\mathrm{T} P (y - X\mu_n) \right] \\
+&= n \cdot \log(2\pi) - 2 n \psi(a_n) + 2 n \log(b_n) + n \log(a_n) - \log(b_n) - \log|P| \\
+&+ \frac{a_n}{b_n} (y - X\mu_n)^\mathrm{T} P (y - X\mu_n) + \mathrm{tr}\left( X^\mathrm{T} P X \Lambda_n^{-1} \right) \\
+&= n \cdot \log(2\pi) - n \left[ 2 \psi(a_n) - \log(a_n) - \log(b_n) \right] - \log|P| \\
+&+ \frac{a_n}{b_n} (y - X\mu_n)^\mathrm{T} P (y - X\mu_n) + \mathrm{tr}\left( X^\mathrm{T} P X \Lambda_n^{-1} \right) \; .
+\end{split}
+\end{equation}
+
+This conforms to equation \eqref{eq:blr-dic-mlr-dic}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P313 | shortcut: blr-dic | author: JoramSoch | date: 2022-03-01, 12:10.
 \vspace{1em}
 
 
@@ -25319,13 +26580,13 @@ where
 2) and $\hat{\sigma}^2$ is a biased estimator ($\rightarrow$ Definition "est-unb") of $\sigma^2$
 
 \begin{equation} \label{eq:resvar-bias-resvar-var}
-\mathbb{E}\left[ \hat{\sigma}^2 \right] \neq \sigma^2 \; ,
+\mathrm{E}\left[ \hat{\sigma}^2 \right] \neq \sigma^2 \; ,
 \end{equation}
 
 more precisely:
 
 \begin{equation} \label{eq:resvar-bias-resvar-bias}
-\mathbb{E}\left[ \hat{\sigma}^2 \right] = \frac{n-1}{n} \sigma^2 \; .
+\mathrm{E}\left[ \hat{\sigma}^2 \right] = \frac{n-1}{n} \sigma^2 \; .
 \end{equation}
 
 
@@ -25346,49 +26607,49 @@ more precisely:
 
 \begin{equation} \label{eq:resvar-bias-E-resvar-mle-s1}
 \begin{split}
-\mathbb{E}\left[ \hat{\sigma}^2 \right] &= \mathbb{E}\left[ \frac{1}{n} \sum_{i=1}^{n} \left( x_i - \bar{x} \right)^2 \right] \\
-&= \frac{1}{n} \mathbb{E}\left[ \sum_{i=1}^{n} \left( x_i - \bar{x} \right)^2 \right] \\
-&= \frac{1}{n} \mathbb{E}\left[ \sum_{i=1}^{n} \left( x_i^2 - 2 x_i \bar{x} + \bar{x}^2 \right) \right] \\
-&= \frac{1}{n} \mathbb{E}\left[ \sum_{i=1}^{n} x_i^2 - 2 \sum_{i=1}^{n} x_i \bar{x} + \sum_{i=1}^{n} \bar{x}^2 \right] \\
-&= \frac{1}{n} \mathbb{E}\left[ \sum_{i=1}^{n} x_i^2 - 2 n \bar{x}^2 + n \bar{x}^2 \right] \\
-&= \frac{1}{n} \mathbb{E}\left[ \sum_{i=1}^{n} x_i^2 - n \bar{x}^2 \right] \\
-&= \frac{1}{n} \left( \sum_{i=1}^{n} \mathbb{E} \left[ x_i^2 \right] - n \mathbb{E}\left[ \bar{x}^2 \right] \right) \\
-&= \frac{1}{n} \sum_{i=1}^{n} \mathbb{E} \left[ x_i^2 \right] - \mathbb{E}\left[ \bar{x}^2 \right] \\
+\mathrm{E}\left[ \hat{\sigma}^2 \right] &= \mathrm{E}\left[ \frac{1}{n} \sum_{i=1}^{n} \left( x_i - \bar{x} \right)^2 \right] \\
+&= \frac{1}{n} \mathrm{E}\left[ \sum_{i=1}^{n} \left( x_i - \bar{x} \right)^2 \right] \\
+&= \frac{1}{n} \mathrm{E}\left[ \sum_{i=1}^{n} \left( x_i^2 - 2 x_i \bar{x} + \bar{x}^2 \right) \right] \\
+&= \frac{1}{n} \mathrm{E}\left[ \sum_{i=1}^{n} x_i^2 - 2 \sum_{i=1}^{n} x_i \bar{x} + \sum_{i=1}^{n} \bar{x}^2 \right] \\
+&= \frac{1}{n} \mathrm{E}\left[ \sum_{i=1}^{n} x_i^2 - 2 n \bar{x}^2 + n \bar{x}^2 \right] \\
+&= \frac{1}{n} \mathrm{E}\left[ \sum_{i=1}^{n} x_i^2 - n \bar{x}^2 \right] \\
+&= \frac{1}{n} \left( \sum_{i=1}^{n} \mathrm{E} \left[ x_i^2 \right] - n \mathrm{E}\left[ \bar{x}^2 \right] \right) \\
+&= \frac{1}{n} \sum_{i=1}^{n} \mathrm{E} \left[ x_i^2 \right] - \mathrm{E}\left[ \bar{x}^2 \right] \\
 \end{split}
 \end{equation}
 
 Due to the partition of variance into expected values ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:var-mean})
 
 \begin{equation} \label{eq:resvar-bias-var-mean}
-\mathrm{Var}(X) = \mathbb{E}(X^2) - \mathbb{E}(X)^2 \; ,
+\mathrm{Var}(X) = \mathrm{E}(X^2) - \mathrm{E}(X)^2 \; ,
 \end{equation}
 
 we have
 
 \begin{equation} \label{eq:resvar-bias-Var-xi-xb}
 \begin{split}
-\mathrm{Var}(x_i) &= \mathbb{E}(x_i^2) - \mathbb{E}(x_i)^2 \\
-\mathrm{Var}(\bar{x}) &= \mathbb{E}(\bar{x}^2) - \mathbb{E}(\bar{x})^2 \; ,
+\mathrm{Var}(x_i) &= \mathrm{E}(x_i^2) - \mathrm{E}(x_i)^2 \\
+\mathrm{Var}(\bar{x}) &= \mathrm{E}(\bar{x}^2) - \mathrm{E}(\bar{x})^2 \; ,
 \end{split}
 \end{equation}
 
 such that \eqref{eq:resvar-bias-E-resvar-mle-s1} becomes
 
 \begin{equation} \label{eq:resvar-bias-E-resvar-mle-s2}
-\mathbb{E}\left[ \hat{\sigma}^2 \right] = \frac{1}{n} \sum_{i=1}^{n} \left( \mathrm{Var}(x_i) + \mathbb{E}(x_i)^2 \right) - \left( \mathrm{Var}(\bar{x}) + \mathbb{E}(\bar{x})^2 \right) \; .
+\mathrm{E}\left[ \hat{\sigma}^2 \right] = \frac{1}{n} \sum_{i=1}^{n} \left( \mathrm{Var}(x_i) + \mathrm{E}(x_i)^2 \right) - \left( \mathrm{Var}(\bar{x}) + \mathrm{E}(\bar{x})^2 \right) \; .
 \end{equation}
 
 From \eqref{eq:resvar-bias-ug}, it follows that
 
 \begin{equation} \label{eq:resvar-bias-E-Var-xi}
-\mathbb{E}(x_i) = \mu \quad \text{and} \quad \mathrm{Var}(x_i) = \sigma^2 \; .
+\mathrm{E}(x_i) = \mu \quad \text{and} \quad \mathrm{Var}(x_i) = \sigma^2 \; .
 \end{equation}
 
 The expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) of $\bar{x}$ given by \eqref{eq:resvar-bias-mean-mle} is
 
 \begin{equation} \label{eq:resvar-bias-E-mean-mle}
 \begin{split}
-\mathbb{E}\left[ \bar{x} \right] &= \mathbb{E}\left[ \frac{1}{n} \sum_{i=1}^{n} x_i \right] = \frac{1}{n} \sum_{i=1}^{n} \mathbb{E}\left[ x_i \right] \\
+\mathrm{E}\left[ \bar{x} \right] &= \mathrm{E}\left[ \frac{1}{n} \sum_{i=1}^{n} x_i \right] = \frac{1}{n} \sum_{i=1}^{n} \mathrm{E}\left[ x_i \right] \\
 &\overset{\eqref{eq:resvar-bias-E-Var-xi}}{=} \frac{1}{n} \sum_{i=1}^{n} \mu = \frac{1}{n} \cdot n \cdot \mu \\
 &= \mu \; .
 \end{split}
@@ -25408,10 +26669,10 @@ Plugging \eqref{eq:resvar-bias-E-Var-xi}, \eqref{eq:resvar-bias-E-mean-mle} and 
 
 \begin{equation} \label{eq:resvar-bias-E-resvar-mle-s3}
 \begin{split}
-\mathbb{E}\left[ \hat{\sigma}^2 \right] &= \frac{1}{n} \sum_{i=1}^{n} \left( \sigma^2 + \mu^2 \right) - \left( \frac{1}{n} \sigma^2 + \mu^2 \right) \\
-\mathbb{E}\left[ \hat{\sigma}^2 \right] &= \frac{1}{n} \cdot n \cdot \left( \sigma^2 + \mu^2 \right) - \left( \frac{1}{n} \sigma^2 + \mu^2 \right) \\
-\mathbb{E}\left[ \hat{\sigma}^2 \right] &= \sigma^2 + \mu^2 - \frac{1}{n} \sigma^2 - \mu^2 \\
-\mathbb{E}\left[ \hat{\sigma}^2 \right] &= \frac{n-1}{n} \sigma^2
+\mathrm{E}\left[ \hat{\sigma}^2 \right] &= \frac{1}{n} \sum_{i=1}^{n} \left( \sigma^2 + \mu^2 \right) - \left( \frac{1}{n} \sigma^2 + \mu^2 \right) \\
+\mathrm{E}\left[ \hat{\sigma}^2 \right] &= \frac{1}{n} \cdot n \cdot \left( \sigma^2 + \mu^2 \right) - \left( \frac{1}{n} \sigma^2 + \mu^2 \right) \\
+\mathrm{E}\left[ \hat{\sigma}^2 \right] &= \sigma^2 + \mu^2 - \frac{1}{n} \sigma^2 - \mu^2 \\
+\mathrm{E}\left[ \hat{\sigma}^2 \right] &= \frac{n-1}{n} \sigma^2
 \end{split}
 \end{equation}
 
@@ -25856,10 +27117,10 @@ R^2 = \frac{\mathrm{SNR}}{\mathrm{1+\mathrm{SNR}}} \; ,
 Then, the Akaike information criterion (AIC) of this model is defined as
 
 \begin{equation} \label{eq:aic-AIC}
-\mathrm{AIC}(m) = -2 \log p(y | \hat{\theta}, m) + 2 \, p
+\mathrm{AIC}(m) = -2 \log p(y | \hat{\theta}, m) + 2 \, k
 \end{equation}
 
-where $p$ is the number of free parameters estimated via \eqref{eq:aic-MLE}.
+where $k$ is the number of free parameters estimated via \eqref{eq:aic-MLE}.
 
 
 \vspace{1em}
@@ -25871,6 +27132,129 @@ where $p$ is the number of free parameters estimated via \eqref{eq:aic-MLE}.
 
 \vspace{1em}
 \textbf{Metadata:} ID: D23 | shortcut: aic | author: JoramSoch | date: 2020-02-25, 12:31.
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Corrected AIC}]{Corrected AIC} \label{sec:aicc}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and maximum likelihood estimates ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mle})
+
+\begin{equation} \label{eq:aicc-MLE}
+\hat{\theta} = \operatorname*{arg\,max}_\theta \log p(y | \theta, m) \; .
+\end{equation}
+
+Then, the corrected Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aicc}) ($\mathrm{AIC}_\mathrm{c}$) of this model is defined as
+
+\begin{equation} \label{eq:aicc-AICc}
+\mathrm{AIC}_\mathrm{c}(m) = \mathrm{AIC}(m) + \frac{2k^2 + 2k}{n-k-1}
+\end{equation}
+
+where $\mathrm{AIC}(m)$ is the Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aic}) and $k$ is the number of free parameters estimated via \eqref{eq:aicc-MLE}.
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Hurvich CM, Tsai CL (1989): "Regression and time series model selection in small samples"; in: \textit{Biometrika}, vol. 76, no. 2, pp. 297-307; URL: \url{https://academic.oup.com/biomet/article-abstract/76/2/297/265326}; DOI: 10.1093/biomet/76.2.297.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D171 | shortcut: aicc | author: JoramSoch | date: 2022-02-11, 06:49.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Corrected AIC and uncorrected AIC}]{Corrected AIC and uncorrected AIC} \label{sec:aicc-aic}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} In the infinite data limit, the corrected Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aicc}) converges to the uncorrected Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aic})
+
+\begin{equation} \label{eq:aicc-aic-aicc-aic}
+\lim_{n \to \infty} \mathrm{AIC}_\mathrm{c}(m) = \mathrm{AIC}(m) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The corrected Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aicc}) is defined as
+
+\begin{equation} \label{eq:aicc-aic-aicc}
+\mathrm{AIC}_\mathrm{c}(m) = \mathrm{AIC}(m) + \frac{2k^2 + 2k}{n-k-1} \; .
+\end{equation}
+
+Note that the number of free model parameters $k$ is finite. Thus, we have:
+
+\begin{equation} \label{eq:aicc-aic-aicc-aic-qed}
+\begin{split}
+\lim_{n \to \infty} \mathrm{AIC}_\mathrm{c}(m) &= \lim_{n \to \infty} \left[ \mathrm{AIC}(m) + \frac{2k^2 + 2k}{n-k-1} \right] \\
+&= \lim_{n \to \infty} \mathrm{AIC}(m) + \lim_{n \to \infty} \frac{2k^2 + 2k}{n-k-1} \\
+&= \mathrm{AIC}(m) + 0 \\
+&= \mathrm{AIC}(m) \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2022): "Akaike information criterion"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-03-18; URL: \url{https://en.wikipedia.org/wiki/Akaike_information_criterion#Modification_for_small_sample_size}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P316 | shortcut: aicc-aic | author: JoramSoch | date: 2022-03-18, 17:00.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Corrected AIC and maximum log-likelihood}]{Corrected AIC and maximum log-likelihood} \label{sec:aicc-mll}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The corrected Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aicc}) of a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ is equal to
+
+\begin{equation} \label{eq:aicc-mll-aicc-mll}
+\mathrm{AIC}_\mathrm{c}(m) = -2 \log p(y | \hat{\theta}, m) + \frac{2nk}{n-k-1}
+\end{equation}
+
+where $\log p(y \vert \hat{\theta}, m)$ is the maximum log-likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mll}), $k$ is the number of free parameters and $n$ is the number of observations.
+
+
+\vspace{1em}
+\textbf{Proof:} The Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aic}) (AIC) is defined as
+
+\begin{equation} \label{eq:aicc-mll-aic}
+\mathrm{AIC}(m) = -2 \log p(y | \hat{\theta}, m) + 2 \, k
+\end{equation}
+
+and the corrected Akaike information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:aicc}) is defined as
+
+\begin{equation} \label{eq:aicc-mll-aicc}
+\mathrm{AIC}_\mathrm{c}(m) = \mathrm{AIC}(m) + \frac{2k^2 + 2k}{n-k-1} \; .
+\end{equation}
+
+Plugging \eqref{eq:aicc-mll-aic} into \eqref{eq:aicc-mll-aicc}, we obtain:
+
+\begin{equation} \label{eq:aicc-mll-aicc-mll-qed}
+\begin{split}
+\mathrm{AIC}_\mathrm{c}(m) &= -2 \log p(y | \hat{\theta}, m) + 2 \, k + \frac{2k^2 + 2k}{n-k-1} \\
+&= -2 \log p(y | \hat{\theta}, m) + \frac{2k(n-k-1)}{n-k-1} + \frac{2k^2 + 2k}{n-k-1} \\
+&= -2 \log p(y | \hat{\theta}, m) + \frac{2nk - 2k^2 - 2k}{n-k-1} + \frac{2k^2 + 2k}{n-k-1} \\
+&= -2 \log p(y | \hat{\theta}, m) + \frac{2nk}{n-k-1} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2022): "Akaike information criterion"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-03-11; URL: \url{https://en.wikipedia.org/wiki/Akaike_information_criterion#Modification_for_small_sample_size}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P315 | shortcut: aicc-mll | author: JoramSoch | date: 2022-03-11, 16:53.
 \vspace{1em}
 
 
@@ -25889,10 +27273,10 @@ where $p$ is the number of free parameters estimated via \eqref{eq:aic-MLE}.
 Then, the Bayesian information criterion (BIC) of this model is defined as
 
 \begin{equation} \label{eq:bic-BIC}
-\mathrm{BIC}(m) = -2 \log p(y | \hat{\theta}, m) + p \log n
+\mathrm{BIC}(m) = -2 \log p(y | \hat{\theta}, m) + k \log n
 \end{equation}
 
-where $n$ is the number of data points and $p$ is the number of free parameters estimated via \eqref{eq:bic-MLE}.
+where $n$ is the number of data points and $k$ is the number of free parameters estimated via \eqref{eq:bic-MLE}.
 
 
 \vspace{1em}
@@ -25996,33 +27380,25 @@ As $n \to \infty$, the last three terms are $O_p(1)$ and can therefore be ignore
 \subsubsection[\textit{Definition}]{Definition} \label{sec:dic}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert m)$. Together, likelihood function and prior distribution imply a posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) $p(\theta \vert y, m)$.
+\textbf{Definition:} Let $m$ be a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert m)$. Together, likelihood function and prior distribution imply a posterior distribution ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:post-jl}) $p(\theta \vert y, m)$. Consider the deviance ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:dev}) which is minus two times the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}):
 
-Define the posterior expected log-likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) (PLL)
-
-\begin{equation} \label{eq:dic-PLL}
-\mathrm{PLL}(m) = \left\langle \log p(y|\theta,m) \right\rangle_{\theta|y}
+\begin{equation} \label{eq:dic-dev}
+D(\theta) = -2 \log p(y|\theta,m) \; .
 \end{equation}
 
-and the log-likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) at the posterior expectation (LLP)
-
-\begin{equation} \label{eq:dic-LLP}
-\mathrm{LLP}(m) = \log p(y|\left\langle \theta \right\rangle_{\theta|y},m)
-\end{equation}
-
-where $\left\langle \cdot \right\rangle_{\theta \vert y}$ denotes an expectation across the posterior distribution.
-
-Then, the deviance information criterion (DIC) of the model is defined as
+Then, the deviance information criterion (DIC) of the model $m$ is defined as
 
 \begin{equation} \label{eq:dic-DIC}
-\mathrm{DIC}(m) = -2 \, \mathrm{LLP}(m) + 2 \, p_D \quad \text{or} \quad \mathrm{DIC}(m) = -2 \, \mathrm{PLL}(m) + p_D
+\mathrm{DIC}(m) = -2 \log p(y|\left\langle \theta \right\rangle, m) + 2 \, p_D
 \end{equation}
 
-where the "effective number of parameters" $p_D$ is given by
+where $\log p(y \vert \left\langle \theta \right\rangle, m)$ is the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) at the posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) expectation ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) and the "effective number of parameters" $p_D$ is the difference between the expectation of the deviance and the deviance at the expectation ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:dic}):
 
 \begin{equation} \label{eq:dic-DIC-pD}
-p_D = -2 \, \mathrm{PLL}(m) +2 \, \mathrm{LLP}(m) \; .
+p_D = \left\langle D(\theta) \right\rangle - D(\left\langle \theta \right\rangle) \; .
 \end{equation}
+
+In these equations, $\left\langle \cdot \right\rangle$ denotes expected values ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mean}) across the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}).
 
 
 \vspace{1em}
@@ -26039,6 +27415,33 @@ p_D = -2 \, \mathrm{PLL}(m) +2 \, \mathrm{LLP}(m) \; .
 
 
 
+\subsubsection[\textit{Deviance}]{Deviance} \label{sec:dev}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let there be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$. Then, the deviance of $m$ is a function of $\theta$ which multiplies the log-likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:llf}) with $-2$:
+
+\begin{equation} \label{eq:dev-dev}
+D(\theta) = -2 \log p(y|\theta,m) \; .
+\end{equation}
+
+The deviance function serves the definition of the deviance information criterion ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:dic}).
+
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Spiegelhalter DJ, Best NG, Carlin BP, Van Der Linde A (2002): "Bayesian measures of model complexity and fit"; in: \textit{Journal of the Royal Statistical Society, Series B: Statistical Methodology}, vol. 64, iss. 4, pp. 583-639; URL: \url{https://rss.onlinelibrary.wiley.com/doi/10.1111/1467-9868.00353}; DOI: 10.1111/1467-9868.00353.
+\item Soch J, Allefeld C (2018): "MACS – a new SPM toolbox for model assessment, comparison and selection"; in: \textit{Journal of Neuroscience Methods}, vol. 306, pp. 19-31, eqs. 10-12; URL: \url{https://www.sciencedirect.com/science/article/pii/S0165027018301468}; DOI: 10.1016/j.jneumeth.2018.05.017.
+\item Wikipedia (2022): "Deviance information criterion"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2022-03-01; URL: \url{https://en.wikipedia.org/wiki/Deviance_information_criterion#Definition}.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: D172 | shortcut: dev | author: JoramSoch | date: 2022-03-01, 07:48.
+\vspace{1em}
+
+
+
 \pagebreak
 \section{Bayesian model selection}
 
@@ -26047,7 +27450,7 @@ p_D = -2 \, \mathrm{PLL}(m) +2 \, \mathrm{LLP}(m) \; .
 \subsubsection[\textit{Definition}]{Definition} \label{sec:lme}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $m$ be a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert m)$. Then, the log model evidence (LME) of this model is defined as the logarithm of the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}):
+\textbf{Definition:} Let $m$ be a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}) with likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) $p(y \vert \theta, m)$ and prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) $p(\theta \vert m)$. Then, the log model evidence (LME) of this model is defined as the logarithm of the marginal likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:ml}):
 
 \begin{equation} \label{eq:lme-LME}
 \mathrm{LME}(m) = \log p(y|m) \; .
@@ -26076,45 +27479,71 @@ p_D = -2 \, \mathrm{PLL}(m) +2 \, \mathrm{LLP}(m) \; .
 \mathrm{LME}(m) = \log p(y|m) \; ,
 \end{equation}
 
-can be expressed
-
-1) as
+can be expressed in terms of likelihood ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) and prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) as
 
 \begin{equation} \label{eq:lme-der-LME-marg}
-\mathrm{LME}(m) = \log \int p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta
-\end{equation}
-
-2) or
-
-\begin{equation} \label{eq:lme-der-LME-bayes}
-\mathrm{LME}(m) = \log p(y|\theta,m) + \log p(\theta|m) - \log p(\theta|y,m) \; .
+\mathrm{LME}(m) = \log \int p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
 
 
 \vspace{1em}
-\textbf{Proof:}
+\textbf{Proof:} This a consequence of the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}) for continuous variables
 
-1) The first expression is a simple consequence of the law of marginal probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-marg}) for continuous variables according to which
-
-\begin{equation} \label{eq:lme-der-ME}
-p(y|m) = \int p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta
+\begin{equation} \label{eq:lme-der-prob-marg}
+p(y|m) = \int p(y,\theta|m) \, \mathrm{d}\theta
 \end{equation}
 
-which, when logarithmized, gives
+and the law of conditional probability ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prob-cond}) according to which
+
+\begin{equation} \label{eq:lme-der-prob-cond}
+p(y,\theta|m) = p(y|\theta,m) \, p(\theta|m) \; .
+\end{equation}
+
+Combining \eqref{eq:lme-der-prob-marg} with \eqref{eq:lme-der-prob-cond} and logarithmizing, we have:
 
 \begin{equation} \label{eq:lme-der-LME-marg-qed}
 \mathrm{LME}(m) = \log p(y|m) = \log \int p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
 
-2) The second expression can be derived from Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}) which makes a statement about the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}):
 
-\begin{equation} \label{eq:lme-der-BT}
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item original work\end{itemize}
+
+
+\vspace{1em}
+\textbf{Metadata:} ID: P13 | shortcut: lme-der | author: JoramSoch | date: 2020-01-06, 21:27.
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Expression using prior and posterior}]{Expression using prior and posterior} \label{sec:lme-pnp}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $p(y \vert \theta,m)$ be a likelihood function ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:lf}) of a generative model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:gm}) $m$ for making inferences on model parameters $\theta$ given measured data $y$. Moreover, let $p(\theta \vert m)$ be a prior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) on model parameters $\theta$. Then, the log model evidence ($\rightarrow$ Definition \ref{sec:Model Selection}/\ref{sec:lme}) (LME), also called marginal log-likelihood,
+
+\begin{equation} \label{eq:lme-pnp-LME-term}
+\mathrm{LME}(m) = \log p(y|m) \; ,
+\end{equation}
+
+can be expressed in terms of prior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:prior}) and posterior ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}) as
+
+\begin{equation} \label{eq:lme-pnp-LME-bayes}
+\mathrm{LME}(m) = \log p(y|\theta,m) + \log p(\theta|m) - \log p(\theta|y,m) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} For a full probability model ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:fpm}), Bayes' theorem ($\rightarrow$ Proof \ref{sec:General Theorems}/\ref{sec:bayes-th}) makes a statement about the posterior distribution ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:post}):
+
+\begin{equation} \label{eq:lme-pnp-BT}
 p(\theta|y,m) = \frac{p(y|\theta,m) \, p(\theta|m)}{p(y|m)} \; .
 \end{equation}
 
 Rearranging for $p(y \vert m)$ and logarithmizing, we have:
 
-\begin{equation} \label{eq:lme-der-LME-bayes-qed}
+\begin{equation} \label{eq:lme-pnp-LME-bayes-qed}
 \begin{split}
 \mathrm{LME}(m) = \log p(y|m) & = \log \frac{p(y|\theta,m) \, p(\theta|m)}{p(\theta|y,m)} \\
 &= \log p(y|\theta,m) + \log p(\theta|m) - \log p(\theta|y,m) \; .
@@ -26129,7 +27558,7 @@ Rearranging for $p(y \vert m)$ and logarithmizing, we have:
 
 
 \vspace{1em}
-\textbf{Metadata:} ID: P13 | shortcut: lme-der | author: JoramSoch | date: 2020-01-06, 21:27.
+\textbf{Metadata:} ID: P314 | shortcut: lme-pnp | author: JoramSoch | date: 2022-03-11, 16:25.
 \vspace{1em}
 
 
@@ -26163,7 +27592,7 @@ and the complexity penalty is the Kullback-Leibler divergence ($\rightarrow$ Def
 p(\theta|y,m) = \frac{p(y|\theta,m) \, p(\theta|m)}{p(y|m)} \; .
 \end{equation}
 
-Rearranging this for the model evidence ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:lme-der}), we have:
+Rearranging this for the model evidence ($\rightarrow$ Proof \ref{sec:Model Selection}/\ref{sec:lme-pnp}), we have:
 
 \begin{equation} \label{eq:lme-anc-AnC-s2}
 p(y|m) = \frac{p(y|\theta,m) \, p(\theta|m)}{p(\theta|y,m)} \; .
@@ -27549,6 +28978,25 @@ P297 & matn-samp & Sampling from the matrix-normal distribution & JoramSoch & 20
 P298 & mean-tr & Expected value of the trace of a matrix & JoramSoch & 2021-12-07 & \pageref{sec:mean-tr} \\ \hline
 P299 & corr-z & Correlation coefficient in terms of standard scores & JoramSoch & 2021-12-14 & \pageref{sec:corr-z} \\ \hline
 P300 & corr-range & Correlation always falls between -1 and +1 & JoramSoch & 2021-12-14 & \pageref{sec:corr-range} \\ \hline
+P301 & bern-var & Variance of the Bernoulli distribution & JoramSoch & 2022-01-20 & \pageref{sec:bern-var} \\ \hline
+P302 & bin-var & Variance of the binomial distribution & JoramSoch & 2022-01-20 & \pageref{sec:bin-var} \\ \hline
+P303 & bern-varrange & Range of the variance of the Bernoulli distribution & JoramSoch & 2022-01-27 & \pageref{sec:bern-varrange} \\ \hline
+P304 & bin-varrange & Range of the variance of the binomial distribution & JoramSoch & 2022-01-27 & \pageref{sec:bin-varrange} \\ \hline
+P305 & mlr-mll & Maximum log-likelihood for multiple linear regression & JoramSoch & 2022-02-04 & \pageref{sec:mlr-mll} \\ \hline
+P306 & lognorm-med & Median of the log-normal distribution & majapavlo & 2022-02-07 & \pageref{sec:lognorm-med} \\ \hline
+P307 & mlr-aic & Akaike information criterion for multiple linear regression & JoramSoch & 2022-02-11 & \pageref{sec:mlr-aic} \\ \hline
+P308 & mlr-bic & Bayesian information criterion for multiple linear regression & JoramSoch & 2022-02-11 & \pageref{sec:mlr-bic} \\ \hline
+P309 & mlr-aicc & Corrected Akaike information criterion for multiple linear regression & JoramSoch & 2022-02-11 & \pageref{sec:mlr-aicc} \\ \hline
+P310 & lognorm-pdf & Probability density function of the log-normal distribution & majapavlo & 2022-02-13 & \pageref{sec:lognorm-pdf} \\ \hline
+P311 & lognorm-mode & Mode of the log-normal distribution & majapavlo & 2022-02-13 & \pageref{sec:lognorm-mode} \\ \hline
+P312 & mlr-dev & Deviance for multiple linear regression & JoramSoch & 2022-03-01 & \pageref{sec:mlr-dev} \\ \hline
+P313 & blr-dic & Deviance information criterion for multiple linear regression & JoramSoch & 2022-03-01 & \pageref{sec:blr-dic} \\ \hline
+P314 & lme-pnp & Log model evidence in terms of prior and posterior distribution & JoramSoch & 2022-03-11 & \pageref{sec:lme-pnp} \\ \hline
+P315 & aicc-mll & Corrected Akaike information criterion in terms of maximum log-likelihood & JoramSoch & 2022-03-11 & \pageref{sec:aicc-mll} \\ \hline
+P316 & aicc-aic & Corrected Akaike information criterion converges to uncorrected Akaike information criterion when infinite data are available & JoramSoch & 2022-03-18 & \pageref{sec:aicc-aic} \\ \hline
+P317 & mle-bias & Maximum likelihood estimation can result in biased estimates & JoramSoch & 2022-03-18 & \pageref{sec:mle-bias} \\ \hline
+P318 & pval-h0 & The p-value follows a uniform distribution under the null hypothesis & JoramSoch & 2022-03-18 & \pageref{sec:pval-h0} \\ \hline
+P319 & prob-exh2 & Probability of exhaustive events & JoramSoch & 2022-03-27 & \pageref{sec:prob-exh2} \\ \hline
 \end{longtable}
 
 
@@ -27730,6 +29178,11 @@ D166 & eve-spc & Event space & JoramSoch & 2021-11-26 & \pageref{sec:eve-spc} \\
 D167 & prob-spc & Probability space & JoramSoch & 2021-11-26 & \pageref{sec:prob-spc} \\ \hline
 D168 & corr-samp & Sample correlation coefficient & JoramSoch & 2021-12-14 & \pageref{sec:corr-samp} \\ \hline
 D169 & corrmat-samp & Sample correlation matrix & JoramSoch & 2021-12-14 & \pageref{sec:corrmat-samp} \\ \hline
+D170 & lognorm & Log-normal distribution & majapavlo & 2022-02-07 & \pageref{sec:lognorm} \\ \hline
+D171 & aicc & Corrected Akaike information criterion & JoramSoch & 2022-02-11 & \pageref{sec:aicc} \\ \hline
+D172 & dev & Deviance & JoramSoch & 2022-03-01 & \pageref{sec:dev} \\ \hline
+D173 & mse & Mean squared error & JoramSoch & 2022-03-27 & \pageref{sec:mse} \\ \hline
+D174 & ci & Confidence interval & JoramSoch & 2022-03-27 & \pageref{sec:ci} \\ \hline
 \end{longtable}
 
 
@@ -27753,6 +29206,8 @@ $\bullet$ Additivity of the Kullback-Leibler divergence for independent distribu
 
 $\bullet$ Additivity of the variance for independent random variables, \pageref{sec:var-add}
 
+$\bullet$ Akaike information criterion for multiple linear regression, \pageref{sec:mlr-aic}
+
 
 \vspace{1em}
 \textbf{B}
@@ -27760,6 +29215,8 @@ $\bullet$ Additivity of the variance for independent random variables, \pageref{
 $\bullet$ Bayes' rule, \pageref{sec:bayes-rule}
 
 $\bullet$ Bayes' theorem, \pageref{sec:bayes-th}
+
+$\bullet$ Bayesian information criterion for multiple linear regression, \pageref{sec:mlr-bic}
 
 $\bullet$ Bayesian model averaging in terms of log model evidences, \pageref{sec:bma-lme}
 
@@ -27802,6 +29259,12 @@ $\bullet$ Construction of unbiased estimator for variance, \pageref{sec:resvar-u
 $\bullet$ Convexity of the cross-entropy, \pageref{sec:entcross-conv}
 
 $\bullet$ Convexity of the Kullback-Leibler divergence, \pageref{sec:kl-conv}
+
+$\bullet$ Corrected Akaike information criterion converges to uncorrected Akaike information criterion when infinite data are available, \pageref{sec:aicc-aic}
+
+$\bullet$ Corrected Akaike information criterion for multiple linear regression, \pageref{sec:mlr-aicc}
+
+$\bullet$ Corrected Akaike information criterion in terms of maximum log-likelihood, \pageref{sec:aicc-mll}
 
 $\bullet$ Correlation always falls between -1 and +1, \pageref{sec:corr-range}
 
@@ -27852,6 +29315,10 @@ $\bullet$ Derivation of the log family evidence, \pageref{sec:lfe-der}
 $\bullet$ Derivation of the log model evidence, \pageref{sec:lme-der}
 
 $\bullet$ Derivation of the posterior model probability, \pageref{sec:pmp-der}
+
+$\bullet$ Deviance for multiple linear regression, \pageref{sec:mlr-dev}
+
+$\bullet$ Deviance information criterion for multiple linear regression, \pageref{sec:blr-dic}
 
 $\bullet$ Differential entropy can be negative, \pageref{sec:dent-neg}
 
@@ -28009,6 +29476,8 @@ $\bullet$ Log model evidence for the univariate Gaussian, \pageref{sec:ug-lme}
 
 $\bullet$ Log model evidence for the univariate Gaussian with known variance, \pageref{sec:ugkv-lme}
 
+$\bullet$ Log model evidence in terms of prior and posterior distribution, \pageref{sec:lme-pnp}
+
 $\bullet$ Log sum inequality, \pageref{sec:logsum-ineq}
 
 $\bullet$ Log-odds and probability in logistic regression, \pageref{sec:logreg-lonp}
@@ -28024,6 +29493,8 @@ $\bullet$ Marginal distributions of the multivariate normal distribution, \pager
 $\bullet$ Marginal distributions of the normal-gamma distribution, \pageref{sec:ng-marg}
 
 $\bullet$ Marginal likelihood is a definite integral of joint likelihood, \pageref{sec:ml-jl}
+
+$\bullet$ Maximum likelihood estimation can result in biased estimates, \pageref{sec:mle-bias}
 
 $\bullet$ Maximum likelihood estimation for Dirichlet-distributed data, \pageref{sec:dir-mle}
 
@@ -28044,6 +29515,8 @@ $\bullet$ Maximum likelihood estimation for the univariate Gaussian, \pageref{se
 $\bullet$ Maximum likelihood estimation for the univariate Gaussian with known variance, \pageref{sec:ugkv-mle}
 
 $\bullet$ Maximum likelihood estimator of variance is biased, \pageref{sec:resvar-bias}
+
+$\bullet$ Maximum log-likelihood for multiple linear regression, \pageref{sec:mlr-mll}
 
 $\bullet$ Mean of the Bernoulli distribution, \pageref{sec:bern-mean}
 
@@ -28073,6 +29546,8 @@ $\bullet$ Median of the continuous uniform distribution, \pageref{sec:cuni-med}
 
 $\bullet$ Median of the exponential distribution, \pageref{sec:exp-med}
 
+$\bullet$ Median of the log-normal distribution, \pageref{sec:lognorm-med}
+
 $\bullet$ Median of the normal distribution, \pageref{sec:norm-med}
 
 $\bullet$ Method of moments for beta-distributed data, \pageref{sec:beta-mome}
@@ -28080,6 +29555,8 @@ $\bullet$ Method of moments for beta-distributed data, \pageref{sec:beta-mome}
 $\bullet$ Mode of the continuous uniform distribution, \pageref{sec:cuni-med}
 
 $\bullet$ Mode of the exponential distribution, \pageref{sec:exp-mode}
+
+$\bullet$ Mode of the log-normal distribution, \pageref{sec:lognorm-mode}
 
 $\bullet$ Mode of the normal distribution, \pageref{sec:norm-mode}
 
@@ -28221,6 +29698,8 @@ $\bullet$ Probability density function of the F-distribution, \pageref{sec:f-pdf
 
 $\bullet$ Probability density function of the gamma distribution, \pageref{sec:gam-pdf}
 
+$\bullet$ Probability density function of the log-normal distribution, \pageref{sec:lognorm-pdf}
+
 $\bullet$ Probability density function of the matrix-normal distribution, \pageref{sec:matn-pdf}
 
 $\bullet$ Probability density function of the multivariate normal distribution, \pageref{sec:mvn-pdf}
@@ -28257,6 +29736,8 @@ $\bullet$ Probability mass function of the Poisson distribution, \pageref{sec:po
 
 $\bullet$ Probability of exhaustive events, \pageref{sec:prob-exh}
 
+$\bullet$ Probability of exhaustive events, \pageref{sec:prob-exh2}
+
 $\bullet$ Probability of the complement, \pageref{sec:prob-comp}
 
 $\bullet$ Probability of the empty set, \pageref{sec:prob-emp}
@@ -28290,6 +29771,10 @@ $\bullet$ Quantile function of the normal distribution, \pageref{sec:norm-qf}
 \textbf{R}
 
 $\bullet$ Range of probability, \pageref{sec:prob-range}
+
+$\bullet$ Range of the variance of the Bernoulli distribution, \pageref{sec:bern-varrange}
+
+$\bullet$ Range of the variance of the binomial distribution, \pageref{sec:bin-varrange}
 
 $\bullet$ Relation of continuous Kullback-Leibler divergence to differential entropy, \pageref{sec:kl-dent}
 
@@ -28363,6 +29848,8 @@ $\bullet$ Sums of squares for simple linear regression, \pageref{sec:slr-sss}
 \vspace{1em}
 \textbf{T}
 
+$\bullet$ The p-value follows a uniform distribution under the null hypothesis, \pageref{sec:pval-h0}
+
 $\bullet$ The regression line goes through the center of mass point, \pageref{sec:slr-comp}
 
 $\bullet$ The residuals and the covariate are uncorrelated in simple linear regression, \pageref{sec:slr-rescorr}
@@ -28389,7 +29876,11 @@ $\bullet$ Variance of constant is zero, \pageref{sec:var-const}
 
 $\bullet$ Variance of parameter estimates for simple linear regression, \pageref{sec:slr-olsvar}
 
+$\bullet$ Variance of the Bernoulli distribution, \pageref{sec:bern-var}
+
 $\bullet$ Variance of the beta distribution, \pageref{sec:beta-var}
+
+$\bullet$ Variance of the binomial distribution, \pageref{sec:bin-var}
 
 $\bullet$ Variance of the gamma distribution, \pageref{sec:gam-var}
 
@@ -28471,11 +29962,15 @@ $\bullet$ Conditional independence, \pageref{sec:ind-cond}
 
 $\bullet$ Conditional probability distribution, \pageref{sec:dist-cond}
 
+$\bullet$ Confidence interval, \pageref{sec:ci}
+
 $\bullet$ Conjugate and non-conjugate prior distribution, \pageref{sec:prior-conj}
 
 $\bullet$ Constant, \pageref{sec:const}
 
 $\bullet$ Continuous uniform distribution, \pageref{sec:cuni}
+
+$\bullet$ Corrected Akaike information criterion, \pageref{sec:aicc}
 
 $\bullet$ Correlation, \pageref{sec:corr}
 
@@ -28500,6 +29995,8 @@ $\bullet$ Cumulative distribution function, \pageref{sec:cdf}
 
 \vspace{1em}
 \textbf{D}
+
+$\bullet$ Deviance, \pageref{sec:dev}
 
 $\bullet$ Deviance information criterion, \pageref{sec:dic}
 
@@ -28619,6 +30116,8 @@ $\bullet$ Log model evidence, \pageref{sec:lme}
 
 $\bullet$ Log-likelihood function, \pageref{sec:llf}
 
+$\bullet$ Log-normal distribution, \pageref{sec:lognorm}
+
 $\bullet$ Logistic regression, \pageref{sec:logreg}
 
 
@@ -28638,6 +30137,8 @@ $\bullet$ Maximum entropy prior distribution, \pageref{sec:prior-maxent}
 $\bullet$ Maximum likelihood estimation, \pageref{sec:mle}
 
 $\bullet$ Maximum log-likelihood, \pageref{sec:mll}
+
+$\bullet$ Mean squared error, \pageref{sec:mse}
 
 $\bullet$ Median, \pageref{sec:med}
 
