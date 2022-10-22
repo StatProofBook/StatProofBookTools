@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2022-10-22, 07:02}
+\date{2022-10-22, 07:22}
 
 \begin{document}
 
@@ -15955,7 +15955,7 @@ X \sim \ln \mathcal{N}(\mu, \sigma^2) \; .
 Then, the mode ($\rightarrow$ Definition \ref{sec:General Theorems}/\ref{sec:mode}) of $X$ is
 
 \begin{equation} \label{eq:lognorm-mode-lognorm-mode}
-\mathrm{mode}(X) = e^\left( \mu -\sigma^2 \right) \; .
+\mathrm{mode}(X) = e^{\left( \mu -\sigma^2 \right)} \; .
 \end{equation}
 
 \vspace{1em}
@@ -15991,7 +15991,7 @@ We now calculate the root of the first derivative \eqref{eq:lognorm-mode-lognorm
 \begin{split}
 f'_X(x) = 0 &= -\frac{1}{x^2 \sigma \sqrt{2 \pi}} \cdot \mathrm{exp} \left[ -\frac{\left( \ln x -\mu \right)^2}{2 \sigma^2} \right] \cdot \left(1 + \frac{\ln x -\mu}{\sigma^2} \right) \\
 -1 &= \frac{\ln x -\mu}{\sigma^2} \\
-x &= e^\left( \mu -\sigma^2 \right) \; .
+x &= e^{\left( \mu -\sigma^2 \right)} \; .
 \end{split}
 \end{equation}
 
@@ -16009,7 +16009,7 @@ f''_X(e^{(\mu-\sigma^2)}) &= \frac{1}{\sqrt{2\pi}\sigma^2(e^{(\mu-\sigma^2)})^3}
 we confirm that it is a maximum, showing that
 
 \begin{equation} \label{eq:lognorm-mode-lognorm-mode-qed}
-\mathrm{mode}(X) = e^\left( \mu -\sigma^2 \right) \; .
+\mathrm{mode}(X) = e^{\left( \mu -\sigma^2 \right)} \; .
 \end{equation}
 
 
