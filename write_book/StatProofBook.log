@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.7.24)  18 AUG 2023 16:24
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.7.24)  18 AUG 2023 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -265,11 +265,11 @@ Overfull \hbox (1.1145pt too wide) in paragraph at lines 61--61
 ari- 
  []
 
-[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13])
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15])
 \tf@toc=\write3
 \openout3 = `StatProofBook.toc'.
 
- [14] [15]
+ [16]
 Chapter I.
 [1
 
@@ -487,27 +487,7 @@ Overfull \hbox (18.61855pt too wide) in paragraph at lines 3732--3733
 [][][][][][][][][][][][][][][][][][][][][]$. 
  []
 
-[57] [58] [59] [60] [61] [62] [63] [64]
-
-LaTeX Warning: Reference `sec:skew' on page 65 undefined on input line 4352.
-
-
-LaTeX Warning: Reference `sec:skew' on page 65 undefined on input line 4361.
-
-
-LaTeX Warning: Reference `eq:skew-mean-skew' on page 65 undefined on input line
- 4367.
-
-[65]
-
-LaTeX Warning: Reference `eq:skew-mean-partition-s1' on page 66 undefined on in
-put line 4385.
-
-
-LaTeX Warning: Reference `eq:skew-mean-skew-partition' on page 66 undefined on 
-input line 4391.
-
-[66] [67] [68] [69]
+[57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
 Overfull \hbox (90.0036pt too wide) detected at line 4742
 \OT1/cmr/m/n/12 ^^F[] = [] = []  \OML/cmm/m/it/12 :
  []
@@ -928,16 +908,7 @@ on of the exponential distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Definit
 ion II[]/3.5.1[]). 
  []
 
-[236]
-
-LaTeX Warning: Reference `eq:exp-mgf-exp-mgf-s1' on page 237 undefined on input
- line 15514.
-
-
-LaTeX Warning: Reference `eq:exp-mgf-exp-mgf' on page 237 undefined on input li
-ne 15524.
-
-[237] [238] [239]
+[236] [237] [238] [239]
 Overfull \hbox (16.20068pt too wide) in paragraph at lines 15731--15732
 \TU/lmr/m/n/12 Berlin/Heidelberg, 2007, p. 39, eq. 2.142a; URL: $[][][][][] [] 
 [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][
@@ -950,79 +921,13 @@ Overfull \hbox (8.9824pt too wide) detected at line 15914
  []
 
 [242]
-
-LaTeX Warning: Reference `eq:exp-var-second-moment-s3' on page 243 undefined on
- input line 15927.
-
-
-LaTeX Warning: Reference `eq:exp-var-exp-mean-ref' on page 243 undefined on inp
-ut line 15927.
-
-
-LaTeX Warning: Reference `eq:exp-var-var2' on page 243 undefined on input line 
-15927.
-
-
 Overfull \hbox (17.43452pt too wide) in paragraph at lines 15943--15944
 \TU/lmr/m/it/12 matical statistics\TU/lmr/m/n/12 , retrieved on 2023-01-23; URL
 : $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][]
 [][][][][][][][][][][][][][][][][][] []
  []
 
-
-LaTeX Warning: Reference `sec:skew' on page 243 undefined on input line 15963.
-
-
-LaTeX Warning: Reference `sec:skew-mean' on page 243 undefined on input line 15
-972.
-
-[243]
-
-LaTeX Warning: Reference `sec:exp-var' on page 244 undefined on input line 1598
-4.
-
-
-LaTeX Warning: Reference `eq:exp-skew-exp-mean' on page 244 undefined on input 
-line 15990.
-
-
-LaTeX Warning: Reference `eq:exp-skew-exp-var' on page 244 undefined on input l
-ine 15990.
-
-
-LaTeX Warning: Reference `eq:exp-skew-skew-mean' on page 244 undefined on input
- line 15990.
-
-
-LaTeX Warning: Reference `sec:exp-mgf' on page 244 undefined on input line 1600
-2.
-
-
-LaTeX Warning: Reference `sec:exp-mgf' on page 244 undefined on input line 1601
-0.
-
-
-LaTeX Warning: Reference `eq:exp-skew-exp-moment' on page 244 undefined on inpu
-t line 16044.
-
-
-LaTeX Warning: Reference `eq:exp-skew-exp-skew-s3' on page 244 undefined on inp
-ut line 16044.
-
-[244]
-
-LaTeX Warning: Reference `eq:exp-skew-exp-skew-s4' on page 245 undefined on inp
-ut line 16055.
-
-
-LaTeX Warning: Reference `eq:exp-skew-skew-mean-alt' on page 245 undefined on i
-nput line 16055.
-
-
-LaTeX Warning: Reference `eq:exp-skew-exp-skew' on page 245 undefined on input 
-line 16066.
-
-[245] [246]
+[243] [244] [245] [246]
 Overfull \hbox (40.5293pt too wide) in paragraph at lines 16186--16187
 \TU/lmr/m/n/12 trieved on 2022-02-13; URL: $[][][][][] [] [] [] [][][] [] [][][
 ][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][] [
@@ -1080,133 +985,8 @@ Overfull \hbox (4.14517pt too wide) in paragraph at lines 17353--17354
 [][][][] [] [][][][][][][][] []
  []
 
-[265] [266] [267] [268] [269] [270] [271] [272] [273]
-
-LaTeX Warning: Reference `sec:exg' on page 274 undefined on input line 17946.
-
-
-LaTeX Warning: Reference `sec:exg' on page 274 undefined on input line 17960.
-
-[274]
-
-LaTeX Warning: Reference `eq:exg-pdf-norm-pdf' on page 275 undefined on input l
-ine 17987.
-
-
-LaTeX Warning: Reference `eq:exg-pdf-exp-pdf' on page 275 undefined on input li
-ne 17987.
-
-
-LaTeX Warning: Reference `eq:exg-pdf-convolution' on page 275 undefined on inpu
-t line 17987.
-
-
-LaTeX Warning: Reference `eq:exg-pdf-exg-pdf-s1' on page 275 undefined on input
- line 18018.
-
-[275]
-
-LaTeX Warning: Reference `eq:exg-pdf-exg-pdf' on page 276 undefined on input li
-ne 18032.
-
-
-LaTeX Warning: Reference `sec:exg' on page 276 undefined on input line 18050.
-
-
-LaTeX Warning: Reference `sec:exg' on page 276 undefined on input line 18064.
-
-
-LaTeX Warning: Reference `sec:exp-mgf' on page 276 undefined on input line 1807
-0.
-
-[276]
-
-LaTeX Warning: Reference `eq:exg-mgf-exg-mgf' on page 277 undefined on input li
-ne 18086.
-
-
-LaTeX Warning: Reference `sec:exg' on page 277 undefined on input line 18104.
-
-
-LaTeX Warning: Reference `sec:exg-mgf' on page 277 undefined on input line 1811
-8.
-
-[277]
-
-LaTeX Warning: Reference `eq:exg-mean-exg-mean-s1' on page 278 undefined on inp
-ut line 18139.
-
-
-LaTeX Warning: Reference `sec:exg' on page 278 undefined on input line 18165.
-
-
-LaTeX Warning: Reference `sec:exg-mgf' on page 278 undefined on input line 1818
-5.
-
-[278]
-
-LaTeX Warning: Reference `eq:exg-var-exg-var-s1' on page 279 undefined on input
- line 18217.
-
-
-LaTeX Warning: Reference `eq:exg-var-exg-var-s1' on page 279 undefined on input
- line 18217.
-
-
-LaTeX Warning: Reference `eq:exg-var-exg-moment' on page 279 undefined on input
- line 18220.
-
-
-LaTeX Warning: Reference `sec:exg-mean' on page 279 undefined on input line 182
-32.
-
-
-LaTeX Warning: Reference `eq:exg-var-var-mean' on page 279 undefined on input l
-ine 18238.
-
-
-LaTeX Warning: Reference `eq:exg-var-exg-var' on page 279 undefined on input li
-ne 18249.
-
-[279]
-
-LaTeX Warning: Reference `sec:exg' on page 280 undefined on input line 18267.
-
-
-LaTeX Warning: Reference `sec:skew' on page 280 undefined on input line 18273.
-
-
-LaTeX Warning: Reference `sec:skew-mean' on page 280 undefined on input line 18
-282.
-
-
-LaTeX Warning: Reference `eq:exg-skew-exg' on page 280 undefined on input line 
-18288.
-
-
-LaTeX Warning: Reference `eq:exg-skew-skew-mean' on page 280 undefined on input
- line 18288.
-
-
-LaTeX Warning: Reference `sec:exg' on page 280 undefined on input line 18294.
-
-
-LaTeX Warning: Reference `sec:exg-mean' on page 280 undefined on input line 182
-94.
-
-
-LaTeX Warning: Reference `sec:exg-var' on page 280 undefined on input line 1830
-0.
-
-
-LaTeX Warning: Reference `sec:exg-mgf' on page 280 undefined on input line 1830
-6.
-
-
-LaTeX Warning: Reference `sec:exg-mgf' on page 280 undefined on input line 1831
-4.
-
-[280]
+[265] [266] [267] [268] [269] [270] [271] [272] [273] [274] [275] [276]
+[277] [278] [279] [280]
 Overfull \hbox (87.15405pt too wide) detected at line 18344
 \OML/cmm/m/it/12 M[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = \OML
 /cmm/m/it/12 M[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) [] + \OML/
@@ -1215,40 +995,11 @@ m/m/it/12 :
  []
 
 
-LaTeX Warning: Reference `eq:exg-skew-exg-moment' on page 281 undefined on inpu
-t line 18346.
-
-
-LaTeX Warning: Reference `eq:exg-skew-exg-skew-s3' on page 281 undefined on inp
-ut line 18346.
-
-
-LaTeX Warning: Reference `eq:exg-skew-exg-skew-s4' on page 281 undefined on inp
-ut line 18359.
-
-
-LaTeX Warning: Reference `eq:exg-skew-exg-mean' on page 281 undefined on input 
-line 18359.
-
-
-LaTeX Warning: Reference `eq:exg-skew-exg-var' on page 281 undefined on input l
-ine 18359.
-
-
-LaTeX Warning: Reference `eq:exg-skew-skew-mean-alt' on page 281 undefined on i
-nput line 18359.
-
-
 Overfull \hbox (116.32988pt too wide) detected at line 18367
 []
  []
 
-[281]
-
-LaTeX Warning: Reference `eq:exg-skew-exg-skew' on page 282 undefined on input 
-line 18379.
-
-[282] [283] [284] [285]
+[281] [282] [283] [284] [285]
 Overfull \hbox (48.33452pt too wide) in paragraph at lines 18642--18643
 \TU/lmr/m/it/12 mathematical statistics\TU/lmr/m/n/12 , retrieved on 2022-09-15
 ; URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][
@@ -1281,12 +1032,7 @@ Overfull \hbox (15.13452pt too wide) in paragraph at lines 18988--18989
 [][][][][][][][][][][][][][][][][][] []
  []
 
-[291] [292] [293] [294] [295] [296] [297]
-
-LaTeX Warning: Reference `eq:mvn-indprod-mvn-indprod' on page 298 undefined on 
-input line 19399.
-
-[298] [299] [300]
+[291] [292] [293] [294] [295] [296] [297] [298] [299] [300]
 Overfull \hbox (2.85666pt too wide) in paragraph at lines 19604--19605
 \TU/lmr/m/n/12 pp. 55-56, eq. 2.212; URL: $[][][][][] [] [] [] [][][] [] [][][]
 [][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][][][][][][][]$; DOI: 1
@@ -1465,121 +1211,12 @@ Overfull \hbox (34.10669pt too wide) in paragraph at lines 23980--23981
 r/m/n/12 . 
  []
 
-
-LaTeX Warning: Reference `sec:anova1' on page 376 undefined on input line 23993
-.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 376 undefined on input line 23993
-.
-
-
-LaTeX Warning: Reference `sec:anova1-repara' on page 376 undefined on input lin
-e 23993.
-
-
-LaTeX Warning: Reference `sec:anova1' on page 376 undefined on input line 23993
-.
-
-[376]
-
-LaTeX Warning: Reference `sec:anova1' on page 377 undefined on input line 24024
-.
-
-
-LaTeX Warning: Reference `sec:anova1' on page 377 undefined on input line 24036
-.
-
-[377]
-
-LaTeX Warning: Reference `sec:anova1' on page 378 undefined on input line 24086
-.
-
-
-LaTeX Warning: Reference `sec:trss' on page 378 undefined on input line 24098.
-
-
-LaTeX Warning: Reference `sec:anova1' on page 378 undefined on input line 24102
-.
-
-[378]
-
-LaTeX Warning: Reference `eq:anova1-pss-anova1-pss-s1' on page 379 undefined on
- input line 24124.
-
-
-LaTeX Warning: Reference `sec:trss' on page 379 undefined on input line 24130.
-
-
-LaTeX Warning: Reference `sec:anova1' on page 379 undefined on input line 24130
-.
-
-
-LaTeX Warning: Reference `sec:anova1' on page 379 undefined on input line 24136
-.
-
-
-LaTeX Warning: Reference `sec:anova1' on page 379 undefined on input line 24165
-.
-
-[379]
-
-LaTeX Warning: Reference `eq:anova1-f-anova1-h0' on page 380 undefined on input
- line 24212.
-
-
+[376] [377] [378] [379]
 Overfull \hbox (101.57095pt too wide) detected at line 24232
 []
  []
 
-[380]
-
-LaTeX Warning: Reference `eq:anova1-f-sum-Uij-s1' on page 381 undefined on inpu
-t line 24255.
-
-[381]
-
-LaTeX Warning: Reference `eq:anova1-f-sum-Uij-s2' on page 382 undefined on inpu
-t line 24292.
-
-
-LaTeX Warning: Reference `eq:anova1-f-cochran-p1' on page 382 undefined on inpu
-t line 24292.
-
-
-LaTeX Warning: Reference `sec:anova1' on page 382 undefined on input line 24324
-.
-
-
-LaTeX Warning: Reference `eq:anova1-f-sum-Uij-s2' on page 382 undefined on inpu
-t line 24333.
-
-
-LaTeX Warning: Reference `eq:anova1-f-cochran-p1' on page 382 undefined on inpu
-t line 24333.
-
-
-LaTeX Warning: Reference `eq:anova1-f-cochran-p2' on page 382 undefined on inpu
-t line 24333.
-
-
-LaTeX Warning: Reference `eq:anova1-f-B' on page 382 undefined on input line 24
-333.
-
-
-LaTeX Warning: Reference `eq:anova1-f-B-rk' on page 382 undefined on input line
- 24333.
-
-[382]
-
-LaTeX Warning: Reference `eq:anova1-f-cochran-p2' on page 383 undefined on inpu
-t line 24342.
-
-
-LaTeX Warning: Reference `eq:anova1-f-anova1-f' on page 383 undefined on input 
-line 24342.
-
-
+[380] [381] [382]
 Overfull \hbox (2.16496pt too wide) in paragraph at lines 24365--24366
 \TU/lmr/m/n/12 sis” ; in: \TU/lmr/m/it/12 StackExchange CrossValidated\TU/lmr/m
 /n/12 , retrieved on 2022-11-06; URL: $[][][][][] [] [] [] [][][][][] [] [][][]
@@ -1594,94 +1231,7 @@ Overfull \hbox (34.10669pt too wide) in paragraph at lines 24365--24366
 r/m/n/12 . 
  []
 
-
-LaTeX Warning: Reference `sec:anova1' on page 383 undefined on input line 24378
-.
-
-
-LaTeX Warning: Reference `sec:anova1-f' on page 383 undefined on input line 243
-84.
-
-
-LaTeX Warning: Reference `sec:anova1-ols' on page 383 undefined on input line 2
-4384.
-
-
-LaTeX Warning: Reference `sec:anova1-repara' on page 383 undefined on input lin
-e 24390.
-
-[383]
-
-LaTeX Warning: Reference `sec:anova1-f' on page 384 undefined on input line 243
-97.
-
-
-LaTeX Warning: Reference `sec:anova1-ols' on page 384 undefined on input line 2
-4405.
-
-
-LaTeX Warning: Reference `sec:anova1-repara' on page 384 undefined on input lin
-e 24417.
-
-
-LaTeX Warning: Reference `sec:anova1' on page 384 undefined on input line 24448
-.
-
-[384]
-
-LaTeX Warning: Reference `sec:anova1-ols' on page 385 undefined on input line 2
-4474.
-
-
-LaTeX Warning: Reference `sec:anova1-pss' on page 385 undefined on input line 2
-4480.
-
-
-LaTeX Warning: Reference `eq:anova1-repara-anova1' on page 385 undefined on inp
-ut line 24502.
-
-
-LaTeX Warning: Reference `eq:anova1-repara-anova1-repara' on page 385 undefined
- on input line 24502.
-
-
-LaTeX Warning: Reference `eq:anova1-repara-anova1-repara' on page 385 undefined
- on input line 24512.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 385 undefined on input line 24512
-.
-
-
-LaTeX Warning: Reference `sec:anova2-ols' on page 385 undefined on input line 2
-4512.
-
-[385]
-
-LaTeX Warning: Reference `sec:anova1-f' on page 386 undefined on input line 245
-30.
-
-
-LaTeX Warning: Reference `sec:anova1-f' on page 386 undefined on input line 245
-39.
-
-
-LaTeX Warning: Reference `eq:anova1-repara-anova1-repara-c2-qed' on page 386 un
-defined on input line 24545.
-
-
-LaTeX Warning: Reference `eq:anova1-repara-anova1-repara-c2-qed' on page 386 un
-defined on input line 24545.
-
-
-LaTeX Warning: Reference `eq:anova1-repara-anova1-repara-c4-h0' on page 386 und
-efined on input line 24556.
-
-
-LaTeX Warning: Reference `eq:anova1-repara-anova1-repara-c4-h0' on page 386 und
-efined on input line 24556.
-
-[386] [387]
+[383] [384] [385] [386] [387]
 Overfull \hbox (17.1313pt too wide) in paragraph at lines 24644--24645
 \TU/lmr/m/it/12 Sozialwissenschaftler\TU/lmr/m/n/12 , ch. 12.2, pp. 538ff.; URL
 : $[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][] [] [][][][][] [] [][]
@@ -1696,349 +1246,22 @@ Overfull \hbox (33.65468pt too wide) in paragraph at lines 24645--24646
 r/m/n/12 . 
  []
 
-
-LaTeX Warning: Reference `sec:anova2' on page 388 undefined on input line 24658
-.
-
-
-LaTeX Warning: Reference `sec:anova2-pss' on page 388 undefined on input line 2
-4658.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 388 undefined on input line 24658
-.
-
-
-LaTeX Warning: Reference `sec:trss' on page 388 undefined on input line 24664.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 388 undefined on input line 24692
-.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 388 undefined on input line 24701
-.
-
-[388]
-
-LaTeX Warning: Reference `sec:anova2' on page 389 undefined on input line 24736
-.
-
-[389]
-
-LaTeX Warning: Reference `eq:anova2-ols-samp-size' on page 390 undefined on inp
-ut line 24797.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-anova2-cons' on page 390 undefined on i
-nput line 24797.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-mean-samp' on page 390 undefined on inp
-ut line 24797.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-samp-size' on page 390 undefined on inp
-ut line 24797.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-anova2-cons' on page 390 undefined on i
-nput line 24797.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-mean-samp' on page 390 undefined on inp
-ut line 24797.
-
-[390]
-
-LaTeX Warning: Reference `eq:anova2-ols-anova2-cons' on page 391 undefined on i
-nput line 24807.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-mean-samp' on page 391 undefined on inp
-ut line 24807.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-anova2-cons' on page 391 undefined on i
-nput line 24807.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-mean-samp' on page 391 undefined on inp
-ut line 24807.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-anova2-cons' on page 391 undefined on i
-nput line 24817.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-mean-samp' on page 391 undefined on inp
-ut line 24817.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-anova2-cons' on page 391 undefined on i
-nput line 24817.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-mean-samp' on page 391 undefined on inp
-ut line 24817.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-mean-samp' on page 391 undefined on inp
-ut line 24826.
-
-
-LaTeX Warning: Reference `eq:anova2-ols-mean-samp' on page 391 undefined on inp
-ut line 24826.
-
-[391]
-
-LaTeX Warning: Reference `sec:anova2' on page 392 undefined on input line 24847
-.
-
-
-LaTeX Warning: Reference `sec:trss' on page 392 undefined on input line 24859.
-
-
-LaTeX Warning: Reference `sec:iass' on page 392 undefined on input line 24859.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 392 undefined on input line 24863
-.
-
-
-LaTeX Warning: Reference `sec:anova2-cochran' on page 392 undefined on input li
-ne 24878.
-
-[392]
-
-LaTeX Warning: Reference `eq:anova2-pss-anova2-pss-s1' on page 393 undefined on
- input line 24889.
-
-
+[388] [389] [390] [391] [392]
 Overfull \hbox (16.6036pt too wide) detected at line 24898
 []
  []
 
-
-LaTeX Warning: Reference `sec:trss' on page 393 undefined on input line 24900.
-
-
-LaTeX Warning: Reference `sec:iass' on page 393 undefined on input line 24909.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 393 undefined on input line 24915
-.
-
-[393]
-
-LaTeX Warning: Reference `sec:anova2' on page 394 undefined on input line 24945
-.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 394 undefined on input line 24954
-.
-
-
-LaTeX Warning: Reference `sec:anova2-pss' on page 394 undefined on input line 2
-4965.
-
-[394]
-
-LaTeX Warning: Reference `eq:anova2-cochran-anova2' on page 395 undefined on in
-put line 25001.
-
-[395]
+[393] [394] [395]
 Overfull \hbox (27.08444pt too wide) detected at line 25032
 []
  []
 
-
-LaTeX Warning: Reference `eq:anova2-cochran-mean-samp' on page 396 undefined on
- input line 25041.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-mean-samp' on page 396 undefined on
- input line 25041.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-mean-samp' on page 396 undefined on
- input line 25050.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-samp-size' on page 396 undefined on
- input line 25050.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-anova2-constr' on page 396 undefine
-d on input line 25050.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-mean-samp' on page 396 undefined on
- input line 25050.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-samp-size' on page 396 undefined on
- input line 25050.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-anova2-constr' on page 396 undefine
-d on input line 25050.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-mean-samp' on page 396 undefined on
- input line 25059.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-samp-size' on page 396 undefined on
- input line 25059.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-anova2-constr' on page 396 undefine
-d on input line 25059.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-mean-samp' on page 396 undefined on
- input line 25059.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-samp-size' on page 396 undefined on
- input line 25059.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-anova2-constr' on page 396 undefine
-d on input line 25059.
-
-[396]
-
-LaTeX Warning: Reference `eq:anova2-cochran-sum-Uijk-s3c' on page 397 undefined
- on input line 25072.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-sum-Uijk-s3b' on page 397 undefined
- on input line 25072.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-mean-samp' on page 397 undefined on
- input line 25072.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-anova2-constr' on page 397 undefine
-d on input line 25072.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-sum-Uijk-s3c' on page 397 undefined
- on input line 25072.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-sum-Uijk-s3b' on page 397 undefined
- on input line 25072.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-mean-samp' on page 397 undefined on
- input line 25072.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-anova2-constr' on page 397 undefine
-d on input line 25072.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-sum-Uijk-s2' on page 397 undefined 
-on input line 25081.
-
-[397] [398]
-
-LaTeX Warning: Reference `eq:anova2-cochran-cochran-p1' on page 399 undefined o
-n input line 25158.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-sum-Uijk-s4' on page 399 undefined 
-on input line 25158.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-cochran-p2' on page 399 undefined o
-n input line 25158.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-B' on page 399 undefined on input l
-ine 25158.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-B-rk' on page 399 undefined on inpu
-t line 25158.
-
-[399]
-
-LaTeX Warning: Reference `sec:anova2-pss' on page 400 undefined on input line 2
-5170.
-
-
-LaTeX Warning: Reference `eq:anova2-cochran-anova2-cochran' on page 400 undefin
-ed on input line 25170.
-
-
+[396] [397] [398] [399]
 Overfull \hbox (26.24638pt too wide) detected at line 25180
 []
  []
 
-
-LaTeX Warning: Reference `sec:anova2' on page 400 undefined on input line 25199
-.
-
-[400]
-
-LaTeX Warning: Reference `sec:anova2' on page 401 undefined on input line 25220
-.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 401 undefined on input line 25241
-.
-
-
-LaTeX Warning: Reference `sec:anova2-cochran' on page 401 undefined on input li
-ne 25252.
-
-[401]
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-fme-A' on page 402 undefined on 
-input line 25272.
-
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-ss-dist' on page 402 undefined o
-n input line 25280.
-
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-fme-h0-A' on page 402 undefined 
-on input line 25280.
-
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-ss-dist' on page 402 undefined o
-n input line 25280.
-
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-fme-h0-A' on page 402 undefined 
-on input line 25280.
-
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-fme-B' on page 402 undefined on 
-input line 25291.
-
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-ss-dist' on page 402 undefined o
-n input line 25299.
-
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-fme-h0-B' on page 402 undefined 
-on input line 25299.
-
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-ss-dist' on page 402 undefined o
-n input line 25299.
-
-
-LaTeX Warning: Reference `eq:anova2-fme-anova2-fme-h0-B' on page 402 undefined 
-on input line 25299.
-
-
+[400] [401]
 Overfull \hbox (33.65468pt too wide) in paragraph at lines 25314--25315
 [][][][][][][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][] [] [
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -2055,41 +1278,7 @@ Overfull \hbox (273.16139pt too wide) in paragraph at lines 25315--25316
 ][][][][][][][][][]$. 
  []
 
-[402]
-
-LaTeX Warning: Reference `sec:anova2' on page 403 undefined on input line 25328
-.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 403 undefined on input line 25349
-.
-
-
-LaTeX Warning: Reference `sec:anova2-cochran' on page 403 undefined on input li
-ne 25360.
-
-[403]
-
-LaTeX Warning: Reference `eq:anova2-fia-anova2-fia' on page 404 undefined on in
-put line 25380.
-
-
-LaTeX Warning: Reference `eq:anova2-fia-anova2-ss-dist' on page 404 undefined o
-n input line 25388.
-
-
-LaTeX Warning: Reference `eq:anova2-fia-anova2-fia-h0' on page 404 undefined on
- input line 25388.
-
-
-LaTeX Warning: Reference `eq:anova2-fia-anova2-ss-dist' on page 404 undefined o
-n input line 25388.
-
-
-LaTeX Warning: Reference `eq:anova2-fia-anova2-fia-h0' on page 404 undefined on
- input line 25388.
-
-
+[402] [403]
 Overfull \hbox (33.65468pt too wide) in paragraph at lines 25404--25405
 [][][][][][][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][] [] [
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -2097,94 +1286,7 @@ Overfull \hbox (33.65468pt too wide) in paragraph at lines 25404--25405
 r/m/n/12 . 
  []
 
-
-LaTeX Warning: Reference `sec:anova2' on page 404 undefined on input line 25417
-.
-
-[404]
-
-LaTeX Warning: Reference `sec:anova2' on page 405 undefined on input line 25438
-.
-
-
-LaTeX Warning: Reference `sec:anova2-cochran' on page 405 undefined on input li
-ne 25449.
-
-
-LaTeX Warning: Reference `eq:anova2-fgm-anova2-fgm' on page 405 undefined on in
-put line 25467.
-
-
-LaTeX Warning: Reference `eq:anova2-fgm-anova2-ss-dist' on page 405 undefined o
-n input line 25475.
-
-
-LaTeX Warning: Reference `eq:anova2-fgm-anova2-fgm' on page 405 undefined on in
-put line 25475.
-
-
-LaTeX Warning: Reference `eq:anova2-fgm-anova2-ss-dist' on page 405 undefined o
-n input line 25475.
-
-
-LaTeX Warning: Reference `eq:anova2-fgm-anova2-fgm' on page 405 undefined on in
-put line 25475.
-
-[405]
-
-LaTeX Warning: Reference `sec:anova2' on page 406 undefined on input line 25504
-.
-
-
-LaTeX Warning: Reference `sec:anova2-fgm' on page 406 undefined on input line 2
-5510.
-
-
-LaTeX Warning: Reference `sec:anova2-fme' on page 406 undefined on input line 2
-5510.
-
-
-LaTeX Warning: Reference `sec:anova2-fia' on page 406 undefined on input line 2
-5510.
-
-
-LaTeX Warning: Reference `sec:anova2-ols' on page 406 undefined on input line 2
-5510.
-
-
-LaTeX Warning: Reference `sec:anova2-fgm' on page 406 undefined on input line 2
-5528.
-
-
-LaTeX Warning: Reference `sec:anova2-fme' on page 406 undefined on input line 2
-5528.
-
-
-LaTeX Warning: Reference `sec:anova2-fia' on page 406 undefined on input line 2
-5528.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 406 undefined on input line 25528
-.
-
-
-LaTeX Warning: Reference `sec:anova2-ols' on page 406 undefined on input line 2
-5539.
-
-[406]
-
-LaTeX Warning: Reference `eq:anova2-fols-y-est-qed' on page 407 undefined on in
-put line 25572.
-
-
-LaTeX Warning: Reference `eq:anova2-fols-anova2-ols' on page 407 undefined on i
-nput line 25572.
-
-
-LaTeX Warning: Reference `eq:anova2-fols-anova2-f' on page 407 undefined on inp
-ut line 25572.
-
-[407]
+[404] [405] [406] [407]
 Overfull \hbox (22.50926pt too wide) in paragraph at lines 25655--25656
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][] 
@@ -2194,7 +1296,7 @@ Overfull \hbox (22.50926pt too wide) in paragraph at lines 25655--25656
 [408]
 Overfull \hbox (11.11046pt too wide) in paragraph at lines 25693--25694
 []\TU/lmr/m/n/12 Comparing with the multiple linear regression equations for un
-correlated errors ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Definition III[]/1.4.1[]
+correlated errors ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Definition III[]/1.5.1[]
 ),
  []
 
@@ -2287,297 +1389,22 @@ Overfull \hbox (24.77728pt too wide) in paragraph at lines 27515--27516
 ] [] [][][][][][][][] [] [][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[444] [445] [446] [447] [448] [449] [450] [451]
-
-LaTeX Warning: Reference `eq:mlr-symm-P-symm' on page 452 undefined on input li
-ne 28086.
-
-
-LaTeX Warning: Reference `eq:mlr-symm-R' on page 452 undefined on input line 28
-086.
-
-
-LaTeX Warning: Reference `eq:mlr-symm-P-symm' on page 452 undefined on input li
-ne 28086.
-
-
-LaTeX Warning: Reference `eq:mlr-symm-R' on page 452 undefined on input line 28
-086.
-
-[452]
-
-LaTeX Warning: Reference `sec:mlr-wlsdist' on page 453 undefined on input line 
-28177.
-
-
-LaTeX Warning: Reference `eq:mlr-ind-mlr' on page 453 undefined on input line 2
-8187.
-
-
-LaTeX Warning: Reference `sec:mlr-wlsdist' on page 453 undefined on input line 
-28187.
-
-[453]
-
-LaTeX Warning: Reference `sec:mlr-ind' on page 454 undefined on input line 2821
-6.
-
-
-LaTeX Warning: Reference `eq:mlr-ind-y-dist' on page 454 undefined on input lin
-e 28222.
-
-
-LaTeX Warning: Reference `eq:mlr-ind-b-proj' on page 454 undefined on input lin
-e 28222.
-
-
-LaTeX Warning: Reference `eq:mlr-ind-e-proj' on page 454 undefined on input lin
-e 28222.
-
-
-LaTeX Warning: Reference `sec:mlr-t' on page 454 undefined on input line 28234.
-
-
-[454]
-
-LaTeX Warning: Reference `eq:mlr-olsdist-mlr' on page 455 undefined on input li
-ne 28283.
-
-
-LaTeX Warning: Reference `eq:mlr-olsdist-mvn-ltt' on page 455 undefined on inpu
-t line 28289.
-
-
-LaTeX Warning: Reference `eq:mlr-olsdist-mlr-vect' on page 455 undefined on inp
-ut line 28289.
-
-
-LaTeX Warning: Reference `eq:mlr-olsdist-mvn-ltt' on page 455 undefined on inpu
-t line 28301.
-
-
-LaTeX Warning: Reference `eq:mlr-olsdist-b-est' on page 455 undefined on input 
-line 28301.
-
-
-LaTeX Warning: Reference `eq:mlr-olsdist-mvn-ltt' on page 455 undefined on inpu
-t line 28316.
-
-
-LaTeX Warning: Reference `eq:mlr-olsdist-y-est' on page 455 undefined on input 
-line 28316.
-
-
-LaTeX Warning: Reference `eq:mlr-olsdist-mvn-ltt' on page 455 undefined on inpu
-t line 28331.
-
-
-LaTeX Warning: Reference `eq:mlr-olsdist-e-est' on page 455 undefined on input 
-line 28331.
-
-
-LaTeX Warning: Reference `sec:mlr-symm' on page 455 undefined on input line 283
-40.
-
-
+[444] [445] [446] [447] [448] [449] [450] [451] [452] [453] [454]
 Overfull \hbox (28.98598pt too wide) in paragraph at lines 28350--28351
 \TU/lmr/m/n/12 Berlin/Heidelberg, 2007, ch. 4, eqs. 4.2, 4.30; URL: $[][][][][]
  [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][
 ][][][][][][][][]$;
  []
 
-[455]
-
-LaTeX Warning: Reference `eq:mlr-wlsdist-mvn-ltt' on page 456 undefined on inpu
-t line 28394.
-
-
-LaTeX Warning: Reference `eq:mlr-wlsdist-mlr' on page 456 undefined on input li
-ne 28394.
-
-
-LaTeX Warning: Reference `eq:mlr-wlsdist-mvn-ltt' on page 456 undefined on inpu
-t line 28406.
-
-
-LaTeX Warning: Reference `eq:mlr-wlsdist-b-est' on page 456 undefined on input 
-line 28406.
-
-
-LaTeX Warning: Reference `eq:mlr-wlsdist-mvn-ltt' on page 456 undefined on inpu
-t line 28421.
-
-
-LaTeX Warning: Reference `eq:mlr-wlsdist-y-est' on page 456 undefined on input 
-line 28421.
-
-[456]
-
-LaTeX Warning: Reference `eq:mlr-wlsdist-mvn-ltt' on page 457 undefined on inpu
-t line 28436.
-
-
-LaTeX Warning: Reference `eq:mlr-wlsdist-e-est' on page 457 undefined on input 
-line 28436.
-
-
+[455] [456]
 Overfull \hbox (28.98598pt too wide) in paragraph at lines 28454--28455
 \TU/lmr/m/n/12 Berlin/Heidelberg, 2007, ch. 4, eqs. 4.2, 4.30; URL: $[][][][][]
  [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][
 ][][][][][][][][]$;
  []
 
-[457]
-
-LaTeX Warning: Reference `eq:mlr-rssdist-mlr' on page 458 undefined on input li
-ne 28492.
-
-
-LaTeX Warning: Reference `sec:mlr-symm' on page 458 undefined on input line 285
-32.
-
-
-LaTeX Warning: Reference `eq:mlr-rssdist-mvn-cochran' on page 458 undefined on 
-input line 28538.
-
-[458] [459] [460] [461] [462]
-
-LaTeX Warning: Reference `sec:tcon' on page 463 undefined on input line 28822.
-
-
-LaTeX Warning: Reference `sec:mlr-wlsdist' on page 463 undefined on input line 
-28862.
-
-
-LaTeX Warning: Reference `sec:tcon' on page 463 undefined on input line 28868.
-
-[463]
-
-LaTeX Warning: Reference `sec:mlr-rssdist' on page 464 undefined on input line 
-28898.
-
-
-LaTeX Warning: Reference `sec:mlr-ind' on page 464 undefined on input line 2890
-4.
-
-
-LaTeX Warning: Reference `eq:mlr-t-mlr-t-s1' on page 464 undefined on input lin
-e 28931.
-
-
-LaTeX Warning: Reference `eq:mlr-t-mlr-ind-v2' on page 464 undefined on input l
-ine 28931.
-
-
-LaTeX Warning: Reference `eq:mlr-t-mlr-rss' on page 464 undefined on input line
- 28931.
-
-
-LaTeX Warning: Reference `eq:mlr-t-mlr-est' on page 464 undefined on input line
- 28931.
-
-
-LaTeX Warning: Reference `eq:mlr-t-mlr-t-s1' on page 464 undefined on input lin
-e 28931.
-
-
-LaTeX Warning: Reference `eq:mlr-t-mlr-ind-v2' on page 464 undefined on input l
-ine 28931.
-
-
-LaTeX Warning: Reference `eq:mlr-t-mlr-rss' on page 464 undefined on input line
- 28931.
-
-
-LaTeX Warning: Reference `eq:mlr-t-mlr-est' on page 464 undefined on input line
- 28931.
-
-[464]
-
-LaTeX Warning: Reference `sec:fcon' on page 465 undefined on input line 28960.
-
-[465]
-
-LaTeX Warning: Reference `sec:mlr-wlsdist' on page 466 undefined on input line 
-29000.
-
-
-LaTeX Warning: Reference `sec:fcon' on page 466 undefined on input line 29006.
-
-
-LaTeX Warning: Reference `sec:mlr-rssdist' on page 466 undefined on input line 
-29024.
-
-
-LaTeX Warning: Reference `eq:mlr-f-gam-chi2' on page 466 undefined on input lin
-e 29036.
-
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-rss-dist' on page 466 undefined on input
- line 29036.
-
-
-LaTeX Warning: Reference `eq:mlr-f-g-est-tau-dist-cond' on page 466 undefined o
-n input line 29042.
-
-
-LaTeX Warning: Reference `eq:mlr-f-tau-dist' on page 466 undefined on input lin
-e 29042.
-
-[466]
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-f-h0' on page 467 undefined on input lin
-e 29072.
-
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-f-s1' on page 467 undefined on input lin
-e 29083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-f-h0' on page 467 undefined on input lin
-e 29083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-fcon' on page 467 undefined on input line 29
-083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-g-est-tau-dist-cond' on page 467 undefined o
-n input line 29083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-rss' on page 467 undefined on input line
- 29083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-est' on page 467 undefined on input line
- 29083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-f-s1' on page 467 undefined on input lin
-e 29083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-f-h0' on page 467 undefined on input lin
-e 29083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-fcon' on page 467 undefined on input line 29
-083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-g-est-tau-dist-cond' on page 467 undefined o
-n input line 29083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-rss' on page 467 undefined on input line
- 29083.
-
-
-LaTeX Warning: Reference `eq:mlr-f-mlr-est' on page 467 undefined on input line
- 29083.
-
-[467] [468] [469] [470]
+[457] [458] [459] [460] [461] [462] [463] [464] [465] [466] [467] [468]
+[469] [470]
 Overfull \hbox (52.19144pt too wide) in paragraph at lines 29304--29305
 \TU/lmr/m/it/12 eraging\TU/lmr/m/n/12 , ex. 2.2, p. 66; URL: $[][][][][] [] [] 
 [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][] [] [][][][]
@@ -2636,100 +1463,7 @@ n/12 , the joint likelihood $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/1
 2 Y; B; T\OT1/cmr/m/n/12 )$
  []
 
-[505] [506]
-
-LaTeX Warning: Reference `eq:bin-mle-Bin' on page 507 undefined on input line 3
-1601.
-
-
-LaTeX Warning: Reference `eq:bin-mle-Bin-LL' on page 507 undefined on input lin
-e 31619.
-
-[507]
-
-LaTeX Warning: Reference `sec:bin-mle' on page 508 undefined on input line 3167
-3.
-
-
-LaTeX Warning: Reference `sec:bin-mle' on page 508 undefined on input line 3167
-9.
-
-
-LaTeX Warning: Reference `eq:bin-mll-Bin-MLE' on page 508 undefined on input li
-ne 31685.
-
-
-LaTeX Warning: Reference `eq:bin-mll-Bin-LL' on page 508 undefined on input lin
-e 31685.
-
-
-LaTeX Warning: Reference `eq:bin-mll-Bin' on page 508 undefined on input line 3
-1685.
-
-[508] [509] [510] [511] [512]
-
-LaTeX Warning: Reference `sec:bin-mle' on page 513 undefined on input line 3202
-7.
-
-[513] [514]
-
-LaTeX Warning: Reference `sec:bin-lbf' on page 515 undefined on input line 3210
-0.
-
-
-LaTeX Warning: Reference `eq:bin-pp-PP-LBF' on page 515 undefined on input line
- 32120.
-
-
-LaTeX Warning: Reference `eq:bin-pp-Bin-BF10' on page 515 undefined on input li
-ne 32120.
-
-
-LaTeX Warning: Reference `eq:bin-pp-PP-LBF' on page 515 undefined on input line
- 32120.
-
-
-LaTeX Warning: Reference `eq:bin-pp-Bin-BF10' on page 515 undefined on input li
-ne 32120.
-
-[515]
-
-LaTeX Warning: Reference `eq:mult-mle-Mult' on page 516 undefined on input line
- 32190.
-
-
-LaTeX Warning: Reference `eq:mult-mle-Mult-marg' on page 516 undefined on input
- line 32190.
-
-
-LaTeX Warning: Reference `sec:bin-mle' on page 516 undefined on input line 3219
-6.
-
-
-LaTeX Warning: Reference `sec:bin-mle' on page 516 undefined on input line 3220
-2.
-
-[516]
-
-LaTeX Warning: Reference `eq:mult-mll-Mult' on page 517 undefined on input line
- 32238.
-
-
-LaTeX Warning: Reference `sec:mult-mle' on page 517 undefined on input line 322
-56.
-
-
-LaTeX Warning: Reference `eq:mult-mll-Mult-MLE' on page 517 undefined on input 
-line 32262.
-
-
-LaTeX Warning: Reference `eq:mult-mll-Mult-LL' on page 517 undefined on input l
-ine 32262.
-
-
-LaTeX Warning: Reference `eq:mult-mll-Mult' on page 517 undefined on input line
- 32262.
-
+[505] [506] [507] [508] [509] [510] [511] [512] [513] [514] [515] [516]
 [517] [518]
 Overfull \hbox (55.31732pt too wide) in paragraph at lines 32358--32359
 \TU/lmr/m/n/12 03-11; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
@@ -2744,35 +1478,9 @@ Overfull \hbox (55.31732pt too wide) in paragraph at lines 32435--32436
 [][][][][] [] [][] [] [][][][][][][][][][][] [] [][][][][][][][][][][]$. 
  []
 
-[520] [521] [522]
-
-LaTeX Warning: Reference `sec:mult-mle' on page 523 undefined on input line 326
-07.
-
-[523]
-
-LaTeX Warning: Reference `sec:mult-lbf' on page 524 undefined on input line 326
-85.
-
-[524]
-
-LaTeX Warning: Reference `eq:mult-pp-PP-LBF' on page 525 undefined on input lin
-e 32708.
-
-
-LaTeX Warning: Reference `eq:mult-pp-Mult-BF10' on page 525 undefined on input 
-line 32708.
-
-
-LaTeX Warning: Reference `eq:mult-pp-PP-LBF' on page 525 undefined on input lin
-e 32708.
-
-
-LaTeX Warning: Reference `eq:mult-pp-Mult-BF10' on page 525 undefined on input 
-line 32708.
-
-[525] [526] [527] [528] [529] [530] [531] [532] [533] [534] [535] [536]
-[537] [538] [539] [540] [541] [542] [543] [544] [545] [546]
+[520] [521] [522] [523] [524] [525] [526] [527] [528] [529] [530] [531]
+[532] [533] [534] [535] [536] [537] [538] [539] [540] [541] [542] [543]
+[544] [545] [546]
 Overfull \hbox (20.27325pt too wide) in paragraph at lines 34009--34010
 \TU/lmr/m/n/12 2022-10-07; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][][][][][][][][][][
@@ -2793,39 +1501,14 @@ Chapter IV.
 ] [552] [553] [554]
 Overfull \hbox (1.70647pt too wide) in paragraph at lines 34401--34402
 []\TU/lmr/m/n/12 1) This follows from maximum likelihood estimation for multipl
-e linear regression ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Proof III[]/1.4.16[])
+e linear regression ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Proof III[]/1.5.25[])
  []
 
-
-LaTeX Warning: Reference `sec:mlr-rssdist' on page 555 undefined on input line 
-34410.
-
-
-LaTeX Warning: Reference `eq:resvar-biasp-rss-dist' on page 555 undefined on in
-put line 34419.
-
-
-LaTeX Warning: Reference `eq:resvar-biasp-sigma-mle-qed' on page 555 undefined 
-on input line 34419.
-
-
-LaTeX Warning: Reference `eq:resvar-biasp-resvar-bias-s1' on page 555 undefined
- on input line 34431.
-
-[555]
-
-LaTeX Warning: Reference `eq:resvar-biasp-resvar-bias-s2' on page 556 undefined
- on input line 34443.
-
-
-LaTeX Warning: Reference `eq:resvar-biasp-resvar-biasp' on page 556 undefined o
-n input line 34449.
-
-[556] [557] [558] [559] [560]
+[555] [556] [557] [558] [559] [560]
 Overfull \hbox (2.82253pt too wide) in paragraph at lines 34799--34800
 []\TU/lmr/m/n/12 and parameter estimates ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 D
 efinition “  est” ) obtained with ordinary least squares ($\OMS/cmsy/m/n/12 !$ 
-\TU/lmr/m/n/12 Proof III[]/1.4.3[]) 
+\TU/lmr/m/n/12 Proof III[]/1.5.3[]) 
  []
 
 [561] [562] [563]
@@ -3569,25 +2252,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 36955--36955
  []
 
 
-LaTeX Warning: Reference `sec:anova1-ols' on page 611 undefined on input line 3
-6958.
-
-
-LaTeX Warning: Reference `sec:anova1-f' on page 611 undefined on input line 369
-59.
-
-
-LaTeX Warning: Reference `sec:anova2-ols' on page 611 undefined on input line 3
-6960.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 36961--36961
 []|\TU/lmr/m/n/12 anova2-
  []
-
-
-LaTeX Warning: Reference `sec:anova2-fme' on page 611 undefined on input line 3
-6961.
 
 
 Underfull \hbox (badness 1132) in paragraph at lines 36962--36962
@@ -3595,17 +2262,9 @@ Underfull \hbox (badness 1132) in paragraph at lines 36962--36962
  []
 
 
-LaTeX Warning: Reference `sec:anova2-fia' on page 611 undefined on input line 3
-6962.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 36963--36963
 []|\TU/lmr/m/n/12 anova2-
  []
-
-
-LaTeX Warning: Reference `sec:anova2-fgm' on page 611 undefined on input line 3
-6963.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 36964--36964
@@ -3613,33 +2272,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 36964--36964
  []
 
 
-LaTeX Warning: Reference `sec:anova1-repara' on page 611 undefined on input lin
-e 36964.
-
-
-LaTeX Warning: Reference `sec:anova1-pss' on page 611 undefined on input line 3
-6965.
-
-
-LaTeX Warning: Reference `sec:anova1-fols' on page 611 undefined on input line 
-36966.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 36967--36967
 []|\TU/lmr/m/n/12 anova2-
  []
-
-
-LaTeX Warning: Reference `sec:anova2-cochran' on page 611 undefined on input li
-ne 36967.
-
-
-LaTeX Warning: Reference `sec:anova2-pss' on page 611 undefined on input line 3
-6968.
-
-
-LaTeX Warning: Reference `sec:anova2-fols' on page 611 undefined on input line 
-36969.
 
 
 Overfull \hbox (0.7473pt too wide) in alignment at lines 36949--36969
@@ -3647,39 +2282,6 @@ Overfull \hbox (0.7473pt too wide) in alignment at lines 36949--36969
  []
 
 [611]
-
-LaTeX Warning: Reference `sec:bin-mle' on page 612 undefined on input line 3697
-0.
-
-
-LaTeX Warning: Reference `sec:bin-mll' on page 612 undefined on input line 3697
-1.
-
-
-LaTeX Warning: Reference `sec:bin-lbf' on page 612 undefined on input line 3697
-2.
-
-
-LaTeX Warning: Reference `sec:bin-pp' on page 612 undefined on input line 36973
-.
-
-
-LaTeX Warning: Reference `sec:mult-mle' on page 612 undefined on input line 369
-74.
-
-
-LaTeX Warning: Reference `sec:mult-mll' on page 612 undefined on input line 369
-75.
-
-
-LaTeX Warning: Reference `sec:mult-lbf' on page 612 undefined on input line 369
-76.
-
-
-LaTeX Warning: Reference `sec:mult-pp' on page 612 undefined on input line 3697
-7.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 36978--36978
 []|\TU/lmr/m/n/12 mlr-
  []
@@ -3690,29 +2292,9 @@ Underfull \hbox (badness 2065) in paragraph at lines 36978--36978
  []
 
 
-LaTeX Warning: Reference `sec:mlr-wlsdist' on page 612 undefined on input line 
-36978.
-
-
 Underfull \hbox (badness 4072) in paragraph at lines 36979--36979
 []|\TU/lmr/m/n/12 Distribution of residual sum of
  []
-
-
-LaTeX Warning: Reference `sec:mlr-rssdist' on page 612 undefined on input line 
-36979.
-
-
-LaTeX Warning: Reference `sec:mlr-t' on page 612 undefined on input line 36980.
-
-
-
-LaTeX Warning: Reference `sec:mlr-f' on page 612 undefined on input line 36981.
-
-
-
-LaTeX Warning: Reference `sec:mlr-ind' on page 612 undefined on input line 3698
-2.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 36983--36983
@@ -3720,25 +2302,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 36983--36983
  []
 
 
-LaTeX Warning: Reference `sec:mvn-indprod' on page 612 undefined on input line 
-36983.
-
-
 Underfull \hbox (badness 1394) in paragraph at lines 36984--36984
 []|\TU/lmr/m/n/12 Relationship between multivariate
  []
-
-
-LaTeX Warning: Reference `sec:mvn-chi2' on page 612 undefined on input line 369
-84.
-
-
-LaTeX Warning: Reference `sec:cuni-var' on page 612 undefined on input line 369
-85.
-
-
-LaTeX Warning: Reference `sec:cuni-dent' on page 612 undefined on input line 36
-986.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 36987--36987
@@ -3751,21 +2317,9 @@ Underfull \hbox (badness 1308) in paragraph at lines 36987--36987
  []
 
 
-LaTeX Warning: Reference `sec:resvar-biasp' on page 612 undefined on input line
- 36987.
-
-
 Underfull \hbox (badness 6125) in paragraph at lines 36988--36988
 []|\TU/lmr/m/n/12 Projection matrix and residual-
  []
-
-
-LaTeX Warning: Reference `sec:mlr-symm' on page 612 undefined on input line 369
-88.
-
-
-LaTeX Warning: Reference `sec:mlr-olsdist' on page 612 undefined on input line 
-36989.
 
 
 Overfull \hbox (0.7473pt too wide) in alignment at lines 36969--36989
@@ -3773,47 +2327,6 @@ Overfull \hbox (0.7473pt too wide) in alignment at lines 36969--36989
  []
 
 [612]
-
-LaTeX Warning: Reference `sec:exp-var' on page 613 undefined on input line 3699
-0.
-
-
-LaTeX Warning: Reference `sec:exg-pdf' on page 613 undefined on input line 3699
-1.
-
-
-LaTeX Warning: Reference `sec:exp-mgf' on page 613 undefined on input line 3699
-2.
-
-
-LaTeX Warning: Reference `sec:exg-mgf' on page 613 undefined on input line 3699
-3.
-
-
-LaTeX Warning: Reference `sec:exg-mean' on page 613 undefined on input line 369
-94.
-
-
-LaTeX Warning: Reference `sec:exg-var' on page 613 undefined on input line 3699
-5.
-
-
-LaTeX Warning: Reference `sec:skew-mean' on page 613 undefined on input line 36
-996.
-
-
-LaTeX Warning: Reference `sec:exg-skew' on page 613 undefined on input line 369
-97.
-
-
-LaTeX Warning: Reference `sec:exp-skew' on page 613 undefined on input line 369
-98.
-
-
-LaTeX Warning: Reference `sec:duni-ent' on page 613 undefined on input line 369
-99.
-
-
 Overfull \hbox (0.7473pt too wide) in alignment at lines 36989--37000
  [] [] [] [] [] [] 
  []
@@ -3918,258 +2431,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 37189--37189
  []
 
 
-LaTeX Warning: Reference `sec:anova1' on page 621 undefined on input line 37192
-.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 621 undefined on input line 37193
-.
-
-
-LaTeX Warning: Reference `sec:trss' on page 621 undefined on input line 37194.
-
-
-LaTeX Warning: Reference `sec:iass' on page 621 undefined on input line 37195.
-
-
-LaTeX Warning: Reference `sec:tcon' on page 621 undefined on input line 37196.
-
-
-LaTeX Warning: Reference `sec:fcon' on page 621 undefined on input line 37197.
-
-
-LaTeX Warning: Reference `sec:exg' on page 621 undefined on input line 37198.
-
-
-LaTeX Warning: Reference `sec:skew' on page 621 undefined on input line 37199.
-
-
 Overfull \hbox (0.7473pt too wide) in alignment at lines 37188--37200
  [] [] [] [] [] [] 
  []
 
-[621] [622]
-
-LaTeX Warning: Reference `sec:anova2-cochran' on page 623 undefined on input li
-ne 37225.
-
-[623]
-
-LaTeX Warning: Reference `sec:cuni-dent' on page 624 undefined on input line 37
-363.
-
-
-LaTeX Warning: Reference `sec:mlr-rssdist' on page 624 undefined on input line 
-37375.
-
-
-LaTeX Warning: Reference `sec:mlr-olsdist' on page 624 undefined on input line 
-37383.
-
-
-LaTeX Warning: Reference `sec:mlr-wlsdist' on page 624 undefined on input line 
-37385.
-
-[624]
-
-LaTeX Warning: Reference `sec:duni-ent' on page 625 undefined on input line 374
-01.
-
-
-LaTeX Warning: Reference `sec:anova1-fols' on page 625 undefined on input line 
-37439.
-
-
-LaTeX Warning: Reference `sec:anova2-fols' on page 625 undefined on input line 
-37441.
-
-
-LaTeX Warning: Reference `sec:anova2-fgm' on page 625 undefined on input line 3
-7443.
-
-
-LaTeX Warning: Reference `sec:anova2-fia' on page 625 undefined on input line 3
-7445.
-
-
-LaTeX Warning: Reference `sec:anova1-f' on page 625 undefined on input line 374
-47.
-
-
-LaTeX Warning: Reference `sec:anova2-fme' on page 625 undefined on input line 3
-7449.
-
-
-LaTeX Warning: Reference `sec:mlr-f' on page 625 undefined on input line 37451.
-
-
-
-LaTeX Warning: Reference `sec:mlr-ind' on page 625 undefined on input line 3747
-3.
-
-[625]
-
-LaTeX Warning: Reference `sec:mvn-indprod' on page 626 undefined on input line 
-37475.
-
-
-LaTeX Warning: Reference `sec:bin-lbf' on page 626 undefined on input line 3753
-7.
-
-
-LaTeX Warning: Reference `sec:mult-lbf' on page 626 undefined on input line 375
-39.
-
-[626]
-
-LaTeX Warning: Reference `sec:bin-mle' on page 627 undefined on input line 3758
-7.
-
-
-LaTeX Warning: Reference `sec:mult-mle' on page 627 undefined on input line 375
-91.
-
-
-LaTeX Warning: Reference `sec:resvar-biasp' on page 627 undefined on input line
- 37609.
-
-
-LaTeX Warning: Reference `sec:bin-mll' on page 627 undefined on input line 3761
-3.
-
-
-LaTeX Warning: Reference `sec:mult-mll' on page 627 undefined on input line 376
-15.
-
-
-LaTeX Warning: Reference `sec:exg-mean' on page 627 undefined on input line 376
-29.
-
-[627]
-
-LaTeX Warning: Reference `sec:exg-mgf' on page 628 undefined on input line 3768
-1.
-
-
-LaTeX Warning: Reference `sec:exp-mgf' on page 628 undefined on input line 3768
-3.
-
-
-LaTeX Warning: Reference `sec:anova1-ols' on page 628 undefined on input line 3
-7739.
-
-
-LaTeX Warning: Reference `sec:anova2-ols' on page 628 undefined on input line 3
-7747.
-
-[628]
-
-LaTeX Warning: Reference `sec:skew-mean' on page 629 undefined on input line 37
-765.
-
-
-LaTeX Warning: Reference `sec:anova1-pss' on page 629 undefined on input line 3
-7767.
-
-
-LaTeX Warning: Reference `sec:anova2-pss' on page 629 undefined on input line 3
-7771.
-
-
-LaTeX Warning: Reference `sec:bin-pp' on page 629 undefined on input line 37809
-.
-
-
-LaTeX Warning: Reference `sec:mult-pp' on page 629 undefined on input line 3781
-1.
-
-
-LaTeX Warning: Reference `sec:exg-pdf' on page 629 undefined on input line 3783
-5.
-
-[629]
-
-LaTeX Warning: Reference `sec:mlr-symm' on page 630 undefined on input line 379
-05.
-
-[630]
-
-LaTeX Warning: Reference `sec:mvn-chi2' on page 631 undefined on input line 379
-67.
-
-
-LaTeX Warning: Reference `sec:anova1-repara' on page 631 undefined on input lin
-e 37993.
-
-
-LaTeX Warning: Reference `sec:exg-skew' on page 631 undefined on input line 380
-15.
-
-
-LaTeX Warning: Reference `sec:exp-skew' on page 631 undefined on input line 380
-17.
-
-
-LaTeX Warning: Reference `sec:mlr-t' on page 631 undefined on input line 38033.
-
-
-[631]
-
-LaTeX Warning: Reference `sec:cuni-var' on page 632 undefined on input line 380
-73.
-
-
-LaTeX Warning: Reference `sec:exg-var' on page 632 undefined on input line 3807
-5.
-
-
-LaTeX Warning: Reference `sec:exp-var' on page 632 undefined on input line 3807
-7.
-
-[632] [633]
-
-LaTeX Warning: Reference `sec:exg' on page 634 undefined on input line 38235.
-
-
-LaTeX Warning: Reference `sec:fcon' on page 634 undefined on input line 38253.
-
-
-LaTeX Warning: Reference `sec:iass' on page 634 undefined on input line 38281.
-
-[634] [635]
-
-LaTeX Warning: Reference `sec:anova1' on page 636 undefined on input line 38405
-.
-
-[636]
-
-LaTeX Warning: Reference `sec:skew' on page 637 undefined on input line 38511.
-
-
-LaTeX Warning: Reference `sec:tcon' on page 637 undefined on input line 38533.
-
-
-LaTeX Warning: Reference `sec:trss' on page 637 undefined on input line 38543.
-
-
-LaTeX Warning: Reference `sec:anova2' on page 637 undefined on input line 38545
-.
-
-[637] (./StatProofBook.aux)
-
-LaTeX Warning: There were undefined references.
-
+[621] [622] [623] [624] [625] [626] [627] [628] [629] [630] [631] [632]
+[633] [634] [635] [636] [637] (./StatProofBook.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7013 strings out of 479712
- 126166 string characters out of 5892708
- 393324 words of memory out of 5000000
- 24202 multiletter control sequences out of 15000+600000
- 543113 words of font info for 78 fonts, out of 8000000 for 9000
+ 7006 strings out of 479712
+ 125992 string characters out of 5892708
+ 398479 words of memory out of 5000000
+ 24199 multiletter control sequences out of 15000+600000
+ 543097 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 35i,24n,33p,1189b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,24n,33p,1189b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on StatProofBook.pdf (653 pages).
+Output written on StatProofBook.pdf (654 pages).
