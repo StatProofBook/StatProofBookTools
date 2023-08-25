@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-14 16:35:00
- Last edit: 2020-08-25 17:23:00
+ Last edit: 2023-08-25 17:28:00
 """
 
 
@@ -28,8 +28,8 @@ def get_rep_dir(rep_type):
     ini_obj = open('init_tools.txt')
     ini_txt = ini_obj.readlines()
     ini_obj.close()
-    rep_dir = ini_txt[0][0:-1]
-    www_dir = ini_txt[1][0:]
+    rep_dir = ini_txt[0][:-1]
+    www_dir = ini_txt[1][:]
     if rep_type == 'online':
         return www_dir
     else:
@@ -190,8 +190,8 @@ def replace_links(line, rep_dir):
     """
     Replace links in line from proof or definition
     """
-    # Replace links such as [text](/P/shortcut) or [text](/D/shortcut)
-    #                    by (-> Proof I/1.2.3) or (Definition "shortcut").
+    
+    # Replace links such as [text](/P/shortcut) or [text](/D/shortcut) by (-> I/1.2.3).
     while line.find('](/') > -1:
         # get bracket/parantheses indices
         i2 = line.find('](/')
@@ -202,20 +202,19 @@ def replace_links(line, rep_dir):
         file     = line[i3+1:i4]
         file_md  = file + '.md'
         shortcut = file_md[3:-3]
-        if file_md.find('/P/') > -1: file_type = 'Proof'
-        if file_md.find('/D/') > -1: file_type = 'Definition'
         # create new reference
         if os.path.isfile(rep_dir + file_md):
             file_obj = open(rep_dir + file_md, 'r')
             file_txt = file_obj.readlines()
             file_obj.close()
             chapter, section, topic, item = get_toc_info(file_txt)
-            new_ref = ' ($\\rightarrow$ ' + file_type + ' \\ref{sec:' + chapter + '}/\\ref{sec:' + shortcut + '})'
+            new_ref = ' ($\\rightarrow$ ' + ' \\ref{sec:' + chapter + '}/\\ref{sec:' + shortcut + '})'
         else:
-            new_ref = ' ($\\rightarrow$ ' + file_type + ' "' + shortcut + '")'
+            new_ref = '' # ' ($\\rightarrow$ ' + file_type + ' "' + shortcut + '")'
         # adapt to new reference
         line = line[0:i1] + line[i1+1:i2] + new_ref + line[i4+1:]
-    # Replace links such as [text](URL) by \footnote{\url{URL}}
+    
+    # Replace links such as [text](URL) by \footnote{\url{URL}}.
     while line.find('](') > -1:
         # get bracket/parantheses indices
         i2 = line.find('](')
@@ -226,4 +225,6 @@ def replace_links(line, rep_dir):
         new_ref = '\\footnote{\\url{' + line[i3+1:i4] + '}}'
         # adapt to new reference
         line = line[0:i1] + line[i1+1:i2] + new_ref + line[i4+1:]
+    
+    # Return line of text after references have been adapted.
     return line

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.7.24)  18 AUG 2023 16:37
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.7.24)  25 AUG 2023 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -273,42 +273,69 @@ ari-
 Chapter I.
 [1
 
-] [2] [3] [4] [5] [6]
-Overfull \hbox (1.18088pt too wide) in paragraph at lines 493--494
-[]\TU/lmr/m/n/12 1) A set of discrete random variables ($\OMS/cmsy/m/n/12 !$ \T
-U/lmr/m/n/12 Definition I[]/1.2.2[]) $\OML/cmm/m/it/12 X[]; [] ; X[]$ \TU/lmr/m
-/n/12 with possible values $\OMS/cmsy/m/n/12 X[]\OML/cmm/m/it/12 ; [] ; \OMS/cm
-sy/m/n/12 X[]$
- []
-
-[7]
-Overfull \hbox (1.18088pt too wide) in paragraph at lines 536--537
-[]\TU/lmr/m/n/12 1) A set of discrete random variables ($\OMS/cmsy/m/n/12 !$ \T
-U/lmr/m/n/12 Definition I[]/1.2.6[]) $\OML/cmm/m/it/12 X[]; [] ; X[]$ \TU/lmr/m
-/n/12 with possible values $\OMS/cmsy/m/n/12 X[]\OML/cmm/m/it/12 ; [] ; \OMS/cm
-sy/m/n/12 X[]$
- []
-
-[8]
-Overfull \hbox (45.9092pt too wide) in paragraph at lines 563--564
+] [2] [3] [4] [5] [6] [7]
+Overfull \hbox (45.9092pt too wide) in paragraph at lines 443--444
 \TU/lmr/m/n/12 2020-11-19; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][][][][][][] []
  [][][][][][][][][][][] [] [][][][][][][][][][][][] []
  []
 
-[9] [10]
-Overfull \hbox (15.01854pt too wide) in paragraph at lines 744--745
+[8] [9]
+Overfull \hbox (15.01854pt too wide) in paragraph at lines 596--597
 [][][][][] [] [][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][
 ][][] [] [][][][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][]
 [][][] [] [][] [] [][][] [] [][] []
  []
 
-[11]
-Overfull \hbox (117.75462pt too wide) in paragraph at lines 783--784
+
+Overfull \hbox (117.75462pt too wide) in paragraph at lines 628--629
 [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][][][][] []
  [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][] [] [][][]
  [] [][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
 r/m/n/12 . 
+ []
+
+[10]
+Overfull \hbox (11.44254pt too wide) in paragraph at lines 656--657
+[][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][
+][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][]
+ [] [][][] [] [][] [] [][][] []
+ []
+
+
+Overfull \hbox (0.44121pt too wide) in paragraph at lines 657--658
+\TU/lmr/m/n/12 30; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][]
+[] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][] [] [][][] [] [][][][][
+][][][][][][] [] [][] [] [][][] [] [][][][][] []
+ []
+
+
+Overfull \hbox (11.44254pt too wide) in paragraph at lines 694--695
+[][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][
+][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][]
+ [] [][][] [] [][] [] [][][] []
+ []
+
+[11]
+Overfull \hbox (117.75462pt too wide) in paragraph at lines 736--737
+[][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][][][][] []
+ [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][] [] [][][]
+ [] [][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
+r/m/n/12 . 
+ []
+
+[12]
+Overfull \hbox (11.44254pt too wide) in paragraph at lines 780--781
+[][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][
+][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][]
+ [] [][][] [] [][] [] [][][] []
+ []
+
+
+Overfull \hbox (15.01854pt too wide) in paragraph at lines 817--818
+[][][][][] [] [][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][
+][][] [] [][][][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][]
+[][][] [] [][] [] [][][] [] [][] []
  []
 
 
@@ -318,22 +345,8 @@ Overfull \hbox (11.44254pt too wide) in paragraph at lines 818--819
  [] [][][] [] [][] [] [][][] []
  []
 
-
-Overfull \hbox (0.44121pt too wide) in paragraph at lines 819--820
-\TU/lmr/m/n/12 30; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][]
-[] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][] [] [][][] [] [][][][][
-][][][][][][] [] [][] [] [][][] [] [][][][][] []
- []
-
-[12]
-Overfull \hbox (11.44254pt too wide) in paragraph at lines 863--864
-[][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][
-][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][]
- [] [][][] [] [][] [] [][][] []
- []
-
 [13]
-Overfull \hbox (117.75462pt too wide) in paragraph at lines 912--913
+Overfull \hbox (117.75462pt too wide) in paragraph at lines 861--862
 [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][][][][] []
  [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][] [] [][][]
  [] [][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
@@ -341,307 +354,278 @@ r/m/n/12 .
  []
 
 [14]
-Overfull \hbox (11.44254pt too wide) in paragraph at lines 963--964
-[][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][
-][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][]
- [] [][][] [] [][] [] [][][] []
- []
-
-
-Overfull \hbox (15.01854pt too wide) in paragraph at lines 1007--1008
-[][][][][] [] [][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][
-][][] [] [][][][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][]
-[][][] [] [][] [] [][][] [] [][] []
- []
-
-
-Overfull \hbox (11.44254pt too wide) in paragraph at lines 1008--1009
-[][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][
-][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][]
- [] [][][] [] [][] [] [][][] []
- []
-
-[15]
-Overfull \hbox (117.75462pt too wide) in paragraph at lines 1058--1059
-[][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][][][][] []
- [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][] [] [][][]
- [] [][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
-r/m/n/12 . 
- []
-
-[16]
-Overfull \hbox (41.29883pt too wide) detected at line 1097
+Overfull \hbox (41.29883pt too wide) detected at line 894
 []
  []
 
 
-Overfull \hbox (117.75462pt too wide) in paragraph at lines 1129--1130
+Overfull \hbox (117.75462pt too wide) in paragraph at lines 925--926
 [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][][][][] []
  [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][][][][] [] [][] [] [][][]
  [] [][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
 r/m/n/12 . 
  []
 
-[17] [18]
-Overfull \hbox (2.93323pt too wide) in paragraph at lines 1218--1219
+[15]
+Overfull \hbox (2.93323pt too wide) in paragraph at lines 986--987
 \TU/lmr/m/n/12 trieved on 2020-05-17; URL: $[][][][][] [] [] [] [][] [] [][][][
 ][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
 [][][] [] [][][][][][][][][][][][]$. 
  []
 
-[19]
-Overfull \hbox (66.3905pt too wide) in paragraph at lines 1320--1321
+[16] [17]
+Overfull \hbox (66.3905pt too wide) in paragraph at lines 1067--1068
 \TU/lmr/m/it/12 mathematical statistics\TU/lmr/m/n/12 , retrieved on 2021-08-30
 ; URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[20] [21] [22]
-Overfull \hbox (66.3905pt too wide) in paragraph at lines 1546--1547
+[18] [19] [20]
+Overfull \hbox (66.3905pt too wide) in paragraph at lines 1258--1259
 \TU/lmr/m/it/12 mathematical statistics\TU/lmr/m/n/12 , retrieved on 2021-08-30
 ; URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[23] [24] [25] [26] [27] [28]
-Overfull \hbox (1.75719pt too wide) in paragraph at lines 1946--1947
+[21] [22] [23] [24] [25]
+Overfull \hbox (1.75719pt too wide) in paragraph at lines 1623--1624
 \TU/lmr/m/n/12 trieved on 2020-11-12; URL: $[][][][][] [] [] [] [][] [] [][][][
 ][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][] [
 ] [][] [] [][][][][][][][] []
  []
 
-[29]
-Overfull \hbox (66.3905pt too wide) in paragraph at lines 2028--2029
+[26] [27]
+Overfull \hbox (66.3905pt too wide) in paragraph at lines 1691--1692
 \TU/lmr/m/it/12 mathematical statistics\TU/lmr/m/n/12 , retrieved on 2021-08-30
 ; URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[30] [31] [32] [33] [34]
-Overfull \hbox (26.81725pt too wide) in paragraph at lines 2335--2336
+[28] [29] [30]
+Overfull \hbox (26.81725pt too wide) in paragraph at lines 1946--1947
 \TU/lmr/m/n/12 2021-04-07; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][
 ][] [] [][][][][] [] [][] [] [][][][][][][][][][][]$. 
  []
 
-[35]
-Overfull \hbox (55.28525pt too wide) in paragraph at lines 2377--2378
+[31]
+Overfull \hbox (55.28525pt too wide) in paragraph at lines 1981--1982
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][][][][] [] []
 [][] [] [][][][][][][][] [] [][] [] [][][][] [] [][][][][] [] [][][][] [] [][][
 ][][][] [] [][][][]$; DOI: 10.3389/fpsyt.2020.604268. 
  []
 
-[36] [37] [38]
-Overfull \hbox (35.49051pt too wide) in paragraph at lines 2576--2577
+[32] [33]
+Overfull \hbox (35.49051pt too wide) in paragraph at lines 2138--2139
 \TU/lmr/m/it/12 matical statistics\TU/lmr/m/n/12 , retrieved on 2021-10-07; URL
 : $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[39] [40] [41]
-Overfull \hbox (8.38522pt too wide) in paragraph at lines 2804--2805
+[34] [35] [36]
+Overfull \hbox (8.38522pt too wide) in paragraph at lines 2331--2332
 \TU/lmr/m/n/12 2022-10-11; URL: $[][][][][] [] [] [] [][][][][][][][][] [] [][]
 [] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] [] [][][][][][
 ][][] [] [][] [] [][][][][][][][][][][]$. 
  []
 
-[42] [43] [44]
-Overfull \hbox (4.30519pt too wide) in paragraph at lines 2988--2989
+[37] [38] [39]
+Overfull \hbox (4.30519pt too wide) in paragraph at lines 2480--2481
 \TU/lmr/m/n/12 2020-04-16; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][] [] [][][] [] [][][][][][][][
 ][][] [] [][][][][][][][][][] [] [][] []
  []
 
-[45] [46] [47] [48] [49] [50] [51]
-Overfull \hbox (9.55324pt too wide) in paragraph at lines 3474--3475
+[40] [41] [42] [43] [44] [45] [46]
+Overfull \hbox (9.55324pt too wide) in paragraph at lines 2917--2918
 \TU/lmr/m/n/12 on 2020-07-13; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][
 ][] [] [][][] [] [][][][] [] [][][][][][][][][][][][] [] [][][][][][] [] [][][]
 [][][][][] [] [][][][][][][][][][][] []
  []
 
 
-Overfull \hbox (83.20924pt too wide) in paragraph at lines 3476--3477
+Overfull \hbox (83.20924pt too wide) in paragraph at lines 2919--2920
 \TU/lmr/m/n/12 trieved on 2020-07-13; URL: $[][][][][] [] [] [] [][][][][] [] [
 ][][][][][][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][] [] [][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$. 
  []
 
-[52] [53]
-Overfull \hbox (3.86252pt too wide) in paragraph at lines 3572--3573
+[47] [48]
+Overfull \hbox (3.86252pt too wide) in paragraph at lines 3008--3009
 [][][][][][] [] [][] [] [][][][][][][][][][][] [] [][] [] [][][][][][][] [] [][
 ] [] [][][][] [] [][][][] [] [][] [] [][][][][] [] [][] [] [][][][][][][] [] []
 [] [] [][][][][][][][][][][] []
  []
 
-[54] [55] [56]
-Overfull \hbox (15.00519pt too wide) in paragraph at lines 3731--3732
+[49] [50]
+Overfull \hbox (15.00519pt too wide) in paragraph at lines 3153--3154
 \TU/lmr/m/n/12 trieved on 2020-07-22; URL: $[][][][][] [] [] [] [][] [] [][][][
 ][][][][][] [] [][][] [] [][][][] [] [][][] [] [][] [] [][][] [] [][][][][][][]
 [][][][] [] [][][][][][][][][][][][] []
  []
 
 
-Overfull \hbox (18.61855pt too wide) in paragraph at lines 3732--3733
+Overfull \hbox (18.61855pt too wide) in paragraph at lines 3154--3155
 \TU/lmr/m/it/12 statistics\TU/lmr/m/n/12 , retrieved on 2021-09-22; URL: $[][][
 ][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][] [] [][]
 [][][][][][][][][][][][][][][][][][][][][]$. 
  []
 
-[57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
-Overfull \hbox (90.0036pt too wide) detected at line 4742
+[51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
+Overfull \hbox (90.0036pt too wide) detected at line 3985
 \OT1/cmr/m/n/12 ^^F[] = [] = []  \OML/cmm/m/it/12 :
  []
 
-[70]
-Overfull \hbox (4.30519pt too wide) in paragraph at lines 4779--4780
+[63]
+Overfull \hbox (4.30519pt too wide) in paragraph at lines 4014--4015
 \TU/lmr/m/n/12 2020-05-20; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][] [] [][][] [] [][][][][][][][
 ][][] [] [][][][][][][][][][] [] [][] []
  []
 
-[71] [72] [73] [74]
-Overfull \hbox (78.68091pt too wide) detected at line 5080
+[64] [65] [66]
+Overfull \hbox (78.68091pt too wide) detected at line 4274
 \OT1/cmr/m/n/12 ^^F[] = [] = []  \OML/cmm/m/it/12 :
  []
 
-[75]
-Overfull \hbox (173.43285pt too wide) detected at line 5130
+[67]
+Overfull \hbox (173.43285pt too wide) detected at line 4317
 []
  []
 
-[76] [77] [78]
-Overfull \hbox (68.42523pt too wide) in paragraph at lines 5395--5396
+[68] [69] [70]
+Overfull \hbox (68.42523pt too wide) in paragraph at lines 4548--4549
 \TU/lmr/m/n/12 2020-02-06; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][] [] [][][][][][][][][
 ][] [] [][][][][][][] [][] [] [] [][][][][][][][][][][][][][][] []
  []
 
-[79]
-Overfull \hbox (22.22525pt too wide) in paragraph at lines 5485--5486
+[71]
+Overfull \hbox (22.22525pt too wide) in paragraph at lines 4624--4625
 \TU/lmr/m/n/12 on 2021-12-14; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][
 ][] [] [][][] [] [][][][] [] [][][][][][][] [] [][][][][][][][][][][] [] [][][]
 [][][][][][][][] [] [][][] [] [] [] [][][][][][]$. 
  []
 
-[80]
-Overfull \hbox (22.22525pt too wide) in paragraph at lines 5536--5537
+[72]
+Overfull \hbox (22.22525pt too wide) in paragraph at lines 4668--4669
 \TU/lmr/m/n/12 on 2021-12-14; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][
 ][] [] [][][] [] [][][][] [] [][][][][][][] [] [][][][][][][][][][][] [] [][][]
 [][][][][][][][] [] [][][] [] [] [] [][][][][][]$. 
  []
 
 
-Overfull \hbox (4.06995pt too wide) detected at line 5563
+Overfull \hbox (4.06995pt too wide) detected at line 4689
 \OT1/cmr/m/n/12 C[] = [] = []  \OML/cmm/m/it/12 :
  []
 
-[81] [82] [83] [84]
-Overfull \hbox (0.93323pt too wide) in paragraph at lines 5851--5852
+[73] [74] [75] [76]
+Overfull \hbox (0.93323pt too wide) in paragraph at lines 4915--4916
 \TU/lmr/m/n/12 2020-08-19; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][
 ][][][][][][][][] [] [][] [] [][][] []
  []
 
-[85] [86]
-Overfull \hbox (0.93323pt too wide) in paragraph at lines 5969--5970
+[77]
+Overfull \hbox (0.93323pt too wide) in paragraph at lines 5019--5020
 \TU/lmr/m/n/12 2020-10-08; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][
 ][][][][][][][][] [] [][] [] [][][] []
  []
 
-[87] [88]
-Overfull \hbox (0.93323pt too wide) in paragraph at lines 6072--6073
+[78]
+Overfull \hbox (0.93323pt too wide) in paragraph at lines 5091--5092
 \TU/lmr/m/n/12 2020-10-08; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][
 ][][][][][][][][] [] [][] [] [][][] []
  []
 
-[89]
-Overfull \hbox (0.93323pt too wide) in paragraph at lines 6151--6152
+[79]
+Overfull \hbox (0.93323pt too wide) in paragraph at lines 5156--5157
 \TU/lmr/m/n/12 2020-10-08; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][
 ][][][][][][][][] [] [][] [] [][][] []
  []
 
-
-Overfull \hbox (14.07326pt too wide) in paragraph at lines 6174--6175
+[80]
+Overfull \hbox (14.07326pt too wide) in paragraph at lines 5172--5173
 \TU/lmr/m/n/12 2020-10-08; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][
 ][][][][][][][][] [] [][][][][][][]$. 
  []
 
-[90] [91] [92]
-Overfull \hbox (41.77325pt too wide) in paragraph at lines 6330--6331
+[81] [82] [83]
+Overfull \hbox (41.77325pt too wide) in paragraph at lines 5307--5308
 \TU/lmr/m/n/12 on 2020-08-11; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][
 ][] [] [][][] [] [][][][] [] [][][][][][][] [] [][][][][][][][][][][][] [] [][]
 [][][][] [] [][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[93] [94] [95] [96] [97] [98]
-Overfull \hbox (27.69324pt too wide) in paragraph at lines 6734--6735
+[84] [85] [86] [87] [88]
+Overfull \hbox (27.69324pt too wide) in paragraph at lines 5648--5649
 \TU/lmr/m/n/12 02-12; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][][][][] [] [][][][][][][] [] [][][][][][]
 [][][][] [] [][] [] [][][][][][][][][][][][] [] [][][][][][][]$. 
  []
 
-[99]
-Overfull \hbox (27.69324pt too wide) in paragraph at lines 6812--6813
+[89]
+Overfull \hbox (27.69324pt too wide) in paragraph at lines 5719--5720
 \TU/lmr/m/n/12 02-12; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][][][][] [] [][][][][][][] [] [][][][][][]
 [][][][] [] [][] [] [][][][][][][][][][][][] [] [][][][][][][]$. 
  []
 
-[100]
-Overfull \hbox (27.69324pt too wide) in paragraph at lines 6907--6908
+[90] [91]
+Overfull \hbox (27.69324pt too wide) in paragraph at lines 5807--5808
 \TU/lmr/m/n/12 10-07; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][][][][] [] [][][][][][][] [] [][][][][][]
 [][][][] [] [][] [] [][][][][][][][][][][][] [] [][][][][][][]$. 
  []
 
-[101] [102]
-Overfull \hbox (27.69324pt too wide) in paragraph at lines 7007--7008
+[92]
+Overfull \hbox (27.69324pt too wide) in paragraph at lines 5900--5901
 \TU/lmr/m/n/12 10-07; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][][][][] [] [][][][][][][] [] [][][][][][]
 [][][][] [] [][] [] [][][][][][][][][][][][] [] [][][][][][][]$. 
  []
 
 
-Overfull \hbox (2.69319pt too wide) in paragraph at lines 7010--7011
+Overfull \hbox (2.69319pt too wide) in paragraph at lines 5903--5904
 \TU/lmr/m/n/12 trieved on 2021-10-07; URL: $[][][][][] [] [] [] [][] [] [][][][
 ][][][][][] [] [][][] [] [][][][] [] [][][][][][][][] [] [][][][][][] [] [][][]
  [] [][][][][][][][][][][] []
  []
 
-[103] [104] [105]
-Overfull \hbox (5.62526pt too wide) in paragraph at lines 7202--7203
+[93] [94] [95]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 6050--6051
 \TU/lmr/m/n/12 01-13; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
  [] [][] [] [][][][][][][][][][][] [] [][][] []
  []
 
-[106]
-Overfull \hbox (5.62526pt too wide) in paragraph at lines 7271--7272
+[96]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 6112--6113
 \TU/lmr/m/n/12 01-13; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
  [] [][] [] [][][][][][][][][][][] [] [][][] []
  []
 
-[107]
-Overfull \hbox (5.62526pt too wide) in paragraph at lines 7337--7338
+
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 6171--6172
 \TU/lmr/m/n/12 01-13; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
  [] [][] [] [][][][][][][][][][][] [] [][][] []
  []
 
-[108] [109]
-Overfull \hbox (5.62526pt too wide) in paragraph at lines 7451--7452
+[97] [98]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 6271--6272
 \TU/lmr/m/n/12 02-21; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
  [] [][] [] [][][][][][][][][][][] [] [][][] []
  []
 
 
-Overfull \hbox (20.62769pt too wide) detected at line 7490
+Overfull \hbox (20.62769pt too wide) detected at line 6304
 \OT1/cmr/m/n/12 I(\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 ) = [][] [][] \OML/cmm/m
 /it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) [] \OML/cmm/m/i
 t/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) d\OML/cmm/m/it/12
@@ -651,291 +635,304 @@ t/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) d\OML/cmm/m/it/12
 /m/it/12 y\OT1/cmr/m/n/12 ) d\OML/cmm/m/it/12 y :
  []
 
-[110]
-Overfull \hbox (5.62526pt too wide) in paragraph at lines 7520--7521
+[99]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 6333--6334
 \TU/lmr/m/n/12 02-21; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
  [] [][] [] [][][][][][][][][][][] [] [][][] []
  []
 
-[111]
-Overfull \hbox (5.62526pt too wide) in paragraph at lines 7586--7587
+[100]
+Overfull \hbox (5.62526pt too wide) in paragraph at lines 6392--6393
 \TU/lmr/m/n/12 02-21; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][]
  [] [][] [] [][][][][][][][][][][] [] [][][] []
  []
 
-[112]
-Overfull \hbox (28.85725pt too wide) in paragraph at lines 7676--7677
+[101]
+Overfull \hbox (28.85725pt too wide) in paragraph at lines 6468--6469
 \TU/lmr/m/n/12 2020-05-31; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][] [] [][] [] [][] [] [][][][][][][][][
 ] [] [][][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[113] [114]
-Overfull \hbox (14.94269pt too wide) in paragraph at lines 7819--7820
+[102] [103]
+Overfull \hbox (14.94269pt too wide) in paragraph at lines 6597--6598
 \TU/lmr/m/n/12 URL: $[][][][] [] [] [] [][][][][][][][][] [] [][] [] [][] [] []
 [][][][][][][][][][][][][][][][][][] [] [][][][][][][][][][][] [] [][][][][][][
 ][] [] [][][][][] [] [][][][][][][][][][][][] [] [][][][] []
  []
 
 
-Overfull \hbox (9.26122pt too wide) in paragraph at lines 7820--7821
+Overfull \hbox (9.26122pt too wide) in paragraph at lines 6598--6599
 \TU/lmr/m/n/12 2020-08-11; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][] [] [][] [] [][] [] [][][][][][][][][
 ] [] [][][][][][][][][][] [] [][][][][] []
  []
 
-[115]
-Overfull \hbox (28.85725pt too wide) in paragraph at lines 7875--7876
+[104]
+Overfull \hbox (28.85725pt too wide) in paragraph at lines 6646--6647
 \TU/lmr/m/n/12 2020-08-11; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][] [] [][] [] [][] [] [][][][][][][][][
 ] [] [][][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[116]
-Overfull \hbox (28.85725pt too wide) in paragraph at lines 7933--7934
+[105]
+Overfull \hbox (28.85725pt too wide) in paragraph at lines 6697--6698
 \TU/lmr/m/n/12 2020-05-31; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][] [] [][] [] [][] [] [][][][][][][][][
 ] [] [][][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[117]
-Overfull \hbox (28.85725pt too wide) in paragraph at lines 7997--7998
+[106]
+Overfull \hbox (28.85725pt too wide) in paragraph at lines 6754--6755
 \TU/lmr/m/n/12 2020-05-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][] [] [][] [] [][] [] [][][][][][][][][
 ] [] [][][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
 
-Overfull \hbox (206.78665pt too wide) in paragraph at lines 7998--7999
+Overfull \hbox (206.78665pt too wide) in paragraph at lines 6755--6756
 \TU/lmr/m/it/12 dated\TU/lmr/m/n/12 , retrieved on 2020-05-28; URL: $[][][][][]
  [] [] [] [][][][][] [] [][][][][][][][][][][][][] [] [][][] [] [][][][][][][][
 ][] [] [][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][]$. 
  []
 
-[118]
-Overfull \hbox (33.21326pt too wide) in paragraph at lines 8054--8055
+
+Overfull \hbox (33.21326pt too wide) in paragraph at lines 6804--6805
 \TU/lmr/m/n/12 2020-05-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][] [] [][] [] [][] [] [][][][][][][][][
 ] [] [][][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[119]
-Overfull \hbox (33.21326pt too wide) in paragraph at lines 8110--8111
+[107]
+Overfull \hbox (33.21326pt too wide) in paragraph at lines 6853--6854
 \TU/lmr/m/n/12 2020-05-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][] [] [][] [] [][] [] [][][][][][][][][
 ] [] [][][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[120] [121] [122] [123] [124] [125] [126] [127] [128]
-Overfull \hbox (7.72923pt too wide) in paragraph at lines 8694--8695
+[108] [109] [110] [111] [112] [113] [114]
+Overfull \hbox (7.72923pt too wide) in paragraph at lines 7307--7308
 \TU/lmr/m/n/12 on 2021-03-19; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][
 ][] [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] [] 
 [][][][][][][] [] [][][] [] [][][][][][][] []
  []
 
-[129] [130]
-Overfull \hbox (7.72923pt too wide) in paragraph at lines 8795--8796
+[115] [116]
+Overfull \hbox (7.72923pt too wide) in paragraph at lines 7380--7381
 \TU/lmr/m/n/12 on 2021-03-19; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][
 ][] [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] [] 
 [][][][][][][] [] [][][] [] [][][][][][][] []
  []
 
-[131] [132] [133]
-Overfull \hbox (2.53053pt too wide) in paragraph at lines 8985--8986
+[117] [118]
+Overfull \hbox (2.53053pt too wide) in paragraph at lines 7528--7529
 \TU/lmr/m/it/12 CrossValidated\TU/lmr/m/n/12 , retrieved on 2022-03-18; URL: $[
 ][][][][] [] [] [] [][][][][] [] [][][][][][][][][][][][][] [] [][][] [] [] [] 
 [][][][][][] [] [][][][][][]$. 
  []
 
-[134]
-Overfull \hbox (130.59726pt too wide) in paragraph at lines 9015--9016
+[119]
+Overfull \hbox (130.59726pt too wide) in paragraph at lines 7551--7552
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] [
 ] [][][] [] [][][][][][][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][][][
 ][][][][][][][][][][][]$; DOI: 10.1016/j.neuroimage.2007.08.013. 
  []
 
-[135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146
+[120] [121] [122] [123] [124]
+Overfull \hbox (5.88168pt too wide) in paragraph at lines 7878--7879
+\TU/lmr/m/n/12 and prior distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[]/
+5.1.3[]) $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OMS/cmsy/m/n/
+12 j\OML/cmm/m/it/12 ^^U; m\OT1/cmr/m/n/12 )$ \TU/lmr/m/n/12 using prior hyperp
+arameters ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.3[]) $\OML/cmm/m/it/12 ^
+^U$\TU/lmr/m/n/12 . Let $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^
+R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y; ^^U; m\OT1/cmr/m/n/12 )$
+ []
 
-]
+[125]
+Overfull \hbox (3.94191pt too wide) in paragraph at lines 7977--7978
+\OML/cmm/m/it/12 ^^U$ \TU/lmr/m/n/12 implying the likelihood function ($\OMS/cm
+sy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.2[]) $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\O
+ML/cmm/m/it/12 y\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ^^R; ^^U; m\OT1/cmr/m/n/12 )
+$ \TU/lmr/m/n/12 and prior distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[
+]/5.1.3[]) $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OMS/cmsy/m/
+n/12 j\OML/cmm/m/it/12 ^^U; m\OT1/cmr/m/n/12 )$\TU/lmr/m/n/12 .
+ []
+
+[126] [127] [128]
 Chapter II.
-[147] [148] [149] [150] [151] [152] [153] [154] [155]
+[129
+
+] [130] [131] [132] [133] [134] [135] [136] [137]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 10326.
+(amsmath)                 on input line 8622.
 
-[156] [157] [158] [159] [160] [161] [162] [163] [164]
-Overfull \hbox (2.64522pt too wide) in paragraph at lines 10884--10885
+[138] [139] [140] [141] [142] [143] [144] [145]
+Overfull \hbox (2.64522pt too wide) in paragraph at lines 9108--9109
 \TU/lmr/m/n/12 2022-10-20; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][][][][][][][][][][
 ][] [] [][] [] [] [] [][][][][][][][] []
  []
 
 
-Overfull \hbox (2.64522pt too wide) in paragraph at lines 10949--10950
+Overfull \hbox (2.64522pt too wide) in paragraph at lines 9166--9167
 \TU/lmr/m/n/12 2022-10-20; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][][][][][][][][][][
 ][] [] [][] [] [] [] [][][][][][][][] []
  []
 
-[165] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175] [176]
-[177] [178] [179] [180]
-Overfull \hbox (3.1704pt too wide) in paragraph at lines 11981--11982
-[]\TU/lmr/bx/n/12 Proof: \TU/lmr/m/n/12 The cumulative distribution function of
- the continuous uniform distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Proof
- II[]/3.1.4[])
+[146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
+[158] [159] [160] [161] [162] [163] [164] [165]
+Overfull \hbox (11.26651pt too wide) in paragraph at lines 10310--10311
+\TU/lmr/m/it/12 dia\TU/lmr/m/n/12 , retrieved on 2023-08-25; URL: $[][][][][] [
+] [] [] [][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][][][] [] [
+][][][][][][] [] [][][][][][][][][][][] []
  []
 
-[181] [182] [183] [184] [185] [186]
-Overfull \hbox (5.92528pt too wide) in paragraph at lines 12347--12348
+[166]
+Overfull \hbox (5.92528pt too wide) in paragraph at lines 10352--10353
 \TU/lmr/m/n/12 05-26; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][][][]
 [] [] [][][][][][] [] [][][][][][][][][][][][]$. 
  []
 
-[187] [188] [189] [190] [191] [192] [193]
-Overfull \hbox (50.93726pt too wide) in paragraph at lines 12756--12757
+[167] [168] [169] [170] [171] [172]
+Overfull \hbox (50.93726pt too wide) in paragraph at lines 10711--10712
 \TU/lmr/m/n/12 05-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][][][]
 [][][] [] [][] [] [][][][][][][][] [] [][][][][][][][][][][] []
  []
 
-[194] [195] [196] [197]
-Overfull \hbox (35.2732pt too wide) in paragraph at lines 13023--13024
+[173] [174] [175] [176]
+Overfull \hbox (35.2732pt too wide) in paragraph at lines 10945--10946
 \TU/lmr/m/n/12 trieved on 2020-03-03; URL: $[][][][][] [] [] [] [][][][][][][][
 ][] [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][] [] [][][][][]
 [][][] [] [][] [] [][][][][][][][] []
  []
 
-[198]
-Overfull \hbox (24.83727pt too wide) in paragraph at lines 13098--13099
+[177]
+Overfull \hbox (24.83727pt too wide) in paragraph at lines 11013--11014
 \TU/lmr/m/n/12 03-20; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][][][]
 [][][] [] [][][][][][][][][][][][] [] [][][][][][][][]$. 
  []
 
-[199] [200]
-Overfull \hbox (24.83727pt too wide) in paragraph at lines 13201--13202
+[178] [179]
+Overfull \hbox (24.83727pt too wide) in paragraph at lines 11109--11110
 \TU/lmr/m/n/12 03-20; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][][][]
 [][][] [] [][][][][][][][][][][][] [] [][][][][][][][]$. 
  []
 
-[201] [202] [203] [204]
-Overfull \hbox (8.20094pt too wide) in paragraph at lines 13408--13409
+[180] [181] [182]
+Overfull \hbox (8.20094pt too wide) in paragraph at lines 11295--11296
 \TU/lmr/m/n/12 able?” ; in: \TU/lmr/m/it/12 StackExchange Mathematics\TU/lmr/m/
 n/12 , retrieved on 2020-01-09; URL: $[][][][][] [] [] [] [][][][] [] [][][][][
 ][][][][][][][][] []
  []
 
-[205] [206] [207]
-Overfull \hbox (8.20094pt too wide) in paragraph at lines 13629--13630
+[183] [184] [185]
+Overfull \hbox (8.20094pt too wide) in paragraph at lines 11485--11486
 \TU/lmr/m/n/12 able?” ; in: \TU/lmr/m/it/12 StackExchange Mathematics\TU/lmr/m/
 n/12 , retrieved on 2020-01-09; URL: $[][][][][] [] [] [] [][][][] [] [][][][][
 ][][][][][][][][] []
  []
 
-[208] [209] [210]
-Overfull \hbox (14.74994pt too wide) detected at line 13802
+[186] [187] [188]
+Overfull \hbox (14.74994pt too wide) detected at line 11638
 []
  []
 
 
-Overfull \hbox (151.74544pt too wide) detected at line 13809
+Overfull \hbox (151.74544pt too wide) detected at line 11645
 []
  []
 
-[211] [212] [213] [214]
-Overfull \hbox (8.86523pt too wide) in paragraph at lines 14072--14073
+[189] [190] [191] [192] [193]
+Overfull \hbox (8.86523pt too wide) in paragraph at lines 11881--11882
 \TU/lmr/m/n/12 08-25; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][][][][] [] [][][][][][][] [] [][][][][][]
 [][][][][][] [] [][] [] [][][] [] [][][][][][] []
  []
 
-[215] [216] [217]
-Overfull \hbox (20.04124pt too wide) in paragraph at lines 14214--14215
+[194] [195]
+Overfull \hbox (20.04124pt too wide) in paragraph at lines 11997--11998
 \TU/lmr/m/n/12 2021-05-20; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][][][][][
 ][][] [] [][][][][][][][][][][] [] [][][][][][][] [][]
  []
 
-[218]
-Overfull \hbox (3.34236pt too wide) in paragraph at lines 14293--14294
-\TU/lmr/bx/n/12 Theorem: \TU/lmr/m/n/12 The t-distribution ($\OMS/cmsy/m/n/12 !
-$ \TU/lmr/m/n/12 Definition II[]/3.3.1[]) is a special case of the multivariate
- t-distribution
- []
-
-[219] [220]
-Overfull \hbox (48.59384pt too wide) detected at line 14430
+[196] [197] [198]
+Overfull \hbox (48.59384pt too wide) detected at line 12188
 []
  []
 
-[221]
-Overfull \hbox (1.67145pt too wide) in paragraph at lines 14484--14485
+[199]
+Overfull \hbox (1.67145pt too wide) in paragraph at lines 12234--12235
 []\TU/lmr/m/n/12 Koch, Karl-Rudolf (2007): “   Gamma Distribution” ; in: \TU/lm
 r/m/it/12 Introduction to Bayesian Statistics\TU/lmr/m/n/12 , Springer,
  []
 
 
-Overfull \hbox (10.32068pt too wide) in paragraph at lines 14484--14485
+Overfull \hbox (10.32068pt too wide) in paragraph at lines 12234--12235
 \TU/lmr/m/n/12 Berlin/Heidelberg, 2007, p. 47, eq. 2.172; URL: $[][][][][] [] [
 ] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][]
 [][][][][][]$;
  []
 
 
-Overfull \hbox (78.64383pt too wide) in paragraph at lines 14508--14509
+Overfull \hbox (78.64383pt too wide) in paragraph at lines 12251--12252
 \TU/lmr/m/n/12 1.3.6.6.11; URL: $[][][][][] [] [] [] [][][] [] [][][] [] [][][]
 [] [] [][][] [] [][][][][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][] 
 [] [][][][][][][] [] [][][]$; DOI: 10.18434/M32189. 
  []
 
-[222] [223] [224] [225] [226] [227] [228] [229] [230] [231]
-Overfull \hbox (2.00648pt too wide) in paragraph at lines 15206--15207
+[200] [201]
+Overfull \hbox (0.11452pt too wide) in paragraph at lines 12375--12376
+[]\TU/lmr/m/n/12 which is the probability density function ($\OMS/cmsy/m/n/12 !
+$ \TU/lmr/m/n/12 I[]/1.6.6[]) of the standard gamma distribution ($\OMS/cmsy/m/
+n/12 !$ \TU/lmr/m/n/12 II[]/3.4.2[]). 
+ []
+
+[202] [203] [204] [205] [206] [207] [208]
+Overfull \hbox (2.00648pt too wide) in paragraph at lines 12859--12860
 \TU/lmr/m/it/12 change CrossValidated\TU/lmr/m/n/12 , retrieved on 2020-10-15; 
 URL: $[][][][][] [] [] [] [][][][][] [] [][][][][][][][][][][][][] [] [][][] []
  [][][][][][][][][] []
  []
 
-[232] [233] [234] [235]
-Overfull \hbox (2.17838pt too wide) in paragraph at lines 15456--15457
-[]\TU/lmr/bx/n/12 Proof: \TU/lmr/m/n/12 This follows directly from the definiti
-on of the exponential distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Definit
-ion II[]/3.5.1[]). 
- []
-
-[236] [237] [238] [239]
-Overfull \hbox (16.20068pt too wide) in paragraph at lines 15731--15732
+[209] [210] [211] [212] [213] [214] [215]
+Overfull \hbox (16.20068pt too wide) in paragraph at lines 13296--13297
 \TU/lmr/m/n/12 Berlin/Heidelberg, 2007, p. 39, eq. 2.142a; URL: $[][][][][] [] 
 [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][
 ][][][][][][]$;
  []
 
-[240] [241]
-Overfull \hbox (8.9824pt too wide) detected at line 15914
+[216] [217]
+Overfull \hbox (8.9824pt too wide) detected at line 13449
 []
  []
 
-[242]
-Overfull \hbox (17.43452pt too wide) in paragraph at lines 15943--15944
+[218]
+Overfull \hbox (17.43452pt too wide) in paragraph at lines 13477--13478
 \TU/lmr/m/it/12 matical statistics\TU/lmr/m/n/12 , retrieved on 2023-01-23; URL
 : $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][]
 [][][][][][][][][][][][][][][][][][] []
  []
 
-[243] [244] [245] [246]
-Overfull \hbox (40.5293pt too wide) in paragraph at lines 16186--16187
+[219] [220] [221]
+Overfull \hbox (40.5293pt too wide) in paragraph at lines 13694--13695
 \TU/lmr/m/n/12 trieved on 2022-02-13; URL: $[][][][][] [] [] [] [][][] [] [][][
 ][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][] [
 ] [][][][][][][][][][][][][][][][][][][][][][][][][]$. 
  []
 
-[247]
-Overfull \hbox (292.6707pt too wide) in paragraph at lines 16262--16263
+[222]
+Overfull \hbox (292.6707pt too wide) in paragraph at lines 13763--13764
 \TU/lmr/m/it/12 change\TU/lmr/m/n/12 , retrieved on 2022-06-29; URL: $[][][][][
 ] [] [] [] [][][][][] [] [][][][][][][][][][][][][] [] [][][] [] [][][][][][][]
 [][] [] [][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -943,51 +940,51 @@ Overfull \hbox (292.6707pt too wide) in paragraph at lines 16262--16263
 [][][][][][] []
  []
 
-[248]
-Overfull \hbox (30.75327pt too wide) in paragraph at lines 16318--16319
+[223]
+Overfull \hbox (30.75327pt too wide) in paragraph at lines 13812--13813
 \TU/lmr/m/n/12 2022-07-08; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][][][][][][] []
  [][][][] [][] [][][][][][][] [][] [][][][][][][][][][]$. 
  []
 
-[249]
-Overfull \hbox (17.43452pt too wide) in paragraph at lines 16409--16410
+[224]
+Overfull \hbox (17.43452pt too wide) in paragraph at lines 13896--13897
 \TU/lmr/m/it/12 matical statistics\TU/lmr/m/n/12 , retrieved on 2022-10-01; URL
 : $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][]
 [][][][][][][][][][][][][][][][][][] []
  []
 
-[250] [251] [252]
-Overfull \hbox (36.9813pt too wide) in paragraph at lines 16553--16554
+[225] [226]
+Overfull \hbox (36.9813pt too wide) in paragraph at lines 14021--14022
 \TU/lmr/m/n/12 2022-02-12; URL: $[][][][][] [] [] [] [][][][] [] [][][][][][][]
 [][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][][] [] [][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[253]
-Overfull \hbox (17.43452pt too wide) in paragraph at lines 16666--16667
+[227] [228]
+Overfull \hbox (17.43452pt too wide) in paragraph at lines 14127--14128
 \TU/lmr/m/it/12 matical statistics\TU/lmr/m/n/12 , retrieved on 2022-10-01; URL
 : $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][]
 [][][][][][][][][][][][][][][][][][] []
  []
 
-[254] [255] [256] [257]
+[229] [230] [231]
 Missing character: There is no χ in font [lmroman12-regular]:mapping=tex-text;!
- [258] [259]
-Overfull \hbox (75.23529pt too wide) detected at line 17033
+ [232] [233]
+Overfull \hbox (75.23529pt too wide) detected at line 14448
 []
  []
 
-[260] [261] [262] [263] [264]
-Overfull \hbox (4.14517pt too wide) in paragraph at lines 17353--17354
+[234] [235] [236] [237] [238]
+Overfull \hbox (4.14517pt too wide) in paragraph at lines 14734--14735
 \TU/lmr/m/n/12 trieved on 2020-11-25; URL: $[][][][][] [] [] [] [][] [] [][][][
 ][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][][][][]
 [][][][] [] [][][][][][][][] []
  []
 
-[265] [266] [267] [268] [269] [270] [271] [272] [273] [274] [275] [276]
-[277] [278] [279] [280]
-Overfull \hbox (87.15405pt too wide) detected at line 18344
+[239] [240] [241] [242] [243] [244] [245] [246] [247] [248] [249] [250]
+[251] [252] [253]
+Overfull \hbox (87.15405pt too wide) detected at line 15593
 \OML/cmm/m/it/12 M[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = \OML
 /cmm/m/it/12 M[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) [] + \OML/
 cmm/m/it/12 M[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) []  \OML/cm
@@ -995,274 +992,275 @@ m/m/it/12 :
  []
 
 
-Overfull \hbox (116.32988pt too wide) detected at line 18367
+Overfull \hbox (116.32988pt too wide) detected at line 15616
 []
  []
 
-[281] [282] [283] [284] [285]
-Overfull \hbox (48.33452pt too wide) in paragraph at lines 18642--18643
+[254] [255] [256] [257] [258]
+Overfull \hbox (48.33452pt too wide) in paragraph at lines 15845--15846
 \TU/lmr/m/it/12 mathematical statistics\TU/lmr/m/n/12 , retrieved on 2022-09-15
 ; URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][
 ][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[286] [287]
-Overfull \hbox (3.57451pt too wide) in paragraph at lines 18742--18743
+[259]
+Overfull \hbox (3.57451pt too wide) in paragraph at lines 15938--15939
 \TU/lmr/m/it/12 Mathematics\TU/lmr/m/n/12 , retrieved on 2022-09-15; URL: $[][]
 [][][] [] [] [] [][][][] [] [][][][][][][][][][][][][] [] [][][] [] [][][][][][
 ][][][] [] [][][][][][][] []
  []
 
-[288]
-Overfull \hbox (77.3613pt too wide) in paragraph at lines 18815--18816
+[260]
+Overfull \hbox (77.3613pt too wide) in paragraph at lines 16004--16005
 \TU/lmr/m/n/12 on 2020-05-14; URL: $[][][][][] [] [] [] [][][][] [] [][][][][][
 ][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][][] [] [][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$. 
  []
 
-[289]
-Overfull \hbox (65.52678pt too wide) detected at line 18886
+[261]
+Overfull \hbox (65.52678pt too wide) detected at line 16069
 []
  []
 
-[290]
-Overfull \hbox (15.13452pt too wide) in paragraph at lines 18988--18989
+[262] [263]
+Overfull \hbox (15.13452pt too wide) in paragraph at lines 16163--16164
 \TU/lmr/m/it/12 ity and statistics\TU/lmr/m/n/12 , retrieved on 2019-08-27; URL
 : $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][]
 [][][][][][][][][][][][][][][][][][] []
  []
 
-[291] [292] [293] [294] [295] [296] [297] [298] [299] [300]
-Overfull \hbox (2.85666pt too wide) in paragraph at lines 19604--19605
+[264] [265] [266] [267] [268] [269] [270] [271] [272]
+Overfull \hbox (2.85666pt too wide) in paragraph at lines 16708--16709
 \TU/lmr/m/n/12 pp. 55-56, eq. 2.212; URL: $[][][][][] [] [] [] [][][] [] [][][]
 [][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][][][][][][][]$; DOI: 1
 0.1007/978-
  []
 
-[301] [302] [303]
-Overfull \hbox (2.85666pt too wide) in paragraph at lines 19729--19730
+[273] [274]
+Overfull \hbox (2.85666pt too wide) in paragraph at lines 16814--16815
 \TU/lmr/m/n/12 pp. 55-56, eq. 2.212; URL: $[][][][][] [] [] [] [][][] [] [][][]
 [][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][][][][][][][]$; DOI: 1
 0.1007/978-
  []
 
-[304] [305] [306] [307] [308] [309]
-Overfull \hbox (101.5576pt too wide) detected at line 20193
+[275] [276] [277] [278] [279] [280] [281]
+Overfull \hbox (101.5576pt too wide) detected at line 17229
 []
  []
 
-[310] [311] [312]
-Overfull \hbox (21.18933pt too wide) detected at line 20312
+[282] [283] [284]
+Overfull \hbox (21.18933pt too wide) detected at line 17336
 []
  []
 
-[313] [314]
-Overfull \hbox (6.54926pt too wide) in paragraph at lines 20443--20444
+[285] [286]
+Overfull \hbox (6.54926pt too wide) in paragraph at lines 17447--17448
 \TU/lmr/m/n/12 05-10; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][] [] [][][][]
 [][][][][][][] [] [][][][][][][] [] [][][][][][][][]$. 
  []
 
-[315] [316] [317] [318] [319] [320] [321]
-Overfull \hbox (5.08221pt too wide) detected at line 20836
+[287] [288] [289] [290] [291] [292]
+Overfull \hbox (5.08221pt too wide) detected at line 17801
 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 M; U; V
 \OT1/cmr/m/n/12 ) = [] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
  []
 
 
-Overfull \hbox (2.6459pt too wide) detected at line 20842
+Overfull \hbox (2.6459pt too wide) detected at line 17807
 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 M; U; V
 \OT1/cmr/m/n/12 ) = [] \OMS/cmsy/m/n/12 ^^A [] []  \OML/cmm/m/it/12 :
  []
 
-[322]
-Overfull \hbox (2.48123pt too wide) in paragraph at lines 20937--20938
+[293]
+Overfull \hbox (2.48123pt too wide) in paragraph at lines 17882--17883
 \TU/lmr/m/n/12 2022-09-15; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][][
 ][] [] [][][][][][][][] [] [][][][][][]$. 
  []
 
-[323]
-Overfull \hbox (2.48123pt too wide) in paragraph at lines 21002--21003
+[294]
+Overfull \hbox (2.48123pt too wide) in paragraph at lines 17940--17941
 \TU/lmr/m/n/12 2022-09-15; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][][
 ][] [] [][][][][][][][] [] [][][][][][]$. 
  []
 
-[324] [325] [326] [327] [328] [329] [330]
-Overfull \hbox (2.48892pt too wide) in paragraph at lines 21515--21516
-[]\TU/lmr/m/n/12 Thus, given $\OML/cmm/m/it/12 X$ \TU/lmr/m/n/12 defined by [],
- $\OML/cmm/m/it/12 Y$ \TU/lmr/m/n/12 defined by [] is a sample ($\OMS/cmsy/m/n/
-12 !$ \TU/lmr/m/n/12 Definition “   samp” ) from $[] []$. 
- []
-
-
-Overfull \hbox (4.12523pt too wide) in paragraph at lines 21521--21522
+[295] [296] [297] [298] [299] [300]
+Overfull \hbox (4.12523pt too wide) in paragraph at lines 18392--18393
 \TU/lmr/m/n/12 2021-12-07; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][][
 ][] [] [][][][][][][] [] [][][][][][] []
  []
 
-[331] [332]
-Overfull \hbox (12.10297pt too wide) detected at line 21630
+[301] [302]
+Overfull \hbox (12.10297pt too wide) detected at line 18488
 []
  []
 
-[333] [334] [335] [336] [337] [338]
+[303] [304] [305] [306]
 Chapter III.
-[339
+[307
 
 ]
-Overfull \hbox (20.2587pt too wide) in paragraph at lines 21886--21887
+Overfull \hbox (20.2587pt too wide) in paragraph at lines 18700--18701
 [][][][][][] [] [][][][][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][
 ][][][][][][] [] [][][][][] [] [][][][][][][][][] [] [][][][][][][][][][] [] []
 [][][] [] [][][][][][][][][][] []
  []
 
-[340] [341]
-Overfull \hbox (4.52669pt too wide) in paragraph at lines 21995--21996
+[308] [309]
+Overfull \hbox (4.52669pt too wide) in paragraph at lines 18802--18803
 [][][][][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][][] []
  [][][][][] [] [][][][][][][][][] [] [][][][][][][][][][] [] [][][][] [] [][][]
 [][][][][][][] [] [][] []
  []
 
-[342] [343] [344]
-Overfull \hbox (35.02266pt too wide) in paragraph at lines 22176--22177
+[310] [311] [312]
+Overfull \hbox (35.02266pt too wide) in paragraph at lines 18969--18970
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [
 ] [][][][] [] [][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][] [] [][] 
 [] [][][][][][][] [] [][][][][][] [] [][][][][] [][] [][][][][][][][] []
  []
 
-[345]
-Overfull \hbox (12.76263pt too wide) in paragraph at lines 22227--22228
+
+Overfull \hbox (12.76263pt too wide) in paragraph at lines 19013--19014
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [
 ] [][][][] [] [][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][][][][][] 
 [] [][][][][][][] [] [][][] [] [][][][][][] [] [][][][][][][]$. 
  []
 
-[346] [347]
-Overfull \hbox (18.03871pt too wide) in paragraph at lines 22337--22338
+[313] [314]
+Overfull \hbox (18.03871pt too wide) in paragraph at lines 19116--19117
 [][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][][] [] [][][][][] [] [
 ][][][][][][][][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][][][][] [
 ] [][] [] [][][][][][] [] [][][]$\TU/lmr/m/n/12 . 
  []
 
-[348] [349] [350]
-Overfull \hbox (18.03871pt too wide) in paragraph at lines 22505--22506
+[315] [316] [317]
+Overfull \hbox (18.03871pt too wide) in paragraph at lines 19277--19278
 [][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][][] [] [][][][][] [] [
 ][][][][][][][][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][][][][] [
 ] [][] [] [][][][][][] [] [][][]$\TU/lmr/m/n/12 . 
  []
 
-[351] [352] [353] [354]
-Overfull \hbox (20.2587pt too wide) in paragraph at lines 22746--22747
+[318] [319] [320]
+Overfull \hbox (4.8926pt too wide) in paragraph at lines 19442--19443
+[]\TU/lmr/m/n/12 The accuracy term is the expectation ($\OMS/cmsy/m/n/12 !$ \TU
+/lmr/m/n/12 I[]/1.7.1[]) of the log-likelihood function ($\OMS/cmsy/m/n/12 !$ \
+TU/lmr/m/n/12 I[]/4.1.2[]) $[] \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it
+/12 y\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ^^V; ^^\\OT1/cmr/m/n/12 )$
+ []
+
+[321]
+Overfull \hbox (20.2587pt too wide) in paragraph at lines 19492--19493
 [][][][][][] [] [][][][][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][
 ][][][][][][] [] [][][][][] [] [][][][][][][][][] [] [][][][][][][][][][] [] []
 [][][] [] [][][][][][][][][][] []
  []
 
-[355] [356]
-Overfull \hbox (20.2587pt too wide) in paragraph at lines 22840--22841
+[322] [323]
+Overfull \hbox (20.2587pt too wide) in paragraph at lines 19579--19580
 [][][][][][] [] [][][][][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][
 ][][][][][][] [] [][][][][] [] [][][][][][][][][] [] [][][][][][][][][][] [] []
 [][][] [] [][][][][][][][][][] []
  []
 
-[357] [358]
-Overfull \hbox (4.63458pt too wide) in paragraph at lines 22995--22996
+[324] [325]
+Overfull \hbox (4.63458pt too wide) in paragraph at lines 19720--19721
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [
 ] [][][][] [] [][][] [] [][] [] [][][][][][][][] [] [][][][][][][][][][][][][][
 ][][][][][][] [] [][] [] [][][][][][][][] [] [] []
  []
 
-[359]
-Overfull \hbox (4.63458pt too wide) in paragraph at lines 23047--23048
+[326]
+Overfull \hbox (4.63458pt too wide) in paragraph at lines 19765--19766
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [
 ] [][][][] [] [][][] [] [][] [] [][][][][][][][] [] [][][][][][][][][][][][][][
 ][][][][][][] [] [][] [] [][][][][][][][] [] [] []
  []
 
-[360] [361]
-Overfull \hbox (20.2587pt too wide) in paragraph at lines 23151--23152
+[327]
+Overfull \hbox (20.2587pt too wide) in paragraph at lines 19862--19863
 [][][][][][] [] [][][][][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][
 ][][][][][][] [] [][][][][] [] [][][][][][][][][] [] [][][][][][][][][][] [] []
 [][][] [] [][][][][][][][][][] []
  []
 
-[362] [363]
-Overfull \hbox (58.03471pt too wide) in paragraph at lines 23295--23296
+[328] [329]
+Overfull \hbox (58.03471pt too wide) in paragraph at lines 19999--20000
 [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][] [] [][][][][][][][][] 
 [] [][][][][][][][][][][][][] [] [][][][][] [] [][][][][][][][][] [] [][][][][]
 [][][][][] [] [][][][] [] [][][][][][][][][][] []
  []
 
-[364] [365] [366] [367] [368] [369] [370] [371] [372] [373] [374] [375]
-Overfull \hbox (2.16496pt too wide) in paragraph at lines 23980--23981
+[330] [331] [332] [333] [334] [335] [336] [337] [338] [339] [340] [341]
+Overfull \hbox (2.16496pt too wide) in paragraph at lines 20593--20594
 \TU/lmr/m/n/12 sis” ; in: \TU/lmr/m/it/12 StackExchange CrossValidated\TU/lmr/m
 /n/12 , retrieved on 2022-11-06; URL: $[][][][][] [] [] [] [][][][][] [] [][][]
 [][][][][][][][][][] []
  []
 
 
-Overfull \hbox (34.10669pt too wide) in paragraph at lines 23980--23981
+Overfull \hbox (34.10669pt too wide) in paragraph at lines 20593--20594
 [][][] [] [][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
 r/m/n/12 . 
  []
 
-[376] [377] [378] [379]
-Overfull \hbox (101.57095pt too wide) detected at line 24232
+[342] [343] [344]
+Overfull \hbox (101.57095pt too wide) detected at line 20813
 []
  []
 
-[380] [381] [382]
-Overfull \hbox (2.16496pt too wide) in paragraph at lines 24365--24366
+[345] [346] [347]
+Overfull \hbox (2.16496pt too wide) in paragraph at lines 20945--20946
 \TU/lmr/m/n/12 sis” ; in: \TU/lmr/m/it/12 StackExchange CrossValidated\TU/lmr/m
 /n/12 , retrieved on 2022-11-06; URL: $[][][][][] [] [] [] [][][][][] [] [][][]
 [][][][][][][][][][] []
  []
 
 
-Overfull \hbox (34.10669pt too wide) in paragraph at lines 24365--24366
+Overfull \hbox (34.10669pt too wide) in paragraph at lines 20945--20946
 [][][] [] [][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
 r/m/n/12 . 
  []
 
-[383] [384] [385] [386] [387]
-Overfull \hbox (17.1313pt too wide) in paragraph at lines 24644--24645
+[348] [349] [350] [351]
+Overfull \hbox (17.1313pt too wide) in paragraph at lines 21198--21199
 \TU/lmr/m/it/12 Sozialwissenschaftler\TU/lmr/m/n/12 , ch. 12.2, pp. 538ff.; URL
 : $[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][] [] [][][][][] [] [][]
  [] [][][][][][][][][][][][]$. 
  []
 
 
-Overfull \hbox (33.65468pt too wide) in paragraph at lines 24645--24646
+Overfull \hbox (33.65468pt too wide) in paragraph at lines 21199--21200
 [][][][][][][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][] [] [
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
 r/m/n/12 . 
  []
 
-[388] [389] [390] [391] [392]
-Overfull \hbox (16.6036pt too wide) detected at line 24898
+[352] [353] [354] [355] [356]
+Overfull \hbox (16.6036pt too wide) detected at line 21431
 []
  []
 
-[393] [394] [395]
-Overfull \hbox (27.08444pt too wide) detected at line 25032
+[357] [358] [359]
+Overfull \hbox (27.08444pt too wide) detected at line 21558
 []
  []
 
-[396] [397] [398] [399]
-Overfull \hbox (26.24638pt too wide) detected at line 25180
+[360] [361] [362] [363]
+Overfull \hbox (26.24638pt too wide) detected at line 21706
 []
  []
 
-[400] [401]
-Overfull \hbox (33.65468pt too wide) in paragraph at lines 25314--25315
+[364] [365] [366]
+Overfull \hbox (33.65468pt too wide) in paragraph at lines 21832--21833
 [][][][][][][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][] [] [
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
@@ -1270,7 +1268,7 @@ r/m/n/12 .
  []
 
 
-Overfull \hbox (273.16139pt too wide) in paragraph at lines 25315--25316
+Overfull \hbox (273.16139pt too wide) in paragraph at lines 21833--21834
 \TU/lmr/m/n/12 2022-11-10; URL: $[][][][][] [] [] [] [][][][][] [] [][][][][][]
 [][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][] [] [][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1278,1176 +1276,1231 @@ Overfull \hbox (273.16139pt too wide) in paragraph at lines 25315--25316
 ][][][][][][][][][]$. 
  []
 
-[402] [403]
-Overfull \hbox (33.65468pt too wide) in paragraph at lines 25404--25405
+[367]
+Overfull \hbox (33.65468pt too wide) in paragraph at lines 21915--21916
 [][][][][][][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][] [] [
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$\TU/lm
 r/m/n/12 . 
  []
 
-[404] [405] [406] [407]
-Overfull \hbox (22.50926pt too wide) in paragraph at lines 25655--25656
+[368] [369] [370] [371]
+Overfull \hbox (22.50926pt too wide) in paragraph at lines 22140--22141
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][] 
 [] [][][][][][][] [] [][][] [] [][][][][][][][][][] []
  []
 
-[408]
-Overfull \hbox (11.11046pt too wide) in paragraph at lines 25693--25694
-[]\TU/lmr/m/n/12 Comparing with the multiple linear regression equations for un
-correlated errors ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Definition III[]/1.5.1[]
-),
- []
-
-[409] [410] [411] [412] [413] [414]
-Overfull \hbox (2.8466pt too wide) in paragraph at lines 26031--26032
+[372] [373] [374] [375] [376] [377] [378]
+Overfull \hbox (2.8466pt too wide) in paragraph at lines 22478--22479
 [][][][][][][] [] [][][][][][][][][][][][] [] [][][] [] [][][][][][][][] [] [][
 ] [] [][][] [][] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][] [] [][] []
  []
 
-[415] [416] [417]
-Overfull \hbox (2.8466pt too wide) in paragraph at lines 26149--26150
+[379] [380] [381]
+Overfull \hbox (2.8466pt too wide) in paragraph at lines 22589--22590
 [][][][][][][] [] [][][][][][][][][][][][] [] [][][] [] [][][][][][][][] [] [][
 ] [] [][][] [][] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][] [] [][] []
  []
 
-[418] [419]
-Overfull \hbox (2.8466pt too wide) in paragraph at lines 26247--26248
+[382] [383]
+Overfull \hbox (2.8466pt too wide) in paragraph at lines 22680--22681
 [][][][][][][] [] [][][][][][][][][][][][] [] [][][] [] [][][][][][][][] [] [][
 ] [] [][][] [][] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][] [] [][] []
  []
 
-[420] [421] [422]
-Overfull \hbox (22.50926pt too wide) in paragraph at lines 26425--26426
+[384] [385]
+Overfull \hbox (22.50926pt too wide) in paragraph at lines 22827--22828
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][] 
 [] [][][][][][][] [] [][][] [] [][][][][][][][][][] []
  []
 
-[423]
-Overfull \hbox (9.22527pt too wide) in paragraph at lines 26463--26464
+[386]
+Overfull \hbox (9.22527pt too wide) in paragraph at lines 22858--22859
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][] 
 [] [][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[424] [425] [426] [427] [428] [429] [430]
-Overfull \hbox (0.51979pt too wide) detected at line 26849
+[387] [388] [389] [390] [391] [392] [393]
+Overfull \hbox (0.51979pt too wide) detected at line 23207
 []
  []
 
-[431] [432] [433] [434] [435] [436] [437]
-Overfull \hbox (9.22527pt too wide) in paragraph at lines 27177--27178
+[394] [395] [396] [397] [398] [399]
+Overfull \hbox (9.22527pt too wide) in paragraph at lines 23486--23487
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][] 
 [] [][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[438]
-Overfull \hbox (9.22527pt too wide) in paragraph at lines 27230--27231
+[400]
+Overfull \hbox (9.22527pt too wide) in paragraph at lines 23532--23533
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][] 
 [] [][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[439]
-Overfull \hbox (9.22527pt too wide) in paragraph at lines 27302--27303
+[401]
+Overfull \hbox (9.22527pt too wide) in paragraph at lines 23597--23598
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][] 
 [] [][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[440]
-Overfull \hbox (22.50926pt too wide) in paragraph at lines 27363--27364
+[402]
+Overfull \hbox (22.50926pt too wide) in paragraph at lines 23651--23652
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][] 
 [] [][][][][][][] [] [][][] [] [][][][][][][][][][] []
  []
 
-[441] [442]
-Overfull \hbox (22.50926pt too wide) in paragraph at lines 27436--27437
+[403]
+Overfull \hbox (22.50926pt too wide) in paragraph at lines 23717--23718
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][] 
 [] [][][][][][][] [] [][][] [] [][][][][][][][][][] []
  []
 
 
-Overfull \hbox (50.28923pt too wide) in paragraph at lines 27437--27438
+Overfull \hbox (50.28923pt too wide) in paragraph at lines 23718--23719
 \TU/lmr/m/n/12 2021-10-27; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][] [] [][][][][][][][][][
 ][][][] [] [][] [] [][][][][][][] [] [][][][][][][][][][][] []
  []
 
-[443]
-Overfull \hbox (24.77728pt too wide) in paragraph at lines 27515--27516
+[404]
+Overfull \hbox (24.77728pt too wide) in paragraph at lines 23789--23790
 \TU/lmr/m/n/12 21; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][]
 [] [] [][][][] [] [][][][][][] [] [][][][][][][][][][] [] [][][][][][] [] [][][
 ] [] [][][][][][][][] [] [][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[444] [445] [446] [447] [448] [449] [450] [451] [452] [453] [454]
-Overfull \hbox (28.98598pt too wide) in paragraph at lines 28350--28351
+[405]
+Overfull \hbox (3.46777pt too wide) in paragraph at lines 23821--23822
+[]\TU/lmr/m/n/12 Thus, using the relationship between multivariate normal and m
+atrix normal distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 II[]/5.1.2[]),
+ []
+
+[406] [407] [408] [409] [410] [411] [412] [413] [414] [415]
+Overfull \hbox (28.98598pt too wide) in paragraph at lines 24514--24515
 \TU/lmr/m/n/12 Berlin/Heidelberg, 2007, ch. 4, eqs. 4.2, 4.30; URL: $[][][][][]
  [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][
 ][][][][][][][][]$;
  []
 
-[455] [456]
-Overfull \hbox (28.98598pt too wide) in paragraph at lines 28454--28455
+[416]
+Overfull \hbox (28.98598pt too wide) in paragraph at lines 24611--24612
 \TU/lmr/m/n/12 Berlin/Heidelberg, 2007, ch. 4, eqs. 4.2, 4.30; URL: $[][][][][]
  [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [] [][][][][
 ][][][][][][][][]$;
  []
 
-[457] [458] [459] [460] [461] [462] [463] [464] [465] [466] [467] [468]
-[469] [470]
-Overfull \hbox (52.19144pt too wide) in paragraph at lines 29304--29305
+[417] [418] [419] [420] [421] [422] [423] [424] [425] [426] [427] [428]
+[429]
+Overfull \hbox (52.19144pt too wide) in paragraph at lines 25388--25389
 \TU/lmr/m/it/12 eraging\TU/lmr/m/n/12 , ex. 2.2, p. 66; URL: $[][][][][] [] [] 
 [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][] [] [][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[471] [472]
-Overfull \hbox (52.19144pt too wide) in paragraph at lines 29458--29459
+[430] [431]
+Overfull \hbox (52.19144pt too wide) in paragraph at lines 25523--25524
 \TU/lmr/m/it/12 eraging\TU/lmr/m/n/12 , ex. 2.2, p. 66; URL: $[][][][][] [] [] 
 [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][] [] [][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[473] [474]
-Overfull \hbox (52.19144pt too wide) in paragraph at lines 29572--29573
+[432] [433]
+Overfull \hbox (52.19144pt too wide) in paragraph at lines 25618--25619
 \TU/lmr/m/it/12 eraging\TU/lmr/m/n/12 , ex. 2.5, p. 67; URL: $[][][][][] [] [] 
 [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][] [] [][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[475] [476] [477] [478] [479] [480] [481] [482] [483] [484] [485] [486]
-[487] [488] [489] [490] [491] [492] [493] [494] [495] [496] [497] [498]
-[499] [500]
-Overfull \hbox (24.96756pt too wide) detected at line 31248
+[434] [435] [436] [437] [438] [439] [440] [441] [442]
+Overfull \hbox (4.78645pt too wide) in paragraph at lines 26177--26178
+[]\TU/lmr/m/n/12 The marginal distribution of a normal-gamma distribution is a 
+multivariate t-distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 II[]/4.3.8[]),
+
+ []
+
+[443] [444]
+Overfull \hbox (4.78645pt too wide) in paragraph at lines 26274--26275
+[]\TU/lmr/m/n/12 The marginal distribution of a normal-gamma distribution is a 
+multivariate t-distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 II[]/4.3.8[]),
+
+ []
+
+[445] [446] [447] [448] [449] [450] [451] [452] [453] [454] [455] [456]
+[457]
+Overfull \hbox (24.96756pt too wide) detected at line 27135
 \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Y\OMS/cmsy/m/n/12 j\OML/cmm
 /m/it/12 B; T\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 / j\OML/cmm/m/it/12 T\OMS/cmsy/
 m/n/12 j[] ^^A [] [] ^^A [] []  \OML/cmm/m/it/12 :
  []
 
 
-Overfull \hbox (44.39775pt too wide) detected at line 31260
+Overfull \hbox (44.39775pt too wide) detected at line 27147
 \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 B; T\OT1/cmr/m/n/12 ) = [] 
  [] [] \OMS/cmsy/m/n/12 ^^A [][]j\OML/cmm/m/it/12 T\OMS/cmsy/m/n/12 j[] [] []
  []
 
-[501]
-Overfull \hbox (39.43724pt too wide) in paragraph at lines 31274--31275
+
+Overfull \hbox (39.43724pt too wide) in paragraph at lines 27160--27161
 \TU/lmr/m/n/12 retrieved on 2020-09-03; URL: $[][][][][] [] [] [] [][] [] [][][
 ][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][] [] [][][][][][][][][][]
 [][] [] [][][][][][] [] [][][][][][][][][][] []
  []
 
-[502] [503]
-Overfull \hbox (39.43724pt too wide) in paragraph at lines 31426--31427
+[458] [459] [460]
+Overfull \hbox (39.43724pt too wide) in paragraph at lines 27305--27306
 \TU/lmr/m/n/12 retrieved on 2020-09-03; URL: $[][][][][] [] [] [] [][] [] [][][
 ][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][] [] [][][][][][][][][][]
 [][] [] [][][][][][] [] [][][][][][][][][][] []
  []
 
-[504]
-Overfull \hbox (0.54402pt too wide) in paragraph at lines 31500--31501
-[]\TU/lmr/m/n/12 When deriving the posterior distribution ($\OMS/cmsy/m/n/12 !$
- \TU/lmr/m/n/12 Proof III[]/2.4.2[]) $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/c
-mm/m/it/12 B; T\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Y\OT1/cmr/m/n/12 )$\TU/lmr/m/
-n/12 , the joint likelihood $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/1
-2 Y; B; T\OT1/cmr/m/n/12 )$
- []
-
-[505] [506] [507] [508] [509] [510] [511] [512] [513] [514] [515] [516]
-[517] [518]
-Overfull \hbox (55.31732pt too wide) in paragraph at lines 32358--32359
+[461] [462] [463] [464] [465] [466] [467] [468] [469] [470] [471] [472]
+[473]
+Overfull \hbox (55.31732pt too wide) in paragraph at lines 28106--28107
 \TU/lmr/m/n/12 03-11; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][] [] [][][][]
 [][][][][] [] [][] [] [][][][][][][][][][][] [] [][][][][][][][][][][]$. 
  []
 
-[519]
-Overfull \hbox (55.31732pt too wide) in paragraph at lines 32435--32436
+[474]
+Overfull \hbox (55.31732pt too wide) in paragraph at lines 28176--28177
 \TU/lmr/m/n/12 03-11; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][] [] [][][][]
 [][][][][] [] [][] [] [][][][][][][][][][][] [] [][][][][][][][][][][]$. 
  []
 
-[520] [521] [522] [523] [524] [525] [526] [527] [528] [529] [530] [531]
-[532] [533] [534] [535] [536] [537] [538] [539] [540] [541] [542] [543]
-[544] [545] [546]
-Overfull \hbox (20.27325pt too wide) in paragraph at lines 34009--34010
+[475] [476] [477] [478] [479] [480] [481] [482] [483] [484] [485] [486]
+[487] [488] [489] [490] [491] [492] [493] [494] [495] [496] [497] [498]
+[499] [500]
+Overfull \hbox (20.27325pt too wide) in paragraph at lines 29567--29568
 \TU/lmr/m/n/12 2022-10-07; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][][][][][][][][][][
 ][] [] [][][][][][] [] [][] [] [][][][][][][]$. 
  []
 
-[547] [548]
-Overfull \hbox (4.52669pt too wide) in paragraph at lines 34120--34121
+[501] [502]
+Overfull \hbox (4.52669pt too wide) in paragraph at lines 29664--29665
 [][][][][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][][] []
  [][][][][] [] [][][][][][][][][] [] [][][][][][][][][][] [] [][][][] [] [][][]
 [][][][][][][] [] [][] []
  []
 
-[549] [550]
+[503] [504]
 Chapter IV.
-[551
+[505
 
-] [552] [553] [554]
-Overfull \hbox (1.70647pt too wide) in paragraph at lines 34401--34402
-[]\TU/lmr/m/n/12 1) This follows from maximum likelihood estimation for multipl
-e linear regression ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 Proof III[]/1.5.25[])
- []
-
-[555] [556] [557] [558] [559] [560]
-Overfull \hbox (2.82253pt too wide) in paragraph at lines 34799--34800
-[]\TU/lmr/m/n/12 and parameter estimates ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 D
-efinition “  est” ) obtained with ordinary least squares ($\OMS/cmsy/m/n/12 !$ 
-\TU/lmr/m/n/12 Proof III[]/1.5.3[]) 
- []
-
-[561] [562] [563]
-Overfull \hbox (14.60124pt too wide) in paragraph at lines 34971--34972
+] [506] [507] [508] [509] [510] [511] [512] [513] [514] [515] [516]
+Overfull \hbox (14.60124pt too wide) in paragraph at lines 30409--30410
 \TU/lmr/m/n/12 2022-03-18; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][
 ][][][] [] [][][][][][][][][][][][] [] [][][] []
  []
 
-[564]
-Overfull \hbox (14.60124pt too wide) in paragraph at lines 35021--35022
+
+Overfull \hbox (14.60124pt too wide) in paragraph at lines 30452--30453
 \TU/lmr/m/n/12 2022-03-11; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][
 ][][][] [] [][][][][][][][][][][][] [] [][][] []
  []
 
-[565]
-Overfull \hbox (87.91544pt too wide) in paragraph at lines 35137--35138
+[517] [518]
+Overfull \hbox (87.91544pt too wide) in paragraph at lines 30554--30555
 \TU/lmr/m/it/12 Averaging\TU/lmr/m/n/12 , ch. 3.2, pp. 78-81; URL: $[][][][][] 
 [] [] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][] [] []
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
 
  []
 
-[566] [567] [568] [569] [570] [571]
-Overfull \hbox (2.53778pt too wide) in paragraph at lines 35460--35461
+[519] [520] [521] [522] [523]
+Overfull \hbox (2.53778pt too wide) in paragraph at lines 30807--30808
 \TU/lmr/m/n/12 Bayesian model selection” ; in: \TU/lmr/m/it/12 NeuroImage\TU/lm
 r/m/n/12 , vol. 141, pp. 469–489; URL: $[][][][][] [] [] [] [][][] [] [][][][][
 ][][][][][][][][] []
  []
 
-[572]
-Overfull \hbox (107.67725pt too wide) in paragraph at lines 35514--35515
+
+Overfull \hbox (107.67725pt too wide) in paragraph at lines 30847--30848
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] [
 ] [][][] [] [][][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][][][][][][
 ][][][][][][]$; DOI: 10.1016/j.neuroimage.2016.07.047. 
  []
 
-[573] [574] [575] [576] [577] [578] [579] [580] [581] [582] [583] [584]
-Overfull \hbox (18.94809pt too wide) in paragraph at lines 36244--36245
-\TU/lmr/m/n/12 Definition I[]/5.1.9[]) $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML
-/cmm/m/it/12 y\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )\OML/cmm/m
-/it/12 ; [] ; p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OMS/cmsy/m/n/12 j\OML/cmm/m/
-it/12 m[]\OT1/cmr/m/n/12 )$ \TU/lmr/m/n/12 and prior probabilities ($\OMS/cmsy/
-m/n/12 !$ \TU/lmr/m/n/12 Definition I[]/5.1.3[]) $\OML/cmm/m/it/12 p\OT1/cmr/m/
-n/12 (\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; p\OT1/cmr/m/
-n/12 (\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )$\TU/lmr/m/n/12 .
+[524]
+Overfull \hbox (3.94191pt too wide) in paragraph at lines 30857--30858
+\OML/cmm/m/it/12 ^^U$ \TU/lmr/m/n/12 implying the likelihood function ($\OMS/cm
+sy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.2[]) $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\O
+ML/cmm/m/it/12 y\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ^^R; ^^U; m\OT1/cmr/m/n/12 )
+$ \TU/lmr/m/n/12 and prior distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[
+]/5.1.3[]) $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OMS/cmsy/m/
+n/12 j\OML/cmm/m/it/12 ^^U; m\OT1/cmr/m/n/12 )$\TU/lmr/m/n/12 .
  []
 
-[585] [586] [587] [588] [589] [590]
-Chapter V.
-[591
+[525] [526] [527]
+Overfull \hbox (79.37755pt too wide) in paragraph at lines 31069--31070
+\TU/lmr/bx/n/12 Theorem: \TU/lmr/m/n/12 Let $\OML/cmm/m/it/12 m[]; [] ; m[]$ \T
+U/lmr/m/n/12 be $\OML/cmm/m/it/12 M$ \TU/lmr/m/n/12 statistical models with log
+ model evidences ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 IV[]/3.1.3[]) $[]\OT1/cmr
+/m/n/12 (\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; []\OT1/cm
+r/m/n/12 (\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )$
+ []
+
+[528] [529] [530] [531] [532] [533] [534] [535] [536]
+Overfull \hbox (6.42921pt too wide) in paragraph at lines 31593--31594
+[][][][][][][][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][][][] [] [][
+][] [] [][][][][][][][][][][][][][][][][]$\TU/lmr/m/n/12 ; DOI: 10.1016/j.neuro
+image.2017.09.008. 
+ []
+
+
+Overfull \hbox (82.64156pt too wide) in paragraph at lines 31600--31601
+\TU/lmr/bx/n/12 Theorem: \TU/lmr/m/n/12 Let $\OML/cmm/m/it/12 m[]; [] ; m[]$ \T
+U/lmr/m/n/12 be $\OML/cmm/m/it/12 M$ \TU/lmr/m/n/12 statistical models with log
+ model evidences ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 IV[]/3.1.3[]) $[]\OT1/cmr
+/m/n/12 (\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; []\OT1/cm
+r/m/n/12 (\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )$\TU/lmr/m/n/12 .
+ []
+
+[537]
+Overfull \hbox (3.31383pt too wide) in paragraph at lines 31646--31647
+\TU/lmr/m/n/12 ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 IV[]/3.4.1[]) $\OML/cmm/m/i
+t/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y
+\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m[]
+\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )$ \TU/lmr/m/n/12 and poste
+rior distributions ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.7[]) $\OML/cmm/
+m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/1
+2 y; m[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; p\OT1/cmr/m/n/12 (\OML/cmm/m/i
+t/12 ^^R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y; m[]\OT1/cmr/m/n/12 )$\TU/lmr/m/n/
+12 .
+ []
+
+
+Overfull \hbox (3.31383pt too wide) in paragraph at lines 31662--31663
+\TU/lmr/m/n/12 ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 IV[]/3.4.1[]) $\OML/cmm/m/i
+t/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y
+\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m[]
+\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )$ \TU/lmr/m/n/12 and poste
+rior distributions ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.7[]) $\OML/cmm/
+m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/1
+2 y; m[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; p\OT1/cmr/m/n/12 (\OML/cmm/m/i
+t/12 ^^R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y; m[]\OT1/cmr/m/n/12 )$\TU/lmr/m/n/
+12 .
+ []
+
+[538] [539] [540
 
 ]
-Underfull \hbox (badness 5022) in paragraph at lines 36599--36599
+Chapter V.
+[541]
+Underfull \hbox (badness 5022) in paragraph at lines 31736--31736
 []|\TU/lmr/m/n/12 Conjugate prior distribution for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36605--36605
+Underfull \hbox (badness 10000) in paragraph at lines 31742--31742
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36607--36607
+Underfull \hbox (badness 10000) in paragraph at lines 31744--31744
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36588--36609
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31725--31746
  [] [] [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 36609
+Underfull \vbox (badness 10000) detected at line 31746
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36618--36618
+Underfull \hbox (badness 10000) in paragraph at lines 31755--31755
 []|\TU/lmr/m/n/12 beta-
  []
 
 
-Underfull \hbox (badness 7796) in paragraph at lines 36618--36618
+Underfull \hbox (badness 7796) in paragraph at lines 31755--31755
 []|\TU/lmr/m/n/12 Method of moments for beta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36626--36626
+Underfull \hbox (badness 10000) in paragraph at lines 31763--31763
 []|\TU/lmr/m/n/12 Marginal distributions of the
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36609--36629
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31746--31766
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36631--36631
+Underfull \hbox (badness 10000) in paragraph at lines 31768--31768
 []|\TU/lmr/m/n/12 poissexp-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36632--36632
+Underfull \hbox (badness 10000) in paragraph at lines 31769--31769
 []|\TU/lmr/m/n/12 poissexp-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36633--36633
+Underfull \hbox (badness 10000) in paragraph at lines 31770--31770
 []|\TU/lmr/m/n/12 poissexp-
  []
 
 
-Overfull \hbox (2.45775pt too wide) in paragraph at lines 36641--36641
+Overfull \hbox (2.45775pt too wide) in paragraph at lines 31778--31778
 []|\TU/lmr/m/n/12 kantundpeterpan| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36642--36642
+Underfull \hbox (badness 10000) in paragraph at lines 31779--31779
 []|\TU/lmr/m/n/12 mean-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36644--36644
+Underfull \hbox (badness 10000) in paragraph at lines 31781--31781
 []|\TU/lmr/m/n/12 mean-
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 36645--36645
+Underfull \hbox (badness 2653) in paragraph at lines 31782--31782
 []|\TU/lmr/m/n/12 (Non-)Multiplicativity of the ex-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36629--36649
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31766--31786
  [] [] [] [] [] [] 
  []
 
-[592]
-Underfull \hbox (badness 1308) in paragraph at lines 36651--36651
+[542]
+Underfull \hbox (badness 1308) in paragraph at lines 31788--31788
 []|\TU/lmr/m/n/12 Maximum likelihood estimator of
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 36656--36656
+Underfull \hbox (badness 5817) in paragraph at lines 31793--31793
 []|\TU/lmr/m/n/12 Posterior model probabilities in
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 36664--36664
+Underfull \hbox (badness 5817) in paragraph at lines 31801--31801
 []|\TU/lmr/m/n/12 Posterior model probabilities in
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 36665--36665
+Underfull \hbox (badness 1033) in paragraph at lines 31802--31802
 []|\TU/lmr/m/n/12 Transformation matrices for ordi-
  []
 
 
-Underfull \hbox (badness 5022) in paragraph at lines 36669--36669
+Underfull \hbox (badness 5022) in paragraph at lines 31806--31806
 []|\TU/lmr/m/n/12 Conjugate prior distribution for
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36649--36669
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31786--31806
  [] [] [] [] [] [] 
  []
 
-[593] [594]
-Underfull \hbox (badness 10000) in paragraph at lines 36676--36676
+[543] [544]
+Underfull \hbox (badness 10000) in paragraph at lines 31813--31813
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 36686--36686
+Underfull \hbox (badness 1394) in paragraph at lines 31823--31823
 []|\TU/lmr/m/n/12 Probability mass function of the
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 36689--36689
+Underfull \hbox (badness 1394) in paragraph at lines 31826--31826
 []|\TU/lmr/m/n/12 Probability mass function of the
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36669--36689
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31806--31826
  [] [] [] [] [] [] 
  []
 
-[595]
-Underfull \hbox (badness 1394) in paragraph at lines 36692--36692
+[545]
+Underfull \hbox (badness 1394) in paragraph at lines 31829--31829
 []|\TU/lmr/m/n/12 Probability mass function of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36693--36693
+Underfull \hbox (badness 10000) in paragraph at lines 31830--31830
 []|\TU/lmr/m/n/12 mean-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36700--36700
+Underfull \hbox (badness 10000) in paragraph at lines 31837--31837
 []|\TU/lmr/m/n/12 gam-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36700--36700
+Underfull \hbox (badness 10000) in paragraph at lines 31837--31837
 []|\TU/lmr/m/n/12 Logarithmic expectation of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36701--36701
+Underfull \hbox (badness 10000) in paragraph at lines 31838--31838
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Underfull \hbox (badness 2005) in paragraph at lines 36704--36704
+Underfull \hbox (badness 2005) in paragraph at lines 31841--31841
 []|\TU/lmr/m/n/12 Relation of continuous Kullback-
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 36707--36707
+Underfull \hbox (badness 4859) in paragraph at lines 31844--31844
 []|\TU/lmr/m/n/12 Non-negativity of the Kullback-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36709--36709
+Underfull \hbox (badness 10000) in paragraph at lines 31846--31846
 []|\TU/lmr/m/n/12 Relationship between covariance
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36689--36709
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31826--31846
  [] [] [] [] [] [] 
  []
 
-[596]
-Underfull \hbox (badness 10000) in paragraph at lines 36710--36710
+[546]
+Underfull \hbox (badness 10000) in paragraph at lines 31847--31847
 []|\TU/lmr/m/n/12 covmat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36711--36711
+Underfull \hbox (badness 10000) in paragraph at lines 31848--31848
 []|\TU/lmr/m/n/12 covmat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36711--36711
+Underfull \hbox (badness 10000) in paragraph at lines 31848--31848
 []|\TU/lmr/m/n/12 Relationship between covariance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36712--36712
+Underfull \hbox (badness 10000) in paragraph at lines 31849--31849
 []|\TU/lmr/m/n/12 precmat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36718--36718
+Underfull \hbox (badness 10000) in paragraph at lines 31855--31855
 []|\TU/lmr/m/n/12 var-
  []
 
 
-Underfull \hbox (badness 2384) in paragraph at lines 36723--36723
+Underfull \hbox (badness 2384) in paragraph at lines 31860--31860
 \TU/lmr/m/n/12 the omnibus null hypothesis for
  []
 
 
-Underfull \hbox (badness 6125) in paragraph at lines 36724--36724
+Underfull \hbox (badness 6125) in paragraph at lines 31861--31861
 []|\TU/lmr/m/n/12 Projection matrix and residual-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36709--36729
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31846--31866
  [] [] [] [] [] [] 
  []
 
-[597]
-Underfull \hbox (badness 1286) in paragraph at lines 36733--36733
+[547]
+Underfull \hbox (badness 1286) in paragraph at lines 31870--31870
 []|\TU/lmr/m/n/12 Transposition of a matrix-normal
  []
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 36735--36735
+Underfull \hbox (badness 5696) in paragraph at lines 31872--31872
 []|\TU/lmr/m/n/12 Conditional distributions of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36736--36736
+Underfull \hbox (badness 10000) in paragraph at lines 31873--31873
 []|\TU/lmr/m/n/12 kl-
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 36736--36736
+Underfull \hbox (badness 5050) in paragraph at lines 31873--31873
 []|\TU/lmr/m/n/12 Non-symmetry of the Kullback-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36739--36739
+Underfull \hbox (badness 10000) in paragraph at lines 31876--31876
 []|\TU/lmr/m/n/12 entcross-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36741--36741
+Underfull \hbox (badness 10000) in paragraph at lines 31878--31878
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Underfull \hbox (badness 7796) in paragraph at lines 36742--36742
+Underfull \hbox (badness 7796) in paragraph at lines 31879--31879
 []|\TU/lmr/m/n/12 Moment in terms of moment-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36744--36744
+Underfull \hbox (badness 10000) in paragraph at lines 31881--31881
 []|\TU/lmr/m/n/12 mgf-
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 36746--36746
+Underfull \hbox (badness 5817) in paragraph at lines 31883--31883
 []|\TU/lmr/m/n/12 Encompassing prior method for
  []
 
 
-Underfull \hbox (badness 5022) in paragraph at lines 36748--36748
+Underfull \hbox (badness 5022) in paragraph at lines 31885--31885
 []|\TU/lmr/m/n/12 Conjugate prior distribution for
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36729--36749
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31866--31886
  [] [] [] [] [] [] 
  []
 
-[598]
-Underfull \hbox (badness 10000) in paragraph at lines 36754--36754
+[548]
+Underfull \hbox (badness 10000) in paragraph at lines 31891--31891
 []|\TU/lmr/m/n/12 logsum-
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 36755--36755
+Underfull \hbox (badness 4859) in paragraph at lines 31892--31892
 []|\TU/lmr/m/n/12 Non-negativity of the Kullback-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36756--36756
+Underfull \hbox (badness 10000) in paragraph at lines 31893--31893
 []|\TU/lmr/m/n/12 momcent-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36760--36760
+Underfull \hbox (badness 10000) in paragraph at lines 31897--31897
 []|\TU/lmr/m/n/12 momraw-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36761--36761
+Underfull \hbox (badness 10000) in paragraph at lines 31898--31898
 []|\TU/lmr/m/n/12 momraw-
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 36761--36761
+Underfull \hbox (badness 1642) in paragraph at lines 31898--31898
 []|\TU/lmr/m/n/12 Relationship between second raw
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36762--36762
+Underfull \hbox (badness 10000) in paragraph at lines 31899--31899
 []|\TU/lmr/m/n/12 momcent-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36765--36765
+Underfull \hbox (badness 10000) in paragraph at lines 31902--31902
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36766--36766
+Underfull \hbox (badness 10000) in paragraph at lines 31903--31903
 []|\TU/lmr/m/n/12 gam-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36769--36769
+Underfull \hbox (badness 10000) in paragraph at lines 31906--31906
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36749--36769
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31886--31906
  [] [] [] [] [] [] 
  []
 
-[599]
-Underfull \hbox (badness 4084) in paragraph at lines 36770--36770
+[549]
+Underfull \hbox (badness 4084) in paragraph at lines 31907--31907
 []|\TU/lmr/m/n/12 Exceedance probabilities for the
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 36773--36773
+Underfull \hbox (badness 5231) in paragraph at lines 31910--31910
 []|\TU/lmr/m/n/12 Probability mass function of a
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 36774--36774
+Underfull \hbox (badness 1132) in paragraph at lines 31911--31911
 []|\TU/lmr/m/n/12 Probability density function of a
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 36776--36776
+Underfull \hbox (badness 5231) in paragraph at lines 31913--31913
 []|\TU/lmr/m/n/12 Probability mass function of a
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 36777--36777
+Underfull \hbox (badness 1132) in paragraph at lines 31914--31914
 []|\TU/lmr/m/n/12 Probability density function of a
  []
 
 
-Underfull \hbox (badness 6063) in paragraph at lines 36781--36781
+Underfull \hbox (badness 6063) in paragraph at lines 31918--31918
 []|\TU/lmr/m/n/12 Quantile function is inverse of
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36769--36789
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31906--31926
  [] [] [] [] [] [] 
  []
 
-[600]
-Underfull \hbox (badness 10000) in paragraph at lines 36797--36797
+[550]
+Underfull \hbox (badness 10000) in paragraph at lines 31934--31934
 []|\TU/lmr/m/n/12 ugkv-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36798--36798
+Underfull \hbox (badness 10000) in paragraph at lines 31935--31935
 []|\TU/lmr/m/n/12 ugkv-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36799--36799
+Underfull \hbox (badness 10000) in paragraph at lines 31936--31936
 []|\TU/lmr/m/n/12 ugkv-
  []
 
 
-Underfull \hbox (badness 3514) in paragraph at lines 36800--36800
+Underfull \hbox (badness 3514) in paragraph at lines 31937--31937
 \TU/lmr/m/n/12 univariate Gaussian with known
  []
 
 
-Underfull \hbox (badness 3514) in paragraph at lines 36803--36803
+Underfull \hbox (badness 3514) in paragraph at lines 31940--31940
 \TU/lmr/m/n/12 univariate Gaussian with known
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36805--36805
+Underfull \hbox (badness 10000) in paragraph at lines 31942--31942
 []|\TU/lmr/m/n/12 ugkv-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36806--36806
+Underfull \hbox (badness 10000) in paragraph at lines 31943--31943
 []|\TU/lmr/m/n/12 ugkv-
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 36806--36806
+Underfull \hbox (badness 1270) in paragraph at lines 31943--31943
 \TU/lmr/m/n/12 for the univariate Gaussian with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36808--36808
+Underfull \hbox (badness 10000) in paragraph at lines 31945--31945
 []|\TU/lmr/m/n/12 ugkv-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36789--36809
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31926--31946
  [] [] [] [] [] [] 
  []
 
-[601]
-Underfull \hbox (badness 10000) in paragraph at lines 36813--36813
+[551]
+Underfull \hbox (badness 10000) in paragraph at lines 31950--31950
 []|\TU/lmr/m/n/12 poissexp-
  []
 
 
-Underfull \hbox (badness 5022) in paragraph at lines 36814--36814
+Underfull \hbox (badness 5022) in paragraph at lines 31951--31951
 []|\TU/lmr/m/n/12 Conjugate prior distribution for
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 36816--36816
+Underfull \hbox (badness 1509) in paragraph at lines 31953--31953
 []|\TU/lmr/m/n/12 Log model evidence for Poisson-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36821--36821
+Underfull \hbox (badness 10000) in paragraph at lines 31958--31958
 []|\TU/lmr/m/n/12 Relationship between non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36821--36821
+Underfull \hbox (badness 10000) in paragraph at lines 31958--31958
 \TU/lmr/m/n/12 standardized t-distribution and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36824--36824
+Underfull \hbox (badness 10000) in paragraph at lines 31961--31961
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 36825--36825
+Underfull \hbox (badness 3281) in paragraph at lines 31962--31962
 \TU/lmr/m/n/12 for independence of multivariate
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36809--36829
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31946--31966
  [] [] [] [] [] [] 
  []
 
-[602] [603]
-Underfull \hbox (badness 10000) in paragraph at lines 36839--36839
+[552] [553]
+Underfull \hbox (badness 10000) in paragraph at lines 31976--31976
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36846--36846
+Underfull \hbox (badness 10000) in paragraph at lines 31983--31983
 []|\TU/lmr/m/n/12 pmf-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36847--36847
+Underfull \hbox (badness 10000) in paragraph at lines 31984--31984
 []|\TU/lmr/m/n/12 pdf-
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 36847--36847
+Underfull \hbox (badness 1132) in paragraph at lines 31984--31984
 []|\TU/lmr/m/n/12 Probability density function of a
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 36849--36849
+Underfull \hbox (badness 1968) in paragraph at lines 31986--31986
 []|\TU/lmr/m/n/12 Moment-generating function of a
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36829--36849
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31966--31986
  [] [] [] [] [] [] 
  []
 
-[604]
-Underfull \hbox (badness 10000) in paragraph at lines 36850--36850
+[554]
+Underfull \hbox (badness 10000) in paragraph at lines 31987--31987
 []|\TU/lmr/m/n/12 dent-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36851--36851
+Underfull \hbox (badness 10000) in paragraph at lines 31988--31988
 []|\TU/lmr/m/n/12 dent-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36861--36861
+Underfull \hbox (badness 10000) in paragraph at lines 31998--31998
 []|\TU/lmr/m/n/12 slr-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36863--36863
+Underfull \hbox (badness 10000) in paragraph at lines 32000--32000
 []|\TU/lmr/m/n/12 slr-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36849--36869
+Overfull \hbox (0.7473pt too wide) in alignment at lines 31986--32006
  [] [] [] [] [] [] 
  []
 
-[605]
-Underfull \hbox (badness 10000) in paragraph at lines 36886--36886
+[555]
+Underfull \hbox (badness 10000) in paragraph at lines 32023--32023
 []|\TU/lmr/m/n/12 matn-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36869--36889
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32006--32026
  [] [] [] [] [] [] 
  []
 
-[606]
-Underfull \hbox (badness 10000) in paragraph at lines 36892--36892
+[556]
+Underfull \hbox (badness 10000) in paragraph at lines 32029--32029
 []|\TU/lmr/m/n/12 bern-
  []
 
 
-Underfull \hbox (badness 6592) in paragraph at lines 36892--36892
+Underfull \hbox (badness 6592) in paragraph at lines 32029--32029
 []|\TU/lmr/m/n/12 Range of the variance of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36893--36893
+Underfull \hbox (badness 10000) in paragraph at lines 32030--32030
 []|\TU/lmr/m/n/12 bin-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36895--36895
+Underfull \hbox (badness 10000) in paragraph at lines 32032--32032
 []|\TU/lmr/m/n/12 lognorm-
  []
 
 
-Underfull \hbox (badness 4621) in paragraph at lines 36896--36896
+Underfull \hbox (badness 4621) in paragraph at lines 32033--32033
 []|\TU/lmr/m/n/12 Akaike information criterion for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36899--36899
+Underfull \hbox (badness 10000) in paragraph at lines 32036--32036
 []|\TU/lmr/m/n/12 lognorm-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36900--36900
+Underfull \hbox (badness 10000) in paragraph at lines 32037--32037
 []|\TU/lmr/m/n/12 lognorm-
  []
 
 
-Underfull \hbox (badness 6792) in paragraph at lines 36905--36905
+Underfull \hbox (badness 6792) in paragraph at lines 32042--32042
 \TU/lmr/m/n/12 terion converges to uncorrected
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36889--36909
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32026--32046
  [] [] [] [] [] [] 
  []
 
-[607]
-Underfull \hbox (badness 10000) in paragraph at lines 36910--36910
+[557]
+Underfull \hbox (badness 10000) in paragraph at lines 32047--32047
 []|\TU/lmr/m/n/12 norm-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36914--36914
+Underfull \hbox (badness 10000) in paragraph at lines 32051--32051
 []|\TU/lmr/m/n/12 lognorm-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36909--36929
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32046--32066
  [] [] [] [] [] [] 
  []
 
-[608]
-Underfull \hbox (badness 10000) in paragraph at lines 36930--36930
+[558]
+Underfull \hbox (badness 10000) in paragraph at lines 32067--32067
 []|\TU/lmr/m/n/12 matn-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36932--36932
+Underfull \hbox (badness 10000) in paragraph at lines 32069--32069
 []|\TU/lmr/m/n/12 Marginal distributions for the
  []
 
 
-Underfull \hbox (badness 3792) in paragraph at lines 36934--36934
+Underfull \hbox (badness 3792) in paragraph at lines 32071--32071
 []|\TU/lmr/m/n/12 Covariance and variance of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36937--36937
+Underfull \hbox (badness 10000) in paragraph at lines 32074--32074
 []|\TU/lmr/m/n/12 covmat-
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 36937--36937
+Underfull \hbox (badness 1609) in paragraph at lines 32074--32074
 []|\TU/lmr/m/n/12 Scaling of the covariance matrix
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36938--36938
+Underfull \hbox (badness 10000) in paragraph at lines 32075--32075
 []|\TU/lmr/m/n/12 covmat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36939--36939
+Underfull \hbox (badness 10000) in paragraph at lines 32076--32076
 []|\TU/lmr/m/n/12 covmat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36940--36940
+Underfull \hbox (badness 10000) in paragraph at lines 32077--32077
 []|\TU/lmr/m/n/12 covmat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36943--36943
+Underfull \hbox (badness 10000) in paragraph at lines 32080--32080
 []|\TU/lmr/m/n/12 lognorm-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36944--36944
+Underfull \hbox (badness 10000) in paragraph at lines 32081--32081
 []|\TU/lmr/m/n/12 lognorm-
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 36945--36945
+Underfull \hbox (badness 3919) in paragraph at lines 32082--32082
 []|\TU/lmr/m/n/12 Relationship between chi-squared
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36946--36946
+Underfull \hbox (badness 10000) in paragraph at lines 32083--32083
 []|\TU/lmr/m/n/12 betabin-
  []
 
 
-Underfull \hbox (badness 7796) in paragraph at lines 36946--36946
+Underfull \hbox (badness 7796) in paragraph at lines 32083--32083
 []|\TU/lmr/m/n/12 Method of moments for beta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36947--36947
+Underfull \hbox (badness 10000) in paragraph at lines 32084--32084
 []|\TU/lmr/m/n/12 bin-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36948--36948
+Underfull \hbox (badness 10000) in paragraph at lines 32085--32085
 []|\TU/lmr/m/n/12 mean-
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 36949--36949
+Underfull \hbox (badness 2903) in paragraph at lines 32086--32086
 []|\TU/lmr/m/n/12 Probability-generating function is
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36929--36949
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32066--32086
  [] [] [] [] [] [] 
  []
 
-[609] [610]
-Underfull \hbox (badness 1910) in paragraph at lines 36952--36952
+[559] [560]
+Underfull \hbox (badness 1910) in paragraph at lines 32089--32089
 []|\TU/lmr/m/n/12 Probability-generating function of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36953--36953
+Underfull \hbox (badness 10000) in paragraph at lines 32090--32090
 []|\TU/lmr/m/n/12 betabin-
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 36953--36953
+Underfull \hbox (badness 1394) in paragraph at lines 32090--32090
 []|\TU/lmr/m/n/12 Probability mass function of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36954--36954
+Underfull \hbox (badness 10000) in paragraph at lines 32091--32091
 []|\TU/lmr/m/n/12 betabin-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36955--36955
+Underfull \hbox (badness 10000) in paragraph at lines 32092--32092
 []|\TU/lmr/m/n/12 betabin-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36961--36961
+Underfull \hbox (badness 10000) in paragraph at lines 32098--32098
 []|\TU/lmr/m/n/12 anova2-
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 36962--36962
+Underfull \hbox (badness 1132) in paragraph at lines 32099--32099
 []|\TU/lmr/m/n/12 F-test for interaction in two-way
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36963--36963
+Underfull \hbox (badness 10000) in paragraph at lines 32100--32100
 []|\TU/lmr/m/n/12 anova2-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36964--36964
+Underfull \hbox (badness 10000) in paragraph at lines 32101--32101
 []|\TU/lmr/m/n/12 anova1-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36967--36967
+Underfull \hbox (badness 10000) in paragraph at lines 32104--32104
 []|\TU/lmr/m/n/12 anova2-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36949--36969
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32086--32106
  [] [] [] [] [] [] 
  []
 
-[611]
-Underfull \hbox (badness 10000) in paragraph at lines 36978--36978
+[561]
+Underfull \hbox (badness 10000) in paragraph at lines 32115--32115
 []|\TU/lmr/m/n/12 mlr-
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 36978--36978
+Underfull \hbox (badness 2065) in paragraph at lines 32115--32115
 \TU/lmr/m/n/12 eters, fitted signal and residuals
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 36979--36979
+Underfull \hbox (badness 4072) in paragraph at lines 32116--32116
 []|\TU/lmr/m/n/12 Distribution of residual sum of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36983--36983
+Underfull \hbox (badness 10000) in paragraph at lines 32120--32120
 []|\TU/lmr/m/n/12 mvn-
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 36984--36984
+Underfull \hbox (badness 1394) in paragraph at lines 32121--32121
 []|\TU/lmr/m/n/12 Relationship between multivariate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36987--36987
+Underfull \hbox (badness 10000) in paragraph at lines 32124--32124
 []|\TU/lmr/m/n/12 resvar-
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 36987--36987
+Underfull \hbox (badness 1308) in paragraph at lines 32124--32124
 []|\TU/lmr/m/n/12 Maximum likelihood estimator of
  []
 
 
-Underfull \hbox (badness 6125) in paragraph at lines 36988--36988
+Underfull \hbox (badness 6125) in paragraph at lines 32125--32125
 []|\TU/lmr/m/n/12 Projection matrix and residual-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36969--36989
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32106--32126
  [] [] [] [] [] [] 
  []
 
-[612]
-Overfull \hbox (0.7473pt too wide) in alignment at lines 36989--37000
+[562]
+Underfull \hbox (badness 10000) in paragraph at lines 32137--32137
+[]|\TU/lmr/m/n/12 duni-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32138--32138
+[]|\TU/lmr/m/n/12 cuni-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32138--32138
+[]|\TU/lmr/m/n/12 Continuous uniform distribution
+ []
+
+
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32126--32139
  [] [] [] [] [] [] 
  []
 
-[613] [614] [615]
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37007--37028
- [] [] [] [] [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 37028
- []
-
-
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37028--37048
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37048--37068
- [] [] [] [] [] [] 
- []
-
-[616]
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37068--37088
+[563] [564] [565]
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32146--32167
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37088--37108
+Underfull \vbox (badness 10000) detected at line 32167
+ []
+
+
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32167--32187
  [] [] [] [] [] [] 
  []
 
-[617]
-Underfull \hbox (badness 10000) in paragraph at lines 37110--37110
+
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32187--32207
+ [] [] [] [] [] [] 
+ []
+
+[566]
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32207--32227
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32227--32247
+ [] [] [] [] [] [] 
+ []
+
+[567]
+Underfull \hbox (badness 10000) in paragraph at lines 32249--32249
 []|\TU/lmr/m/n/12 mom-
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 37116--37116
+Underfull \hbox (badness 3128) in paragraph at lines 32255--32255
 []|\TU/lmr/m/n/12 Discrete and continuous random
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37108--37128
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32247--32267
  [] [] [] [] [] [] 
  []
 
-[618]
-Underfull \hbox (badness 10000) in paragraph at lines 37129--37129
+[568]
+Underfull \hbox (badness 10000) in paragraph at lines 32268--32268
 []|\TU/lmr/m/n/12 Informative and non-informative
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37132--37132
+Underfull \hbox (badness 10000) in paragraph at lines 32271--32271
 []|\TU/lmr/m/n/12 prior-
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 37147--37147
+Underfull \hbox (badness 2409) in paragraph at lines 32286--32286
 []|\TU/lmr/m/n/12 Univariate Gaussian with known
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37128--37148
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32267--32287
  [] [] [] [] [] [] 
  []
 
-[619]
-Underfull \hbox (badness 10000) in paragraph at lines 37153--37153
+[569]
+Underfull \hbox (badness 10000) in paragraph at lines 32292--32292
 []|\TU/lmr/m/n/12 mean-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37164--37164
+Underfull \hbox (badness 10000) in paragraph at lines 32303--32303
 []|\TU/lmr/m/n/12 covmat-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37148--37168
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32287--32307
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37180--37180
+Underfull \hbox (badness 10000) in paragraph at lines 32319--32319
 []|\TU/lmr/m/n/12 corrmat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37187--37187
+Underfull \hbox (badness 10000) in paragraph at lines 32326--32326
 []|\TU/lmr/m/n/12 covmat-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37168--37188
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32307--32327
  [] [] [] [] [] [] 
  []
 
-[620]
-Underfull \hbox (badness 10000) in paragraph at lines 37189--37189
+[570]
+Underfull \hbox (badness 10000) in paragraph at lines 32328--32328
 []|\TU/lmr/m/n/12 betabin-
  []
 
 
-Overfull \hbox (0.7473pt too wide) in alignment at lines 37188--37200
+Overfull \hbox (0.7473pt too wide) in alignment at lines 32327--32339
  [] [] [] [] [] [] 
  []
 
-[621] [622] [623] [624] [625] [626] [627] [628] [629] [630] [631] [632]
-[633] [634] [635] [636] [637] (./StatProofBook.aux)
+[571] [572] [573] [574] [575] [576] [577] [578] [579] [580] [581] [582]
+[583] [584] [585] [586] [587] (./StatProofBook.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7006 strings out of 479712
- 125992 string characters out of 5892708
- 398479 words of memory out of 5000000
- 24199 multiletter control sequences out of 15000+600000
+ 7018 strings out of 479712
+ 126271 string characters out of 5892708
+ 398527 words of memory out of 5000000
+ 24211 multiletter control sequences out of 15000+600000
  543097 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 35i,24n,33p,1189b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,24n,33p,1099b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on StatProofBook.pdf (654 pages).
+Output written on StatProofBook.pdf (604 pages).

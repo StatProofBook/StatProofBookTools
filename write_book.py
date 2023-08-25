@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2021-11-10 10:39:00
+ Last edit: 2023-08-25 17:32:00
 """
 
 
@@ -63,12 +63,12 @@ curr_ssse = '';
 
 # Set proof and definition info
 #-----------------------------------------------------------------------------#
-pr_nos   = []
-pr_tits  = []
-pr_info  = []
-def_nos  = []
-def_tits = []
-def_info = []
+pr_ids     = []
+def_ids    = []
+pr_titles  = []
+def_titles = []
+pr_infos   = []
+def_infos  = []
 
 # Parse "Table of Contents"
 # Write "The Book of Statistical Proofs"
@@ -84,45 +84,47 @@ for entry in toc_txt:
         curr_chap = entry[entry.find('<h3>')+4:entry.find('</h3>')]
         curr_chap = curr_chap[curr_chap.find(': ')+2:]
         book.write('\n\n% Chapter ' + str(num_chap) + ' %\n')
-        book.write('\chapter{' + curr_chap + '} \label{sec:' + curr_chap + '} \\newpage\n\n')
+        book.write('\\chapter{' + curr_chap + '} \\label{sec:' + curr_chap + '} \\newpage\n\n')
     
     # If there is a new section
     #-------------------------------------------------------------------------#
     if entry.count('.') == 1 and entry.find(str(num_sect+1) + '. ') > -1:
-  # if entry[0].isdigit() and entry.find('. ') == 1:
+    # alternatively: if entry[0].isdigit() and entry.find('. ') == 1:
                 
         num_ssec  = 0
         num_sect  = num_sect + 1        
         curr_sect = entry[entry.find('. ')+2:entry.find('\n')]
-        book.write('\pagebreak\n')
-        book.write('\section{' + curr_sect + '}\n\n')
+        book.write('\\pagebreak\n')
+        book.write('\\section{' + curr_sect + '}\n\n')
         
     # If there is a new subsection
     #-------------------------------------------------------------------------#
     if entry.count('.') == 2 and entry.find(str(num_sect) + '.' + str(num_ssec+1) + '. ') > -1:  
-  # if curr_sect != '' and entry.count('.') == 2:
+    # alternatively: if curr_sect != '' and entry.count('.') == 2:
         
         num_ssse  = 0
         num_ssec  = num_ssec + 1
         curr_ssec = entry[entry.find('. ')+2:entry.find('<br>')]
-        if curr_ssec[-1] == ' ': curr_ssec = curr_ssec[0:-1]
-        book.write('\subsection{' + curr_ssec + '}\n\n')
+        if curr_ssec[-1] == ' ': curr_ssec = curr_ssec[:-1]
+        book.write('\\subsection{' + curr_ssec + '}\n\n')
         
     # If there is a new subsubsection
     #-------------------------------------------------------------------------#
     if entry.count('.') >= 3 and entry.find(str(num_sect) + '.' + str(num_ssec) + '.' + str(num_ssse+1) + '. ') > -1:
-  # if entry.find('&emsp;&ensp;') > -1:
+    # alternatively: if entry.find('&emsp;&ensp;') > -1:
         
         num_ssse  = num_ssse + 1
         curr_ssse = entry[entry.find('[')+1:entry.find(']')]
         file      = entry[entry.find('(', entry.find(']'))+1:entry.find(')', entry.find(']'))]
-        file_md   = file + '.md' # re.sub('.html', '.md', file_html)
+        file_md   = file + '.md'
         
         # Read proof or definition
         if file_md.find('/P/') > -1:
             is_proof = True
-        if file_md.find('/D/') > -1:
+        elif file_md.find('/D/') > -1:
             is_proof = False
+        else:
+            is_proof = None
         file_obj = open(rep_dir + file_md, 'r')
         file_txt = file_obj.readlines()
         file_obj.close()
@@ -135,26 +137,28 @@ for entry in toc_txt:
         
         # Edit title for sorting
         title_edit = re.sub('[^a-zA-Z- ]', '', title)
-        title_sort = title_edit.upper()
+        title_sort = title_edit.lower()
         
         # Store file information
         if is_proof:
-            pr_nos.append(int(file_id[1:]))
-            pr_tits.append(title_sort)
-            pr_info.append([file_id, shortcut, title, username, date])
+            pr_ids.append(int(file_id[1:]))
+            pr_titles.append(title_sort)
+            pr_infos.append({'proof_id': file_id, 'shortcut': shortcut, 'title': title, \
+                             'username': username, 'date': date, 'source': sources})
         else:
-            def_nos.append(int(file_id[1:]))
-            def_tits.append(title_sort)
-            def_info.append([file_id, shortcut, title, username, date])
+            def_ids.append(int(file_id[1:]))
+            def_titles.append(title_sort)
+            def_infos.append({'def_id': file_id, 'shortcut': shortcut, 'title': title, \
+                              'username': username, 'date': date, 'source': sources})
         
         # Write title
         if is_proof:
-            book.write(r'\subsubsection[\textbf{' + curr_ssse + '}]{' + curr_ssse + '} \label{sec:' + shortcut + '}\n')
-            book.write(r'\setcounter{equation}{0}')
+            book.write('\\subsubsection[\\textbf{' + curr_ssse + '}]{' + curr_ssse + '} \\label{sec:' + shortcut + '}\n')
+            book.write('\\setcounter{equation}{0}')
             book.write('\n\n')
         else:
-            book.write(r'\subsubsection[\textit{' + curr_ssse + '}]{' + curr_ssse + '} \label{sec:' + shortcut + '}\n')
-            book.write(r'\setcounter{equation}{0}')
+            book.write('\\subsubsection[\\textit{' + curr_ssse + '}]{' + curr_ssse + '} \\label{sec:' + shortcut + '}\n')
+            book.write('\\setcounter{equation}{0}')
             book.write('\n\n')
         
         # Write body
@@ -204,13 +208,11 @@ for entry in toc_txt:
             in_itemize = False
         
         # Write sources
-        book.write('\n\n\n')
-        book.write('\\vspace{1em}\n')
-        book.write('\\textbf{Sources:}\n')
-        book.write('\\begin{itemize}\n')
-        if not sources:
-            book.write('\\item original work')
-        else:
+        if bool(sources):
+            book.write('\n\n')
+            book.write('\\vspace{1em}\n')
+            book.write('\\textbf{Sources:}\n')
+            book.write('\\begin{itemize}\n')
             for source in sources:
                 book.write('\\item ' + source['authors'] + ' (' + source['year'] + '): "' + source['title'] + '"')
                 if 'in'    in source: book.write('; in: \\textit{' + source['in'] + '}')
@@ -218,13 +220,13 @@ for entry in toc_txt:
                 if 'url'   in source: book.write('; URL: \\url{' + source['url'] + '}')
                 if 'doi'   in source: book.write('; DOI: ' + source['doi'])
                 book.write('.\n')
-        book.write('\\end{itemize}')
+            book.write('\\end{itemize}')
         
         # Write metadata
-        book.write('\n\n\n')
-        book.write('\\vspace{1em}\n')
-        book.write('\\textbf{Metadata:} ID: ' + file_id + ' | shortcut: ' + shortcut + ' | author: ' + username + ' | date: ' + date.strftime('%Y-%m-%d, %H:%M') + '.\n')
-        book.write('\\vspace{1em}\n')
+        # book.write('\n\n')
+        # book.write('\\vspace{1em}\n')
+        # book.write('\\textbf{Metadata:} ID: ' + file_id + ' | shortcut: ' + shortcut + ' | author: ' + username + ' | date: ' + date.strftime('%Y-%m-%d, %H:%M') + '.\n')
+        # book.write('\\vspace{1em}\n')
         book.write('\n\n\n')
         
 # Open "Appendix"
@@ -239,11 +241,15 @@ book.write('\\section{Proof by Number}\n\n')
 book.write('\\begin{longtable}{|p{1cm}|p{2cm}|p{6.5cm}|p{3cm}|p{2cm}|c|}\n')
 book.write('\\hline\n')
 book.write('\\textbf{ID} & \\textbf{Shortcut} & \\textbf{Theorem} & \\textbf{Author} & \\textbf{Date} & \\textbf{Page} \\\\ \\hline\n')
-sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(pr_nos)])]
+sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(pr_ids)])]
 for i in sort_ind:
-    if pr_nos[i] != 0:
-        book.write(pr_info[i][0] + ' & ' + pr_info[i][1] + ' & ' + pr_info[i][2] + ' & ' + pr_info[i][3] + ' & ' + \
-                   pr_info[i][4].strftime('%Y-%m-%d') + ' & \\pageref{sec:' + pr_info[i][1] + '} \\\\ \\hline\n')
+    if pr_ids[i] != 0:
+        book.write(pr_infos[i]['proof_id'] + ' & ' + \
+                   pr_infos[i]['shortcut'] + ' & ' + \
+                   pr_infos[i]['title'] + ' & ' + \
+                   pr_infos[i]['username'] + ' & ' + \
+                   pr_infos[i]['date'].strftime('%Y-%m-%d') + ' & ' + \
+                   '\\pageref{sec:' + pr_infos[i]['shortcut'] + '} \\\\ \\hline\n')
 book.write('\\end{longtable}\n')
 book.write('\n\n\n')
 
@@ -254,11 +260,15 @@ book.write('\\section{Definition by Number}\n\n')
 book.write('\\begin{longtable}{|p{1cm}|p{2cm}|p{6.5cm}|p{3cm}|p{2cm}|c|}\n')
 book.write('\\hline\n')
 book.write('\\textbf{ID} & \\textbf{Shortcut} & \\textbf{Definition} & \\textbf{Author} & \\textbf{Date} & \\textbf{Page} \\\\ \\hline\n')
-sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(def_nos)])]
+sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(def_ids)])]
 for i in sort_ind:
-    if def_nos[i] != 0:
-        book.write(def_info[i][0] + ' & ' + def_info[i][1] + ' & ' + def_info[i][2] + ' & ' + def_info[i][3] + ' & ' + \
-                   def_info[i][4].strftime('%Y-%m-%d') + ' & \\pageref{sec:' + def_info[i][1] + '} \\\\ \\hline\n')
+    if def_ids[i] != 0:
+        book.write(def_infos[i]['def_id'] + ' & ' + \
+                   def_infos[i]['shortcut'] + ' & ' + \
+                   def_infos[i]['title'] + ' & ' + \
+                   def_infos[i]['username'] + ' & ' + \
+                   def_infos[i]['date'].strftime('%Y-%m-%d') + ' & ' + \
+                   '\\pageref{sec:' + def_infos[i]['shortcut'] + '} \\\\ \\hline\n')
 book.write('\\end{longtable}\n')
 book.write('\n\n\n')
 
@@ -266,31 +276,31 @@ book.write('\n\n\n')
 #-----------------------------------------------------------------------------#
 book.write('\\pagebreak\n')
 book.write('\\section{Proof by Topic}\n\n')
-sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(pr_tits)])]
+sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(pr_titles)])]
 lett_one = '0'
 for i in sort_ind:
-    if pr_nos[i] != 0:
-        if pr_tits[i][0] != lett_one:
+    if pr_ids[i] != 0:
+        if pr_titles[i][0] != lett_one:
             if lett_one != '0': book.write('\n\\vspace{1em}\n')
-            book.write('\\textbf{' + pr_tits[i][0] + '}\n\n')
-        book.write('$\\bullet$ ' + pr_info[i][2] + ', \\pageref{sec:' + pr_info[i][1] + '}\n\n')
-        lett_one = pr_tits[i][0]
-book.write('\n\n\n')
+            book.write('\\textbf{' + pr_titles[i][0].upper() + '}\n\n')
+        book.write('$\\bullet$ ' + pr_infos[i]['title'] + ', \\pageref{sec:' + pr_infos[i]['shortcut'] + '}\n\n')
+        lett_one = pr_titles[i][0]
+book.write('\n\n')
 
 # Write "Definition by Topic"
 #-----------------------------------------------------------------------------#
 book.write('\\pagebreak\n')
 book.write('\\section{Definition by Topic}\n\n')
-sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(def_tits)])]
+sort_ind = [i for (v, i) in sorted([(v, i) for (i, v) in enumerate(def_titles)])]
 lett_one = '0'
 for i in sort_ind:
-    if def_nos[i] != 0:
-        if def_tits[i][0] != lett_one:
+    if def_ids[i] != 0:
+        if def_titles[i][0] != lett_one:
             if lett_one != '0': book.write('\n\\vspace{1em}\n')
-            book.write('\\textbf{' + def_tits[i][0] + '}\n\n')
-        book.write('$\\bullet$ ' + def_info[i][2] + ', \\pageref{sec:' + def_info[i][1] + '}\n\n')
-        lett_one = def_tits[i][0]
-book.write('\n\n\n')
+            book.write('\\textbf{' + def_titles[i][0].upper() + '}\n\n')
+        book.write('$\\bullet$ ' + def_infos[i]['title'] + ', \\pageref{sec:' + def_infos[i]['shortcut'] + '}\n\n')
+        lett_one = def_titles[i][0]
+book.write('\n')
 
 # Close "The Book of Statistical Proofs"
 #-----------------------------------------------------------------------------#
