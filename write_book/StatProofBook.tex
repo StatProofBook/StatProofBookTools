@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2023-08-25, 17:32}
+\date{2023-09-01, 16:26}
 
 \begin{document}
 
@@ -481,6 +481,7 @@ Equivalently, we can write:
 \begin{equation} \label{eq:prob-ind-prob-ind-qed-B}
 p(B|A) \overset{\eqref{eq:prob-ind-prob-cond}}{=} \frac{p(A,B)}{p(A)} \overset{\eqref{eq:prob-ind-ind}}{=} \frac{p(A) \cdot p(B)}{p(A)} = p(B) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -544,6 +545,7 @@ Because the union of mutually exclusive events is the empty set ($\rightarrow$  
 \begin{equation} \label{eq:prob-exc-prob-exc-qed}
 p(A \vee B) = p(A) + p(B) - p(A,B) \overset{\eqref{eq:prob-exc-exc}}{=} p(A) + p(B) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -620,6 +622,7 @@ Since, by the first axiom of probability ($\rightarrow$  \ref{sec:General Theore
 \begin{equation} \label{eq:prob-mon-prob-mon-qed}
 P(A) \leq P(B) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -648,6 +651,7 @@ P(B) = P(A) + P(B \setminus A) + \sum_{i=3}^\infty P(E_i) \; .
 \end{equation}
 
 Assume that the probability of the empty set is not zero, i.e. $P(\emptyset) > 0$. Then, the right-hand side of \eqref{eq:prob-emp-pB} would be infinite. However, by the first axiom of probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-ax}), the left-hand side must be finite. This is a contradiction. Therefore, $P(\emptyset) = 0$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -686,6 +690,7 @@ The second axiom of probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{
 \begin{equation} \label{eq:prob-comp-prob-comp-qed}
 P(A^\mathrm{c}) = 1 - P(A) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -728,6 +733,7 @@ Together, \eqref{eq:prob-range-pEg0} and \eqref{eq:prob-range-pEl1} imply that
 \begin{equation} \label{eq:prob-range-prob-range-qed}
 0 \leq P(E) \leq 1 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -772,6 +778,7 @@ Plugging \eqref{eq:prob-add-pB} into \eqref{eq:prob-add-pAoB}, we finally get:
 \begin{equation} \label{eq:prob-add-prob-add-qed}
 P(A \cup B) = P(A) + P(B) - P(A \cap B) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -810,6 +817,7 @@ Thus, the third axiom of probability ($\rightarrow$  \ref{sec:General Theorems}/
 \begin{equation} \label{eq:prob-tot-prob-tot-qed}
 P(A) = \sum_i P(A \cap B_i) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -854,6 +862,7 @@ and the second axiom of probability ($\rightarrow$  \ref{sec:General Theorems}/\
 \begin{equation} \label{eq:prob-exh-prob-exh-s2}
 \sum_i P(B_i) = 1 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -918,6 +927,7 @@ Since the probability of the sample space is one ($\rightarrow$  \ref{sec:Genera
 \end{equation}
 
 This proofs the statement in \eqref{eq:prob-exh2-prob-exh}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1060,6 +1070,7 @@ f_Z(z) &= \mathrm{Pr}(Z = z) \\
 \end{equation}
 
 Note that the third-last transition is justified by the fact that $X$ and $Y$ are independent ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ind}), such that conditional probabilities are equal to marginal probabilities ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-ind}). The second equation can be derived by switching $X$ and $Y$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1100,6 +1111,7 @@ f_Y(y) &= \mathrm{Pr}(Y = y) \\
 &= f_X(g^{-1}(y)) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1140,6 +1152,7 @@ f_Y(y) &= \mathrm{Pr}(Y = y) \\
 &= f_X(g^{-1}(y)) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1180,6 +1193,7 @@ f_Y(y) &= \mathrm{Pr}(Y = y) \\
 &= f_X(g^{-1}(y)) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1251,6 +1265,7 @@ f_Z(z) &= \frac{\mathrm{d}}{\mathrm{d}z} F_Z(z) \\
 \end{equation}
 
 The second equation can be derived by switching $X$ and $Y$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1318,6 +1333,7 @@ f_Y(y) &\overset{\eqref{eq:pdf-sifct-pdf-cdf}}{=} \frac{\mathrm{d}}{\mathrm{d}y}
 \end{equation}
 
 Taking together \eqref{eq:pdf-sifct-pdf-sifct-p1} and \eqref{eq:pdf-sifct-pdf-sifct-p2}, eventually proves \eqref{eq:pdf-sifct-pdf-sifct}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1393,6 +1409,7 @@ f_Y(y) &\overset{\eqref{eq:pdf-sdfct-pdf-cdf}}{=} \frac{\mathrm{d}}{\mathrm{d}y}
 \end{equation}
 
 Taking together \eqref{eq:pdf-sdfct-pdf-sdfct-p1} and \eqref{eq:pdf-sdfct-pdf-sdfct-p2}, eventually proves \eqref{eq:pdf-sdfct-pdf-sdfct}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1507,6 +1524,7 @@ which can also be written as
 \begin{equation} \label{eq:pdf-invfct-pdf-invfct-qed}
 f_Y(y) = f_X(g^{-1}(y)) \, \left| J_{g^{-1}}(y) \right| \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1574,6 +1592,7 @@ Plugging \eqref{eq:pdf-linfct-g-inv} and \eqref{eq:pdf-linfct-J-g-inv} into \eqr
 \begin{equation} \label{eq:pdf-linfct-pdf-linfct-qed}
 f_Y(y) = \frac{1}{\left| \Sigma \right|} f_X(\Sigma^{-1}(y-\mu)) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1616,6 +1635,7 @@ Applying \eqref{eq:pdf-cdf-FToC-1st} to \eqref{eq:pdf-cdf-cdf-pdf}, it follows t
 \begin{equation} \label{eq:pdf-cdf-pdf-cdf-qed}
 F_X(x) = \int_{-\infty}^{x} f_X(t) \, \mathrm{d}t \quad \Rightarrow \quad \frac{\mathrm{d}F_X(x)}{\mathrm{d}x} = f_X(x) \quad \text{for all} \quad x \in \mathbb{R} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1684,6 +1704,7 @@ F_Z(z) &= \mathrm{Pr}(Z \leq z) \\
 \end{equation}
 
 Note that the second-last transition is justified by the fact that $X$ and $Y$ are independent ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ind}), such that conditional probabilities are equal to marginal probabilities ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-ind}). The second equation can be derived by switching $X$ and $Y$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1741,6 +1762,7 @@ F_Y(y) = 1, \quad \text{if} \quad y > \mathrm{max}(\mathcal{Y}) \; .
 \end{equation}
 
 Taking together \eqref{eq:cdf-sifct-cdf-sifct-p1}, \eqref{eq:cdf-sifct-cdf-sifct-p2}, \eqref{eq:cdf-sifct-cdf-sifct-p3}, eventually proves \eqref{eq:cdf-sifct-cdf-sifct}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1802,6 +1824,7 @@ F_Y(y) = 0, \quad \text{if} \quad y < \mathrm{min}(\mathcal{Y}) \; .
 \end{equation}
 
 Taking together \eqref{eq:cdf-sdfct-cdf-sdfct-p1}, \eqref{eq:cdf-sdfct-cdf-sdfct-p2}, \eqref{eq:cdf-sdfct-cdf-sdfct-p3}, eventually proves \eqref{eq:cdf-sdfct-cdf-sdfct}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1841,6 +1864,7 @@ F_X(x) &\overset{\eqref{eq:cdf-pmf-cdf}}{=} \sum_{\overset{t \in \mathcal{X}}{t 
 &\overset{\eqref{eq:cdf-pmf-pmf}}{=} \sum_{\overset{t \in \mathcal{X}}{t \leq x}} f_X(t) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Cumulative distribution function of continuous random variable}]{Cumulative distribution function of continuous random variable} \label{sec:cdf-pdf}
@@ -1874,6 +1898,7 @@ F_X(x) &\overset{\eqref{eq:cdf-pdf-cdf}}{=} \mathrm{Pr}(X \in (-\infty, x]) \\
 &\overset{\eqref{eq:cdf-pdf-pdf}}{=} \int_{-\infty}^{x} f_X(t) \, \mathrm{d}t \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Probability integral transform}]{Probability integral transform} \label{sec:cdf-pit}
@@ -1902,6 +1927,7 @@ F_Y(y) &= \mathrm{Pr}(Y \leq y) \\
 \end{equation}
 
 which is the cumulative distribution function of a continuous uniform distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:cuni-cdf}) with $a = 0$ and $b = 1$, i.e. the cumulative distribution function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard uniform distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:suni}) $\mathcal{U}(0,1)$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1939,6 +1965,7 @@ because the cumulative distribution function ($\rightarrow$  \ref{sec:General Th
 \begin{equation} \label{eq:cdf-itm-suni-cdf}
 U \sim \mathcal{U}(0,1) \quad \Rightarrow \quad F_U(u) = \mathrm{Pr}(U \leq u) = u \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1974,6 +2001,7 @@ F_{\tilde{X}}(y) &= \mathrm{Pr}\left( \tilde{X} \leq y \right) \\
 \end{equation}
 
 which shows that $\tilde{X}$ and $Y$ have the same cumulative distribution function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cdf}) and are thus identically distributed ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2036,6 +2064,7 @@ If $F_X(x)$ is continuous and strictly monotonically increasing, then there is e
 \begin{equation} \label{eq:qf-cdf-qf-cdf-qed}
 Q_X(p) = F_X^{-1}(x) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2106,6 +2135,7 @@ $Y = g(X)$ can simply be substituted into \eqref{eq:cf-fct-cf} to give
 \begin{equation} \label{eq:cf-fct-cf-fct-qed}
 \varphi_Y(t) = \mathrm{E}_X \left[ \mathrm{exp}(it \, g(X)) \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2170,6 +2200,7 @@ $Y = g(X)$ can simply be substituted into \eqref{eq:mgf-fct-mgf} to give
 \begin{equation} \label{eq:mgf-fct-mgf-fct-qed}
 M_Y(t) = \mathrm{E}_X \left[ \mathrm{exp}(t \, g(X)) \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2207,6 +2238,7 @@ M_Y(t) &= \mathrm{E} \left( \exp \left[ t^\mathrm{T} (AX + b) \right] \right) \\
 &= \exp \left[ t^\mathrm{T} b \right] \cdot M_X(At) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2252,6 +2284,7 @@ M_X(t) &= \prod_{i=1}^{n} \mathrm{E} \left( \exp \left[ (a_i t) X_i \right] \rig
 &= \prod_{i=1}^{n} M_{X_i}(a_i t) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2324,6 +2357,7 @@ The right-hand side is equal to the probability-generating function ($\rightarro
 \begin{equation} \label{eq:pgf-mean-pgf-mean-qed}
 \mathrm{E}\left[ z^X \right] = G_X(z) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2359,6 +2393,7 @@ G_X(0) &= \sum_{x=0}^{\infty} f_X(x) \cdot 0^x \\
 &= f_X(0) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2402,6 +2437,7 @@ G_X(1) &= \sum_{x \in \mathcal{X}} f_X(x) \\
 &= 1 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2532,6 +2568,7 @@ and by applying the definition of the expected value ($\rightarrow$  \ref{sec:Ge
 
 which proves the identity given above.
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2569,6 +2606,7 @@ are non-negative, thus the entire sum must be non-negative.
 \end{equation}
 
 is strictly non-negative, thus the term on the right-hand side is a Lebesgue integral, so that the result on the left-hand side must be non-negative.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2666,6 +2704,7 @@ as well as
 
 \vspace{1em}
 Collectively, this shows that both requirements for linearity are fulfilled for the expected value ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:mean}), for discrete ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:rvar-disc}) as well as for continuous ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:rvar-disc}) random variables.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2703,6 +2742,7 @@ Together with \eqref{eq:mean-mono-mean-XYZ}, this yields
 \begin{equation} \label{eq:mean-mono-mean-mono-qed}
 \mathrm{E}(Y) - \mathrm{E}(X) \geq 0 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2814,6 +2854,7 @@ and thus,
 \begin{equation} \label{eq:mean-mult-mean-nonmult-qed}
 \mathrm{E}(X\,Y) \neq \mathrm{E}(X) \, \mathrm{E}(Y) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2849,6 +2890,7 @@ Using this definition of the trace, the linearity of the expected value ($\right
 &= \mathrm{tr}\left( \mathrm{E}[A] \right) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -2909,6 +2951,7 @@ Finally, applying mean and covariance of $X$, we have
 &= \mu^\mathrm{T} A \mu + \mathrm{tr}(A \Sigma) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3001,6 +3044,7 @@ giving
 \end{equation}
 
 as required.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3047,6 +3091,7 @@ Using the law of marginal probability ($\rightarrow$  \ref{sec:General Theorems}
 &= \mathrm{E}(X) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3146,6 +3191,7 @@ Finally, substituing \eqref{eq:mean-lotus-Y-pdf} into \eqref{eq:mean-lotus-mean-
 \begin{equation} \label{eq:mean-lotus-mean-lotus-cont-s2}
 \int_{\mathcal{X}} g(x) f_X(x) \, \mathrm{d}x = \int_{\mathcal{Y}} y \, f_Y(y) \, \mathrm{d}y = \mathrm{E}[Y] = \mathrm{E}[g(X)] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3257,6 +3303,7 @@ which, due to the linearity of the expected value ($\rightarrow$  \ref{sec:Gener
 &= \mathrm{E}(X^2) - \mathrm{E}(X)^2 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3299,6 +3346,7 @@ are also non-negative, thus the entire sum must be non-negative.
 \end{equation}
 
 is always non-negative, thus the term on the right-hand side is a Lebesgue integral, so that the result on the left-hand side must be non-negative.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3375,6 +3423,7 @@ which can only be the case, if $X$ always has the same value ($\rightarrow$  \re
 \begin{equation} \label{eq:var-const-X-const}
 X = \text{const.}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3410,6 +3459,7 @@ Using this and the linearity of the expected value ($\rightarrow$  \ref{sec:Gene
 &\overset{\eqref{eq:var-inv-var}}{=} \mathrm{Var}(X) \; . \\
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3447,6 +3497,7 @@ Using this and the linearity of the expected value ($\rightarrow$  \ref{sec:Gene
 &\overset{\eqref{eq:var-scal-var}}{=} a^2 \, \mathrm{Var}(X) \; . \\
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3483,6 +3534,7 @@ Using this and the linearity of the expected value ($\rightarrow$  \ref{sec:Gene
 &\overset{\eqref{eq:var-sum-var}}{=} \mathrm{Var}(X) + \mathrm{Var}(Y) + 2 \, \mathrm{Cov}(X,Y) \; . \\
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3519,6 +3571,7 @@ Using this and the linearity of the expected value ($\rightarrow$  \ref{sec:Gene
 &\overset{\eqref{eq:var-lincomb-var}}{=} a^2 \, \mathrm{Var}(X) + b^2 \, \mathrm{Var}(Y) + 2ab \, \mathrm{Cov}(X,Y) \; . \\
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3555,6 +3608,7 @@ Combining \eqref{eq:var-add-var-sum} and \eqref{eq:var-add-cov-ind}, we have:
 \begin{equation} \label{eq:var-add-var-add-qed}
 \mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3615,6 +3669,7 @@ Using the decomposition of variance into expected values ($\rightarrow$  \ref{se
 \begin{equation} \label{eq:var-tot-var-tot-s7}
 \mathrm{Var}(Y) = \mathrm{E}[\mathrm{Var}(Y \vert X)] + \mathrm{Var}[\mathrm{E}(Y \vert X)] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3700,6 +3755,7 @@ we can rewrite \eqref{eq:skew-mean-partition-s1} as
 \end{equation}
 
 This finishes the proof of \eqref{eq:skew-mean-skew-partition}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3777,6 +3833,7 @@ which, due to the linearity of the expected value ($\rightarrow$  \ref{sec:Gener
 &= \mathrm{E}(X Y) - \mathrm{E}(X) \mathrm{E}(Y) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3811,6 +3868,7 @@ Switching $X$ and $Y$ in \eqref{eq:cov-symm-cov}, we can easily see:
 &= \mathrm{Cov}(X,Y) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3845,6 +3903,7 @@ Inserting $X$ for $Y$ in \eqref{eq:cov-var-cov}, the result is the variance ($\r
 &= \mathrm{Var}(X) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3885,6 +3944,7 @@ Taking \eqref{eq:cov-ind-cov-mean} and \eqref{eq:cov-ind-mean-mult} together, we
 &= 0 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -3915,6 +3975,7 @@ which can be rearranged for the covariance ($\rightarrow$  \ref{sec:General Theo
 \begin{equation} \label{eq:cov-corr-cov-corr-qed}
 \mathrm{Cov}(X,Y) = \sigma_X \, \mathrm{Corr}(X,Y) \, \sigma_Y
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Law of total covariance}]{Law of total covariance} \label{sec:cov-tot}
@@ -3957,6 +4018,7 @@ Once more using the decomposition of covariance into expected values ($\rightarr
 \begin{equation} \label{eq:cov-tot-var-tot-s5}
 \mathrm{Cov}(X,Y) = \mathrm{E}[\mathrm{Cov}(X,Y \vert Z)] + \mathrm{Cov}[\mathrm{E}(X \vert Z),\mathrm{E}(Y \vert Z)] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4053,6 +4115,7 @@ Due to the linearity of the expected value ($\rightarrow$  \ref{sec:General Theo
 &= \mathrm{E}(X X^\mathrm{T}) - \mathrm{E}(X) \mathrm{E}(X)^\mathrm{T} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4106,6 +4169,7 @@ Because the covariance is a symmetric function ($\rightarrow$  \ref{sec:General 
 \end{equation}
 
 which is equivalent to our original definition in \eqref{eq:covmat-symm-covmat}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4174,6 +4238,7 @@ a^\mathrm{T} \Sigma_{XX} a \geq 0
 \end{equation}
 
 for any $a \in \mathbb{R}^n$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4210,6 +4275,7 @@ Using this and the linearity of the expected value ($\rightarrow$  \ref{sec:Gene
 &\overset{\eqref{eq:covmat-inv-covmat}}{=} \Sigma(X) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4246,6 +4312,7 @@ Using this and the linearity of the expected value ($\rightarrow$  \ref{sec:Gene
 &\overset{\eqref{eq:covmat-scal-covmat}}{=} A \, \Sigma(X) A^\mathrm{T} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4315,6 +4382,7 @@ Using this and the linearity of the expected value ($\rightarrow$  \ref{sec:Gene
 &\overset{\eqref{eq:covmat-sum-covmat-cross}}{=} \Sigma_{XX} + \Sigma_{YY} + \Sigma_{XY} + \Sigma_{YX} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4409,6 +4477,7 @@ Together with the definition of the correlation matrix ($\rightarrow$  \ref{sec:
 \end{equation}
 
 which is nothing else than the definition of the covariance matrix ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:covmat}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4529,6 +4598,7 @@ we obtain
 \end{equation}
 
 which conforms to equation \eqref{eq:precmat-corrmat-precmat-corrmat}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Correlation}
@@ -4599,6 +4669,7 @@ which is equivalent to
 \begin{equation} \label{eq:corr-range-corr-range-qed}
 -1 \leq \mathrm{Corr}(X,Y) \leq +1 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4661,6 +4732,7 @@ Further simplifying, the result is:
 \begin{equation} \label{eq:corr-z-corr-z-s3}
 r_{xy} = \frac{1}{n-1} \sum_{i=1}^n \left( \frac{x_i-\bar{x}}{s_x} \right) \left( \frac{y_i-\bar{y}}{s_y} \right) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -4996,6 +5068,7 @@ M_X^{(n)}(0) &= \mathrm{E}\left( X^n \right) + \sum_{m=n+1}^\infty \frac{0^{m-n}
 \end{equation}
 
 which conforms to equation \eqref{eq:mom-mgf-mom-mgf}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5042,6 +5115,7 @@ which is equal to the expected value ($\rightarrow$  \ref{sec:General Theorems}/
 \begin{equation} \label{eq:momraw-1st-momraw-1st-qed}
 \mu_1' = \mathrm{E}\left[ X \right] = \mu \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Second raw moment and variance}]{Second raw moment and variance} \label{sec:momraw-2nd}
@@ -5074,6 +5148,7 @@ the second raw moment can be rearranged into:
 \begin{equation} \label{eq:momraw-2nd-momraw-2nd-qed}
 \mu_2' \overset{\eqref{eq:momraw-2nd-momraw-2nd-def}}{=} \mathrm{E}(X^2) \overset{\eqref{eq:momraw-2nd-var-mean}}{=} \mathrm{Var}(X) + \mathrm{E}(X)^2 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textit{Central moment}]{Central moment} \label{sec:mom-cent}
@@ -5119,6 +5194,7 @@ Due to the linearity of the expected value ($\rightarrow$  \ref{sec:General Theo
 &= 0 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5149,6 +5225,7 @@ which is equivalent to the definition of the variance ($\rightarrow$  \ref{sec:G
 \begin{equation} \label{eq:momcent-2nd-momraw-1st-qed}
 \mu_2 = \mathrm{E}\left[ (X - \mathrm{E}(X))^2 \right] = \mathrm{Var}(X) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5237,6 +5314,7 @@ By convention, $0 \cdot \log_b(0)$ is taken to be $0$ when calculating entropy, 
 \end{equation}
 
 Taking this together, each addend in \eqref{eq:ent-nonneg-ent-dev} is positive or zero and thus, the entire sum must also be non-negative.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5300,6 +5378,7 @@ and applying equation \eqref{eq:ent-conc-ent-kl}, we have
 \end{equation}
 
 which is equivalent to \eqref{eq:ent-conc-ent-conc}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5410,6 +5489,7 @@ and applying equation \eqref{eq:entcross-conv-kl-ent}, we have
 \end{equation}
 
 which is equivalent to \eqref{eq:entcross-conv-ent-cross-conv}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5468,6 +5548,7 @@ such that it follows from \eqref{eq:gibbs-ineq-Gibbs-ineq-s2} that
 &= 1 - \sum_{x \in I} q(x) \geq 0 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5523,6 +5604,7 @@ b \sum_{i=1}^n \frac{b_i}{b} \, f\left( \frac{a_i}{b_i} \right) &\geq b \, f\lef
 \end{equation}
 
 Finally, combining \eqref{eq:logsum-ineq-logsum-ineq-s2} and \eqref{eq:logsum-ineq-logsum-ineq-s3}, this demonstrates \eqref{eq:logsum-ineq-logsum-ineq}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5584,6 +5666,7 @@ Thus, the differential entropy ($\rightarrow$  \ref{sec:General Theorems}/\ref{s
 \end{equation}
 
 which is negative for any base $b > 1$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5641,6 +5724,7 @@ Substituting $x = y - c$, such that $y = x + c$, this yields:
 &\overset{\eqref{eq:dent-inv-X-dent}}{=} \mathrm{h}(X) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5712,6 +5796,7 @@ Substituting $x = y/a$, such that $y = ax$, this yields:
 &\overset{\eqref{eq:dent-add-X-dent}}{=} \mathrm{h}(X) + \log |a| \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5800,6 +5885,7 @@ Finally, employing the fact ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:
 &\overset{\eqref{eq:dent-addvec-X-dent}}{=} \mathrm{h}(X) + \log |A| \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -5893,6 +5979,7 @@ Finally, employing the fact ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:
 \end{equation}
 
 Because there exist $X$ and $Y$, such that the integral term in \eqref{eq:dent-noninv-Y-dent-s4} is non-zero, this also demonstrates that there exist $X$ and $Y$, such that \eqref{eq:dent-noninv-dent-noninv} is fulfilled.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6043,6 +6130,7 @@ we can finally show:
 \end{equation}
 
 The conditioning of $X$ on $Y$ in this proof is without loss of generality. Thus, the proof for the expression using the reverse conditional entropy of $Y$ given $X$ is obtained by simply switching $x$ and $y$ in the derivation.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6105,6 +6193,7 @@ we can finally show:
 &= \mathrm{H}(X) + \mathrm{H}(Y) - \mathrm{H}(X,Y) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6164,6 +6253,7 @@ Plugging in \eqref{eq:dmi-jce-dmi-mce1}, \eqref{eq:dmi-jce-dmi-mce2} and \eqref{
 \end{equation}
 
 which proves the identity given above.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6264,6 +6354,7 @@ we can finally show:
 \end{equation}
 
 The conditioning of $X$ on $Y$ in this proof is without loss of generality. Thus, the proof for the expression using the reverse conditional differential entropy of $Y$ given $X$ is obtained by simply switching $x$ and $y$ in the derivation.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6326,6 +6417,7 @@ we can finally show:
 &= \mathrm{h}(X) + \mathrm{h}(Y) - \mathrm{h}(X,Y) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6385,6 +6477,7 @@ Plugging in \eqref{eq:cmi-jcde-cmi-mcde1}, \eqref{eq:cmi-jcde-cmi-mcde2} and \eq
 \end{equation}
 
 which proves the identity given above.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6461,6 +6554,7 @@ which can be reformulated into
 \end{equation}
 
 Applying \eqref{eq:kl-nonneg-Gibbs-ineq-dev} to \eqref{eq:kl-nonneg-KL-dev}, this proves equation \eqref{eq:kl-nonneg-KL-nonneg}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6508,6 +6602,7 @@ theorem \eqref{eq:kl-nonneg2-KL-nonneg} is simply a special case of \eqref{eq:kl
 \begin{equation} \label{eq:kl-nonneg2-KL-nonneg-qed}
 \mathrm{KL}[P||Q] \overset{\eqref{eq:kl-nonneg2-KL}}{=} \sum_{x \in \mathcal{X}} p(x) \cdot \log \frac{p(x)}{q(x)} \overset{\eqref{eq:kl-nonneg2-logsum-ineq}}{\geq} 1 \, \log \frac{1}{1} = 0 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6590,6 +6685,7 @@ which provides an example for
 \end{equation}
 
 and thus proves the theorem.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6639,6 +6735,7 @@ Thus, we can rewrite the KL divergence of the mixture distribution as
 \end{equation}
 
 which is equivalent to \eqref{eq:kl-conv-KL-conv}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6690,6 +6787,7 @@ Now we can separate the logarithm and evaluate the integrals:
 &\overset{\eqref{eq:kl-add-KL}}{=} \mathrm{KL}[P_1||Q_1] + \mathrm{KL}[P_2||Q_2] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6747,6 +6845,7 @@ the KL divergence can be evaluated as follows:
 &= \mathrm{KL}[p(y)||q(y)] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6797,6 +6896,7 @@ we can finally show:
 \begin{equation} \label{eq:kl-ent-KL-qed}
 \mathrm{KL}[P||Q] = \mathrm{H}(P,Q) - \mathrm{H}(P) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6846,6 +6946,7 @@ we can finally show:
 \begin{equation} \label{eq:kl-dent-KL-qed}
 \mathrm{KL}[P||Q] = \mathrm{h}(P,Q) - \mathrm{h}(P) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -6928,6 +7029,7 @@ Because $\mathrm{E}_{\hat{\theta}}(\hat{\theta}) - \theta$ is constant as a func
 \end{equation}
 
 This proofs the partition given by \eqref{eq:mse-bnv-MSE}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -7024,6 +7126,7 @@ Applying \eqref{eq:ci-wilks-llr} and rearranging, we can evaluate
 \end{equation}
 
 which is equivalent to the confidence interval given by \eqref{eq:ci-wilks-ci-wilks}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -7095,6 +7198,7 @@ Then, we know that the maximum likelihood estimator ($\rightarrow$  \ref{sec:Gen
 \end{equation}
 
 This proofs the existence of cases such as those stated by the theorem.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textit{Maximum log-likelihood}]{Maximum log-likelihood} \label{sec:mll}
@@ -7521,6 +7625,7 @@ which is the cumulative distribution function of a continuous uniform distributi
 F_X(x) = \int_{-\infty}^{x} \mathcal{U}(z; 0, 1) \, \mathrm{d}z = x \quad \text{where} \quad 0 \leq x \leq 1 \; .
 \end{equation}
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -7543,7 +7648,7 @@ F_X(x) = \int_{-\infty}^{x} \mathcal{U}(z; 0, 1) \, \mathrm{d}z = x \quad \text{
 m: \, y \sim \mathcal{D}(\theta) \; ,
 \end{equation}
 
-where $\mathcal{D}$ denotes an arbitrary probability distribution and $\theta$ are the parameters of this distribution.
+where $\mathcal{D}$ denotes an arbitrary probability distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) and $\theta$ are the parameters of this distribution.
 
 \vspace{1em}
 \textbf{Sources:}
@@ -7597,7 +7702,7 @@ m: \, y \sim \mathcal{D}(\theta), \, \theta \sim \mathcal{D}(\lambda) \; .
 \subsubsection[\textit{Joint likelihood}]{Joint likelihood} \label{sec:jl}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a generative model ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the joint probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-joint}) density function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ and $\theta$ is called the joint likelihood:
+\textbf{Definition:} Let there be a generative model ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the joint probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-joint}) distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) of $y$ and $\theta$ is called the joint likelihood:
 
 \begin{equation} \label{eq:jl-jl}
 p(y,\theta|m) = p(y|\theta,m) \, p(\theta|m) \; .
@@ -7615,7 +7720,7 @@ p(y,\theta|m) = p(y|\theta,m) \, p(\theta|m) \; .
 
 
 \vspace{1em}
-\textbf{Proof:} The joint likelihood ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:jl}) is defined as the joint probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-joint}) density function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:pdf}) of data $y$ and parameters $\theta$:
+\textbf{Proof:} The joint likelihood ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:jl}) is defined as the joint probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-joint}) distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) of data $y$ and parameters $\theta$:
 
 \begin{equation} \label{eq:jl-lfnprior-jl-def}
 p(y,\theta|m) \; .
@@ -7630,12 +7735,13 @@ p(y|\theta,m) &= \frac{p(y,\theta|m)}{p(\theta|m)} \\
 p(y,\theta|m) &= p(y|\theta,m) \, p(\theta|m) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textit{Posterior distribution}]{Posterior distribution} \label{sec:post}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. The distribution of $\theta$ conditional on $y$ is called the posterior distribution:
+\textbf{Definition:} Consider measured data $y$ and some unknown latent parameters $\theta$. The distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) of $\theta$ conditional ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist-cond}) on $y$ is called the posterior distribution:
 
 \begin{equation} \label{eq:post-post}
 \theta|y \sim \mathcal{D}(\phi) \; .
@@ -7676,12 +7782,64 @@ Because the denominator does not depend on $\theta$, it is constant in $\theta$ 
 \begin{equation} \label{eq:post-jl-post-qed}
 p(\theta|y,m) \propto p(y,\theta|m) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\subsubsection[\textbf{Combined posterior distribution from independent data}]{Combined posterior distribution from independent data} \label{sec:post-ind}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $p(\theta \vert y_1)$ and $p(\theta \vert y_2)$ be posterior distributions ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}), obtained using the same prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) from conditionally independent ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ind-cond}) data sets $y_1$ and $y_2$:
+
+\begin{equation} \label{eq:post-ind-ind-cond}
+p(y_1,y_2|\theta) = p(y_1|\theta) \cdot p(y_2|\theta) \; .
+\end{equation}
+
+Then, the combined posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) is proportional to the product of the individual posterior densities ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:pdf}), divided by the prior density:
+
+\begin{equation} \label{eq:post-ind-post-ind}
+p(\theta|y_1,y_2) \propto \frac{p(\theta|y_1) \cdot p(\theta|y_2)}{p(\theta)} \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Since $p(\theta \vert y_1)$ and $p(\theta \vert y_2)$ are posterior distributions ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}), Bayes' theorem ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:bayes-th}) holds for them:
+
+\begin{equation} \label{eq:post-ind-bayes-th}
+\begin{split}
+p(\theta|y_1) &= \frac{p(y_1|\theta) \cdot p(\theta)}{p(y_1)} \\
+p(\theta|y_2) &= \frac{p(y_2|\theta) \cdot p(\theta)}{p(y_2)} \; .
+\end{split}
+\end{equation}
+
+Moreover, Bayes' theorem must also hold for the combined posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post-jl}):
+
+\begin{equation} \label{eq:post-ind-post-ind-s1}
+p(\theta|y_1,y_2) = \frac{p(y_1,y_2|\theta) \cdot p(\theta)}{p(y_1,y_2)} \; .
+\end{equation}
+
+With that, we can express the combined posterior distribution as follows:
+
+\begin{equation} \label{eq:post-ind-post-ind-s2}
+\begin{split}
+p(\theta|y_1,y_2) &\overset{\eqref{eq:post-ind-post-ind-s1}}{=} \frac{p(y_1,y_2|\theta) \cdot p(\theta)}{p(y_1,y_2)} \\
+&\overset{\eqref{eq:post-ind-ind-cond}}{=} p(y_1|\theta) \cdot p(y_2|\theta) \cdot \frac{p(\theta)}{p(y_1,y_2)} \\
+&\overset{\eqref{eq:post-ind-bayes-th}}{=} \frac{p(\theta|y_1) \cdot p(y_1)}{p(\theta)} \cdot \frac{p(\theta|y_2) \cdot p(y_2)}{p(\theta)} \cdot \frac{p(\theta)}{p(y_1,y_2)} \\
+&= \frac{p(\theta|y_1) \cdot p(\theta|y_2)}{p(\theta)} \cdot \frac{p(y_1) \cdot p(y_2)}{p(y_1,y_2)} \; .
+\end{split}
+\end{equation}
+
+Note that the second fraction does not depend on $\theta$ and thus, the posterior distribution over $\theta$ is proportional to the first fraction:
+
+\begin{equation} \label{eq:post-ind-post-ind-s3}
+p(\theta|y_1,y_2) \propto \frac{p(\theta|y_1) \cdot p(\theta|y_2)}{p(\theta)} \; .
+\end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textit{Marginal likelihood}]{Marginal likelihood} \label{sec:ml}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a generative model ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the marginal probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-marg}) density function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:pdf}) of $y$ across the parameter space $\Theta$ is called the marginal likelihood:
+\textbf{Definition:} Let there be a generative model ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:gm}) $m$ describing measured data $y$ using model parameters $\theta$ and a prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) on $\theta$. Then, the marginal probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-marg}) distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) of $y$ across the parameter space $\Theta$ is called the marginal likelihood:
 
 \begin{equation} \label{eq:ml-ml}
 p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
@@ -7697,7 +7855,7 @@ p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta \; .
 p(y|m) = \int_{\Theta} p(y,\theta|m) \, \mathrm{d}\theta
 \end{equation}
 
-and related to likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:lf}) and prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) as follows:
+and related to likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:lf}) and prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) as follows:
 
 \begin{equation} \label{eq:ml-jl-ml-lf}
 p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
@@ -7705,7 +7863,7 @@ p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 
 
 \vspace{1em}
-\textbf{Proof:} In a full probability model ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:fpm}), the marginal likelihood ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ml}) is defined as the marginal probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-marg}) of the data $y$, given only the model $m$:
+\textbf{Proof:} In a full probability model ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:fpm}), the marginal likelihood ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ml}) is defined as the marginal probability of the data $y$, given only the model $m$:
 
 \begin{equation} \label{eq:ml-jl-ml-def}
 p(y|m) \; .
@@ -7723,6 +7881,7 @@ Applying the law of conditional probability ($\rightarrow$  \ref{sec:General The
 p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Prior distributions}
@@ -7924,6 +8083,7 @@ from which Bayes' theorem can be directly derived:
 \begin{equation} \label{eq:bayes-th-BT-proof}
 p(A|B) \overset{\eqref{eq:bayes-th-JP}}{=} \frac{p(B|A) \, p(A)}{p(B)} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -7963,6 +8123,7 @@ Dividing the two conditional probabilities by each other
 \end{equation}
 
 one obtains the posterior odds ratio as given by the theorem.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -8105,6 +8266,7 @@ we have
 \begin{equation} \label{eq:duni-pmf-duni-pmf-qed}
 f_X(x) = \frac{1}{n} = \frac{1}{b-a+1} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:duni-cdf}
@@ -8172,6 +8334,7 @@ F_X(x) &\overset{\eqref{eq:duni-cdf-duni-cdf-s1}}{=} \int_{-\infty}^{x} \mathcal
 \end{equation}
 
 This completes the proof.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:duni-qf}
@@ -8237,6 +8400,7 @@ Q_X(p) &= a + p \cdot (b-a+1) - 1 \\
 &= a (1-p) + (b+1) p - 1 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Shannon entropy}]{Shannon entropy} \label{sec:duni-ent}
@@ -8274,6 +8438,7 @@ Entropy is measured in nats by setting $b = e$. Then, with the probability mass 
 &= \ln(b-a+1) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Maximum entropy distribution}]{Maximum entropy distribution} \label{sec:duni-maxent}
@@ -8330,6 +8495,7 @@ Combining \eqref{eq:duni-maxent-kl-fg} with \eqref{eq:duni-maxent-sum-fg-s2}, we
 \end{equation}
 
 which means that the entropy ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ent}) of the discrete uniform distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:duni}) $\mathcal{U}(a,b)$ will be larger than or equal to any other distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) defined on the same set of values $\left\lbrace a, \ldots, b \right\rbrace$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -8381,6 +8547,7 @@ p \; , & \text{if} \; x = 1 \\
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the Bernoulli distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:bern}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:bern-mean}
@@ -8415,6 +8582,7 @@ Since there are only two possible outcomes for a Bernoulli random variable ($\ri
 &= p \; . \\
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -8469,6 +8637,7 @@ Combining \eqref{eq:bern-var-var-mean}, \eqref{eq:bern-var-bern-mean} and \eqref
 \begin{equation} \label{eq:bern-var-bern-var-qed}
 \mathrm{Var}(X) = p - p^2 = p \, (1-p) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -8539,6 +8708,7 @@ Thus, we have:
 \begin{equation} \label{eq:bern-varrange-bern-var-int}
 \mathrm{Var}(p) \in \left[ 0, \; \frac{1}{4} \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -8578,6 +8748,7 @@ Entropy is measured in bits by setting $b = 2$. Since there are only two possibl
 &= -p \log_2 p - (1-p) \log_2 (1-p) \; . \\
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -8645,6 +8816,7 @@ p(X=x|n,p) = {n \choose x} \, p^x \, (1-p)^{n-x}
 \end{equation}
 
 which is equivalent to the expression above.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Probability-generating function}]{Probability-generating function} \label{sec:bin-pgf}
@@ -8700,6 +8872,7 @@ G_X(z) = \left( (1-p) + (pz) \right)^n
 \end{equation}
 
 which is equivalent to the result in \eqref{eq:bin-pgf-bin-pgf}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -8742,6 +8915,7 @@ With the expected value of the Bernoulli distribution ($\rightarrow$  \ref{sec:P
 \begin{equation} \label{eq:bin-mean-bin-mean-s3}
 \mathrm{E}(X) = \sum_{i=1}^{n} p = n p \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -8784,6 +8958,7 @@ With the variance of the Bernoulli distribution ($\rightarrow$  \ref{sec:Probabi
 \begin{equation} \label{eq:bin-var-bin-var-s3}
 \mathrm{Var}(X) = \sum_{i=1}^{n} p \, (1-p) = n p \, (1-p) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -8844,6 +9019,7 @@ Thus, we have:
 \begin{equation} \label{eq:bin-varrange-bin-var-int}
 \mathrm{Var}(X) \in \left[ 0, \; \frac{n}{4} \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Shannon entropy}]{Shannon entropy} \label{sec:bin-ent}
@@ -8917,6 +9093,7 @@ Finally, we note that the first term is the negative expected value ($\rightarro
 \end{equation}
 
 Note that, because $0 \leq \mathrm{H}_\mathrm{bern}(p) \leq 1$, we have $0 \leq n \cdot \mathrm{H}_\mathrm{bern}(p) \leq n$, and because the entropy is non-negative ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ent-nonneg}), it must hold that $n \geq \mathrm{E}_\mathrm{lbc}(n,p) \geq 0$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Conditional binomial}]{Conditional binomial} \label{sec:bin-margcond}
@@ -9007,6 +9184,7 @@ which is the probability mass function of the binomial distribution ($\rightarro
 \begin{equation} \label{eq:bin-margcond-Y-dist-qed}
 Y \sim \mathrm{Bin}(n, pq) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -9101,6 +9279,7 @@ p(x) = {n \choose x} \cdot \frac{\mathrm{B}(\alpha+x,\beta+n-x)}{\mathrm{B}(\alp
 \end{equation}
 
 This completes the proof.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -9159,6 +9338,7 @@ f_X(x) = \frac{\Gamma(n+1)}{\Gamma(x+1) \, \Gamma(n-x+1)} \cdot \frac{\Gamma(\al
 \end{equation}
 
 This completes the proof.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -9237,6 +9417,7 @@ F_X(x) &\overset{\eqref{eq:betabin-cdf-bincoeff-facts}}{=} \frac{1}{\mathrm{B}(\
 \end{equation}
 
 This completes the proof.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Poisson distribution}
@@ -9283,6 +9464,7 @@ f_X(x) = \frac{\lambda^x \, e^{-\lambda}}{x!}, \; x \in \mathbb{N}_0 \; .
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the Poisson distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:poiss}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:poiss-mean}
@@ -9339,6 +9521,7 @@ the expected value of $X$ finally becomes
 &= \lambda \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -9428,6 +9611,7 @@ Plugging \eqref{eq:poiss-var-poiss-x2-mean-s2} and \eqref{eq:poiss-var-poiss-mea
 \begin{equation} \label{eq:poiss-var-poiss-var-qed}
 \mathrm{Var}(X) = \lambda^2 + \lambda - \lambda^2 = \lambda \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -9485,6 +9669,7 @@ where $e_1, \ldots, e_k$ are the $1 \times k$ elementary row vectors.
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the categorical distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:cat}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:cat-mean}
@@ -9514,6 +9699,7 @@ Then, the mean or expected value ($\rightarrow$  \ref{sec:General Theorems}/\ref
 &= \left[p_1, \ldots, p_k \right] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Covariance}]{Covariance} \label{sec:cat-cov}
@@ -9550,6 +9736,7 @@ thus the covariance matrix of the categorical distribution is
 \begin{equation} \label{eq:cat-cov-cat-cov-qed}
 \mathrm{Cov}(X) = \mathrm{diag}(p) - pp^\mathrm{T} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Shannon entropy}]{Shannon entropy} \label{sec:cat-ent}
@@ -9584,6 +9771,7 @@ Since there are $k$ possible values for a categorical random vector ($\rightarro
 \mathrm{H}(X) &= - \sum_{i=1}^{k} p_i \cdot \log p_i \; . \\
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Multinomial distribution}
@@ -9644,6 +9832,7 @@ p(X=x|n,\left[p_1, \ldots, p_k \right]) = {n \choose {x_1, \ldots, x_k}} \, \pro
 \end{equation}
 
 which is equivalent to the expression above.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:mult-mean}
@@ -9683,6 +9872,7 @@ With the expected value of the categorical distribution ($\rightarrow$  \ref{sec
 \begin{equation} \label{eq:mult-mean-mult-mean-s3}
 \mathrm{E}(X) = \sum_{i=1}^{n} \left[p_1, \ldots, p_k \right] = n \cdot \left[p_1, \ldots, p_k \right] = \left[n p_1, \ldots, n p_k \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Covariance}]{Covariance} \label{sec:mult-cov}
@@ -9731,6 +9921,7 @@ where the indicator function $\mathbb{I}_i$ is a Bernoulli-distributed ($\righta
 
 as desired.
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -9813,6 +10004,7 @@ Finally, we note that the first term is the negative expected value ($\rightarro
 \begin{equation} \label{eq:mult-ent-mult-ent-s4}
 \mathrm{H}(X) = n \cdot \mathrm{H}_\mathrm{cat}(p) - \mathrm{E}_\mathrm{lmc}(n,p) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \pagebreak
@@ -9906,6 +10098,7 @@ Solving this for $c(a,b)$, we obtain:
 c(a,b) &= b-a \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:cuni-cdf}
@@ -9977,6 +10170,7 @@ F_X(x) &= \int_{-\infty}^{b} \mathcal{U}(z; a, b) \, \mathrm{d}z + \int_{b}^{x} 
 \end{equation}
 
 This completes the proof.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:cuni-qf}
@@ -10034,6 +10228,7 @@ x &= p(b-a) + a \\
 x &= bp + a(1-p) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:cuni-mean}
@@ -10070,6 +10265,7 @@ With the probability density function of the continuous uniform distribution ($\
 &= \frac{1}{2} (a+b) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Median}]{Median} \label{sec:cuni-med}
@@ -10118,6 +10314,7 @@ Setting $p = 1/2$, we obtain:
 \begin{equation} \label{eq:cuni-med-cuni-med-qed}
 \mathrm{median}(X) = b \cdot \frac{1}{2} + a \cdot \left( 1-\frac{1}{2} \right) = \frac{1}{2} (a+b) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mode}]{Mode} \label{sec:cuni-med}
@@ -10161,6 +10358,7 @@ Since the PDF attains its only non-zero value whenever $a \leq x \leq b$,
 \end{equation}
 
 any value in the interval $[a,b]$ may be considered the mode of $X$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Variance}]{Variance} \label{sec:cuni-var}
@@ -10204,6 +10402,7 @@ With the expected value ($\rightarrow$  \ref{sec:Probability Distributions}/\ref
 &= \frac{1}{12} (b-a)^2 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Differential entropy}]{Differential entropy} \label{sec:cuni-dent}
@@ -10247,6 +10446,7 @@ With the probability density function of the continuous uniform distribution ($\
 &= \ln(b-a) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Maximum entropy distribution}]{Maximum entropy distribution} \label{sec:cuni-maxent}
@@ -10303,6 +10503,7 @@ Combining \eqref{eq:cuni-maxent-kl-fg} with \eqref{eq:cuni-maxent-int-fg-s2}, we
 \end{equation}
 
 which means that the differential entropy ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dent}) of the continuous uniform distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:cuni}) $\mathcal{U}(a,b)$ will be larger than or equal to any other distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) defined in the same range.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -10420,6 +10621,7 @@ F_Z(z) &= \int_{(-\infty - \mu)/\sigma}^{([\sigma z + \mu] - \mu)/\sigma} \frac{
 \end{equation}
 
 which is the cumulative distribution function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:snorm}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Relationship to standard normal distribution}]{Relationship to standard normal distribution} \label{sec:norm-snorm2}
@@ -10474,6 +10676,7 @@ f_Z(z) &= \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \f
 \end{equation}
 
 which is the probability density function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:pdf}) of the standard normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:snorm}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Relationship to standard normal distribution}]{Relationship to standard normal distribution} \label{sec:norm-snorm3}
@@ -10516,6 +10719,7 @@ which results in the distribution:
 \begin{equation} \label{eq:norm-snorm3-Z-snorm-qed}
 Z \sim \mathcal{N}(0, 1) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Relationship to chi-squared distribution}]{Relationship to chi-squared distribution} \label{sec:norm-chi2}
@@ -10630,6 +10834,7 @@ follows a chi-squared distribution ($\rightarrow$  \ref{sec:Probability Distribu
 (n-1) \, \frac{s^2}{\sigma^2} \sim \chi^2(n-1) \; .
 \end{equation}
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -10703,6 +10908,7 @@ Thus, by definition of the t-distribution ($\rightarrow$  \ref{sec:Probability D
 \begin{equation} \label{eq:norm-t-norm-t-qed}
 t \sim \mathrm{t}(n-1) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -10736,6 +10942,7 @@ Setting $n = 1$, such that $x, \mu \in \mathbb{R}$, and $\Sigma = \sigma^2$, we 
 \end{equation}
 
 which is equivalent to the probability density function of the normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:norm-pdf}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -10838,6 +11045,7 @@ Because the integrand in \eqref{eq:norm-gi-norm-gi} is an even function, we can 
 &= \sqrt{\pi} \; . 
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -10865,6 +11073,7 @@ f_X(x) = \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \fr
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:norm}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Moment-generating function}]{Moment-generating function} \label{sec:norm-mgf}
@@ -10938,6 +11147,7 @@ this finally becomes
 \begin{equation} \label{eq:norm-mgf-norm-mgf-qed}
 M_X(t) = \exp\left[ \mu t + \frac{1}{2} \sigma^2 t^2 \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11006,6 +11216,7 @@ F_X(x) &= \frac{1}{2} \lim_{x \to \infty} \mathrm{erf}(x) + \frac{1}{2} \, \math
 &= \frac{1}{2} \left[ 1 + \mathrm{erf}\left( \frac{x-\mu}{\sqrt{2} \sigma} \right) \right] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11101,6 +11312,7 @@ Combining \eqref{eq:norm-cdfwerf-norm-snorm-cdf} with \eqref{eq:norm-cdfwerf-sno
 \begin{equation} \label{eq:norm-cdfwerf-norm-cdf-qed}
 \Phi_{\mu,\sigma}(x) = \varphi\left( \frac{x-\mu}{\sigma} \right) \cdot \sum_{i=1}^{\infty} \frac{\left( \frac{x-\mu}{\sigma} \right)^{2i-1}}{(2i-1)!!} + \frac{1}{2} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11166,6 +11378,7 @@ With that, we can use numerical implementations of the error function to calcula
 \mathrm{Pr}(\mu-3\sigma \leq X \leq \mu+3\sigma) &= p(3) = 99.73 \% \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11215,6 +11428,7 @@ p &= \frac{1}{2} \left[ 1 + \mathrm{erf}\left( \frac{x-\mu}{\sqrt{2} \sigma} \ri
 x &= \sqrt{2}\sigma \cdot \mathrm{erf}^{-1}(2p-1) + \mu \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11288,6 +11502,7 @@ where $\mathrm{erf}(x)$ is the error function. Using this, the integrals can be 
 \end{split}
 \end{equation}
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11336,6 +11551,7 @@ where $\mathrm{erf}^{-1}(x)$ is the inverse error function. Setting $p = 1/2$, w
 \begin{equation} \label{eq:norm-med-norm-med-qed}
 \mathrm{median}(X) = \sqrt{2}\sigma \cdot \mathrm{erf}^{-1}(0) + \mu = \mu \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mode}]{Mode} \label{sec:norm-mode}
@@ -11401,6 +11617,7 @@ we confirm that it is in fact a maximum which shows that
 \begin{equation} \label{eq:norm-mode-norm-mode-qed}
 \mathrm{mode}(X) = \mu \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Variance}]{Variance} \label{sec:norm-var}
@@ -11478,6 +11695,7 @@ we can finally show that
 \mathrm{Var}(X) = \frac{2 \sigma^2}{\sqrt{\pi}} \cdot \Gamma\!\left(\frac{3}{2}\right) = \frac{2 \sigma^2}{\sqrt{\pi}} \cdot \frac{\sqrt{\pi}}{2} = \sigma^2 \; .
 \end{equation}
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11559,6 +11777,7 @@ such that the full width at half maximum ($\rightarrow$  \ref{sec:General Theore
 &= 2 \sqrt{2 \ln 2} \sigma \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11603,6 +11822,7 @@ f''_X(\mu) = -\frac{1}{\sqrt{2 \pi} \sigma^3} < 0 \; ,
 \end{equation}
 
 there is a maximum at $x = \mu$. From \eqref{eq:norm-extr-norm-pdf-der1}, it can be seen that $f'_X(x)$ is positive for $x < \mu$ and negative for $x > \mu$. Thus, there are no further extrema and $\mathcal{N}(\mu, \sigma^2)$ is unimodal ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:norm-mode}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11668,6 +11888,7 @@ f'''_X(\mu \pm \sigma) &= \frac{1}{\sqrt{2 \pi} \sigma} \cdot \left[ -\left( \fr
 
 there are inflection points at $x_{1/2} = \mu \pm \sigma$. Because $\mu$ is the mean and $\sigma^2$ is the variance of a normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:norm}), these points are exactly one standard deviation ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:std}) away from the mean.
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11717,6 +11938,7 @@ With the probability density function of the normal distribution ($\rightarrow$ 
 &= \frac{1}{2} \ln(2 \pi \sigma^2 e) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11810,6 +12032,7 @@ the Kullback-Leibler divergence in \eqref{eq:norm-kl-norm-KL-s3} becomes
 \end{equation}
 
 which is equivalent to \eqref{eq:norm-kl-norm-KL}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Maximum entropy distribution}]{Maximum entropy distribution} \label{sec:norm-maxent}
@@ -11874,6 +12097,7 @@ Combining \eqref{eq:norm-maxent-kl-fg} with \eqref{eq:norm-maxent-int-fg-s3}, we
 \end{equation}
 
 which means that the differential entropy ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dent}) of the normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:norm}) $\mathcal{N}(\mu, \sigma^2)$ will be larger than or equal to any other distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) with the same variance ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:var}) $\sigma^2$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -11945,6 +12169,7 @@ A \mu &= \left[ a_1, \ldots, a_n \right] \left[ \begin{array}{c} \mu_1 \\ \vdots
 A \Sigma A^\mathrm{T} &= \left[ a_1, \ldots, a_n \right] \left[ \begin{array}{ccc} \sigma^2_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & \sigma^2_n \end{array} \right] \left[ \begin{array}{c} a_1 \\ \vdots \\ a_n \end{array} \right] = \sum_{i=1}^{n} a_i^2 \sigma^2_i \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{t-distribution}
@@ -12050,6 +12275,7 @@ p(x) = \sqrt{\frac{1}{\nu \pi}} \, \frac{\Gamma([\nu+1]/2)}{\Gamma(\nu/2)} \, \l
 \end{equation}
 
 which is the probability density function of Student's t-distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:t-pdf}) with $\nu$ degrees of freedom.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Special case of multivariate t-distribution}]{Special case of multivariate t-distribution} \label{sec:t-mvt}
@@ -12076,6 +12302,7 @@ t(x; 0, 1, \nu) &= \sqrt{\frac{1}{(\nu \pi)^{1} |1|}} \, \frac{\Gamma([\nu+1]/2)
 \end{equation}
 
 which is equivalent to the probability density function of the t-distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:t-pdf}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -12201,6 +12428,7 @@ f_T(t) &= \frac{1}{\sqrt{2 \pi \nu} \cdot \Gamma\left( \frac{\nu}{2} \right) \cd
 &= \frac{\Gamma\left( \frac{\nu+1}{2} \right)}{\Gamma\left( \frac{\nu}{2} \right) \cdot \sqrt{\nu \pi}} \cdot \left( \frac{t^2}{\nu}+1 \right)^{-\frac{\nu+1}{2}} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -12319,6 +12547,7 @@ F_Y(y) &= \int_{-b \infty}^{b (y/b)} \frac{b^a}{\Gamma(a)} \left(\frac{s}{b}\rig
 \end{equation}
 
 which is the cumulative distribution function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cdf}) of the standard gamma distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:sgam}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Relationship to standard gamma distribution}]{Relationship to standard gamma distribution} \label{sec:gam-sgam2}
@@ -12373,6 +12602,7 @@ f_Y(y) &= \frac{b^a}{\Gamma(a)} [g^{-1}(y)]^{a-1} \exp[-b \, g^{-1}(y)] \cdot \f
 \end{equation}
 
 which is the probability density function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:pdf}) of the standard gamma distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:sgam}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Special case of Wishart distribution}]{Special case of Wishart distribution} \label{sec:gam-wish}
@@ -12412,6 +12642,7 @@ p(x) = \frac{b^a}{\Gamma(a)} \, x^{a-1} \, \exp[-b x]
 \end{equation}
 
 which is the probability density function of the gamma distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:gam-pdf}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:gam-pdf}
@@ -12432,6 +12663,7 @@ f_X(x) = \frac{b^a}{\Gamma(a)} x^{a-1} \exp[-b x] \; .
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the gamma distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:gam}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:gam-cdf}
@@ -12490,6 +12722,7 @@ we arrive at the final result given by equation \eqref{eq:gam-cdf-gam-cdf}:
 \begin{equation} \label{eq:gam-cdf-gam-cdf-qed}
 F_X(x) = \frac{\gamma(a,bx)}{\Gamma(a)} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -12555,6 +12788,7 @@ p &= \frac{\gamma(a,bx)}{\Gamma(a)} \\
 x &= \frac{\gamma^{-1}(a, \Gamma(a) \cdot p)}{b} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -12610,6 +12844,7 @@ and again using the density of the gamma distribution ($\rightarrow$  \ref{sec:P
 &= \frac{a}{b} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -12680,6 +12915,7 @@ Plugging \eqref{eq:gam-var-gam-sqr-mean-s3} and \eqref{eq:gam-var-gam-mean} into
 &= \frac{a}{b^2} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -12794,6 +13030,7 @@ it follows that
 \begin{equation} \label{eq:gam-logmean-E-Y-s3}
 X \sim \mathrm{Gam}(a,b) \quad \Rightarrow \quad \mathrm{E}(\ln X) = \psi(a) - \ln(b) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -12852,6 +13089,7 @@ the expression in equation \eqref{eq:gam-xlogx-gam-xlogx-s1} develops into:
 \begin{equation} \label{eq:gam-xlogx-gam-xlogx-qed}
 \mathrm{E}(X \ln X) = \frac{a}{b} \left[ \psi(a) - \ln(b) \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -12914,6 +13152,7 @@ the differential entropy ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:den
 &= a + \ln \Gamma(a) + (1-a) \cdot \psi(a) - \ln b \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -12990,6 +13229,7 @@ Finally, combining the logarithms, we get:
 \begin{equation} \label{eq:gam-kl-gam-KL-qed}
 \mathrm{KL}[P\,||\,Q] = a_2 \, \ln \frac{b_1}{b_2} - \ln \frac{\Gamma(a_1)}{\Gamma(a_2)} + (a_1 - a_2) \, \psi(a_1) - (b_1 - b_2) \, \frac{a_1}{b_1} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -13048,6 +13288,7 @@ Setting $a = 1$ and $b = \lambda$, we obtain
 \end{equation}
 
 which is equivalent to the probability density function of the exponential distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:exp-pdf}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:exp-pdf}
@@ -13068,6 +13309,7 @@ f_X(x) = \lambda \exp[-\lambda x] \; .
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the exponential distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:exp}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Moment-generating function}]{Moment-generating function} \label{sec:exp-mgf}
@@ -13124,6 +13366,7 @@ M_X(t) &= \frac{\lambda}{t-\lambda} \left[ \lim_{x\rightarrow \infty} e^{x(t-\la
 \end{equation}
 
 This completes the proof of \eqref{eq:exp-mgf-exp-mgf}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Cumulative distribution function}]{Cumulative distribution function} \label{sec:exp-cdf}
@@ -13182,6 +13425,7 @@ F_X(x) &= \int_{-\infty}^{0} \mathrm{Exp}(z; \lambda) \, \mathrm{d}z + \int_{0}^
 &= 1 - \exp[-\lambda x] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Quantile function}]{Quantile function} \label{sec:exp-qf}
@@ -13239,6 +13483,7 @@ p &= 1 - \exp[-\lambda x] \\
 x &= -\frac{\ln(1-p)}{\lambda} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:exp-mean}
@@ -13289,6 +13534,7 @@ the expected value becomes
 &= \frac{1}{\lambda} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -13337,6 +13583,7 @@ and setting $p = 1/2$, we obtain:
 \begin{equation} \label{eq:exp-med-exp-med-qed}
 \mathrm{median}(X) = -\frac{\ln(1-\frac{1}{2})}{\lambda} = \frac{\ln 2}{\lambda} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mode}]{Mode} \label{sec:exp-mode}
@@ -13390,6 +13637,7 @@ it follows that
 \begin{equation} \label{eq:exp-mode-exp-mode-qed}
 \mathrm{mode}(X) = 0 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Variance}]{Variance} \label{sec:exp-var}
@@ -13470,6 +13718,7 @@ Plugging \eqref{eq:exp-var-second-moment-s3} and \eqref{eq:exp-var-exp-mean-ref}
 \end{split}
 \end{equation}
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -13592,6 +13841,7 @@ We now substitute \eqref{eq:exp-skew-exp-skew-s4} into \eqref{eq:exp-skew-skew-m
 \end{equation}
 
 This completes the proof of \eqref{eq:exp-skew-exp-skew}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Log-normal distribution}
@@ -13687,6 +13937,7 @@ f_X(x) &= f_Y(g^{-1}(x))\cdot \frac{dg^{-1}(x)}{dx} \\
 
 which is the probability density function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:pdf}) of the log-normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:lognorm}).
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -13756,6 +14007,7 @@ F_X(x) &= \frac{1}{2} \lim_{x \to \infty} \mathrm{erf}(x) + \frac{1}{2} \, \math
 &= \frac{1}{2} \left[ 1 + \mathrm{erf}\left( \frac{\ln x-\mu}{\sqrt{2} \sigma} \right) \right] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -13805,6 +14057,7 @@ p &= \frac{1}{2} \left[ 1 + \mathrm{erf}\left( \frac{\ln x-\mu}{\sqrt{2} \sigma}
 x &= \exp(\mu + \sqrt{2}\sigma \cdot \mathrm{erf}^{-1}(2p-1) ) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -13889,6 +14142,7 @@ and applying \eqref{eq:lognorm-mean-def-pdf} to \eqref{eq:lognorm-mean-lognorm-m
 \begin{equation} \label{eq:lognorm-mean-lognorm-mean}
 \mathrm{E}(X) = \exp \left( \mu + \frac{1}{2} \sigma^2  \right) .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -13943,6 +14197,7 @@ where $\mathrm{erf}^{-1}(x)$ is the inverse error function. Setting $p = 1/2$, w
 \mathrm{median}(X) &= e^\mu \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mode}]{Mode} \label{sec:lognorm-mode}
@@ -14013,6 +14268,7 @@ we confirm that it is a maximum, showing that
 \begin{equation} \label{eq:lognorm-mode-lognorm-mode-qed}
 \mathrm{mode}(X) = e^{\left( \mu -\sigma^2 \right)} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14120,6 +14376,7 @@ Finally, plugging \eqref{eq:lognorm-var-second-moment-4} and \eqref{eq:lognorm-v
 &= \exp \left(2\sigma^2 + 2\mu \right) - \exp \left(2\mu + \sigma^2\right) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14186,6 +14443,7 @@ If we let $\alpha = k/2$ and $\beta = 1/2$, we obtain
 \end{equation}
 
 which is equivalent to the probability density function of the chi-squared distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:chi2-pdf}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:chi2-pdf}
@@ -14274,6 +14532,7 @@ From this, we get the final result in \eqref{eq:chi2-pdf-chi2-pdf}:
 f_Y(y) = \frac{1}{2^{k/2} \, \Gamma (k/2)} \, y^{k/2-1} \, e^{-y/2} \; .
 \end{equation}
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14313,6 +14572,7 @@ Now define a new variable $u = x/2$. As a result, we obtain:
 \end{equation}
 
 This leads to the desired result when $m > -k/2$. Observe that, if $m$ is a nonnegative integer, then $m > -k/2$ is always true. Therefore, all moments ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:mom}) of a chi-squared distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:chi2}) exist and the $m$-th raw moment is given by the foregoing equation.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14461,6 +14721,7 @@ f_F(f) &= \frac{\left( \frac{u}{v} \right)^{\frac{u}{2}} \cdot f^{\frac{u}{2}-1}
 &= \frac{\Gamma\left( \frac{u+v}{2} \right)}{\Gamma\left( \frac{u}{2} \right) \cdot \Gamma\left( \frac{v}{2} \right)} \cdot \left( \frac{u}{v} \right)^{\frac{u}{2}} \cdot f^{\frac{u}{2}-1} \cdot \left( \frac{u}{v}f+1 \right)^{-\frac{u+v}{2}} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14504,7 +14765,7 @@ where $\alpha > 0$ and $\beta > 0$, and the density is zero, if $x \notin [0,1]$
 X \sim \chi^2(m) \quad \text{and} \quad Y \sim \chi^2(n) \; .
 \end{equation}
 
-Then, the quantity $X/(X+Y)$ follows a beta distributiob ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:beta}):
+Then, the quantity $X/(X+Y)$ follows a beta distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:beta}):
 
 \begin{equation} \label{eq:beta-chi2-beta-chi2}
 \frac{X}{X+Y} \sim \mathrm{Bet}\left( \frac{m}{2}, \frac{n}{2} \right) \; .
@@ -14619,6 +14880,7 @@ such that
 \begin{equation} \label{eq:beta-chi2-beta-chi2-qed}
 Z \sim \mathrm{Bet}\left( \frac{m}{2}, \frac{n}{2} \right) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14645,6 +14907,7 @@ f_X(x) = \frac{1}{\mathrm{B}(\alpha, \beta)} \, x^{\alpha-1} \, (1-x)^{\beta-1} 
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the beta distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:beta}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Moment-generating function}]{Moment-generating function} \label{sec:beta-mgf}
@@ -14726,6 +14989,7 @@ Applying the rising factorial equation \eqref{eq:beta-mgf-fact-rise} and using $
 \begin{equation} \label{eq:beta-mgf-beta-mgf-s4}
 M_X(t) = 1 + \sum_{n=1}^{\infty} \left( \prod_{m=0}^{n-1} \frac{\alpha + m}{\alpha + \beta + m} \right) \frac{t^n}{n!} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14781,6 +15045,7 @@ we arrive at the final result given by equation \eqref{eq:beta-cdf-beta-cdf}:
 \begin{equation} \label{eq:beta-cdf-beta-cdf-qed}
 F_X(x) = \frac{B(x; \alpha, \beta)}{B(\alpha, \beta)} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14851,6 +15116,7 @@ and again using the density of the beta distribution ($\rightarrow$  \ref{sec:Pr
 &= \frac{\alpha}{\alpha+\beta} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14937,6 +15203,7 @@ Plugging \eqref{eq:beta-var-beta-sqr-mean-s3} and \eqref{eq:beta-var-beta-mean} 
 &= \frac{\alpha \beta}{(\alpha + \beta + 1) \cdot (\alpha + \beta)^2} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -14989,6 +15256,7 @@ f_X(x) = \frac{\alpha}{\sqrt{2\pi x^3}}\exp\left(-\frac{(\alpha-\gamma x)^2}{2x}
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the Wald distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:wald}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Moment-generating function}]{Moment-generating function} \label{sec:wald-mgf}
@@ -15075,6 +15343,7 @@ M_X(t) &= \frac{\alpha}{\sqrt{2\pi}}\cdot e^{\alpha \gamma}\cdot 2\left(\frac{\g
 \end{equation}
 
 This finishes the proof of \eqref{eq:wald-mgf-wald-mgf}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -15132,6 +15401,7 @@ Evaluating \eqref{eq:wald-mean-wald-mean-s1} at $t=0$ gives the desired result:
           &= \frac{\alpha}{\gamma} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Variance}]{Variance} \label{sec:wald-var}
@@ -15213,6 +15483,7 @@ Since the mean of a Wald distribution ($\rightarrow$  \ref{sec:Probability Distr
 \end{equation}
 
 which completes the proof of \eqref{eq:wald-var-wald-var}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{ex-Gaussian distribution}
@@ -15327,6 +15598,7 @@ f_X(t) &= \frac{\lambda\exp[-\lambda t]}{\sigma\sqrt{2\pi}}\int_{-\infty}^{g(t)}
 \end{equation}
 
 This finishes the proof of \eqref{eq:exg-pdf-exg-pdf}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Moment-generating function}]{Moment-generating function} \label{sec:exg-mgf}
@@ -15369,6 +15641,7 @@ M_X(t) &= M_A(t)\cdot M_B(t)\\
 \end{equation}
 
 This finishes the proof of \eqref{eq:exg-mgf-exg-mgf}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:exg-mean}
@@ -15418,6 +15691,7 @@ M'_X(0) &= \left(\frac{\lambda}{\lambda-0}\right) \cdot \exp\left[\mu\cdot 0 + \
 &= \mu + \frac{1}{\lambda} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Variance}]{Variance} \label{sec:exg-var}
@@ -15508,6 +15782,7 @@ we can apply \eqref{eq:exg-var-var-mean} to show
 \end{equation}
 
 This completes the proof of \eqref{eq:exg-var-exg-var}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Skewness}]{Skewness} \label{sec:exg-skew}
@@ -15626,6 +15901,7 @@ Thus, we have:
 \end{equation}
 
 This completes the proof of \eqref{eq:exg-skew-exg-skew}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \pagebreak
@@ -15713,6 +15989,7 @@ which, by definition, is chi-squared distributed ($\rightarrow$  \ref{sec:Probab
 \begin{equation} \label{eq:mvn-chi2-mvn-chi2-qed}
 y \sim \chi^2(n) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -15744,6 +16021,7 @@ Setting $p = 1$, $X = x$, $M = \mu$, $U = \Sigma$ and $V = 1$, we obtain
 \end{equation}
 
 which is equivalent to the probability density function of the multivariate normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -15770,6 +16048,7 @@ f_X(x) = \frac{1}{\sqrt{(2 \pi)^n |\Sigma|}} \cdot \exp \left[ -\frac{1}{2} (x-\
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the multivariate normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:mvn-mean}
@@ -15838,6 +16117,7 @@ With the linearity of the expected value ($\rightarrow$  \ref{sec:General Theore
 &= \mu \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -15931,6 +16211,7 @@ this becomes:
 &= \Sigma \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -15997,6 +16278,7 @@ such that the differential entropy is
 \mathrm{h}(x) = \frac{n}{2} \ln(2\pi) + \frac{1}{2} \ln|\Sigma| + \frac{1}{2} \, n \; .
 \end{equation}
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -16096,6 +16378,7 @@ Finally, rearranging the terms, we get:
 \begin{equation} \label{eq:mvn-kl-mvn-KL-qed}
 \mathrm{KL}[P\,||\,Q] = \frac{1}{2} \left[ (\mu_2 - \mu_1)^T \Sigma_2^{-1} (\mu_2 - \mu_1) + \mathrm{tr}(\Sigma_2^{-1} \Sigma_1) - \ln \frac{|\Sigma_1|}{|\Sigma_2|} - n \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -16156,6 +16439,7 @@ M_y(t) &\overset{\eqref{eq:mvn-ltt-y-mgf-s1}}{=} \exp \left[ t^\mathrm{T} b \rig
 
 Because moment-generating function and probability density function of a random variable are equivalent, this demonstrates that $y$ is following a multivariate normal distribution with mean $A \mu + b$ and covariance $A \Sigma A^\mathrm{T}$.
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -16196,6 +16480,7 @@ x_s \sim \mathcal{N}(S \mu, S \Sigma S^\mathrm{T}) \; .
 \end{equation}
 
 Finally, we see that $S \mu = \mu_s$ and $S \Sigma S^\mathrm{T} = \Sigma_s$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Conditional distributions}]{Conditional distributions} \label{sec:mvn-cond}
@@ -16382,6 +16667,7 @@ p(x_1|x_2) = \mathcal{N}(x_1; \mu_{1|2}, \Sigma_{1|2})
 
 with the mean ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:mean}) $\mu_{1 \vert 2}$ and covariance ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cov}) $\Sigma_{1 \vert 2}$ given by \eqref{eq:mvn-cond-mvn-cond-hyp}.
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -16491,6 +16777,7 @@ which implies that
 \begin{equation} \label{eq:mvn-ind-x-ind-qed}
 p(x) = p(x_1) \cdot \ldots \cdot p(x_n) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Independence of products}]{Independence of products} \label{sec:mvn-indprod}
@@ -16535,6 +16822,7 @@ A \Sigma B^\mathrm{T} = (B \Sigma A^\mathrm{T})^\mathrm{T} = 0_{kl}
 \end{equation}
 
 where $0_{kl}$ is the $k \times l$ zero matrix. This proves the result in \eqref{eq:mvn-indprod-mvn-indprod}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -16587,6 +16875,7 @@ f_X(x) = \sqrt{\frac{1}{(\nu \pi)^{n} |\Sigma|}} \, \frac{\Gamma([\nu+n]/2)}{\Ga
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the multivariate t-distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvt}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Relationship to F-distribution}]{Relationship to F-distribution} \label{sec:mvt-f}
@@ -16671,6 +16960,7 @@ such that $Z$, by definition, follows an F-distribution ($\rightarrow$  \ref{sec
 \begin{equation} \label{eq:mvt-f-Z-dist}
 Z = \frac{W/n}{V/\nu} \sim F(n, \nu) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -16751,6 +17041,7 @@ p(x,y) = \sqrt{\frac{|\Lambda|}{(2 \pi)^n}} \frac{b^a}{\Gamma(a)} \cdot y^{a+\fr
 \end{equation}
 
 which is the probability density function of the normal-gamma distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:ng-pdf}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:ng-pdf}
@@ -16807,6 +17098,7 @@ Using the relation $\lvert y A \rvert = y^n \lvert A \rvert$ for an $n \times n$
 \begin{equation} \label{eq:ng-pdf-ng-pdf-qed}
 p(x,y) = \sqrt{\frac{|\Lambda|}{(2 \pi)^n}} \frac{b^a}{\Gamma(a)} \cdot y^{a+\frac{n}{2}-1} \exp \left[ -\frac{y}{2} \left( (x-\mu)^\mathrm{T} \Lambda (x-\mu) + 2b \right) \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -16881,6 +17173,7 @@ Thus, the expectation of the random vector in equations \eqref{eq:ng-mean-rvec} 
 \end{equation}
 
 as indicated by equation \eqref{eq:ng-mean-ng-mean}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Covariance}]{Covariance} \label{sec:ng-cov}
@@ -16969,6 +17262,7 @@ such that we have:
 \begin{equation} \label{eq:ng-cov-ng-var-y-qed}
 \mathrm{Var}(y) = \frac{a}{b^2} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Differential entropy}]{Differential entropy} \label{sec:ng-dent}
@@ -17058,6 +17352,7 @@ and using the relation ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{
 \end{equation}
 
 By plugging \eqref{eq:ng-dent-exp-mvn-dent-s2} and \eqref{eq:ng-dent-gam-dent} into \eqref{eq:ng-dent-NG-dent1}, one arrives at the differential entropy given by \eqref{eq:ng-dent-NG-dent}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:ng-kl}
@@ -17149,6 +17444,7 @@ and using the relation ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{
 \end{equation}
 
 By plugging \eqref{eq:ng-kl-exp-mvn-KL-s2} and \eqref{eq:ng-kl-gam-KL} into \eqref{eq:ng-kl-NG-KL1}, one arrives at the KL divergence given by \eqref{eq:ng-kl-NG-KL}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -17229,6 +17525,7 @@ p(x) &= \int p(x,y) \, \mathrm{d}y \\
 \end{equation}
 
 which is the probability density function of a multivariate t-distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvt-pdf}) with mean vector $\mu$, shape matrix $\left( \frac{a}{b}\Lambda \right)^{-1}$ and $2a$ degrees of freedom.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Conditional distributions}]{Conditional distributions} \label{sec:ng-cond}
@@ -17346,6 +17643,7 @@ such that
 \begin{equation} \label{eq:ng-cond-ng-cond-y-x-qed}
 p(y|x) = \mathrm{Gam}\left( y; a + \frac{n}{2}, b + \frac{1}{2} (x-\mu)^\mathrm{T} \Lambda (x-\mu) \right) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Drawing samples}]{Drawing samples} \label{sec:ng-samp}
@@ -17414,6 +17712,7 @@ X,Y \sim \mathrm{NG}(\mu, \Lambda, a, b) \; ,
 \end{equation}
 
 Thus, given $Z_1$ defined by \eqref{eq:ng-samp-zi-dist} and $Z_2$ defined by \eqref{eq:ng-samp-Z2-dist}, $X$ and $Y$ defined by \eqref{eq:ng-samp-ng-samp} are a sample from $\mathrm{NG}(\mu, \Lambda, a, b)$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -17466,6 +17765,7 @@ f_X(x) = \frac{\Gamma\left( \sum_{i=1}^k \alpha_i \right)}{\prod_{i=1}^k \Gamma(
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the Dirichlet distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:dir}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:dir-kl}
@@ -17527,6 +17827,7 @@ the Kullback-Leibler divergence from \eqref{eq:dir-kl-dir-KL-s2} becomes:
 \begin{equation} \label{eq:dir-kl-dir-KL-s3}
 \mathrm{KL}[P\,||\,Q] = \ln \frac{\Gamma\left( \sum_{i=1}^k \alpha_{1i} \right)}{\Gamma\left( \sum_{i=1}^k \alpha_{2i} \right)} + \sum_{i=1}^k \ln \frac{\Gamma(\alpha_{2i})}{\Gamma(\alpha_{1i})} + \sum_{i=1}^k (\alpha_{1i}-\alpha_{2i}) \cdot \left[ \psi(\alpha_{1i}) - \psi\left(\sum_{i=1}^{k} \alpha_{1i}\right) \right]
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -17708,6 +18009,7 @@ And with \eqref{eq:dir-ep-Gam-EP1} and \eqref{eq:dir-ep-Gam-pdf}, it becomes
 
 In other words, the exceedance probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-exc}) for one element from a Dirichlet-distributed ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:dir}) random vector ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:rvec}) is an integral from zero to infinity where the first term in the integrand conforms to a product of gamma ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:gam}) cumulative distribution functions ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cdf}) and the second term is a gamma ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:gam}) probability density function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:pdf}).
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -17813,6 +18115,7 @@ This is the probability density function of the multivariate normal distribution
 \end{equation}
 
 By showing that the probability density functions ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:pdf}) are identical, it is proven that the associated probability distributions ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}) are equivalent.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -17839,6 +18142,7 @@ f(X) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \ma
 
 \vspace{1em}
 \textbf{Proof:} This follows directly from the definition of the matrix-normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:matn}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:matn-mean}
@@ -17875,6 +18179,7 @@ Since the expected value of a random matrix is calculated element-wise ($\righta
 \begin{equation} \label{eq:matn-mean-matn-mean-qed}
 \mathrm{E}[X] = M \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -17933,6 +18238,7 @@ and the covariance of this multivariate normal distribution ($\rightarrow$  \ref
 \begin{equation} \label{eq:matn-cov-matn-cov-col-qed}
 \mathrm{Cov}(x_{\bullet,j}) = v_{jj} U \propto U \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -17992,6 +18298,7 @@ the differential entropy from \eqref{eq:matn-dent-matn-dent-s1} becomes:
 &= \frac{np}{2} \ln(2\pi) + \frac{n}{2} \ln|V| + \frac{p}{2} \ln|U| + \frac{np}{2} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:matn-kl}
@@ -18081,6 +18388,7 @@ we finally have:
 &+ \left. \mathrm{tr}\left( (V_2^{-1}V_1) \otimes (U_2^{-1}U_1) \right) - n \ln \frac{|V_1|}{|V_2|} - p \ln \frac{|U_1|}{|U_2|} - n p \right] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Transposition}]{Transposition} \label{sec:matn-trans}
@@ -18125,6 +18433,7 @@ f(Y) = \frac{1}{\sqrt{(2\pi)^{np} |V|^n |U|^p}} \cdot \exp\left[-\frac{1}{2} \ma
 \end{equation}
 
 which is the probability density function of a matrix-normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:matn-pdf}) with mean $M^T$, covariance across rows $V$ and covariance across columns $U$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Linear transformation}]{Linear transformation} \label{sec:matn-ltt}
@@ -18183,6 +18492,7 @@ Using \eqref{eq:matn-ltt-matn-mvn}, we finally have:
 \begin{equation} \label{eq:matn-ltt-matn-ltt-qed}
 Y \sim \mathcal{MN}(AMB + C, AUA^\mathrm{T} ,B^\mathrm{T}VB) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Marginal distributions}]{Marginal distributions} \label{sec:matn-marg}
@@ -18336,6 +18646,7 @@ As $x_{ij}$ is a scalar, this is equivalent to a univariate normal distribution 
 \begin{equation} \label{eq:matn-marg-xij-marg-norm}
 x_{ij} \sim \mathcal{N}(m_{ij}, u_{ii} v_{jj}) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Drawing samples}]{Drawing samples} \label{sec:matn-samp}
@@ -18385,6 +18696,7 @@ Y = M + AXB &\sim \mathcal{MN}\left(M + A 0_{np} B, A I_n A^\mathrm{T}, B^\mathr
 \end{equation}
 
 Thus, given $X$ defined by \eqref{eq:matn-samp-xij-dist}, $Y$ defined by \eqref{eq:matn-samp-matn-samp} is a sample from $\mathcal{MN}\left(M, U, V \right)$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -18516,6 +18828,7 @@ the Kullback-Leibler divergence from \eqref{eq:wish-kl-wish-KL-s2} becomes:
 \end{split}
 \end{equation}
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -18605,6 +18918,7 @@ p(X,Y) = \; & \mathcal{MN}(X; M, U, Y^{-1}) \cdot \mathcal{W}(Y; V, \nu) \\
 & \exp\left[-\frac{1}{2} \mathrm{tr}\left( Y \left[ (X-M)^\mathrm{T} \, U^{-1} (X-M) + V^{-1} \right] \right) \right] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Mean}]{Mean} \label{sec:nw-mean}
@@ -18673,6 +18987,7 @@ Thus, the expectation of the random matrix in equations \eqref{eq:nw-mean-rmat} 
 \end{equation}
 
 as indicated by equation \eqref{eq:nw-mean-nw-mean}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 
@@ -18795,6 +19110,7 @@ and setting this derivative to zero gives the MLE for $\sigma^2$:
 
 \vspace{1em}
 Together, \eqref{eq:ug-mle-mu-MLE} and \eqref{eq:ug-mle-s2-MLE} constitute the MLE for the univariate Gaussian.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -18869,6 +19185,7 @@ t = \frac{\bar{y}-\mu_0}{s / \sqrt{n}} = \frac{Z}{\sqrt{V / (n-1)}} \sim \mathrm
 \end{equation}
 
 This means that the null hypothesis ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom using a significance level ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -18961,6 +19278,7 @@ t = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{s_p \cdot \sqrt{\frac{1}{n_1}+\frac{
 \end{equation}
 
 This means that the null hypothesis ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:t}) with $n_1+n_2-2$ degrees of freedom using a significance level ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19006,6 +19324,7 @@ d_i = y_{i1} - y_{i2} \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \;
 \end{equation}
 
 Therefore, $d_1, \ldots, d_n$ satisfy the conditions of the one-sample t-test ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:ug-ttest1}) which results in the test statistic given by \eqref{eq:ug-ttestp-t}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19109,6 +19428,7 @@ p(\mu,\tau) \propto \tau^{a_0+1/2-1} \cdot \exp[-\tau b_0] \cdot \exp\left[ -\fr
 \end{equation}
 
 and is therefore conjugate relative to the likelihood.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19270,6 +19590,7 @@ p(\tau|y) = \mathrm{Gam}(\tau; a_n, b_n) \; .
 \end{equation}
 
 Together, \eqref{eq:ug-post-UG-NG-post-mu} and \eqref{eq:ug-post-UG-NG-post-tau} constitute the joint ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-joint}) posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) of $\mu$ and $\tau$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19391,6 +19712,7 @@ Thus, the log model evidence ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:
 \begin{equation} \label{eq:ug-lme-UG-NG-LME-s6}
 \log p(y|m) = - \frac{n}{2} \log (2 \pi)  + \frac{1}{2} \log \frac{\lambda_0}{\lambda_n} + \log \Gamma(a_n) - \log \Gamma(a_0) + a_0 \log b_0 - a_n \log b_n \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19473,6 +19795,7 @@ A control calculation confirms that
 \end{equation}
 
 where $\mathrm{LME}(m)$ is the log model evidence for the univariate Gaussian ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:ug-lme}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Univariate Gaussian with known variance}
@@ -19572,6 +19895,7 @@ Plugging this value into the second derivative, we confirm:
 \end{equation}
 
 This demonstrates that the estimate $\hat{\mu} = \bar{y}$ maximizes the likelihood $p(y \vert \mu)$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19634,6 +19958,7 @@ z \sim \mathcal{N}(0, 1), \quad \text{if } \mu = \mu_0 \; .
 \end{equation}
 
 This means that the null hypothesis ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $z$ is as extreme or more extreme than the critical value ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the standard normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:snorm}) using a significance level ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19712,6 +20037,7 @@ z \sim \mathcal{N}(0, 1), \quad \text{if } \mu_\Delta = \mu_1-\mu_2 \; .
 \end{equation}
 
 This means that the null hypothesis ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $z$ is as extreme or more extreme than the critical value ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the standard normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:snorm}) using a significance level ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19757,6 +20083,7 @@ d_i = y_{i1} - y_{i2} \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n \;
 \end{equation}
 
 Therefore, $d_1, \ldots, d_n$ satisfy the conditions of the one-sample z-test ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:ugkv-ztest1}) which results in the test statistic given by \eqref{eq:ugkv-ztestp-z}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19855,6 +20182,7 @@ p(\mu) \propto \exp\left[ -\frac{\lambda_0}{2} \left( \mu-\mu_0 \right)^2 \right
 \end{equation}
 
 and is therefore conjugate relative to the likelihood.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -19992,6 +20320,7 @@ p(\mu|y) = \mathcal{N}(\mu; \mu_n, \lambda_n^{-1}) \; .
 \end{equation}
 
 with the posterior hyperparameters given in \eqref{eq:ugkv-post-UGkv-post-mu-par}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -20092,6 +20421,7 @@ Thus, the log model evidence ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:
 \begin{equation} \label{eq:ugkv-lme-UGkv-LME-s4}
 \log p(y|m) = \frac{n}{2} \log\left( \frac{\tau}{2 \pi} \right) + \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) - \frac{1}{2} \left( \tau y^T y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Accuracy and complexity}]{Accuracy and complexity} \label{sec:ugkv-anc}
@@ -20161,6 +20491,7 @@ A control calculation confirms that
 \end{equation}
 
 where $\mathrm{LME}(m)$ is the log model evidence for the univariate Gaussian with known variance ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:ugkv-lme}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Log Bayes factor}]{Log Bayes factor} \label{sec:ugkv-lbf}
@@ -20225,6 +20556,7 @@ where the posterior hyperparameters ($\rightarrow$  \ref{sec:General Theorems}/\
 \end{equation}
 
 with the sample mean ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$ and the inverse variance or precision ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prec}) $\tau = 1/\sigma^2$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Expectation of log Bayes factor}]{Expectation of log Bayes factor} \label{sec:ugkv-lbfmean}
@@ -20315,6 +20647,7 @@ Finally, plugging $\lambda_n$ from \eqref{eq:ugkv-lbfmean-UGkv-post-par} into \e
 \begin{equation} \label{eq:ugkv-lbfmean-UGkv-LBF-m10-s6}
 \left\langle \mathrm{LBF}_{10} \right\rangle = \frac{1}{2} \log\left( \frac{\lambda_0}{\lambda_n} \right) + \frac{1}{2} \left( \frac{\lambda_n - \lambda_0}{\lambda_n} \right) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Cross-validated log model evidence}]{Cross-validated log model evidence} \label{sec:ugkv-cvlme}
@@ -20429,6 +20762,7 @@ Again, because the cross-validated log model evidence is the sum of out-of-sampl
 \end{equation}
 
 Together, \eqref{eq:ugkv-cvlme-UGkv-m0-cvLME} and \eqref{eq:ugkv-cvlme-UGkv-m1-cvLME} conform to the results given in \eqref{eq:ugkv-cvlme-UGkv-cvLME-m01}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Cross-validated log Bayes factor}]{Cross-validated log Bayes factor} \label{sec:ugkv-cvlbf}
@@ -20484,6 +20818,7 @@ Subtracting the two cvLMEs from each other, the cvLBF emerges as
 &= \frac{S}{2} \log \left( \frac{S-1}{S} \right) - \frac{\tau}{2} \sum_{i=1}^S \left( \frac{\left(n_1 \bar{y}_1^{(i)}\right)^2}{n_1} - \frac{(n \bar{y})^2}{n} \right) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Expectation of cross-validated log Bayes factor}]{Expectation of cross-validated log Bayes factor} \label{sec:ugkv-cvlbfmean}
@@ -20550,6 +20885,7 @@ Because it holds that ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:ugkv
 &= \frac{S}{2} \log \left( \frac{S-1}{S} \right) + \frac{1}{2} \left[ \tau n \mu^2 \right] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Analysis of variance}
@@ -20666,6 +21002,7 @@ Setting these derivatives to zero, we obtain the estimates of $\mu_i$:
 \hat{\mu}_i &= \frac{1}{n_i} \sum_{j=1}^{n_i} y_{ij} \quad \text{for} \quad i = 1, \ldots, k \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Sums of squares in one-way ANOVA}]{Sums of squares in one-way ANOVA} \label{sec:anova1-pss}
@@ -20732,6 +21069,7 @@ we finally have:
 \begin{equation} \label{eq:anova1-pss-anova1-pss-qed}
 \mathrm{SS}_\mathrm{tot} = \mathrm{SS}_\mathrm{treat} + \mathrm{SS}_\mathrm{res} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -20938,6 +21276,7 @@ F \sim \mathrm{F}(k-1, n-k)
 \end{equation}
 
 under the null hypothesis ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:h0}) for the main effect.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -21002,6 +21341,7 @@ such that
 \begin{equation} \label{eq:anova1-fols-anova1-fols-v2-qed}
 F = \frac{\frac{1}{k-1} \sum_{i=1}^{k} n_i \hat{\delta}_i^2}{\frac{1}{n-k} \sum_{i=1}^{k} \sum_{j=1}^{n_i} (y_{ij} - \hat{\mu} - \hat{\delta}_i)^2} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Reparametrization of one-way ANOVA}]{Reparametrization of one-way ANOVA} \label{sec:anova1-repara}
@@ -21125,6 +21465,7 @@ F \sim \mathrm{F}(k-1, n-k)
 \end{equation}
 
 under the null hypothesis.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -21366,6 +21707,7 @@ Setting these derivatives to zero, we obtain the estimates of $\mu_i$, $\alpha_i
 &\overset{\eqref{eq:anova2-ols-mean-samp}}{=} \bar{y}_{i j \bullet} - \bar{y}_{i \bullet \bullet} - \bar{y}_{\bullet j \bullet} + \bar{y}_{\bullet \bullet \bullet} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -21456,6 +21798,7 @@ we finally have:
 \begin{equation} \label{eq:anova2-pss-anova2-pss-qed}
 \mathrm{SS}_\mathrm{tot} = \mathrm{SS}_{A} + \mathrm{SS}_{B} + \mathrm{SS}_{A \times B} + \mathrm{SS}_\mathrm{res} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -21704,6 +22047,7 @@ Finally, we identify the terms $Q$ with sums of squares in two-way ANOVA ($\righ
 \frac{\mathrm{SS}_\mathrm{res}}{\sigma^2} &= \frac{1}{\sigma^2} \sum_{i=1}^{a} \sum_{j=1}^{b} \sum_{k=1}^{n_{ij}} (y_{ijk} - \bar{y}_{i j \bullet})^2 = \frac{1}{\sigma^2} \sum_{i=1}^{a} \sum_{j=1}^{b} \sum_{k=1}^{n_{ij}} (y_{ijk} - \bar{y}_{i j \bullet})^2 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -21825,6 +22169,7 @@ F_B \sim \mathrm{F}(b-1, n-ab)
 \end{equation}
 
 under the null hypothesis ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:h0}) for main effect of $B$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -21907,6 +22252,7 @@ F_{A \times B} \sim \mathrm{F}\left( (a-1)(b-1), n-ab \right)
 \end{equation}
 
 under the null hypothesis ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:h0}) for an interaction of A and B.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -21987,6 +22333,7 @@ F_M \sim \mathrm{F}(1, n-ab)
 \end{equation}
 
 under the null hypothesis ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:h0}) for the grand mean.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -22077,6 +22424,7 @@ F_B &= \frac{\frac{1}{b-1} \sum_{j=1}^{b} n_{\bullet j} \hat{\beta}_j^2}{\frac{1
 F_{A \times B} &= \frac{\frac{1}{(a-1)(b-1)} \sum_{i=1}^{a} \sum_{j=1}^{b} n_{ij} \hat{\gamma}_{ij}^2}{\frac{1}{n-ab} \sum_{i=1}^{a} \sum_{j=1}^{b} \sum_{k=1}^{n_{ij}} (y_{ijk} - \hat{y}_{ijk})^2} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Simple linear regression}
@@ -22180,6 +22528,7 @@ In the case of correlated observations ($\rightarrow$  \ref{sec:Statistical Mode
 \begin{equation} \label{eq:slr-mlr-mlr-noise}
 \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Ordinary least squares}]{Ordinary least squares} \label{sec:slr-ols}
@@ -22295,6 +22644,7 @@ With \eqref{eq:slr-ols-slr-ols-sl-num} and \eqref{eq:slr-ols-slr-ols-sl-den}, th
 \end{equation}
 
 Together, \eqref{eq:slr-ols-slr-ols-int} and \eqref{eq:slr-ols-slr-ols-sl-qed} constitute the ordinary least squares parameter estimates for simple linear regression.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -22374,6 +22724,7 @@ Moreover, the first entry of $\hat{\beta}$ is equal to:
 &= \bar{y} - \hat{\beta}_1 \bar{x} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Expectation of estimates}]{Expectation of estimates} \label{sec:slr-olsmean}
@@ -22470,6 +22821,7 @@ Finally, with \eqref{eq:slr-olsmean-E-yi} and \eqref{eq:slr-olsmean-E-b1}, the e
 &= \beta_0 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -22581,6 +22933,7 @@ Applying the formula for the sample variance ($\rightarrow$  \ref{sec:General Th
 &= \frac{x^\mathrm{T} x}{n} \cdot \frac{\sigma^2}{(n-1) s_x^2} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -22673,6 +23026,7 @@ Thus, combining \eqref{eq:slr-olsdist-b-est-dist}, \eqref{eq:slr-olsdist-b-est-c
 \end{equation}
 
 which is equivalent to equation \eqref{eq:slr-olsdist-slr-olsdist}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -22711,6 +23065,7 @@ Because correlation is equal to covariance divided by standard deviations ($\rig
 \begin{equation} \label{eq:slr-olscorr-slr-olscorr-qed}
 \mathrm{Corr}\left( \hat{\beta}_0, \hat{\beta}_1 \right) = 0 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Effects of mean-centering}]{Effects of mean-centering} \label{sec:slr-meancent}
@@ -22796,6 +23151,7 @@ Under this condition, the parameter estimates become
 
 and we can see that $\hat{\beta}_1(\tilde{x},\tilde{y}) = \hat{\beta}_1(x,y)$, but $\hat{\beta}_0(\tilde{x},\tilde{y}) \neq \hat{\beta}_0(x,y)$, specifically $\beta_0$ is now forced to become zero.
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textit{Regression line}]{Regression line} \label{sec:regline}
@@ -22851,6 +23207,7 @@ Plugging in the coordinates of $M$ and the ordinary least squares estimate of th
 \end{equation}
 
 which is a true statement. Thus, the regression line ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:regline}) goes through the center of mass point $(\bar{x},\bar{y})$, if the model ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:slr}) includes an intercept term $\beta_0$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -22937,6 +23294,7 @@ Finally, with the point $S$ \eqref{eq:slr-proj-S} and the vector $p$ \eqref{eq:s
 \end{equation}
 
 Together, \eqref{eq:slr-proj-P-qed} and \eqref{eq:slr-proj-w-qed} constitute the proof of equation \eqref{eq:slr-proj-slr-proj}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -23030,6 +23388,7 @@ which, with the OLS parameter estimats, becomes:
 &= (n-1) \left( s_y^2 - \frac{s_{xy}^2}{s_x^2} \right) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Transformation matrices}]{Transformation matrices} \label{sec:slr-mat}
@@ -23121,6 +23480,7 @@ R &= I_n - P = \left[ \begin{matrix} 1 & \cdots & 0 \\ \vdots & \ddots & \vdots 
 &= \frac{1}{(n-1)\,s_x^2} \left[ \begin{matrix} (n-1) (x^\mathrm{T} x/n) + \bar{x} (2 x_1 - n\bar{x}) - x_1^2 & \cdots & -(x^\mathrm{T} x/n) + \bar{x} (x_1 + x_n) - x_1 x_n \\ \vdots & \ddots & \vdots \\ -(x^\mathrm{T} x/n) + \bar{x} (x_1 + x_n) - x_1 x_n & \cdots &  (n-1) (x^\mathrm{T} x/n) + \bar{x} (2 x_n - n\bar{x}) - x_n^2 \end{matrix} \right] \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Weighted least squares}]{Weighted least squares} \label{sec:slr-wls}
@@ -23207,6 +23567,7 @@ Applying $\tilde{x}_0 = W 1_n$, $\tilde{x} = W x$ and $W^\mathrm{T} W = W W = V^
 \end{equation}
 
 which corresponds to the weighted least squares solution \eqref{eq:slr-wls-slr-wls}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Weighted least squares}]{Weighted least squares} \label{sec:slr-wls2}
@@ -23265,6 +23626,7 @@ Moreover, the second entry of $\hat{\beta}$ is equal to ($\rightarrow$  \ref{sec
 \begin{equation} \label{eq:slr-wls2-slr-wls-b2}
 \hat{\beta}_1 = \frac{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} y - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} y}{1_n^\mathrm{T} V^{-1} 1_n \, x^\mathrm{T} V^{-1} x - x^\mathrm{T} V^{-1} 1_n \, 1_n^\mathrm{T} V^{-1} x} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:slr-mle}
@@ -23372,6 +23734,7 @@ and setting this derivative to zero gives the MLE for $\sigma^2$:
 
 \vspace{1em}
 Together, \eqref{eq:slr-mle-beta0-mle}, \eqref{eq:slr-mle-beta1-mle} and \eqref{eq:slr-mle-s2-mle} constitute the MLE for simple linear regression.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:slr-mle2}
@@ -23446,6 +23809,7 @@ Additionally, we can write out the estimate of $\sigma^2$:
 &= \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Sum of residuals is zero}]{Sum of residuals is zero} \label{sec:slr-ressum}
@@ -23479,6 +23843,7 @@ With that, we can calculate the sum of the residuals:
 \end{equation}
 
 Thus, the sum of the residuals ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:rss}) is zero under ordinary least squares ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:slr-ols}), if the model ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:slr}) includes an intercept term $\beta_0$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -23525,6 +23890,7 @@ With that, we can calculate the inner product of the covariate and the residuals
 \end{equation}
 
 Because an inner product of zero also implies zero correlation ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:corr}), this demonstrates that residuals ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:rss}) and covariate ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:slr}) values are uncorrelated under ordinary least squares ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:slr-ols}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -23589,6 +23955,7 @@ we get the final result:
 \begin{equation} \label{eq:slr-resvar-slr-vars-s2}
 \hat{\sigma}^2 = \left( 1 - r_{xy}^2 \right) s_y^2 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -23643,6 +24010,7 @@ we get the final result:
 \Leftrightarrow \quad r_{xy} &= \frac{s_x}{s_y} \, \hat{\beta}_1 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -23710,6 +24078,7 @@ Using the relationship between correlation coefficient and slope estimate ($\rig
 \begin{equation} \label{eq:slr-rsq-slr-R2-qed}
 R^2 = \left( \frac{s_x}{s_y} \, \hat{\beta}_1 \right)^2 = r_{xy}^2 \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -23831,6 +24200,7 @@ Y = X B + E, \; E \sim \mathcal{MN}(0, V, \Sigma) \; ,
 \end{equation}
 
 we finally note the equivalences given in equation \eqref{eq:mlr-glm-mlr-glm}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -23873,6 +24243,7 @@ X^\mathrm{T} X\hat{\beta} &= X^\mathrm{T} y \\
 \hat{\beta} &= (X^\mathrm{T} X)^{-1} X^\mathrm{T} y \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -23931,6 +24302,7 @@ X^\mathrm{T} X \hat{\beta} &= X^\mathrm{T} y \\
 \end{equation}
 
 Since the quadratic form $y^\mathrm{T} y$ in \eqref{eq:mlr-ols2-RSS-dev} is positive, $\hat{\beta}$ minimizes $\mathrm{RSS}(\beta)$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24073,6 +24445,7 @@ and, with the definitions of explained ($\rightarrow$  \ref{sec:Statistical Mode
 \begin{equation} \label{eq:mlr-pss-TSS-s3}
 \mathrm{TSS} = \mathrm{ESS} + \mathrm{RSS} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24205,6 +24578,7 @@ and using \eqref{eq:mlr-mat-y-est-qed}, this becomes
 &\overset{\eqref{eq:mlr-mat-mlr-mat}}{=} R y \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24271,6 +24645,7 @@ R^\mathrm{T} &= (I_n - P)^\mathrm{T} \\
 &\overset{\eqref{eq:mlr-symm-R}}{=} R \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24329,6 +24704,7 @@ R^2 &= (I_n - P) (I_n - P) \\
 &\overset{\eqref{eq:mlr-idem-R}}{=} R \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24404,6 +24780,7 @@ A \Sigma B^\mathrm{T} &= (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} (\sigm
 \end{equation}
 
 This demonstrates that $\hat{\beta}$ and $\hat{\varepsilon}$ -- and likewise, all pairs of terms separately derived ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:mlr-t}) from $\hat{\beta}$ and $\hat{\varepsilon}$ -- are statistically independent ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ind}).
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24507,6 +24884,7 @@ Because the residual-forming matrix ($\rightarrow$  \ref{sec:Statistical Models}
 \begin{equation} \label{eq:mlr-olsdist-e-est-dist-s2}
 \hat{\varepsilon} \sim \mathcal{N}\left( 0, \sigma^2 (I_n - P) \right) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24604,6 +24982,7 @@ and thus, by applying \eqref{eq:mlr-wlsdist-mvn-ltt} to \eqref{eq:mlr-wlsdist-e-
 &\sim \mathcal{N}\left( 0, \, \sigma^2 \left[ I_n - P \right] V \right) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24704,6 +25083,7 @@ Because a non-central chi-squared distribution with non-centrality parameter of 
 \begin{equation} \label{eq:mlr-rssdist-rss-dist-qed}
 \frac{\hat{\varepsilon}^\mathrm{T} \hat{\varepsilon}}{\sigma^2} \sim \chi^2(n-p) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24769,6 +25149,7 @@ where $\tilde{y} = Wy$, $\tilde{X} = WX$ and $\tilde{\varepsilon} = W\varepsilon
 \end{equation}
 
 which corresponds to the weighted least squares solution \eqref{eq:mlr-wls-WLS}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24853,6 +25234,7 @@ X^\mathrm{T} V^{-1} X \hat{\beta} &= X^\mathrm{T} V^{-1} y \\
 \end{equation}
 
 Since the quadratic form $y^\mathrm{T} V^{-1} y$ in \eqref{eq:mlr-wls2-wRSS-dev} is positive, $\hat{\beta}$ minimizes $\mathrm{wRSS}(\beta)$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textit{t-contrast}]{t-contrast} \label{sec:tcon}
@@ -25041,6 +25423,7 @@ t &\overset{\eqref{eq:mlr-t-mlr-t-s1}}{=} \frac{z}{\sqrt{v/(n-p)}} \\
 &\overset{\eqref{eq:mlr-t-mlr-est}}{=} \frac{c^\mathrm{T} \hat{\beta}}{\sqrt{\hat{\sigma}^2 c^\mathrm{T} (X^\mathrm{T} V^{-1} X)^{-1} c}} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -25186,6 +25569,7 @@ F &\overset{\eqref{eq:mlr-f-mlr-f-s1}}{=} \left( \hat{\gamma} -  C^\mathrm{T} \b
 &= \hat{\beta}^\mathrm{T} C \left( \hat{\sigma}^2 C^\mathrm{T} (X^\mathrm{T} V^{-1} X)^{-1} C \right)^{-1} C^\mathrm{T} \hat{\beta} / q \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -25294,6 +25678,7 @@ and setting this derivative to zero gives the MLE for $\sigma^2$:
 
 \vspace{1em}
 Together, \eqref{eq:mlr-mle-beta-MLE} and \eqref{eq:mlr-mle-s2-MLE} constitute the MLE for multiple linear regression.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Maximum log-likelihood}]{Maximum log-likelihood} \label{sec:mlr-mll}
@@ -25381,6 +25766,7 @@ such that
 \end{equation}
 
 which proves the result in \eqref{eq:mlr-mll-mlr-mll-v1}. This completes the proof.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -25474,6 +25860,7 @@ D(\beta,\sigma^2) = \mathrm{RSS}/\sigma^2 + n \cdot \left[ \log(\sigma^2) + \log
 \end{equation}
 
 which proves the result in \eqref{eq:mlr-dev-mlr-dev-v1}. This completes the proof.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Akaike information criterion}]{Akaike information criterion} \label{sec:mlr-aic}
@@ -25516,6 +25903,7 @@ Thus, the AIC of $m$ follows from \eqref{eq:mlr-aic-aic} and \eqref{eq:mlr-aic-m
 \begin{equation} \label{eq:mlr-aic-mlr-aic-qed}
 \mathrm{AIC}(m) = n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + 2 (p + 1) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -25564,6 +25952,7 @@ Thus, the BIC of $m$ follows from \eqref{eq:mlr-bic-bic} and \eqref{eq:mlr-bic-m
 \begin{equation} \label{eq:mlr-bic-mlr-bic-qed}
 \mathrm{BIC}(m) = n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + \log(n) \, (p + 1) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Corrected Akaike information criterion}]{Corrected Akaike information criterion} \label{sec:mlr-aicc}
@@ -25611,6 +26000,7 @@ Thus, the corrected AIC of $m$ follows from \eqref{eq:mlr-aicc-aicc} and \eqref{
 &= n \log\left( \frac{\mathrm{wRSS}}{n} \right) + n \left[ 1 + \log(2\pi) \right] + \log|V| + \frac{2 \, n \, (p+1)}{n-p-2} \\ \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -25705,6 +26095,7 @@ p(\beta,\tau) \propto \tau^{a_0+p/2-1} \cdot \exp[-\tau b_0] \cdot \exp\left[ -\
 \end{equation}
 
 and is therefore conjugate relative to the likelihood.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -25850,6 +26241,7 @@ p(\tau|y) = \mathrm{Gam}(\tau; a_n, b_n) \; .
 \end{equation}
 
 Together, \eqref{eq:blr-post-GLM-NG-post-beta} and \eqref{eq:blr-post-GLM-NG-post-tau} constitute the joint ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-joint}) posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) of $\beta$ and $\tau$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -25969,6 +26361,7 @@ Thus, the log model evidence ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:
 & \log \Gamma(a_n) - \log \Gamma(a_0) + a_0 \log b_0 - a_n \log b_n \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -26124,6 +26517,7 @@ Finally, combining the two terms, we have:
 \end{equation}
 
 This conforms to equation \eqref{eq:blr-dic-mlr-dic}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Posterior probability of alternative hypothesis}]{Posterior probability of alternative hypothesis} \label{sec:blr-pp}
@@ -26215,6 +26609,7 @@ Using the relation between non-standardized t-distribution and standard t-distri
 &= 1 - \mathrm{T}\left( -\frac{c^\mathrm{T} \mu}{\sqrt{c^\mathrm{T} \Sigma c}}; \nu \right) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -26307,6 +26702,7 @@ Therefore, the largest posterior credibility region for $\gamma$ which does not 
 &= \mathrm{F}\left( \left[ \mu^\mathrm{T} C (C^\mathrm{T} \Sigma \, C)^{-1} C^\mathrm{T} \mu \right]/q; q, \nu \right) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -26416,6 +26812,7 @@ X^\mathrm{T} X\hat{B} &= X^\mathrm{T} Y \\
 \hat{B} &= (X^\mathrm{T} X)^{-1} X^\mathrm{T} Y \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Weighted least squares}]{Weighted least squares} \label{sec:glm-wls}
@@ -26472,6 +26869,7 @@ where $\tilde{Y} = WY$, $\tilde{X} = WX$ and $\tilde{E} = WE$, such that we can 
 \end{equation}
 
 which corresponds to the weighted least squares solution \eqref{eq:glm-wls-WLS}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Maximum likelihood estimation}]{Maximum likelihood estimation} \label{sec:glm-mle}
@@ -26572,6 +26970,7 @@ I_v &= \frac{1}{n} \, (Y - X\hat{B})^\mathrm{T} V^{-1} (Y - X\hat{B}) \, \hat{\S
 
 \vspace{1em}
 Together, \eqref{eq:glm-mle-B-MLE} and \eqref{eq:glm-mle-S-MLE} constitute the MLE for the GLM.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Transformed general linear model}
@@ -26670,6 +27069,7 @@ This can also be written as
 \end{equation}
 
 which is equivalent to \eqref{eq:tglm-dist-tglm}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -26741,6 +27141,7 @@ Applying \eqref{eq:tglm-para-U}, \eqref{eq:tglm-para-X-Xt-T} and \eqref{eq:tglm-
 \end{equation}
 
 which is equivalent to the estimates in \eqref{eq:tglm-para-glm1-wls}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -26813,6 +27214,7 @@ X = Y W + N, \; N \sim \mathcal{MN}(0, V, W^\mathrm{T} \Sigma W)
 \end{equation}
 
 which is equivalent to \eqref{eq:iglm-dist-iglm}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -26921,6 +27323,7 @@ As a function of $D$ and using $D Y = 0$, it becomes:
 \end{equation}
 
 Since $D V D^\mathrm{T}$ is a positive-semidefinite matrix, all its eigenvalues are non-negative. Because the trace of a square matrix is the sum of its eigenvalues, the mimimum variance is achieved by $D = 0$, thus producing $\hat{W}$ as in \eqref{eq:iglm-blue-iglm-wls}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -27006,6 +27409,7 @@ A^\mathrm{T} &= \Sigma_x^{-1} W^\mathrm{T} \Sigma_y \\
 A &= \Sigma_y W \Sigma_x^{-1} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -27059,6 +27463,7 @@ A = \Sigma_y W \Sigma_x^{-1} \quad \text{where} \quad \Sigma_x = \hat{X}^\mathrm
 \end{equation}
 
 This completes the proof.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -27153,6 +27558,7 @@ p(B,T) \propto |T|^{(\nu_0+p-v-1)/2} \cdot \exp\left[ -\frac{1}{2} \mathrm{tr}\l
 \end{equation}
 
 and is therefore conjugate relative to the likelihood.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -27298,6 +27704,7 @@ p(T|Y) = \mathcal{W}(T; \Omega_n^{-1}, \nu_n) \; .
 \end{equation}
 
 Together, \eqref{eq:mblr-post-GLM-NW-post-B} and \eqref{eq:mblr-post-GLM-NW-post-T} constitute the joint ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-joint}) posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) of $B$ and $T$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -27417,6 +27824,7 @@ Thus, the log model evidence ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:
 & \frac{\nu_0}{2} \log\left| \frac{1}{2} \Omega_0 \right| - \frac{\nu_n}{2} \log\left| \frac{1}{2} \Omega_n \right| + \log \Gamma_v \left( \frac{\nu_n}{2} \right) - \log \Gamma_v \left( \frac{\nu_0}{2} \right) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \pagebreak
@@ -27484,6 +27892,7 @@ n \, \hat{p} &= y \\
 \hat{p} &= \frac{y}{n} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -27555,6 +27964,7 @@ the MLL finally becomes
 &- n \log (n) + y \log (y) + (n-y) \log (n-y) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:bin-prior}
@@ -27605,6 +28015,7 @@ exhibits the same proportionality
 \end{equation}
 
 and is therefore conjugate relative to the likelihood.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -27678,6 +28089,7 @@ which, when normalized to one, results in the probability density function of th
 \begin{equation} \label{eq:bin-post-Bin-post-qed}
 \mathrm{p}(p|y) = \frac{1}{B(\alpha_n,\beta_n)} \, p^{\alpha_n-1} \, (1-p)^{\beta_n-1} = \mathrm{Bet}(p; \alpha_n, \beta_n) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -27785,6 +28197,7 @@ the LME finally becomes
 &+ \log B(\alpha_n,\beta_n) - \log B(\alpha_0,\beta_0) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -27858,6 +28271,7 @@ where the posterior hyperparameters ($\rightarrow$  \ref{sec:General Theorems}/\
 \end{equation}
 
 with the number of trials ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:bin}) $n$ and the number of successes ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:bin}) $y$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Posterior probability}]{Posterior probability} \label{sec:bin-pp}
@@ -27927,6 +28341,7 @@ where the posterior hyperparameters ($\rightarrow$  \ref{sec:General Theorems}/\
 \end{equation}
 
 with the number of trials ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:bin}) $n$ and the number of successes ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:bin}) $y$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Multinomial observations}
@@ -27977,6 +28392,7 @@ To this, we can apply maximum likelihood estimation for binomial observations ($
 \begin{equation} \label{eq:mult-mle-Mult-MLE-qed}
 \hat{p}_j = \frac{y_j}{n} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Maximum log-likelihood}]{Maximum log-likelihood} \label{sec:mult-mll}
@@ -28049,6 +28465,7 @@ the MLL finally becomes
 \begin{equation} \label{eq:mult-mll-Mult-MLL-s2}
 \mathrm{MLL} = \log \Gamma(n+1) - \sum_{j=1}^{k} \log \Gamma(y_j+1) - n \log (n) + \sum_{j=1}^{k} y_j \log (y_j) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:mult-prior}
@@ -28099,6 +28516,7 @@ exhibits the same proportionality
 \end{equation}
 
 and is therefore conjugate relative to the likelihood.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -28169,6 +28587,7 @@ which, when normalized to one, results in the probability density function of th
 \begin{equation} \label{eq:mult-post-Mult-post-qed}
 \mathrm{p}(p|y) = \frac{\Gamma \left( \sum_{j=1}^{k} \alpha_{nj} \right)}{\prod_{j=1}^k \Gamma(\alpha_{nj})} \prod_{j=1}^{k} {p_j}^{\alpha_{nj}-1} = \mathrm{Dir}(p; \alpha_n) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -28278,6 +28697,7 @@ the LME finally becomes
 &+ \sum_{j=1}^k \log \Gamma(\alpha_{nj}) - \sum_{j=1}^k \log \Gamma(\alpha_{0j}) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Log Bayes factor}]{Log Bayes factor} \label{sec:mult-lbf}
@@ -28357,6 +28777,7 @@ where the posterior hyperparameters ($\rightarrow$  \ref{sec:General Theorems}/\
 \end{equation}
 
 with the numbers of observations ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mult}) $y_1, \ldots, y_k$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Posterior probability}]{Posterior probability} \label{sec:mult-pp}
@@ -28426,6 +28847,7 @@ where the posterior hyperparameters ($\rightarrow$  \ref{sec:General Theorems}/\
 \end{equation}
 
 with the numbers of observations ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mult}) $y_1, \ldots, y_k$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Poisson-distributed data}
@@ -28528,6 +28950,7 @@ Plugging this value into the second derivative, we confirm:
 \end{equation}
 
 This demonstrates that the estimate $\hat{\lambda} = \bar{y}$ maximizes the likelihood $p(y \vert \lambda)$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:poiss-prior}
@@ -28599,6 +29022,7 @@ p(\lambda) \propto \lambda^{a_0-1} \cdot \exp[-b_0 \lambda]
 \end{equation}
 
 and is therefore conjugate relative to the likelihood.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -28693,6 +29117,7 @@ which, when normalized to one, results in the probability density function of th
 \begin{equation} \label{eq:poiss-post-Poiss-post-s3}
 p(\lambda|y) = \frac{ {b_n}^{a_n}}{\Gamma(a_0)} \lambda^{a_n-1} \exp\left[-b_n \lambda\right] = \mathrm{Gam}(\lambda; a_n, b_n) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -28797,6 +29222,7 @@ such that the log model evidence ($\rightarrow$  \ref{sec:Model Selection}/\ref{
 \begin{equation} \label{eq:poiss-lme-Poiss-LME-qed}
 \log p(y|m) = - \sum_{i=1}^n \log y_i ! + \log \Gamma(a_n) - \log \Gamma(a_0) + a_0 \log b_0 - a_n \log b_n \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Poisson distribution with exposure values}
@@ -28906,6 +29332,7 @@ Plugging this value into the second derivative, we confirm:
 \end{equation}
 
 This demonstrates that the estimate $\hat{\lambda} = \bar{y}/\bar{x}$ maximizes the likelihood $p(y \vert \lambda)$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:poissexp-prior}
@@ -28981,6 +29408,7 @@ p(\lambda) \propto \lambda^{a_0-1} \cdot \exp[-b_0 \lambda]
 \end{equation}
 
 and is therefore conjugate relative to the likelihood.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -29079,6 +29507,7 @@ which, when normalized to one, results in the probability density function of th
 \begin{equation} \label{eq:poissexp-post-Poiss-exp-post-s3}
 p(\lambda|y) = \frac{ {b_n}^{a_n}}{\Gamma(a_0)} \lambda^{a_n-1} \exp\left[-b_n \lambda\right] = \mathrm{Gam}(\lambda; a_n, b_n) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -29193,6 +29622,7 @@ such that the log model evidence ($\rightarrow$  \ref{sec:Model Selection}/\ref{
 &\log \Gamma(a_n) - \log \Gamma(a_0) + a_0 \log b_0 - a_n \log b_n \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \pagebreak
@@ -29303,6 +29733,7 @@ Plugging this into equation \eqref{eq:beta-mome-beta-as-alpha}, one obtains for 
 \end{equation}
 
 Together, \eqref{eq:beta-mome-Beta-MoM-alpha} and \eqref{eq:beta-mome-Beta-MoM-beta} constitute the method-of-moment estimates of $\alpha$ and $\beta$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -29444,6 +29875,7 @@ which leads to the following fixed-point iteration using \eqref{eq:dir-mle-Dir-d
 \begin{equation} \label{eq:dir-mle-Dir-MLE-qed}
 \alpha_j^{\text{(new)}} = \psi^{-1}\left[ \psi\left( \sum_{j=1}^k \alpha_j^{\text{(old)}} \right) + \log \bar{y}_j \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -29559,6 +29991,7 @@ Plugging this into equation \eqref{eq:betabin-mome-beta-as-alpha}, one obtains f
 \end{equation}
 
 Together, \eqref{eq:betabin-mome-binbeta-mome-alpha} and \eqref{eq:betabin-mome-binbeta-mome-beta} constitute the method-of-moment estimates of $\alpha$ and $\beta$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -29657,6 +30090,7 @@ l_i &= \log_b \frac{p(y_i=1|x_i)}{p(y_i=0|x_i)} \\
 &= \log_b \frac{p(x_i|y_i=1) \, p(y_i=1)}{p(x_i|y_i=0) \, p(y_i=0)} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -29707,6 +30141,7 @@ p_i &= \frac{1}{1 + b^{-(x_i \beta + \varepsilon_i)}}
 \end{equation}
 
 which proves the identity given by \eqref{eq:logreg-lonp-prob}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -29863,6 +30298,7 @@ Plugging \eqref{eq:resvar-bias-E-Var-xi}, \eqref{eq:resvar-bias-E-mean-mle} and 
 
 which proves the bias given by \eqref{eq:resvar-bias-resvar-bias}.
 
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -29959,6 +30395,7 @@ we can deduce from \eqref{eq:resvar-biasp-resvar-bias-s2} that
 \end{equation}
 
 which proves the relationship given by \eqref{eq:resvar-biasp-resvar-biasp}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -30015,6 +30452,7 @@ such that an unbiased estimator can be constructed as
 &= \frac{1}{n-1} \sum_{i=1}^{n} \left( x_i - \bar{x} \right)^2 \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -30121,6 +30559,7 @@ where $\mathrm{df}_r = n-p$ and $\mathrm{df}_t = n-1$ are the residual and total
 
 \vspace{1em}
 This gives the adjusted $R^2$ which adjusts $R^2$ for the number of explanatory variables.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -30224,6 +30663,7 @@ Taking both sides to the power of $-2/n$ and subtracting from 1, we have
 \end{equation}
 
 which proves the identity given above.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsection{Signal-to-noise ratio}
@@ -30320,6 +30760,7 @@ Rearranging this equation for the coefficient of determination ($\rightarrow$  \
 \begin{equation} \label{eq:snr-rsq-R2-SNR-qed}
 R^2 = \frac{\mathrm{SNR}}{\mathrm{1+\mathrm{SNR}}} \; ,
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \pagebreak
@@ -30402,6 +30843,7 @@ Note that the number of free model parameters $k$ is finite. Thus, we have:
 &= \mathrm{AIC}(m) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -30445,6 +30887,7 @@ Plugging \eqref{eq:aicc-mll-aic} into \eqref{eq:aicc-mll-aicc}, we obtain:
 &= -2 \log p(y | \hat{\theta}, m) + \frac{2nk}{n-k-1} \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -30547,6 +30990,7 @@ As $n \to \infty$, the last three terms are $O_p(1)$ and can therefore be ignore
 \begin{equation} \label{eq:bic-der-BIC-qed}
 \mathrm{BIC}(m) = -2 \log p(y|\hat{\theta}, m) + p \log n \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -30657,6 +31101,7 @@ Plugging \eqref{eq:me-der-prob-cond} into \eqref{eq:me-der-prob-marg}, we obtain
 \begin{equation} \label{eq:me-der-ME-marg-qed}
 \mathrm{ME}(m) = p(y|m) = \int_{\Theta} p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textit{Log model evidence}]{Log model evidence} \label{sec:lme}
@@ -30709,6 +31154,7 @@ Combining \eqref{eq:lme-der-prob-marg} with \eqref{eq:lme-der-prob-cond} and log
 \begin{equation} \label{eq:lme-der-LME-marg-qed}
 \mathrm{LME}(m) = \log p(y|m) = \log \int p(y|\theta,m) \, p(\theta|m) \, \mathrm{d}\theta \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Expression using prior and posterior}]{Expression using prior and posterior} \label{sec:lme-pnp}
@@ -30742,6 +31188,7 @@ Rearranging for $p(y \vert m)$ and logarithmizing, we have:
 &= \log p(y|\theta,m) + \log p(\theta|m) - \log p(\theta|y,m) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Partition into accuracy and complexity}]{Partition into accuracy and complexity} \label{sec:lme-anc}
@@ -30798,6 +31245,7 @@ By definition, the left-hand side is the log model evidence and the terms on the
 \end{equation}
 
 which proofs the partition given by \eqref{eq:lme-anc-LME}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -30970,6 +31418,7 @@ Plugging \eqref{eq:fe-der-prob-cond} into \eqref{eq:fe-der-prob-marg} and applyi
 \begin{equation} \label{eq:fe-der-ME-marg-qed}
 \mathrm{FE}(f) = p(y|f) = \sum_{i=1}^M p(y|m_i) \, p(m_i|f) \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textit{Log family evidence}]{Log family evidence} \label{sec:lfe}
@@ -31061,6 +31510,7 @@ p(y|f) &= \frac{\sum_{i=1}^M p(y|m_i) \, p(m_i)}{\sum_{i=1}^M p(m_i)} \\
 \end{equation}
 
 Equation \eqref{eq:lfe-der-LFE-marg} follows by logarithmizing both sides of \eqref{eq:lfe-der-fe-marg-qed}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Calculation from log model evidences}]{Calculation from log model evidences} \label{sec:lfe-lme}
@@ -31111,6 +31561,7 @@ and applying \eqref{eq:lfe-lme-ME} to \eqref{eq:lfe-lme-LFE-LME-s1}, we finally 
 \begin{equation} \label{eq:lfe-lme-LFE-LME-s2}
 \mathrm{LFE}(f_j) = \log \sum_{m_i \in f_j} \left[ \exp[\mathrm{LME}(m_i)] \cdot p(m_i|f_j) \right] \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -31179,6 +31630,7 @@ We can equivalently write
 \end{equation}
 
 which completes the proof of \eqref{eq:bf-trans-bf-trans}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Computation using Savage-Dickey density ratio}]{Computation using Savage-Dickey density ratio} \label{sec:bf-sddr}
@@ -31226,6 +31678,7 @@ Thus we have
 \end{equation}
 
 which completes the proof of \eqref{eq:bf-sddr-sd}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -31299,6 +31752,7 @@ Plugging \eqref{eq:bf-ep-prior} and \eqref{eq:bf-ep-posterior} into \eqref{eq:bf
 \end{equation}
 
 which completes the proof. Note that by definition, $1/d$ represents the proportion of the posterior distribution for $\theta$ under the encompassing model ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:encm}) $m_e$ that agrees with the constraints imposed by $m_1$.  Similarly, $1/c$ represents the proportion of the prior distribution for $\theta$ under the encompassing model ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:encm}) $m_e$ that agrees with the constraints imposed by $m_1$.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -31385,6 +31839,7 @@ When both models are equally likely apriori, the prior ($\rightarrow$  \ref{sec:
 \end{equation}
 
 Equation \eqref{eq:lbf-der-LBF-ratio} follows by logarithmizing both sides of \eqref{eq:lbf-der-BF-s3}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Calculation from log model evidences}]{Calculation from log model evidences} \label{sec:lbf-lme}
@@ -31430,6 +31885,7 @@ and resolving the logarithm, we finally have:
 &= \mathrm{LME}(m_1) - \mathrm{LME}(m_2) \; .
 \end{split}
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -31484,6 +31940,7 @@ Finally, using the law of conditional probability ($\rightarrow$  \ref{sec:Gener
 \begin{equation} \label{eq:pmp-der-PMP-s3}
 p(m_i|y) = \frac{p(y|m_i) \, p(m_i)}{\sum_{j=1}^{M} p(y|m_j) \, p(m_j)} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Calculation from Bayes factors}]{Calculation from Bayes factors} \label{sec:pmp-bf}
@@ -31531,6 +31988,7 @@ such that
 \begin{equation} \label{eq:pmp-bf-PMP-BF-qed}
 p(m_i|y)= \frac{\mathrm{BF}_{i,0} \cdot \alpha_i}{\sum_{j=1}^{M} \mathrm{BF}_{j,0} \cdot \alpha_j} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -31585,6 +32043,7 @@ Because the log Bayes factor is the logarithm of the Bayes factor ($\rightarrow$
 \begin{equation} \label{eq:pmp-lbf-post-s2}
 p(m_1|y) = \frac{\exp(\mathrm{LBF}_{12})}{\exp(\mathrm{LBF}_{12}) + 1} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -31630,6 +32089,7 @@ and applying \eqref{eq:pmp-lme-ME} to \eqref{eq:pmp-lme-PMP-s1}, we finally have
 \begin{equation} \label{eq:pmp-lme-PMP-s2}
 p(m_i|y) = \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{LME}(m_j)] \, p(m_j)} \; .
 \end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -31680,6 +32140,7 @@ p(\theta|y) = \sum_{i=1}^{M} p(\theta|y,m_i) \cdot p(m_i|y)
 \end{equation}
 
 where $p(\theta \vert y,m_i)$ is the posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) of the $i$-th model and $p(m_i \vert y)$ happens to be the posterior probability ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:pmp}) of the $i$-th model.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 
 \subsubsection[\textbf{Calculation from log model evidences}]{Calculation from log model evidences} \label{sec:bma-lme}
@@ -31708,6 +32169,7 @@ p(m_i|y) = \frac{\exp[\mathrm{LME}(m_i)] \, p(m_i)}{\sum_{j=1}^{M} \exp[\mathrm{
 \end{equation}
 
 and by plugging \eqref{eq:bma-lme-PMP-LME} into \eqref{eq:bma-lme-BMA-PMP}, one arrives at \eqref{eq:bma-lme-BMA-LME}.
+\begin{flushright} $\blacksquare$ \end{flushright}
 
 \vspace{1em}
 \textbf{Sources:}
@@ -32136,6 +32598,7 @@ P409 & exp-skew & Skewness of the exponential distribution & tomfaulkenberry & 2
 P410 & duni-ent & Entropy of the discrete uniform distribution & JoramSoch & 2023-08-11 & \pageref{sec:duni-ent} \\ \hline
 P411 & duni-maxent & Discrete uniform distribution maximizes entropy for finite support & JoramSoch & 2023-08-18 & \pageref{sec:duni-maxent} \\ \hline
 P412 & cuni-maxent & Continuous uniform distribution maximizes differential entropy for fixed range & JoramSoch & 2023-08-25 & \pageref{sec:cuni-maxent} \\ \hline
+P413 & post-ind & Combined posterior distributions in terms of individual posterior distributions obtained from conditionally independent data & JoramSoch & 2023-09-01 & \pageref{sec:post-ind} \\ \hline
 \end{longtable}
 
 
@@ -32384,6 +32847,8 @@ $\bullet$ Best linear unbiased estimator for the inverse general linear model, \
 $\bullet$ Characteristic function of a function of a random variable, \pageref{sec:cf-fct}
 
 $\bullet$ Chi-squared distribution is a special case of gamma distribution, \pageref{sec:chi2-gam}
+
+$\bullet$ Combined posterior distributions in terms of individual posterior distributions obtained from conditionally independent data, \pageref{sec:post-ind}
 
 $\bullet$ Concavity of the Shannon entropy, \pageref{sec:ent-conc}
 

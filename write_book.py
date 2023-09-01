@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2023-08-25 17:32:00
+ Last edit: 2023-08-01 15:15:00
 """
 
 
@@ -206,6 +206,10 @@ for entry in toc_txt:
         if in_itemize:
             book.write('\n\n\\end{itemize}')
             in_itemize = False
+        
+        # Add tombstone
+        if is_proof:
+            book.write('\n\\begin{flushright} $\\blacksquare$ \\end{flushright}')
         
         # Write sources
         if bool(sources):
