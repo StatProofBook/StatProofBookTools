@@ -22,4 +22,5 @@ In more details, the tools allow you to:
 * `display_content.py`: display some stats regarding [content](https://github.com/StatProofBook/StatProofBookTools/blob/master/display_content/Content.png), [development](https://github.com/StatProofBook/StatProofBookTools/blob/master/display_content/Development.png), [proofs](https://github.com/StatProofBook/StatProofBookTools/blob/master/display_content/Topic_Proofs.png) and [definitions](https://github.com/StatProofBook/StatProofBookTools/blob/master/display_content/Topic_Definitions.png);
 * `visualize_all.py`: create a nested dictionary that can be used for interactive visualization;
 * `tweet_proof.py`: use [Tweepy](https://www.tweepy.org/) to tweet a random proof from the [StatProofBook Twitter profile](https://twitter.com/StatProofBook)
-  (requires admin access to Twitter account; defunct, since free API was closed; will be re-developped).
+
+   (requires admin access to Twitter account; defunct, since free API was closed; will be re-developped).
