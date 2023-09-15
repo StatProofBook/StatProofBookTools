@@ -9,14 +9,14 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2023-09-01 13:40:00
- Last edit: 2023-09-01 13:40:00
+ Last edit: 2023-09-08 12:54:00
 """
 
 
 # Specify proofs
 #-----------------------------------------------------------------------------#
-temp_proof = 'post-jl'          # Markdown proof to be used as template
-src_proof  = 'post-ind'         # LaTeX proof to be used as source
+temp_proof = 'lfe-lme'          # Markdown proof to be used as template
+src_proof  = 'lfe-approx'       # LaTeX proof to be used as source
 src_dir    =r'C:\Users\sochj\ownCloud\StatProofBook\Submissions\JoramSoch\Proofs'
 
 # Import modules

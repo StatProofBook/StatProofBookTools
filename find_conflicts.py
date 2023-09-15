@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-08-25 15:55:00
- Last edit: 2021-11-08 23:00:00
+ Last edit: 2023-09-08 13:05:00
 """
 
 
@@ -32,7 +32,7 @@ toc_obj.close()
 # Prepare finding conflicts
 #-----------------------------------------------------------------------------#
 print('\n-> Find ToC conflicts in the StatProofBook:')
-conf_found = False
+num_conf = 0
 
 # Set chapter and section names
 #-----------------------------------------------------------------------------#
@@ -103,9 +103,11 @@ for entry in toc_txt:
             print('   - Warning: ' + item_type + ' "' + shortcut + '" (' + chapters[num_chap-1] + '/' + str(num_sect) + '.' + str(num_ssec) + '.' + str(num_ssse) + '. ' + title + '):')
             print('     - categoized in file as "' + chapter + '" >> "' + section + '" >> "' + topic + '" >> "' + item + '".')
             print('     - referenced in ToC  as "' + curr_chap + '" >> "' + curr_sect + '" >> "' + curr_ssec + '" >> "' + curr_ssse + '".')
-            conf_found = True
+            num_conf = num_conf + 1
  
 # Finalize treatment
 #-----------------------------------------------------------------------------#
-if not conf_found:
+if num_conf == 0:
     print('   - no conflicts found.')
+else:
+    print('\n-> Number of conflicts found: {}.'.format(num_conf))
