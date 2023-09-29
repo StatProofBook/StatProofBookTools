@@ -15,7 +15,8 @@ To configure everything, proceed as follows:
 
 In more details, the tools allow you to:
 * `write_book.py`: write all StatProofBook content into a [LaTeX source file](https://github.com/StatProofBook/StatProofBookTools/blob/master/write_book/StatProofBook.tex) that results in a [PDF of the book](https://github.com/StatProofBook/StatProofBookTools/blob/master/write_book/StatProofBook.pdf);
-* `create_md.py`: take a proof written in LaTeX and transforms it into a StatProofBook entry [written in Markdown](https://raw.githubusercontent.com/StatProofBook/StatProofBook.github.io/master/P/-temp-.md);
+* `create_def.py`: take a definition written in LaTeX and transform it into a StatProofBook entry [written in Markdown](https://raw.githubusercontent.com/StatProofBook/StatProofBook.github.io/master/D/-temp-.md);
+* `create_proof.py`: take a proof written in LaTeX and transform it into a StatProofBook entry [written in Markdown](https://raw.githubusercontent.com/StatProofBook/StatProofBook.github.io/master/P/-temp-.md);
 * `report_links.py`: create a [list of dead links](https://github.com/StatProofBook/StatProofBookTools/blob/master/report_links/Dead_Links.txt), i.e. a list of pages which are referenced but non-existing;
 * `find_conflicts.py`: display a list of conflicts, i.e. mismatches between [table of contents](https://statproofbook.github.io/I/ToC) and [proofs/definitions](https://github.com/StatProofBook/StatProofBook.github.io/wiki/Metadata-Fields#3-hierarchy-information-locating-a-page-in-the-table-of-contents);
 * `replace_string.py`: replace an arbitrary string with another predefined string in all proofs and definitions;
