@@ -25,7 +25,7 @@ from datetime import datetime, timedelta
 
 # Set year to generate for
 #-----------------------------------------------------------------------------#
-year = 2023                     # enter 0 for current year
+year = 0                        # enter 0 for current year
 
 # List files in proof directory
 #-----------------------------------------------------------------------------#
