@@ -9,15 +9,20 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2023-09-01 13:40:00
- Last edit: 2023-09-22 11:39:00
+ Last edit: 2023-10-20 11:39:00
 """
 
 
 # Specify proofs
 #-----------------------------------------------------------------------------#
-temp_proof = 'bvn-pdf'          # Markdown proof to be used as template
-src_proof  = 'bvn-pdfcorr'          # LaTeX proof to be used as source
+temp_proof = 'mult-mle'
+# This is the Markdown (.md) document in StatProofBook/P/ which should be used
+# as a template for your proof. It should be in repository sub-folder "/P/".
+src_proof  = 'mult-test'
+# This is the LaTeX (.tex) document in src_dir which contains your proof.
+# LaTeX should be between "\begin{document}" and "\end{document}".
 src_dir    =r'C:\Users\sochj\ownCloud\StatProofBook\Submissions\JoramSoch\Proofs'
+# This is the folder in which src_proof is located and the result will be saved.
 
 # Import modules
 #-----------------------------------------------------------------------------#

@@ -128,7 +128,6 @@ for i, date, proof in schedule:
         end_pos    = tweet_text.find('#RandomProof')+len('#RandomProof')
         
         # retrieve tweets from this day
-        
         try:
             tweets = client.get_users_tweets(user.data.id, max_results=100, \
                                              start_time=date, end_time=date+timedelta(days=1))

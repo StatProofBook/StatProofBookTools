@@ -15,8 +15,8 @@ First edit: 2023-09-22 10:55:00
 
 # Specify definitions
 #-----------------------------------------------------------------------------#
-temp_def = 'mvn'                # Markdown definition to be used as template
-src_def  = 'bvn'                # LaTeX definition to be used as source
+temp_def = 'post'               # Markdown definition to be used as template
+src_def  = 'map'                # LaTeX definition to be used as source
 src_dir  =r'C:\Users\sochj\ownCloud\StatProofBook\Submissions\JoramSoch\Definitions'
 
 # Import modules
