@@ -84,7 +84,7 @@ while date.year == yt:
     
     # schedule proof/tweet
     #-------------------------------------------------------------------------#
-    i    = (date-d0).days
+    i = (date-d0).days
     schedule.append((i+1, date, proofs[i]))
     
     # show today's tweet
