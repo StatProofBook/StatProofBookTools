@@ -38,8 +38,8 @@
 
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
-\author{DOI: 10.5281/zenodo.4305950 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2024-01-12, 11:35}
+\author{DOI: 10.5281/zenodo.4305949 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
+\date{2024-02-09, 15:20}
 
 \begin{document}
 
@@ -11610,7 +11610,7 @@ Combining \eqref{eq:norm-cdfwerf-norm-snorm-cdf} with \eqref{eq:norm-cdfwerf-sno
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Soch J (2015): "Solution for the Indefinite Integral of the Standard Normal Probability Density Function"; in: \textit{arXiv stat.OT}, arXiv:1512.04858; URL: \url{https://arxiv.org/abs/1512.04858}.
+\item Soch J (2015): "Solution for the Indefinite Integral of the Standard Normal Probability Density Function"; in: \textit{arXiv stat.OT}, 1512.04858; URL: \url{https://arxiv.org/abs/1512.04858}.
 \item Wikipedia (2020): "Normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2020-03-20; URL: \url{https://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function}.
 \end{itemize}
 
@@ -12220,13 +12220,20 @@ To measure $h(X)$ in nats, we set $b = e$, such that ($\rightarrow$  \ref{sec:Ge
 
 With the probability density function of the normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:norm-pdf}), the differential entropy of $X$ is:
 
-\begin{equation} \label{eq:norm-dent-norm-dent-qed}
+\begin{equation} \label{eq:norm-dent-norm-dent-s1}
 \begin{split}
 \mathrm{h}(X) &= - \mathrm{E}\left[ \ln \left( \frac{1}{\sqrt{2 \pi} \sigma} \cdot \exp \left[ -\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2 \right] \right) \right] \\
 &= - \mathrm{E}\left[ - \frac{1}{2} \ln(2\pi\sigma^2) - \frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2 \right] \\
 &= \frac{1}{2} \ln(2 \pi \sigma^2) + \frac{1}{2} \, \mathrm{E}\left[ \left( \frac{x-\mu}{\sigma} \right)^2 \right] \\
-&= \frac{1}{2} \ln(2 \pi \sigma^2) + \frac{1}{2} \cdot \frac{1}{\sigma^2} \cdot \mathrm{E}\left[ (x-\mu)^2 \right] \\
-&= \frac{1}{2} \ln(2 \pi \sigma^2) + \frac{1}{2} \cdot \frac{1}{\sigma^2} \cdot \sigma^2 \\
+&= \frac{1}{2} \ln(2 \pi \sigma^2) + \frac{1}{2} \cdot \frac{1}{\sigma^2} \cdot \mathrm{E}\left[ (x-\mu)^2 \right] \; .
+\end{split}
+\end{equation}
+
+Note that $\mathrm{E}\left[ (x-\mu)^2 \right]$ corresponds to the variance ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:var}) of $X$ and the variance of the normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:norm-var}) is $\sigma^2$. Thus, we can proceed:
+
+\begin{equation} \label{eq:norm-dent-norm-dent-s2}
+\begin{split}
+\mathrm{h}(X) &= \frac{1}{2} \ln(2 \pi \sigma^2) + \frac{1}{2} \cdot \frac{1}{\sigma^2} \cdot \sigma^2 \\
 &= \frac{1}{2} \ln(2 \pi \sigma^2) + \frac{1}{2} \\
 &= \frac{1}{2} \ln(2 \pi \sigma^2 e) \; .
 \end{split}
@@ -17146,7 +17153,7 @@ Q: \; x &\sim \mathcal{N}(\mu_2, \Sigma_2) \; .
 Then, the Kullback-Leibler divergence ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:kl}) of $P$ from $Q$ is given by
 
 \begin{equation} \label{eq:mvn-kl-mvn-KL}
-\mathrm{KL}[P\,||\,Q] = \frac{1}{2} \left[ (\mu_2 - \mu_1)^T \Sigma_2^{-1} (\mu_2 - \mu_1) + \mathrm{tr}(\Sigma_2^{-1} \Sigma_1) - \ln \frac{|\Sigma_1|}{|\Sigma_2|} - n \right] \; .
+\mathrm{KL}[P\,||\,Q] = \frac{1}{2} \left[ (\mu_2 - \mu_1)^\mathrm{T} \Sigma_2^{-1} (\mu_2 - \mu_1) + \mathrm{tr}(\Sigma_2^{-1} \Sigma_1) - \ln \frac{|\Sigma_1|}{|\Sigma_2|} - n \right] \; .
 \end{equation}
 
 
@@ -17213,14 +17220,14 @@ the Kullback-Leibler divergence from \eqref{eq:mvn-kl-mvn-KL-s4} becomes:
 \mathrm{KL}[P\,||\,Q] &= \frac{1}{2} \left( \ln \frac{|\Sigma_2|}{|\Sigma_1|} - \mathrm{tr}\left[ \Sigma_1^{-1} \Sigma_1 \right] + \mathrm{tr}\left[ \Sigma_2^{-1} \left( \Sigma_1 + \mu_1 \mu_1^\mathrm{T} - 2 \mu_2 \mu_1^\mathrm{T} + \mu_2 \mu_2^\mathrm{T} \right) \right] \right) \\
 &= \frac{1}{2} \left( \ln \frac{|\Sigma_2|}{|\Sigma_1|} - \mathrm{tr}\left[ I_n \right] + \mathrm{tr}\left[ \Sigma_2^{-1} \Sigma_1 \right] + \mathrm{tr}\left[ \Sigma_2^{-1} \left( \mu_1 \mu_1^\mathrm{T} - 2 \mu_2 \mu_1^\mathrm{T} + \mu_2 \mu_2^\mathrm{T} \right) \right] \right) \\
 &= \frac{1}{2} \left( \ln \frac{|\Sigma_2|}{|\Sigma_1|} - n + \mathrm{tr}\left[ \Sigma_2^{-1} \Sigma_1 \right] + \mathrm{tr}\left[ \mu_1^\mathrm{T} \Sigma_2^{-1} \mu_1  - 2 \mu_1^\mathrm{T} \Sigma_2^{-1} \mu_2  + \mu_2^\mathrm{T} \Sigma_2^{-1} \mu_2 \right] \right) \\
-&= \frac{1}{2} \left[ \ln \frac{|\Sigma_2|}{|\Sigma_1|} - n + \mathrm{tr}\left[ \Sigma_2^{-1} \Sigma_1 \right] + (\mu_2 - \mu_1)^T \Sigma_2^{-1} (\mu_2 - \mu_1) \right] \; .
+&= \frac{1}{2} \left[ \ln \frac{|\Sigma_2|}{|\Sigma_1|} - n + \mathrm{tr}\left[ \Sigma_2^{-1} \Sigma_1 \right] + (\mu_2 - \mu_1)^\mathrm{T} \Sigma_2^{-1} (\mu_2 - \mu_1) \right] \; .
 \end{split}
 \end{equation}
 
 Finally, rearranging the terms, we get:
 
 \begin{equation} \label{eq:mvn-kl-mvn-KL-qed}
-\mathrm{KL}[P\,||\,Q] = \frac{1}{2} \left[ (\mu_2 - \mu_1)^T \Sigma_2^{-1} (\mu_2 - \mu_1) + \mathrm{tr}(\Sigma_2^{-1} \Sigma_1) - \ln \frac{|\Sigma_1|}{|\Sigma_2|} - n \right] \; .
+\mathrm{KL}[P\,||\,Q] = \frac{1}{2} \left[ (\mu_2 - \mu_1)^\mathrm{T} \Sigma_2^{-1} (\mu_2 - \mu_1) + \mathrm{tr}(\Sigma_2^{-1} \Sigma_1) - \ln \frac{|\Sigma_1|}{|\Sigma_2|} - n \right] \; .
 \end{equation}
 \begin{flushright} $\blacksquare$ \end{flushright}
 
@@ -20599,8 +20606,8 @@ where $\mu_n$ and $\lambda_n$ as well as $a_n$ and $b_n$ are the posterior hyper
 \begin{equation} \label{eq:ug-anc-lme-anc}
 \begin{split}
 \mathrm{LME}(m) &= \mathrm{Acc}(m) - \mathrm{Com}(m) \\
-\mathrm{Acc}(m) &= \left\langle \log p(y|\mu,m) \right\rangle_{p(\mu|y,m)} \\
-\mathrm{Com}(m) &= \mathrm{KL} \left[ p(\mu|y,m) \, || \, p(\mu|m) \right] \; .
+\mathrm{Acc}(m) &= \left\langle \log p(y|\mu,\tau,m) \right\rangle_{p(\mu,\tau|y,m)} \\
+\mathrm{Com}(m) &= \mathrm{KL} \left[ p(\mu,\tau|y,m) \, || \, p(\mu,\tau|m) \right] \; .
 \end{split}
 \end{equation}
 
@@ -21242,7 +21249,7 @@ p(y|\mu,\tau) &= \prod_{i=1}^{n} \mathcal{N}(y_i; \mu, \tau^{-1}) \\
 using the inverse variance or precision $\tau = 1/\sigma^2$.
 
 \vspace{1em}
-When deriving the posterior distribution ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:ugkv-post}) $p(\mu|y)$, the joint likelihood $p(y,\mu)$ is obtained as
+When deriving the posterior distribution ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:ugkv-post}) $p(\mu \vert y)$, the joint likelihood $p(y,\mu)$ is obtained as
 
 \begin{equation} \label{eq:ugkv-lme-UGkv-LME-s1}
 p(y,\mu) = \left( \frac{\tau}{2 \pi} \right)^\frac{n}{2} \cdot \sqrt{\frac{\lambda_0}{2 \pi}} \cdot \exp \left[ -\frac{\lambda_n}{2} (\mu - \mu_n)^2 -\frac{1}{2} \left( \tau y^\mathrm{T} y + \lambda_0 \mu_0^2 - \lambda_n \mu_n^2 \right) \right] \; .
@@ -27307,6 +27314,221 @@ Thus, the log model evidence ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:
 \end{itemize}
 
 
+\subsubsection[\textbf{Accuracy and complexity}]{Accuracy and complexity} \label{sec:blr-anc}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:blr-anc-GLM}
+m: \; y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
+\end{equation}
+
+be a linear regression model ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$, known $n \times n$ covariance structure $V$ as well as unknown $p \times 1$ regression coefficients $\beta$ and unknown noise variance $\sigma^2$. Moreover, assume a normal-gamma prior distribution ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blr-prior}) over the model parameters $\beta$ and $\tau = 1/\sigma^2$:
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-prior}
+p(\beta,\tau) = \mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \cdot \mathrm{Gam}(\tau; a_0, b_0) \; .
+\end{equation}
+
+Then, accuracy and complexity ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:lme-anc}) of this model are
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-AnC}
+\begin{split}
+\mathrm{Acc}(m) = - &\frac{1}{2} \frac{a_n}{b_n} (y-X\mu_n)^\mathrm{T} P (y-X\mu_n) - \frac{1}{2} \mathrm{tr}(X^\mathrm{T} P X \Lambda_n^{-1}) \\
++ &\frac{1}{2} \log |P| - \frac{n}{2} \log (2 \pi) + \frac{n}{2} (\psi(a_n) - \log(b_n)) \\
+\mathrm{Com}(m) = \hphantom{+} &\frac{1}{2} \frac{a_n}{b_n} \left[(\mu_0-\mu_n)^\mathrm{T} \Lambda_0 (\mu_0-\mu_n) - 2(b_n-b_0)\right] + \frac{1}{2} \mathrm{tr}(\Lambda_0 \Lambda_n^{-1}) - \frac{1}{2} \log \frac{|\Lambda_0|}{|\Lambda_n|} - \frac{p}{2} \\
++ & \, a_0 \log \frac{b_n}{b_0} - \log \frac{\Gamma(a_n)}{\Gamma(a_0)} + (a_n - a_0) \psi(a_n) \; .
+\end{split}
+\end{equation}
+
+where $\mu_n$, $\Lambda_n$, $a_n$ and $b_n$ are the posterior hyperparameters for Bayesian linear regression ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blr-post}) and $P$ is the data precision matrix ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:precmat}): $P = V^{-1}$.
+
+
+\vspace{1em}
+\textbf{Proof:} Model accuracy and complexity are defined as ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:lme-anc})
+
+\begin{equation} \label{eq:blr-anc-lme-anc}
+\begin{split}
+\mathrm{LME}(m) &= \mathrm{Acc}(m) - \mathrm{Com}(m) \\
+\mathrm{Acc}(m) &= \left\langle \log p(y|\beta,\tau,m) \right\rangle_{p(\beta,\tau|y,m)} \\
+\mathrm{Com}(m) &= \mathrm{KL} \left[ p(\beta,\tau|y,m) \, || \, p(\beta,\tau|m) \right] \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+1) The accuracy term is the expectation ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:mean}) of the log-likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:llf}) $\log p(y|\beta,\tau)$ with respect to the posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) $p(\beta,\tau|y)$. This expectation can be rewritten as:
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Acc-s1}
+\begin{split}
+\mathrm{Acc}(m) &= \iint p(\beta,\tau|y) \, \log p(y|\beta,\tau) \, \mathrm{d}\beta \, \mathrm{d}\tau \\
+&= \int p(\tau|y) \int p(\beta|\tau,y) \, \log p(y|\beta,\tau) \, \mathrm{d}\beta \, \mathrm{d}\tau \\
+&= \left\langle \left\langle \log p(y|\beta,\tau) \right\rangle_{p(\beta|\tau,y)} \right\rangle_{p(\tau|y)} \; .
+\end{split}
+\end{equation}
+
+With the log-likelihood function for multiple linear regression ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:mlr-mle}), we have:
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Acc-s2}
+\begin{split}
+\mathrm{Acc}(m) &= \left\langle \left\langle \log \left( \sqrt{\frac{1}{(2\pi)^n |\sigma^2 V|}} \cdot \exp\left[ -\frac{1}{2} (y - X\beta)^\mathrm{T} (\sigma^2 V)^{-1} (y - X\beta) \right] \right) \right\rangle_{p(\beta|\tau,y)} \right\rangle_{p(\tau|y)} \\
+&= \left\langle \left\langle \log \left( \sqrt{\frac{\tau^n |P|}{(2\pi)^n}} \cdot \exp\left[ -\frac{1}{2} (y - X\beta)^\mathrm{T} (\tau P) (y - X\beta) \right] \right) \right\rangle_{p(\beta|\tau,y)} \right\rangle_{p(\tau|y)} \\
+&= \left\langle \left\langle \frac{1}{2} \log |P| + \frac{n}{2} \log \tau - \frac{n}{2} \log (2 \pi) - \frac{1}{2} (y-X\beta)^\mathrm{T} (\tau P) (y-X\beta) \right\rangle_{p(\beta|\tau,y)} \right\rangle_{p(\tau|y)} \\
+&= \left\langle \left\langle \frac{1}{2} \log |P| + \frac{n}{2} \log \tau - \frac{n}{2} \log (2 \pi) - \frac{\tau}{2} \left[ y^\mathrm{T} P y - 2 y^\mathrm{T} P X \beta + \beta^\mathrm{T} X^\mathrm{T} P X \beta \right] \right\rangle_{p(\beta|\tau,y)} \right\rangle_{p(\tau|y)} \; .
+\end{split}
+\end{equation}
+
+With the posterior distribution for Bayesian linear regression ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blr-post}), this becomes:
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Acc-s3}
+\mathrm{Acc}(m) = \left\langle \left\langle \frac{1}{2} \log |P| + \frac{n}{2} \log \tau - \frac{n}{2} \log (2 \pi) - \frac{\tau}{2} \left[ y^\mathrm{T} P y - 2 y^\mathrm{T} P X \beta + \beta^\mathrm{T} X^\mathrm{T} P X \beta \right] \right\rangle_{\mathcal{N}(\beta; \mu_n, (\tau \Lambda_n)^{-1})} \right\rangle_{\mathrm{Gam}(\tau; a_n, b_n)} \; .
+\end{equation}
+
+If $x \sim \mathrm{N}(\mu, \Sigma)$, then its expected value is ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn-mean})
+
+\begin{equation} \label{eq:blr-anc-mvn-mean}
+\left\langle x \right\rangle = \mu
+\end{equation}
+
+and the expectation of a quadratic form is given by ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:mean-qf})
+
+\begin{equation} \label{eq:blr-anc-mvn-meansqr}
+\left\langle x^\mathrm{T} A x \right\rangle = \mu^\mathrm{T} A \mu + \mathrm{tr}(A \Sigma) \; .
+\end{equation}
+
+Thus, the model accuracy of $m$ evaluates to:
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Acc-s4}
+\begin{split}
+\mathrm{Acc}(m) &= \left\langle \frac{1}{2} \log |P| + \frac{n}{2} \log \tau - \frac{n}{2} \log (2 \pi) - \right. \\
+&\hphantom{= -} \left. \frac{\tau}{2} \left[ y^\mathrm{T} P y - 2 y^\mathrm{T} P X \mu_n + \mu_n^\mathrm{T} X^\mathrm{T} P X \mu_n + \frac{1}{\tau} \mathrm{tr}(X^\mathrm{T} P X \Lambda_n^{-1}) \right] \right\rangle_{\mathrm{Gam}(\tau; a_n, b_n)} \\
+&= \left\langle \frac{1}{2} \log |P| + \frac{n}{2} \log \tau - \frac{n}{2} \log (2 \pi) - \frac{\tau}{2} (y-X\mu_n)^\mathrm{T} P (y-X\mu_n) - \frac{1}{2} \mathrm{tr}(X^\mathrm{T} P X \Lambda_n^{-1}) \right\rangle_{\mathrm{Gam}(\tau; a_n, b_n)} \; .
+\end{split}
+\end{equation}
+
+If $x \sim \mathrm{Gam}(a, b)$, then its expected value is ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:gam-mean})
+
+\begin{equation} \label{eq:blr-anc-gam-mean}
+\left\langle x \right\rangle = \frac{a}{b}
+\end{equation}
+
+and its logarithmic expectation is given by ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:gam-logmean})
+
+\begin{equation} \label{eq:blr-anc-gan-logmean}
+\left\langle \log x \right\rangle = \psi(a) - \log(b) \; .
+\end{equation}
+
+Thus, the model accuracy of $m$ evaluates to
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Acc-s5}
+\begin{split}
+\mathrm{Acc}(m) = & - \frac{1}{2} \frac{a_n}{b_n} (y-X\mu_n)^\mathrm{T} P (y-X\mu_n) - \frac{1}{2} \mathrm{tr}(X^\mathrm{T} P X \Lambda_n^{-1}) \\
+& + \frac{1}{2} \log |P| - \frac{n}{2} \log (2 \pi) + \frac{n}{2} (\psi(a_n) - \log(b_n))
+\end{split}
+\end{equation}
+
+which proofs the first part of \eqref{eq:blr-anc-GLM-NG-AnC}.
+
+\vspace{1em}
+2) The complexity penalty is the Kullback-Leibler divergence ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:kl}) of the posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) $p(\beta,\tau|y)$ from the prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) $p(\beta,\tau)$. This can be rewritten as follows:
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Com-s1}
+\begin{split}
+\mathrm{Com}(m) &= \iint p(\beta,\tau|y) \, \log \frac{p(\beta,\tau|y)}{p(\beta,\tau)} \, \mathrm{d}\beta \, \mathrm{d}\tau \\
+&= \iint p(\beta|\tau,y) \, p(\tau|y) \, \log \left[ \frac{p(\beta|\tau,y)}{p(\beta|\tau)} \, \frac{p(\tau|y)}{p(\tau)} \right] \, \mathrm{d}\beta \, \mathrm{d}\tau \\
+&= \int p(\tau|y) \int p(\beta|\tau,y) \, \log \frac{p(\beta|\tau,y)}{p(\beta|\tau)} \, \mathrm{d}\beta \, \mathrm{d}\tau + \int p(\tau|y) \, \log \frac{p(\tau|y)}{p(\tau)} \int p(\beta|\tau,y) \, \mathrm{d}\beta \, \mathrm{d}\tau \\
+&= \left\langle \mathrm{KL} \left[ p(\beta|\tau,y)\,||\,p(\beta|\tau) \right] \right\rangle_{p(\tau|y)} + \mathrm{KL} \left[ p(\tau|y)\,||\,p(\tau) \right] \; .
+\end{split}
+\end{equation}
+
+With the prior distribution ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blr-prior}) given by \eqref{eq:blr-anc-GLM-NG-prior} and the posterior distribution for Bayesian linear regression ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blr-post}), this becomes:
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Com-s2}
+\begin{split}
+\mathrm{Com}(m) &= \left\langle \mathrm{KL} \left[ \mathcal{N}(\beta; \mu_n, (\tau \Lambda_n)^{-1})\,||\,\mathcal{N}(\beta; \mu_0, (\tau \Lambda_0)^{-1}) \right] \right\rangle_{\mathrm{Gam}(\tau; a_n, b_n)} \\
+&+ \mathrm{KL} \left[ \mathrm{Gam}(\tau; a_n, b_n)\,||\,\mathrm{Gam}(\tau; a_0, b_0) \right] \; .
+\end{split}
+\end{equation}
+
+With the Kullback-Leibler divergence for the multivariate normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn-kl})
+
+\begin{equation} \label{eq:blr-anc-mvn-kl}
+\mathrm{KL}[\mathcal{N}(\mu_1, \Sigma_1)\,||\,\mathcal{N}(\mu_2, \Sigma_2)] = \frac{1}{2} \left[ (\mu_2 - \mu_1)^\mathrm{T} \Sigma_2^{-1} (\mu_2 - \mu_1) + \mathrm{tr}(\Sigma_2^{-1} \Sigma_1) - \ln \frac{|\Sigma_1|}{|\Sigma_2|} - n \right]
+\end{equation}
+
+and the Kullback-Leibler divergence for the gamma distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:gam-kl})
+
+\begin{equation} \label{eq:blr-anc-gam-kl}
+\mathrm{KL}[\mathrm{Gam}(a_1, b_1)\,||\,\mathrm{Gam}(a_2, b_2)] = a_2 \, \ln \frac{b_1}{b_2} - \ln \frac{\Gamma(a_1)}{\Gamma(a_2)} + (a_1 - a_2) \, \psi(a_1) - (b_1 - b_2) \, \frac{a_1}{b_1} \; ,
+\end{equation}
+
+the model complexity of $m$ evaluates to:
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Com-s3}
+\begin{split}
+\mathrm{Com}(m) &= \left\langle \frac{1}{2} \left[ (\mu_0 - \mu_n)^\mathrm{T} (\tau \Lambda_0) (\mu_0 - \mu_n) + \mathrm{tr}((\tau \Lambda_0) (\tau \Lambda_n)^{-1}) - \log \frac{|(\tau \Lambda_n)^{-1}|}{|(\tau \Lambda_0)^{-1}|} - p \right] \right\rangle_{p(\tau|y)} \\
+&+ a_0 \, \log \frac{b_n}{b_0} - \log \frac{\Gamma(a_n)}{\Gamma(a_0)} + (a_n - a_0) \, \psi(a_n) - (b_n - b_0) \, \frac{a_n}{b_n} \; .
+\end{split}
+\end{equation}
+
+Using $x \sim \mathrm{Gam}(a, b) \Rightarrow \left\langle x \right\rangle = a/b$ from \eqref{eq:blr-anc-gam-mean} again, it follows that
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Com-s4}
+\begin{split}
+\mathrm{Com}(m) &= \frac{1}{2} \frac{a_n}{b_n} \left[ (\mu_0 - \mu_n)^\mathrm{T} \Lambda_0 (\mu_0 - \mu_n) \right] + \frac{1}{2} \mathrm{tr}(\Lambda_0 \Lambda_n^{-1}) - \frac{1}{2} \log \frac{|\Lambda_0|}{|\Lambda_n|} - \frac{p}{2} \\
+&+ a_0 \, \log \frac{b_n}{b_0} - \log \frac{\Gamma(a_n)}{\Gamma(a_0)} + (a_n - a_0) \, \psi(a_n) - (b_n - b_0) \, \frac{a_n}{b_n} \; .
+\end{split}
+\end{equation}
+
+Thus, the model complexity of $m$ evaluates to
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-Com-s5}
+\begin{split}
+\mathrm{Com}(m) &= \frac{1}{2} \frac{a_n}{b_n} \left[(\mu_0-\mu_n)^\mathrm{T} \Lambda_0 (\mu_0-\mu_n) - 2(b_n-b_0)\right] + \frac{1}{2} \mathrm{tr}(\Lambda_0 \Lambda_n^{-1}) - \frac{1}{2} \log \frac{|\Lambda_0|}{|\Lambda_n|} - \frac{p}{2} \\
+&+ a_0 \log \frac{b_n}{b_0} - \log \frac{\Gamma(a_n)}{\Gamma(a_0)} + (a_n - a_0) \psi(a_n)
+\end{split}
+\end{equation}
+
+which proofs the second part of \eqref{eq:blr-anc-GLM-NG-AnC}.
+
+\vspace{1em}
+3) A control calculation confirms that
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-AnC-LME}
+\mathrm{Acc}(m) - \mathrm{Com}(m) = \mathrm{LME}(m)
+\end{equation}
+
+where $\mathrm{LME}(m)$ is the log model evidence for Bayesian linear regression ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blr-lme}):
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-LME}
+\begin{split}
+\log p(y|m) = \frac{1}{2} & \log |P| - \frac{n}{2} \log (2 \pi)  + \frac{1}{2} \log |\Lambda_0| - \frac{1}{2} \log |\Lambda_n| + \\
+& \log \Gamma(a_n) - \log \Gamma(a_0) + a_0 \log b_0 - a_n \log b_n
+\end{split}
+\end{equation}
+
+This requires to recognize that
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-AnC-LME-a1}
+-\frac{1}{2} \mathrm{tr}(X^\mathrm{T} P X \Lambda_n^{-1}) - \frac{1}{2} \mathrm{tr}(\Lambda_0 \Lambda_n^{-1}) + \frac{p}{2} = 0
+\end{equation}
+
+and 
+
+\begin{equation} \label{eq:blr-anc-GLM-NG-AnC-LME-a2}
+\frac{n}{2} (\psi(a_n) - \log(b_n)) - a_0 \log \frac{b_n}{b_0} - (a_n - a_0) \psi(a_n) = a_0 \log b_0 - a_n \log b_n
+\end{equation}
+
+thanks to the nature of the posterior hyperparameters for Bayesian linear regression ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blr-post}).
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Soch J, Allefeld A (2016): "Kullback-Leibler Divergence for the Normal-Gamma Distribution"; in: \textit{arXiv math.ST}, 1611.01437, eqs. 23/30; URL: \url{https://arxiv.org/abs/1611.01437}.
+\item Soch J, Allefeld C, Haynes JD (2016): "How to avoid mismodelling in GLM-based fMRI data analysis: cross-validated Bayesian model selection"; in: \textit{NeuroImage}, vol. 141, pp. 469-489, Appendix C; URL: \url{https://www.sciencedirect.com/science/article/pii/S1053811916303615}; DOI: 10.1016/j.neuroimage.2016.07.047.
+\item Soch J (2018): "cvBMS and cvBMA: filling in the gaps"; in: \textit{arXiv stat.ME}, sect. 2.2, eqs. 8-24; URL: \url{https://arxiv.org/abs/1807.01585}; DOI: 10.48550/arXiv.1807.01585.
+\end{itemize}
+
+
 \subsubsection[\textbf{Deviance information criterion}]{Deviance information criterion} \label{sec:blr-dic}
 \setcounter{equation}{0}
 
@@ -27645,6 +27867,526 @@ Therefore, the largest posterior credibility region for $\gamma$ which does not 
 \textbf{Sources:}
 \begin{itemize}
 \item Koch, Karl-Rudolf (2007): "Multivariate t-distribution"; in: \textit{Introduction to Bayesian Statistics}, Springer, Berlin/Heidelberg, 2007, eqs. 2.235, 2.236, 2.213, 2.210, 2.211, 2.183; URL: \url{https://www.springer.com/de/book/9783540727231}; DOI: 10.1007/978-3-540-72726-2.
+\end{itemize}
+
+
+\subsection{Bayesian linear regression with known covariance}
+
+\subsubsection[\textbf{Conjugate prior distribution}]{Conjugate prior distribution} \label{sec:blrkc-prior}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:blrkc-prior-GLM}
+y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \Sigma)
+\end{equation}
+
+be a linear regression model ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$ and known $n \times n$ covariance matrix $\Sigma$ as well as unknown $p \times 1$ regression coefficients $\beta$.
+
+Then, the conjugate prior ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior-conj}) for this model is a multivariate normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn})
+
+\begin{equation} \label{eq:blrkc-prior-GLM-N-prior}
+p(\beta) = \mathcal{N}(\beta; \mu_0, \Sigma_0) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} By definition, a conjugate prior ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior-conj}) is a prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) that, when combined with the likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:lf}), leads to a posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) that belongs to the same family of probability distributions ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:dist}). This is fulfilled when the prior density and the likelihood function are proportional to the model parameters in the same way, i.e. the model parameters appear in the same functional form in both.
+
+Equation \eqref{eq:blrkc-prior-GLM} implies the following likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:lf}):
+
+\begin{equation} \label{eq:blrkc-prior-GLM-LF}
+p(y|\beta) = \mathcal{N}(y; X \beta, \Sigma) = \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \, \exp\left[ -\frac{1}{2} (y-X\beta)^\mathrm{T} \Sigma^{-1} (y-X\beta) \right] \; .
+\end{equation}
+
+Expanding the product in the exponent, we have:
+
+\begin{equation} \label{eq:blrkc-prior-GLM-LF-s1}
+p(y|\beta) = \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \cdot \exp\left[ -\frac{1}{2} \left( y^\mathrm{T} \Sigma^{-1} y - y^\mathrm{T} \Sigma^{-1} X \beta - \beta^\mathrm{T} X^\mathrm{T} \Sigma^{-1} y + \beta^\mathrm{T} X^\mathrm{T} \Sigma^{-1} X \beta \right) \right] \; .
+\end{equation}
+
+Completing the square over $\beta$, one obtains
+
+\begin{equation} \label{eq:blrkc-prior-GLM-LF-s2}
+p(y|\beta) = \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \cdot \exp\left[ -\frac{1}{2} \left( (\beta - \tilde{X}y)^\mathrm{T} X^\mathrm{T} \Sigma^{-1} X (\beta - \tilde{X}y) - y^\mathrm{T} Q y + y^\mathrm{T} \Sigma^{-1} y \right) \right]
+\end{equation}
+
+where $\tilde{X} = \left( X^\mathrm{T} \Sigma^{-1} X \right)^{-1} X^\mathrm{T} \Sigma^{-1}$ and $Q = \tilde{X}^\mathrm{T} \left( X^\mathrm{T} \Sigma^{-1} X \right) \tilde{X}$.
+
+\vspace{1em}
+Separating constant and variable terms, we get:
+
+\begin{equation} \label{eq:blrkc-prior-GLM-LF-s3}
+p(y|\beta) = \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \cdot \exp\left[ -\frac{1}{2} \left( y^\mathrm{T} Q y + y^\mathrm{T} \Sigma^{-1} y \right) \right] \cdot \exp\left[ -\frac{1}{2} (\beta - \tilde{X}y)^\mathrm{T} X^\mathrm{T} \Sigma^{-1} X (\beta - \tilde{X}y) \right] \; .
+\end{equation}
+
+In other words, the likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:lf}) is proportional to an exponential of a squared form of $\beta$:
+
+\begin{equation} \label{eq:blrkc-prior-GLM-LF-s4}
+p(y|\beta) \propto \exp\left[ -\frac{1}{2} (\beta - \tilde{X}y)^\mathrm{T} X^\mathrm{T} \Sigma^{-1} X (\beta - \tilde{X}y) \right] \; .
+\end{equation}
+
+The same is true for a multivariate normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn}) over $\beta$
+
+\begin{equation} \label{eq:blrkc-prior-GLM-N-prior-s1}
+p(\beta) = \mathcal{N}(\beta; \mu_0, \Sigma_0)
+\end{equation}
+
+the probability density function of which ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf})
+
+\begin{equation} \label{eq:blrkc-prior-GLM-N-prior-s2}
+p(\beta) = \sqrt{\frac{1}{(2 \pi)^p |\Sigma_0|}} \cdot \exp\left[ -\frac{1}{2} (\beta-\mu_0)^\mathrm{T} \Sigma_0^{-1} (\beta-\mu_0) \right]
+\end{equation}
+
+exhibits the same proportionality
+
+\begin{equation} \label{eq:blrkc-prior-GLM-N-prior-s3}
+p(\beta) \propto \exp\left[ -\frac{1}{2} (\beta-\mu_0)^\mathrm{T} \Sigma_0^{-1} (\beta-\mu_0) \right]
+\end{equation}
+
+and is therefore conjugate relative to the likelihood.
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop CM (2006): "Bayesian linear regression"; in: \textit{Pattern Recognition for Machine Learning}, pp. 152-161, eq. 3.48; URL: \url{https://www.springer.com/gp/book/9780387310732}.
+\item Penny WD (2012): "Comparing Dynamic Causal Models using AIC, BIC and Free Energy"; in: \textit{NeuroImage}, vol. 59, iss. 2, pp. 319-330, eq. 9; URL: \url{https://www.sciencedirect.com/science/article/pii/S1053811911008160}; DOI: 10.1016/j.neuroimage.2011.07.039.
+\end{itemize}
+
+
+\subsubsection[\textbf{Posterior distribution}]{Posterior distribution} \label{sec:blrkc-post}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:blrkc-post-GLM}
+y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \Sigma)
+\end{equation}
+
+be a linear regression model ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$ and known $n \times n$ covariance matrix $\Sigma$ as well as unknown $p \times 1$ regression coefficients $\beta$. Moreover, assume a multivariate normal distribution ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blrkc-prior}) over the model parameter $\beta$:
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-prior}
+p(\beta) = \mathcal{N}(\beta; \mu_0, \Sigma_0) \; .
+\end{equation}
+
+Then, the posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) is also a multivariate normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn})
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-post}
+p(\beta|y) = \mathcal{N}(\beta; \mu_n, \Sigma_n)
+\end{equation}
+
+and the posterior hyperparameters ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-post-par}
+\begin{split}
+\mu_n &= \Sigma_n (X^\mathrm{T} \Sigma^{-1} y + \Sigma_0^{-1} \mu_0) \\
+\Sigma_n &= \left( X^\mathrm{T} \Sigma^{-1} X + \Sigma_0^{-1} \right)^{-1} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} According to Bayes' theorem ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:bayes-th}), the posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) is given by
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-BT}
+p(\beta|y) = \frac{p(y|\beta) \, p(\beta)}{p(y)} \; .
+\end{equation}
+
+Since $p(y)$ is just a normalization factor, the posterior is proportional ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post-jl}) to the numerator:
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-post-JL}
+p(\beta|y) \propto p(y|\beta) \, p(\beta) = p(y,\beta) \; .
+\end{equation}
+
+Equation \eqref{eq:blrkc-post-GLM} implies the following likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:lf}):
+
+\begin{equation} \label{eq:blrkc-post-GLM-LF}
+p(y|\beta) = \mathcal{N}(y; X \beta, \Sigma) = \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \, \exp\left[ -\frac{1}{2} (y-X\beta)^\mathrm{T} \Sigma^{-1} (y-X\beta) \right] \; .
+\end{equation}
+
+Combining the likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:lf}) \eqref{eq:blrkc-post-GLM-LF} with the prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) \eqref{eq:blrkc-post-GLM-N-prior} using the probability density function of the multivariate normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}), the joint likelihood ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:jl}) of the model is given by
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-JL-s1}
+\begin{split}
+p(y,\beta) = \; & p(y|\beta) \, p(\beta) \\
+= \; & \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \, \exp\left[ -\frac{1}{2} (y-X\beta)^\mathrm{T} \Sigma^{-1} (y-X\beta) \right] \cdot \\
+\; & \sqrt{\frac{1}{(2 \pi)^p |\Sigma_0|}} \, \exp\left[ -\frac{1}{2} (\beta-\mu_0)^\mathrm{T} \Sigma_0^{-1} (\beta-\mu_0) \right] \; .
+\end{split}
+\end{equation}
+
+Collecting identical variables gives:
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-JL-s2}
+\begin{split}
+p(y,\beta) = \; & \sqrt{\frac{1}{(2 \pi)^{n+p} |\Sigma| |\Sigma_0|}} \cdot \\
+& \exp\left[ -\frac{1}{2} \left( (y-X\beta)^\mathrm{T} \Sigma^{-1} (y-X\beta) + (\beta-\mu_0)^\mathrm{T} \Sigma_0^{-1} (\beta-\mu_0) \right) \right] \; .
+\end{split}
+\end{equation}
+
+Expanding the products in the exponent gives:
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-JL-s3}
+\begin{split}
+p(y,\beta) = \; & \sqrt{\frac{1}{(2 \pi)^{n+p} |\Sigma| |\Sigma_0|}} \cdot \\
+& \exp\left[ -\frac{1}{2} \left( y^\mathrm{T} \Sigma^{-1} y - y^\mathrm{T} \Sigma^{-1} X \beta - \beta^\mathrm{T} X^\mathrm{T} \Sigma^{-1} y + \beta^\mathrm{T} X^\mathrm{T} \Sigma^{-1} X \beta + \right. \right. \\
+& \hphantom{\exp \left[ -\frac{1}{2} \right.} \; \left. \left. \beta^\mathrm{T} \Sigma_0^{-1} \beta - \beta^\mathrm{T} \Sigma_0^{-1} \mu_0 - \mu_0^\mathrm{T} \Sigma_0^{-1} \beta + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 \right) \right] \; .
+\end{split}
+\end{equation}
+
+Regrouping the terms in the exponent gives:
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-JL-s4}
+\begin{split}
+p(y,\beta) = \; & \sqrt{\frac{1}{(2 \pi)^{n+p} |\Sigma| |\Sigma_0|}} \cdot \\
+& \exp\left[ -\frac{1}{2} \left( \beta^\mathrm{T} [ X^\mathrm{T} \Sigma^{-1} X + \Sigma_0^{-1} ] \beta - 2 \beta^\mathrm{T} [X^\mathrm{T} \Sigma^{-1} y + \Sigma_0^{-1} \mu_0] + \right. \right. \\
+& \hphantom{\exp \left[ -\frac{1}{2} \right.} \; \left. \left. y^\mathrm{T} \Sigma^{-1} y + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 \right) \right] \; .
+\end{split}
+\end{equation}
+
+Completing the square over $\beta$, we finally have
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-JL-s5}
+\begin{split}
+p(y,\beta) = \; & \sqrt{\frac{1}{(2 \pi)^{n+p} |\Sigma| |\Sigma_0|}} \cdot \\
+& \exp\left[ -\frac{1}{2} \left( (\beta-\mu_n)^\mathrm{T} \Sigma_n^{-1} (\beta-\mu_n) + (y^\mathrm{T} \Sigma^{-1} y + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 - \mu_n^\mathrm{T} \Sigma_n^{-1} \mu_n) \right) \right]
+\end{split}
+\end{equation}
+
+with the posterior hyperparameters ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post})
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-post-par-qed}
+\begin{split}
+\mu_n &= \Sigma_n (X^\mathrm{T} \Sigma^{-1} y + \Sigma_0^{-1} \mu_0) \\
+\Sigma_n &= \left( X^\mathrm{T} \Sigma^{-1} X + \Sigma_0^{-1} \right)^{-1} \; .
+\end{split}
+\end{equation}
+
+Ergo, the joint likelihood is proportional to
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-JL-s6}
+p(y,\beta) \propto \exp\left[ -\frac{1}{2} (\beta-\mu_n)^\mathrm{T} \Sigma_n^{-1} (\beta-\mu_n) \right] \; ,
+\end{equation}
+
+such that the posterior distribution over $\beta$ is given by
+
+\begin{equation} \label{eq:blrkc-post-GLM-N-post-qed}
+p(\beta|y) = \mathcal{N}(\beta; \mu_n, \Sigma_n)
+\end{equation}
+
+with the posterior hyperparameters given in \eqref{eq:blrkc-post-GLM-N-post-par-qed}.
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop CM (2006): "Bayesian linear regression"; in: \textit{Pattern Recognition for Machine Learning}, pp. 152-161, eqs. 3.49-3.51, ex. 3.7; URL: \url{https://www.springer.com/gp/book/9780387310732}.
+\item Penny WD (2012): "Comparing Dynamic Causal Models using AIC, BIC and Free Energy"; in: \textit{NeuroImage}, vol. 59, iss. 2, pp. 319-330, eq. 27; URL: \url{https://www.sciencedirect.com/science/article/pii/S1053811911008160}; DOI: 10.1016/j.neuroimage.2011.07.039.
+\end{itemize}
+
+
+\subsubsection[\textbf{Log model evidence}]{Log model evidence} \label{sec:blrkc-lme}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:blrkc-lme-GLM}
+m: y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \Sigma)
+\end{equation}
+
+be a linear regression model ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$ and known $n \times n$ covariance matrix $\Sigma$ as well as unknown $p \times 1$ regression coefficients $\beta$. Moreover, assume a multivariate normal distribution ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blrkc-prior}) over the model parameter $\beta$:
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-prior}
+p(\beta) = \mathcal{N}(\beta; \mu_0, \Sigma_0) \; .
+\end{equation}
+
+Then, the log model evidence ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:lme}) for this model is
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-LME}
+\begin{split}
+\log p(y|m) = &- \frac{1}{2} e_y^\mathrm{T} \Sigma^{-1} e_y - \frac{1}{2} \log |\Sigma| - \frac{n}{2} \log (2 \pi) \\
+&- \frac{1}{2} e_\beta^\mathrm{T} \Sigma_0^{-1} e_\beta - \frac{1}{2} \log |\Sigma_0| + \frac{1}{2} \log |\Sigma_n| \; .
+\end{split}
+\end{equation}
+
+with the "prediction error" and "parameter error" terms
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-err}
+\begin{split}
+e_y &= y - X \mu_n \\
+e_\beta &= \mu_0 - \mu_n
+\end{split}
+\end{equation}
+
+where the posterior hyperparameters ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-post-par}
+\begin{split}
+\mu_n &= \Sigma_n (X^\mathrm{T} \Sigma^{-1} y + \Sigma_0^{-1} \mu_0) \\
+\Sigma_n &= \left( X^\mathrm{T} \Sigma^{-1} X + \Sigma_0^{-1} \right)^{-1} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} According to the law of marginal probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-marg}), the model evidence ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ml}) for this model is:
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-ME-s1}
+p(y|m) = \int p(y|\beta) \, p(\beta) \, \mathrm{d}\beta \; .
+\end{equation}
+
+According to the law of conditional probability ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prob-cond}), the integrand is equivalent to the joint likelihood ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:jl}):
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-ME-s2}
+p(y|m) = \int p(y,\beta) \, \mathrm{d}\beta \; .
+\end{equation}
+
+Equation \eqref{eq:blrkc-lme-GLM} implies the following likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:lf}):
+
+\begin{equation} \label{eq:blrkc-lme-GLM-LF}
+p(y|\beta) = \mathcal{N}(y; X \beta, \Sigma) = \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \, \exp\left[ -\frac{1}{2} (y-X\beta)^\mathrm{T} \Sigma^{-1} (y-X\beta) \right] \; .
+\end{equation}
+
+When deriving the posterior distribution ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blrkc-post}) $p(\beta \vert y)$, the joint likelihood $p(y,\beta)$ is obtained as
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-LME-s1}
+\begin{split}
+p(y,\beta) = \; & \sqrt{\frac{1}{(2 \pi)^{n+p} |\Sigma| |\Sigma_0|}} \cdot \\
+& \exp\left[ -\frac{1}{2} \left( (\beta-\mu_n)^\mathrm{T} \Sigma_n^{-1} (\beta-\mu_n) + (y^\mathrm{T} \Sigma^{-1} y + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 - \mu_n^\mathrm{T} \Sigma_n^{-1} \mu_n) \right) \right] \; .
+\end{split}
+\end{equation}
+
+Using the probability density function of the multivariate normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}), we can rewrite this as
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-LME-s2}
+\begin{split}
+p(y,\beta) = \; & \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \, \sqrt{\frac{1}{(2 \pi)^p |\Sigma_0|}} \, \sqrt{\frac{(2 \pi)^p |\Sigma_n|}{1}} \cdot \mathcal{N}(\beta; \mu_n, \Sigma_n) \cdot \\
+& \exp\left[ -\frac{1}{2} \left( y^\mathrm{T} \Sigma^{-1} y + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 - \mu_n^\mathrm{T} \Sigma_n^{-1} \mu_n \right) \right] \; .
+\end{split}
+\end{equation}
+
+With that, $\beta$ can be integrated out easily:
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-LME-s3}
+\int p(y,\beta) \, \mathrm{d}\beta = \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \, \sqrt{\frac{|\Sigma_n|}{|\Sigma_0|}} \cdot \exp\left[ -\frac{1}{2} \left( y^\mathrm{T} \Sigma^{-1} y + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 - \mu_n^\mathrm{T} \Sigma_n^{-1} \mu_n \right) \right] \; .
+\end{equation}
+
+Now we turn to the intra-exponent term
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-LME-s4a}
+y^\mathrm{T} \Sigma^{-1} y + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 - \mu_n^\mathrm{T} \Sigma_n^{-1} \mu_n
+\end{equation}
+
+and plug in the posterior covariance
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-post-par-Sigma}
+\Sigma_n = \left( X^\mathrm{T} \Sigma^{-1} X + \Sigma_0^{-1} \right)^{-1} \; .
+\end{equation}
+
+This gives
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-LME-s4b}
+\begin{split}
+& \; y^\mathrm{T} \Sigma^{-1} y + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 - \mu_n^\mathrm{T} \Sigma_n^{-1} \mu_n \\
+= & \; y^\mathrm{T} \Sigma^{-1} y + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 - \mu_n^\mathrm{T} \left( X^\mathrm{T} \Sigma^{-1} X + \Sigma_0^{-1} \right) \mu_n \\
+= & \; y^\mathrm{T} \Sigma^{-1} y + \mu_0^\mathrm{T} \Sigma_0^{-1} \mu_0 - \mu_n^\mathrm{T} X^\mathrm{T} \Sigma^{-1} X \mu_n - \mu_n^\mathrm{T} \Sigma_0^{-1} \mu_n \\
+= & \; (y - X \mu_n)^\mathrm{T} \Sigma^{-1} (y - X \mu_n) + (\mu_0 - \mu_n)^\mathrm{T} \Sigma_0^{-1} (\mu_0 - \mu_n) \\
+\overset{\eqref{eq:blrkc-lme-GLM-N-err}}{=} & \; e_y^\mathrm{T} \Sigma^{-1} e_y + e_\beta^\mathrm{T} \Sigma_0^{-1} e_\beta \; .
+\end{split}
+\end{equation}
+
+Thus, the marginal likelihood ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:ml}) becomes
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-LME-s5}
+p(y|m) = \int p(y,\beta) \, \mathrm{d}\beta \overset{\eqref{eq:blrkc-lme-GLM-N-LME-s3}}{=} \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \, \sqrt{\frac{|\Sigma_n|}{|\Sigma_0|}} \cdot \exp\left[ -\frac{1}{2} \left( e_y^\mathrm{T} \Sigma^{-1} e_y + e_\beta^\mathrm{T} \Sigma_0^{-1} e_\beta \right) \right]
+\end{equation}
+
+and the log model evidence ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:lme}) of this model is given by
+
+\begin{equation} \label{eq:blrkc-lme-GLM-N-LME-s6}
+\begin{split}
+\log p(y|m) = &- \frac{1}{2} e_y^\mathrm{T} \Sigma^{-1} e_y - \frac{1}{2} \log |\Sigma| - \frac{n}{2} \log (2 \pi) \\
+&- \frac{1}{2} e_\beta^\mathrm{T} \Sigma_0^{-1} e_\beta - \frac{1}{2} \log |\Sigma_0| + \frac{1}{2} \log |\Sigma_n| \; .
+\end{split}
+\end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Penny WD (2012): "Comparing Dynamic Causal Models using AIC, BIC and Free Energy"; in: \textit{NeuroImage}, vol. 59, iss. 2, pp. 319-330, eqs. 19-23; URL: \url{https://www.sciencedirect.com/science/article/pii/S1053811911008160}; DOI: 10.1016/j.neuroimage.2011.07.039.
+\item Bishop CM (2006): "Bayesian linear regression"; in: \textit{Pattern Recognition for Machine Learning}, pp. 152-161; URL: \url{https://www.springer.com/gp/book/9780387310732}.
+\end{itemize}
+
+
+\subsubsection[\textbf{Accuracy and complexity}]{Accuracy and complexity} \label{sec:blrkc-anc}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let
+
+\begin{equation} \label{eq:blrkc-anc-GLM}
+m: y = X \beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \Sigma)
+\end{equation}
+
+be a linear regression model ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:mlr}) with measured $n \times 1$ data vector $y$, known $n \times p$ design matrix $X$ and known $n \times n$ covariance matrix $\Sigma$ as well as unknown $p \times 1$ regression coefficients $\beta$. Moreover, assume a multivariate normal distribution ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blrkc-prior}) over the model parameter $\beta$:
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-prior}
+p(\beta) = \mathcal{N}(\beta; \mu_0, \Sigma_0) \; .
+\end{equation}
+
+Then, accuracy and complexity ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:lme-anc}) of this model are
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-AnC}
+\begin{split}
+\mathrm{Acc}(m) &= - \frac{1}{2} e_y^\mathrm{T} \Sigma^{-1} e_y - \frac{1}{2} \log |\Sigma| - \frac{n}{2} \log (2 \pi) - \frac{1}{2} \mathrm{tr}(X^\mathrm{T} \Sigma^{-1} X \Sigma_n) \\
+\mathrm{Com}(m) &= \hphantom{+} \frac{1}{2} e_\beta^\mathrm{T} \Sigma_0^{-1} e_\beta + \frac{1}{2} \log |\Sigma_0| - \frac{1}{2} \log |\Sigma_n| + \frac{1}{2} \mathrm{tr}(\Sigma_0^{-1} \Sigma_n) - \frac{p}{2}
+\end{split}
+\end{equation}
+
+with the "prediction error" and "parameter error" terms
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-err}
+\begin{split}
+e_y &= y - X \mu_n \\
+e_\beta &= \mu_0 - \mu_n
+\end{split}
+\end{equation}
+
+where the posterior hyperparameters ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) are given by
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-post-par}
+\begin{split}
+\mu_n &= \Sigma_n (X^\mathrm{T} \Sigma^{-1} y + \Sigma_0^{-1} \mu_0) \\
+\Sigma_n &= \left( X^\mathrm{T} \Sigma^{-1} X + \Sigma_0^{-1} \right)^{-1} \; .
+\end{split}
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} Model accuracy and complexity are defined as ($\rightarrow$  \ref{sec:Model Selection}/\ref{sec:lme-anc})
+
+\begin{equation} \label{eq:blrkc-anc-lme-anc}
+\begin{split}
+\mathrm{LME}(m) &= \mathrm{Acc}(m) - \mathrm{Com}(m) \\
+\mathrm{Acc}(m) &= \left\langle \log p(y|\beta,m) \right\rangle_{p(\beta|y,m)} \\
+\mathrm{Com}(m) &= \mathrm{KL} \left[ p(\beta|y,m) \, || \, p(\beta|m) \right] \; .
+\end{split}
+\end{equation}
+
+\vspace{1em}
+1) The accuracy term is the expectation ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:mean}) of the log-likelihood function ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:llf}) $\log p(y|\beta)$ with respect to the posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) $p(\beta|y)$:
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-Acc-s1}
+\mathrm{Acc}(m) = \left\langle \log p(y|\beta) \right\rangle_{p(\beta|y)} \; .
+\end{equation}
+
+With the likelihood function for Bayesian linear regression with known covariance ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blrkc-prior}), we have:
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-Acc-s2}
+\begin{split}
+\mathrm{Acc}(m) &= \left\langle \log \left( \sqrt{\frac{1}{(2 \pi)^n |\Sigma|}} \, \exp\left[ -\frac{1}{2} (y-X\beta)^\mathrm{T} \Sigma^{-1} (y-X\beta) \right] \right) \right\rangle_{p(\beta|y)} \\
+&= \left\langle - \frac{n}{2} \log (2 \pi) - \frac{1}{2} \log |\Sigma| - \frac{1}{2} (y-X\beta)^\mathrm{T} \Sigma^{-1} (y-X\beta) \right\rangle_{p(\beta|y)} \\
+&= \left\langle - \frac{n}{2} \log (2 \pi) - \frac{1}{2} \log |\Sigma| - \frac{1}{2} \left[ y^\mathrm{T} \Sigma^{-1} y - 2 y^\mathrm{T} \Sigma^{-1} X \beta + \beta^\mathrm{T} X^\mathrm{T} \Sigma^{-1} X \beta \right] \right\rangle_{p(\beta|y)} \; .
+\end{split}
+\end{equation}
+
+With the posterior distribution for Bayesian linear regression with known covariance ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blrkc-post}), this becomes:
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-Acc-s3}
+\mathrm{Acc}(m) = \left\langle - \frac{n}{2} \log (2 \pi) - \frac{1}{2} \log |\Sigma| - \frac{1}{2} \left[ y^\mathrm{T} \Sigma^{-1} y - 2 y^\mathrm{T} \Sigma^{-1} X \beta + \beta^\mathrm{T} X^\mathrm{T} \Sigma^{-1} X \beta \right] \right\rangle_{\mathcal{N}(\beta; \mu_n, \Sigma_n)} \; .
+\end{equation}
+
+If $x \sim \mathrm{N}(\mu, \Sigma)$, then its expected value is ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn-mean})
+
+\begin{equation} \label{eq:blrkc-anc-mvn-mean}
+\left\langle x \right\rangle = \mu
+\end{equation}
+
+and the expectation of a quadratic form is given by ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:mean-qf})
+
+\begin{equation} \label{eq:blrkc-anc-mvn-meansqr}
+\left\langle x^\mathrm{T} A x \right\rangle = \mu^\mathrm{T} A \mu + \mathrm{tr}(A \Sigma) \; .
+\end{equation}
+
+Thus, the model accuracy of $m$ evaluates to
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-Acc-s4}
+\begin{split}
+\mathrm{Acc}(m) = - &\frac{n}{2} \log (2 \pi) - \frac{1}{2} \log |\Sigma| - \\
+&\frac{1}{2} \left[ y^\mathrm{T} \Sigma^{-1} y - 2 y^\mathrm{T} \Sigma^{-1} X \mu_n + \mu_n^\mathrm{T} X^\mathrm{T} \Sigma^{-1} X \mu_n + \mathrm{tr}(X^\mathrm{T} \Sigma^{-1} X \Sigma_n) \right] \\
+= - &\frac{1}{2} (y - X \mu_n)^\mathrm{T} \Sigma^{-1} (y - X \mu_n) - \frac{1}{2} \log |\Sigma| - \frac{n}{2} \log (2 \pi) - \frac{1}{2} \mathrm{tr}(X^\mathrm{T} \Sigma^{-1} X \Sigma_n) \\
+\overset{\eqref{eq:blrkc-anc-GLM-N-err}}{=} - &\frac{1}{2} e_y^\mathrm{T} \Sigma^{-1} e_y - \frac{1}{2} \log |\Sigma| - \frac{n}{2} \log (2 \pi) - \frac{1}{2} \mathrm{tr}(X^\mathrm{T} \Sigma^{-1} X \Sigma_n)
+\end{split}
+\end{equation}
+
+which proofs the first part of \eqref{eq:blrkc-anc-GLM-N-AnC}.
+
+\vspace{1em}
+2) The complexity penalty is the Kullback-Leibler divergence ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:kl}) of the posterior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:post}) $p(\beta|y)$ from the prior distribution ($\rightarrow$  \ref{sec:General Theorems}/\ref{sec:prior}) $p(\beta)$:
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-Com-s1}
+\mathrm{Com}(m) = \mathrm{KL} \left[ p(\beta|y) \, || \, p(\beta) \right] \; .
+\end{equation}
+
+With the prior distribution ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blrkc-prior}) given by \eqref{eq:blrkc-anc-GLM-N-prior} and the posterior distribution for Bayesian linear regression with known covariance ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blrkc-post}), this becomes:
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-Com-s2}
+\mathrm{Com}(m) = \mathrm{KL} \left[ \mathcal{N}(\beta; \mu_n, \Sigma_n)\,||\,\mathcal{N}(\beta; \mu_0, \Sigma_0) \right] \; .
+\end{equation}
+
+With the Kullback-Leibler divergence for the multivariate normal distribution ($\rightarrow$  \ref{sec:Probability Distributions}/\ref{sec:mvn-kl})
+
+\begin{equation} \label{eq:blrkc-anc-mvn-kl}
+\mathrm{KL}[\mathcal{N}(\mu_1, \Sigma_1)\,||\,\mathcal{N}(\mu_2, \Sigma_2)] = \frac{1}{2} \left[ (\mu_2 - \mu_1)^\mathrm{T} \Sigma_2^{-1} (\mu_2 - \mu_1) + \mathrm{tr}(\Sigma_2^{-1} \Sigma_1) - \ln \frac{|\Sigma_1|}{|\Sigma_2|} - n \right]
+\end{equation}
+
+the model complexity of $m$ evaluates to
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-Com-s3}
+\begin{split}
+\mathrm{Com}(m) &= \frac{1}{2} \left[ (\mu_0 - \mu_n)^\mathrm{T} \Sigma_0^{-1} (\mu_0 - \mu_n) + \mathrm{tr}(\Sigma_0^{-1} \Sigma_n) - \log \frac{|\Sigma_n|}{|\Sigma_0|} - p \right] \\
+&= \frac{1}{2} (\mu_0 - \mu_n)^\mathrm{T} \Sigma_0^{-1} (\mu_0 - \mu_n) + \frac{1}{2} \log |\Sigma_0| - \frac{1}{2} \log |\Sigma_n| + \frac{1}{2} \mathrm{tr}(\Sigma_0^{-1} \Sigma_n) - \frac{p}{2} \\
+&\overset{\eqref{eq:blrkc-anc-GLM-N-err}}{=} \frac{1}{2} e_\beta^\mathrm{T} \Sigma_0^{-1} e_\beta + \frac{1}{2} \log |\Sigma_0| - \frac{1}{2} \log |\Sigma_n| + \frac{1}{2} \mathrm{tr}(\Sigma_0^{-1} \Sigma_n) - \frac{p}{2}
+\end{split}
+\end{equation}
+
+which proofs the second part of \eqref{eq:blrkc-anc-GLM-N-AnC}.
+
+\vspace{1em}
+3) A control calculation confirms that
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-AnC-LME}
+\mathrm{Acc}(m) - \mathrm{Com}(m) = \mathrm{LME}(m)
+\end{equation}
+
+where $\mathrm{LME}(m)$ is the log model evidence for Bayesian linear regression with known covariance ($\rightarrow$  \ref{sec:Statistical Models}/\ref{sec:blrkc-lme}):
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-LME}
+\begin{split}
+\log p(y|m) = &- \frac{1}{2} e_y^\mathrm{T} \Sigma^{-1} e_y - \frac{1}{2} \log |\Sigma| - \frac{n}{2} \log (2 \pi) \\
+&- \frac{1}{2} e_\beta^\mathrm{T} \Sigma_0^{-1} e_\beta - \frac{1}{2} \log |\Sigma_0| + \frac{1}{2} \log |\Sigma_n| \; .
+\end{split}
+\end{equation}
+
+This requires to recognize, based on \eqref{eq:blrkc-anc-GLM-N-post-par}, that
+
+\begin{equation} \label{eq:blrkc-anc-GLM-N-AnC-LME-a1}
+\begin{split}
+& \; - \frac{1}{2} \mathrm{tr}(X^\mathrm{T} \Sigma^{-1} X \Sigma_n) - \frac{1}{2} \mathrm{tr}(\Sigma_0^{-1} \Sigma_n) + \frac{p}{2} \\
+= & \; - \frac{1}{2} \mathrm{tr}\left( [X^\mathrm{T} \Sigma^{-1} X + \Sigma_0^{-1}] \Sigma_n \right) + \frac{p}{2} \\
+= & \; - \frac{1}{2} \mathrm{tr}\left( \Sigma_n^{-1} \Sigma_n \right) + \frac{p}{2} \\
+= & \; - \frac{1}{2} \mathrm{tr}\left( I_p \right) + \frac{p}{2} \\
+= & \; - \frac{p}{2} + \frac{p}{2} \\
+= & \;\; 0 \; .
+\end{split}
+\end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Penny WD (2012): "Comparing Dynamic Causal Models using AIC, BIC and Free Energy"; in: \textit{NeuroImage}, vol. 59, iss. 2, pp. 319-330, eqs. 20-21; URL: \url{https://www.sciencedirect.com/science/article/pii/S1053811911008160}; DOI: 10.1016/j.neuroimage.2011.07.039.
+\item Bishop CM (2006): "Bayesian linear regression"; in: \textit{Pattern Recognition for Machine Learning}, pp. 152-161; URL: \url{https://www.springer.com/gp/book/9780387310732}.
 \end{itemize}
 
 
@@ -32559,7 +33301,7 @@ p( \theta \vert y_{\neg i}, m ) = \frac{p( y_{\neg i} \vert \theta, m ) \, p_{\m
 \item Soch J, Allefeld C, Haynes JD (2016): "How to avoid mismodelling in GLM-based fMRI data analysis: cross-validated Bayesian model selection"; in: \textit{NeuroImage}, vol. 141, pp. 469-489, eqs. 13-15; URL: \url{https://www.sciencedirect.com/science/article/pii/S1053811916303615}; DOI: 10.1016/j.neuroimage.2016.07.047.
 \item Soch J, Meyer AP, Allefeld C, Haynes JD (2017): "How to improve parameter estimates in GLM-based fMRI data analysis: cross-validated Bayesian model averaging"; in: \textit{NeuroImage}, vol. 158, pp. 186-195, eq. 6; URL: \url{https://www.sciencedirect.com/science/article/pii/S105381191730527X}; DOI: 10.1016/j.neuroimage.2017.06.056.
 \item Soch J, Allefeld C (2018): "MACS – a new SPM toolbox for model assessment, comparison and selection"; in: \textit{Journal of Neuroscience Methods}, vol. 306, pp. 19-31, eqs. 14-15; URL: \url{https://www.sciencedirect.com/science/article/pii/S0165027018301468}; DOI: 10.1016/j.jneumeth.2018.05.017.
-\item Soch J (2018): "cvBMS and cvBMA: filling in the gaps"; in: \textit{arXiv stat.ME}, arXiv:1807.01585; URL: \url{https://arxiv.org/abs/1807.01585}.
+\item Soch J (2018): "cvBMS and cvBMA: filling in the gaps"; in: \textit{arXiv stat.ME}, 1807.01585, eq. 1; URL: \url{https://arxiv.org/abs/1807.01585}.
 \end{itemize}
 
 
@@ -32911,7 +33653,7 @@ such that the approximated log family evidences ($\rightarrow$  \ref{sec:Model S
 \vspace{1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Soch J (2018): "cvBMS and cvBMA: filling in the gaps"; in: \textit{arXiv stat.ME}, 1807.01585, sect. 2.3, pp. 6-7, eq. 32; URL: \url{https://arxiv.org/abs/1807.01585}.
+\item Soch J (2018): "cvBMS and cvBMA: filling in the gaps"; in: \textit{arXiv stat.ME}, 1807.01585, sect. 2.3, eq. 32; URL: \url{https://arxiv.org/abs/1807.01585}.
 \end{itemize}
 
 
@@ -33961,6 +34703,11 @@ P427 & bin-map & Maximum-a-posteriori estimation for binomial observations & Jor
 P428 & mult-map & Maximum-a-posteriori estimation for multinomial observations & JoramSoch & 2023-12-08 & \pageref{sec:mult-map} \\ \hline
 P429 & bin-test & Binomial test & JoramSoch & 2023-12-16 & \pageref{sec:bin-test} \\ \hline
 P430 & mult-test & Multinomial test & JoramSoch & 2023-12-23 & \pageref{sec:mult-test} \\ \hline
+P431 & blr-anc & Accuracy and complexity for Bayesian linear regression & JoramSoch & 2024-01-12 & \pageref{sec:blr-anc} \\ \hline
+P432 & blrkc-prior & Conjugate prior distribution for Bayesian linear regression with known covariance & JoramSoch & 2024-01-19 & \pageref{sec:blrkc-prior} \\ \hline
+P433 & blrkc-post & Posterior distribution for Bayesian linear regression with known covariance & JoramSoch & 2024-01-19 & \pageref{sec:blrkc-post} \\ \hline
+P434 & blrkc-lme & Log model evidence for Bayesian linear regression with known covariance & JoramSoch & 2024-01-19 & \pageref{sec:blrkc-lme} \\ \hline
+P435 & blrkc-anc & Accuracy and complexity for Bayesian linear regression with known covariance & JoramSoch & 2024-01-19 & \pageref{sec:blrkc-anc} \\ \hline
 \end{longtable}
 
 
@@ -34173,6 +34920,10 @@ D191 & map & Maximum-a-posteriori estimation & JoramSoch & 2023-12-01 & \pageref
 
 \textbf{A}
 
+$\bullet$ Accuracy and complexity for Bayesian linear regression, \pageref{sec:blr-anc}
+
+$\bullet$ Accuracy and complexity for Bayesian linear regression with known covariance, \pageref{sec:blrkc-anc}
+
 $\bullet$ Accuracy and complexity for the univariate Gaussian, \pageref{sec:ug-anc}
 
 $\bullet$ Accuracy and complexity for the univariate Gaussian with known variance, \pageref{sec:ugkv-anc}
@@ -34226,6 +34977,8 @@ $\bullet$ Conditional distributions of the multivariate normal distribution, \pa
 $\bullet$ Conditional distributions of the normal-gamma distribution, \pageref{sec:ng-cond}
 
 $\bullet$ Conjugate prior distribution for Bayesian linear regression, \pageref{sec:blr-prior}
+
+$\bullet$ Conjugate prior distribution for Bayesian linear regression with known covariance, \pageref{sec:blrkc-prior}
 
 $\bullet$ Conjugate prior distribution for binomial observations, \pageref{sec:bin-prior}
 
@@ -34533,6 +35286,8 @@ $\bullet$ Log family evidences in terms of log model evidences, \pageref{sec:lfe
 
 $\bullet$ Log model evidence for Bayesian linear regression, \pageref{sec:blr-lme}
 
+$\bullet$ Log model evidence for Bayesian linear regression with known covariance, \pageref{sec:blrkc-lme}
+
 $\bullet$ Log model evidence for binomial observations, \pageref{sec:bin-lme}
 
 $\bullet$ Log model evidence for multinomial observations, \pageref{sec:mult-lme}
@@ -34782,6 +35537,8 @@ $\bullet$ Posterior credibility region against the omnibus null hypothesis for B
 $\bullet$ Posterior density is proportional to joint likelihood, \pageref{sec:post-jl}
 
 $\bullet$ Posterior distribution for Bayesian linear regression, \pageref{sec:blr-post}
+
+$\bullet$ Posterior distribution for Bayesian linear regression with known covariance, \pageref{sec:blrkc-post}
 
 $\bullet$ Posterior distribution for binomial observations, \pageref{sec:bin-post}
 

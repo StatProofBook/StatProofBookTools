@@ -588,147 +588,153 @@
 \contentsline {subsubsection}{\numberline {1.6.1}\textbf {Conjugate prior distribution}}{465}%
 \contentsline {subsubsection}{\numberline {1.6.2}\textbf {Posterior distribution}}{467}%
 \contentsline {subsubsection}{\numberline {1.6.3}\textbf {Log model evidence}}{469}%
-\contentsline {subsubsection}{\numberline {1.6.4}\textbf {Deviance information criterion}}{471}%
-\contentsline {subsubsection}{\numberline {1.6.5}\textbf {Posterior probability of alternative hypothesis}}{474}%
-\contentsline {subsubsection}{\numberline {1.6.6}\textbf {Posterior credibility region excluding null hypothesis}}{475}%
-\contentsline {section}{\numberline {2}Multivariate normal data}{478}%
-\contentsline {subsection}{\numberline {2.1}General linear model}{478}%
-\contentsline {subsubsection}{\numberline {2.1.1}\textit {Definition}}{478}%
-\contentsline {subsubsection}{\numberline {2.1.2}\textbf {Ordinary least squares}}{478}%
-\contentsline {subsubsection}{\numberline {2.1.3}\textbf {Weighted least squares}}{479}%
-\contentsline {subsubsection}{\numberline {2.1.4}\textbf {Maximum likelihood estimation}}{480}%
-\contentsline {subsection}{\numberline {2.2}Transformed general linear model}{482}%
-\contentsline {subsubsection}{\numberline {2.2.1}\textit {Definition}}{482}%
-\contentsline {subsubsection}{\numberline {2.2.2}\textbf {Derivation of the distribution}}{482}%
-\contentsline {subsubsection}{\numberline {2.2.3}\textbf {Equivalence of parameter estimates}}{483}%
-\contentsline {subsection}{\numberline {2.3}Inverse general linear model}{484}%
-\contentsline {subsubsection}{\numberline {2.3.1}\textit {Definition}}{484}%
-\contentsline {subsubsection}{\numberline {2.3.2}\textbf {Derivation of the distribution}}{484}%
-\contentsline {subsubsection}{\numberline {2.3.3}\textbf {Best linear unbiased estimator}}{485}%
-\contentsline {subsubsection}{\numberline {2.3.4}\textit {Corresponding forward model}}{487}%
-\contentsline {subsubsection}{\numberline {2.3.5}\textbf {Derivation of parameters}}{487}%
-\contentsline {subsubsection}{\numberline {2.3.6}\textbf {Proof of existence}}{488}%
-\contentsline {subsection}{\numberline {2.4}Multivariate Bayesian linear regression}{489}%
-\contentsline {subsubsection}{\numberline {2.4.1}\textbf {Conjugate prior distribution}}{489}%
-\contentsline {subsubsection}{\numberline {2.4.2}\textbf {Posterior distribution}}{491}%
-\contentsline {subsubsection}{\numberline {2.4.3}\textbf {Log model evidence}}{493}%
-\contentsline {section}{\numberline {3}Count data}{496}%
-\contentsline {subsection}{\numberline {3.1}Binomial observations}{496}%
-\contentsline {subsubsection}{\numberline {3.1.1}\textit {Definition}}{496}%
-\contentsline {subsubsection}{\numberline {3.1.2}\textbf {Binomial test}}{496}%
-\contentsline {subsubsection}{\numberline {3.1.3}\textbf {Maximum likelihood estimation}}{497}%
-\contentsline {subsubsection}{\numberline {3.1.4}\textbf {Maximum log-likelihood}}{498}%
-\contentsline {subsubsection}{\numberline {3.1.5}\textbf {Maximum-a-posteriori estimation}}{499}%
-\contentsline {subsubsection}{\numberline {3.1.6}\textbf {Conjugate prior distribution}}{500}%
-\contentsline {subsubsection}{\numberline {3.1.7}\textbf {Posterior distribution}}{501}%
-\contentsline {subsubsection}{\numberline {3.1.8}\textbf {Log model evidence}}{502}%
-\contentsline {subsubsection}{\numberline {3.1.9}\textbf {Log Bayes factor}}{503}%
-\contentsline {subsubsection}{\numberline {3.1.10}\textbf {Posterior probability}}{505}%
-\contentsline {subsection}{\numberline {3.2}Multinomial observations}{506}%
-\contentsline {subsubsection}{\numberline {3.2.1}\textit {Definition}}{506}%
-\contentsline {subsubsection}{\numberline {3.2.2}\textbf {Multinomial test}}{506}%
-\contentsline {subsubsection}{\numberline {3.2.3}\textbf {Maximum likelihood estimation}}{507}%
-\contentsline {subsubsection}{\numberline {3.2.4}\textbf {Maximum log-likelihood}}{508}%
-\contentsline {subsubsection}{\numberline {3.2.5}\textbf {Maximum-a-posteriori estimation}}{509}%
-\contentsline {subsubsection}{\numberline {3.2.6}\textbf {Conjugate prior distribution}}{510}%
-\contentsline {subsubsection}{\numberline {3.2.7}\textbf {Posterior distribution}}{511}%
-\contentsline {subsubsection}{\numberline {3.2.8}\textbf {Log model evidence}}{512}%
-\contentsline {subsubsection}{\numberline {3.2.9}\textbf {Log Bayes factor}}{514}%
-\contentsline {subsubsection}{\numberline {3.2.10}\textbf {Posterior probability}}{516}%
-\contentsline {subsection}{\numberline {3.3}Poisson-distributed data}{517}%
-\contentsline {subsubsection}{\numberline {3.3.1}\textit {Definition}}{517}%
-\contentsline {subsubsection}{\numberline {3.3.2}\textbf {Maximum likelihood estimation}}{518}%
-\contentsline {subsubsection}{\numberline {3.3.3}\textbf {Conjugate prior distribution}}{519}%
-\contentsline {subsubsection}{\numberline {3.3.4}\textbf {Posterior distribution}}{521}%
-\contentsline {subsubsection}{\numberline {3.3.5}\textbf {Log model evidence}}{522}%
-\contentsline {subsection}{\numberline {3.4}Poisson distribution with exposure values}{524}%
-\contentsline {subsubsection}{\numberline {3.4.1}\textit {Definition}}{524}%
-\contentsline {subsubsection}{\numberline {3.4.2}\textbf {Maximum likelihood estimation}}{524}%
-\contentsline {subsubsection}{\numberline {3.4.3}\textbf {Conjugate prior distribution}}{526}%
-\contentsline {subsubsection}{\numberline {3.4.4}\textbf {Posterior distribution}}{527}%
-\contentsline {subsubsection}{\numberline {3.4.5}\textbf {Log model evidence}}{529}%
-\contentsline {section}{\numberline {4}Frequency data}{531}%
-\contentsline {subsection}{\numberline {4.1}Beta-distributed data}{531}%
-\contentsline {subsubsection}{\numberline {4.1.1}\textit {Definition}}{531}%
-\contentsline {subsubsection}{\numberline {4.1.2}\textbf {Method of moments}}{531}%
-\contentsline {subsection}{\numberline {4.2}Dirichlet-distributed data}{533}%
-\contentsline {subsubsection}{\numberline {4.2.1}\textit {Definition}}{533}%
-\contentsline {subsubsection}{\numberline {4.2.2}\textbf {Maximum likelihood estimation}}{533}%
-\contentsline {subsection}{\numberline {4.3}Beta-binomial data}{536}%
-\contentsline {subsubsection}{\numberline {4.3.1}\textit {Definition}}{536}%
-\contentsline {subsubsection}{\numberline {4.3.2}\textbf {Method of moments}}{536}%
-\contentsline {section}{\numberline {5}Categorical data}{539}%
-\contentsline {subsection}{\numberline {5.1}Logistic regression}{539}%
-\contentsline {subsubsection}{\numberline {5.1.1}\textit {Definition}}{539}%
-\contentsline {subsubsection}{\numberline {5.1.2}\textbf {Probability and log-odds}}{539}%
-\contentsline {subsubsection}{\numberline {5.1.3}\textbf {Log-odds and probability}}{540}%
-\contentsline {chapter}{\numberline {IV}Model Selection}{543}%
-\contentsline {section}{\numberline {1}Goodness-of-fit measures}{544}%
-\contentsline {subsection}{\numberline {1.1}Residual variance}{544}%
-\contentsline {subsubsection}{\numberline {1.1.1}\textit {Definition}}{544}%
-\contentsline {subsubsection}{\numberline {1.1.2}\textbf {Maximum likelihood estimator is biased (p = 1)}}{544}%
-\contentsline {subsubsection}{\numberline {1.1.3}\textbf {Maximum likelihood estimator is biased (p > 1)}}{546}%
-\contentsline {subsubsection}{\numberline {1.1.4}\textbf {Construction of unbiased estimator}}{548}%
-\contentsline {subsection}{\numberline {1.2}R-squared}{549}%
-\contentsline {subsubsection}{\numberline {1.2.1}\textit {Definition}}{549}%
-\contentsline {subsubsection}{\numberline {1.2.2}\textbf {Derivation of R² and adjusted R²}}{549}%
-\contentsline {subsubsection}{\numberline {1.2.3}\textbf {Relationship to maximum log-likelihood}}{550}%
-\contentsline {subsection}{\numberline {1.3}Signal-to-noise ratio}{552}%
-\contentsline {subsubsection}{\numberline {1.3.1}\textit {Definition}}{552}%
-\contentsline {subsubsection}{\numberline {1.3.2}\textbf {Relationship with R²}}{552}%
-\contentsline {section}{\numberline {2}Classical information criteria}{554}%
-\contentsline {subsection}{\numberline {2.1}Akaike information criterion}{554}%
-\contentsline {subsubsection}{\numberline {2.1.1}\textit {Definition}}{554}%
-\contentsline {subsubsection}{\numberline {2.1.2}\textit {Corrected AIC}}{554}%
-\contentsline {subsubsection}{\numberline {2.1.3}\textbf {Corrected AIC and uncorrected AIC}}{554}%
-\contentsline {subsubsection}{\numberline {2.1.4}\textbf {Corrected AIC and maximum log-likelihood}}{555}%
-\contentsline {subsection}{\numberline {2.2}Bayesian information criterion}{556}%
-\contentsline {subsubsection}{\numberline {2.2.1}\textit {Definition}}{556}%
-\contentsline {subsubsection}{\numberline {2.2.2}\textbf {Derivation}}{556}%
-\contentsline {subsection}{\numberline {2.3}Deviance information criterion}{557}%
-\contentsline {subsubsection}{\numberline {2.3.1}\textit {Definition}}{557}%
-\contentsline {subsubsection}{\numberline {2.3.2}\textit {Deviance}}{558}%
-\contentsline {section}{\numberline {3}Bayesian model selection}{559}%
-\contentsline {subsection}{\numberline {3.1}Model evidence}{559}%
-\contentsline {subsubsection}{\numberline {3.1.1}\textit {Definition}}{559}%
-\contentsline {subsubsection}{\numberline {3.1.2}\textbf {Derivation}}{559}%
-\contentsline {subsubsection}{\numberline {3.1.3}\textit {Log model evidence}}{559}%
-\contentsline {subsubsection}{\numberline {3.1.4}\textbf {Derivation of the log model evidence}}{560}%
-\contentsline {subsubsection}{\numberline {3.1.5}\textbf {Expression using prior and posterior}}{560}%
-\contentsline {subsubsection}{\numberline {3.1.6}\textbf {Partition into accuracy and complexity}}{561}%
-\contentsline {subsubsection}{\numberline {3.1.7}\textbf {Subtraction of mean from LMEs}}{562}%
-\contentsline {subsubsection}{\numberline {3.1.8}\textit {Uniform-prior log model evidence}}{563}%
-\contentsline {subsubsection}{\numberline {3.1.9}\textit {Cross-validated log model evidence}}{563}%
-\contentsline {subsubsection}{\numberline {3.1.10}\textit {Empirical Bayesian log model evidence}}{564}%
-\contentsline {subsubsection}{\numberline {3.1.11}\textit {Variational Bayesian log model evidence}}{565}%
-\contentsline {subsection}{\numberline {3.2}Family evidence}{565}%
-\contentsline {subsubsection}{\numberline {3.2.1}\textit {Definition}}{565}%
-\contentsline {subsubsection}{\numberline {3.2.2}\textbf {Derivation}}{566}%
-\contentsline {subsubsection}{\numberline {3.2.3}\textit {Log family evidence}}{566}%
-\contentsline {subsubsection}{\numberline {3.2.4}\textbf {Derivation of the log family evidence}}{567}%
-\contentsline {subsubsection}{\numberline {3.2.5}\textbf {Calculation from log model evidences}}{568}%
-\contentsline {subsubsection}{\numberline {3.2.6}\textbf {Approximation of log family evidences}}{569}%
-\contentsline {subsection}{\numberline {3.3}Bayes factor}{570}%
-\contentsline {subsubsection}{\numberline {3.3.1}\textit {Definition}}{570}%
-\contentsline {subsubsection}{\numberline {3.3.2}\textbf {Transitivity}}{571}%
-\contentsline {subsubsection}{\numberline {3.3.3}\textbf {Computation using Savage-Dickey density ratio}}{572}%
-\contentsline {subsubsection}{\numberline {3.3.4}\textbf {Computation using encompassing prior method}}{573}%
-\contentsline {subsubsection}{\numberline {3.3.5}\textit {Encompassing model}}{574}%
-\contentsline {subsubsection}{\numberline {3.3.6}\textit {Log Bayes factor}}{575}%
-\contentsline {subsubsection}{\numberline {3.3.7}\textbf {Derivation of the log Bayes factor}}{575}%
-\contentsline {subsubsection}{\numberline {3.3.8}\textbf {Calculation from log model evidences}}{576}%
-\contentsline {subsection}{\numberline {3.4}Posterior model probability}{576}%
-\contentsline {subsubsection}{\numberline {3.4.1}\textit {Definition}}{576}%
-\contentsline {subsubsection}{\numberline {3.4.2}\textbf {Derivation}}{577}%
-\contentsline {subsubsection}{\numberline {3.4.3}\textbf {Calculation from Bayes factors}}{577}%
-\contentsline {subsubsection}{\numberline {3.4.4}\textbf {Calculation from log Bayes factor}}{578}%
-\contentsline {subsubsection}{\numberline {3.4.5}\textbf {Calculation from log model evidences}}{579}%
-\contentsline {subsection}{\numberline {3.5}Bayesian model averaging}{580}%
-\contentsline {subsubsection}{\numberline {3.5.1}\textit {Definition}}{580}%
-\contentsline {subsubsection}{\numberline {3.5.2}\textbf {Derivation}}{580}%
-\contentsline {subsubsection}{\numberline {3.5.3}\textbf {Calculation from log model evidences}}{581}%
-\contentsline {chapter}{\numberline {V}Appendix}{583}%
-\contentsline {section}{\numberline {1}Proof by Number}{584}%
-\contentsline {section}{\numberline {2}Definition by Number}{609}%
-\contentsline {section}{\numberline {3}Proof by Topic}{616}%
-\contentsline {section}{\numberline {4}Definition by Topic}{627}%
+\contentsline {subsubsection}{\numberline {1.6.4}\textbf {Accuracy and complexity}}{471}%
+\contentsline {subsubsection}{\numberline {1.6.5}\textbf {Deviance information criterion}}{475}%
+\contentsline {subsubsection}{\numberline {1.6.6}\textbf {Posterior probability of alternative hypothesis}}{477}%
+\contentsline {subsubsection}{\numberline {1.6.7}\textbf {Posterior credibility region excluding null hypothesis}}{479}%
+\contentsline {subsection}{\numberline {1.7}Bayesian linear regression with known covariance}{481}%
+\contentsline {subsubsection}{\numberline {1.7.1}\textbf {Conjugate prior distribution}}{481}%
+\contentsline {subsubsection}{\numberline {1.7.2}\textbf {Posterior distribution}}{482}%
+\contentsline {subsubsection}{\numberline {1.7.3}\textbf {Log model evidence}}{484}%
+\contentsline {subsubsection}{\numberline {1.7.4}\textbf {Accuracy and complexity}}{486}%
+\contentsline {section}{\numberline {2}Multivariate normal data}{490}%
+\contentsline {subsection}{\numberline {2.1}General linear model}{490}%
+\contentsline {subsubsection}{\numberline {2.1.1}\textit {Definition}}{490}%
+\contentsline {subsubsection}{\numberline {2.1.2}\textbf {Ordinary least squares}}{490}%
+\contentsline {subsubsection}{\numberline {2.1.3}\textbf {Weighted least squares}}{491}%
+\contentsline {subsubsection}{\numberline {2.1.4}\textbf {Maximum likelihood estimation}}{492}%
+\contentsline {subsection}{\numberline {2.2}Transformed general linear model}{494}%
+\contentsline {subsubsection}{\numberline {2.2.1}\textit {Definition}}{494}%
+\contentsline {subsubsection}{\numberline {2.2.2}\textbf {Derivation of the distribution}}{494}%
+\contentsline {subsubsection}{\numberline {2.2.3}\textbf {Equivalence of parameter estimates}}{495}%
+\contentsline {subsection}{\numberline {2.3}Inverse general linear model}{496}%
+\contentsline {subsubsection}{\numberline {2.3.1}\textit {Definition}}{496}%
+\contentsline {subsubsection}{\numberline {2.3.2}\textbf {Derivation of the distribution}}{496}%
+\contentsline {subsubsection}{\numberline {2.3.3}\textbf {Best linear unbiased estimator}}{497}%
+\contentsline {subsubsection}{\numberline {2.3.4}\textit {Corresponding forward model}}{499}%
+\contentsline {subsubsection}{\numberline {2.3.5}\textbf {Derivation of parameters}}{499}%
+\contentsline {subsubsection}{\numberline {2.3.6}\textbf {Proof of existence}}{500}%
+\contentsline {subsection}{\numberline {2.4}Multivariate Bayesian linear regression}{501}%
+\contentsline {subsubsection}{\numberline {2.4.1}\textbf {Conjugate prior distribution}}{501}%
+\contentsline {subsubsection}{\numberline {2.4.2}\textbf {Posterior distribution}}{503}%
+\contentsline {subsubsection}{\numberline {2.4.3}\textbf {Log model evidence}}{505}%
+\contentsline {section}{\numberline {3}Count data}{508}%
+\contentsline {subsection}{\numberline {3.1}Binomial observations}{508}%
+\contentsline {subsubsection}{\numberline {3.1.1}\textit {Definition}}{508}%
+\contentsline {subsubsection}{\numberline {3.1.2}\textbf {Binomial test}}{508}%
+\contentsline {subsubsection}{\numberline {3.1.3}\textbf {Maximum likelihood estimation}}{509}%
+\contentsline {subsubsection}{\numberline {3.1.4}\textbf {Maximum log-likelihood}}{510}%
+\contentsline {subsubsection}{\numberline {3.1.5}\textbf {Maximum-a-posteriori estimation}}{511}%
+\contentsline {subsubsection}{\numberline {3.1.6}\textbf {Conjugate prior distribution}}{512}%
+\contentsline {subsubsection}{\numberline {3.1.7}\textbf {Posterior distribution}}{513}%
+\contentsline {subsubsection}{\numberline {3.1.8}\textbf {Log model evidence}}{514}%
+\contentsline {subsubsection}{\numberline {3.1.9}\textbf {Log Bayes factor}}{515}%
+\contentsline {subsubsection}{\numberline {3.1.10}\textbf {Posterior probability}}{517}%
+\contentsline {subsection}{\numberline {3.2}Multinomial observations}{518}%
+\contentsline {subsubsection}{\numberline {3.2.1}\textit {Definition}}{518}%
+\contentsline {subsubsection}{\numberline {3.2.2}\textbf {Multinomial test}}{518}%
+\contentsline {subsubsection}{\numberline {3.2.3}\textbf {Maximum likelihood estimation}}{519}%
+\contentsline {subsubsection}{\numberline {3.2.4}\textbf {Maximum log-likelihood}}{520}%
+\contentsline {subsubsection}{\numberline {3.2.5}\textbf {Maximum-a-posteriori estimation}}{521}%
+\contentsline {subsubsection}{\numberline {3.2.6}\textbf {Conjugate prior distribution}}{522}%
+\contentsline {subsubsection}{\numberline {3.2.7}\textbf {Posterior distribution}}{523}%
+\contentsline {subsubsection}{\numberline {3.2.8}\textbf {Log model evidence}}{524}%
+\contentsline {subsubsection}{\numberline {3.2.9}\textbf {Log Bayes factor}}{526}%
+\contentsline {subsubsection}{\numberline {3.2.10}\textbf {Posterior probability}}{528}%
+\contentsline {subsection}{\numberline {3.3}Poisson-distributed data}{529}%
+\contentsline {subsubsection}{\numberline {3.3.1}\textit {Definition}}{529}%
+\contentsline {subsubsection}{\numberline {3.3.2}\textbf {Maximum likelihood estimation}}{530}%
+\contentsline {subsubsection}{\numberline {3.3.3}\textbf {Conjugate prior distribution}}{531}%
+\contentsline {subsubsection}{\numberline {3.3.4}\textbf {Posterior distribution}}{533}%
+\contentsline {subsubsection}{\numberline {3.3.5}\textbf {Log model evidence}}{534}%
+\contentsline {subsection}{\numberline {3.4}Poisson distribution with exposure values}{536}%
+\contentsline {subsubsection}{\numberline {3.4.1}\textit {Definition}}{536}%
+\contentsline {subsubsection}{\numberline {3.4.2}\textbf {Maximum likelihood estimation}}{536}%
+\contentsline {subsubsection}{\numberline {3.4.3}\textbf {Conjugate prior distribution}}{538}%
+\contentsline {subsubsection}{\numberline {3.4.4}\textbf {Posterior distribution}}{539}%
+\contentsline {subsubsection}{\numberline {3.4.5}\textbf {Log model evidence}}{541}%
+\contentsline {section}{\numberline {4}Frequency data}{543}%
+\contentsline {subsection}{\numberline {4.1}Beta-distributed data}{543}%
+\contentsline {subsubsection}{\numberline {4.1.1}\textit {Definition}}{543}%
+\contentsline {subsubsection}{\numberline {4.1.2}\textbf {Method of moments}}{543}%
+\contentsline {subsection}{\numberline {4.2}Dirichlet-distributed data}{545}%
+\contentsline {subsubsection}{\numberline {4.2.1}\textit {Definition}}{545}%
+\contentsline {subsubsection}{\numberline {4.2.2}\textbf {Maximum likelihood estimation}}{545}%
+\contentsline {subsection}{\numberline {4.3}Beta-binomial data}{548}%
+\contentsline {subsubsection}{\numberline {4.3.1}\textit {Definition}}{548}%
+\contentsline {subsubsection}{\numberline {4.3.2}\textbf {Method of moments}}{548}%
+\contentsline {section}{\numberline {5}Categorical data}{551}%
+\contentsline {subsection}{\numberline {5.1}Logistic regression}{551}%
+\contentsline {subsubsection}{\numberline {5.1.1}\textit {Definition}}{551}%
+\contentsline {subsubsection}{\numberline {5.1.2}\textbf {Probability and log-odds}}{551}%
+\contentsline {subsubsection}{\numberline {5.1.3}\textbf {Log-odds and probability}}{552}%
+\contentsline {chapter}{\numberline {IV}Model Selection}{555}%
+\contentsline {section}{\numberline {1}Goodness-of-fit measures}{556}%
+\contentsline {subsection}{\numberline {1.1}Residual variance}{556}%
+\contentsline {subsubsection}{\numberline {1.1.1}\textit {Definition}}{556}%
+\contentsline {subsubsection}{\numberline {1.1.2}\textbf {Maximum likelihood estimator is biased (p = 1)}}{556}%
+\contentsline {subsubsection}{\numberline {1.1.3}\textbf {Maximum likelihood estimator is biased (p > 1)}}{558}%
+\contentsline {subsubsection}{\numberline {1.1.4}\textbf {Construction of unbiased estimator}}{560}%
+\contentsline {subsection}{\numberline {1.2}R-squared}{561}%
+\contentsline {subsubsection}{\numberline {1.2.1}\textit {Definition}}{561}%
+\contentsline {subsubsection}{\numberline {1.2.2}\textbf {Derivation of R² and adjusted R²}}{561}%
+\contentsline {subsubsection}{\numberline {1.2.3}\textbf {Relationship to maximum log-likelihood}}{562}%
+\contentsline {subsection}{\numberline {1.3}Signal-to-noise ratio}{564}%
+\contentsline {subsubsection}{\numberline {1.3.1}\textit {Definition}}{564}%
+\contentsline {subsubsection}{\numberline {1.3.2}\textbf {Relationship with R²}}{564}%
+\contentsline {section}{\numberline {2}Classical information criteria}{566}%
+\contentsline {subsection}{\numberline {2.1}Akaike information criterion}{566}%
+\contentsline {subsubsection}{\numberline {2.1.1}\textit {Definition}}{566}%
+\contentsline {subsubsection}{\numberline {2.1.2}\textit {Corrected AIC}}{566}%
+\contentsline {subsubsection}{\numberline {2.1.3}\textbf {Corrected AIC and uncorrected AIC}}{566}%
+\contentsline {subsubsection}{\numberline {2.1.4}\textbf {Corrected AIC and maximum log-likelihood}}{567}%
+\contentsline {subsection}{\numberline {2.2}Bayesian information criterion}{568}%
+\contentsline {subsubsection}{\numberline {2.2.1}\textit {Definition}}{568}%
+\contentsline {subsubsection}{\numberline {2.2.2}\textbf {Derivation}}{568}%
+\contentsline {subsection}{\numberline {2.3}Deviance information criterion}{569}%
+\contentsline {subsubsection}{\numberline {2.3.1}\textit {Definition}}{569}%
+\contentsline {subsubsection}{\numberline {2.3.2}\textit {Deviance}}{570}%
+\contentsline {section}{\numberline {3}Bayesian model selection}{571}%
+\contentsline {subsection}{\numberline {3.1}Model evidence}{571}%
+\contentsline {subsubsection}{\numberline {3.1.1}\textit {Definition}}{571}%
+\contentsline {subsubsection}{\numberline {3.1.2}\textbf {Derivation}}{571}%
+\contentsline {subsubsection}{\numberline {3.1.3}\textit {Log model evidence}}{571}%
+\contentsline {subsubsection}{\numberline {3.1.4}\textbf {Derivation of the log model evidence}}{572}%
+\contentsline {subsubsection}{\numberline {3.1.5}\textbf {Expression using prior and posterior}}{572}%
+\contentsline {subsubsection}{\numberline {3.1.6}\textbf {Partition into accuracy and complexity}}{573}%
+\contentsline {subsubsection}{\numberline {3.1.7}\textbf {Subtraction of mean from LMEs}}{574}%
+\contentsline {subsubsection}{\numberline {3.1.8}\textit {Uniform-prior log model evidence}}{575}%
+\contentsline {subsubsection}{\numberline {3.1.9}\textit {Cross-validated log model evidence}}{575}%
+\contentsline {subsubsection}{\numberline {3.1.10}\textit {Empirical Bayesian log model evidence}}{576}%
+\contentsline {subsubsection}{\numberline {3.1.11}\textit {Variational Bayesian log model evidence}}{577}%
+\contentsline {subsection}{\numberline {3.2}Family evidence}{577}%
+\contentsline {subsubsection}{\numberline {3.2.1}\textit {Definition}}{577}%
+\contentsline {subsubsection}{\numberline {3.2.2}\textbf {Derivation}}{578}%
+\contentsline {subsubsection}{\numberline {3.2.3}\textit {Log family evidence}}{578}%
+\contentsline {subsubsection}{\numberline {3.2.4}\textbf {Derivation of the log family evidence}}{579}%
+\contentsline {subsubsection}{\numberline {3.2.5}\textbf {Calculation from log model evidences}}{580}%
+\contentsline {subsubsection}{\numberline {3.2.6}\textbf {Approximation of log family evidences}}{581}%
+\contentsline {subsection}{\numberline {3.3}Bayes factor}{582}%
+\contentsline {subsubsection}{\numberline {3.3.1}\textit {Definition}}{582}%
+\contentsline {subsubsection}{\numberline {3.3.2}\textbf {Transitivity}}{583}%
+\contentsline {subsubsection}{\numberline {3.3.3}\textbf {Computation using Savage-Dickey density ratio}}{584}%
+\contentsline {subsubsection}{\numberline {3.3.4}\textbf {Computation using encompassing prior method}}{585}%
+\contentsline {subsubsection}{\numberline {3.3.5}\textit {Encompassing model}}{586}%
+\contentsline {subsubsection}{\numberline {3.3.6}\textit {Log Bayes factor}}{587}%
+\contentsline {subsubsection}{\numberline {3.3.7}\textbf {Derivation of the log Bayes factor}}{587}%
+\contentsline {subsubsection}{\numberline {3.3.8}\textbf {Calculation from log model evidences}}{588}%
+\contentsline {subsection}{\numberline {3.4}Posterior model probability}{588}%
+\contentsline {subsubsection}{\numberline {3.4.1}\textit {Definition}}{588}%
+\contentsline {subsubsection}{\numberline {3.4.2}\textbf {Derivation}}{589}%
+\contentsline {subsubsection}{\numberline {3.4.3}\textbf {Calculation from Bayes factors}}{589}%
+\contentsline {subsubsection}{\numberline {3.4.4}\textbf {Calculation from log Bayes factor}}{590}%
+\contentsline {subsubsection}{\numberline {3.4.5}\textbf {Calculation from log model evidences}}{591}%
+\contentsline {subsection}{\numberline {3.5}Bayesian model averaging}{592}%
+\contentsline {subsubsection}{\numberline {3.5.1}\textit {Definition}}{592}%
+\contentsline {subsubsection}{\numberline {3.5.2}\textbf {Derivation}}{592}%
+\contentsline {subsubsection}{\numberline {3.5.3}\textbf {Calculation from log model evidences}}{593}%
+\contentsline {chapter}{\numberline {V}Appendix}{595}%
+\contentsline {section}{\numberline {1}Proof by Number}{596}%
+\contentsline {section}{\numberline {2}Definition by Number}{621}%
+\contentsline {section}{\numberline {3}Proof by Topic}{628}%
+\contentsline {section}{\numberline {4}Definition by Topic}{639}%
