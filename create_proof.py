@@ -15,10 +15,10 @@ First edit: 2023-09-01 13:40:00
 
 # Specify proofs
 #-----------------------------------------------------------------------------#
-temp_proof = 'blr-anc'
-# This is the Markdown (.md) document in StatProofBook/P/ which should be used
+temp_proof = 'glm-llr'
+# This is the Markdown (.md) document in the StatProofBook which should be used
 # as a template for your proof. It should be in repository sub-folder "/P/".
-src_proof  = 'blrkc-anc'
+src_proof  = 'glm-llrmi'
 # This is the LaTeX (.tex) document in src_dir which contains your proof.
 # LaTeX should be between "\begin{document}" and "\end{document}".
 src_dir    =r'C:\Users\sochj\ownCloud\StatProofBook\Submissions\JoramSoch\Proofs'

@@ -9,14 +9,18 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2023-09-22 10:55:00
- Last edit: 2023-09-22 10:55:00
+ Last edit: 2024-03-15 11:31:00
 """
 
 
 # Specify definitions
 #-----------------------------------------------------------------------------#
-temp_def = 'post'               # Markdown definition to be used as template
-src_def  = 'map'                # LaTeX definition to be used as source
+temp_def = 'llf'
+# This is the Markdown (.md) document in the StatProofBook which should be used
+# as a template for your definition. It should be in repository sub-folder "/D/".
+src_def  = 'llr'
+# This is the LaTeX (.tex) document in src_dir which contains your definition.
+# LaTeX should be between "\begin{document}" and "\end{document}".
 src_dir  =r'C:\Users\sochj\ownCloud\StatProofBook\Submissions\JoramSoch\Definitions'
 
 # Import modules
