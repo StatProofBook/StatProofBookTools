@@ -13,8 +13,8 @@ or, e.g. within Spyder, as
 Author: Joram Soch, OvGU Magdeburg
 E-Mail: joram.soch@ovgu.de
 
-First edit: 2024-06-21 12:XX:XX
- Last edit: 
+First edit: 2024-06-21 12:19:00
+ Last edit: 2024-06-21 12:19:00
 """
 
 
