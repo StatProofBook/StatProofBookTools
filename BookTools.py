@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-14 16:35:00
- Last edit: 2023-08-25 17:28:00
+ Last edit: 2024-07-18 10:23:00
 """
 
 
@@ -208,7 +208,7 @@ def replace_links(line, rep_dir):
             file_txt = file_obj.readlines()
             file_obj.close()
             chapter, section, topic, item = get_toc_info(file_txt)
-            new_ref = ' ($\\rightarrow$ ' + ' \\ref{sec:' + chapter + '}/\\ref{sec:' + shortcut + '})'
+            new_ref = ' ($\\rightarrow$ ' + '\\ref{sec:' + chapter + '}/\\ref{sec:' + shortcut + '})'
         else:
             new_ref = '' # ' ($\\rightarrow$ ' + file_type + ' "' + shortcut + '")'
         # adapt to new reference

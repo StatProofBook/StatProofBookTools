@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2023-08-01 15:15:00
+ Last edit: 2024-07-18 10:50:00
 """
 
 
@@ -209,12 +209,15 @@ for entry in toc_txt:
         
         # Add tombstone
         if is_proof:
-            book.write('\n\\begin{flushright} $\\blacksquare$ \\end{flushright}')
+            book.write('\n\\begin{flushright} $\\blacksquare$ \\end{flushright}\n')
         
         # Write sources
         if bool(sources):
             book.write('\n\n')
-            book.write('\\vspace{1em}\n')
+            if is_proof:
+                book.write('\\vspace{-1em}\n')
+            else:
+                book.write('\\vspace{1em}\n')
             book.write('\\textbf{Sources:}\n')
             book.write('\\begin{itemize}\n')
             for source in sources:
@@ -224,7 +227,8 @@ for entry in toc_txt:
                 if 'url'   in source: book.write('; URL: \\url{' + source['url'] + '}')
                 if 'doi'   in source: book.write('; DOI: ' + source['doi'])
                 book.write('.\n')
-            book.write('\\end{itemize}')
+            book.write('\\end{itemize}\n')
+            book.write('\\vspace{1em}\n')
         
         # Write metadata
         # book.write('\n\n')
