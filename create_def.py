@@ -9,19 +9,19 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2023-09-22 10:55:00
- Last edit: 2024-03-15 11:31:00
+ Last edit: 2024-08-08 11:36:00
 """
 
 
 # Specify definitions
 #-----------------------------------------------------------------------------#
-temp_def = 'llf'
+temp_def = 'dist'
 # This is the Markdown (.md) document in the StatProofBook which should be used
 # as a template for your definition. It should be in repository sub-folder "/D/".
-src_def  = 'llr'
+src_def  = 'iid'
 # This is the LaTeX (.tex) document in src_dir which contains your definition.
 # LaTeX should be between "\begin{document}" and "\end{document}".
-src_dir  =r'C:\Users\sochj\ownCloud\StatProofBook\Submissions\JoramSoch\Definitions'
+src_dir  =r'C:\Users\sochj\OvGUcloud\Projekte\StatProofBook\Submissions\JoramSoch\Definitions'
 
 # Import modules
 #-----------------------------------------------------------------------------#

@@ -9,19 +9,19 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2023-09-01 13:40:00
- Last edit: 2023-10-20 11:39:00
+ Last edit: 2024-08-08 11:41:00
 """
 
 
 # Specify proofs
 #-----------------------------------------------------------------------------#
-temp_proof = 'mlr-mll'
+temp_proof = 'prob-mon'
 # This is the Markdown (.md) document in the StatProofBook which should be used
 # as a template for your proof. It should be in repository sub-folder "/P/".
-src_proof  = 'mlr-llr'
+src_proof  = 'prob-mon2'
 # This is the LaTeX (.tex) document in src_dir which contains your proof.
 # LaTeX should be between "\begin{document}" and "\end{document}".
-src_dir    =r'C:\Users\sochj\ownCloud\StatProofBook\Submissions\JoramSoch\Proofs'
+src_dir    =r'C:\Users\sochj\OvGUcloud\Projekte\StatProofBook\Submissions\JoramSoch\Proofs'
 # This is the folder in which src_proof is located and the result will be saved.
 
 # Import modules
