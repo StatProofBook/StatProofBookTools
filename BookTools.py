@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-14 16:35:00
- Last edit: 2024-07-18 10:23:00
+ Last edit: 2024-09-27 15:32:00
 """
 
 
@@ -56,17 +56,17 @@ def get_all_items(toc_txt):
     for entry in toc_txt:
         # If there is a new chapter
         #---------------------------------------------------------------------#
-        if entry.count('.') == 0 and entry.find('<h3>') > -1:
+        if entry.count('.') == 0 and entry.find('<h3 ') > -1:
             num_sect  = 0
             num_chap  = num_chap + 1
-            curr_chap = entry[entry.find('<h3>')+4:entry.find('</h3>')]
+            curr_chap = entry[entry.find('">')+2:entry.find('</h3>')]
             curr_chap = curr_chap[curr_chap.find(': ')+2:]
         # If there is a new section
         #---------------------------------------------------------------------#
-        if entry.count('.') == 1 and entry.find(str(num_sect+1) + '. ') > -1:
+        if entry.count('.') == 1 and entry.find('<p ') > -1:
             num_ssec  = 0
             num_sect  = num_sect + 1        
-            curr_sect = entry[entry.find('. ')+2:entry.find('\n')]
+            curr_sect = entry[entry.find('">')+2:entry.find('</p>')]
         # If there is a new subsection
         #---------------------------------------------------------------------#
         if entry.count('.') == 2 and entry.find(str(num_sect) + '.' + str(num_ssec+1) + '. ') > -1:  
