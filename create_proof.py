@@ -15,10 +15,10 @@ First edit: 2023-09-01 13:40:00
 
 # Specify proofs
 #-----------------------------------------------------------------------------#
-temp_proof = 'corr-range'
+temp_proof = 'norm-pdf'
 # This is the Markdown (.md) document in the StatProofBook which should be used
 # as a template for your proof. It should be in repository sub-folder "/P/".
-src_proof  = 'corr-ind'
+src_proof  = 'norm-corrind'
 # This is the LaTeX (.tex) document in src_dir which contains your proof.
 # LaTeX should be between "\begin{document}" and "\end{document}".
 src_dir    =r'C:\Users\sochj\OvGUcloud\Projekte\StatProofBook\Submissions\JoramSoch\Proofs'
