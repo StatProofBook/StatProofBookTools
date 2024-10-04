@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2024-07-18 10:50:00
+ Last edit: 2024-10-04 15:42:00
 """
 
 
@@ -39,6 +39,11 @@ hdr_obj = open('write_book/StatProofBook.txt', 'r')
 hdr_txt = hdr_obj.readlines()
 hdr_obj.close()
 
+# Parse "Table of Contents"
+#-----------------------------------------------------------------------------#
+chapters          = ['I', 'II', 'III', 'IV']
+nums, tocs, files = spbt.get_all_items(toc_txt)
+
 # Open "The Book of Statistical Proofs"
 #-----------------------------------------------------------------------------#
 print('\n-> LaTeX source code producing the StatProofBook PDF:')
@@ -50,17 +55,6 @@ for line in hdr_txt:
     else:
         book.write(line)
 
-# Set chapter and section names
-#-----------------------------------------------------------------------------#
-num_chap  = 0;
-num_sect  = 0;
-num_ssec  = 0;
-num_ssse  = 0;
-curr_chap = '';
-curr_sect = '';
-curr_ssec = '';
-curr_ssse = '';
-
 # Set proof and definition info
 #-----------------------------------------------------------------------------#
 pr_ids     = []
@@ -70,172 +64,159 @@ def_titles = []
 pr_infos   = []
 def_infos  = []
 
-# Parse "Table of Contents"
+# Initialize chapter/section numbers
+#-----------------------------------------------------------------------------#
+num_chap = 0
+num_sect = 0
+num_ssec = 0
+num_ssse = 0
+
 # Write "The Book of Statistical Proofs"
 #-----------------------------------------------------------------------------#
-for entry in toc_txt:
+for num, toc, file_md in zip(nums, tocs, files):
     
-    # If there is a new chapter
-    #-------------------------------------------------------------------------#
-    if entry.count('.') == 0 and entry.find('<h3>') > -1:
-        
-        num_sect  = 0
-        num_chap  = num_chap + 1
-        curr_chap = entry[entry.find('<h3>')+4:entry.find('</h3>')]
-        curr_chap = curr_chap[curr_chap.find(': ')+2:]
-        book.write('\n\n% Chapter ' + str(num_chap) + ' %\n')
-        book.write('\\chapter{' + curr_chap + '} \\label{sec:' + curr_chap + '} \\newpage\n\n')
+    # Start new chapter
+    if num[0] != num_chap:
+        book.write('\n\n% Chapter ' + str(num[0]) + ' %\n')
+        book.write('\\chapter{' + toc[0] + '} \\label{sec:' + toc[0] + '} \\newpage\n\n')
     
-    # If there is a new section
-    #-------------------------------------------------------------------------#
-    if entry.count('.') == 1 and entry.find(str(num_sect+1) + '. ') > -1:
-    # alternatively: if entry[0].isdigit() and entry.find('. ') == 1:
-                
-        num_ssec  = 0
-        num_sect  = num_sect + 1        
-        curr_sect = entry[entry.find('. ')+2:entry.find('\n')]
+    # Start new section
+    if num[1] != num_sect:
         book.write('\\pagebreak\n')
-        book.write('\\section{' + curr_sect + '}\n\n')
+        book.write('\\section{' + toc[1] + '}\n\n')
+    
+    # Start new subsection
+    if num[2] != num_ssec:
+        book.write('\\subsection{' + toc[2] + '}\n\n')
+    
+    # Extract ToC information
+    num_chap  = num[0]
+    num_sect  = num[1]
+    num_ssec  = num[2]
+    num_ssse  = num[3]
+    # curr_chap = toc[0]
+    # curr_sect = toc[1]
+    # curr_ssec = toc[2]
+    # curr_ssse = toc[3]
+    
+    # Read proof or definition
+    if file_md.find('/P/') > -1:
+        is_proof = True
+    elif file_md.find('/D/') > -1:
+        is_proof = False
+    else:
+        is_proof = None
+    file_obj = open(rep_dir + file_md, 'r')
+    file_txt = file_obj.readlines()
+    file_obj.close()
+    
+    # Extract file information
+    file_id, shortcut, title, username, date = spbt.get_meta_data(file_txt)
+    chapter, section, topic, item            = spbt.get_toc_info(file_txt)
+    sources  = spbt.get_sources(file_txt)
+    body_txt = spbt.extract_body(file_txt)
+    
+    # Edit title for sorting
+    title_edit = re.sub('[^a-zA-Z- ]', '', title)
+    title_sort = title_edit.lower()
+    
+    # Store file information
+    if is_proof:
+        pr_ids.append(int(file_id[1:]))
+        pr_titles.append(title_sort)
+        pr_infos.append({'proof_id': file_id, 'shortcut': shortcut, 'title': title, \
+                         'username': username, 'date': date, 'source': sources})
+    else:
+        def_ids.append(int(file_id[1:]))
+        def_titles.append(title_sort)
+        def_infos.append({'def_id': file_id, 'shortcut': shortcut, 'title': title, \
+                          'username': username, 'date': date, 'source': sources})
+    
+    # Write title
+    if is_proof:
+        book.write('\\subsubsection[\\textbf{' + toc[3] + '}]{' + toc[3] + '} \\label{sec:' + shortcut + '}\n')
+        book.write('\\setcounter{equation}{0}')
+        book.write('\n\n')
+    else:
+        book.write('\\subsubsection[\\textit{' + toc[3] + '}]{' + toc[3] + '} \\label{sec:' + shortcut + '}\n')
+        book.write('\\setcounter{equation}{0}')
+        book.write('\n\n')
+    
+    # Write body
+    in_equation = False
+    in_itemize  = False
+    for line in body_txt:
         
-    # If there is a new subsection
-    #-------------------------------------------------------------------------#
-    if entry.count('.') == 2 and entry.find(str(num_sect) + '.' + str(num_ssec+1) + '. ') > -1:  
-    # alternatively: if curr_sect != '' and entry.count('.') == 2:
+        # write bold text
+        line = re.sub('\*\*Definition:\*\*', '\\\\textbf{Definition:}', line)
+        line = re.sub('\*\*Theorem:\*\*', '\\\\textbf{Theorem:}', line)
+        line = re.sub('\*\*Proof:\*\*', '\\\\vspace{1em}\n\\\\textbf{Proof:}', line)
         
-        num_ssse  = 0
-        num_ssec  = num_ssec + 1
-        curr_ssec = entry[entry.find('. ')+2:entry.find('<br>')]
-        if curr_ssec[-1] == ' ': curr_ssec = curr_ssec[:-1]
-        book.write('\\subsection{' + curr_ssec + '}\n\n')
+        # use equation environment
+        if not in_equation and line.find('$$') == 0:
+            line = re.sub('\$\$', '\\\\begin{equation}', line)
+            in_equation = True
+        if in_equation and line.find('$$') == 0:
+            line = re.sub('\$\$', '\\\\end{equation}', line)
+            in_equation = False
         
-    # If there is a new subsubsection
-    #-------------------------------------------------------------------------#
-    if entry.count('.') >= 3 and entry.find(str(num_sect) + '.' + str(num_ssec) + '.' + str(num_ssse+1) + '. ') > -1:
-    # alternatively: if entry.find('&emsp;&ensp;') > -1:
+        # replace equation labels
+        line = re.sub('\\\\label{eq:', '\\\\label{eq:'+shortcut+'-', line)
+        line = re.sub('\\\\eqref{eq:', '\\\\eqref{eq:'+shortcut+'-', line)
         
-        num_ssse  = num_ssse + 1
-        curr_ssse = entry[entry.find('[')+1:entry.find(']')]
-        file      = entry[entry.find('(', entry.find(']'))+1:entry.find(')', entry.find(']'))]
-        file_md   = file + '.md'
+        # replace hyperlinks
+        line = spbt.replace_links(line, rep_dir)
         
-        # Read proof or definition
-        if file_md.find('/P/') > -1:
-            is_proof = True
-        elif file_md.find('/D/') > -1:
-            is_proof = False
-        else:
-            is_proof = None
-        file_obj = open(rep_dir + file_md, 'r')
-        file_txt = file_obj.readlines()
-        file_obj.close()
+        # eliminate linebreaks
+        line = re.sub('<br>', '\\\\vspace{1em}', line)
         
-        # Extract file information
-        file_id, shortcut, title, username, date = spbt.get_meta_data(file_txt)
-        chapter, section, topic, item            = spbt.get_toc_info(file_txt)
-        sources  = spbt.get_sources(file_txt)
-        body_txt = spbt.extract_body(file_txt)
-        
-        # Edit title for sorting
-        title_edit = re.sub('[^a-zA-Z- ]', '', title)
-        title_sort = title_edit.lower()
-        
-        # Store file information
-        if is_proof:
-            pr_ids.append(int(file_id[1:]))
-            pr_titles.append(title_sort)
-            pr_infos.append({'proof_id': file_id, 'shortcut': shortcut, 'title': title, \
-                             'username': username, 'date': date, 'source': sources})
-        else:
-            def_ids.append(int(file_id[1:]))
-            def_titles.append(title_sort)
-            def_infos.append({'def_id': file_id, 'shortcut': shortcut, 'title': title, \
-                              'username': username, 'date': date, 'source': sources})
-        
-        # Write title
-        if is_proof:
-            book.write('\\subsubsection[\\textbf{' + curr_ssse + '}]{' + curr_ssse + '} \\label{sec:' + shortcut + '}\n')
-            book.write('\\setcounter{equation}{0}')
-            book.write('\n\n')
-        else:
-            book.write('\\subsubsection[\\textit{' + curr_ssse + '}]{' + curr_ssse + '} \\label{sec:' + shortcut + '}\n')
-            book.write('\\setcounter{equation}{0}')
-            book.write('\n\n')
-        
-        # Write body
-        in_equation = False
-        in_itemize  = False
-        for line in body_txt:
-            
-            # write bold text
-            line = re.sub('\*\*Definition:\*\*', '\\\\textbf{Definition:}', line)
-            line = re.sub('\*\*Theorem:\*\*', '\\\\textbf{Theorem:}', line)
-            line = re.sub('\*\*Proof:\*\*', '\\\\vspace{1em}\n\\\\textbf{Proof:}', line)
-            
-            # use equation environment
-            if not in_equation and line.find('$$') == 0:
-                line = re.sub('\$\$', '\\\\begin{equation}', line)
-                in_equation = True
-            if in_equation and line.find('$$') == 0:
-                line = re.sub('\$\$', '\\\\end{equation}', line)
-                in_equation = False
-            
-            # replace equation labels
-            line = re.sub('\\\\label{eq:', '\\\\label{eq:'+shortcut+'-', line)
-            line = re.sub('\\\\eqref{eq:', '\\\\eqref{eq:'+shortcut+'-', line)
-            
-            # replace hyperlinks
-            line = spbt.replace_links(line, rep_dir)
-            
-            # eliminate linebreaks
-            line = re.sub('<br>', '\\\\vspace{1em}', line)
-            
-            # configure itemize
-            if not in_itemize and line.find('* ') == 0:
-                book.write('\\begin{itemize}\n\n')
-                in_itemize = True
-            if in_itemize and len(line) > 1 and line.find('* ') != 0:
-                book.write('\\end{itemize}\n\n')
-                in_itemize = False
-            if in_itemize and line.find('* ') == 0:
-                line = re.sub('\* ', '\\\\item ', line)
-            
-            # write code line
-            book.write(line)
-            
-        # End itemize
-        if in_itemize:
-            book.write('\n\n\\end{itemize}')
+        # configure itemize
+        if not in_itemize and line.find('* ') == 0:
+            book.write('\\begin{itemize}\n\n')
+            in_itemize = True
+        if in_itemize and len(line) > 1 and line.find('* ') != 0:
+            book.write('\\end{itemize}\n\n')
             in_itemize = False
+        if in_itemize and line.find('* ') == 0:
+            line = re.sub('\* ', '\\\\item ', line)
         
-        # Add tombstone
+        # write code line
+        book.write(line)
+    
+    # End itemize
+    if in_itemize:
+        book.write('\n\n\\end{itemize}')
+        in_itemize = False
+    
+    # Add tombstone
+    if is_proof:
+        book.write('\n\\begin{flushright} $\\blacksquare$ \\end{flushright}\n')
+    
+    # Write sources
+    if bool(sources):
+        book.write('\n\n')
         if is_proof:
-            book.write('\n\\begin{flushright} $\\blacksquare$ \\end{flushright}\n')
-        
-        # Write sources
-        if bool(sources):
-            book.write('\n\n')
-            if is_proof:
-                book.write('\\vspace{-1em}\n')
-            else:
-                book.write('\\vspace{1em}\n')
-            book.write('\\textbf{Sources:}\n')
-            book.write('\\begin{itemize}\n')
-            for source in sources:
-                book.write('\\item ' + source['authors'] + ' (' + source['year'] + '): "' + source['title'] + '"')
-                if 'in'    in source: book.write('; in: \\textit{' + source['in'] + '}')
-                if 'pages' in source: book.write(', ' + source['pages'])
-                if 'url'   in source: book.write('; URL: \\url{' + source['url'] + '}')
-                if 'doi'   in source: book.write('; DOI: ' + source['doi'])
-                book.write('.\n')
-            book.write('\\end{itemize}\n')
+            book.write('\\vspace{-1em}\n')
+        else:
             book.write('\\vspace{1em}\n')
-        
-        # Write metadata
-        # book.write('\n\n')
-        # book.write('\\vspace{1em}\n')
-        # book.write('\\textbf{Metadata:} ID: ' + file_id + ' | shortcut: ' + shortcut + ' | author: ' + username + ' | date: ' + date.strftime('%Y-%m-%d, %H:%M') + '.\n')
-        # book.write('\\vspace{1em}\n')
-        book.write('\n\n\n')
+        book.write('\\textbf{Sources:}\n')
+        book.write('\\begin{itemize}\n')
+        for source in sources:
+            book.write('\\item ' + source['authors'] + ' (' + source['year'] + '): "' + source['title'] + '"')
+            if 'in'    in source: book.write('; in: \\textit{' + source['in'] + '}')
+            if 'pages' in source: book.write(', ' + source['pages'])
+            if 'url'   in source: book.write('; URL: \\url{' + source['url'] + '}')
+            if 'doi'   in source: book.write('; DOI: ' + source['doi'])
+            book.write('.\n')
+        book.write('\\end{itemize}\n')
+        book.write('\\vspace{1em}\n')
+    
+    # Write metadata
+    # book.write('\n\n')
+    # book.write('\\vspace{1em}\n')
+    # book.write('\\textbf{Metadata:} ID: ' + file_id + ' | shortcut: ' + shortcut + ' | author: ' + username + ' | date: ' + date.strftime('%Y-%m-%d, %H:%M') + '.\n')
+    # book.write('\\vspace{1em}\n')
+    book.write('\n\n\n')
         
 # Open "Appendix"
 #-----------------------------------------------------------------------------#
