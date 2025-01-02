@@ -54,12 +54,12 @@ for file in files:
 # Collect eligible proofs and randomize
 #-----------------------------------------------------------------------------#
 if year == 0:
-    dt = datetime.today()
-    ys = dt.year
+    dt   = datetime.today()
+    ys   = dt.year
     year = ys
 else:
     ys = year
-d0 = datetime(ys, 1, 1)
+d0     = datetime(ys, 1, 1)
 proofs = [proof for proof in proofs if proof['date']<d0]
 random.seed(ys)
 random.shuffle(proofs)

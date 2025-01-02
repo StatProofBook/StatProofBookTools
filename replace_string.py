@@ -21,9 +21,9 @@ import BookTools as spbt
 
 # Define settings
 #-----------------------------------------------------------------------------#
-str1r= '.*.*Definition.*.*:'    # should be identical to str1, unless str1
-str1 = '**Definition**:'        # contains regexp-problematic characters 
-str2 = '**Definition:**'
+str1r= '/D/est-unb'             # should be identical to str1, unless str1
+str1 = '/D/est-unb'             # contains regexp-problematic characters 
+str2 = '/D/est-bias'
 
 # Set repository directory
 #-----------------------------------------------------------------------------#
