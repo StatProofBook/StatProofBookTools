@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305949 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2024-10-04, 15:55}
+\date{2025-01-14, 17:02}
 
 \begin{document}
 
@@ -152,10 +152,42 @@ The random variables that are part of data have probability distributions ($\rig
 
 
 
+\subsubsection[\textit{Statistical sample}]{Statistical sample} \label{sec:samp}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) or a set of random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}). Then, a sample, also "statistical sample", is a set of realizations of this random variable, obtained via observation and measurement ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:data}) within random experiments ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rexp}):
+
+\begin{equation} \label{eq:samp-samp}
+x = \left\lbrace x_1, \ldots, x_n \right\rbrace \; .
+\end{equation}
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Elliott, Graham (2024): "Sampling"; in: \textit{Understanding Statistics}, retrieved on 2024-11-15; URL: \url{https://econweb.ucsd.edu/~gelliott/Chapter5.html}.
+\end{itemize}
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Sample size}]{Sample size} \label{sec:samp-size}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a statistical sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) or a set of random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the number of elements $n$ in this sample is called the "sample size".
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2024): "Sampling (statistics)"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2024-11-22; URL: \url{https://en.wikipedia.org/wiki/Sampling_(statistics)}.
+\end{itemize}
+\vspace{1em}
+
+
+
 \subsubsection[\textit{Sample statistic}]{Sample statistic} \label{sec:stat}
 \setcounter{equation}{0}
 
-\textbf{Definition:} A statistic, also "sample statistic", is any quantity calculated from the data points ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:data}) in a sample that is used for statistical purposes.
+\textbf{Definition:} A statistic, also "sample statistic", is any quantity calculated from the data points ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:data}) in a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) that is used for statistical purposes.
 
 Examples include statistics used to estimate the parameters ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) of a probability distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist}) and test statistics ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:tstat}) to evaluate statistical hypotheses ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:hyp}).
 
@@ -658,7 +690,7 @@ p(A \vee B) = p(A) + p(B) \; .
 p(A,B) = 0 \; .
 \end{equation}
 
-The addition law of probability ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:prob-marg}) states that
+The addition law of probability states that
 
 \begin{equation} \label{eq:prob-exc-prob-add-set}
 p(A \cup B) = p(A) + p(B) - p(A \cap B)
@@ -1241,10 +1273,39 @@ This proofs the statement in \eqref{eq:prob-exh2-prob-exh}.
 
 
 
+\subsubsection[\textit{Unimodal vs. multimodal distribution}]{Unimodal vs. multimodal distribution} \label{sec:dist-uni}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be a continuous ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar-disc}) random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) with some probability distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist}) $P$ characterized by probability density function $f_X(x)$. Then,
+
+\begin{itemize}
+
+\item $P$ is called a unimodal probability distribution, if $f_X(x)$ has exactly one maximum;
+
+\item $P$ is called a bimodal probability distribution, if $f_X(x)$ has exactly two maxima;
+
+\item $P$ is called a trimodal probability distribution, if $f_X(x)$ has exactly three maxima;
+
+\item $P$ is called a multimodal probability distribution, if $f_X(x)$ has more than one maximum.
+
+\end{itemize}
+
+Note that this definition of multimodality differs from the strict definition of the mode ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mode}) in which only the global maximum of $f_X(x)$ would be considered the single mode ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mode}).
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Weisstein, Eric W. (2024): "Mode"; in: \textit{Wolfram MathWorld}, retrieved on 2024-10-25; URL: \url{https://mathworld.wolfram.com/Mode.html}.
+\item Wikipedia (2024): "Unimodality"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2024-10-25; URL: \url{https://en.wikipedia.org/wiki/Unimodality#Unimodal_probability_distribution}.
+\end{itemize}
+\vspace{1em}
+
+
+
 \subsubsection[\textit{Sampling distribution}]{Sampling distribution} \label{sec:dist-samp}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let there be a random sample with finite sample size. Then, the probability distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist}) of a given statistic ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:stat}) computed from this sample, e.g. a test statistic ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:tstat}), is called a sampling distribution.
+\textbf{Definition:} Let there be a random sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) with finite sample size ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp-size}). Then, the probability distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist}) of a given statistic ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:stat}) computed from this sample, e.g. a test statistic ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:tstat}), is called a sampling distribution.
 
 \vspace{1em}
 \textbf{Sources:}
@@ -1266,6 +1327,31 @@ Examples of parameters include the mean and variance parameters of a normal dist
 \textbf{Sources:}
 \begin{itemize}
 \item Wikipedia (2024): "Statistical parameter"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2024-09-27; URL: \url{https://en.wikipedia.org/wiki/Statistical_parameter#Parameterised_distributions}.
+\end{itemize}
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Degrees of freedom}]{Degrees of freedom} \label{sec:dof}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Degrees of freedom can refer to
+
+\begin{itemize}
+
+\item a parameter ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) or parameters ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) of certain probability distributions ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist}), such as the chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}), the t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) or the F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f});
+
+\item the number of values in the final calculation of a statistic ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:stat}) that are free to vary, such as $n-1$ for a sample variance ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:var-samp}) calculated from $n$ data points ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:data}).
+
+\end{itemize}
+
+Some statistics ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:stat}) have sampling distributions ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist-samp}) whose parameters ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) (in the former sense) are equal to their degrees of freedom (in the latter sense). For example, a function of the sample variance follows a chi-squared distribution with $n-1$ degrees of freedom ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm-chi2}).
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2024): "Degrees of freedom (statistics)"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2024-10-11; URL: \url{https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)}.
+\item Animated Software (2024): "Degrees of Freedom"; in: \textit{Glossary of Statistical Terms}, retrieved on 2024-10-11; URL: \url{https://www.animatedsoftware.com/statglos/sgdegree.htm}.
 \end{itemize}
 \vspace{1em}
 
@@ -2535,6 +2621,57 @@ M_X(t) = \mathrm{E} \left[ e^{t^\mathrm{T}X} \right], \quad t \in \mathbb{R}^n \
 
 
 
+\subsubsection[\textbf{Moment-generating function of sum of independents}]{Moment-generating function of sum of independents} \label{sec:mgf-sumind}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ and $Y$ be two independent ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) and let $Z = X + Y$. Then, the moment-generating function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mgf}) of $Z$ is given by
+
+\begin{equation} \label{eq:mgf-sumind-mgf-sumind}
+M_Z(t) = M_X(t) \cdot M_Y(t)
+\end{equation}
+
+where $M_X(t)$, $M_Y(t)$ and $M_Z(t)$ are the moment-generating functions ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mgf}) of $X$, $Y$ and $Z$.
+
+
+\vspace{1em}
+\textbf{Proof:} The moment-generating function of a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mgf}) $X$ is
+
+\begin{equation} \label{eq:mgf-sumind-mfg}
+M_X(t) = \mathrm{E} \left( \exp \left[ t X \right] \right)
+\end{equation}
+
+and therefore the moment-generating function of the sum $Z$ is given by
+
+\begin{equation} \label{eq:mgf-sumind-mgf-sumind-s1}
+\begin{split}
+M_Z(t)
+&= \mathrm{E} \left( \exp \left[ t Z \right] \right) \\
+&= \mathrm{E} \left( \exp \left[ t (X + Y) \right] \right) \\
+&= \mathrm{E} \left( \exp \left[ t X \right] \cdot \exp \left[ t Y \right] \right) \; .
+\end{split}
+\end{equation}
+
+Because the expected value is multiplicative for independent random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean-mult}), we have
+
+\begin{equation} \label{eq:mgf-sumind-mgf-sumind-s2}
+\begin{split}
+M_Z(t)
+&= \mathrm{E} \left( \exp \left[ t X \right] \right) \cdot \mathrm{E} \left( \exp \left[ t Y \right] \right) \\
+&= M_X(t) \cdot M_Y(t) \; .
+\end{split}
+\end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Probability Fact (2021): "If X and Y are independent, the moment generating function (MGF)"; in: \textit{X}, retrieved on 2024-11-08; URL: \url{https://x.com/ProbFact/status/1468264616706859016}.
+\end{itemize}
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Moment-generating function of arbitrary function}]{Moment-generating function of arbitrary function} \label{sec:mgf-fct}
 \setcounter{equation}{0}
 
@@ -2634,7 +2771,7 @@ where $a_1, \ldots, a_n$ are $n$ real numbers.
 \vspace{1em}
 \textbf{Proof:} The moment-generating function of a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mgf}) $X_i$ is
 
-\begin{equation} \label{eq:mgf-lincomb-mfg-vect}
+\begin{equation} \label{eq:mgf-lincomb-mfg}
 M_{X_i}(t) = \mathrm{E} \left( \exp \left[ t X_i \right] \right)
 \end{equation}
 
@@ -2894,7 +3031,7 @@ where $f_X(x)$ is the probability density function ($\rightarrow$ \ref{sec:Gener
 \subsubsection[\textit{Sample mean}]{Sample mean} \label{sec:mean-samp}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the sample mean of $x$ is denoted as $\bar{x}$ and is given by
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the sample mean of $x$ is denoted as $\bar{x}$ and is given by
 
 \begin{equation} \label{eq:mean-samp-mean-samp}
 \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i \; .
@@ -3674,7 +3811,7 @@ Finally, substituing \eqref{eq:mean-lotus-Y-pdf} into \eqref{eq:mean-lotus-mean-
 \bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i \; .
 \end{equation}
 
-Then, for any positive number $\epsilon > 0$, the probability that the absolute difference of the sample mean ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean-samp}) from the expected value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean}) $\mu$ is smaller than $\epsilon$ will approach one, as sample size goes to infinity:
+Then, for any positive number $\epsilon > 0$, the probability that the absolute difference of the sample mean ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean-samp}) from the expected value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean}) $\mu$ is smaller than $\epsilon$ will approach one, as sample size ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp-size}) goes to infinity:
 
 \begin{equation} \label{eq:mean-wlln-mean-wlln}
 \lim_{n \rightarrow \infty} \mathrm{Pr}\left( \left| \bar{X} - \mu \right| < \epsilon \right) = 1 \; .
@@ -3814,7 +3951,7 @@ Now taking the limit for $n \rightarrow \infty$ on both sides, while considering
 \subsubsection[\textit{Sample variance}]{Sample variance} \label{sec:var-samp}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the sample variance of $x$ is given by
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the sample variance of $x$ is given by
 
 \begin{equation} \label{eq:var-samp-var-samp}
 \hat{\sigma}^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
@@ -4307,7 +4444,7 @@ Using the decomposition of variance into expected values ($\rightarrow$ \ref{sec
 \subsubsection[\textit{Sample skewness}]{Sample skewness} \label{sec:skew-samp}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the sample skewness of $x$ is given by
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the sample skewness of $x$ is given by
 
 \begin{equation} \label{eq:skew-samp-skew-samp}
 \hat{s} = \frac{\frac{1}{n}\sum_{i=1}^n (x_i-\bar{x})^3}{\left[\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2\right]^{3/2}} \; ,
@@ -4401,7 +4538,7 @@ This finishes the proof of \eqref{eq:skew-mean-skew-partition}.
 \subsubsection[\textit{Sample covariance}]{Sample covariance} \label{sec:cov-samp}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ and $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be samples from random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$. Then, the sample covariance of $x$ and $y$ is given by
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ and $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be samples ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$. Then, the sample covariance of $x$ and $y$ is given by
 
 \begin{equation} \label{eq:cov-samp-cov-samp}
 \hat{\sigma}_{xy} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x}) (y_i - \bar{y})
@@ -4692,7 +4829,7 @@ Once more using the decomposition of covariance into expected values ($\rightarr
 \subsubsection[\textit{Sample covariance matrix}]{Sample covariance matrix} \label{sec:covmat-samp}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample from a random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) $X \in \mathbb{R}^{p \times 1}$. Then, the sample covariance matrix of $x$ is given by
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) $X \in \mathbb{R}^{p \times 1}$. Then, the sample covariance matrix of $x$ is given by
 
 \begin{equation} \label{eq:covmat-samp-covmat-samp}
 \hat{\Sigma} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x}) (x_i - \bar{x})^\mathrm{T}
@@ -5386,7 +5523,7 @@ X, Y \; \text{independent} \quad \Rightarrow \quad \mathrm{Corr}(X,Y) = 0 \; .
 \subsubsection[\textit{Sample correlation coefficient}]{Sample correlation coefficient} \label{sec:corr-samp}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ and $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be samples from random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$. Then, the sample correlation coefficient of $x$ and $y$ is given by
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ and $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be samples ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$. Then, the sample correlation coefficient of $x$ and $y$ is given by
 
 \begin{equation} \label{eq:corr-samp-corr-samp}
 r_{xy} = \frac{\sum_{i=1}^n (x_i-\bar{x}) (y_i-\bar{y})}{\sqrt{\sum_{i=1}^n (x_i-\bar{x})^2} \sqrt{\sum_{i=1}^n (y_i-\bar{y})^2}}
@@ -5406,7 +5543,7 @@ where $\bar{x}$ and $\bar{y}$ are the sample means ($\rightarrow$ \ref{sec:Gener
 \subsubsection[\textbf{Relationship to standard scores}]{Relationship to standard scores} \label{sec:corr-z}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ and $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be samples from random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$. Then, the sample correlation coefficient ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:corr-samp}) $r_{xy}$ can be expressed in terms of the standard scores of $x$ and $y$:
+\textbf{Theorem:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ and $y = \left\lbrace y_1, \ldots, y_n \right\rbrace$ be samples ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$. Then, the sample correlation coefficient ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:corr-samp}) $r_{xy}$ can be expressed in terms of the standard scores of $x$ and $y$:
 
 \begin{equation} \label{eq:corr-z-corr-z}
 r_{xy} = \frac{1}{n-1} \sum_{i=1}^n z_i^{(x)} \cdot z_i^{(y)} = \frac{1}{n-1} \sum_{i=1}^n \left( \frac{x_i-\bar{x}}{s_x} \right) \left( \frac{y_i-\bar{y}}{s_y} \right)
@@ -5482,7 +5619,7 @@ r_{xy} = \frac{1}{n-1} \sum_{i=1}^n \left( \frac{x_i-\bar{x}}{s_x} \right) \left
 \subsubsection[\textit{Sample correlation matrix}]{Sample correlation matrix} \label{sec:corrmat-samp}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample from a random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) $X \in \mathbb{R}^{p \times 1}$. Then, the sample correlation matrix of $x$ is the matrix whose entries are the sample correlation coefficients ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:corr-samp}) between pairs of entries of $x_1, \ldots, x_n$:
+\textbf{Definition:} Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) $X \in \mathbb{R}^{p \times 1}$. Then, the sample correlation matrix of $x$ is the matrix whose entries are the sample correlation coefficients ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:corr-samp}) between pairs of entries of $x_1, \ldots, x_n$:
 
 \begin{equation} \label{eq:corrmat-samp-corrmat-samp-v1}
 \mathrm{R}_{xx} =
@@ -5517,7 +5654,7 @@ in which $\bar{x}^{(j)}$ and $\bar{x}^{(k)}$ are the sample means ($\rightarrow$
 \textbf{Definition:} The median of a sample or random variable is the value separating the higher half from the lower half of its values.
 
 \vspace{1em}
-1) Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the median of $x$ is
+1) Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the median of $x$ is
 
 \begin{equation} \label{eq:med-med-samp}
 \mathrm{median}(x) = \left\{
@@ -5618,7 +5755,7 @@ Finally, the absolute value is a convex function, and so is its expected value b
 \textbf{Definition:} The mode of a sample or random variable is the value which occurs most often or with largest probability among all its values.
 
 \vspace{1em}
-1) Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the mode of $x$ is the value which occurs most often in the list $x_1, \ldots, x_n$.
+1) Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the mode of $x$ is the value which occurs most often in the list $x_1, \ldots, x_n$.
 
 \vspace{1em}
 2) Let $X$ be a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) with probability mass function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pmf}) or probability density function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pdf}) $f_X(x)$. Then, the mode of $X$ is the the value which maximizes the PMF or PDF:
@@ -5688,7 +5825,7 @@ f_X(x_1) = f_X(x_2) = \frac{1}{2} f_X(x_M) \quad \text{and} \quad x_1 < x_M < x_
 \textbf{Definition:} The minimum of a sample or random variable is its lowest observed or possible value.
 
 \vspace{1em}
-1) Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the minimum of $x$ is
+1) Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the minimum of $x$ is
 
 \begin{equation} \label{eq:min-min-samp}
 \mathrm{min}(x) = x_j, \quad \text{such that} \quad x_j \leq x_i \quad \text{for all} \quad i = 1, \ldots, n, \; i \neq j \; ,
@@ -5720,7 +5857,7 @@ i.e. the minimum is the value which is smaller than all other possible values.
 \textbf{Definition:} The maximum of a sample or random variable is its highest observed or possible value.
 
 \vspace{1em}
-1) Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the maximum of $x$ is
+1) Let $x = \left\lbrace x_1, \ldots, x_n \right\rbrace$ be a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$. Then, the maximum of $x$ is
 
 \begin{equation} \label{eq:max-max-samp}
 \mathrm{max}(x) = x_j, \quad \text{such that} \quad x_j \geq x_i \quad \text{for all} \quad i = 1, \ldots, n, \; i \neq j \; ,
@@ -7858,18 +7995,67 @@ we can finally show:
 \pagebreak
 \section{Estimation theory}
 
+\subsection{Basic concepts of estimation}
+
+\subsubsection[\textit{Estimator}]{Estimator} \label{sec:est}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $y \in \mathcal{Y}$ be measured data ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:data}), governed by a probability distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist}) described by some statistical parameter ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) $\theta \in \Theta$. Then, a function $\hat{\theta}: \mathcal{Y} \rightarrow \Theta$ exemplifying a rule for calculating an estimate of $\theta$ from $y$ is called an "estimator". Estimation theory distinguishes:
+
+\begin{itemize}
+
+\item the quantify of interest $\theta$ is called the "estimand";
+
+\item the rule $\hat{\theta}$ for estimating it is called "estimator";
+
+\item the result of estimation $\hat{\theta}(y)$ is called "estimate".
+
+\end{itemize}
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Ostwald, Dirk (2023): "Punktschätzung"; in: \textit{Wahrscheinlichkeitstheorie und Frequentistische Inferenz}, Einheit (9), Folie 7; URL: \url{https://www.ipsy.ovgu.de/ipsy_media/Methodenlehre+I/Wintersemester+2324/Wahrscheinlichkeitstheorie+und+Frequentistische+Inferenz/9_Punktsch%C3%A4tzung.pdf}.
+\item Wikipedia (2024): "Estimator"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2024-11-01; URL: \url{https://en.wikipedia.org/wiki/Estimator#Definition}.
+\end{itemize}
+\vspace{1em}
+
+
+
+\subsubsection[\textit{Biased vs. unbiased}]{Biased vs. unbiased} \label{sec:est-bias}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $\hat{\theta}: \mathcal{Y} \rightarrow \Theta$ be an estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est}) of a parameter ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) $\theta \in \Theta$ from data ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:data}) $y \in \mathcal{Y}$. Then,
+
+\begin{itemize}
+
+\item $\hat{\theta}$ is called an unbiased estimator when its expected value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean}) is equal to the parameter that it is estimating: $\mathrm{E}_{\hat{\theta}}(\hat{\theta}) = \theta$, where the expectation is calculated over all possible samples $y$ leading to values of $\hat{\theta}$.
+
+\item $\hat{\theta}$ is called a biased estimator otherwise, i.e. when $\mathrm{E}_{\hat{\theta}}(\hat{\theta}) \neq \theta$.
+
+\end{itemize}
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2024): "Estimator"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2024-11-08; URL: \url{https://en.wikipedia.org/wiki/Estimator#Bias}.
+\end{itemize}
+\vspace{1em}
+
+
+
 \subsection{Point estimates}
 
 \subsubsection[\textit{Mean squared error}]{Mean squared error} \label{sec:mse}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $\hat{\theta}$ be an estimator of an unknown parameter ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) $\hat{\theta}$ based on measured data ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:data}) $y$. Then, the mean squared error is defined as the expected value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean}) of the squared difference between the estimated value and the true value of the parameter:
+\textbf{Definition:} Let $\hat{\theta}$ be an estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est}) of an unknown parameter ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) $\hat{\theta}$ based on measured data ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:data}) $y$. Then, the mean squared error is defined as the expected value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean}) of the squared difference between the estimated value and the true value of the parameter:
 
 \begin{equation} \label{eq:mse-mse}
 \mathrm{MSE} = \mathrm{E}_{\hat{\theta}}\left[ \left( \hat{\theta} - \theta \right)^2 \right] \; .
 \end{equation}
 
-where $\mathrm{E}_{\hat{\theta}}\left[ \cdot \right]$ is expectation calculated over all possible samples $y$ leading to values of $\hat{\theta}$.
+where $\mathrm{E}_{\hat{\theta}}\left[ \cdot \right]$ is expectation calculated over all possible samples ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) $y$ leading to values of $\hat{\theta}$.
 
 \vspace{1em}
 \textbf{Sources:}
@@ -7948,7 +8134,7 @@ This proofs the partition given by \eqref{eq:mse-bnv-MSE}.
 \subsubsection[\textit{Confidence interval}]{Confidence interval} \label{sec:ci}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $y$ be a random sample from a probability distributions ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist}) governed by a parameter ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) of interest $\theta$ and quantities not of interest $\varphi$. A confidence interval for $\theta$ is defined as an interval $[u(y), v(y)]$ determined by the random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $u(y)$ and $v(y)$ with the property
+\textbf{Definition:} Let $y$ be a random sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from a probability distributions ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist}) governed by a parameter ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) of interest $\theta$ and quantities not of interest $\varphi$. A confidence interval for $\theta$ is defined as an interval $[u(y), v(y)]$ determined by the random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $u(y)$ and $v(y)$ with the property
 
 \begin{equation} \label{eq:ci-ci}
 \mathrm{Pr}(u(y) < \theta < v(y) \, \vert \, \theta, \varphi) = \gamma \quad \text{for all} \quad (\theta, \varphi) \; .
@@ -7986,7 +8172,7 @@ Then, an asymptotic confidence interval ($\rightarrow$ \ref{sec:General Theorems
 \mathrm{CI}_{1-\alpha}(\hat{\phi}) = \left\lbrace \phi \, \vert \, \log p(y|\phi,\hat{\lambda}) \geq \log p(y|\hat{\phi},\hat{\lambda}) - \frac{1}{2} \chi^2_{1,1-\alpha} \right\rbrace
 \end{equation}
 
-where $1-\alpha$ is the confidence level and $\chi^2_{1,1-\alpha}$ is the $(1-\alpha)$-quantile of the chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with 1 degree of freedom.
+where $1-\alpha$ is the confidence level and $\chi^2_{1,1-\alpha}$ is the $(1-\alpha)$-quantile of the chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with 1 degree of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}).
 
 
 \vspace{1em}
@@ -8004,7 +8190,7 @@ and compute the log-likelihood ratio ($\rightarrow$ \ref{sec:General Theorems}/\
 \log \Lambda(\phi) = \log p(y|\phi,\hat{\lambda}) - \log p(y|\hat{\phi},\hat{\lambda}) \; .
 \end{equation}
 
-Wilks' theorem states that, when comparing two statistical models with parameter spaces $\Theta_1$ and $\Theta_0 \subset \Theta_1$, as the sample size approaches infinity, the quantity calculated as $-2$ times the log-ratio of maximum likelihoods follows a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}), if the null hypothesis is true:
+Wilks' theorem states that, when comparing two statistical models with parameter spaces $\Theta_1$ and $\Theta_0 \subset \Theta_1$, as the sample size ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp-size}) approaches infinity, the quantity calculated as $-2$ times the log-ratio of maximum likelihoods follows a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}), if the null hypothesis is true:
 
 \begin{equation} \label{eq:ci-wilks-wilks}
 H_0: \theta \in \Theta_0 \quad \Rightarrow \quad -2 \log \frac{\operatorname*{max}_{\theta \in \Theta_0} p(y|\theta)}{\operatorname*{max}_{\theta \in \Theta_1} p(y|\theta)} \sim \chi^2_{\Delta k}  \quad \text{as} \quad n \rightarrow \infty
@@ -8099,7 +8285,7 @@ The maximum log-likelihood can be obtained by plugging the maximum likelihood es
 \subsubsection[\textbf{MLE can be biased}]{MLE can be biased} \label{sec:mle-bias}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Maximum likelihood estimation ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mle}) can result in biased estimates of model parameters, i.e. estimates whose long-term expected value is unequal to the quantities they estimate:
+\textbf{Theorem:} Maximum likelihood estimation ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mle}) can result in biased estimates ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) of model parameters, i.e. estimates whose long-term expected value is unequal to the quantities they estimate:
 
 \begin{equation} \label{eq:mle-bias-aicc-aic}
 \mathrm{E}\left[ \hat{\theta}_\mathrm{MLE} \right] = \mathrm{E}\left[ \operatorname*{arg\,max}_\theta \mathrm{LL}_m(\theta) \right] \neq \theta \; .
@@ -8238,7 +8424,7 @@ H: \; \theta \in \Theta^{*} \quad \text{where} \quad \Theta^{*} \subset \Theta \
 
 \begin{itemize}
 
-\item $H$ is called a simple hypothesis, if it completely specifies the population distribution; in this case, the sampling distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist-samp}) of the test statistic ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:tstat}) is a function of sample size alone.
+\item $H$ is called a simple hypothesis, if it completely specifies the population distribution; in this case, the sampling distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist-samp}) of the test statistic ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:tstat}) is a function of sample size ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp-size}) alone.
 
 \item $H$ is called a composite hypothesis, if it does not completely specify the population distribution; for example, the hypothesis may only specify one parameter of the distribution and leave others unspecified.
 
@@ -13683,7 +13869,7 @@ such that the full width at half maximum ($\rightarrow$ \ref{sec:General Theorem
 \subsubsection[\textbf{Extreme points}]{Extreme points} \label{sec:norm-extr}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} The probability density function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pdf}) of the normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}) with mean $\mu$ and variance $\sigma^2$ has a maximum at $x = \mu$ and no other extrema. Consequently, the normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}) is a unimodal probability distribution.
+\textbf{Theorem:} The probability density function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pdf}) of the normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}) with mean $\mu$ and variance $\sigma^2$ has a maximum at $x = \mu$ and no other extrema. Consequently, the normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}) is a unimodal probability distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist-uni}).
 
 
 \vspace{1em}
@@ -14227,12 +14413,113 @@ Therefore, $X$ and $Y$ defined by \eqref{eq:norm-corrind-X-Y} and \eqref{eq:norm
 
 
 
+\subsubsection[\textbf{Marginally normal does not imply jointly normal}]{Marginally normal does not imply jointly normal} \label{sec:norm-margjoint}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Consider two random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X$ and $Y$. If the marginal distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist-marg}) of each of them is a normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}), then the joint distribution ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dist-joint}) $X$ and $Y$ is not necessarily a (multivariate) normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn}).
+
+
+\vspace{1em}
+\textbf{Proof:} Consider the example used to show that normally distributed and uncorrelated does not imply independent ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm-corrind}). This is characterized by the random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar})
+
+\begin{equation} \label{eq:norm-margjoint-V-W}
+\begin{split}
+V &\sim \mathrm{Bern}\left( \frac{1}{2} \right) \\
+W &= 2V-1 \; .
+\end{split}
+\end{equation}
+
+and
+
+\begin{equation} \label{eq:norm-margjoint-X-Y}
+\begin{split}
+X &\sim \mathcal{N}(0,1) \\
+Y &= WX \; .
+\end{split}
+\end{equation}
+
+Under these conditions, it can be shown that ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm-corrind})
+
+\begin{equation} \label{eq:norm-margjoint-X-Y-dist}
+X \sim \mathcal{N}(0,1)
+\quad \text{and} \quad
+Y \sim \mathcal{N}(0,1) \; .
+\end{equation}
+
+The linear transformation theorem for the multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-ltt})
+
+\begin{equation} \label{eq:norm-margjoint-mvn-ltt}
+x \sim \mathcal{N}(\mu, \Sigma) \quad \Rightarrow \quad y = Ax + b \sim \mathcal{N}(A\mu + b, A \Sigma A^\mathrm{T})
+\end{equation}
+
+implies that, for bivariate normal random variables ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}) $X_1$ and $X_2$,
+
+\begin{equation} \label{eq:norm-margjoint-bvn}
+\left[ \begin{matrix} X_1 \\ X_2 \end{matrix} \right] \sim
+\mathcal{N}\left(
+\left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right],
+\left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right]
+\right) \; .
+\end{equation}
+
+any linear combination of $X_1$ and $X_2$ with non-zero coefficients
+
+\begin{equation} \label{eq:norm-margjoint-bvn-Z}
+Z = a X_1 + b X_2, \; a \neq 0, \; b \neq 0
+\end{equation}
+
+follows a univariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn-lincomb}):
+
+\begin{equation} \label{eq:norm-margjoint-bvn-lincomb}
+Z \sim \mathcal{N}\left( a \mu_1 + b \mu_2, a^2 \sigma_1^2 + 2 a b \sigma_{12} + b^2 \sigma_2^2 \right) \; .
+\end{equation}
+
+Consider the sum of $X$ and $Y$ defined by \eqref{eq:norm-margjoint-X-Y}:
+
+\begin{equation} \label{eq:norm-margjoint-Z}
+Z = X + Y = a X + b Y
+\quad \text{with} \quad
+a = b = 1 \; .
+\end{equation}
+
+If $X$ and $Y$ were bivariate normally distributed ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}), then this sum should be univariate normally distributed ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}). However, this sum cannot be normally distributed, since
+
+\begin{equation} \label{eq:norm-margjoint-Z-dist}
+\mathrm{Pr}(X + Y = 0)  = \frac{1}{2}
+\quad \text{and} \quad
+\mathrm{Pr}(X + Y = 2X) = \frac{1}{2} \; ,
+\end{equation}
+
+because
+
+\begin{equation} \label{eq:norm-margjoint-Y-dist}
+Y = \left\{
+\begin{array}{rl}
+ X \; , & \text{with probability} \; 1/2 \\
+-X \; , & \text{with probability} \; 1/2
+\end{array}
+\right. \; .
+\end{equation}
+
+Thus, $X$ and $Y$ are not following a bivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}). Therefore, $X$ and $Y$ defined by \eqref{eq:norm-margjoint-X-Y} and \eqref{eq:norm-margjoint-V-W} constitute an example for two random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) that are marginally normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}), but not jointly normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn}).
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2024): "Misconceptions about the normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2024-10-11; URL: \url{https://en.wikipedia.org/wiki/Misconceptions_about_the_normal_distribution#A_symmetric_example}.
+\end{itemize}
+\vspace{1em}
+
+
+
 \subsection{t-distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:t}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $Z$ and $V$ be independent ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) following a standard normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:snorm}) and a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $\nu$ degrees of freedom, respectively:
+\textbf{Definition:} Let $Z$ and $V$ be independent ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) following a standard normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:snorm}) and a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $\nu$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}), respectively:
 
 \begin{equation} \label{eq:t-snorm-chi2}
 \begin{split}
@@ -14391,7 +14678,7 @@ f_T(t) = \frac{\Gamma\left( \frac{\nu+1}{2} \right)}{\Gamma\left( \frac{\nu}{2} 
 
 
 \vspace{1em}
-\textbf{Proof:} A t-distributed random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) is defined as the ratio of a standard normal random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:snorm}) and the square root of a chi-squared random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}), divided by its degrees of freedom
+\textbf{Proof:} A t-distributed random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) is defined as the ratio of a standard normal random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:snorm}) and the square root of a chi-squared random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}), divided by its degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof})
 
 \begin{equation} \label{eq:t-pdf-t-def}
 X \sim \mathcal{N}(0,1), \; Y \sim \chi^2(\nu) \quad \Rightarrow \quad T = \frac{X}{\sqrt{Y/\nu}} \sim t(\nu)
@@ -16650,6 +16937,176 @@ Finally, plugging \eqref{eq:lognorm-var-second-moment-4} and \eqref{eq:lognorm-v
 
 
 
+\subsubsection[\textbf{Product of independent log-normals}]{Product of independent log-normals} \label{sec:lognorm-prodind}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X_1, \ldots, X_n$ be independent ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) following log-normal distributions ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm}):
+
+\begin{equation} \label{eq:lognorm-prodind-X-lognorm}
+X_i \sim \ln \mathcal{N}(\mu_i, \sigma_i^2), \; i = 1, \ldots, n \; .
+\end{equation}
+
+Then, the product of these random variables also follows a log-normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm})
+
+\begin{equation} \label{eq:lognorm-prodind-Z-lognorm}
+Z = \prod_{i=1}^n X_i \sim \mathcal{N}(\mu, \sigma^2)
+\end{equation}
+
+where the log-normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm}) parameters are given by
+
+\begin{equation} \label{eq:lognorm-prodind-Z-lognorm-para}
+\mu      = \sum_{i=1}^n \mu_i
+\quad \text{and} \quad
+\sigma^2 = \sum_{i=1}^n \sigma_i^2 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} A random variable follows a log-normal distribution, if and only if its natural logarithm follows a normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm}):
+
+\begin{equation} \label{eq:lognorm-prodind-lognorm-norm}
+X \sim \ln \mathcal{N}(\mu, \sigma^2)
+\quad \Leftrightarrow \quad
+\ln X \sim \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Thus, from \eqref{eq:lognorm-prodind-X-lognorm}, we have
+
+\begin{equation} \label{eq:lognorm-prodind-Y-norm}
+Y_i = \ln X_i \sim \mathcal{N}(\mu_i, \sigma_i^2)
+\end{equation}
+
+and from \eqref{eq:lognorm-prodind-Z-lognorm}, we have
+
+\begin{equation} \label{eq:lognorm-prodind-ln-Z}
+  \ln Z
+= \ln \left( \prod_{i=1}^n X_i \right)
+= \sum_{i=1}^n \ln X_i
+= \sum_{i=1}^n Y_i \; .
+\end{equation}
+
+This means that the logarithm of the product of independent log-normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm}) random variables is a sum of independent normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}) random variables. This sum, like any linear combination of independent normal random variables, is again normally distributed ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm-lincomb}). Thus, combining \eqref{eq:lognorm-prodind-ln-Z} and \eqref{eq:lognorm-prodind-Y-norm}, we have:
+
+\begin{equation} \label{eq:lognorm-prodind-ln-Z-norm}
+     \ln Z
+=    \sum_{i=1}^n Y_i
+\sim \mathcal{N}\left( \sum_{i=1}^n \mu_i, \, \sum_{i=1}^n \sigma_i^2 \right) \; .
+\end{equation}
+
+If a random variable [follows a normal distribution, then its exponential follows a log-normal distribution with the same parameters]:
+
+\begin{equation} \label{eq:lognorm-prodind-norm-lognorm}
+Y \sim \mathcal{N}(\mu, \sigma^2)
+\quad \Leftrightarrow \quad
+\exp(Y) \sim \ln \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Thus, from \eqref{eq:lognorm-prodind-ln-Z-norm}, we have
+
+\begin{equation} \label{eq:lognorm-prodind-Z-lognorm-qed}
+     Z
+=    \exp(\ln Z) 
+\sim \ln \mathcal{N}\left( \sum_{i=1}^n \mu_i, \, \sum_{i=1}^n \sigma_i^2 \right)
+\end{equation}
+
+which is equivalent to \eqref{eq:lognorm-prodind-Z-lognorm} and \eqref{eq:lognorm-prodind-Z-lognorm-para}.
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item drhab (2018): "If Xi is a log-normal r.v., show product of all Xi is also a log-normal r.v."; in: \textit{StackExchange Mathematics}, retrieved on 2024-11-15; URL: \url{https://math.stackexchange.com/a/2838307/480910}.
+\end{itemize}
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Geometric mean of independent log-normals}]{Geometric mean of independent log-normals} \label{sec:lognorm-geomind}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X_1, \ldots, X_n$ be independent ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) following log-normal distributions ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm}):
+
+\begin{equation} \label{eq:lognorm-geomind-X-lognorm}
+X_i \sim \ln \mathcal{N}(\mu_i, \sigma_i^2), \; i = 1, \ldots, n \; .
+\end{equation}
+
+Then, the geometric mean of these random variables also follows a log-normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm}):
+
+\begin{equation} \label{eq:lognorm-geomind-Z-lognorm}
+Z = \sqrt[n]{\prod_{i=1}^n X_i} \sim \mathcal{N}(\mu, \sigma^2)
+\end{equation}
+
+where the log-normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm}) parameters are given by
+
+\begin{equation} \label{eq:lognorm-geomind-Z-lognorm-para}
+\mu      = \frac{1}{n} \sum_{i=1}^n \mu_i
+\quad \text{and} \quad
+\sigma^2 = \frac{1}{n^2} \sum_{i=1}^n \sigma_i^2 \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} A random variable follows a log-normal distribution, if and only if its natural logarithm follows a normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm}):
+
+\begin{equation} \label{eq:lognorm-geomind-lognorm-norm}
+X \sim \ln \mathcal{N}(\mu, \sigma^2)
+\quad \Leftrightarrow \quad
+\ln X \sim \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Thus, from \eqref{eq:lognorm-geomind-X-lognorm}, we have
+
+\begin{equation} \label{eq:lognorm-geomind-Y-norm}
+Y_i = \ln X_i \sim \mathcal{N}(\mu_i, \sigma_i^2)
+\end{equation}
+
+and from \eqref{eq:lognorm-geomind-Z-lognorm}, we have
+
+\begin{equation} \label{eq:lognorm-geomind-ln-Z}
+  \ln Z
+= \ln \left( \sqrt[n]{\prod_{i=1}^n X_i} \right)
+= \frac{1}{n} \sum_{i=1}^n \ln X_i
+= \frac{1}{n} \sum_{i=1}^n Y_i \; .
+\end{equation}
+
+This means that the logarithm of the geometric mean of independent log-normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:lognorm}) random variables is the arithmetic mean of independent normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}) random variables. This average, like any linear combination of independent normal random variables, is again normally distributed ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm-lincomb}). Thus, combining \eqref{eq:lognorm-geomind-ln-Z} and \eqref{eq:lognorm-geomind-Y-norm}, we have:
+
+\begin{equation} \label{eq:lognorm-geomind-ln-Z-norm}
+     \ln Z
+=    \frac{1}{n} \sum_{i=1}^n Y_i
+\sim \mathcal{N}\left( \frac{1}{n} \sum_{i=1}^n \mu_i, \, \frac{1}{n^2} \sum_{i=1}^n \sigma_i^2 \right) \; .
+\end{equation}
+
+If a random variable [follows a normal distribution, then its exponential follows a log-normal distribution with the same parameters]:
+
+\begin{equation} \label{eq:lognorm-geomind-norm-lognorm}
+Y \sim \mathcal{N}(\mu, \sigma^2)
+\quad \Leftrightarrow \quad
+\exp(Y) \sim \ln \mathcal{N}(\mu, \sigma^2) \; .
+\end{equation}
+
+Thus, from \eqref{eq:lognorm-geomind-ln-Z-norm}, we have
+
+\begin{equation} \label{eq:lognorm-geomind-Z-lognorm-qed}
+     Z
+=    \exp(\ln Z)
+\sim \ln \mathcal{N}\left( \frac{1}{n} \sum_{i=1}^n \mu_i, \, \frac{1}{n^2} \sum_{i=1}^n \sigma_i^2 \right)
+\end{equation}
+
+which is equivalent to \eqref{eq:lognorm-geomind-Z-lognorm} and \eqref{eq:lognorm-geomind-Z-lognorm-para}.
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Probability Fact (2022): "The geometric mean of independent log-normal random variables has a log-normal distribution"; in: \textit{X}, retrieved on 2024-11-22; URL: \url{https://x.com/ProbFact/status/1592989704646848512}.
+\end{itemize}
+\vspace{1em}
+
+
+
 \subsection{Chi-squared distribution}
 
 \subsubsection[\textit{Definition}]{Definition} \label{sec:chi2}
@@ -16872,7 +17329,7 @@ this leads to the desired result when $m > -k/2$. Observe that, if $m$ is a nonn
 \subsubsection[\textit{Definition}]{Definition} \label{sec:f}
 \setcounter{equation}{0}
 
-\textbf{Definition:} Let $X_1$ and $X_2$ be independent ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) following a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $d_1$ and $d_2$ degrees of freedom, respectively:
+\textbf{Definition:} Let $X_1$ and $X_2$ be independent ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:ind}) random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) following a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $d_1$ and $d_2$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}), respectively:
 
 \begin{equation} \label{eq:f-chi2}
 \begin{split}
@@ -16915,7 +17372,7 @@ f_F(f) = \frac{\Gamma\left( \frac{u+v}{2} \right)}{\Gamma\left( \frac{u}{2} \rig
 
 
 \vspace{1em}
-\textbf{Proof:} An F-distributed random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}) is defined as the ratio of two chi-squared random variables ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}), divided by their degrees of freedom
+\textbf{Proof:} An F-distributed random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}) is defined as the ratio of two chi-squared random variables ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}), divided by their degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof})
 
 \begin{equation} \label{eq:f-pdf-f-def}
 X \sim \chi^2(u), \; Y \sim \chi^2(v) \quad \Rightarrow \quad F = \frac{X/u}{Y/v} \sim \mathrm{F}(u,v)
@@ -18636,7 +19093,7 @@ which is equivalent to the probability density function of the multivariate norm
 x \sim \mathcal{N}(0, \Sigma) \; .
 \end{equation}
 
-Then, the quadratic form of $x$, weighted by $\Sigma$, follows a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $n$ degrees of freedom:
+Then, the quadratic form of $x$, weighted by $\Sigma$, follows a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $n$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}):
 
 \begin{equation} \label{eq:mvn-chi2-mvn-chi2}
 y = x^\mathrm{T} \Sigma^{-1} x \sim \chi^2(n) \; .
@@ -18690,173 +19147,6 @@ y \sim \chi^2(n) \; .
 \textbf{Sources:}
 \begin{itemize}
 \item Koch KR (2007): "Chi-Squared Distribution"; in: \textit{Introduction to Bayesian Statistics}, ch. 2.4.5, pp. 48-49, eq. 2.180; URL: \url{https://www.springer.com/gp/book/9783540727231}; DOI: 10.1007/978-3-540-72726-2.
-\end{itemize}
-\vspace{1em}
-
-
-
-\subsubsection[\textit{Bivariate normal distribution}]{Bivariate normal distribution} \label{sec:bvn}
-\setcounter{equation}{0}
-
-\textbf{Definition:} Let $X$ be an $2 \times 1$ random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}). Then, $X$ is said to have a bivariate normal distribution, if $X$ follows a multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn})
-
-\begin{equation} \label{eq:bvn-mvn}
-X \sim \mathcal{N}(\mu, \Sigma)
-\end{equation}
-
-with means ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean}) $\mu_1$ and $\mu_2$, variances ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:var}) $\sigma_1^2$ and $\sigma_2^2$ and covariance ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cov}) $\sigma_{12}$:
-
-\begin{equation} \label{eq:bvn-bvn}
-\mu = \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right]
-\quad \text{and} \quad
-\Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \; .
-\end{equation}
-
-\vspace{1em}
-\textbf{Sources:}
-\begin{itemize}
-\item Wikipedia (2023): "Multivariate normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2023-09-22; URL: \url{https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Bivariate_case}.
-\end{itemize}
-\vspace{1em}
-
-
-
-\subsubsection[\textbf{Probability density function of the bivariate normal distribution}]{Probability density function of the bivariate normal distribution} \label{sec:bvn-pdf}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} Let $X = \left[ \begin{matrix} X_1 \\\\ X_2 \end{matrix} \right]$ follow a bivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}):
-
-\begin{equation} \label{eq:bvn-pdf-bvn}
-X \sim \mathcal{N}\left( \mu = \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right) \; .
-\end{equation}
-
-Then, the probability density function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pdf}) of $X$ is:
-
-\begin{equation} \label{eq:bvn-pdf-bvn-pdf}
-f_X(x) = \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2} \frac{\sigma_2^2 (x_1-\mu_1)^2 - 2 \sigma_{12} (x_1-\mu_1)(x_2-\mu_2) + \sigma_1^2 (x_2-\mu_2)^2}{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2} \right] \; .
-\end{equation}
-
-
-\vspace{1em}
-\textbf{Proof:} The probability density function of the multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}) for an $n \times 1$ random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) $x$ is:
-
-\begin{equation} \label{eq:bvn-pdf-mvn-pdf}
-f_X(x) = \frac{1}{\sqrt{(2 \pi)^n |\Sigma|}} \cdot \exp \left[ -\frac{1}{2} (x-\mu)^\mathrm{T} \Sigma^{-1} (x-\mu) \right] \; .
-\end{equation}
-
-Plugging in $n = 2$, $\mu = \left[ \begin{matrix} \mu_1 \\\\ \mu_2 \end{matrix} \right]$ and $\Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\\\ \sigma_{12} & \sigma_2^2 \end{matrix} \right]$, we obtain:
-
-\begin{equation} \label{eq:bvn-pdf-bvn-pdf-s1}
-\begin{split}
-f_X(x) &= \frac{1}{\sqrt{(2 \pi)^2 \left| \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right|}} \cdot \exp \left[ -\frac{1}{2} \left( \left[ \begin{matrix} x_1 \\ x_2 \end{matrix} \right] - \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right] \right)^\mathrm{T} \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right]^{-1} \left( \left[ \begin{matrix} x_1 \\ x_2 \end{matrix} \right] - \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right] \right) \right] \\
-&= \frac{1}{2 \pi \left| \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right|^\frac{1}{2}} \cdot \exp \left[ -\frac{1}{2} \left[ \begin{matrix} (x_1-\mu_1) & (x_2-\mu_2) \end{matrix} \right] \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right]^{-1} \left[ \begin{matrix} (x_1-\mu_1) \\ (x_2-\mu_2) \end{matrix} \right] \right] \; .
-\end{split}
-\end{equation}
-
-Using the determinant of a $2 \times 2$ matrix
-
-\begin{equation} \label{eq:bvn-pdf-det-2x2}
-\left| \left[ \begin{matrix} a & b \\ c & d \end{matrix} \right] \right| = a d - b c
-\end{equation}
-
-and the inverse of of a $2 \times 2$ matrix
-
-\begin{equation} \label{eq:bvn-pdf-inv-2x2}
-\left[ \begin{matrix} a & b \\ c & d \end{matrix} \right]^{-1} = \frac{1}{a d - b c} \left[ \begin{matrix} d & -b \\ -c & a \end{matrix} \right] \; ,
-\end{equation}
-
-the probability density function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pdf}) becomes:
-
-\begin{equation} \label{eq:bvn-pdf-bvn-pdf-s2}
-\begin{split}
-f_X(x) &= \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2 (\sigma_1^2 \sigma_2^2 - \sigma_{12}^2)} \left[ \begin{matrix} (x_1-\mu_1) & (x_2-\mu_2) \end{matrix} \right] \left[ \begin{matrix} \sigma_2^2 & -\sigma_{12} \\ -\sigma_{12} & \sigma_1^2 \end{matrix} \right] \left[ \begin{matrix} (x_1-\mu_1) \\ (x_2-\mu_2) \end{matrix} \right] \right] \\
-&= \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2 (\sigma_1^2 \sigma_2^2 - \sigma_{12}^2)} \left[ \begin{matrix} \sigma_2^2 (x_1-\mu_1) - \sigma_{12} (x_2-\mu_2) & \sigma_1^2 (x_2-\mu_2) - \sigma_{12} (x_1-\mu_1) \end{matrix} \right] \left[ \begin{matrix} (x_1-\mu_1) \\ (x_2-\mu_2) \end{matrix} \right] \right] \\
-&= \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2 (\sigma_1^2 \sigma_2^2 - \sigma_{12}^2)} (\sigma_2^2 (x_1-\mu_1)^2 - \sigma_{12} (x_1-\mu_1)(x_2-\mu_2) + \sigma_1^2 (x_2-\mu_2)^2 - \sigma_{12} (x_1-\mu_1)(x_2-\mu_2)) \right] \\
-&= \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2} \frac{\sigma_2^2 (x_1-\mu_1)^2 - 2 \sigma_{12} (x_1-\mu_1)(x_2-\mu_2) + \sigma_1^2 (x_2-\mu_2)^2}{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2} \right] \; .
-\end{split}
-\end{equation}
-\begin{flushright} $\blacksquare$ \end{flushright}
-
-
-
-\subsubsection[\textbf{Probability density function in terms of correlation coefficient}]{Probability density function in terms of correlation coefficient} \label{sec:bvn-pdfcorr}
-\setcounter{equation}{0}
-
-\textbf{Theorem:} Let $X = \left[ \begin{matrix} X_1 \\\\ X_2 \end{matrix} \right]$ follow a bivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}):
-
-\begin{equation} \label{eq:bvn-pdfcorr-bvn}
-X \sim \mathcal{N}\left( \mu = \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right) \; .
-\end{equation}
-
-Then, the probability density function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pdf}) of $X$ is
-
-\begin{equation} \label{eq:bvn-pdfcorr-bvn-pdf}
-f_X(x) = \frac{1}{2 \pi \, \sigma_1 \sigma_2 \sqrt{1 - \rho^2}} \cdot \exp \left[ -\frac{1}{2 (1 - \rho^2)} \left( \left( \frac{x_1-\mu_1}{\sigma_1} \right)^2 - 2 \rho \frac{(x_1-\mu_1) (x_2-\mu_2)}{\sigma_1 \sigma_2} + \left( \frac{x_2-\mu_2}{\sigma_2} \right)^2 \right) \right]
-\end{equation}
-
-where $\rho$ is the correlation ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:corr}) between $X_1$ and $X_2$.
-
-
-\vspace{1em}
-\textbf{Proof:} Since $X$ follows a special case of the multivariate normal distribution, its covariance matrix is ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-cov})
-
-\begin{equation} \label{eq:bvn-pdfcorr-cov-X}
-\mathrm{Cov}(X) = \Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right]
-\end{equation}
-
-and the covariance matrix can be decomposed into correlation matrix and standard deviations ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:covmat-corrmat}):
-
-\begin{equation} \label{eq:bvn-pdfcorr-Sigma}
-\begin{split}
-\Sigma &= \left[ \begin{matrix} \sigma_1^2 & \rho \, \sigma_1 \sigma_2 \\ \rho \, \sigma_1 \sigma_2 & \sigma_2^2 \end{matrix} \right] \\
-&= \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right] \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \; .
-\end{split}
-\end{equation}
-
-The determinant of this matrix is
-
-\begin{equation} \label{eq:bvn-pdfcorr-Sigma-det}
-\begin{split}
-\left| \Sigma \right| &= \left| \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right] \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \right| \\
-&= \left| \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \right| \cdot \left| \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right] \right| \cdot \left| \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \right| \\
-&= (\sigma_1 \sigma_2) (1 - \rho^2) (\sigma_1 \sigma_2) \\
-&= \sigma_1^2 \sigma_2^2 (1 - \rho^2)
-\end{split}
-\end{equation}
-
-and the inverse of this matrix is
-
-\begin{equation} \label{eq:bvn-pdfcorr-Sigma-inv}
-\begin{split}
-\Sigma^{-1} &= \left( \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right] \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \right)^{-1} \\
-&= \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right]^{-1} \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right]^{-1} \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right]^{-1} \\
-&= \frac{1}{1 - \rho^2} \left[ \begin{matrix} 1/\sigma_1 & 0 \\ 0 & 1/\sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & -\rho \\ -\rho & 1 \end{matrix} \right] \left[ \begin{matrix} 1/\sigma_1 & 0 \\ 0 & 1/\sigma_2 \end{matrix} \right] \; .
-\end{split}
-\end{equation}
-
-The probability density function of the multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}) for an $n \times 1$ random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) $x$ is:
-
-\begin{equation} \label{eq:bvn-pdfcorr-mvn-pdf}
-f_X(x) = \frac{1}{\sqrt{(2 \pi)^n |\Sigma|}} \cdot \exp \left[ -\frac{1}{2} (x-\mu)^\mathrm{T} \Sigma^{-1} (x-\mu) \right] \; .
-\end{equation}
-
-Plugging in $n = 2$, $\mu$ from \eqref{eq:bvn-pdfcorr-bvn} and $\Sigma$ from \eqref{eq:bvn-pdfcorr-Sigma-det} and \eqref{eq:bvn-pdfcorr-Sigma-inv}, the probability density function becomes:
-
-\begin{equation} \label{eq:bvn-pdfcorr-bvn-pdf-corr}
-\begin{split}
-f_X(x) &= \frac{1}{\sqrt{(2 \pi)^2 \sigma_1^2 \sigma_2^2 (1 - \rho^2)}} \cdot \exp \left[ -\frac{1}{2} \left( \left[ \begin{matrix} x_1 \\ x_2 \end{matrix} \right] - \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right] \right)^\mathrm{T} \frac{1}{1 - \rho^2} \left[ \begin{matrix} 1/\sigma_1 & 0 \\ 0 & 1/\sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & -\rho \\ -\rho & 1 \end{matrix} \right] \left[ \begin{matrix} 1/\sigma_1 & 0 \\ 0 & 1/\sigma_2 \end{matrix} \right] \left( \left[ \begin{matrix} x_1 \\ x_2 \end{matrix} \right] - \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right] \right) \right] \\
-&= \frac{1}{2 \pi \, \sigma_1 \sigma_2 \sqrt{1 - \rho^2}} \cdot \exp \left[ -\frac{1}{2 (1 - \rho^2)} \left[ \begin{matrix} \frac{x_1-\mu_1}{\sigma_1} & \frac{x_2-\mu_2}{\sigma_2} \end{matrix} \right] \left[ \begin{matrix} 1 & -\rho \\ -\rho & 1 \end{matrix} \right] \left[ \begin{matrix} \frac{x_1-\mu_1}{\sigma_1} \\ \frac{x_2-\mu_2}{\sigma_2} \end{matrix} \right]  \right] \\
-&= \frac{1}{2 \pi \, \sigma_1 \sigma_2 \sqrt{1 - \rho^2}} \cdot \exp \left[ -\frac{1}{2 (1 - \rho^2)} \left[ \begin{matrix} \left( \frac{x_1-\mu_1}{\sigma_1} - \rho \frac{x_2-\mu_2}{\sigma_2} \right) & \left( \frac{x_2-\mu_2}{\sigma_2} - \rho \frac{x_1-\mu_1}{\sigma_1} \right) \end{matrix} \right] \left[ \begin{matrix} \frac{x_1-\mu_1}{\sigma_1} \\ \frac{x_2-\mu_2}{\sigma_2} \end{matrix} \right]  \right] \\
-&= \frac{1}{2 \pi \, \sigma_1 \sigma_2 \sqrt{1 - \rho^2}} \cdot \exp \left[ -\frac{1}{2 (1 - \rho^2)} \left( \left( \frac{x_1-\mu_1}{\sigma_1} \right)^2 - 2 \rho \frac{(x_1-\mu_1) (x_2-\mu_2)}{\sigma_1 \sigma_2} + \left( \frac{x_2-\mu_2}{\sigma_2} \right)^2 \right) \right] \; .
-\end{split}
-\end{equation}
-\begin{flushright} $\blacksquare$ \end{flushright}
-
-
-\vspace{-1em}
-\textbf{Sources:}
-\begin{itemize}
-\item Wikipedia (2023): "Multivariate normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2023-09-29; URL: \url{https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Bivariate_case}.
 \end{itemize}
 \vspace{1em}
 
@@ -19186,6 +19476,80 @@ such that the differential entropy is
 \textbf{Sources:}
 \begin{itemize}
 \item Kiuhnm (2018): "Entropy of the multivariate Gaussian"; in: \textit{StackExchange Mathematics}, retrieved on 2020-05-14; URL: \url{https://math.stackexchange.com/questions/2029707/entropy-of-the-multivariate-gaussian}.
+\end{itemize}
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Mutual information}]{Mutual information} \label{sec:mvn-mi}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X \in \mathbb{R}^n$ and $Y \in \mathbb{R}^m$ be random vectors ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) that are jointly multivariate normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn}):
+
+\begin{equation} \label{eq:mvn-mi-bvn}
+\left[ \begin{matrix} X \\ Y \end{matrix} \right] \sim
+\mathcal{N}\left( \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \left[ \begin{matrix} \Sigma_1 & \Sigma_{12} \\ \Sigma_{21} & \Sigma_2 \end{matrix} \right] \right) \; .
+\end{equation}
+
+Then, the mutual information ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ is
+
+\begin{equation} \label{eq:mvn-mi-bvn-lincomb}
+\mathrm{I}(X,Y) = \frac{1}{2} \ln \left[ \frac{|\Sigma_1| |\Sigma_2|}{|\Sigma|} \right]
+\end{equation}
+
+where $\mu \in \mathbb{R}^p$ and $\Sigma \in \mathbb{R}^{p \times p}$ are the mean ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean}) and covariance matrix ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:covmat}) of the random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) $\left[ \begin{matrix} X \\\\ Y \end{matrix} \right] \in \mathbb{R}^p$, respectively, where $p = n + m$.
+
+
+\vspace{1em}
+\textbf{Proof:} Mutual information can be written in terms of marginal and joint differential entropy ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cmi-mjde}):
+
+\begin{equation} \label{eq:mvn-mi-cmi-mjde}
+\mathrm{I}(X,Y) = \mathrm{h}(X) + \mathrm{h}(Y) - \mathrm{h}(X,Y) \; .
+\end{equation}
+
+The marginal distributions of the multivariate normal distribution are also multivariate normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-marg})
+
+\begin{equation} \label{eq:mvn-mi-mvn-marg}
+\left[ \begin{matrix} X_1 \\ X_2 \end{matrix} \right] \sim
+\mathcal{N}\left( \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \left[ \begin{matrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{matrix} \right] \right)
+\quad \Rightarrow \quad
+X_1 \sim \mathcal{N}\left( \mu_1, \Sigma_{11} \right) \; ,
+\end{equation}
+
+such that the marginals of $X$ and $Y$ are:
+
+\begin{equation} \label{eq:mvn-mi-X-Y-marg}
+X \sim \mathcal{N}\left( \mu_1, \Sigma_1 \right)
+\quad \text{and} \quad
+Y \sim \mathcal{N}\left( \mu_2, \Sigma_2 \right) \; .
+\end{equation}
+
+The differential entropy of the multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-dent}) is
+
+\begin{equation} \label{eq:mvn-mi-mvn-dent}
+\mathrm{h}(x) = \frac{n}{2} \ln(2\pi) + \frac{1}{2} \ln|\Sigma| + \frac{1}{2} n
+\end{equation}
+
+where $\lvert \Sigma \rvert$ is the determinant of $\Sigma$. Combining \eqref{eq:mvn-mi-cmi-mjde} with \eqref{eq:mvn-mi-mvn-dent}, we get:
+
+\begin{equation} \label{eq:mvn-mi-bvn-mi}
+\begin{split}
+\mathrm{I}(X,Y)
+&\overset{\eqref{eq:mvn-mi-cmi-mjde}}{=} \mathrm{h}(X) + \mathrm{h}(Y) - \mathrm{h}(X,Y) \\
+&\overset{\eqref{eq:mvn-mi-X-Y-marg}}{=} \mathrm{h}\left[ \mathcal{N}\left( \mu_1, \Sigma_1 \right) \right] + \mathrm{h}\left[ \mathcal{N}\left( \mu_2, \Sigma_2 \right) \right] - \mathrm{h}\left[ \mathcal{N}\left( \mu, \Sigma \right) \right] \\
+&\overset{\eqref{eq:mvn-mi-mvn-dent}}{=} \left[ \frac{n}{2} \ln(2\pi) + \frac{1}{2} \ln|\Sigma_1| + \frac{1}{2} n \right] + \left[ \frac{m}{2} \ln(2\pi) + \frac{1}{2} \ln|\Sigma_2| + \frac{1}{2} m \right] - \left[ \frac{p}{2} \ln(2\pi) + \frac{1}{2} \ln|\Sigma| + \frac{1}{2} p \right] \\
+&= \left( \frac{n+m-p}{2} \ln(2\pi) + \frac{1}{2}(n+m-p) \right) + \left( \frac{1}{2} \ln|\Sigma_1| + \frac{1}{2} \ln|\Sigma_2| - \frac{1}{2} \ln|\Sigma| \right) \\
+&= \frac{1}{2} \left( \ln|\Sigma_1| + \ln|\Sigma_2| - \ln|\Sigma| \right) \\
+&= \frac{1}{2} \ln \left[ \frac{|\Sigma_1| |\Sigma_2|}{|\Sigma|} \right] \; .
+\end{split}
+\end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item a06e (2019): "Mutual information between subsets of variables in the multivariate normal distribution"; in: \textit{StackExchange CrossValidated}, retrieved on 2024-11-01; URL: \url{https://stats.stackexchange.com/a/438613/270304}.
 \end{itemize}
 \vspace{1em}
 
@@ -19758,6 +20122,338 @@ where $0_{kl}$ is the $k \times l$ zero matrix. This proves the result in \eqref
 \textbf{Sources:}
 \begin{itemize}
 \item jld (2018): "Understanding t-test for linear regression"; in: \textit{StackExchange CrossValidated}, retrieved on 2022-12-13; URL: \url{https://stats.stackexchange.com/a/344008}.
+\end{itemize}
+\vspace{1em}
+
+
+
+\subsection{Bivariate normal distribution}
+
+\subsubsection[\textit{Definition}]{Definition} \label{sec:bvn}
+\setcounter{equation}{0}
+
+\textbf{Definition:} Let $X$ be an $2 \times 1$ random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}). Then, $X$ is said to have a bivariate normal distribution, if $X$ follows a multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn})
+
+\begin{equation} \label{eq:bvn-mvn}
+X \sim \mathcal{N}(\mu, \Sigma)
+\end{equation}
+
+with means ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean}) $\mu_1$ and $\mu_2$, variances ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:var}) $\sigma_1^2$ and $\sigma_2^2$ and covariance ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cov}) $\sigma_{12}$:
+
+\begin{equation} \label{eq:bvn-bvn}
+\mu = \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right]
+\quad \text{and} \quad
+\Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \; .
+\end{equation}
+
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2023): "Multivariate normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2023-09-22; URL: \url{https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Bivariate_case}.
+\end{itemize}
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:bvn-pdf}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X = \left[ \begin{matrix} X_1 \\\\ X_2 \end{matrix} \right]$ follow a bivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}):
+
+\begin{equation} \label{eq:bvn-pdf-bvn}
+X \sim \mathcal{N}\left( \mu = \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right) \; .
+\end{equation}
+
+Then, the probability density function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pdf}) of $X$ is:
+
+\begin{equation} \label{eq:bvn-pdf-bvn-pdf}
+f_X(x) = \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2} \frac{\sigma_2^2 (x_1-\mu_1)^2 - 2 \sigma_{12} (x_1-\mu_1)(x_2-\mu_2) + \sigma_1^2 (x_2-\mu_2)^2}{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2} \right] \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The probability density function of the multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}) for an $n \times 1$ random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) $x$ is:
+
+\begin{equation} \label{eq:bvn-pdf-mvn-pdf}
+f_X(x) = \frac{1}{\sqrt{(2 \pi)^n |\Sigma|}} \cdot \exp \left[ -\frac{1}{2} (x-\mu)^\mathrm{T} \Sigma^{-1} (x-\mu) \right] \; .
+\end{equation}
+
+Plugging in $n = 2$, $\mu = \left[ \begin{matrix} \mu_1 \\\\ \mu_2 \end{matrix} \right]$ and $\Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\\\ \sigma_{12} & \sigma_2^2 \end{matrix} \right]$, we obtain:
+
+\begin{equation} \label{eq:bvn-pdf-bvn-pdf-s1}
+\begin{split}
+f_X(x) &= \frac{1}{\sqrt{(2 \pi)^2 \left| \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right|}} \cdot \exp \left[ -\frac{1}{2} \left( \left[ \begin{matrix} x_1 \\ x_2 \end{matrix} \right] - \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right] \right)^\mathrm{T} \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right]^{-1} \left( \left[ \begin{matrix} x_1 \\ x_2 \end{matrix} \right] - \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right] \right) \right] \\
+&= \frac{1}{2 \pi \left| \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right|^\frac{1}{2}} \cdot \exp \left[ -\frac{1}{2} \left[ \begin{matrix} (x_1-\mu_1) & (x_2-\mu_2) \end{matrix} \right] \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right]^{-1} \left[ \begin{matrix} (x_1-\mu_1) \\ (x_2-\mu_2) \end{matrix} \right] \right] \; .
+\end{split}
+\end{equation}
+
+Using the determinant of a $2 \times 2$ matrix
+
+\begin{equation} \label{eq:bvn-pdf-det-2x2}
+\left| \left[ \begin{matrix} a & b \\ c & d \end{matrix} \right] \right| = a d - b c
+\end{equation}
+
+and the inverse of of a $2 \times 2$ matrix
+
+\begin{equation} \label{eq:bvn-pdf-inv-2x2}
+\left[ \begin{matrix} a & b \\ c & d \end{matrix} \right]^{-1} = \frac{1}{a d - b c} \left[ \begin{matrix} d & -b \\ -c & a \end{matrix} \right] \; ,
+\end{equation}
+
+the probability density function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pdf}) becomes:
+
+\begin{equation} \label{eq:bvn-pdf-bvn-pdf-s2}
+\begin{split}
+f_X(x) &= \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2 (\sigma_1^2 \sigma_2^2 - \sigma_{12}^2)} \left[ \begin{matrix} (x_1-\mu_1) & (x_2-\mu_2) \end{matrix} \right] \left[ \begin{matrix} \sigma_2^2 & -\sigma_{12} \\ -\sigma_{12} & \sigma_1^2 \end{matrix} \right] \left[ \begin{matrix} (x_1-\mu_1) \\ (x_2-\mu_2) \end{matrix} \right] \right] \\
+&= \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2 (\sigma_1^2 \sigma_2^2 - \sigma_{12}^2)} \left[ \begin{matrix} \sigma_2^2 (x_1-\mu_1) - \sigma_{12} (x_2-\mu_2) & \sigma_1^2 (x_2-\mu_2) - \sigma_{12} (x_1-\mu_1) \end{matrix} \right] \left[ \begin{matrix} (x_1-\mu_1) \\ (x_2-\mu_2) \end{matrix} \right] \right] \\
+&= \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2 (\sigma_1^2 \sigma_2^2 - \sigma_{12}^2)} (\sigma_2^2 (x_1-\mu_1)^2 - \sigma_{12} (x_1-\mu_1)(x_2-\mu_2) + \sigma_1^2 (x_2-\mu_2)^2 - \sigma_{12} (x_1-\mu_1)(x_2-\mu_2)) \right] \\
+&= \frac{1}{2 \pi \sqrt{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2}} \cdot \exp \left[ -\frac{1}{2} \frac{\sigma_2^2 (x_1-\mu_1)^2 - 2 \sigma_{12} (x_1-\mu_1)(x_2-\mu_2) + \sigma_1^2 (x_2-\mu_2)^2}{\sigma_1^2 \sigma_2^2 - \sigma_{12}^2} \right] \; .
+\end{split}
+\end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+
+\subsubsection[\textbf{Probability density function in terms of correlation coefficient}]{Probability density function in terms of correlation coefficient} \label{sec:bvn-pdfcorr}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X = \left[ \begin{matrix} X_1 \\\\ X_2 \end{matrix} \right]$ follow a bivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}):
+
+\begin{equation} \label{eq:bvn-pdfcorr-bvn}
+X \sim \mathcal{N}\left( \mu = \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right) \; .
+\end{equation}
+
+Then, the probability density function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:pdf}) of $X$ is
+
+\begin{equation} \label{eq:bvn-pdfcorr-bvn-pdf}
+f_X(x) = \frac{1}{2 \pi \, \sigma_1 \sigma_2 \sqrt{1 - \rho^2}} \cdot \exp \left[ -\frac{1}{2 (1 - \rho^2)} \left( \left( \frac{x_1-\mu_1}{\sigma_1} \right)^2 - 2 \rho \frac{(x_1-\mu_1) (x_2-\mu_2)}{\sigma_1 \sigma_2} + \left( \frac{x_2-\mu_2}{\sigma_2} \right)^2 \right) \right]
+\end{equation}
+
+where $\rho$ is the correlation ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:corr}) between $X_1$ and $X_2$.
+
+
+\vspace{1em}
+\textbf{Proof:} Since $X$ follows a special case of the multivariate normal distribution, its covariance matrix is ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-cov})
+
+\begin{equation} \label{eq:bvn-pdfcorr-cov-X}
+\mathrm{Cov}(X) = \Sigma = \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right]
+\end{equation}
+
+and the covariance matrix can be decomposed into correlation matrix and standard deviations ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:covmat-corrmat}):
+
+\begin{equation} \label{eq:bvn-pdfcorr-Sigma}
+\begin{split}
+\Sigma &= \left[ \begin{matrix} \sigma_1^2 & \rho \, \sigma_1 \sigma_2 \\ \rho \, \sigma_1 \sigma_2 & \sigma_2^2 \end{matrix} \right] \\
+&= \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right] \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+The determinant of this matrix is
+
+\begin{equation} \label{eq:bvn-pdfcorr-Sigma-det}
+\begin{split}
+\left| \Sigma \right| &= \left| \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right] \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \right| \\
+&= \left| \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \right| \cdot \left| \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right] \right| \cdot \left| \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \right| \\
+&= (\sigma_1 \sigma_2) (1 - \rho^2) (\sigma_1 \sigma_2) \\
+&= \sigma_1^2 \sigma_2^2 (1 - \rho^2)
+\end{split}
+\end{equation}
+
+and the inverse of this matrix is
+
+\begin{equation} \label{eq:bvn-pdfcorr-Sigma-inv}
+\begin{split}
+\Sigma^{-1} &= \left( \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right] \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \right)^{-1} \\
+&= \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right]^{-1} \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right]^{-1} \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right]^{-1} \\
+&= \frac{1}{1 - \rho^2} \left[ \begin{matrix} 1/\sigma_1 & 0 \\ 0 & 1/\sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & -\rho \\ -\rho & 1 \end{matrix} \right] \left[ \begin{matrix} 1/\sigma_1 & 0 \\ 0 & 1/\sigma_2 \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+The probability density function of the multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-pdf}) for an $n \times 1$ random vector ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvec}) $x$ is:
+
+\begin{equation} \label{eq:bvn-pdfcorr-mvn-pdf}
+f_X(x) = \frac{1}{\sqrt{(2 \pi)^n |\Sigma|}} \cdot \exp \left[ -\frac{1}{2} (x-\mu)^\mathrm{T} \Sigma^{-1} (x-\mu) \right] \; .
+\end{equation}
+
+Plugging in $n = 2$, $\mu$ from \eqref{eq:bvn-pdfcorr-bvn} and $\Sigma$ from \eqref{eq:bvn-pdfcorr-Sigma-det} and \eqref{eq:bvn-pdfcorr-Sigma-inv}, the probability density function becomes:
+
+\begin{equation} \label{eq:bvn-pdfcorr-bvn-pdf-corr}
+\begin{split}
+f_X(x) &= \frac{1}{\sqrt{(2 \pi)^2 \sigma_1^2 \sigma_2^2 (1 - \rho^2)}} \cdot \exp \left[ -\frac{1}{2} \left( \left[ \begin{matrix} x_1 \\ x_2 \end{matrix} \right] - \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right] \right)^\mathrm{T} \frac{1}{1 - \rho^2} \left[ \begin{matrix} 1/\sigma_1 & 0 \\ 0 & 1/\sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & -\rho \\ -\rho & 1 \end{matrix} \right] \left[ \begin{matrix} 1/\sigma_1 & 0 \\ 0 & 1/\sigma_2 \end{matrix} \right] \left( \left[ \begin{matrix} x_1 \\ x_2 \end{matrix} \right] - \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right] \right) \right] \\
+&= \frac{1}{2 \pi \, \sigma_1 \sigma_2 \sqrt{1 - \rho^2}} \cdot \exp \left[ -\frac{1}{2 (1 - \rho^2)} \left[ \begin{matrix} \frac{x_1-\mu_1}{\sigma_1} & \frac{x_2-\mu_2}{\sigma_2} \end{matrix} \right] \left[ \begin{matrix} 1 & -\rho \\ -\rho & 1 \end{matrix} \right] \left[ \begin{matrix} \frac{x_1-\mu_1}{\sigma_1} \\ \frac{x_2-\mu_2}{\sigma_2} \end{matrix} \right]  \right] \\
+&= \frac{1}{2 \pi \, \sigma_1 \sigma_2 \sqrt{1 - \rho^2}} \cdot \exp \left[ -\frac{1}{2 (1 - \rho^2)} \left[ \begin{matrix} \left( \frac{x_1-\mu_1}{\sigma_1} - \rho \frac{x_2-\mu_2}{\sigma_2} \right) & \left( \frac{x_2-\mu_2}{\sigma_2} - \rho \frac{x_1-\mu_1}{\sigma_1} \right) \end{matrix} \right] \left[ \begin{matrix} \frac{x_1-\mu_1}{\sigma_1} \\ \frac{x_2-\mu_2}{\sigma_2} \end{matrix} \right]  \right] \\
+&= \frac{1}{2 \pi \, \sigma_1 \sigma_2 \sqrt{1 - \rho^2}} \cdot \exp \left[ -\frac{1}{2 (1 - \rho^2)} \left( \left( \frac{x_1-\mu_1}{\sigma_1} \right)^2 - 2 \rho \frac{(x_1-\mu_1) (x_2-\mu_2)}{\sigma_1 \sigma_2} + \left( \frac{x_2-\mu_2}{\sigma_2} \right)^2 \right) \right] \; .
+\end{split}
+\end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2023): "Multivariate normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2023-09-29; URL: \url{https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Bivariate_case}.
+\end{itemize}
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Mutual information}]{Mutual information} \label{sec:bvn-mi}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ and $Y$ follow a bivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}):
+
+\begin{equation} \label{eq:bvn-mi-bvn}
+\left[ \begin{matrix} X \\ Y \end{matrix} \right] \sim
+\mathcal{N}\left( \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right) \; .
+\end{equation}
+
+Then, the mutual information ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mi}) of $X$ and $Y$ is
+
+\begin{equation} \label{eq:bvn-mi-bvn-lincomb}
+\mathrm{I}(X,Y) = -\frac{1}{2} \ln \left( 1-\rho^2 \right)
+\end{equation}
+
+where $\rho$ is the correlation ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:corr}) of $X$ and $Y$.
+
+
+\vspace{1em}
+\textbf{Proof:} Mutual information can be written in terms of marginal and joint differential entropy ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cmi-mjde}):
+
+\begin{equation} \label{eq:bvn-mi-cmi-mjde}
+\mathrm{I}(X,Y) = \mathrm{h}(X) + \mathrm{h}(Y) - \mathrm{h}(X,Y) \; .
+\end{equation}
+
+The marginal distributions of the multivariate normal distribution are also multivariate normal ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-marg})
+
+\begin{equation} \label{eq:bvn-mi-mvn-marg}
+\left[ \begin{matrix} X_1 \\ X_2 \end{matrix} \right] \sim
+\mathcal{N}\left( \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \left[ \begin{matrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{matrix} \right] \right)
+\quad \Rightarrow \quad
+X_1 \sim \mathcal{N}\left( \mu_1, \Sigma_{11} \right) \; ,
+\end{equation}
+
+such that the marginals of the bivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}) are univariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}):
+
+\begin{equation} \label{eq:bvn-mi-bvn-marg}
+\left[ \begin{matrix} X \\ Y \end{matrix} \right] \sim
+\mathcal{N}\left( \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right)
+\quad \Rightarrow \quad
+X \sim \mathcal{N}\left( \mu_1, \sigma_1^2 \right)
+\quad \text{and} \quad
+Y \sim \mathcal{N}\left( \mu_2, \sigma_2^2 \right) \; .
+\end{equation}
+
+The differential entropy of the univariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm-dent}) is
+
+\begin{equation} \label{eq:bvn-mi-norm-dent}
+\mathrm{h}(X) = \frac{1}{2} \ln\left( 2 \pi \sigma^2 e \right)
+\end{equation}
+
+and the differential entropy of the multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-dent}) is
+
+\begin{equation} \label{eq:bvn-mi-mvn-dent}
+\mathrm{h}(x) = \frac{n}{2} \ln(2\pi) + \frac{1}{2} \ln|\Sigma| + \frac{1}{2} n
+\end{equation}
+
+where $\lvert \Sigma \rvert$ is the determinant of the covariance matrix ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:covmat}) $\Sigma$. A two-dimensional covariance matrix can be rewritten in terms of correlations ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:covmat-corrmat}) as follows:
+
+\begin{equation} \label{eq:bvn-mi-Sigma}
+\begin{split}
+\Sigma
+&= \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \left[ \begin{matrix} 1 & \rho \\ \rho & 1 \end{matrix} \right] \left[ \begin{matrix} \sigma_1 & 0 \\ 0 & \sigma_2 \end{matrix} \right] \\
+&= \left[ \begin{matrix} \sigma_1^2 & \rho \, \sigma_1 \sigma_2 \\ \rho \, \sigma_1 \sigma_2 & \sigma_2^2 \end{matrix} \right] \; .
+\end{split}
+\end{equation}
+
+Combining \eqref{eq:bvn-mi-cmi-mjde} with \eqref{eq:bvn-mi-norm-dent} and \eqref{eq:bvn-mi-mvn-dent}, applying $n = 2$, we get:
+
+\begin{equation} \label{eq:bvn-mi-bvn-mi}
+\begin{split}
+\mathrm{I}(X,Y)
+&\overset{\eqref{eq:bvn-mi-cmi-mjde}}{=} \mathrm{h}(X) + \mathrm{h}(Y) - \mathrm{h}(X,Y) \\
+&\overset{\eqref{eq:bvn-mi-bvn-marg}}{=} \mathrm{h}\left[ \mathcal{N}\left( \mu_1, \sigma_1^2 \right) \right] + \mathrm{h}\left[ \mathcal{N}\left( \mu_2, \sigma_2^2 \right) \right] - \mathrm{h}\left[ \mathcal{N}\left( \mu, \Sigma \right) \right] \\
+&\overset{\eqref{eq:bvn-mi-Sigma}}{=} \left[ \frac{1}{2} \ln\left( 2 \pi \sigma_1^2 e \right) \right] + \left[ \frac{1}{2} \ln\left( 2 \pi \sigma_2^2 e \right) \right] - \left[ \frac{2}{2} \ln(2\pi) + \frac{1}{2} \ln \left| \left[ \begin{matrix} \sigma_1^2 & \rho \, \sigma_1 \sigma_2 \\ \rho \, \sigma_1 \sigma_2 & \sigma_2^2 \end{matrix} \right] \right| + \frac{1}{2} \cdot 2 \right] \\
+&= \left( \frac{2}{2} \ln(2\pi) + \frac{2}{2} \ln(e) - \ln(2\pi) - 1 \right) + \left( \frac{1}{2} \ln\left( \sigma_1^2 \right) + \frac{1}{2} \ln\left( \sigma_2^2 \right) - \frac{1}{2} \ln \left| \left[ \begin{matrix} \sigma_1^2 & \rho \, \sigma_1 \sigma_2 \\ \rho \, \sigma_1 \sigma_2 & \sigma_2^2 \end{matrix} \right] \right| \right) \\
+&= \frac{1}{2} \left[ \ln\left( \sigma_1^2 \right) + \ln\left( \sigma_2^2 \right) - \ln\left( \sigma_1^2 \sigma_2^2 - (\rho \, \sigma_1 \sigma_2)^2 \right) \right] \\
+&= \frac{1}{2} \ln \left[ \frac{\sigma_1^2 \sigma_2^2}{\sigma_1^2 \sigma_2^2 - (\rho \, \sigma_1 \sigma_2)^2} \right] \\
+&= \frac{1}{2} \ln \left[ \frac{\sigma_1^2 \sigma_2^2}{\sigma_1^2 \sigma_2^2 (1-\rho^2)} \right] \\
+&= \frac{1}{2} \ln \left[ \frac{1}{1-\rho^2} \right] \\
+&= -\frac{1}{2} \ln \left( 1-\rho^2 \right) \; .
+\end{split}
+\end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Krafft, Peter (2013): "Correlation and Mutual Information"; in: \textit{Princeton University Department of Computer Science: Laboratory for Intelligent Probabilistic Systems}, February 13, 2013; URL: \url{https://lips.cs.princeton.edu/correlation-and-mutual-information/}.
+\end{itemize}
+\vspace{1em}
+
+
+
+\subsubsection[\textbf{Linear combination}]{Linear combination} \label{sec:bvn-lincomb}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} Let $X$ and $Y$ follow a bivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:bvn}):
+
+\begin{equation} \label{eq:bvn-lincomb-bvn}
+\left[ \begin{matrix} X \\ Y \end{matrix} \right] \sim
+\mathcal{N}\left( \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \right) \; .
+\end{equation}
+
+Then, any linear combination of $X$ and $Y$ follows a univariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:norm}):
+
+\begin{equation} \label{eq:bvn-lincomb-bvn-lincomb}
+Z = a X + b Y \sim
+\mathcal{N}\left( a \mu_1 + b \mu_2, a^2 \sigma_1^2 + 2ab \sigma_{12} + b^2 \sigma_2^2 \right) \; .
+\end{equation}
+
+
+\vspace{1em}
+\textbf{Proof:} The linear transformation theorem for the multivariate normal distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:mvn-ltt}) states that
+
+\begin{equation} \label{eq:bvn-lincomb-mvn-ltt}
+X \sim \mathcal{N}(\mu, \Sigma) \quad \Rightarrow \quad Y = AX + c \sim \mathcal{N}(A\mu + c, A \Sigma A^\mathrm{T})
+\end{equation}
+
+where $X \in \mathbb{R}^n$, $A \in \mathbb{R}^{n \times n}$ and $c \in \mathbb{R}^n$. In the present case, we have
+
+\begin{equation} \label{eq:bvn-lincomb-X-A-a}
+X \in \mathbb{R}^2
+\quad \text{and} \quad
+A = \left[ \begin{matrix} a & b \end{matrix} \right] \in \mathbb{R}^{1 \times 2}
+\quad \text{and} \quad
+c = 0 \in \mathbb{R} \; ,
+\end{equation}
+
+such that
+
+\begin{equation} \label{eq:bvn-lincomb-Z-X-Y}
+Z
+= A \left[ \begin{matrix} X \\ Y \end{matrix} \right] + c
+= \left[ \begin{matrix} a & b \end{matrix} \right] \left[ \begin{matrix} X \\ Y \end{matrix} \right] + 0
+= a X + b Y \; .
+\end{equation}
+
+Combining \eqref{eq:bvn-lincomb-mvn-ltt}, \eqref{eq:bvn-lincomb-bvn} and \eqref{eq:bvn-lincomb-Z-X-Y}, it follows that
+
+\begin{equation} \label{eq:bvn-lincomb-bvn-lincomb-qed}
+\begin{split}
+Z
+&\sim \mathcal{N}\left( \left[ \begin{matrix} a & b \end{matrix} \right] \left[ \begin{matrix} \mu_1 \\ \mu_2 \end{matrix} \right], \left[ \begin{matrix} a & b \end{matrix} \right] \left[ \begin{matrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{matrix} \right] \left[ \begin{matrix} a \\ b \end{matrix} \right] \right) \\
+&\sim \mathcal{N}\left( a \mu_1 + b \mu_2, \left[ \begin{matrix} a \sigma_1^2 + b \sigma_{12} & a \sigma_{12} + b \sigma_2^2 \end{matrix} \right] \left[ \begin{matrix} a \\ b \end{matrix} \right] \right) \\
+&\sim \mathcal{N}\left( a \mu_1 + b \mu_2, (a^2 \sigma_1^2 + ab \sigma_{12}) + (ab \sigma_{12} + b^2 \sigma_2^2) \right) \\
+&\sim \mathcal{N}\left( a \mu_1 + b \mu_2, a^2 \sigma_1^2 + 2ab \sigma_{12} + b^2 \sigma_2^2 \right) \; .
+\end{split}
+\end{equation}
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Wikipedia (2024): "Misconceptions about the normal distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2024-10-25; URL: \url{https://en.wikipedia.org/wiki/Misconceptions_about_the_normal_distribution}.
 \end{itemize}
 \vspace{1em}
 
@@ -20663,7 +21359,7 @@ This means that, by definition ($\rightarrow$ \ref{sec:Probability Distributions
 X,Y \sim \mathrm{NG}(\mu, \Lambda, a, b) \; ,
 \end{equation}
 
-Thus, given $Z_1$ defined by \eqref{eq:ng-samp-zi-dist} and $Z_2$ defined by \eqref{eq:ng-samp-Z2-dist}, $X$ and $Y$ defined by \eqref{eq:ng-samp-ng-samp} are a sample from $\mathrm{NG}(\mu, \Lambda, a, b)$.
+Thus, given $Z_1$ defined by \eqref{eq:ng-samp-zi-dist} and $Z_2$ defined by \eqref{eq:ng-samp-Z2-dist}, $X$ and $Y$ defined by \eqref{eq:ng-samp-ng-samp} are a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from $\mathrm{NG}(\mu, \Lambda, a, b)$.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -21682,7 +22378,7 @@ Y = M + AXB &\sim \mathcal{MN}\left(M + A 0_{np} B, A I_n A^\mathrm{T}, B^\mathr
 \end{split}
 \end{equation}
 
-Thus, given $X$ defined by \eqref{eq:matn-samp-xij-dist}, $Y$ defined by \eqref{eq:matn-samp-matn-samp} is a sample from $\mathcal{MN}\left(M, U, V \right)$.
+Thus, given $X$ defined by \eqref{eq:matn-samp-xij-dist}, $Y$ defined by \eqref{eq:matn-samp-matn-samp} is a sample ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp}) from $\mathcal{MN}\left(M, U, V \right)$.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -21855,6 +22551,14 @@ Y &\sim \mathcal{W}(V, \nu) \; .
 
 The $p \times p$ matrix $Y$ can be seen as the precision matrix ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:precmat}) across the columns of the $n \times p$ matrix $X$.
 
+\vspace{1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop, Christopher M. (2006): "Appendix B. Probability Distributions"; in: \textit{Pattern Recognition for Machine Learning}, p. 690, eq. B.53; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+\vspace{1em}
+
+
 
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:nw-pdf}
 \setcounter{equation}{0}
@@ -21914,6 +22618,14 @@ p(X,Y) = \; & \mathcal{MN}(X; M, U, Y^{-1}) \cdot \mathcal{W}(Y; V, \nu) \\
 \end{split}
 \end{equation}
 \begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item Bishop, Christopher M. (2006): "Appendix B. Probability Distributions"; in: \textit{Pattern Recognition for Machine Learning}, p. 690, eq. B.53; URL: \url{http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf}.
+\end{itemize}
+\vspace{1em}
 
 
 
@@ -22136,7 +22848,7 @@ be a univariate Gaussian data set ($\rightarrow$ \ref{sec:Statistical Models}/\r
 t = \frac{\bar{y}-\mu_0}{s / \sqrt{n}}
 \end{equation}
 
-with sample mean ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$ and sample variance ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:var-samp}) $s^2$ follows a Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom
+with sample mean ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}$ and sample variance ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:var-samp}) $s^2$ follows a Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof})
 
 \begin{equation} \label{eq:ug-ttest1-t-dist}
 t \sim \mathrm{t}(n-1)
@@ -22186,7 +22898,7 @@ Finally, since the ratio of a standard normal random variable and the square roo
 t = \frac{\bar{y}-\mu_0}{s / \sqrt{n}} = \frac{Z}{\sqrt{V / (n-1)}} \sim \mathrm{t}(n-1) \; .
 \end{equation}
 
-This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -22217,7 +22929,7 @@ be two univariate Gaussian data sets ($\rightarrow$ \ref{sec:Statistical Models}
 t = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{s_p \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
 \end{equation}
 
-with sample means ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}_1$ and $\bar{y}_2$ and pooled standard deviation $s_p$ follows a Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n_1+n_2-2$ degrees of freedom
+with sample means ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{y}_1$ and $\bar{y}_2$ and pooled standard deviation $s_p$ follows a Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n_1+n_2-2$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof})
 
 \begin{equation} \label{eq:ug-ttest2-t-dist}
 t \sim \mathrm{t}(n_1+n_2-2)
@@ -22282,7 +22994,7 @@ Finally, since the ratio of a standard normal random variable and the square roo
 t = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{s_p \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} = \frac{Z}{\sqrt{V / (n_1+n_2-2)}} \sim \mathrm{t}(n_1+n_2-2) \; .
 \end{equation}
 
-This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n_1+n_2-2$ degrees of freedom using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $t$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n_1+n_2-2$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -22311,7 +23023,7 @@ is a univariate Gaussian data set ($\rightarrow$ \ref{sec:Statistical Models}/\r
 t = \frac{\bar{d}-\mu_0}{s_d / \sqrt{n}} \quad \text{where} \quad d_i = y_{i1} - y_{i2}
 \end{equation}
 
-with sample mean ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{d}$ and sample variance ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:var-samp}) $s^2_d$ follows a Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom
+with sample mean ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mean-samp}) $\bar{d}$ and sample variance ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:var-samp}) $s^2_d$ follows a Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-1$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof})
 
 \begin{equation} \label{eq:ug-ttestp-t-dist}
 t \sim \mathrm{t}(n-1)
@@ -22415,7 +23127,7 @@ F
 \end{split}
 \end{equation}
 
-This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) of equal variances can be rejected when $F$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:F}) with degrees of freedom $n_1-1$ and $n_2-1$ using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) of equal variances can be rejected when $F$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:F}) with degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) $n_1-1$ and $n_2-1$ using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -23131,7 +23843,7 @@ Using the linear combination formula for normal random variables ($\rightarrow$ 
 \end{split}
 \end{equation}
 
-Again employing the linear combination theorem, the distribution of $z = [(\bar{y}_1-\bar{y}_2)-\mu_\Delta]/\sigma_\Delta$ becomes
+Again employing the linear combination theorem, the distribution of $z = \left[ (\bar{y}\_1-\bar{y}\_2) - \mu_{\Delta} \right] / \sigma_{\Delta}$ becomes
 
 \begin{equation} \label{eq:ugkv-ztest2-z-dist-s1}
 z = \frac{(\bar{y}_1-\bar{y}_2)-\mu_\Delta}{\sigma_\Delta} \sim \mathcal{N}\left( \frac{(\mu_1-\mu_2)-\mu_\Delta}{\sigma_\Delta}, \left(\frac{1}{\sigma_\Delta}\right)^2 \sigma_\Delta^2 \right) = \mathcal{N}\left( \frac{(\mu_1-\mu_2)-\mu_\Delta}{\sigma_\Delta}, 1 \right)
@@ -24630,7 +25342,7 @@ To this sum, Cochran's theorem for one-way analysis of variance can be applied (
 \end{split}
 \end{equation}
 
-4) The ratio of two chi-square distributed ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}), divided by their degrees of freedom, is defined to be F-distributed ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}), so that
+4) The ratio of two chi-square distributed ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) random variables ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}), divided by their degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}), is defined to be F-distributed ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}), so that
 
 \begin{equation} \label{eq:anova1-repara-anova1-repara-c4-s1}
 \begin{split}
@@ -24717,7 +25429,7 @@ As the two-way ANOVA model is underdetermined, the parameters of the model are a
 \end{split}
 \end{equation}
 
-where the weights are $w_{ij} = n_{ij}/n$ and the total sample size is $n = \sum_{i=1}^{a} \sum_{j=1}^{b} n_{ij}$.
+where the weights are $w_{ij} = n_{ij}/n$ and the total sample size ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp-size}) is $n = \sum_{i=1}^{a} \sum_{j=1}^{b} n_{ij}$.
 
 \vspace{1em}
 \textbf{Sources:}
@@ -24792,7 +25504,7 @@ where $\bar{y} _{\bullet \bullet \bullet}$, $\bar{y} _{i \bullet \bullet}$, $\ba
 \end{split}
 \end{equation}
 
-with the sample size numbers
+with the sample size ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:samp-size}) numbers
 
 \begin{equation} \label{eq:anova2-ols-samp-size}
 \begin{split}
@@ -25961,7 +26673,7 @@ and consider estimation using ordinary least squares ($\rightarrow$ \ref{sec:Sta
 \end{split}
 \end{equation}
 
-which means that the ordinary least squares solution ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:slr-ols}) produces unbiased estimators.
+which means that the ordinary least squares solution ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:slr-ols}) produces unbiased estimators ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}).
 
 
 \vspace{1em}
@@ -28142,7 +28854,7 @@ Then,
 2) and, if the two regressors are orthogonal to each other, they simplify to
 
 \begin{equation} \label{eq:mlr-olstr-mlr-ols-tr-orth}
-\hat{\beta}_1 = \frac{x_1^\mathrm{T} y}{x_1^\mathrm{T} x_1} \quad \text{and} \quad \hat{\beta}_2 = \frac{x_2^\mathrm{T} y}{x_2^\mathrm{T} x_2}, \quad \text{if} \quad x_1 \perp x_2 \; .
+\hat{\beta}_1 = \frac{x_1^\mathrm{T} y}{x_1^\mathrm{T} x_1} \quad \text{and} \quad \hat{\beta}_2 = \frac{x_2^\mathrm{T} y}{x_2^\mathrm{T} x_2} \; .
 \end{equation}
 
 
@@ -28929,7 +29641,7 @@ and thus, by applying \eqref{eq:mlr-wlsdist-mvn-ltt} to \eqref{eq:mlr-wlsdist-e-
 y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V)
 \end{equation}
 
-and consider estimation using weighted least squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:mlr-wls}). Then, the residual sum of squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:rss}) $\hat{\varepsilon}^\mathrm{T} \hat{\varepsilon}$, divided by the true error variance ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:mlr}) $\sigma^2$, follows a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $n-p$ degrees of freedom
+and consider estimation using weighted least squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:mlr-wls}). Then, the residual sum of squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:rss}) $\hat{\varepsilon}^\mathrm{T} \hat{\varepsilon}$, divided by the true error variance ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:mlr}) $\sigma^2$, follows a chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $n-p$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof})
 
 \begin{equation} \label{eq:mlr-rssdist-mlr-rss-dist}
 \frac{\hat{\varepsilon}^\mathrm{T} \hat{\varepsilon}}{\sigma^2} \sim \chi^2(n-p)
@@ -29641,7 +30353,7 @@ t &\overset{\eqref{eq:mlr-t-mlr-t-s1}}{=} \frac{z}{\sqrt{v/(n-p)}} \\
 \end{split}
 \end{equation}
 
-This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) in \eqref{eq:mlr-t-mlr-t-h0} can be rejected when $t$ from \eqref{eq:mlr-t-mlr-t-s2} is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-p$ degrees of freedom using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) in \eqref{eq:mlr-t-mlr-t-h0} can be rejected when $t$ from \eqref{eq:mlr-t-mlr-t-s2} is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from Student's t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $n-p$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -29798,7 +30510,7 @@ F &\overset{\eqref{eq:mlr-f-mlr-f-s1}}{=} \left( \hat{\gamma} -  C^\mathrm{T} \b
 \end{split}
 \end{equation}
 
-This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) in \eqref{eq:mlr-f-mlr-f-h0} can be rejected when $F$ from \eqref{eq:mlr-f-mlr-f-s2} is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from Fisher's F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}) with $q$ numerator and $n-p$ denominator degrees of freedom using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) in \eqref{eq:mlr-f-mlr-f-h0} can be rejected when $F$ from \eqref{eq:mlr-f-mlr-f-s2} is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from Fisher's F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}) with $q$ numerator and $n-p$ denominator degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -31390,7 +32102,7 @@ is given by
 \mathrm{Pr}\left( \mathrm{H}_1 | y \right) = 1 - \mathrm{T}\left( -\frac{c^\mathrm{T} \mu}{\sqrt{c^\mathrm{T} \Sigma c}}; \nu \right)
 \end{equation}
 
-where $c$ is a $p \times 1$ contrast vector ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:tcon}), $\mathrm{T}(x; \nu)$ is the cumulative distribution function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cdf}) of the t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $\nu$ degrees of freedom and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
+where $c$ is a $p \times 1$ contrast vector ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:tcon}), $\mathrm{T}(x; \nu)$ is the cumulative distribution function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cdf}) of the t-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:t}) with $\nu$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
 
 
 \vspace{1em}
@@ -31491,7 +32203,7 @@ is given by the credibility level
 (1-\alpha) = \mathrm{F}\left( \left[ \mu^\mathrm{T} C (C^\mathrm{T} \Sigma \, C)^{-1} C^\mathrm{T} \mu \right]/q; q, \nu \right)
 \end{equation}
 
-where $C$ is a $p \times q$ contrast matrix ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:fcon}), $\mathrm{F}(x; v, w)$ is the cumulative distribution function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cdf}) of the F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}) with $v$ numerator degrees of freedom, $w$ denominator degrees of freedom and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
+where $C$ is a $p \times q$ contrast matrix ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:fcon}), $\mathrm{F}(x; v, w)$ is the cumulative distribution function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cdf}) of the F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}) with $v$ numerator degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}), $w$ denominator degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) and $\mu$, $\Sigma$ and $\nu$ can be obtained from the posterior hyperparameters ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:post}) of Bayesian linear regression.
 
 
 \vspace{1em}
@@ -34061,7 +34773,7 @@ The critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) is 
 \begin{split}
 \alpha &\geq \mathrm{Pr}(y \in \left\lbrace 0, \ldots, y_1 \right\rbrace \cup \left\lbrace y_2, \ldots, n \right\rbrace \vert H_0) \\
 &= \mathrm{Pr}(y \leq y_1 \vert H_0) + \mathrm{Pr}(y \geq y_2 \vert H_0) \\
-&= \mathrm{Pr}(y \leq y_1 \vert H_0) + (1-\mathrm{Pr}(y \leq (y_2-1) \vert H_0) \; .
+&= \mathrm{Pr}(y \leq y_1 \vert H_0) + \left( 1 - \mathrm{Pr}(y \leq (y_2-1) \vert H_0) \right) \; .
 \end{split}
 \end{equation}
 
@@ -36716,7 +37428,7 @@ where
 \bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i
 \end{equation}
 
-2) and $\hat{\sigma}^2$ is a biased estimator of $\sigma^2$
+2) and $\hat{\sigma}^2$ is a biased estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) of $\sigma^2$
 
 \begin{equation} \label{eq:resvar-bias-resvar-var}
 \mathrm{E}\left[ \hat{\sigma}^2 \right] \neq \sigma^2 \; ,
@@ -36815,7 +37527,7 @@ Plugging \eqref{eq:resvar-bias-E-Var-yi}, \eqref{eq:resvar-bias-E-mean-mle} and 
 \end{split}
 \end{equation}
 
-which proves the bias given by \eqref{eq:resvar-bias-resvar-bias}.
+which proves the bias ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) given by \eqref{eq:resvar-bias-resvar-bias}.
 
 \begin{flushright} $\blacksquare$ \end{flushright}
 
@@ -36852,7 +37564,7 @@ where
 \hat{\beta} = (X^\mathrm{T} V^{-1} X)^{-1} X^\mathrm{T} V^{-1} y
 \end{equation}
 
-2) and $\hat{\sigma}^2$ is a biased estimator of $\sigma^2$
+2) and $\hat{\sigma}^2$ is a biased estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) of $\sigma^2$
 
 \begin{equation} \label{eq:resvar-biasp-resvar-var}
 \mathrm{E}\left[ \hat{\sigma}^2 \right] \neq \sigma^2 \; ,
@@ -36938,7 +37650,7 @@ which proves the relationship given by \eqref{eq:resvar-biasp-resvar-biasp}.
 y_i \overset{\text{i.i.d.}}{\sim} \mathcal{N}(\mu, \sigma^2), \quad i = 1,\ldots,n \; .
 \end{equation}
 
-An unbiased estimator of $\sigma^2$ is given by
+An unbiased estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) of $\sigma^2$ is given by
 
 \begin{equation} \label{eq:resvar-unb-resvar-unb}
 \hat{\sigma}^2_{\mathrm{unb}} = \frac{1}{n-1} \sum_{i=1}^{n} \left( y_i - \bar{y} \right)^2 \; .
@@ -36952,7 +37664,7 @@ An unbiased estimator of $\sigma^2$ is given by
 \hat{\sigma}^2_{\mathrm{MLE}} = \frac{1}{n} \sum_{i=1}^{n} \left( y_i - \bar{y} \right)^2
 \end{equation}
 
-is a biased estimator in the sense that
+is a biased estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) in the sense that
 
 \begin{equation} \label{eq:resvar-unb-resvar-bias}
 \mathbb{E}\left[ \hat{\sigma}^2_{\mathrm{MLE}} \right] = \frac{n-1}{n} \sigma^2 \; .
@@ -36968,7 +37680,7 @@ From \eqref{eq:resvar-unb-resvar-bias}, it follows that
 \end{split}
 \end{equation}
 
-such that an unbiased estimator can be constructed as
+such that an unbiased estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) can be constructed as
 
 \begin{equation} \label{eq:resvar-unb-resvar-unb-qed}
 \begin{split}
@@ -36998,7 +37710,7 @@ such that an unbiased estimator can be constructed as
 y = X\beta + \varepsilon, \; \varepsilon \sim \mathcal{N}(0, \sigma^2 V) \; .
 \end{equation}
 
-An unbiased estimator of $\sigma^2$ is given by
+An unbiased estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) of $\sigma^2$ is given by
 
 \begin{equation} \label{eq:resvar-unbp-sigma-unb}
 \hat{\sigma}^2 = \frac{1}{n-p} (y-X\hat{\beta})^\mathrm{T} V^{-1} (y-X\hat{\beta})
@@ -37018,7 +37730,7 @@ where
 \hat{\sigma}^2_{\mathrm{MLE}} = \frac{1}{n} (y-X\hat{\beta})^\mathrm{T} V^{-1} (y-X\hat{\beta})
 \end{equation}
 
-is a biased estimator in the sense that
+is a biased estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) in the sense that
 
 \begin{equation} \label{eq:resvar-unbp-resvar-bias}
 \mathbb{E}\left[ \hat{\sigma}^2_{\mathrm{MLE}} \right] = \frac{n-p}{n} \sigma^2 \; .
@@ -37034,7 +37746,7 @@ From \eqref{eq:resvar-unbp-resvar-bias}, it follows that
 \end{split}
 \end{equation}
 
-such that an unbiased estimator can be constructed as
+such that an unbiased estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bias}) can be constructed as
 
 \begin{equation} \label{eq:resvar-unbp-resvar-unb-qed}
 \begin{split}
@@ -37143,7 +37855,7 @@ If we replace the variance estimates by their unbiased estimators ($\rightarrow$
 R^2_{\mathrm{adj}} = 1 - \frac{\frac{1}{n-p} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\frac{1}{n-1} \sum_{i=1}^{n} (y_i - \bar{y})^2} = 1 - \frac{\mathrm{RSS}/\mathrm{df}_r}{\mathrm{TSS}/\mathrm{df}_t}
 \end{equation}
 
-where $\mathrm{df}_r = n-p$ and $\mathrm{df}_t = n-1$ are the residual and total degrees of freedom.
+where $\mathrm{df}_r = n-p$ and $\mathrm{df}_t = n-1$ are the residual and total degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}).
 
 \vspace{1em}
 This gives the adjusted $R^2$ which adjusts $R^2$ for the number of explanatory variables.
@@ -37417,7 +38129,7 @@ F &\overset{\eqref{eq:rsq-test-mlr-fomnibus}}{=} \frac{(\mathrm{RSS}_0-\mathrm{R
 \end{split}
 \end{equation}
 
-This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $F$ as a function of $R^2$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}) with $p-1$ denominator and $n-p$ numerator degrees of freedom using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) can be rejected when $F$ as a function of $R^2$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}) with $p-1$ denominator and $n-p$ numerator degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -37450,7 +38162,7 @@ operating on identical measured data $y$, but with different design matrices $X 
 X = \left[ \begin{array}{cc} X_0 & X_1 \end{array} \right] \; .
 \end{equation}
 
-Then, the F-statistic for model comparison is defined as the ratio of the difference in residual sum of squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:rss}) between the two models, divided by the difference in number of parameters ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:mlr}), to the residual sum of squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:rss}) of the full model, divided by the number of degrees of freedom:
+Then, the F-statistic for model comparison is defined as the ratio of the difference in residual sum of squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:rss}) between the two models, divided by the difference in number of parameters ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:mlr}), to the residual sum of squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:rss}) of the full model, divided by the number of degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}):
 
 \begin{equation} \label{eq:fstat-F}
 F = \frac{(\mathrm{RSS}_0-\mathrm{RSS})/(p-p_0)}{\mathrm{RSS}/(n-p)} \; .
@@ -37665,7 +38377,7 @@ Given estimated regression coefficients ($\rightarrow$ \ref{sec:Statistical Mode
 y = X\beta + \varepsilon, \; \varepsilon_i \overset{\mathrm{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2)
 \end{equation}
 
-and parameter estimates obtained with ordinary least squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:mlr-ols})
+and parameter estimates ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est}) obtained with ordinary least squares ($\rightarrow$ \ref{sec:Statistical Models}/\ref{sec:mlr-ols})
 
 \begin{equation} \label{eq:snr-rsq-OLS}
 \hat{\beta} = (X^\mathrm{T} X)^{-1} X^\mathrm{T} y \; .
@@ -39890,6 +40602,13 @@ P470 & ind-self & Self-independence of random event & JoramSoch & 2024-09-20 & \
 P471 & med-mae & The median minimizes the mean absolute error & salbalkus & 2024-09-23 & \pageref{sec:med-mae} \\ \hline
 P472 & corr-ind & Independent random variables are uncorrelated & JoramSoch & 2024-09-27 & \pageref{sec:corr-ind} \\ \hline
 P473 & norm-corrind & Normally distributed and uncorrelated does not imply independent & JoramSoch & 2024-10-04 & \pageref{sec:norm-corrind} \\ \hline
+P474 & norm-margjoint & Marginally normal does not imply jointly normal & JoramSoch & 2024-10-11 & \pageref{sec:norm-margjoint} \\ \hline
+P475 & bvn-lincomb & Linear combination of bivariate normal random variables & JoramSoch & 2024-10-25 & \pageref{sec:bvn-lincomb} \\ \hline
+P476 & bvn-mi & Mutual information of the bivariate normal distribution & JoramSoch & 2024-11-01 & \pageref{sec:bvn-mi} \\ \hline
+P477 & mvn-mi & Mutual information of the multivariate normal distribution & JoramSoch & 2024-11-01 & \pageref{sec:mvn-mi} \\ \hline
+P478 & mgf-sumind & Moment-generating function of a sum of independent random variables & JoramSoch & 2024-11-08 & \pageref{sec:mgf-sumind} \\ \hline
+P479 & lognorm-prodind & The product of independent log-normal random variables is a log-normal random variable & JoramSoch & 2024-11-15 & \pageref{sec:lognorm-prodind} \\ \hline
+P480 & lognorm-geomind & The geometric mean of independent log-normal random variables is a log-normal random variable & JoramSoch & 2024-11-22 & \pageref{sec:lognorm-geomind} \\ \hline
 \end{longtable}
 
 
@@ -40107,6 +40826,12 @@ D202 & prior-pred & Prior predictive distribution & aloctavodia & 2024-08-19 & \
 D203 & data & Data & JoramSoch & 2024-09-20 & \pageref{sec:data} \\ \hline
 D204 & para & Parameter & JoramSoch & 2024-09-27 & \pageref{sec:para} \\ \hline
 D205 & stat & Statistic & JoramSoch & 2024-10-04 & \pageref{sec:stat} \\ \hline
+D206 & dof & Degrees of freedom & JoramSoch & 2024-10-11 & \pageref{sec:dof} \\ \hline
+D207 & dist-uni & Unimodal and multimodal probability distribution & JoramSoch & 2024-10-25 & \pageref{sec:dist-uni} \\ \hline
+D208 & est & Estimand, estimator and estimate & JoramSoch & 2024-11-01 & \pageref{sec:est} \\ \hline
+D209 & est-bias & Biased vs. unbiased estimator & JoramSoch & 2024-11-08 & \pageref{sec:est-bias} \\ \hline
+D210 & samp & Sample & JoramSoch & 2024-11-15 & \pageref{sec:samp} \\ \hline
+D211 & samp-size & Sample size & JoramSoch & 2024-11-22 & \pageref{sec:samp-size} \\ \hline
 \end{longtable}
 
 
@@ -40480,6 +41205,8 @@ $\bullet$ Law of total probability, \pageref{sec:prob-tot}
 
 $\bullet$ Law of total variance, \pageref{sec:var-tot}
 
+$\bullet$ Linear combination of bivariate normal random variables, \pageref{sec:bvn-lincomb}
+
 $\bullet$ Linear combination of independent normal random variables, \pageref{sec:norm-lincomb}
 
 $\bullet$ Linear transformation theorem for the matrix-normal distribution, \pageref{sec:matn-ltt}
@@ -40545,6 +41272,8 @@ $\bullet$ Marginal distributions of the multivariate normal distribution, \pager
 $\bullet$ Marginal distributions of the normal-gamma distribution, \pageref{sec:ng-marg}
 
 $\bullet$ Marginal likelihood is a definite integral of the joint likelihood, \pageref{sec:ml-jl}
+
+$\bullet$ Marginally normal does not imply jointly normal, \pageref{sec:norm-margjoint}
 
 $\bullet$ Maximum likelihood estimation can result in biased estimates, \pageref{sec:mle-bias}
 
@@ -40650,6 +41379,8 @@ $\bullet$ Moment in terms of moment-generating function, \pageref{sec:mom-mgf}
 
 $\bullet$ Moment-generating function of a function of a random variable, \pageref{sec:mgf-fct}
 
+$\bullet$ Moment-generating function of a sum of independent random variables, \pageref{sec:mgf-sumind}
+
 $\bullet$ Moment-generating function of linear combination of independent random variables, \pageref{sec:mgf-lincomb}
 
 $\bullet$ Moment-generating function of the beta distribution, \pageref{sec:beta-mgf}
@@ -40681,6 +41412,10 @@ $\bullet$ Multiple linear regression is a special case of the general linear mod
 $\bullet$ Multivariate normal distribution is a special case of matrix-normal distribution, \pageref{sec:mvn-matn}
 
 $\bullet$ Mutual information of dependent and independent variables in the general linear model, \pageref{sec:glm-mi}
+
+$\bullet$ Mutual information of the bivariate normal distribution, \pageref{sec:bvn-mi}
+
+$\bullet$ Mutual information of the multivariate normal distribution, \pageref{sec:mvn-mi}
 
 
 \vspace{1em}
@@ -41060,11 +41795,15 @@ $\bullet$ t-test for multiple linear regression using contrast-based inference, 
 
 $\bullet$ The expected value minimizes the mean squared error, \pageref{sec:mean-mse}
 
+$\bullet$ The geometric mean of independent log-normal random variables is a log-normal random variable, \pageref{sec:lognorm-geomind}
+
 $\bullet$ The log probability scoring rule is a strictly proper scoring rule, \pageref{sec:lpsr-spsr}
 
 $\bullet$ The median minimizes the mean absolute error, \pageref{sec:med-mae}
 
 $\bullet$ The p-value follows a uniform distribution under the null hypothesis, \pageref{sec:pval-h0}
+
+$\bullet$ The product of independent log-normal random variables is a log-normal random variable, \pageref{sec:lognorm-prodind}
 
 $\bullet$ The regression line goes through the center of mass point, \pageref{sec:slr-comp}
 
@@ -41169,6 +41908,8 @@ $\bullet$ Beta-binomial distribution, \pageref{sec:betabin}
 
 $\bullet$ Beta-distributed data, \pageref{sec:beta-data}
 
+$\bullet$ Biased vs. unbiased estimator, \pageref{sec:est-bias}
+
 $\bullet$ Binomial distribution, \pageref{sec:bin}
 
 $\bullet$ Binomial observations, \pageref{sec:bin-data}
@@ -41237,6 +41978,8 @@ $\bullet$ Cumulative distribution function, \pageref{sec:cdf}
 
 $\bullet$ Data, \pageref{sec:data}
 
+$\bullet$ Degrees of freedom, \pageref{sec:dof}
+
 $\bullet$ Deviance, \pageref{sec:dev}
 
 $\bullet$ Deviance information criterion, \pageref{sec:dic}
@@ -41266,6 +42009,8 @@ $\bullet$ Empirical Bayes prior distribution, \pageref{sec:prior-eb}
 $\bullet$ Empirical Bayesian log model evidence, \pageref{sec:eblme}
 
 $\bullet$ Encompassing model, \pageref{sec:encm}
+
+$\bullet$ Estimand, estimator and estimate, \pageref{sec:est}
 
 $\bullet$ Estimation matrix, \pageref{sec:emat}
 
@@ -41539,6 +42284,8 @@ $\bullet$ Residual-forming matrix, \pageref{sec:rfmat}
 \vspace{1em}
 \textbf{S}
 
+$\bullet$ Sample, \pageref{sec:samp}
+
 $\bullet$ Sample correlation coefficient, \pageref{sec:corr-samp}
 
 $\bullet$ Sample correlation matrix, \pageref{sec:corrmat-samp}
@@ -41548,6 +42295,8 @@ $\bullet$ Sample covariance, \pageref{sec:cov-samp}
 $\bullet$ Sample covariance matrix, \pageref{sec:covmat-samp}
 
 $\bullet$ Sample mean, \pageref{sec:mean-samp}
+
+$\bullet$ Sample size, \pageref{sec:samp-size}
 
 $\bullet$ Sample skewness, \pageref{sec:skew-samp}
 
@@ -41618,6 +42367,8 @@ $\bullet$ Two-way analysis of variance, \pageref{sec:anova2}
 $\bullet$ Uniform and non-uniform prior distribution, \pageref{sec:prior-uni}
 
 $\bullet$ Uniform-prior log model evidence, \pageref{sec:uplme}
+
+$\bullet$ Unimodal and multimodal probability distribution, \pageref{sec:dist-uni}
 
 $\bullet$ Univariate and multivariate random variable, \pageref{sec:rvar-uni}
 
