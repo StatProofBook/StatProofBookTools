@@ -15,10 +15,10 @@ First edit: 2023-09-22 10:55:00
 
 # Specify definitions
 #-----------------------------------------------------------------------------#
-temp_def = 'samp'
+temp_def = 'glm'
 # This is the Markdown (.md) document in the StatProofBook which should be used
 # as a template for your definition. It should be in repository sub-folder "/D/".
-src_def  = 'samp-size'
+src_def  = 'mvn-data'
 # This is the LaTeX (.tex) document in src_dir which contains your definition.
 # LaTeX should be between "\begin{document}" and "\end{document}".
 src_dir  =r'C:\Users\sochj\OvGUcloud\Projekte\StatProofBook\Submissions\JoramSoch\Definitions'
