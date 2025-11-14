@@ -21,9 +21,9 @@ import BookTools as spbt
 
 # Define settings
 #-----------------------------------------------------------------------------#
-str1r= '/D/est-unb'             # should be identical to str1, unless str1
-str1 = '/D/est-unb'             # contains regexp-problematic characters 
-str2 = '/D/est-bias'
+str1r= '$n \\times 1$'          # should be identical to str1, unless str1
+str1 = '$n \\times 1$'          # contains regexp-problematic characters 
+str2 = '$n$-dimensional'
 
 # Set repository directory
 #-----------------------------------------------------------------------------#
@@ -52,7 +52,7 @@ for file in files:
         for i, line in enumerate(file_txt):
             if line.find(str1) > -1:
                 str_found   = True
-                file_txt[i] = re.sub(str1r, str2, line)
+                file_txt[i] = re.sub(re.escape(str1r), str2, line)
         
         # Write proof file
         #---------------------------------------------------------------------#
@@ -82,7 +82,7 @@ for file in files:
         for i, line in enumerate(file_txt):
             if line.find(str1) > -1:
                 str_found   = True
-                file_txt[i] = re.sub(str1r, str2, line)
+                file_txt[i] = re.sub(re.escape(str1r), str2, line)
         
         # Write definition file
         #---------------------------------------------------------------------#
