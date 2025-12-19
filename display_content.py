@@ -10,13 +10,13 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-04-15 18:15:00
- Last edit: 2021-11-08 22:59:00
+ Last edit: 2025-12-19 17:46:00
 """
 
 
 # Import modules
 #-----------------------------------------------------------------------------#
-# import os
+import numpy as np
 import BookTools as spbt
 import matplotlib.pyplot as plt
 from datetime import datetime
@@ -24,7 +24,6 @@ from datetime import datetime
 # Set repository directory
 #-----------------------------------------------------------------------------#
 rep_dir = spbt.get_rep_dir('offline')
-plt.close('all')
 
 # Prepare date information
 #-----------------------------------------------------------------------------#
@@ -64,12 +63,12 @@ for file in files:
         #---------------------------------------------------------------------#
         file_id, shortcut, title, username, date = spbt.get_meta_data(file_txt)
         chapter, section, topic, item            = spbt.get_toc_info(file_txt)
-        if file.find('/P/') > -1:
+        if file.startswith('/P/'):
             P_ids.append(file_id)
             P_dates.append(date)
             P_chs.append(chapter)
             P_secs.append(section)
-        if file.find('/D/') > -1:
+        if file.startswith('/D/'):
             D_ids.append(file_id)
             D_dates.append(date)
             D_chs.append(chapter)
@@ -81,11 +80,11 @@ for file in files:
 d0     = datetime(2019,8,26,0,0,0)          # day of inception of StatProofBook
 dt     = datetime.today()                   # day and time today and now
 T      = (dt-d0).days
-t      = range(0,T+1)
-P_days = [(d-d0).days for d in P_dates]
-D_days = [(d-d0).days for d in D_dates]
-P_no   = [sum(i <= x for i in P_days) for x in t]
-D_no   = [sum(i <= x for i in D_days) for x in t]
+t      = np.arange(0,T+1)
+P_days = np.array([(d-d0).days for d in P_dates])
+D_days = np.array([(d-d0).days for d in D_dates])
+P_no   = np.array([np.sum(P_days <= x) for x in t])
+D_no   = np.array([np.sum(D_days <= x) for x in t])
 
 # Generate x and y for plot
 #-----------------------------------------------------------------------------#
@@ -93,30 +92,29 @@ x1 = [0]
 x2 = [0]
 y1 = [0]
 y2 = [0]
-for i,x in enumerate(t):
+for i in t:
     if i > 0:
         if P_no[i] != P_no[i-1]:
-            x1.append(x)
-            y1.append(max(y1))
-            x1.append(x)
-            y1.append(P_no[i])
+            x1.extend([i, i])
+            y1.extend([np.max(y1), P_no[i]])            
         if D_no[i] != D_no[i-1]:
-            x2.append(x)
-            y2.append(max(y2))
-            x2.append(x)
-            y2.append(D_no[i])
-x1.append(T)
-y1.append(max(y1))
-x2.append(T)
-y2.append(max(y2))
+            x2.extend([i, i])
+            y2.extend([np.max(y2), D_no[i]])
+    if i == T:
+        x1.append(i)
+        y1.append(np.max(y1))
+        x2.append(i)
+        y2.append(np.max(y2))
+x1 = np.array(x1)
+x2 = np.array(x2)
+y1 = np.array(y1)
+y2 = np.array(y2)
 
 # Calculate ToC proportions
 #-----------------------------------------------------------------------------#
 ch_labels = ['General Theorems', 'Probability Distributions', 'Statistical Models', 'Model Selection']
-D_labels  = [None] * len(ch_labels)
-P_labels  = [None] * len(ch_labels)
-D_ch_num  = [0] * len(ch_labels)
-P_ch_num  = [0] * len(ch_labels)
+D_ch_num  = np.zeros(len(ch_labels))
+P_ch_num  = np.zeros(len(ch_labels))
 D_sec_num = [None] * len(ch_labels)
 P_sec_num = [None] * len(ch_labels)
 for i,li in enumerate(ch_labels):
@@ -126,78 +124,109 @@ for i,li in enumerate(ch_labels):
     P_secs_i     = [b for a,b in zip(P_chs,P_secs) if a==li]
     D_seen_i     = set()
     P_seen_i     = set()
-    D_labels[i]  = [x for x in D_secs_i if not (x in D_seen_i or D_seen_i.add(x))]
-    P_labels[i]  = [x for x in P_secs_i if not (x in P_seen_i or P_seen_i.add(x))]
-    D_sec_num[i] = [0] * len(D_labels[i])
-    P_sec_num[i] = [0] * len(P_labels[i])
-    for j,lj in enumerate(D_labels[i]):
-        D_sec_num[i][j] = D_secs_i.count(lj)
-    for j,lj in enumerate(P_labels[i]):
-        P_sec_num[i][j] = P_secs_i.count(lj)
+    D_labels_i   = [x for x in D_secs_i if not (x in D_seen_i or D_seen_i.add(x))]
+    P_labels_i   = [x for x in P_secs_i if not (x in P_seen_i or P_seen_i.add(x))]
+    D_counts_i   = np.zeros(len(D_labels_i))
+    P_counts_i   = np.zeros(len(P_labels_i))
+    for j,lj in enumerate(D_labels_i):
+        D_counts_i[j] = D_secs_i.count(lj)
+    for j,lj in enumerate(P_labels_i):
+        P_counts_i[j] = P_secs_i.count(lj)
+    D_sec_num[i] = {'labels': D_labels_i, 'counts': D_counts_i}
+    P_sec_num[i] = {'labels': P_labels_i, 'counts': P_counts_i}
+del D_secs_i, P_secs_i, D_labels_i, P_labels_i, D_counts_i, P_counts_i
+
+# Label function for pie charts
+#-----------------------------------------------------------------------------#
+def pie_counts(N):
+    def my_autopct(p):
+        return '{:.0f}'.format(p * sum(N) / 100)
+    return my_autopct
+ch_sp  = [1,4,6,3]
+ch_col = ['#0000FF', '#FF0000', '#00FF00', '#FFFF00']
+
+# Date labels for line plot
+#-----------------------------------------------------------------------------#
+years = np.arange(2020, dt.year+1)
+days  = np.zeros(years.size)
+dates = [None] * years.size
+for i,year in enumerate(years):
+    dy       = datetime(year,1,1,0,0,0)
+    days[i]  = (dy-d0).days
+    dates[i] = '01.01.'+str(year)
 
 # Pie chart (Content by Type)
 #-----------------------------------------------------------------------------#
-plt.figure(figsize=(12,10))
-plt.pie([len(D_ids), len(P_ids)], labels=['Definitions', 'Proofs'], colors=['#0044FF', '#FF4400'],
-         autopct=lambda p: '{:.0f}'.format(p * sum([len(D_ids), len(P_ids)]) / 100),
-         startangle=90, shadow=False, textprops=dict(fontsize=24))
-plt.axis('equal')
-plt.title('Content by Type', fontsize=32)
-plt.savefig('display_content/Content.png')
-plt.show()
+fig = plt.figure(figsize=(16,9))
+ax  = fig.add_subplot(111)
+ax.pie([len(D_ids), len(P_ids)], labels=['Definitions', 'Proofs'],
+       colors=['#0044FF', '#FF4400'], autopct=pie_counts([len(D_ids), len(P_ids)]),
+       startangle=90, shadow=False, textprops=dict(fontsize=24))
+ax.axis('equal')
+ax.set_title('Content by Type', fontsize=32)
+fig.savefig('display_content/Content.png', dpi=150, transparent=True)
 
 # Pie charts (Proofs by Topic)
 #-----------------------------------------------------------------------------#
-ch_sp  = [1,4,6,3]
-ch_col = ['#0000FF', '#FF0000', '#00FF00', '#FFFF00']
-plt.figure(figsize=(16,9))
-plt.subplot(1,3,2)
-plt.pie(P_ch_num, labels=ch_labels, colors=ch_col,
-        autopct=lambda p: '{:.0f}'.format(p * sum(P_ch_num) / 100),
-        startangle=90, shadow=False, textprops=dict(fontsize=12))
-plt.axis('equal')
-plt.title('Proofs by Topic', fontsize=32)
+fig    = plt.figure(figsize=(16,9))
+axs    = fig.subplots(1,3)
+axs[1].pie(P_ch_num, labels=ch_labels,
+           colors=ch_col, autopct=pie_counts(P_ch_num), 
+           startangle=90, shadow=False, textprops=dict(fontsize=12))
+axs[1].axis('equal')
+axs[0].axis('off'); axs[2].axis('off');
+axs[1].set_title('Proofs by Topic', fontsize=32)
+axs    = fig.subplots(2,3)
 for i,li in enumerate(ch_labels):
-    plt.subplot(2,3,ch_sp[i])
-    plt.pie(P_sec_num[i], labels=P_labels[i], colors=[ch_col[i]],
-            wedgeprops={'edgecolor': 'k', 'linewidth': 1},
-            autopct=lambda p: '{:.0f}'.format(p * sum(P_sec_num[i]) / 100),
-            startangle=90, shadow=False, textprops=dict(fontsize=8))
-    plt.axis('equal')
-    plt.title(ch_labels[i], fontsize=12)
-plt.savefig('display_content/Topic_Proofs.png')
-plt.show()
+    j = int(np.ceil(ch_sp[i]/3))-1
+    k = (ch_sp[i] % 3)-1
+    if k == -1: k = 2
+    axs[j,k].pie(P_sec_num[i]['counts'], labels=P_sec_num[i]['labels'],
+                 colors=[ch_col[i]], wedgeprops={'edgecolor': 'k', 'linewidth': 1},
+                 autopct=pie_counts(P_sec_num[i]['counts']), 
+                 startangle=90, shadow=False, textprops=dict(fontsize=8))
+    axs[j,k].axis('equal')
+    axs[j,k].set_title(ch_labels[i], fontsize=12)
+axs[0,1].axis('off'); axs[1,1].axis('off')
+fig.savefig('display_content/Topic_Proofs.png', dpi=150, transparent=True)
 
 # Pie charts (Definitions by Topic)
 #-----------------------------------------------------------------------------#
-plt.figure(figsize=(16,9))
-plt.subplot(1,3,2)
-plt.pie(D_ch_num, labels=ch_labels, colors=ch_col,
-        autopct=lambda p: '{:.0f}'.format(p * sum(D_ch_num) / 100),
-        startangle=90, shadow=False, textprops=dict(fontsize=12))
-plt.axis('equal')
-plt.title('Definitions by Topic', fontsize=32)
+fig    = plt.figure(figsize=(16,9))
+axs    = fig.subplots(1,3)
+axs[1].pie(D_ch_num, labels=ch_labels,
+           colors=ch_col, autopct=pie_counts(D_ch_num), 
+           startangle=90, shadow=False, textprops=dict(fontsize=12))
+axs[1].axis('equal')
+axs[0].axis('off'); axs[2].axis('off');
+axs[1].set_title('Definitions by Topic', fontsize=32)
+
+axs    = fig.subplots(2,3)
 for i,li in enumerate(ch_labels):
-    plt.subplot(2,3,ch_sp[i])
-    plt.pie(D_sec_num[i], labels=D_labels[i], colors=[ch_col[i]],
-            wedgeprops={'edgecolor': 'k', 'linewidth': 1},
-            autopct=lambda p: '{:.0f}'.format(p * sum(D_sec_num[i]) / 100),
-            startangle=90, shadow=False, textprops=dict(fontsize=8))
-    plt.axis('equal')
-    plt.title(ch_labels[i], fontsize=12)
-plt.savefig('display_content/Topic_Definitions.png')
-plt.show()
+    j = int(np.ceil(ch_sp[i]/3))-1
+    k = (ch_sp[i] % 3)-1
+    if k == -1: k = 2
+    axs[j,k].pie(D_sec_num[i]['counts'], labels=D_sec_num[i]['labels'],
+                 colors=[ch_col[i]], wedgeprops={'edgecolor': 'k', 'linewidth': 1},
+                 autopct=pie_counts(D_sec_num[i]['counts']), 
+                 startangle=90, shadow=False, textprops=dict(fontsize=8))
+    axs[j,k].axis('equal')
+    axs[j,k].set_title(ch_labels[i], fontsize=12)
+axs[0,1].axis('off'); axs[1,1].axis('off')
+fig.savefig('display_content/Topic_Definitions.png', dpi=150, transparent=True)
 
 # Line plot (Development over Time)
 #-----------------------------------------------------------------------------#
-plt.figure(figsize=(16,9))
-h1 = plt.plot(x2, y2, 'b-', linewidth=2, color='#0044FF')
-h2 = plt.plot(x1, y1, 'r-', linewidth=2, color='#FF4400')
-plt.axis([0, T, -0.1, +(11/10)*max([max(P_no), max(D_no)])])
-plt.grid(True)
-plt.xlabel('days since inception of the StatProofBook (August 26, 2019)', fontsize=16)
-plt.ylabel('number of proofs and definitions available', fontsize=16)
-plt.title('Development over Time', fontsize=32)
-plt.legend((h1[0], h2[0]), ('Definitions', 'Proofs'), loc='upper left')
-plt.savefig('display_content/Development.png')
-plt.show()
+fig = plt.figure(figsize=(16,9))
+ax  = fig.add_subplot(111)
+ax.plot(x2, y2, 'b-', linewidth=2, color='#0044FF', label='Definitions')
+ax.plot(x1, y1, 'r-', linewidth=2, color='#FF4400', label='Proofs')
+ax.axis([0, T, -1, +(21/20)*np.max([np.max(P_no), np.max(D_no)])])
+ax.grid(True)
+ax.set_xticks(days, labels=dates)
+ax.set_xlabel('date [dd.mm.yyyy]', fontsize=20)
+ax.set_ylabel('number of proofs and definitions available', fontsize=20)
+ax.set_title('Development over Time', fontsize=32)
+ax.tick_params(axis='both', labelsize=16)
+ax.legend(loc='upper left', fontsize=16)
+fig.savefig('display_content/Development.png', dpi=150, transparent=True)
