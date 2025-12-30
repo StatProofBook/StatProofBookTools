@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.7.24)  30 DEC 2025 13:31
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.7.24)  30 DEC 2025 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -200,12 +200,6 @@ LaTeX Warning: Label `sec:lf' multiply defined.
 
 LaTeX Warning: Label `eq:lf-lf' multiply defined.
 
-
-LaTeX Warning: Label `sec:cuni-med' multiply defined.
-
-
-LaTeX Warning: Label `eq:cuni-med-cuni' multiply defined.
-
 )
 \openout1 = `StatProofBook.aux'.
 
@@ -260,17 +254,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (./StatProofBook.toc [1
 
 ]
-Overfull \hbox (1.1145pt too wide) in paragraph at lines 74--74
+Overfull \hbox (1.1145pt too wide) in paragraph at lines 82--82
  [][] []\TU/lmr/bx/n/12 Cumulative distribution function of continuous random v
 ari- 
  []
 
-[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17])
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+[18])
 \tf@toc=\write3
 \openout3 = `StatProofBook.toc'.
 
-
-[18]
+ [19]
 Chapter I.
 [1
 
@@ -353,36 +347,7 @@ Overfull \hbox (11.44254pt too wide) in paragraph at lines 1070--1071
  [] [][][] [] [][] [] [][][] []
  []
 
-[16] [17]
-
-LaTeX Warning: Reference `eq:bool-ineq-bool-ineq' on page 18 undefined on input
- line 1147.
-
-
-LaTeX Warning: Reference `eq:bool-ineq-prob-add' on page 18 undefined on input 
-line 1153.
-
-
-LaTeX Warning: Reference `eq:bool-ineq-bi-n+1-s1' on page 18 undefined on input
- line 1169.
-
-
-LaTeX Warning: Reference `eq:bool-ineq-bi-n' on page 18 undefined on input line
- 1175.
-
-
-LaTeX Warning: Reference `eq:bool-ineq-bi-1' on page 18 undefined on input line
- 1187.
-
-
-LaTeX Warning: Reference `eq:bool-ineq-bi-n' on page 18 undefined on input line
- 1187.
-
-
-LaTeX Warning: Reference `eq:bool-ineq-bi-n+1-s4' on page 18 undefined on input
- line 1187.
-
-[18]
+[16] [17] [18]
 Overfull \hbox (15.01854pt too wide) in paragraph at lines 1234--1235
 [][][][][] [] [][][] [] [][][][][][] [] [][][][][][][] [] [][][] [] [][][][][][
 ][][] [] [][][][][][] [] [][] [] [][][][][][][][][][] [] [][] [] [] [] [][][][]
@@ -417,24 +382,7 @@ Overfull \hbox (2.93323pt too wide) in paragraph at lines 1418--1419
 [][][] [] [][][][][][][][][][][][]$. 
  []
 
-[22] [23]
-
-LaTeX Warning: Reference `sec:para-scal' on page 24 undefined on input line 155
-0.
-
-
-LaTeX Warning: Reference `sec:para-loc' on page 24 undefined on input line 1570
-.
-
-
-LaTeX Warning: Reference `sec:para-scal' on page 24 undefined on input line 157
-0.
-
-
-LaTeX Warning: Reference `sec:para-rate' on page 24 undefined on input line 157
-0.
-
-[24] [25]
+[22] [23] [24] [25]
 Overfull \hbox (66.3905pt too wide) in paragraph at lines 1682--1683
 \TU/lmr/m/it/12 mathematical statistics\TU/lmr/m/n/12 , retrieved on 2021-08-30
 ; URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][][][][][
@@ -539,34 +487,7 @@ Overfull \hbox (3.86252pt too wide) in paragraph at lines 3975--3976
 [] [] [][][][][][][][][][][] []
  []
 
-[60] [61]
-
-LaTeX Warning: Reference `sec:mark-ineq' on page 62 undefined on input line 410
-0.
-
-[62]
-
-LaTeX Warning: Reference `eq:cheb-ineq-mark-ineq' on page 63 undefined on input
- line 4123.
-
-
-LaTeX Warning: Reference `eq:cheb-ineq-var' on page 63 undefined on input line 
-4123.
-
-
-LaTeX Warning: Reference `eq:cheb-ineq-mark-ineq' on page 63 undefined on input
- line 4123.
-
-
-LaTeX Warning: Reference `eq:cheb-ineq-var' on page 63 undefined on input line 
-4123.
-
-[63]
-
-LaTeX Warning: Reference `sec:cheb-ineq' on page 64 undefined on input line 417
-9.
-
-[64]
+[60] [61] [62] [63] [64]
 Overfull \hbox (32.65063pt too wide) in paragraph at lines 4225--4226
 [][][][][][][][][][][][][] [] [] [] [][][][][][][][][][][][][][] [] [][][][] []
  [][][][][][][][][][][][][][][][][][][][][][][][][][] [] [][][] [] [][][][][][]
@@ -586,10 +507,6 @@ Overfull \hbox (83.20924pt too wide) in paragraph at lines 4354--4355
 ][][][][][][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][] [] [][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$. 
  []
-
-
-LaTeX Warning: Reference `sec:covmatcross-mean' on page 67 undefined on input l
-ine 4389.
 
 [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]
 Overfull \hbox (90.0036pt too wide) detected at line 5395
@@ -647,15 +564,6 @@ Overfull \hbox (43.00664pt too wide) in paragraph at lines 6438--6439
  []
 
 [96]
-
-LaTeX Warning: Reference `sec:std-samp' on page 97 undefined on input line 6448
-.
-
-
-LaTeX Warning: Reference `sec:var-pool' on page 97 undefined on input line 6448
-.
-
-
 Overfull \hbox (50.37463pt too wide) in paragraph at lines 6469--6470
 [][][][][] [] [] [] [][][] [] [][][][] [] [][][][] [] [][] [] [][][][] [] [][][
 ][][] [] [][][][][][][][][][][][][] [] [] [] [][][][][][][][][][][][][][] [] []
@@ -704,12 +612,7 @@ Overfull \hbox (41.77325pt too wide) in paragraph at lines 7016--7017
 [][][][] [] [][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[106] [107] [108]
-
-LaTeX Warning: Reference `sec:jens-ineq' on page 109 undefined on input line 72
-39.
-
-[109] [110]
+[106] [107] [108] [109] [110]
 Overfull \hbox (27.69324pt too wide) in paragraph at lines 7384--7385
 \TU/lmr/m/n/12 02-12; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][][][][] [] [][][][][][][] [] [][][][][][]
@@ -731,11 +634,6 @@ Overfull \hbox (27.69324pt too wide) in paragraph at lines 7552--7553
  []
 
 [114]
-
-LaTeX Warning: Reference `sec:pdf-joint' on page 115 undefined on input line 76
-33.
-
-
 Overfull \hbox (27.69324pt too wide) in paragraph at lines 7649--7650
 \TU/lmr/m/n/12 10-07; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][][][][] [] [][][][][][][] [] [][][][][][]
@@ -809,24 +707,7 @@ Overfull \hbox (28.85725pt too wide) in paragraph at lines 8255--8256
 ] [] [][][][][][][][][][] [] [][][][][][][][][][]$. 
  []
 
-[125]
-
-LaTeX Warning: Reference `sec:jens-ineq' on page 126 undefined on input line 83
-31.
-
-
-LaTeX Warning: Reference `eq:kl-nonneg3-jens-ineq-cont' on page 126 undefined o
-n input line 8347.
-
-
-LaTeX Warning: Reference `eq:kl-nonneg3-KL-nonneg-s1' on page 126 undefined on 
-input line 8347.
-
-
-LaTeX Warning: Reference `eq:kl-nonneg3-KL-nonneg-s2' on page 126 undefined on 
-input line 8358.
-
-[126] [127]
+[125] [126] [127]
 Overfull \hbox (14.94269pt too wide) in paragraph at lines 8458--8459
 \TU/lmr/m/n/12 URL: $[][][][] [] [] [] [][][][][][][][][] [] [][] [] [][] [] []
 [][][][][][][][][][][][][][][][][][] [] [][][][][][][][][][][] [] [][][][][][][
@@ -925,23 +806,14 @@ Overfull \hbox (2.53053pt too wide) in paragraph at lines 9544--9545
 [][][][][][] [] [][][][][][]$. 
  []
 
-[145]
-
-LaTeX Warning: Reference `sec:mde' on page 146 undefined on input line 9587.
-
-[146]
+[145] [146]
 Overfull \hbox (130.59726pt too wide) in paragraph at lines 9622--9623
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] [
 ] [][][] [] [][][][][][][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][][][
 ][][][][][][][][][][][]$; DOI: 10.1016/j.neuroimage.2007.08.013. 
  []
 
-[147]
-
-LaTeX Warning: Reference `eq:priorpred-jl-prior-pred' on page 148 undefined on 
-input line 9687.
-
-[148] [149] [150] [151]
+[147] [148] [149] [150] [151]
 Overfull \hbox (1.67323pt too wide) in paragraph at lines 9920--9921
 \TU/lmr/m/n/12 trieved on 2023-12-01; URL: $[][][][][] [] [] [] [][] [] [][][][
 ][][][][][] [] [][][] [] [][][][] [] [][][][][][][] [] [] [] [][][][][][][][][]
@@ -959,13 +831,6 @@ R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y; ^^U; m\OT1/cmr/m/n/12 )$
  []
 
 [155] [156]
-
-LaTeX Warning: Reference `sec:odds' on page 157 undefined on input line 10232.
-
-
-LaTeX Warning: Reference `sec:odds' on page 157 undefined on input line 10232.
-
-
 Overfull \hbox (3.94191pt too wide) in paragraph at lines 10275--10276
 \OML/cmm/m/it/12 ^^U$ \TU/lmr/m/n/12 implying the likelihood function ($\OMS/cm
 sy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.2[]) $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\O
@@ -975,16 +840,7 @@ $ \TU/lmr/m/n/12 and prior distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[
 n/12 j\OML/cmm/m/it/12 ^^U; m\OT1/cmr/m/n/12 )$\TU/lmr/m/n/12 .
  []
 
-[157] [158]
-
-LaTeX Warning: Reference `sec:jens-ineq' on page 159 undefined on input line 10
-393.
-
-
-LaTeX Warning: Reference `sec:kl-nonneg3' on page 159 undefined on input line 1
-0393.
-
-[159]
+[157] [158] [159]
 Overfull \hbox (21.37946pt too wide) in paragraph at lines 10457--10458
 \TU/lmr/m/n/12 120310, p. 5, eqs. 12-14; URL: $[][][][][] [] [] [] [][][] [] []
 [][][][][][][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][][][] [] [][][
@@ -992,15 +848,6 @@ Overfull \hbox (21.37946pt too wide) in paragraph at lines 10457--10458
  []
 
 [160]
-
-LaTeX Warning: Reference `sec:fren-dec' on page 161 undefined on input line 104
-74.
-
-
-LaTeX Warning: Reference `sec:kl-nonneg3' on page 161 undefined on input line 1
-0480.
-
-
 Overfull \hbox (31.81946pt too wide) in paragraph at lines 10498--10499
 \TU/lmr/m/n/12 120310, pp. 4-5, eqs. 9-11; URL: $[][][][][] [] [] [] [][][] [] 
 [][][][][][][][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][][][] [] [][
@@ -1084,23 +931,6 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 11693.
 
 [183]
-
-LaTeX Warning: Reference `eq:bin-cdf-cdf-pmf' on page 184 undefined on input li
-ne 11801.
-
-
-LaTeX Warning: Reference `eq:bin-cdf-bin-pmf' on page 184 undefined on input li
-ne 11801.
-
-
-LaTeX Warning: Reference `eq:bin-cdf-cdf-pmf' on page 184 undefined on input li
-ne 11801.
-
-
-LaTeX Warning: Reference `eq:bin-cdf-bin-pmf' on page 184 undefined on input li
-ne 11801.
-
-
 Overfull \hbox (32.82927pt too wide) in paragraph at lines 11809--11810
 \TU/lmr/m/n/12 02-06; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][] [] [][][][][][][][][][][][] [] [][][][][]
@@ -1128,33 +958,8 @@ Overfull \hbox (2.64522pt too wide) in paragraph at lines 12439--12440
 ][] [] [][] [] [] [] [][][][][][][][] []
  []
 
-[194] [195] [196] [197] [198] [199]
-
-LaTeX Warning: Reference `eq:poiss-ent-poiss-ent-s1' on page 200 undefined on i
-nput line 12784.
-
-
-LaTeX Warning: Reference `eq:poiss-ent-poiss-ent-s2' on page 200 undefined on i
-nput line 12799.
-
-[200] [201] [202] [203] [204]
-
-LaTeX Warning: Reference `eq:mult-cdf-cdf-pmf' on page 205 undefined on input l
-ine 13095.
-
-
-LaTeX Warning: Reference `eq:mult-cdf-mult-pmf' on page 205 undefined on input 
-line 13101.
-
-
-LaTeX Warning: Reference `sec:mult-marg' on page 205 undefined on input line 13
-104.
-
-
-LaTeX Warning: Reference `sec:bin-cdf' on page 205 undefined on input line 1311
-2.
-
-[205] [206]
+[194] [195] [196] [197] [198] [199] [200] [201] [202] [203] [204] [205]
+[206]
 Overfull \hbox (123.09871pt too wide) in paragraph at lines 13213--13214
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][]
  [] [][][][] [] [][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][
@@ -1248,15 +1053,6 @@ Overfull \hbox (48.59384pt too wide) detected at line 16148
  []
 
 [255]
-
-LaTeX Warning: Reference `sec:para-shape' on page 256 undefined on input line 1
-6181.
-
-
-LaTeX Warning: Reference `sec:para-rate' on page 256 undefined on input line 16
-181.
-
-
 Overfull \hbox (1.67145pt too wide) in paragraph at lines 16198--16199
 []\TU/lmr/m/n/12 Koch, Karl-Rudolf (2007): “   Gamma Distribution” ; in: \TU/lm
 r/m/it/12 Introduction to Bayesian Statistics\TU/lmr/m/n/12 , Springer,
@@ -1291,14 +1087,6 @@ Overfull \hbox (7.29324pt too wide) in paragraph at lines 16786--16787
  []
 
 [265]
-
-LaTeX Warning: Reference `eq:gam-mode-gam-pdf-der1' on page 266 undefined on in
-put line 16845.
-
-
-LaTeX Warning: Reference `eq:gam-mode-gam-pdf-der2' on page 266 undefined on in
-put line 16858.
-
 
 LaTeX Warning: Command \' invalid in math mode on input line 16869.
 
@@ -1380,24 +1168,7 @@ Overfull \hbox (75.23529pt too wide) detected at line 18982
 []
  []
 
-[299] [300] [301] [302] [303]
-
-LaTeX Warning: Reference `eq:beta-f-pdf-sifct' on page 304 undefined on input l
-ine 19301.
-
-
-LaTeX Warning: Reference `eq:beta-f-f-pdf' on page 304 undefined on input line 
-19301.
-
-
-LaTeX Warning: Reference `eq:beta-f-g-inv' on page 304 undefined on input line 
-19301.
-
-
-LaTeX Warning: Reference `eq:beta-f-dg-inv-dy' on page 304 undefined on input l
-ine 19301.
-
-[304] [305] [306]
+[299] [300] [301] [302] [303] [304] [305] [306]
 Overfull \hbox (4.14517pt too wide) in paragraph at lines 19454--19455
 \TU/lmr/m/n/12 trieved on 2020-11-25; URL: $[][][][][] [] [] [] [][] [] [][][][
 ][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][][][][]
@@ -1405,27 +1176,13 @@ Overfull \hbox (4.14517pt too wide) in paragraph at lines 19454--19455
  []
 
 [307] [308] [309] [310]
-
-LaTeX Warning: Reference `sec:cuni-mode' on page 311 undefined on input line 19
-764.
-
-
 Overfull \hbox (1.56627pt too wide) in paragraph at lines 19764--19765
 []\TU/lmr/m/n/12 i.e. the distribution becomes equivalent to the (standard) con
 tinuous uniform distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 II[]/3.1.1[])
 
  []
 
-
-LaTeX Warning: Reference `eq:beta-mode-beta-pdf-der1' on page 311 undefined on 
-input line 19794.
-
 [311]
-
-LaTeX Warning: Reference `eq:beta-mode-beta-pdf-der2' on page 312 undefined on 
-input line 19831.
-
-
 Overfull \hbox (2.54024pt too wide) detected at line 19868
 []
  []
@@ -1468,29 +1225,12 @@ Overfull \hbox (48.33452pt too wide) in paragraph at lines 21312--21313
 ][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[338]
-
-LaTeX Warning: Reference `eq:mvn-mode-mvn-pdf-grad' on page 339 undefined on in
-put line 21369.
-
-
-LaTeX Warning: Reference `eq:mvn-mode-mvn-pdf-hess' on page 339 undefined on in
-put line 21379.
-
-[339] [340]
+[338] [339] [340]
 Overfull \hbox (3.57451pt too wide) in paragraph at lines 21489--21490
 \TU/lmr/m/it/12 Mathematics\TU/lmr/m/n/12 , retrieved on 2022-09-15; URL: $[][]
 [][][] [] [] [] [][][][] [] [][][][][][][][][][][][][] [] [][][] [] [][][][][][
 ][][][] [] [][][][][][][] []
  []
-
-
-LaTeX Warning: Reference `eq:mvn-meanqf-mean-qf' on page 341 undefined on input
- line 21527.
-
-
-LaTeX Warning: Reference `eq:mvn-meanqf-mvn-mean-cov' on page 341 undefined on 
-input line 21527.
 
 [341]
 Overfull \hbox (77.3613pt too wide) in paragraph at lines 21600--21601
@@ -1512,33 +1252,11 @@ Overfull \hbox (65.52678pt too wide) detected at line 21741
  []
 
 [345]
-
-LaTeX Warning: Reference `eq:mvn-maxent-dent' on page 346 undefined on input li
-ne 21805.
-
-
-LaTeX Warning: Reference `eq:mvn-maxent-dent' on page 346 undefined on input li
-ne 21805.
-
-
 Overfull \hbox (10.78072pt too wide) detected at line 21816
 []
  []
 
 [346]
-
-LaTeX Warning: Reference `eq:mvn-maxent-kl-fg' on page 347 undefined on input l
-ine 21838.
-
-
-LaTeX Warning: Reference `eq:mvn-maxent-kl-fg' on page 347 undefined on input l
-ine 21850.
-
-
-LaTeX Warning: Reference `eq:mvn-maxent-int-fg-s5' on page 347 undefined on inp
-ut line 21850.
-
-
 Overfull \hbox (11.26651pt too wide) in paragraph at lines 21867--21868
 \TU/lmr/m/it/12 dia\TU/lmr/m/n/12 , retrieved on 2025-05-23; URL: $[][][][][] [
 ] [] [] [][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][][][] [] [
@@ -1552,16 +1270,7 @@ Overfull \hbox (15.13452pt too wide) in paragraph at lines 21931--21932
 [][][][][][][][][][][][][][][][][][] []
  []
 
-[348] [349] [350] [351] [352] [353] [354]
-
-LaTeX Warning: Reference `eq:mvn-samp-Xi-dist' on page 355 undefined on input l
-ine 22356.
-
-
-LaTeX Warning: Reference `eq:mvn-samp-mvn-samp' on page 355 undefined on input 
-line 22356.
-
-[355] [356]
+[348] [349] [350] [351] [352] [353] [354] [355] [356]
 Overfull \hbox (136.73817pt too wide) detected at line 22450
 []
  []
@@ -1572,31 +1281,6 @@ Overfull \hbox (136.79128pt too wide) detected at line 22525
  []
 
 [358] [359]
-
-LaTeX Warning: Reference `eq:bvn-snorm-snorm-pdf' on page 360 undefined on inpu
-t line 22630.
-
-
-LaTeX Warning: Reference `eq:bvn-snorm-f-Y12-s1' on page 360 undefined on input
- line 22630.
-
-
-LaTeX Warning: Reference `eq:bvn-snorm-f-Y12-s2' on page 360 undefined on input
- line 22646.
-
-
-LaTeX Warning: Reference `eq:bvn-snorm-Y12-X12' on page 360 undefined on input 
-line 22646.
-
-
-LaTeX Warning: Reference `eq:bvn-snorm-Y12-X12-jac-det' on page 360 undefined o
-n input line 22646.
-
-
-LaTeX Warning: Reference `eq:bvn-snorm-f-X12-s1' on page 360 undefined on input
- line 22646.
-
-
 Overfull \hbox (184.8332pt too wide) detected at line 22655
 []
  []
@@ -1672,25 +1356,7 @@ Overfull \hbox (2.48123pt too wide) in paragraph at lines 24302--24303
 ][] [] [][][][][][][][] [] [][][][][][]$. 
  []
 
-[389] [390] [391] [392] [393] [394] [395]
-
-LaTeX Warning: Reference `eq:matn-red-matn-red' on page 396 undefined on input 
-line 24807.
-
-
-LaTeX Warning: Reference `eq:matn-red-matn-red' on page 396 undefined on input 
-line 24820.
-
-[396]
-
-LaTeX Warning: Reference `eq:matn-red2-matn-red' on page 397 undefined on input
- line 24859.
-
-
-LaTeX Warning: Reference `eq:matn-red2-matn-red' on page 397 undefined on input
- line 24871.
-
-[397]
+[389] [390] [391] [392] [393] [394] [395] [396] [397]
 Overfull \hbox (4.12523pt too wide) in paragraph at lines 24937--24938
 \TU/lmr/m/n/12 2021-12-07; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][][][
@@ -1734,16 +1400,7 @@ Overfull \hbox (4.52669pt too wide) in paragraph at lines 25379--25380
 [][][][][][][] [] [][] []
  []
 
-[408] [409]
-
-LaTeX Warning: Reference `sec:std-pool' on page 410 undefined on input line 254
-81.
-
-
-LaTeX Warning: Reference `sec:std-pool' on page 410 undefined on input line 255
-04.
-
-[410]
+[408] [409] [410]
 Overfull \hbox (35.02266pt too wide) in paragraph at lines 25554--25555
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [
 ] [][][][] [] [][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][] [] [][] 
@@ -1761,42 +1418,7 @@ Overfull \hbox (12.76263pt too wide) in paragraph at lines 25602--25603
 
 LaTeX Warning: Reference `sec:F' on page 413 undefined on input line 25679.
 
-
-LaTeX Warning: Reference `sec:mde' on page 413 undefined on input line 25713.
-
-
-LaTeX Warning: Reference `sec:mrss' on page 413 undefined on input line 25719.
-
-[413]
-
-LaTeX Warning: Reference `sec:mde' on page 414 undefined on input line 25734.
-
-
-LaTeX Warning: Reference `sec:mde' on page 414 undefined on input line 25740.
-
-
-LaTeX Warning: Reference `sec:mde' on page 414 undefined on input line 25784.
-
-[414]
-
-LaTeX Warning: Reference `sec:mrss' on page 415 undefined on input line 25804.
-
-
-LaTeX Warning: Reference `eq:ug-ttest1power-one-sided-power-threshold' on page 
-415 undefined on input line 25804.
-
-
-LaTeX Warning: Reference `sec:mde' on page 415 undefined on input line 25842.
-
-[415]
-
-LaTeX Warning: Reference `sec:mrss' on page 416 undefined on input line 25862.
-
-
-LaTeX Warning: Reference `eq:ug-ttest1power-two-sided-power-threshold' on page 
-416 undefined on input line 25862.
-
-[416] [417]
+[413] [414] [415] [416] [417]
 Overfull \hbox (18.03871pt too wide) in paragraph at lines 25980--25981
 [][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][][] [] [][][][][] [] [
 ][][][][][][][][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][][][][] [
@@ -1820,30 +1442,12 @@ Overfull \hbox (18.03871pt too wide) in paragraph at lines 26270--26271
 
 Overfull \hbox (10.7726pt too wide) in paragraph at lines 26316--26317
 []\TU/lmr/m/n/12 The accuracy term is the expectation ($\OMS/cmsy/m/n/12 !$ \TU
-/lmr/m/n/12 I[]/1.10.1[]) of the log-likelihood function ($\OMS/cmsy/m/n/12 !$ 
+/lmr/m/n/12 I[]/1.12.1[]) of the log-likelihood function ($\OMS/cmsy/m/n/12 !$ 
 \TU/lmr/m/n/12 I[]/4.1.2[]) $[] \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/i
 t/12 y\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ^^V; ^^\\OT1/cmr/m/n/12 )$
  []
 
-[423] [424] [425] [426] [427]
-
-LaTeX Warning: Reference `eq:ug-cvlme-UG-m0-cvLME' on page 428 undefined on inp
-ut line 26521.
-
-
-LaTeX Warning: Reference `eq:ug-cvlme-UG-m1-cvLME' on page 428 undefined on inp
-ut line 26521.
-
-
-LaTeX Warning: Reference `eq:ug-cvlme-UG-cvLME-m01' on page 428 undefined on in
-put line 26521.
-
-[428]
-
-LaTeX Warning: Reference `sec:ug-cvlme' on page 429 undefined on input line 265
-60.
-
-[429]
+[423] [424] [425] [426] [427] [428] [429]
 Overfull \hbox (20.2587pt too wide) in paragraph at lines 26603--26604
 [][][][][][] [] [][][][][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][
 ][][][][][][] [] [][][][][] [] [][][][][][][][][] [] [][][][][][][][][][] [] []
@@ -1857,12 +1461,7 @@ Overfull \hbox (20.2587pt too wide) in paragraph at lines 26692--26693
 [][][] [] [][][][][][][][][][] []
  []
 
-[431] [432]
-
-LaTeX Warning: Reference `sec:std-pool' on page 433 undefined on input line 268
-21.
-
-[433]
+[431] [432] [433]
 Overfull \hbox (4.63458pt too wide) in paragraph at lines 26841--26842
 \TU/lmr/m/n/12 URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [
 ] [][][][] [] [][][] [] [][] [] [][][][][][][][] [] [][][][][][][][][][][][][][
@@ -2013,7 +1612,7 @@ Overfull \hbox (2.8466pt too wide) in paragraph at lines 29852--29853
 [491]
 Overfull \hbox (3.19446pt too wide) in paragraph at lines 29895--29896
 []\TU/lmr/m/n/12 From [] and the linear transformation theorem for the multivar
-iate normal distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 II[]/4.1.11[]),
+iate normal distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 II[]/4.1.14[]),
  []
 
 [492]
@@ -2209,16 +1808,7 @@ Overfull \hbox (107.67725pt too wide) in paragraph at lines 34735--34736
 ][][][][][][]$; DOI: 10.1016/j.neuroimage.2016.07.047. 
  []
 
-[574] [575] [576] [577]
-
-LaTeX Warning: Reference `sec:mvn-mode' on page 578 undefined on input line 349
-50.
-
-
-LaTeX Warning: Reference `sec:gam-mode' on page 578 undefined on input line 349
-56.
-
-[578] [579]
+[574] [575] [576] [577] [578] [579]
 
 LaTeX Warning: Reference `eq:GLM-NG-post-par' on page 580 undefined on input li
 ne 35060.
@@ -2238,76 +1828,8 @@ multivariate t-distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 II[]/4.4.8[]),
  []
 
 [582] [583] [584] [585] [586] [587] [588] [589] [590] [591] [592] [593]
-[594] [595] [596] [597]
-
-LaTeX Warning: Reference `sec:bvn-snorm' on page 598 undefined on input line 36
-073.
-
-
-LaTeX Warning: Reference `sec:bvn-data' on page 598 undefined on input line 360
-97.
-
-[598]
-
-LaTeX Warning: Reference `sec:mvn-data' on page 599 undefined on input line 361
-17.
-
-
-LaTeX Warning: Reference `sec:mvn-mle' on page 599 undefined on input line 3612
-3.
-
-
-LaTeX Warning: Reference `eq:bvn-mle-bvn-data' on page 599 undefined on input l
-ine 36132.
-
-
-LaTeX Warning: Reference `sec:bvn-snorm' on page 599 undefined on input line 36
-145.
-
-[599]
-
-LaTeX Warning: Reference `eq:bvn-mle-bvn-mle-mean' on page 600 undefined on inp
-ut line 36182.
-
-
-LaTeX Warning: Reference `eq:bvn-mle-bvn-mle-var' on page 600 undefined on inpu
-t line 36182.
-
-
-LaTeX Warning: Reference `eq:bvn-mle-bvn-mle-corr' on page 600 undefined on inp
-ut line 36182.
-
-
-LaTeX Warning: Reference `sec:bvn-data' on page 600 undefined on input line 361
-82.
-
-
-LaTeX Warning: Reference `sec:mvn-data' on page 600 undefined on input line 361
-90.
-
-[600]
-
-LaTeX Warning: Reference `eq:mvn-mle-mvn-LL' on page 601 undefined on input lin
-e 36238.
-
-[601]
-
-LaTeX Warning: Reference `eq:mvn-mle-mvn-LL' on page 602 undefined on input lin
-e 36261.
-
-
-LaTeX Warning: Reference `eq:mvn-mle-mu-mle' on page 602 undefined on input lin
-e 36287.
-
-
-LaTeX Warning: Reference `eq:mvn-mle-S-mle' on page 602 undefined on input line
- 36287.
-
-
-LaTeX Warning: Reference `sec:mvn-data' on page 602 undefined on input line 362
-87.
-
-[602] [603] [604] [605] [606] [607] [608] [609] [610] [611]
+[594] [595] [596] [597] [598] [599] [600] [601] [602] [603] [604] [605]
+[606] [607] [608] [609] [610] [611]
 Overfull \hbox (29.34923pt too wide) in paragraph at lines 36927--36928
 [][][][][][][][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][][][] [] [][
 ][] [] [][][] [] [][][][][][][][][][][][][][][][][]$\TU/lmr/m/n/12 ; DOI: 10.10
@@ -2348,35 +1870,8 @@ Overfull \hbox (39.43724pt too wide) in paragraph at lines 37822--37823
 [][] [] [][][][][][] [] [][][][][][][][][][] []
  []
 
-[626] [627] [628] [629]
-
-LaTeX Warning: Reference `sec:bin-cdf' on page 630 undefined on input line 3800
-1.
-
-[630] [631] [632]
-
-LaTeX Warning: Reference `sec:beta-mode' on page 633 undefined on input line 38
-208.
-
-[633] [634] [635] [636] [637] [638] [639] [640] [641]
-
-LaTeX Warning: Reference `eq:bin-cvlme-Bin-m0-cvLME' on page 642 undefined on i
-nput line 38729.
-
-
-LaTeX Warning: Reference `eq:bin-cvlme-Bin-m1-cvLME' on page 642 undefined on i
-nput line 38729.
-
-
-LaTeX Warning: Reference `eq:bin-cvlme-Bin-cvLME-m01' on page 642 undefined on 
-input line 38729.
-
-[642] [643]
-
-LaTeX Warning: Reference `sec:mult-marg' on page 644 undefined on input line 38
-847.
-
-[644] [645] [646]
+[626] [627] [628] [629] [630] [631] [632] [633] [634] [635] [636] [637]
+[638] [639] [640] [641] [642] [643] [644] [645] [646]
 Overfull \hbox (55.31732pt too wide) in paragraph at lines 39068--39069
 \TU/lmr/m/n/12 03-11; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [
 ][][] [] [][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][] [] [][][][]
@@ -2390,26 +1885,9 @@ Overfull \hbox (55.31732pt too wide) in paragraph at lines 39142--39143
 [][][][][] [] [][] [] [][][][][][][][][][][] [] [][][][][][][][][][][]$. 
  []
 
-[649] [650] [651] [652] [653] [654] [655] [656]
-
-LaTeX Warning: Reference `eq:mult-cvlme-Mult-m0-cvLME' on page 657 undefined on
- input line 39527.
-
-
-LaTeX Warning: Reference `eq:mult-cvlme-Mult-m1-cvLME' on page 657 undefined on
- input line 39527.
-
-
-LaTeX Warning: Reference `eq:mult-cvlme-Mult-cvLME-m01' on page 657 undefined o
-n input line 39527.
-
-[657] [658] [659] [660] [661] [662]
-
-LaTeX Warning: Reference `sec:para-rate' on page 663 undefined on input line 39
-922.
-
-[663] [664] [665] [666] [667] [668] [669] [670] [671] [672] [673] [674]
-[675] [676] [677]
+[649] [650] [651] [652] [653] [654] [655] [656] [657] [658] [659] [660]
+[661] [662] [663] [664] [665] [666] [667] [668] [669] [670] [671] [672]
+[673] [674] [675] [676] [677]
 Overfull \hbox (20.27325pt too wide) in paragraph at lines 40706--40707
 \TU/lmr/m/n/12 2022-10-07; URL: $[][][][][] [] [] [] [][] [] [][][][][][][][][]
  [] [][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][][][][][][][][][][
@@ -2428,41 +1906,12 @@ Overfull \hbox (4.52669pt too wide) in paragraph at lines 40809--40810
 ]
 Chapter IV.
 [683] [684] [685] [686] [687] [688] [689] [690] [691] [692] [693] [694]
-[695]
-
-LaTeX Warning: Reference `eq:rsq-dist-fstat-rsq' on page 696 undefined on input
- line 41668.
-
-
-LaTeX Warning: Reference `sec:beta-f' on page 696 undefined on input line 41680
-.
-
-
-LaTeX Warning: Reference `eq:rsq-dist-fstat-dist' on page 696 undefined on inpu
-t line 41688.
-
-
-LaTeX Warning: Reference `eq:rsq-dist-rsq-fstat-v2' on page 696 undefined on in
-put line 41688.
-
-[696]
+[695] [696]
 Overfull \hbox (2.78302pt too wide) in paragraph at lines 41710--41711
 \TU/lmr/bx/n/12 Theorem: \TU/lmr/m/n/12 Consider a linear regression model ($\O
 MS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 III[]/1.5.1[]) with known design matrix $\OML/
 cmm/m/it/12 X \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 2
  []
-
-
-LaTeX Warning: Reference `sec:rsq-dist' on page 697 undefined on input line 417
-30.
-
-
-LaTeX Warning: Reference `sec:beta-med' on page 697 undefined on input line 417
-36.
-
-
-LaTeX Warning: Reference `sec:beta-mode' on page 697 undefined on input line 41
-736.
 
 [697]
 Overfull \hbox (2.78302pt too wide) in paragraph at lines 41768--41769
@@ -2470,10 +1919,6 @@ Overfull \hbox (2.78302pt too wide) in paragraph at lines 41768--41769
 MS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 III[]/1.5.1[]) with known design matrix $\OML/
 cmm/m/it/12 X \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 2
  []
-
-
-LaTeX Warning: Reference `sec:rsq-dist' on page 698 undefined on input line 417
-82.
 
 [698] [699] [700] [701] [702] [703] [704] [705] [706]
 Overfull \hbox (14.60124pt too wide) in paragraph at lines 42250--42251
@@ -2528,16 +1973,7 @@ $ \TU/lmr/m/n/12 and prior distribution ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[
 n/12 j\OML/cmm/m/it/12 ^^U; m\OT1/cmr/m/n/12 )$\TU/lmr/m/n/12 .
  []
 
-[716]
-
-LaTeX Warning: Reference `sec:fren-dec' on page 717 undefined on input line 428
-20.
-
-
-LaTeX Warning: Reference `sec:fren-dec' on page 717 undefined on input line 428
-20.
-
-[717] [718] [719]
+[716] [717] [718] [719]
 Overfull \hbox (79.37755pt too wide) in paragraph at lines 42996--42997
 \TU/lmr/bx/n/12 Theorem: \TU/lmr/m/n/12 Let $\OML/cmm/m/it/12 m[]; [] ; m[]$ \T
 U/lmr/m/n/12 be $\OML/cmm/m/it/12 M$ \TU/lmr/m/n/12 statistical models with log
@@ -2555,28 +1991,7 @@ U/lmr/m/n/12 be $\OML/cmm/m/it/12 M$ \TU/lmr/m/n/12 statistical models with log
 r/m/n/12 (\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )$
  []
 
-[721] [722] [723] [724] [725] [726]
-
-LaTeX Warning: Reference `sec:odds' on page 727 undefined on input line 43400.
-
-
-LaTeX Warning: Reference `sec:odds' on page 727 undefined on input line 43412.
-
-[727] [728]
-
-LaTeX Warning: Reference `sec:odds' on page 729 undefined on input line 43539.
-
-
-LaTeX Warning: Reference `sec:odds' on page 729 undefined on input line 43549.
-
-[729]
-
-LaTeX Warning: Reference `sec:odds' on page 730 undefined on input line 43598.
-
-
-LaTeX Warning: Reference `sec:odds' on page 730 undefined on input line 43604.
-
-[730]
+[721] [722] [723] [724] [725] [726] [727] [728] [729] [730]
 Overfull \hbox (6.42921pt too wide) in paragraph at lines 43640--43641
 [][][][][][][][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][][][] [] [][
 ][] [] [][][][][][][][][][][][][][][][][]$\TU/lmr/m/n/12 ; DOI: 10.1016/j.neuro
@@ -2605,7 +2020,7 @@ Overfull \hbox (3.31383pt too wide) in paragraph at lines 43700--43701
 t/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y
 \OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m[]
 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )$ \TU/lmr/m/n/12 and poste
-rior distributions ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.8[]) $\OML/cmm/
+rior distributions ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.9[]) $\OML/cmm/
 m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/1
 2 y; m[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; p\OT1/cmr/m/n/12 (\OML/cmm/m/i
 t/12 ^^R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y; m[]\OT1/cmr/m/n/12 )$\TU/lmr/m/n/
@@ -2618,7 +2033,7 @@ Overfull \hbox (3.31383pt too wide) in paragraph at lines 43718--43719
 t/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y
 \OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m[]
 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )$ \TU/lmr/m/n/12 and poste
-rior distributions ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.8[]) $\OML/cmm/
+rior distributions ($\OMS/cmsy/m/n/12 !$ \TU/lmr/m/n/12 I[]/5.1.9[]) $\OML/cmm/
 m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/1
 2 y; m[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; p\OT1/cmr/m/n/12 (\OML/cmm/m/i
 t/12 ^^R\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 y; m[]\OT1/cmr/m/n/12 )$\TU/lmr/m/n/
@@ -2744,11 +2159,6 @@ Overfull \hbox (0.7473pt too wide) in alignment at lines 43848--43868
  []
 
 [737] [738]
-
-LaTeX Warning: Reference `sec:cuni-mode' on page 739 undefined on input line 43
-873.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 43875--43875
 []|\TU/lmr/m/n/12 norm-
  []
@@ -2949,10 +2359,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 43963--43963
  []
 
 
-LaTeX Warning: Reference `sec:chi2-momraw' on page 743 undefined on input line 
-43963.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 43964--43964
 []|\TU/lmr/m/n/12 norm-
  []
@@ -3051,10 +2457,6 @@ Underfull \hbox (badness 1270) in paragraph at lines 44005--44005
 Underfull \hbox (badness 10000) in paragraph at lines 44007--44007
 []|\TU/lmr/m/n/12 ugkv-
  []
-
-
-LaTeX Warning: Reference `sec:cdf-pit' on page 745 undefined on input line 4400
-8.
 
 
 Overfull \hbox (0.7473pt too wide) in alignment at lines 43988--44008
@@ -3582,91 +2984,14 @@ Overfull \hbox (0.7473pt too wide) in alignment at lines 44248--44268
  []
 
 [761]
-
-LaTeX Warning: Reference `sec:mark-ineq' on page 762 undefined on input line 44
-269.
-
-
-LaTeX Warning: Reference `sec:cheb-ineq' on page 762 undefined on input line 44
-270.
-
-
-LaTeX Warning: Reference `sec:bool-ineq' on page 762 undefined on input line 44
-271.
-
-
-LaTeX Warning: Reference `sec:bonf-ineq' on page 762 undefined on input line 44
-272.
-
-
-LaTeX Warning: Reference `sec:mult-marg' on page 762 undefined on input line 44
-273.
-
-
-LaTeX Warning: Reference `sec:poiss-ent' on page 762 undefined on input line 44
-274.
-
-
-LaTeX Warning: Reference `sec:gam-mode' on page 762 undefined on input line 442
-75.
-
-
-LaTeX Warning: Reference `sec:bin-cdf' on page 762 undefined on input line 4427
-6.
-
-
-LaTeX Warning: Reference `sec:mult-cdf' on page 762 undefined on input line 442
-77.
-
-
-LaTeX Warning: Reference `sec:ug-cvlme' on page 762 undefined on input line 442
-78.
-
-
-LaTeX Warning: Reference `sec:ug-cvlbf' on page 762 undefined on input line 442
-79.
-
-
-LaTeX Warning: Reference `sec:bin-cvlme' on page 762 undefined on input line 44
-280.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 44281--44281
 []|\TU/lmr/m/n/12 mult-
  []
 
 
-LaTeX Warning: Reference `sec:mult-cvlme' on page 762 undefined on input line 4
-4281.
-
-
-LaTeX Warning: Reference `sec:bern-cat' on page 762 undefined on input line 442
-82.
-
-
-LaTeX Warning: Reference `sec:bin-mult' on page 762 undefined on input line 442
-83.
-
-
-LaTeX Warning: Reference `sec:beta-dir' on page 762 undefined on input line 442
-84.
-
-
-LaTeX Warning: Reference `sec:beta-f' on page 762 undefined on input line 44285
-.
-
-
-LaTeX Warning: Reference `sec:mvn-mode' on page 762 undefined on input line 442
-86.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 44287--44287
 []|\TU/lmr/m/n/12 mvn-
  []
-
-
-LaTeX Warning: Reference `sec:mvn-meanqf' on page 762 undefined on input line 4
-4287.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 44288--44288
@@ -3679,55 +3004,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 44288--44288
  []
 
 
-LaTeX Warning: Reference `sec:mvn-maxent' on page 762 undefined on input line 4
-4288.
-
-
 Overfull \hbox (0.7473pt too wide) in alignment at lines 44268--44288
  [] [] [] [] [] [] 
  []
 
 [762]
-
-LaTeX Warning: Reference `sec:mvn-samp' on page 763 undefined on input line 442
-89.
-
-
-LaTeX Warning: Reference `sec:bvn-snorm' on page 763 undefined on input line 44
-290.
-
-
-LaTeX Warning: Reference `sec:bvn-mle' on page 763 undefined on input line 4429
-1.
-
-
 Underfull \hbox (badness 4084) in paragraph at lines 44292--44292
 \TU/lmr/m/n/12 multivariate normally distributed
  []
-
-
-LaTeX Warning: Reference `sec:mvn-mle' on page 763 undefined on input line 4429
-2.
-
-
-LaTeX Warning: Reference `sec:matn-red' on page 763 undefined on input line 442
-93.
-
-
-LaTeX Warning: Reference `sec:matn-red2' on page 763 undefined on input line 44
-294.
-
-
-LaTeX Warning: Reference `sec:rsq-dist' on page 763 undefined on input line 442
-95.
-
-
-LaTeX Warning: Reference `sec:rsq-mmm' on page 763 undefined on input line 4429
-6.
-
-
-LaTeX Warning: Reference `sec:rsq-var' on page 763 undefined on input line 4429
-7.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 44298--44298
@@ -3738,10 +3022,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 44298--44298
 Underfull \hbox (badness 1394) in paragraph at lines 44298--44298
 []|\TU/lmr/m/n/12 Prior predictive distribution is a
  []
-
-
-LaTeX Warning: Reference `sec:priorpred-jl' on page 763 undefined on input line
- 44298.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 44299--44299
@@ -3759,54 +3039,14 @@ Overfull \hbox (3.44174pt too wide) in paragraph at lines 44299--44299
  []
 
 
-LaTeX Warning: Reference `sec:ug-ttest1power' on page 763 undefined on input li
-ne 44299.
-
-
 Overfull \hbox (9.1665pt too wide) in paragraph at lines 44300--44300
 []|\TU/lmr/m/n/12 covmatcross-
  []
 
 
-LaTeX Warning: Reference `sec:covmatcross-mean' on page 763 undefined on input 
-line 44300.
-
-
-LaTeX Warning: Reference `sec:mean-blf' on page 763 undefined on input line 443
-01.
-
-
-LaTeX Warning: Reference `sec:jens-ineq' on page 763 undefined on input line 44
-302.
-
-
 Underfull \hbox (badness 4859) in paragraph at lines 44303--44303
 []|\TU/lmr/m/n/12 Non-negativity of the Kullback-
  []
-
-
-LaTeX Warning: Reference `sec:kl-nonneg3' on page 763 undefined on input line 4
-4303.
-
-
-LaTeX Warning: Reference `sec:fren-dec' on page 763 undefined on input line 443
-04.
-
-
-LaTeX Warning: Reference `sec:fren-lme' on page 763 undefined on input line 443
-05.
-
-
-LaTeX Warning: Reference `sec:gam-med' on page 763 undefined on input line 4430
-6.
-
-
-LaTeX Warning: Reference `sec:beta-med' on page 763 undefined on input line 443
-07.
-
-
-LaTeX Warning: Reference `sec:beta-mode' on page 763 undefined on input line 44
-308.
 
 
 Overfull \hbox (0.7473pt too wide) in alignment at lines 44288--44308
@@ -3928,62 +3168,14 @@ Underfull \hbox (badness 4181) in paragraph at lines 44520--44520
  []
 
 
-LaTeX Warning: Reference `sec:var-pool' on page 772 undefined on input line 445
-32.
-
-
-LaTeX Warning: Reference `sec:std-pool' on page 772 undefined on input line 445
-33.
-
-
-LaTeX Warning: Reference `sec:std-samp' on page 772 undefined on input line 445
-34.
-
-
-LaTeX Warning: Reference `sec:odds' on page 772 undefined on input line 44535.
-
-
-LaTeX Warning: Reference `sec:pdf-joint' on page 772 undefined on input line 44
-536.
-
-
-LaTeX Warning: Reference `sec:para-loc' on page 772 undefined on input line 445
-37.
-
-
 Overfull \hbox (0.7473pt too wide) in alignment at lines 44517--44537
  [] [] [] [] [] [] 
  []
 
 [772]
-
-LaTeX Warning: Reference `sec:para-scal' on page 773 undefined on input line 44
-538.
-
-
-LaTeX Warning: Reference `sec:para-rate' on page 773 undefined on input line 44
-539.
-
-
-LaTeX Warning: Reference `sec:para-shape' on page 773 undefined on input line 4
-4540.
-
-
-LaTeX Warning: Reference `sec:stat-desc' on page 773 undefined on input line 44
-541.
-
-
-LaTeX Warning: Reference `sec:bvn-data' on page 773 undefined on input line 445
-42.
-
-
 Underfull \hbox (badness 3019) in paragraph at lines 44543--44543
 []|\TU/lmr/m/n/12 Multivariate normally distributed
  []
-
-
-LaTeX Warning: Reference `sec:mvn-data' on page 773 undefined on input line 445
-43.
 
 
 Overfull \hbox (3.44174pt too wide) in paragraph at lines 44544--44544
@@ -3991,264 +3183,17 @@ Overfull \hbox (3.44174pt too wide) in paragraph at lines 44544--44544
  []
 
 
-LaTeX Warning: Reference `sec:mde' on page 773 undefined on input line 44544.
-
-
 Overfull \hbox (3.44174pt too wide) in paragraph at lines 44545--44545
 []|\TU/lmr/m/n/12 alexanderdbolton| 
  []
-
-
-LaTeX Warning: Reference `sec:mrss' on page 773 undefined on input line 44545.
 
 
 Overfull \hbox (0.7473pt too wide) in alignment at lines 44537--44546
  [] [] [] [] [] [] 
  []
 
-[773] [774]
-
-LaTeX Warning: Reference `sec:bern-cat' on page 775 undefined on input line 445
-91.
-
-
-LaTeX Warning: Reference `sec:beta-dir' on page 775 undefined on input line 445
-95.
-
-
-LaTeX Warning: Reference `sec:bin-mult' on page 775 undefined on input line 445
-97.
-
-
-LaTeX Warning: Reference `sec:bonf-ineq' on page 775 undefined on input line 44
-601.
-
-
-LaTeX Warning: Reference `sec:bool-ineq' on page 775 undefined on input line 44
-603.
-
-
-LaTeX Warning: Reference `sec:cheb-ineq' on page 775 undefined on input line 44
-613.
-
-[775]
-
-LaTeX Warning: Reference `sec:bvn-snorm' on page 776 undefined on input line 44
-645.
-
-
-LaTeX Warning: Reference `sec:ug-cvlbf' on page 776 undefined on input line 446
-83.
-
-
-LaTeX Warning: Reference `sec:bin-cvlme' on page 776 undefined on input line 44
-687.
-
-
-LaTeX Warning: Reference `sec:mult-cvlme' on page 776 undefined on input line 4
-4689.
-
-
-LaTeX Warning: Reference `sec:ug-cvlme' on page 776 undefined on input line 446
-91.
-
-
-LaTeX Warning: Reference `sec:bin-cdf' on page 776 undefined on input line 4470
-9.
-
-
-LaTeX Warning: Reference `sec:mult-cdf' on page 776 undefined on input line 447
-21.
-
-
-LaTeX Warning: Reference `sec:fren-dec' on page 776 undefined on input line 447
-29.
-
-[776]
-
-LaTeX Warning: Reference `sec:rsq-dist' on page 777 undefined on input line 447
-73.
-
-
-LaTeX Warning: Reference `sec:poiss-ent' on page 777 undefined on input line 44
-803.
-
-[777]
-
-LaTeX Warning: Reference `sec:mean-blf' on page 778 undefined on input line 448
-21.
-
-
-LaTeX Warning: Reference `sec:mvn-meanqf' on page 778 undefined on input line 4
-4825.
-
-[778]
-
-LaTeX Warning: Reference `sec:jens-ineq' on page 779 undefined on input line 44
-913.
-
-[779]
-
-LaTeX Warning: Reference `sec:mult-marg' on page 780 undefined on input line 45
-019.
-
-
-LaTeX Warning: Reference `sec:mark-ineq' on page 780 undefined on input line 45
-029.
-
-
-LaTeX Warning: Reference `sec:bvn-mle' on page 780 undefined on input line 4503
-5.
-
-
-LaTeX Warning: Reference `sec:mvn-mle' on page 780 undefined on input line 4504
-3.
-
-
-LaTeX Warning: Reference `sec:rsq-mmm' on page 780 undefined on input line 4507
-7.
-
-[780]
-
-LaTeX Warning: Reference `sec:beta-med' on page 781 undefined on input line 451
-13.
-
-
-LaTeX Warning: Reference `sec:gam-med' on page 781 undefined on input line 4511
-9.
-
-
-LaTeX Warning: Reference `sec:beta-mode' on page 781 undefined on input line 45
-133.
-
-
-LaTeX Warning: Reference `sec:cuni-mode' on page 781 undefined on input line 45
-135.
-
-
-LaTeX Warning: Reference `sec:gam-mode' on page 781 undefined on input line 451
-39.
-
-
-LaTeX Warning: Reference `sec:mvn-mode' on page 781 undefined on input line 451
-43.
-
-
-LaTeX Warning: Reference `sec:mvn-maxent' on page 781 undefined on input line 4
-5181.
-
-[781]
-
-LaTeX Warning: Reference `sec:kl-nonneg3' on page 782 undefined on input line 4
-5205.
-
-
-LaTeX Warning: Reference `sec:covmatcross-mean' on page 782 undefined on input 
-line 45263.
-
-[782]
-
-LaTeX Warning: Reference `sec:ug-ttest1power' on page 783 undefined on input li
-ne 45321.
-
-
-LaTeX Warning: Reference `sec:priorpred-jl' on page 783 undefined on input line
- 45323.
-
-
-LaTeX Warning: Reference `sec:cdf-pit' on page 783 undefined on input line 4537
-7.
-
-[783]
-
-LaTeX Warning: Reference `sec:chi2-momraw' on page 784 undefined on input line 
-45455.
-
-
-LaTeX Warning: Reference `sec:matn-red' on page 784 undefined on input line 454
-57.
-
-
-LaTeX Warning: Reference `sec:matn-red2' on page 784 undefined on input line 45
-459.
-
-[784]
-
-LaTeX Warning: Reference `sec:beta-f' on page 785 undefined on input line 45487
-.
-
-
-LaTeX Warning: Reference `sec:mvn-samp' on page 785 undefined on input line 455
-33.
-
-[785]
-
-LaTeX Warning: Reference `sec:fren-lme' on page 786 undefined on input line 456
-03.
-
-
-LaTeX Warning: Reference `sec:rsq-var' on page 786 undefined on input line 4563
-5.
-
-[786] [787]
-
-LaTeX Warning: Reference `sec:bvn-data' on page 788 undefined on input line 457
-12.
-
-[788]
-
-LaTeX Warning: Reference `sec:stat-desc' on page 789 undefined on input line 45
-778.
-
-[789]
-
-LaTeX Warning: Reference `sec:pdf-joint' on page 790 undefined on input line 45
-884.
-
-
-LaTeX Warning: Reference `sec:para-loc' on page 790 undefined on input line 459
-10.
-
-
-LaTeX Warning: Reference `sec:mde' on page 790 undefined on input line 45956.
-
-
-LaTeX Warning: Reference `sec:mrss' on page 790 undefined on input line 45958.
-
-[790]
-
-LaTeX Warning: Reference `sec:mvn-data' on page 791 undefined on input line 459
-76.
-
-
-LaTeX Warning: Reference `sec:odds' on page 791 undefined on input line 46004.
-
-
-LaTeX Warning: Reference `sec:std-pool' on page 791 undefined on input line 460
-28.
-
-
-LaTeX Warning: Reference `sec:var-pool' on page 791 undefined on input line 460
-30.
-
-[791]
-
-LaTeX Warning: Reference `sec:para-rate' on page 792 undefined on input line 46
-084.
-
-
-LaTeX Warning: Reference `sec:std-samp' on page 792 undefined on input line 461
-20.
-
-
-LaTeX Warning: Reference `sec:para-scal' on page 792 undefined on input line 46
-126.
-
-
-LaTeX Warning: Reference `sec:para-shape' on page 792 undefined on input line 4
-6132.
-
-[792] [793] (./StatProofBook.aux)
+[773] [774] [775] [776] [777] [778] [779] [780] [781] [782] [783] [784]
+[785] [786] [787] [788] [789] [790] [791] [792] [793] (./StatProofBook.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -4257,12 +3202,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8226 strings out of 479712
- 154120 string characters out of 5892708
- 406757 words of memory out of 5000000
- 25409 multiletter control sequences out of 15000+600000
+ 8206 strings out of 479712
+ 153681 string characters out of 5892708
+ 411099 words of memory out of 5000000
+ 25389 multiletter control sequences out of 15000+600000
  544968 words of font info for 84 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 35i,25n,33p,994b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,25n,33p,994b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on StatProofBook.pdf (812 pages).
+Output written on StatProofBook.pdf (813 pages).
