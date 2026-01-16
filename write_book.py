@@ -9,7 +9,7 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2020-02-06 05:47:00
- Last edit: 2024-10-04 15:42:00
+ Last edit: 2026-01-16 15:35:00
 """
 
 
@@ -79,15 +79,18 @@ for num, toc, file_md in zip(nums, tocs, files):
     if num[0] != num_chap:
         book.write('\n\n% Chapter ' + str(num[0]) + ' %\n')
         book.write('\\chapter{' + toc[0] + '} \\label{sec:' + toc[0] + '} \\newpage\n\n')
+        num_sect = 0
     
     # Start new section
     if num[1] != num_sect:
         book.write('\\pagebreak\n')
         book.write('\\section{' + toc[1] + '}\n\n')
+        num_ssec = 0
     
     # Start new subsection
     if num[2] != num_ssec:
         book.write('\\subsection{' + toc[2] + '}\n\n')
+        num_ssse = 0
     
     # Extract ToC information
     num_chap  = num[0]

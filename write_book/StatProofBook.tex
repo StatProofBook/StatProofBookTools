@@ -39,7 +39,7 @@
 %%% Title %%%
 \title{\Huge{The Book of Statistical Proofs}}
 \author{DOI: 10.5281/zenodo.4305949 \\ \url{https://statproofbook.github.io/} \\ StatProofBook@gmail.com}
-\date{2025-12-30, 13:25}
+\date{2026-01-16, 15:35}
 
 \begin{document}
 
@@ -9048,7 +9048,7 @@ Then, we know that the maximum likelihood estimator for the variance ($\rightarr
 \mathrm{E}\left[ \hat{\sigma}^2_\mathrm{MLE} \right] = \frac{n-1}{n} \sigma^2 \neq \sigma^2 \; .
 \end{equation}
 
-This proofs the existence of cases such as those stated by the theorem.
+This proves the existence of cases such as those stated by the theorem.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -10923,6 +10923,8 @@ The second derivative is always negative which means that the function is concav
 \pagebreak
 \section{Univariate discrete distributions}
 
+\subsection{Discrete uniform distribution}
+
 \subsubsection[\textit{Definition}]{Definition} \label{sec:duni}
 \setcounter{equation}{0}
 
@@ -11159,7 +11161,7 @@ Entropy is measured in nats by setting $b = e$. Then, with the probability mass 
 \subsubsection[\textbf{Kullback-Leibler divergence}]{Kullback-Leibler divergence} \label{sec:duni-kl}
 \setcounter{equation}{0}
 
-\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}). Assume two discrete uniform distributions ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:Duni}) $P$ and $Q$ specifying the probability distribution of $X$ as
+\textbf{Theorem:} Let $X$ be a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}). Assume two discrete uniform distributions ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:duni}) $P$ and $Q$ specifying the probability distribution of $X$ as
 
 \begin{equation} \label{eq:duni-kl-dunis}
 \begin{split}
@@ -18700,6 +18702,51 @@ which is equivalent to the probability density function of the chi-squared distr
 
 
 
+\subsubsection[\textbf{Special case of gamma distribution}]{Special case of gamma distribution} \label{sec:chi2-gam2}
+\setcounter{equation}{0}
+
+\textbf{Theorem:} The chi-squared distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) with $n \in \mathbb{Z}^*$ degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) is a special case of the gamma distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:gam}) with parameters ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:para}) $\alpha = \frac{n}{2}$, $\beta = \frac{1}{2}$ and support $t < \frac{1}{2}$. 
+
+
+\vspace{1em}
+\textbf{Proof:} The moment-generating function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mgf}) of a gamma random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:gam}) $X \sim \mathrm{Gam}(\alpha, \beta)$ is
+
+\begin{equation} \label{eq:chi2-gam2-gam-mgf}
+M_X(t) = \left( 1-\frac{t}{\beta} \right)^{-\alpha}, \; t < \beta, \; \beta > 0 \; .
+\end{equation}
+
+The moment-generating function ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:mgf}) of the a chi-squared random variable ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:chi2}) $Y \sim \chi^2_{n}$ with $n$ degrees of freedom is
+
+\begin{equation} \label{eq:chi2-gam2-chi2-mgf}
+M_Y(t) = (1-2t)^{-n/2}, \; t < \frac{1}{2} \; .
+\end{equation}
+
+If there is a random variable ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:rvar}) $X \sim \mathrm{Gam}\left( \frac{n}{2}, \frac{1}{2} \right)$, then
+
+\begin{equation} \label{eq:chi2-gam2-gam-chi2-mgf}
+M_X(t) = \left( 1-\frac{t}{\frac{1}{2}} \right)^{-(n/2)} = (1-2t)^{-n/2} = M_Y(t)
+\quad \text{for} \quad
+t < \frac{1}{2}
+\end{equation}
+
+"If the moment-generating function exists for $t$ in an open interval containing zero, it uniquely determines the probability distribution." (Rice, 2007, p. 155) Both moment-generating functions \eqref{eq:chi2-gam2-gam-mgf} and \eqref{eq:chi2-gam2-chi2-mgf} satisfy this condition. Specifically, $M_X(t)$ is defined for $t < \frac{1}{2}$, and for $M_Y(t)$, we have $t < \beta$ with $\beta > 0$; both of these intervals contain $0$.
+
+By the uniqueness of the moment-generating function, the chi-squared distribution with $n$ degrees of freedom is a special case of the gamma distribution with parameters $\alpha = \frac{n}{2}$ and $\beta = \frac{1}{2}$ and support $t < \frac{1}{2}$. This completes the proof.
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+
+\vspace{-1em}
+\textbf{Sources:}
+\begin{itemize}
+\item John Rice (2007): "The Moment-Generating Function"; in: \textit{Mathematical Statistics, Third Edition}, p. 155 and p. A2; URL: \url{https://korivernon.com/documents/MathematicalStatisticsandDataAnalysis3ed.pdf}.
+\item Irene Vrbik (2025): "MGF of a Gamma and Chi square"; in: \textit{Stat 205}; URL: \url{https://irene.vrbik.ok.ubc.ca/quarto/stat205/lectures/proofs/mgf-gamma.html}.
+\item Wikipedia (2025): "Chi-squared distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2025-12-26; URL: \url{https://en.wikipedia.org/wiki/Chi-squared_distribution}.
+\item Wikipedia (2025): "Gamma distribution"; in: \textit{Wikipedia, the free encyclopedia}, retrieved on 2025-12-26; URL: \url{https://en.wikipedia.org/wiki/Gamma_distribution}.
+\end{itemize}
+\vspace{1em}
+
+
+
 \subsubsection[\textbf{Probability density function}]{Probability density function} \label{sec:chi2-pdf}
 \setcounter{equation}{0}
 
@@ -25676,7 +25723,7 @@ F
 \end{split}
 \end{equation}
 
-This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) of equal variances can be rejected when $F$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:F}) with degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) $n_1-1$ and $n_2-1$ using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
+This means that the null hypothesis ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:h0}) of equal variances can be rejected when $F$ is as extreme or more extreme than the critical value ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:cval}) obtained from the F-distribution ($\rightarrow$ \ref{sec:Probability Distributions}/\ref{sec:f}) with degrees of freedom ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:dof}) $n_1-1$ and $n_2-1$ using a significance level ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:alpha}) $\alpha$.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -28315,7 +28362,7 @@ To this sum, Cochran's theorem for one-way analysis of variance can be applied (
 \begin{equation} \label{eq:anova1-repara-anova1-repara-c3-qed}
 \begin{split}
 \frac{1}{\sigma^2} \sum_{i=1}^{k} \sum_{j=1}^{n_i} (y_{ij} - \bar{y}_i)^2 &\sim \chi^2(n-k) \\
-\frac{1}{\sigma^2} \sum_{i=1}^{k} \sum_{j=1}^{n_i} ([\bar{y}_i - \bar{y}] - \delta_i)^2 \overset{\eqref{eq:anova1-repara-anova1-repara-c2-qed}}{=} \frac{1}{\sigma^2} \sum_{i=1}^{k} \sum_{j=1}^{n_i} (\hat{\delta}_i - \delta_i)^2 &\sim \chi^2(k-1) \; .
+\frac{1}{\sigma^2} \sum_{i=1}^{k} \sum_{j=1}^{n_i} ([\bar{y}_i - \bar{y}] - \delta_i)^2 \overset{\eqref{eq:anova1-repara-anova1-repara-rss-der-delta-zero}}{=} \frac{1}{\sigma^2} \sum_{i=1}^{k} \sum_{j=1}^{n_i} (\hat{\delta}_i - \delta_i)^2 &\sim \chi^2(k-1) \; .
 \end{split}
 \end{equation}
 
@@ -35057,7 +35104,7 @@ b_n &\overset{\eqref{eq:blr-posterr-GLM-NG-post-par}}{=} b_0 + \frac{1}{2} \left
 \end{split}
 \end{equation}
 
-Together with equation (\ref{eq:GLM-NG-post-par}c), this completes the proof.
+Together with equation $a_n$ from \eqref{eq:blr-posterr-GLM-NG-post-par}, this completes the proof.
 \begin{flushright} $\blacksquare$ \end{flushright}
 
 
@@ -40874,6 +40921,8 @@ which proves the identity given by \eqref{eq:logreg-lonp-prob}.
 \pagebreak
 \section{Goodness-of-fit measures}
 
+\subsection{Residual variance}
+
 \subsubsection[\textit{Definition}]{Definition} \label{sec:resvar}
 \setcounter{equation}{0}
 
@@ -41018,7 +41067,7 @@ which proves the bias ($\rightarrow$ \ref{sec:General Theorems}/\ref{sec:est-bia
 \vspace{-1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Liang, Dawen (????): "Maximum Likelihood Estimator for Variance is Biased: Proof", retrieved on 2020-02-24; URL: \url{https://dawenl.github.io/files/mle_biased.pdf}.
+\item Liang, Dawen (2020): "Maximum Likelihood Estimator for Variance is Biased: Proof", retrieved on 2020-02-24; URL: \url{https://dawenl.github.io/files/mle_biased.pdf}.
 \end{itemize}
 \vspace{1em}
 
@@ -41178,7 +41227,7 @@ such that an unbiased estimator ($\rightarrow$ \ref{sec:General Theorems}/\ref{s
 \vspace{-1em}
 \textbf{Sources:}
 \begin{itemize}
-\item Liang, Dawen (????): "Maximum Likelihood Estimator for Variance is Biased: Proof", retrieved on 2020-02-25; URL: \url{https://dawenl.github.io/files/mle_biased.pdf}.
+\item Liang, Dawen (2020): "Maximum Likelihood Estimator for Variance is Biased: Proof", retrieved on 2020-02-25; URL: \url{https://dawenl.github.io/files/mle_biased.pdf}.
 \end{itemize}
 \vspace{1em}
 
@@ -44306,6 +44355,7 @@ P517 & fren-lme & The variational free energy is a lower bound on the log model 
 P518 & gam-med & Median of the gamma distribution & JoramSoch & 2025-10-24 & \pageref{sec:gam-med} \\ \hline
 P519 & beta-med & Median of the beta distribution & JoramSoch & 2025-10-24 & \pageref{sec:beta-med} \\ \hline
 P520 & beta-mode & Mode of the beta distribution & JoramSoch & 2025-10-24 & \pageref{sec:beta-mode} \\ \hline
+P521 & chi2-gam2 & Chi-squared distribution is a special case of gamma distribution & natrium-256 & 2026-01-02 & \pageref{sec:chi2-gam2} \\ \hline
 \end{longtable}
 
 
@@ -44613,6 +44663,8 @@ $\bullet$ Characteristic function of a function of a random variable, \pageref{s
 $\bullet$ Chebyshev's inequality, \pageref{sec:cheb-ineq}
 
 $\bullet$ Chi-squared distribution is a special case of gamma distribution, \pageref{sec:chi2-gam}
+
+$\bullet$ Chi-squared distribution is a special case of gamma distribution, \pageref{sec:chi2-gam2}
 
 $\bullet$ Combined posterior distribution for Bayesian linear regression when analyzing conditionally independent data sets, \pageref{sec:blr-postind}
 
