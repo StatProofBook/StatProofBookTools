@@ -9,16 +9,16 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2023-09-01 13:40:00
- Last edit: 2024-08-08 11:41:00
+ Last edit: 2026-08-28 10:34:00
 """
 
 
 # Specify proofs
 #-----------------------------------------------------------------------------#
-temp_proof = 'mvt-f'
+temp_proof = 'mlr-t'
 # This is the Markdown (.md) document in the StatProofBook which should be used
 # as a template for your proof. It should be in repository sub-folder "/P/".
-src_proof  = 'mvt-marg'
+src_proof  = 'mlr-t0'
 # This is the LaTeX (.tex) document in src_dir which contains your proof.
 # LaTeX should be between "\begin{document}" and "\end{document}".
 src_dir    =r'C:\Users\Joram\OvGUcloud\Projekte\StatProofBook\Submissions\JoramSoch\Proofs'
@@ -82,9 +82,9 @@ proof_md = ['---\n',
             'layout: proof\n',
             'mathjax: true\n',
             '\n',
-            file_txt[i1],
-            file_txt[i2],
-            file_txt[i3],
+            'author: "___"\n',
+            'affiliation: "___"\n',
+            'e_mail: "___"\n',
             'date: '+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+'\n',
             '\n',
             'title: "___"\n',
@@ -97,7 +97,7 @@ proof_md = ['---\n',
             '\n',
             'proof_id: "___"\n',
             'shortcut: "'+src_proof+'"\n',
-            'username: "'+username+'"\n',
+            'username: "___"\n',
             '---\n',
             '\n',
             '\n']

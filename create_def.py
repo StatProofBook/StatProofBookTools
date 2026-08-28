@@ -9,19 +9,20 @@ Author: Joram Soch, BCCN Berlin
 E-Mail: joram.soch@bccn-berlin.de
 
 First edit: 2023-09-22 10:55:00
- Last edit: 2024-08-08 11:36:00
+ Last edit: 2026-08-28 13:42:00
 """
 
 
 # Specify definitions
 #-----------------------------------------------------------------------------#
-temp_def = 'glm'
+temp_def = 'cvlme'
 # This is the Markdown (.md) document in the StatProofBook which should be used
 # as a template for your definition. It should be in repository sub-folder "/D/".
-src_def  = 'mvn-data'
+src_def  = 'excprob'
 # This is the LaTeX (.tex) document in src_dir which contains your definition.
 # LaTeX should be between "\begin{document}" and "\end{document}".
-src_dir  =r'C:\Users\sochj\OvGUcloud\Projekte\StatProofBook\Submissions\JoramSoch\Definitions'
+src_dir  =r'C:\Users\Joram\OvGUcloud\Projekte\StatProofBook\Submissions\JoramSoch\Definitions'
+# This is the folder in which src_def is located and the result will be saved.
 
 # Import modules
 #-----------------------------------------------------------------------------#
@@ -81,9 +82,9 @@ def_md = ['---\n',
           'layout: definition\n',
           'mathjax: true\n',
           '\n',
-          file_txt[i1],
-          file_txt[i2],
-          file_txt[i3],
+          'author: "___"\n',
+          'affiliation: "___"\n',
+          'e_mail: "___"\n',
           'date: '+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+'\n',
           '\n',
           'title: "___"\n',
@@ -96,7 +97,7 @@ def_md = ['---\n',
           '\n',
           'def_id: "___"\n',
           'shortcut: "'+src_def+'"\n',
-          'username: "'+username+'"\n',
+          'username: "___"\n',
           '---\n',
           '\n',
           '\n']
